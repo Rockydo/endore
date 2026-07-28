@@ -1,0 +1,14 @@
+{
+  "name": "ENDÓRË",
+  "id": "endore",
+  "version": "0.1.0",
+  "supported_game_version": "1.3.11",
+  "short_description": "Middle-earth total conversion at the opening of the War of the Ring, TA 3018.",
+  "picture": "thumbnail.png",
+  "tags": [
+    "Total Conversion",
+    "Fantasy"
+  ],
+  "relationships": [],
+  "game_custom_data": {}
+}
