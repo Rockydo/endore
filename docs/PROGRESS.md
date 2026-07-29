@@ -63,3 +63,15 @@
   open-sea, and shoreline scales. The shoreline entered live Observer and advanced from
   3018.1.1 to 3018.1.4 with no mod-caused diagnostic. The earlier visual evidence is
   superseded by `docs/m1/screenshots/04` through `08`.
+- M3 now paints 38 first-class realms over the binding physical world, assigns 4,189
+  passable locations, keeps 1,011 desolate land locations deliberately wild, and leaves
+  every sea, lake, and impassable mountain unowned.
+- The realm generator emits the complete 5,812-location gazetteer, ownership ledger,
+  script-only first-pass arms, setup files, localization, and an exact political/physical
+  QA raster. Validation proves zero below-water owned pixels and dry-land capitals.
+- The M3 real-game gate passed in northern and central/southern political views: labels
+  sit on their colored territories rather than the ocean. Observer advanced from
+  3018.1.1 to 3018.1.25, paired smoke remained zero-new, and the deep runtime log had no
+  mod-caused error.
+- M3 is complete. Installed culture, faith, census, government-title, and ruler values
+  remain explicitly technical bridges for M4–M6, not accepted final content.

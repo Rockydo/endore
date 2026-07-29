@@ -3,10 +3,10 @@ great_pestilence = {
 	#https://en.wikipedia.org/wiki/Cocoliztli_epidemics
 	#https://en.wikipedia.org/wiki/Columbian_exchange#Of_diseases
 	#https://en.wikipedia.org/wiki/Native_American_disease_and_epidemics
-	monthly_spawn_chance = monthly_spawn_chance_unique
+	monthly_spawn_chance = 0
 	hint_tag = hint_great_pestilence
 	can_start = {
-		disease_is_active = disease:great_pestilence
+		always = no
 	}
 
 	can_end = {

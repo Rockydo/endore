@@ -4,8 +4,8 @@ international_organization_manager = {
 		type = hre
 		creation_date = 3018.1.1
 		map_color = hsv360 { 40 50 70 }
-		members = { SWE }
-		leader = SWE
-		emperor = { SWE }
+		members = { GON }
+		leader = GON
+		emperor = { GON }
 	}
 }

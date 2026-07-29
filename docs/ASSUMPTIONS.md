@@ -24,3 +24,23 @@ about Middle-earth.
 - † Passable locations temporarily use installed culture, religion, and raw-material
   defaults solely because the setup validator requires populated fields. They are not
   claims about the peoples, faiths, or economy of Middle-earth.
+
+## M3 realms and gazetteer
+
+- † Political borders are deterministic strategic extrapolations from the canon anchors,
+  mountain barriers, river corridors, and the plan's realm roster. Sparse Forodwaith,
+  Enedwaith, the Brown Lands, and emptied Ithilien retain deliberately wild land rather
+  than being painted into the nearest realm.
+- † The exact seats named The Angle, Halls of Ered Luin, Woodmen's Hall, Ghân's Glade,
+  Forochel Camp, Harnenhold, Qarsad, Mûmak Gate, Khazân, Burh Gath, Wainhold, Eastern
+  March, and Dunland Moot are gameplay seats invented where binding canon supplies no
+  administrative capital. Each remains individually marked in the control ledger.
+- † Harnendor, Qarsad of Harad, the western Kingdom of Rhûn, Karmach, and the Sagath
+  March are on-map political extrapolations used to make the canon-sparse South and East
+  playable without pretending to define all off-map Harad or Rhûn.
+- † Generated fill names use documented regional phonotactic impressions and ordinary
+  English compounds. They are deterministic Tolkien-register inventions, not claims to
+  reconstruct Sindarin, Khuzdul, Black Speech, or any unattested Mannish language.
+- † Realm colors and first-pass arms are readability scaffolds. The arms reuse generic
+  installed heraldic components as permitted by the M3 gate; M11 replaces them through
+  the reference-driven bespoke-art pipeline.

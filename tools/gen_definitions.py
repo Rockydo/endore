@@ -133,6 +133,16 @@ def escape_localization(value: str) -> str:
 
 def localization_text(model: WorldModel) -> str:
     _, area_keys, province_keys = definitions_text(model)
+    location_display_names = {
+        location.key: location.display_name
+        for location in model.locations
+    }
+    if (ROOT / "docs/world/realms.csv").is_file():
+        # M3 owns the final per-location gazetteer while this generator
+        # remains the single writer for the map-localization database.
+        from m3_realms import location_names
+
+        location_display_names = location_names(model)
     lines = [
         "\ufeffl_english:",
         ' middle_earth: "Middle-earth"',
@@ -155,7 +165,7 @@ def localization_text(model: WorldModel) -> str:
         lines.append(f' {key}: "{escape_localization(label)}"')
     for location in model.locations:
         lines.append(
-            f' {location.key}: "{escape_localization(location.display_name)}"'
+            f' {location.key}: "{escape_localization(location_display_names[location.key])}"'
         )
     return "\n".join(lines) + "\n"
 

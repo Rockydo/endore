@@ -22,6 +22,26 @@ design, costume, landscape, and lighting only; Tolkien canon remains authoritati
 content. Reference images stay in a gitignored G:-drive cache and are not redistributed.
 Icons are generated four distinct designs per sheet, split locally, and individually QA'd.
 
+## 2026-07-29 — M3 political contract
+
+Ship 38 first-class realm tags in the first political partition. Fold Minas Morgul into
+Mordor as a fortress-location rather than a separate country; use the plan's micro-tag
+allowance for Qarsad of Harad and a third Rhûnic confederation so the sparse South and
+East have playable texture.
+
+Political ownership is generated only for passable-land locations. Sea zones, lakes, and
+impassable mountains are always unowned, and selected desolations remain deliberately
+wild. The M3 validator projects the exact realm lookup onto the authored elevation control
+and fails if any owned pixel lies at or below the installed waterline, if any non-land
+location receives an owner, or if a capital snaps materially away from its authored seat.
+This makes the owner's reported “labels/colors in the ocean” failure mechanically
+non-regressible.
+
+Keep the installed monarchy, culture, faith, and demographic registries only as
+parser-safe technical bridges. M4 replaces culture and faith, M5 replaces the census, and
+M6 replaces government titles and rulers; none of those visible placeholders is accepted
+as final Middle-earth content.
+
 ## 2026-07-29 — M2 deep-load quarantine
 
 Keep the M2 inherited-content quarantine exact, generated, and milestone-scoped. The

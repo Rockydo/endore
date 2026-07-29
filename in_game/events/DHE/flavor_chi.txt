@@ -8962,7 +8962,7 @@ flavor_chi.125 = {
 		chi_adjust_pre_rtr_modifiers = { value = -0.1 }
 		custom_tooltip = {
 			text = chi_red_turban_rebellion
-			set_variable = chi_red_turban_leader_arrested
+
 		}
 		scope:target_character = {
 			imprison_character_effect = {

@@ -199,6 +199,53 @@ def disable_named_blocks(text: str, name: str) -> str:
         cursor = index
 
 
+def disable_predicate_blocks(text: str, name: str) -> str:
+    """Replace named trigger blocks with an unconditional false predicate."""
+    header = re.compile(
+        rf"(?m)^[ \t]*{re.escape(name)}\s*=\s*\{{"
+    )
+    cursor = 0
+    result: list[str] = []
+    while True:
+        match = header.search(text, cursor)
+        if match is None:
+            result.append(text[cursor:])
+            return "".join(result)
+        result.append(text[cursor:match.start()])
+        indent = re.match(r"[ \t]*", match.group(0)).group(0)
+        depth = 1
+        quoted = False
+        escaped = False
+        commented = False
+        index = match.end()
+        while index < len(text) and depth:
+            character = text[index]
+            if commented:
+                if character in "\r\n":
+                    commented = False
+            elif escaped:
+                escaped = False
+            elif quoted and character == "\\":
+                escaped = True
+            elif character == '"':
+                quoted = not quoted
+            elif not quoted and character == "#":
+                commented = True
+            elif not quoted and character == "{":
+                depth += 1
+            elif not quoted and character == "}":
+                depth -= 1
+            index += 1
+        if depth:
+            raise ValueError(f"unterminated {name} block")
+        result.append(
+            f"{indent}{name} = {{\n"
+            f"{indent}\talways = no\n"
+            f"{indent}}}"
+        )
+        cursor = index
+
+
 def remove_named_blocks(text: str, names: frozenset[str]) -> str:
     """Remove exact top-level database blocks and preserve all other entries."""
     header = re.compile(
@@ -310,6 +357,14 @@ def expected_overlays() -> dict[str, str]:
         path.relative_to(ROOT).as_posix()
         for path in runtime_payloads()
     }
+    realms = ROOT / "docs/world/realms.csv"
+    if realms.is_file():
+        from m3_realms import owned_paths as m3_owned_paths
+
+        runtime_owned.update(
+            path.relative_to(ROOT).as_posix()
+            for path in m3_owned_paths()
+        )
     replacements = replacement_map()
     token_re = re.compile(r"\b[A-Za-z0-9_]+\b")
     geography_namespaces = {
@@ -421,10 +476,49 @@ def expected_overlays() -> dict[str, str]:
                 rewritten = flag_definition_rewrite(rewritten)
             if relative == "in_game/common/on_action/_hardcoded.txt":
                 rewritten = hardcoded_on_action_rewrite(rewritten)
+            if relative == "in_game/common/on_action/location_pulses.txt":
+                # Retail weather routes are authored as long Earth-location
+                # paths. Geography token substitution collapses those routes
+                # onto one stand-in and the monthly pulse then rejects them.
+                # M5 can author Middle-earth weather paths with the census.
+                rewritten = remove_named_blocks(
+                    rewritten,
+                    frozenset({"start_weather_system"}),
+                )
+            if (
+                tree == "in_game"
+                and relative_in_tree.startswith("common/situations/")
+            ):
+                # Keep the installed situation registry for script consumers,
+                # but no historical-Earth situation may activate before M10.
+                rewritten = re.sub(
+                    (
+                        r"(?m)^(\s*monthly_spawn_chance\s*=\s*)"
+                        r"[A-Za-z0-9_.:-]+\s*$"
+                    ),
+                    r"\g<1>0",
+                    rewritten,
+                )
+                rewritten = disable_predicate_blocks(rewritten, "can_start")
+                rewritten = re.sub(
+                    (
+                        r"(?m)^(\s*)"
+                        r"(c:[A-Z0-9_]+|location:[A-Za-z0-9_]+|"
+                        r"international_organization:[A-Za-z0-9_]+)"
+                        r"\s*=\s*\{"
+                    ),
+                    r"\1\2 ?= {",
+                    rewritten,
+                )
             if relative == "in_game/common/laws/02_country_specific.txt":
+                law_country = (
+                    "GON"
+                    if (ROOT / "docs/world/realms.csv").is_file()
+                    else "SWE"
+                )
                 rewritten = re.sub(
                     r"(?m)^(\s*law_country_group\s*=\s*)[A-Z0-9_]+\s*$",
-                    r"\1SWE",
+                    rf"\g<1>{law_country}",
                     rewritten,
                 )
             if relative.startswith(
@@ -448,16 +542,46 @@ def expected_overlays() -> dict[str, str]:
                 )
             if (
                 tree == "in_game"
-                and relative_in_tree.startswith("common/formable_countries/")
+                and relative_in_tree.startswith("common/advances/")
+            ):
+                # Country-specific advances can probe a capital before M5
+                # creates a complete market graph.
+                rewritten = re.sub(
+                    r"(?m)^(\s*)market\s*=\s*\{",
+                    r"\1market ?= {",
+                    rewritten,
+                )
+            if relative == "in_game/common/generic_actions/markets.txt":
+                rewritten = re.sub(
+                    r"(?m)^(\s*potential\s*=\s*)\{\s*\}",
+                    r"\1{ always = no }",
+                    rewritten,
+                )
+            if (
+                relative
+                == "in_game/common/cabinet_actions/office_of_new_converts.txt"
+            ):
+                rewritten = (
+                    "office_of_new_converts = {\n"
+                    "\tability = mil\n"
+                    "\tallow_multiple = no\n"
+                    "\tpotential = { always = no }\n"
+                    "\tallow = { always = no }\n"
+                    "\tcountry_modifier = { }\n"
+                    "}\n"
+                )
+            if (
+                tree == "in_game"
+                and (
+                    relative_in_tree.startswith("common/formable_countries/")
+                    or relative_in_tree.startswith("common/government_reforms/")
+                )
             ):
                 # Earth dynasty predicates cannot resolve against the neutral
-                # M2 setup, which intentionally has no historical dynasties.
+                # M2/M3 setup, which intentionally has no historical dynasties.
                 rewritten = re.sub(
-                    (
-                        r"(?m)^(\s*)dynasty\s*=\s*"
-                        r"dynasty:[A-Za-z0-9_]+\s*$"
-                    ),
-                    r"\1always = no",
+                    r"dynasty\s*\??=\s*dynasty:[A-Za-z0-9_]+",
+                    "always = no",
                     rewritten,
                 )
             if (
@@ -467,6 +591,15 @@ def expected_overlays() -> dict[str, str]:
                 rewritten = disable_named_blocks(
                     rewritten,
                     "dynamic_historical_event",
+                )
+            if relative == "in_game/events/DHE/flavor_chi.txt":
+                rewritten = re.sub(
+                    (
+                        r"(?m)^[ \t]*set_variable\s*=\s*"
+                        r"chi_red_turban_leader_arrested\s*$"
+                    ),
+                    "",
+                    rewritten,
                 )
             if relative in {
                 (

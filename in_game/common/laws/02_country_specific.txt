@@ -38,7 +38,7 @@ eng_order_of_the_garter_law = {
 	unique = yes
 	law_category = administrative
 
-	law_country_group = SWE
+	law_country_group = GON
 	potential = {
 		has_unlocked_law_trigger = { type = eng_order_of_the_garter_law }
 		government_type = government_type:monarchy
@@ -653,7 +653,7 @@ nav_adaptability = {
 	unique = yes
 	law_category = administrative
 
-	law_country_group = SWE
+	law_country_group = GON
 	potential = {
 		has_or_had_tag = NAV
 	}

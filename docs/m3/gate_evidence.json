@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "milestone": "M3",
+  "gate_date": "2026-07-29",
+  "base_commit": "0bafc49c66ce58175b4f51a5ed60be0b9c414d38",
+  "model_sha256": "e38937c1a653696f099411fbd7e6a4b577bbca2a80d41492a219da7b1bb17822",
+  "realm_count": 38,
+  "owned_land": 4189,
+  "wild_land": 1011,
+  "owned_control_pixels": 200167,
+  "wet_owned_control_pixels": 0,
+  "observer_start": "3018.1.1",
+  "observer_verified_through": "3018.1.25",
+  "mod_caused_error_lines": 0,
+  "sha256": {
+    "political_north.png": "08BE4C53FFFF10586DC5891231FF80DD880FEEACACD7AECE4562F57CA56DF3DA",
+    "political_central_south.png": "F17388464CE325CDB5C42E5D0A3002BCD23FF77E2DDC7B288ABF72BC5A4788E9",
+    "observer_live.png": "BA7EC5EDED06089D65FFD43FCD270901E7172C4A18A264707244A2A883600003",
+    "observer_3018_01_10.png": "CE41BD0DC5BF9A12837C1B10768749A496DAED4BB44880D98F994CEFFAFA2A08",
+    "deep_error.txt": "DB08936F355E7FA441185DF37243E356C2E5B5376F0C0F1F952124D0E81E4D73",
+    "m3_political_control.png": "0A1529E4950BB3D581D537046CE5A44F2C387961AE9A640BD259E547CC795751"
+  }
+}

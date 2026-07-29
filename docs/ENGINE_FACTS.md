@@ -135,3 +135,19 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
 - The corrected physical-map re-gate proved separate inland, open-sea, and shoreline
   points in the non-debug renderer. Live Observer advanced the corrected shoreline from
   3018.1.1 to 3018.1.4 with only the established machine baseline lines.
+
+## M3 political-map contract
+
+- The installed setup accepts 38 custom country tags owning 4,189 of the 5,200 passable
+  land locations. The remaining 1,011 land locations are deliberately wild; all 260
+  impassable mountains, 32 lakes, and 320 sea zones remain unowned.
+- The political lookup and 16-bit physical control agree at every owned control pixel:
+  200,167 owned pixels, zero at or below raw water sample 5466. Every realm capital is a
+  passable-land location; the maximum authored-seat snap distance is 0.021535 normalized
+  map units.
+- Country-selection and live-Observer labels render over the corresponding colored land
+  in both the northern and central/southern theatres. No realm label or capital resolves
+  into the sea.
+- A non-debug live Observer session advanced from 3018.1.1 through 3018.1.25. The runtime
+  `error.log` contained no country, ownership, location, geography, terrain, cache,
+  locator, script, culture, religion, pop, or market error.
