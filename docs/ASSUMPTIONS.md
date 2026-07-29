@@ -44,3 +44,22 @@ about Middle-earth.
 - † Realm colors and first-pass arms are readability scaffolds. The arms reuse generic
   installed heraldic components as permitted by the M3 gate; M11 replaces them through
   the reference-driven bespoke-art pipeline.
+
+## M4 peoples, languages, and faiths
+
+- Eriadoran is a deliberate gameplay umbrella for the remaining settled Middle Men of
+  Eriador; it does not imply a single historical polity or self-identity.
+- Karmachi and Sagath identities are documented inventions for canon-sparse eastern
+  populations attached to the already logged gameplay realms.
+- Constructed name components are Tolkien-register tools, not linguistic reconstructions
+  of unattested Sindarin, Khuzdul, Black Speech, or Mannish forms.
+- The spiritual “Ways” are gameplay adapters for outlook, allegiance, and custom. They do
+  not imply organized churches, universal creeds, or modern religious institutions.
+- Entish Memory of the First Music is a gameplay representation of the Ents' remembered
+  place in creation, not an assertion of formal Entish worship.
+- Firebeards and Broadbeams share one culture; Lake-folk are folded into Dalish culture;
+  and Galadhrim remain distinct from other Silvan communities for playable regional
+  identity.
+- M4 assigns a dominant people and faith profile to each land location. It is not the
+  final M5 census: minorities, depopulated ruins, settlement types, and exact population
+  weights remain M5 work.

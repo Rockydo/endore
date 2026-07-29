@@ -157,3 +157,34 @@ Ship M2 with the proven zero-byte `adjacencies.csv` fallback. Two bounded A/B at
 showed that any non-empty file on the custom canvas causes an empty-location lookup even
 when its rows are valid. Keep the intended Himling and Tolfalas crossings in generator
 source, but do not activate them until a later editor-backed contract is proven.
+
+## 2026-07-29 — M4 people model
+
+Model the playable world with 33 cultures in 10 broad culture groups. Rangers remain a
+social and military identity inside the Dúnedain rather than a separate ethnicity.
+Trolls remain units or special populations rather than a first-class culture. Orcs are
+split by sustained regional communities where gameplay and lore support the distinction.
+
+The installed engine rejects arbitrary language-family keys, so eight semantic
+Middle-earth families map onto fixed installed family adapters whose visible names are
+fully relocalized. Ten language roots and 33 culture dialects drive name pools. Major
+roots target at least 60 male, 40 female, and 30 house names; minor roots target
+30/20/15. The generated localization contains 1,105 name entries.
+
+Model spiritual allegiance with 10 faiths in three gameplay groups: Light, Shadow, and
+Old Ways. These are not organized-church claims. Every inherited religion file is
+exact-overlaid with `enable = 3200.1.2`, keeping its parser symbol available while making
+it unavailable throughout the ENDÓRË campaign.
+
+## 2026-07-29 — M4 installed culture ABI
+
+Installed culture keys behave as a compile-time ABI in this build: removing or disabling
+them produces widespread invalid-key failures. Keep one distributed size `0.01`
+compatibility presence per custom-dominant land location while assigning all visible
+dominant populations and realm primaries to authored Middle-earth cultures. These ABI
+presences never dominate and make no worldbuilding claim.
+
+A size `0.001` experiment is rejected because the engine rounded it away and reported
+2,086 cultures without populations. The narrow Sinicization compatibility overlay keeps
+the installed script structure and variable reads intact while replacing only its
+country-base lookup with zero, preventing a selection-screen type error.

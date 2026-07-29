@@ -1,0 +1,11 @@
+key,name,group,color,source,note
+me_valar_worship,Old Faith of the West,me_free_faiths,116 145 188,"LOTR, Appendix A; The Silmarillion; ENDORE plan 7","Reverence for Eru and the Valar without an organized church"
+me_mahal_cult,The Making of Mahal,me_free_faiths,151 112 67,"The Silmarillion, Of Aulë and Yavanna; ENDORE plan 7","Dwarven devotion to Mahal and remembrance of Durin"
+me_northern_ways,The Free Ways,me_free_faiths,111 151 79,"LOTR, Appendix A; † ENDORE plan 7","Hearth customs and free northern allegiance rather than temple worship"
+me_eldest_ways,Memory of the First Music,me_free_faiths,67 126 83,"† The Silmarillion, Of Aulë and Yavanna; ENDORE plan 7","A restrained spiritual adapter for the Onodrim, not an invented organized cult"
+me_sauron_cult,Worship of the Eye,me_shadow_cults,111 31 28,"LOTR, Books IV-VI; ENDORE plan 7","Terror, tribute, and direct allegiance to Sauron"
+me_melkorism,The Black Devotion,me_shadow_cults,79 46 63,"† The Silmarillion; ENDORE plan 7","Older Morgoth-rooted devotion among isolated servants of the Shadow"
+me_dunland_ways,Ways of the Hill-folk,me_old_ways,121 86 55,"† LOTR, Appendix A; ENDORE plan 7","Ancestor memory and inherited grievance in Dunland"
+me_lossoth_ways,Ways beneath the North Star,me_old_ways,112 165 177,"† LOTR, Appendix A; ENDORE plan 7","A deliberately broad adapter for Lossoth spiritual customs"
+me_druedain_ways,The Watch-stone Ways,me_old_ways,75 119 73,"† LOTR, Book V, Ch. 5; ENDORE plan 7","Watch-stones, wood-lore, and ancestral obligation"
+me_southron_ways,Ways of the Southern Sun,me_old_ways,181 112 48,"† LOTR, Books IV-V; ENDORE plan 7","Plural folk traditions beneath Shadow-aligned elites"

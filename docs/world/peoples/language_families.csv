@@ -1,0 +1,9 @@
+semantic_key,name,engine_key,source,note
+me_eldarin_family,Eldarin,celtic_language_family,"The Silmarillion, Appendix; ENDORE plan 6.2","Installed build 24187685 requires a native family adapter"
+me_mannish_family,Mannish,germanic_language_family,"LOTR, Appendix F; ENDORE plan 6.2","Westron and northern Mannish tongues"
+me_southron_family,Southron,south_semitic_language_family,"† ENDORE plan 6.2","Gameplay family for Haradric tongues"
+me_easterling_family,Easterling,turkic_language_family,"† ENDORE plan 6.2","Gameplay family for Rhûnic and Khandish tongues"
+me_khuzdul_family,Khuzdul,semitic_language_family,"The Silmarillion, Appendix; ENDORE plan 6.2","Technical family adapter only; no real-world relationship is asserted"
+me_black_speech_family,Black Speech,iranic_language_family,"LOTR, Appendix F; ENDORE plan 6.2","Technical family adapter only"
+me_lossoth_family,Lossoth,eskaleut_language_family,"† ENDORE plan 6.2","Technical family adapter only"
+me_entish_family,Entish,uralic_language_family,"LOTR, Book III, Ch. 4; ENDORE plan 6.2","Technical family adapter only"

@@ -1,0 +1,33 @@
+{
+  "milestone": "M4",
+  "status": "green",
+  "counts": {
+    "culture_groups": 10,
+    "cultures": 33,
+    "faith_groups": 3,
+    "faiths": 10,
+    "language_roots": 10,
+    "dialects": 33,
+    "localized_name_entries": 1105,
+    "assigned_land_locations": 5200,
+    "owned_land_locations": 4189,
+    "wild_land_locations": 1011,
+    "installed_religion_overlays": 29
+  },
+  "observer": {
+    "start": "3018.1.1",
+    "end": "3018.1.20",
+    "recoveries": 0,
+    "error_log_bytes_before": 1486,
+    "error_log_bytes_after": 1486
+  },
+  "sha256": {
+    "country_selection.png": "70123A80686827149E1DD2F0B5B67FA627DD25C9F5B366B76CD10842B185DF03",
+    "culture_map_east_south.png": "8383DED660A379755925695BF5C609E021ECAABC6FCEAADE16B6B469B5A87C8B",
+    "culture_map_north.png": "803DD2560C541FD08DB25CF14A949A37F73941B1852AE7434B07E42FD15C35D4",
+    "deep_error.txt": "376614894887ABF4CD3059FB87EED963428BCC1D54F0CC88D2046BD997E90EE2",
+    "faith_map_north.png": "3B87019C920CEA1D402B3AAC80F31D42CC47BB22EE2AB9E0CB7B940AE15FD6C2",
+    "faith_map_south_east.png": "F7CAAE8371DCC6B25E5F07DF8CB768FFDBF40AC50CA0ACCA7F5C4044FC2DB9B6",
+    "observer_3018_01_20.png": "9F8D4864E204872D16643688876364833E999D514B18550F7C5CCBB219165699"
+  }
+}

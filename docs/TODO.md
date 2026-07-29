@@ -1,12 +1,12 @@
 # TODO
 
-1. M4: replace the technical installed culture registry with Middle-earth race/culture
-   groups and connect every realm/location template to an authored culture.
-2. M4: author language families, languages, and deterministic name pools with canon seeds
-   and logged constructed-language conventions.
-3. M4: replace the technical faith registry with the Light, Shadow, and Old Ways faith
-   groups; neutralize all inherited Earth religious surfaces.
-4. M4 gate: verify culture and faith map modes, complete localization, paired smoke, and
-   live Observer stability across representative western, eastern, and wild locations.
+1. M5: author `census_notes` and deterministic population ledgers covering totals,
+   minorities, population types, ruins, and desolation.
+2. M5: replace the technical census while preserving the installed culture ABI contract
+   beneath custom-dominant populations.
+3. M5: build markets, roads, town ranks, development, raw materials, buildings, and
+   starting armies as one coherent economic and settlement setup.
+4. M5 gate: paired smoke plus a five-year Observer economy run with population, market,
+   settlement, and infrastructure map-mode evidence.
 5. Later map tooling: revisit Himling/Tolfalas adjacency candidates only through a bounded
    editor-backed experiment; the zero-byte fallback remains the proven safe contract.

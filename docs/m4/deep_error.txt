@@ -1,0 +1,16 @@
+[16:01:58][gfx_dx12_master_context.cpp:1344]: D3D error: _Device->CheckFeatureSupport( D3D12_FEATURE_D3D12_OPTIONS8, &D3D12Options8, sizeof( D3D12Options8 ) ) returned: The parameter is incorrect.
+
+[16:01:58][pdx_assert.cpp:214]: Important assertion failed: C:\mnt\gsg\caesar\caesar\cw\clausewitz\pdx_gfx2\DX12\gfx_dx12_master_context.cpp:1344 (_Device->CheckFeatureSupport( D3D12_FEATURE_D3D12_OPTIONS8, &D3D12Options8, sizeof( D3D12Options8 ) ) returned:
+The parameter is incorrect.
+)
+[16:01:58][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3865300
+[16:01:58][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3699010
+[16:01:59][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3865300
+[16:01:59][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3699010
+[16:02:03][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3865300
+[16:02:03][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3699010
+[16:02:06][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3865300
+[16:02:06][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3699010
+[16:02:29][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3865300
+[16:02:29][dlc_reloadable.cpp:1582]: Could not find item in store backend. Item: 3699010
+[16:02:52][pdx_arena_allocator.cpp:213]: Arena AudioArena size is too small. Please increase.

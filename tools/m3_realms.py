@@ -613,20 +613,33 @@ def political_qa_png(state: RealmState) -> bytes:
 
 
 def country_definitions(state: RealmState) -> str:
+    m4_profiles = ROOT / "docs/world/peoples/realm_profiles.csv"
+    if m4_profiles.is_file():
+        from m4_peoples import country_profile
+
     lines = [
         "\ufeff" + M3_MARKER,
-        "# M3 realm registry; technical culture and faith are replaced in M4.",
+        (
+            "# M3 realm registry joined to the authored M4 people/faith atlas."
+            if m4_profiles.is_file()
+            else "# M3 realm registry; technical culture and faith are replaced in M4."
+        ),
     ]
     for realm in state.realms:
         red, green, blue = realm.color
+        culture, faith = (
+            country_profile(realm.tag)
+            if m4_profiles.is_file()
+            else ("swedish", "catholic")
+        )
         lines.extend(
             (
                 "",
                 f"{realm.tag} = {{ # {realm.name}; {realm.source}",
                 f"\tcolor = rgb {{ {red} {green} {blue} }}",
                 f"\tcolor2 = rgb {{ {255-red} {255-green} {255-blue} }}",
-                "\tculture_definition = swedish",
-                "\treligion_definition = catholic",
+                f"\tculture_definition = {culture}",
+                f"\treligion_definition = {faith}",
                 "}",
             )
         )

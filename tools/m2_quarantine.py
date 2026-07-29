@@ -365,6 +365,14 @@ def expected_overlays() -> dict[str, str]:
             path.relative_to(ROOT).as_posix()
             for path in m3_owned_paths()
         )
+    m4_cultures = ROOT / "docs/world/peoples/cultures.csv"
+    if m4_cultures.is_file():
+        from m4_peoples import owned_paths as m4_owned_paths
+
+        runtime_owned.update(
+            path.relative_to(ROOT).as_posix()
+            for path in m4_owned_paths()
+        )
     replacements = replacement_map()
     token_re = re.compile(r"\b[A-Za-z0-9_]+\b")
     geography_namespaces = {
@@ -508,6 +516,22 @@ def expected_overlays() -> dict[str, str]:
                         r"\s*=\s*\{"
                     ),
                     r"\1\2 ?= {",
+                    rewritten,
+                )
+            if (
+                relative
+                == "in_game/common/disasters/sinicization_disaster.txt"
+            ):
+                # Country selection evaluates comparison operands even when
+                # the preceding country_exists = c:CHI guard is false. Keep
+                # the ABI definition and its variable reads intact, but remove
+                # the only hard missing-country scope that returns `none`.
+                rewritten = re.sub(
+                    (
+                        r"(?m)^(\s*value\s*=\s*)"
+                        r"c:CHI\.country_economical_base\s*$"
+                    ),
+                    r"\g<1>0",
                     rewritten,
                 )
             if relative == "in_game/common/laws/02_country_specific.txt":

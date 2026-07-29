@@ -1,0 +1,27 @@
+{
+  "milestone": "M4",
+  "cultures": 33,
+  "culture_groups": 10,
+  "faiths": 10,
+  "faith_groups": 3,
+  "languages": 10,
+  "dialects": 33,
+  "semantic_language_families": 8,
+  "assigned_land_locations": 5200,
+  "owned_land_locations": 4189,
+  "wild_land_locations": 1011,
+  "major_pool_targets": [
+    60,
+    40,
+    30
+  ],
+  "minor_pool_targets": [
+    30,
+    20,
+    15
+  ],
+  "name_entries": 1105,
+  "vanilla_religion_abi_files_gated": 29,
+  "terminal_religion_date": "3200.1.2",
+  "source_sha256": "880fde858a86087bfce45baaa7dd2c758c298826312d54c73466a04d65fa9149"
+}

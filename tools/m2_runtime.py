@@ -21,6 +21,7 @@ TRAIT_OUT = ROOT / "in_game/common/traits"
 LOC_OUT = ROOT / "in_game/localization/english"
 M2_DATE = (3018, 1, 1)
 M3_REALMS = ROOT / "docs/world/realms.csv"
+M4_CULTURES = ROOT / "docs/world/peoples/cultures.csv"
 
 
 def _script_line(text: str) -> str:
@@ -112,6 +113,8 @@ def technical_census(owned: list[str]) -> dict[str, list[str]]:
 
 
 def pops_payload(owned: list[str]) -> str:
+    m4_state = None
+    m4_assignments = None
     if M3_REALMS.is_file():
         # M3 makes canonical ruins materially empty: no placeholder census
         # pop survives in a location whose gazetteer rank is "ruin".
@@ -119,20 +122,56 @@ def pops_payload(owned: list[str]) -> str:
 
         state = build_state()
         owned = [key for key in owned if state.rank[key] != "ruin"]
-    census = technical_census(owned)
+    if M4_CULTURES.is_file():
+        from m4_peoples import assignments
+
+        m4_assignments = assignments()
+        m4_state = state
+        census: dict[str, list[str]] = defaultdict(list)
+        # Installed culture keys are a demonstrated compile-time ABI and cannot
+        # be removed or disabled in build 24187685. The live M4 gate proved
+        # 0.001 is rounded away by this initializer; the already-proven 0.01
+        # threshold is distributed one-per-location so custom cultures remain
+        # dominant everywhere.
+        for index, culture in enumerate(
+            _installed_definitions("cultures", exclude_inactive=True)
+        ):
+            census[owned[index % len(owned)]].append(
+                "\tdefine_pop = { type = peasants size = 0.01 "
+                f"culture = {culture} religion = me_valar_worship }}"
+            )
+        # These two M4 cultures are real minorities but dominate no M3 location.
+        census["me_bree"].append(
+            "\tdefine_pop = { type = peasants size = 0.05 "
+            "culture = me_bree_hobbit religion = me_northern_ways }"
+        )
+        census["umbar"].append(
+            "\tdefine_pop = { type = nobles size = 0.05 "
+            "culture = me_black_numenorean religion = me_sauron_cult }"
+        )
+    else:
+        census = technical_census(owned)
     lines = ["locations = {"]
     for key in owned:
+        culture, faith = (
+            (
+                m4_assignments[key].culture,
+                m4_assignments[key].faith,
+            )
+            if m4_assignments is not None
+            else ("swedish", "catholic")
+        )
         lines.append(f"\t{key} = {{")
         lines.append(
             "\t\tdefine_pop = { type = peasants size = 1 "
-            "culture = swedish religion = catholic }"
+            f"culture = {culture} religion = {faith} }}"
         )
         if key == "minas_tirith":
             for pop_type in ("nobles", "clergy", "burghers"):
                 lines.append(
                     "\t\tdefine_pop = { "
                     f"type = {pop_type} size = 0.1 "
-                    "culture = swedish religion = catholic }"
+                    f"culture = {culture} religion = {faith} }}"
                 )
         lines.extend(f"\t{entry}" for entry in census.get(key, ()))
         lines.append("\t}")
@@ -426,18 +465,22 @@ def check() -> list[str]:
     pop_religions = set(
         re.findall(r"\breligion\s*=\s*([A-Za-z0-9_]+)", pops)
     )
-    missing_cultures = (
-        set(_installed_definitions("cultures", exclude_inactive=True))
-        - pop_cultures
-    )
+    expected_cultures = set(_installed_definitions("cultures", exclude_inactive=True))
+    if M4_CULTURES.is_file():
+        from m4_peoples import cultures, faiths
+
+        expected_cultures.update(row.key for row in cultures())
+    missing_cultures = expected_cultures - pop_cultures
     if missing_cultures:
         failures.append(
             f"technical census omits {len(missing_cultures)} retained cultures"
         )
-    missing_religions = (
-        set(_installed_definitions("religions", enabled_at=M2_DATE))
-        - pop_religions
+    expected_religions = (
+        {row.key for row in faiths()}
+        if M4_CULTURES.is_file()
+        else set(_installed_definitions("religions", enabled_at=M2_DATE))
     )
+    missing_religions = expected_religions - pop_religions
     if missing_religions:
         failures.append(
             f"technical census omits {len(missing_religions)} enabled religions"

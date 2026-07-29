@@ -23,6 +23,7 @@ import gen_terrain_cache
 import m2_quarantine
 import m2_runtime
 import m3_realms
+import m4_peoples
 
 STAGES = (
     ("locations", gen_locations),
@@ -38,6 +39,7 @@ STAGES = (
     ("runtime", m2_runtime),
     ("quarantine", m2_quarantine),
     ("realms", m3_realms),
+    ("peoples", m4_peoples),
 )
 
 

@@ -151,3 +151,23 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
 - A non-debug live Observer session advanced from 3018.1.1 through 3018.1.25. The runtime
   `error.log` contained no country, ownership, location, geography, terrain, cache,
   locator, script, culture, religion, pop, or market error.
+
+## M4 peoples-and-faiths contract
+
+- The accepted setup contains 33 cultures in 10 culture groups, 10 language roots with
+  33 required dialects, and 10 faiths in three gameplay groups.
+- Language-family keys come from a fixed installed registry. ENDÓRË maps eight semantic
+  families to those engine adapters and owns their visible localization.
+- Culture colors are unique and the deterministic ledgers emit 1,105 localized male,
+  female, and house names.
+- All 5,200 passable land locations and all 38 country primaries resolve to custom
+  Middle-earth cultures and faiths.
+- The engine continues to require 2,086 installed culture ABI keys to have populations.
+  Size `0.001` rounds away in this build; distributed size `0.01` presences are accepted
+  and remain subordinate to size `1.0` custom populations.
+- Exact overlays for all 29 installed religion files retain their parser symbols but gate
+  availability to 3200.1.2, beyond the campaign.
+- The actual Culture (Location) and Religion (Location) map modes visibly render custom
+  Middle-earth terms across representative northern, eastern, western, and southern land.
+- The final non-debug Observer gate advanced from 3018.1.1 to 3018.1.20. Its 1,486-byte
+  `error.log` was byte-identical before and after the run.

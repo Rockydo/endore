@@ -75,3 +75,17 @@
   mod-caused error.
 - M3 is complete. Installed culture, faith, census, government-title, and ruler values
   remain explicitly technical bridges for M4–M6, not accepted final content.
+
+- M4 now owns 33 cultures in 10 groups and 10 faiths in three gameplay groups across all
+  5,200 passable land locations and every realm primary.
+- Ten language roots, 33 culture dialects, and deterministic name pools emit 1,105
+  localized male, female, and house names from documented canon seeds and constructed
+  conventions.
+- Exact overlays gate all 29 installed Earth religion files to 3200.1.2 while preserving
+  the parser ABI required by inherited scripts.
+- The actual Culture and Religion location map modes render the authored terms across
+  representative northern, eastern, western, and southern theatres.
+- Paired smoke is green. A fresh non-debug Observer run advanced from 3018.1.1 to
+  3018.1.20 without recovery, while `error.log` remained byte-identical at 1,486 bytes.
+- M4 is complete. M5 census, settlements, markets, infrastructure, economy, and military
+  setup is the next active milestone.

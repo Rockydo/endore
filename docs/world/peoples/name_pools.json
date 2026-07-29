@@ -1,0 +1,122 @@
+{
+  "me_westron_language": {
+    "source": "LOTR, Appendices A and F; canon seeds first, then dagger-logged English/Westron-register fills",
+    "male_seed": ["Aragorn", "Denethor", "Boromir", "Faramir", "Beregond", "Bergil", "Húrin", "Hador", "Baranor", "Damrod", "Mablung", "Forlong", "Angbor", "Barliman", "Bill"],
+    "female_seed": ["Ioreth", "Morwen", "Finduilas", "Gilraen", "Míriel", "Lothíriel", "Rose", "Daisy", "Marigold", "Primula"],
+    "house_seed": ["House of Húrin", "House of Hador", "House of Stewards", "of the Tower", "of the White Tree", "of the Angle", "Butterbur", "Ferny"],
+    "male_stems": ["Adan", "Aran", "Bar", "Bel", "Ber", "Brand", "Cal", "Car", "Dair", "Dorn", "Eran", "For", "Hal", "Hir", "Thor"],
+    "male_endings": ["adan", "amir", "anor", "bar", "born", "dan", "dor", "gon", "ion", "mir", "rand", "thor"],
+    "female_stems": ["Ael", "An", "Bel", "Ber", "Cal", "El", "Elen", "Gil", "Ior", "Lin", "Mer", "Nim"],
+    "female_endings": ["eth", "iel", "ien", "il", "in", "loth", "wen", "wyn"],
+    "house_stems": ["White", "Grey", "Green", "Stone", "River", "Tower", "Star", "North", "West", "Oak"],
+    "house_endings": ["Ward", "Guard", "Hall", "Keep", "March", "Vale", "House", "Folk"]
+  },
+  "me_northman_language": {
+    "source": "LOTR Appendix A and The Hobbit; Old English-facing Rohirric and northern compound fills",
+    "male_seed": ["Théoden", "Théodred", "Éomer", "Éothain", "Erkenbrand", "Háma", "Gamling", "Grimbold", "Elfhelm", "Déorwine", "Brand", "Bard", "Bain", "Girion", "Beorn"],
+    "female_seed": ["Éowyn", "Morwen", "Elfhild", "Léofwyn", "Hild", "Fréawyn", "Béornwyn", "Goldwyn", "Hareth", "Bardis"],
+    "house_seed": ["House of Eorl", "House of Girion", "Westfold", "Eastfold", "Snowbourn", "Aldburg", "Dale", "the Carrock"],
+    "male_stems": ["Ald", "Beor", "Breg", "Ceol", "Déor", "Ead", "Eorl", "Folc", "Fram", "Grim", "Helm", "Léod", "Thengel", "Wulf"],
+    "male_endings": ["brand", "gar", "helm", "laf", "mund", "red", "ric", "wine", "wulf", "stan"],
+    "female_stems": ["Aelf", "Béorn", "Ead", "Éor", "Fréa", "Gold", "Hild", "Léof", "Mere", "Théod"],
+    "female_endings": ["burh", "gifu", "hild", "thryth", "wen", "wyn", "swith"],
+    "house_stems": ["Horse", "Spear", "Golden", "Green", "Snow", "East", "West", "Dale", "Raven", "Oak"],
+    "house_endings": ["Mark", "Fold", "Hall", "Rider", "Shield", "Burg", "Vale", "House"]
+  },
+  "me_eldarin_language": {
+    "source": "The Silmarillion, LOTR Appendices A-B-F; attested names first and conservative Eldarin-style fills",
+    "male_seed": ["Elrond", "Elladan", "Elrohir", "Glorfindel", "Erestor", "Galdor", "Círdan", "Celeborn", "Haldir", "Rúmil", "Orophin", "Thranduil", "Legolas", "Gildor", "Lindir"],
+    "female_seed": ["Galadriel", "Arwen", "Celebrían", "Nimrodel", "Amrothiel", "Idril", "Lúthien", "Míriel", "Finduilas", "Aredhel"],
+    "house_seed": ["House of Finwë", "House of Finarfin", "House of Fingolfin", "House of Thingol", "of Imladris", "of the Havens", "of Doriath", "of the Golden Wood"],
+    "male_stems": ["Aer", "Amon", "Ar", "Beleg", "Cal", "Celeb", "Cír", "Elen", "Eöl", "Fin", "Gal", "Gil", "Glor", "Leg", "Maeg", "Oro", "Thran"],
+    "male_endings": ["adan", "ar", "born", "dan", "dir", "dor", "fin", "ion", "las", "mir", "rand", "rohir", "thir"],
+    "female_stems": ["Aer", "Ar", "Celeb", "Elen", "Find", "Galad", "Idr", "Loth", "Lúth", "Nim", "Sil", "Tinú"],
+    "female_endings": ["eth", "iel", "ien", "il", "loth", "ril", "wen"],
+    "house_stems": ["Star", "Silver", "Golden", "White", "Grey", "Moon", "Haven", "Beech", "Holly", "River"],
+    "house_endings": ["Kindred", "House", "Folk", "Ward", "Song", "Bough", "Shore", "Line"]
+  },
+  "me_khuzdul_language": {
+    "source": "The Hobbit and LOTR Appendix A-F; attested public names plus conservative Dwarven-style fills",
+    "male_seed": ["Dáin", "Thorin", "Balin", "Dwalin", "Óin", "Glóin", "Fíli", "Kíli", "Bifur", "Bofur", "Bombur", "Náin", "Grór", "Thrór", "Frár"],
+    "female_seed": ["Dís", "Frísa", "Vísa", "Hlíf", "Bera", "Drífa", "Eira", "Hilda", "Sigrún", "Yngva"],
+    "house_seed": ["Durin's Folk", "House of Thrór", "House of Grór", "House of Náin", "Firebeards", "Broadbeams", "of Erebor", "of the Iron Hills"],
+    "male_stems": ["Az", "Bar", "Bif", "Bof", "Bomb", "Dáin", "Dur", "Far", "Frár", "Gim", "Gló", "Grór", "Khaz", "Nár", "Thrá"],
+    "male_endings": ["ar", "ek", "i", "in", "ir", "li", "nar", "or", "un", "ur"],
+    "female_stems": ["Bar", "Dís", "Dríf", "Eir", "Frís", "Hlíf", "Khaz", "Nís", "Sigr", "Vís"],
+    "female_endings": ["a", "dís", "hild", "in", "ís", "ra", "rún", "va"],
+    "house_stems": ["Iron", "Stone", "Anvil", "Hammer", "Deep", "Red", "Blue", "Golden", "Mountain", "Vault"],
+    "house_endings": ["Beard", "Shield", "Delver", "Folk", "House", "Halls", "Line", "Smith"]
+  },
+  "me_haradric_language": {
+    "source": "† Constructed from the very small Harad and Umbar canon seed set under ENDORE plan 6.2",
+    "male_seed": ["Suladân", "Herumor", "Fuinur", "Azrakh", "Bârath", "Khadir", "Mûrad", "Zahur", "Qasir", "Rakhân"],
+    "female_seed": ["Azra", "Bêlira", "Faraza", "Khalia", "Mârien", "Nadzira", "Qasira", "Rahana", "Sûlara", "Zamira"],
+    "house_seed": ["House of the Serpent", "House of the Sun", "Lords of Umbar", "House of Harnen", "House of Qarsad", "of the Red Dunes", "of the Mûmakil", "of the South Road"],
+    "male_stems": ["Azr", "Bahr", "Dar", "Far", "Hadr", "Khal", "Mahr", "Nar", "Qas", "Rakh", "Sahr", "Sul", "Taz", "Umr", "Zar"],
+    "male_endings": ["adan", "ahir", "amar", "an", "ar", "asir", "em", "esh", "im", "ir", "un", "ur"],
+    "female_stems": ["Az", "Bêl", "Dar", "Far", "Kha", "Mah", "Nad", "Qas", "Rah", "Sul", "Zam"],
+    "female_endings": ["ara", "ia", "ira", "iya", "una", "yra"],
+    "house_stems": ["Red", "Golden", "Black", "Sun", "Serpent", "Harnen", "Dune", "South", "Ivory", "Saffron"],
+    "house_endings": ["House", "Line", "Guard", "Lords", "Spears", "Caravan", "Throne", "Clan"]
+  },
+  "me_rhunic_language": {
+    "source": "† Constructed from Balchoth and Wainrider canon seeds under ENDORE plan 6.2",
+    "male_seed": ["Ulfang", "Uldor", "Ulfast", "Ulwarth", "Bór", "Borlach", "Borthand", "Karmach", "Shagrat", "Lorgan"],
+    "female_seed": ["Almara", "Borana", "Gathra", "Karmila", "Lodira", "Narana", "Sagatha", "Sharika", "Uldara", "Zorina"],
+    "house_seed": ["House of Ulfang", "House of Bór", "Wain-kings", "Balchoth", "House of Karmach", "of the Inland Sea", "of the East Road", "of the Red Steppe"],
+    "male_stems": ["Bal", "Bor", "Gath", "Karm", "Khur", "Lod", "Nar", "Rhov", "Sag", "Shar", "Uld", "Wain", "Zor"],
+    "male_endings": ["ach", "ad", "ar", "ath", "dor", "en", "od", "or", "un", "ur"],
+    "female_stems": ["Bal", "Bor", "Gat", "Kar", "Lod", "Nar", "Rhov", "Sag", "Shar", "Uld", "Zor"],
+    "female_endings": ["a", "ara", "ena", "ia", "ila", "ira"],
+    "house_stems": ["Red", "Iron", "Horse", "Wain", "East", "Sea", "Steppe", "Wolf", "Sun", "Reed"],
+    "house_endings": ["Clan", "House", "Horde", "Line", "Riders", "Spears", "Wains", "Kings"]
+  },
+  "me_khandish_language": {
+    "source": "† Constructed for the Variags from Khand and Variag canon seeds under ENDORE plan 6.2",
+    "male_seed": ["Vârkhaz", "Khandor", "Drazak", "Gharun", "Khôraz", "Ruzan", "Skarn", "Targul", "Zandak", "Balkor"],
+    "female_seed": ["Arzha", "Draza", "Gharai", "Khora", "Ruzha", "Skarna", "Taria", "Varka", "Zanda", "Khandra"],
+    "house_seed": ["House of the Variags", "House of Khand", "Black Riders", "of the East Pass", "of the Ash Road", "House of Khazan"],
+    "male_stems": ["Arz", "Balk", "Draz", "Ghar", "Kand", "Khaz", "Khor", "Ruz", "Skarn", "Targ", "Vark", "Zand"],
+    "male_endings": ["ak", "an", "ar", "ash", "ek", "esh", "or", "uk", "un"],
+    "female_stems": ["Ar", "Dra", "Gha", "Kha", "Kho", "Ru", "Skar", "Tar", "Var", "Zan"],
+    "female_endings": ["a", "ai", "ara", "ena", "ia"],
+    "house_stems": ["Black", "Ash", "Horse", "East", "Iron", "Pass", "Wolf", "Red"],
+    "house_endings": ["Clan", "House", "Riders", "Spears", "Line", "Guard"]
+  },
+  "me_black_speech_language": {
+    "source": "LOTR Appendix F and attested Orc names; harsh fills are † constructions, never claimed as Tolkien linguistic reconstructions",
+    "male_seed": ["Azog", "Bolg", "Golfimbul", "Gorbag", "Grishnákh", "Lagduf", "Lugdush", "Mauhúr", "Muzgash", "Radbug", "Shagrat", "Snaga", "Uglúk", "Ufthak", "Ghash"],
+    "female_seed": ["Burza", "Ghasha", "Grisha", "Kragha", "Lugra", "Mauza", "Muzga", "Nargra", "Shagra", "Ugra"],
+    "house_seed": ["Red Eye", "Black Hand", "Ash Snaga", "Morgul Host", "Gundabad Brood", "Moria Brood", "White Hand", "Mount Gram Pack"],
+    "male_stems": ["Azg", "Bolg", "Burz", "Dush", "Ghash", "Gor", "Grish", "Krimp", "Lug", "Mauh", "Muzg", "Nazg", "Shag", "Ugl", "Uruk"],
+    "male_endings": ["bag", "burz", "fang", "gash", "glob", "grat", "krak", "lug", "mauk", "nakh", "shak", "zagh"],
+    "female_stems": ["Bur", "Dush", "Gha", "Gri", "Kra", "Lug", "Mau", "Muz", "Nar", "Sha", "Ug"],
+    "female_endings": ["ga", "gha", "ra", "sha", "za"],
+    "house_stems": ["Ash", "Black", "Blood", "Bone", "Eye", "Fang", "Iron", "Morgul", "Red", "White"],
+    "house_endings": ["Brood", "Host", "Pack", "Snaga", "Uruks", "Warrens", "Claw", "Hand"]
+  },
+  "me_lossoth_language": {
+    "source": "† Constructed cautiously because LOTR Appendix A gives no Lossoth personal names",
+    "male_seed": ["Aput", "Kelor", "Nanuq", "Orvik", "Siku", "Tarnak", "Ular", "Vekko", "Yarik", "Kavi"],
+    "female_seed": ["Aira", "Ilma", "Kalla", "Nivi", "Sila", "Tala", "Ulla", "Vera", "Ylva", "Kira"],
+    "house_seed": ["Seal Bay", "White Shore", "Ice Fells", "North Star", "Snow Camp", "Frost Water"],
+    "male_stems": ["Ap", "Il", "Kal", "Kel", "Nan", "Or", "Sik", "Tar", "Ul", "Vek", "Yar"],
+    "male_endings": ["ak", "an", "ik", "or", "uk", "un"],
+    "female_stems": ["Ai", "Il", "Kal", "Kir", "Niv", "Sil", "Tal", "Ul", "Ver", "Yl"],
+    "female_endings": ["a", "ia", "ka", "na", "va"],
+    "house_stems": ["Ice", "Snow", "Seal", "White", "North", "Star", "Frost", "Drift"],
+    "house_endings": ["Folk", "Camp", "Shore", "Bay", "Fells", "Water"]
+  },
+  "me_entish_language": {
+    "source": "LOTR Book III, Ch. 4; short tree-bynames are game-facing stand-ins for Entish names",
+    "male_seed": ["Treebeard", "Fangorn", "Quickbeam", "Bregalad", "Skinbark", "Fladrif", "Leaflock", "Finglas", "Beechbone", "Wellinghall"],
+    "female_seed": ["Fimbrethil", "Wandlimb", "Lightfoot", "Birchsong", "Willowbough", "Rowanleaf", "Elmshade", "Aldermere", "Hazelwand", "Lindenhair"],
+    "house_seed": ["Old Entwood", "Beechgrove", "Rowan Dingle", "Willow Vale", "Alder Shade", "Deep Fangorn"],
+    "male_stems": ["Alder", "Beech", "Birch", "Bough", "Elm", "Fir", "Leaf", "Oak", "Rowan", "Root", "Willow"],
+    "male_endings": ["beard", "bone", "bough", "lock", "root", "shade", "song", "wood"],
+    "female_stems": ["Alder", "Beech", "Birch", "Elm", "Hazel", "Linden", "Rowan", "Willow"],
+    "female_endings": ["bough", "hair", "leaf", "limb", "mere", "shade", "song", "wand"],
+    "house_stems": ["Deep", "Old", "Long", "Green", "Quiet", "Welling", "Beech", "Rowan"],
+    "house_endings": ["Dingle", "Entwood", "Grove", "Vale", "Welling", "Shade"]
+  }
+}
