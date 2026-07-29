@@ -30,3 +30,16 @@
   coastline and bays, four lakes, seven ridge systems, five strategic passes, biome and
   density zones, nine river axes, and 41 cited settlement anchors. The deterministic
   renderer produces six committed QA/control rasters and a source-hash manifest.
+- The full M2 production stack is generated from those controls: an 8192×4096 raster with
+  5,812 locations, 4096×2048 height and flat-map layers, a valid directed river graph,
+  six-continent geography, terrain templates, 417 sea-zone ports, and complete
+  type-specific locators.
+- The 41 canon settlement anchors are pinned in the production mesh. Location allocation,
+  colors, definitions, hierarchy, terrain, ports, rivers, flat-map texture, locators, and
+  runtime setup are deterministic and validated by `tools/m2_world.py`.
+- All M1 runtime artifacts and proof-overlay manifests are removed. A generated M2
+  quarantine sweep now isolates still-parsed inherited Earth scripts while preserving
+  exact-source traceability.
+- The canonical validator and paired real-game menu smoke are green for the production
+  stack with zero mod-unique error lines. The deep M2 in-game navigation, screenshot, and
+  live-test gate remains the next required action before M2 is declared complete.

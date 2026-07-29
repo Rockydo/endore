@@ -1,1 +1,1 @@
-﻿# M1 proof map: vanilla location-bound holy sites are quarantined.
+﻿# Generated M2 quarantine: vanilla Earth holy sites.

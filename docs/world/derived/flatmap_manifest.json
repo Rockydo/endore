@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "resolution": [
+    4096,
+    2048
+  ],
+  "format": "DDS DXT5",
+  "vanilla_reference": "in_game/gfx/map/flatmap/flatmap_staticbackup.dds",
+  "vanilla_reference_sha256": "53a8dc55b2007cd20b48aa53925f72ff49418af77384bb91ebbd20743694de95",
+  "vanilla_reference_mean_luminance": 210.074585
+}

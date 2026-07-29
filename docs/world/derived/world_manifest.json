@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "seed": 3018,
+  "control_resolution": [
+    1024,
+    512
+  ],
+  "world_resolution": [
+    8192,
+    4096
+  ],
+  "height_resolution": [
+    4096,
+    2048
+  ],
+  "biome_resolution": [
+    4095,
+    2047
+  ],
+  "location_count": 5812,
+  "kind_counts": {
+    "lake": 32,
+    "land": 5200,
+    "mountain": 260,
+    "sea": 320
+  },
+  "passable_land_locations": 5200,
+  "anchor_locations": 41,
+  "continent_counts": {
+    "me_eriador": 1217,
+    "me_forodwaith": 820,
+    "me_gondor": 556,
+    "me_harad": 782,
+    "me_mordor_and_rhun": 1456,
+    "me_rhovanion": 981
+  },
+  "minimum_control_area": 8,
+  "median_control_area": 44.0,
+  "maximum_control_area": 2282,
+  "control_source_sha256": "a7749cab4cc10c02ec393e1af2007f7d027ac5acbbc416a9e5e7715274822c56",
+  "model_sha256": "ffa5374bd9d080f2fc53db32144df2ee61c609d79825b74748138bff4d684818"
+}

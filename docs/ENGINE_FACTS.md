@@ -52,3 +52,42 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
 - The final 2026-07-29 paired smoke found four fresh vanilla-control line types, zero
   mod-only line types, and one archived baseline type absent. The M1 world is therefore
   zero-new at the menu gate.
+
+## M2 production-map contract
+
+- The real game reaches the menu with an 8192×4096 custom location raster containing
+  5,812 live Middle-earth locations: 5,200 passable land, 260 impassable mountains,
+  32 lakes, and 320 sea zones.
+- The installed parser requires five braced geography levels below the top-level
+  continent: subcontinent, region, area, province, and location. ENDÓRË therefore emits
+  a continent → subcontinent → region → area → province → location hierarchy even
+  though the planning shorthand omits the subcontinent layer.
+- A 4096×2048 unsigned 16-bit `heightmap.png` is accepted. The corresponding manual
+  `biomes.png` override is one pixel smaller on each axis (4095×2047), matching the
+  installed contract; location templates remain the source of gameplay terrain.
+- River channels must be one-pixel-wide, four-connected directed paths. Palette index 0
+  denotes sources, index 1 explicit joins, indices 4–6 encode channel widths, 254 water,
+  and 255 land. Thick antialiased strokes are interpreted as malformed flow graphs.
+- Locator completeness is type-specific: city covers passable land; combat and unit
+  stacks cover every location except impassable mountains; VFX covers every live
+  location, including mountains; dock covers exactly the sea-zone port endpoints.
+- Naval ports may terminate only in locations classified under `sea_zones`. A lake
+  endpoint caused the dock database to request regeneration, so Esgaroth remains a
+  lakeshore settlement without a naval-port edge.
+- `ports.csv` must be UTF-8 without a BOM and without a terminal blank record. A trailing
+  newline is parsed as an empty location lookup in this build.
+- Any non-empty `adjacencies.csv` tested on the production custom canvas—including a
+  header-only file and valid authored rows—caused one empty-location lookup. The proven
+  safe fallback is an exact zero-byte file; authored Himling and Tolfalas candidates
+  remain in generator source for a later map-editor investigation.
+- Every passable land location requires a raw material during setup validation. M2 uses
+  an explicit temporary `wheat` placeholder alongside safe installed culture and
+  religion placeholders; the world-content milestones replace all three.
+- Localization keys share an internal hash namespace: two otherwise distinct generated
+  keys collided with installed strings and were rejected. Deterministic collision
+  detection and suffixing is therefore part of production location generation.
+- Retail content still parses named-location references outside the active setup. The
+  installed named-color registry can remain defined but unpainted while ENDÓRË colors
+  stay disjoint, allowing inherited references to parse without adding Earth geometry.
+- The final M2 production-stack paired smoke on 2026-07-29 passed with zero mod-unique
+  `error.log` lines.

@@ -1,1 +1,1 @@
-﻿# M1 proof map: vanilla geography-dependent runtime tests are quarantined.
+﻿# Generated M2 quarantine: vanilla geography-dependent runtime test.

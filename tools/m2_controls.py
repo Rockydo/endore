@@ -125,10 +125,17 @@ def draw_shape(
 def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
     image = Image.new("L", size, 0)
     draw = ImageDraw.Draw(image)
-    for polygon in projection["land_polygons"].values():
-        draw.polygon([point(item, size) for item in polygon], fill=255)
+    polygons = projection["land_polygons"]
+    draw.polygon([point(item, size) for item in polygons["mainland"]], fill=255)
     for polygon in projection["sea_cutouts"].values():
         draw.polygon([point(item, size) for item in polygon], fill=0)
+    # Offshore islands are independent landmasses and must be restored after
+    # bays/gulfs carve the mainland; both Himling and Tolfalas sit inside the
+    # broad authored water envelopes by design.
+    for key, polygon in polygons.items():
+        if key == "mainland":
+            continue
+        draw.polygon([point(item, size) for item in polygon], fill=255)
     for lake in projection["lakes"]:
         draw.ellipse(box(lake["box"], size), fill=0)
     return image

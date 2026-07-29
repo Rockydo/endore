@@ -1,0 +1,8 @@
+﻿# Native immortality remains a proven ENDÓRË engine contract.
+me_m2_immortality_probe = {
+	allow = { }
+	category = ruler
+	modifier = {
+		is_immortal = yes
+	}
+}

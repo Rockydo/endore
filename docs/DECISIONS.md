@@ -59,3 +59,45 @@ because its strategic ties and movement corridors run through the Gap of Rohan a
 system; Gondor remains a distinct group for useful map-mode scale. Mordor and western Rhûn
 share a top-level group because each is too narrow for balanced UI regions alone and their
 eastward strategic theatre is tightly linked.
+
+## 2026-07-29 — M2 production location model
+
+Generate 5,812 deterministic locations from the authored controls: 5,200 passable land,
+260 impassable mountains, 32 lakes, and 320 sea zones. The density-weighted seed model
+pins all 41 cited settlement anchors and uses a minimum control-cell area of eight. This
+stays within the plan's intended land-location range while leaving explicit tactical
+classes for mountain barriers and inland water.
+
+Follow the installed parser's six-level hierarchy contract rather than the plan's
+five-name shorthand: continent, subcontinent, region, area, province, location. ENDÓRË
+uses six continents, six corresponding subcontinents, and 24 authored strategic regions.
+
+## 2026-07-29 — M2 inherited-reference compatibility
+
+Retain the installed named-location color registry as unpainted definitions and allocate
+all ENDÓRË colors from a disjoint set. This is not retained Earth content: it is a parser
+compatibility measure for inherited files that still resolve location tokens during the
+quarantine phase. No installed location occupies a pixel in the production world.
+
+The generated M2 quarantine overlays replace the M1 proof overlays and redirect remaining
+installed geography references to one valid Middle-earth hierarchy path. They are exact,
+marked, deterministic source transformations and remain milestone-scoped scaffolding to
+be deleted as inherited Earth scripts are retired.
+
+## 2026-07-29 — M2 setup placeholders
+
+Use installed `catholic`, `swedish`, and `wheat` values as explicit temporary parser-safe
+religion, culture, and raw-material defaults for the 5,200 passable locations. Real-game
+evidence requires a raw material on every passable land location. These values make no
+lore claim and M4–M5 must replace them completely with bespoke Middle-earth systems.
+
+## 2026-07-29 — M2 ports and authored crossings
+
+Restrict naval ports to sea zones. Esgaroth is deliberately represented as a lakeshore
+settlement without a naval-port edge because the installed dock validator rejects lake
+endpoints.
+
+Ship M2 with the proven zero-byte `adjacencies.csv` fallback. Two bounded A/B attempts
+showed that any non-empty file on the custom canvas causes an empty-location lookup even
+when its rows are valid. Keep the intended Himling and Tolfalas crossings in generator
+source, but do not activate them until a later editor-backed contract is proven.

@@ -55,3 +55,18 @@ The live observer console can execute the underlying `test_log` effect. It emitt
 parseable sink probe in year 3029 and a conditional native-immortality PASS in year 3040.
 M1 records those results honestly. M2 may revisit scheduler activation only if installed
 evidence changes; it does not block the proven runtime assertion path.
+
+## 2026-07-29 — Non-empty production adjacencies create an empty lookup
+
+Status: bounded M2 limitation; zero-byte fallback is green and non-blocking.
+
+Two controlled real-game A/B attempts tested the 8192×4096 custom canvas with valid
+Himling/Tolfalas adjacency rows, then with a header-only file. Both non-empty variants
+produced the same single empty-location lookup. Removing all bytes from
+`adjacencies.csv`, matching the proven M1 fallback, removed the diagnostic without
+affecting ordinary coastline navigation.
+
+Resolution: M2 emits an exact zero-byte file and keeps the two intended crossings in
+generator source. A later map-editor-backed experiment may activate them if it proves the
+runtime serialization contract. This does not block the production map or its ordinary
+land/sea graph.
