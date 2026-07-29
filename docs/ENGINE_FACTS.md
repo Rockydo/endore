@@ -180,3 +180,28 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   Middle-earth terms across representative northern, eastern, western, and southern land.
 - The final non-debug Observer gate advanced from 3018.1.1 to 3018.1.20. Its 1,486-byte
   `error.log` was byte-identical before and after the run.
+
+## Reopened-M2 renderer contracts
+
+- Installed vegetation transform bins are headerless 40-byte records containing ten
+  little-endian floats: position xyz, quaternion xyzw, and scale xyz. Installed
+  forest/woods/pine definitions use `generated_content=yes` and the exact layers
+  `vegetation_high`, `vegetation_medium`, and `vegetation_low`.
+- New files under `gfx/map/map_objects/generated/` can reference mod-owned transform bins
+  while the 41 exact retail filenames remain quarantined. ENDÃ“RÃ‹ generates 420,000
+  transforms using installed meshes but only Arda-authored positions.
+- The detailed full-precision height source produced a 116 MB virtual-cache payload at
+  256-unit quantization, exceeding GitHub's single-file limit. A 512-unit cache quantum is
+  0.78% of the 16-bit engine range and yields an 82.2 MB `heightmap.bin`; the committed
+  `heightmap.png` remains full precision.
+- The river parser rejects self-touching meanders. It also rejected every tested custom
+  affluent layout, including single red index-1 endpoints orthogonally adjacent to a
+  clean parent channel. The green engine raster therefore contains 12 independent major
+  source-to-water channels using installed width indices 4â€“6; 23 axes remain in the
+  height/biome drainage control.
+- Every independent channel must reach palette-index-254 water. After the west coast
+  rewrite, the Baranduin control endpoint remained inland and produced one isolated
+  `River source not found`; an engine-only continuation across the coastal plain to open
+  water plus a monotonic source at Lake Evendim's southern outlet fixes the contract
+  without changing its valley-incision axis. Paired smoke then produced zero mod-unique
+  lines.

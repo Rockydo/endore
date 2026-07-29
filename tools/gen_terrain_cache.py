@@ -48,8 +48,8 @@ SOURCE_H = 32_768
 TILE_SIZE = 128
 BORDER_SIZE = 2
 STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
-HEIGHT_QUANTUM = 256
-GENERATOR_VERSION = 6
+HEIGHT_QUANTUM = 512
+GENERATOR_VERSION = 7
 
 # quadtree_nodes.bin is a full 12-level geometry-independent quadtree.  The
 # installed file's 20-byte header describes 5,592,405 zeroed 12-byte records.
@@ -241,9 +241,9 @@ def transformed_height_tile(
     values = np.clip(np.asarray(tile, dtype=np.float32), 0, 65_535).astype(
         np.uint16
     )
-    # 256 height units are only 0.39% of the engine range.  Quantization keeps
-    # the simple first-pass surface smooth while making the generated cache
-    # small enough for GitHub's ordinary-file contract.
+    # 512 height units are 0.78% of the engine range. The full-precision
+    # authored source remains committed separately; cache quantization keeps
+    # the derived virtual texture below GitHub's 100 MiB ordinary-file limit.
     values = (
         (values.astype(np.uint32) // HEIGHT_QUANTUM) * HEIGHT_QUANTUM
     ).astype(np.uint16)

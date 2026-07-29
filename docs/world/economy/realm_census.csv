@@ -21,7 +21,7 @@ FAN,0.5,ent,,,,,,"LOTR, Book III; †",Very few Ents and Huorns abstracted into 
 DRU,6,wild,,,,,,"LOTR, Book V; †",Small hidden Drúedain communities
 LOS,8,wild,,,,,,"LOTR, Appendix A; †",Seasonally mobile Forochel communities
 RHO,0.3,northman,,,,,,"The Hobbit; †",Radagast's household and nearby woodland folk
-MOR,1500,orc,me_near_haradrim,me_southron_ways,350,me_land_5092,slaves,"LOTR, Book VI; † ENDORE plan 6.3",Orc hosts plus the Mannish slave-fields of Nurn
+MOR,1500,orc,me_near_haradrim,me_southron_ways,350,nurn_fields,slaves,"LOTR, Book VI; † ENDORE plan 6.3",Orc hosts plus the Mannish slave-fields of Nurn
 DOL,90,orc,,,,,,"LOTR, Appendix B; †",Southern Mirkwood garrison and subject tribes
 ISE,12,orc,,,,,,"LOTR, Book III; †",Pre-war Uruk pits and the ring of Isengard
 MOA,70,orc,me_northern_orc,me_melkorism,7,moria,soldiers,"LOTR, Book II; †",Large but fragmented Misty-mountain Orc hold

@@ -8,14 +8,14 @@
     1024,
     512
   ],
-  "settlements": 41,
-  "ridges": 7,
-  "passes": 7,
-  "rivers": 9,
+  "settlements": 42,
+  "ridges": 9,
+  "passes": 9,
+  "rivers": 23,
   "lakes": 4,
-  "land_fraction": 0.521782,
+  "land_fraction": 0.527767,
   "engine_water_level_sample": 5466,
-  "minimum_land_height": 10477,
+  "minimum_land_height": 10510,
   "maximum_water_height": 420,
   "biome_ids": {
     "ocean": 0,
@@ -30,5 +30,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "a8d4163722783ce133cdc07f1df7b343c4f3ee7e4102bbd8d3fbdcf201af5e7a"
+  "source_sha256": "caac836e6b64970b31123f92eb33f946c06f270f0745cecc39b3b2f34cf389c2"
 }

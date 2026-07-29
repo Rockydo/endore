@@ -17,6 +17,7 @@ import gen_heightmap
 import gen_location_templates
 import gen_locations
 import gen_locators
+import gen_map_objects
 import gen_map_config
 import gen_rivers
 import gen_terrain_cache
@@ -32,16 +33,20 @@ STAGES = (
     ("heightmap", gen_heightmap),
     ("terrain_cache", gen_terrain_cache),
     ("rivers", gen_rivers),
-    ("templates", gen_location_templates),
     ("adjacencies", gen_adjacencies),
     ("map_config", gen_map_config),
     ("flatmap", gen_flatmap),
+    ("map_objects", gen_map_objects),
     ("locators", gen_locators),
     ("runtime", m2_runtime),
     ("quarantine", m2_quarantine),
     ("realms", m3_realms),
     ("peoples", m4_peoples),
     ("census", m5_census),
+    # Templates join M3/M4/M5 outputs. Keeping this last prevents an early
+    # raw-material lookup from caching a political/census state belonging to
+    # the previous control geometry during a full rewrite.
+    ("templates", gen_location_templates),
 )
 
 

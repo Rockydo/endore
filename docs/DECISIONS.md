@@ -225,3 +225,26 @@ player-facing physical map before resuming later milestones. The full native 163
 locations canvas is already in use; “larger” therefore means improving Middle-earth's
 footprint on that canvas and its locations-per-region density, not inventing an
 unsupported larger raster contract.
+
+## 2026-07-30 â€” Reopened-M2 natural geometry and native vegetation
+
+Keep the proven 1024Ã—512 control/location ABI for the first physical-production slice so
+all 5,812 downstream locations remain mechanically regenerable while relief and hydrology
+stabilize. Replace source primitives with hand-authored polygon vertices and apply
+deterministic multi-frequency perturbation only between those vertices.
+
+Model mountain systems as broad shoulders, irregular overlapping massifs, local rugged
+height octaves, and explicit valley/pass cuts. Impassable classification follows authored
+cores; foothill relief is physical rather than an impassable wall. The White Mountains
+are shifted south of Edoras and Minas Tirith.
+
+Reuse installed EU5 vegetation meshes and exact LOD layers, but generate every transform
+from ENDÃ“RÃ‹ biome controls. Never re-enable retail Earth transform bins. River previews
+may retain smooth interpolation, but the engine raster uses four-connected authored
+polylines for 12 independent major channels. All 23 axes remain height/valley controls,
+but custom affluent junctions are omitted because neither naturalized nor retail-style
+red-endpoint variants were parser-safe.
+
+Quantize only the derived terrain-cache height tiles to 512 units so the single payload
+stays below GitHub's 100 MiB hard limit. Preserve the authored 8192Ã—4096 16-bit heightmap
+at full precision and keep all generator/check manifests explicit about the cache quantum.

@@ -119,3 +119,29 @@
   geometric internal waters/forest masks, crude coasts, weak rivers, and missing
   close-zoom relief, vegetation, and terrain texture. New gameplay work is paused until
   `docs/m2/VISUAL_REOPEN_GATE.md` passes in the real non-debug renderer.
+- The first reopened-M2 production slice replaces every ellipse/box natural region with
+  explicit authored polygons plus deterministic sub-macro edge detail. It expands the
+  drainage model from 9 to 23 rivers, the relief model to nine branched massif systems
+  with nine deliberate crossings/valleys, and adds the permanent Fields of Nurn anchor.
+- The native height source now separates rolling lowlands from rugged mountain-local
+  octaves. The full 174,763-tile terrain cache was rebuilt and still contains zero Earth
+  decal layers.
+- Close-zoom vegetation no longer depends on quarantined Earth definitions: 420,000
+  deterministic Arda-native transforms reuse exact installed forest, woods, and pine
+  meshes across EU5's high/medium/low vegetation layers.
+- The installed river parser rejected both naturalized paths and every tested custom
+  affluent junction. The corrected engine raster ships 12 complete major channels;
+  all 23 axes still drive valley incision and the authored drainage control.
+- Full static validation is green. Paired smoke remains pending only because Antiquitas
+  owned the shared EU5 slot at the first retry; no visual acceptance is claimed yet.
+- The major-channel smoke isolated one remaining error to the Baranduin ending inland
+  after the west-coast rewrite. Its parser-visible channel now continues to open water;
+  static validation is green again and the confirming smoke deferred behind a new
+  Antiquitas lease.
+- The Baranduin engine path now begins monotonically at Lake Evendim's southern outlet and
+  reaches unambiguous open ocean. Paired smoke passed with zero mod-unique lines on
+  fingerprint `d24cf138`; all 12 major channels and the native vegetation definitions
+  load cleanly.
+- The repository-safe 512-unit terrain-cache rebuild reduced `heightmap.bin` from 116 MB
+  to 82.2 MB while preserving the full-precision source. Paired smoke passed again with
+  zero mod-unique lines on fingerprint `fa9123dc`.

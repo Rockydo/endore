@@ -49,6 +49,15 @@ def render_height() -> np.ndarray:
         (HEIGHT_W, HEIGHT_H),
         Image.Resampling.BICUBIC,
     ).copy()
+    latitude = np.linspace(0.0, 1.0, HEIGHT_H, dtype=np.float32)[:, None]
+    lowland_reference = 10_500.0 + (
+        1.0 - latitude
+    ) * (13_000.0 - 10_500.0)
+    mountain_strength = np.clip(
+        (elevation - lowland_reference) / 22_000.0,
+        0.0,
+        1.0,
+    )
     water = np.isin(
         resize_array(
             control_biomes,
@@ -63,10 +72,10 @@ def render_height() -> np.ndarray:
     rng = np.random.default_rng(SEED + 41)
     noise = np.zeros((HEIGHT_H, HEIGHT_W), dtype=np.float32)
     for width, height, amplitude in (
-        (128, 64, 1250.0),
-        (256, 128, 700.0),
-        (512, 256, 360.0),
-        (1024, 512, 170.0),
+        (128, 64, 520.0),
+        (256, 128, 280.0),
+        (512, 256, 145.0),
+        (1024, 512, 70.0),
     ):
         octave = rng.normal(0.0, 1.0, (height, width)).astype(np.float32)
         octave -= float(octave.mean())
@@ -76,6 +85,25 @@ def render_height() -> np.ndarray:
             Image.Resampling.BICUBIC,
         ) * amplitude
     elevation += noise
+
+    # Mountain surfaces need substantially more local relief than lowlands.
+    # Modulate several tighter octaves by the authored massif envelope so
+    # broad ranges retain coherent shoulders but break into slopes and peaks.
+    rugged = np.zeros((HEIGHT_H, HEIGHT_W), dtype=np.float32)
+    for width, height, amplitude in (
+        (256, 128, 1.00),
+        (512, 256, 0.68),
+        (1024, 512, 0.42),
+        (2048, 1024, 0.24),
+    ):
+        octave = rng.normal(0.0, 1.0, (height, width)).astype(np.float32)
+        octave -= float(octave.mean())
+        rugged += resize_array(
+            octave,
+            (HEIGHT_W, HEIGHT_H),
+            Image.Resampling.BICUBIC,
+        ) * amplitude
+    elevation += rugged * (4_600.0 * np.sqrt(mountain_strength))
     elevation[water] = 0.0
     return np.clip(elevation, 0, 65535).astype(np.uint16)
 
@@ -91,8 +119,26 @@ def render_biome_override() -> np.ndarray:
 def preview(height: np.ndarray) -> Image.Image:
     reduced = Image.fromarray(height).resize((1024, 512), Image.Resampling.BILINEAR)
     values = np.asarray(reduced, dtype=np.float32)
-    scaled = np.clip(np.sqrt(values / 65535.0) * 255.0, 0, 255).astype(np.uint8)
-    return Image.fromarray(scaled, "L")
+    gradient_y, gradient_x = np.gradient(values)
+    normal_x = -gradient_x / 720.0
+    normal_y = -gradient_y / 720.0
+    normal_z = np.ones_like(values)
+    length = np.sqrt(normal_x**2 + normal_y**2 + normal_z**2)
+    light = (-0.46, -0.38, 0.80)
+    shade = np.clip(
+        (
+            normal_x * light[0]
+            + normal_y * light[1]
+            + normal_z * light[2]
+        )
+        / length,
+        -0.15,
+        1.0,
+    )
+    altitude = np.sqrt(np.clip(values / 65535.0, 0.0, 1.0))
+    scaled = np.clip((0.20 + 0.66 * shade + 0.22 * altitude) * 235.0, 0, 255)
+    scaled[values < 1.0] = 0.0
+    return Image.fromarray(scaled.astype(np.uint8), "L")
 
 
 def write() -> None:

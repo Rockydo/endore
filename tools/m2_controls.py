@@ -7,6 +7,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -116,59 +117,260 @@ def box(value: list[float], size: tuple[int, int]) -> tuple[int, int, int, int]:
     return x0, y0, x1, y1
 
 
+def stable_seed(key: str) -> int:
+    return int.from_bytes(
+        hashlib.sha256(f"ENDORE|{key}|3018".encode("utf-8")).digest()[:8],
+        "little",
+    )
+
+
+def natural_path(
+    coords: list[list[float]],
+    size: tuple[int, int],
+    *,
+    key: str,
+    closed: bool,
+    amplitude: float,
+    spacing: float = 0.004,
+) -> list[tuple[int, int]]:
+    """Densify hand-authored geometry with deterministic sub-macro variation.
+
+    The source vertices remain the binding large/medium geography. Several
+    incommensurate periodic bands perturb only the intervening edge, avoiding
+    both random-pixel noise and the primitive straight segments of the proof.
+    """
+    vertices = [
+        np.array(
+            [float(item[0]) * (size[0] - 1), float(item[1]) * (size[1] - 1)],
+            dtype=np.float64,
+        )
+        for item in coords
+    ]
+    if closed:
+        vertices.append(vertices[0])
+    rng = np.random.default_rng(stable_seed(key))
+    phase = rng.uniform(0.0, 2.0 * math.pi, 4)
+    frequency = rng.uniform((0.75, 1.55, 3.2, 6.5), (1.25, 2.45, 5.1, 10.5))
+    result: list[tuple[int, int]] = []
+    pixel_spacing = max(2.0, spacing * size[1])
+    amplitude_px = amplitude * size[1]
+    segment_count = len(vertices) - 1
+    for segment_index, (start, end) in enumerate(zip(vertices, vertices[1:])):
+        delta = end - start
+        length = float(np.linalg.norm(delta))
+        if length < 0.5:
+            continue
+        normal = np.array([-delta[1], delta[0]], dtype=np.float64) / length
+        steps = max(2, math.ceil(length / pixel_spacing))
+        for index in range(steps):
+            if segment_index and index == 0:
+                continue
+            t = index / steps
+            global_t = (segment_index + t) / segment_count
+            # Pin authored vertices exactly. Variation grows between them.
+            envelope = math.sin(math.pi * t)
+            wave = (
+                0.50 * math.sin(2 * math.pi * frequency[0] * global_t + phase[0])
+                + 0.27 * math.sin(2 * math.pi * frequency[1] * global_t + phase[1])
+                + 0.15 * math.sin(2 * math.pi * frequency[2] * global_t + phase[2])
+                + 0.08 * math.sin(2 * math.pi * frequency[3] * global_t + phase[3])
+            )
+            displaced = start + delta * t + normal * amplitude_px * envelope * wave
+            result.append((round(displaced[0]), round(displaced[1])))
+    result.append((round(vertices[-1][0]), round(vertices[-1][1])))
+    return result
+
+
+def draw_organic_polygon(
+    image: Image.Image,
+    coords: list[list[float]],
+    size: tuple[int, int],
+    *,
+    key: str,
+    fill: int,
+    amplitude: float,
+) -> None:
+    ImageDraw.Draw(image).polygon(
+        natural_path(
+            coords,
+            size,
+            key=key,
+            closed=True,
+            amplitude=amplitude,
+        ),
+        fill=fill,
+    )
+
+
 def draw_shape(
-    draw: ImageDraw.ImageDraw,
+    image: Image.Image,
     shape: str,
     coords: list,
     size: tuple[int, int],
     fill: int,
+    *,
+    key: str,
 ) -> None:
+    draw = ImageDraw.Draw(image)
     if shape == "box":
         draw.rectangle(box(coords, size), fill=fill)
     elif shape == "ellipse":
         draw.ellipse(box(coords, size), fill=fill)
     elif shape == "polygon":
         draw.polygon([point(item, size) for item in coords], fill=fill)
+    elif shape == "organic_polygon":
+        draw_organic_polygon(
+            image,
+            coords,
+            size,
+            key=key,
+            fill=fill,
+            amplitude=0.0035,
+        )
     else:
         raise ValueError(f"unknown control shape {shape!r}")
 
 
 def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
     image = Image.new("L", size, 0)
-    draw = ImageDraw.Draw(image)
     polygons = projection["land_polygons"]
-    draw.polygon([point(item, size) for item in polygons["mainland"]], fill=255)
-    for polygon in projection["sea_cutouts"].values():
-        draw.polygon([point(item, size) for item in polygon], fill=0)
+    draw_organic_polygon(
+        image,
+        polygons["mainland"],
+        size,
+        key="coast:mainland",
+        fill=255,
+        amplitude=0.0045,
+    )
+    for key, polygon in projection["sea_cutouts"].items():
+        draw_organic_polygon(
+            image,
+            polygon,
+            size,
+            key=f"coast:{key}",
+            fill=0,
+            amplitude=0.0035,
+        )
     # Offshore islands are independent landmasses and must be restored after
     # bays/gulfs carve the mainland; both Himling and Tolfalas sit inside the
     # broad authored water envelopes by design.
     for key, polygon in polygons.items():
         if key == "mainland":
             continue
-        draw.polygon([point(item, size) for item in polygon], fill=255)
+        draw_organic_polygon(
+            image,
+            polygon,
+            size,
+            key=f"island:{key}",
+            fill=255,
+            amplitude=0.002,
+        )
     for lake in projection["lakes"]:
-        draw.ellipse(box(lake["box"], size), fill=0)
+        draw_shape(
+            image,
+            lake["shape"],
+            lake["coords"],
+            size,
+            0,
+            key=f"lake:{lake['key']}",
+        )
     return image
 
 
 def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
-    image = Image.new("L", size, 0)
-    draw = ImageDraw.Draw(image)
+    layers = np.zeros((size[1], size[0]), dtype=np.uint8)
     for ridge in projection["ridges"]:
-        width = max(2, round(float(ridge["width"]) * size[1]))
+        width = max(3, round(float(ridge["width"]) * size[1]))
         value = round(float(ridge["height"]) * 255)
-        draw.line(
-            [point(item, size) for item in ridge["points"]],
-            fill=value,
-            width=width,
-            joint="curve",
+        path = natural_path(
+            ridge["points"],
+            size,
+            key=f"ridge:{ridge['key']}",
+            closed=False,
+            amplitude=float(ridge.get("wander", 0.003)),
+            spacing=0.003,
         )
+        for width_scale, value_scale, blur_scale in (
+            (4.8, 0.14, 1.10),
+            (3.1, 0.24, 0.68),
+            (1.9, 0.37, 0.36),
+            (0.85, 0.48, 0.18),
+        ):
+            band = Image.new("L", size, 0)
+            ImageDraw.Draw(band).line(
+                path,
+                fill=round(value * value_scale),
+                width=max(2, round(width * width_scale)),
+                joint="curve",
+            )
+            radius = max(1, round(width * blur_scale))
+            band = band.filter(ImageFilter.GaussianBlur(radius=radius))
+            layers = np.maximum(layers, np.asarray(band, dtype=np.uint8))
+        # A mountain chain is a field of overlapping massifs, not a uniform
+        # wall. Scatter deterministic off-axis peaks along the authored spine.
+        rng = np.random.default_rng(stable_seed(f"peaks:{ridge['key']}"))
+        peaks = Image.new("L", size, 0)
+        peak_draw = ImageDraw.Draw(peaks)
+        stride = max(2, round(width * 0.25))
+        for path_index in range(stride, len(path) - stride, stride):
+            before = np.array(path[path_index - 1], dtype=np.float64)
+            after = np.array(path[path_index + 1], dtype=np.float64)
+            tangent = after - before
+            tangent_length = float(np.linalg.norm(tangent))
+            if tangent_length < 0.5:
+                continue
+            normal = np.array([-tangent[1], tangent[0]]) / tangent_length
+            center = np.array(path[path_index], dtype=np.float64)
+            center += normal * rng.uniform(-1.15, 1.15) * width
+            radius_x = rng.uniform(0.72, 1.45) * width
+            radius_y = rng.uniform(0.62, 1.30) * width
+            peak_draw.ellipse(
+                (
+                    round(center[0] - radius_x),
+                    round(center[1] - radius_y),
+                    round(center[0] + radius_x),
+                    round(center[1] + radius_y),
+                ),
+                fill=round(value * rng.uniform(0.58, 0.90)),
+            )
+        peaks = peaks.filter(
+            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.42)))
+        )
+        layers = np.maximum(layers, np.asarray(peaks, dtype=np.uint8))
+        for branch_index, branch in enumerate(ridge.get("branches", [])):
+            branch_path = natural_path(
+                branch,
+                size,
+                key=f"ridge:{ridge['key']}:branch:{branch_index}",
+                closed=False,
+                amplitude=float(ridge.get("wander", 0.0035)),
+                spacing=0.003,
+            )
+            band = Image.new("L", size, 0)
+            ImageDraw.Draw(band).line(
+                branch_path,
+                fill=round(value * 0.62),
+                width=max(2, round(width * 1.25)),
+                joint="curve",
+            )
+            band = band.filter(ImageFilter.GaussianBlur(radius=max(1, width // 2)))
+            layers = np.maximum(layers, np.asarray(band, dtype=np.uint8))
+    image = Image.fromarray(layers, "L")
     for pass_data in projection["passes"]:
+        valley = Image.new("L", size, 0)
         x, y = point(pass_data["center"], size)
         radius = max(2, round(float(pass_data["radius"]) * size[1]))
-        draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill=18)
-    return image.filter(ImageFilter.GaussianBlur(radius=max(1, size[1] // 170)))
+        ImageDraw.Draw(valley).ellipse(
+            (x - radius, y - radius, x + radius, y + radius),
+            fill=230,
+        )
+        valley_array = np.asarray(
+            valley.filter(ImageFilter.GaussianBlur(radius=max(2, radius // 2))),
+            dtype=np.float32,
+        ) / 255.0
+        layers = np.asarray(image, dtype=np.float32) * (1.0 - valley_array * 0.92)
+        image = Image.fromarray(np.clip(layers, 0, 255).astype(np.uint8), "L")
+    return image
 
 
 def river_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
@@ -177,7 +379,14 @@ def river_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
     for river in projection["rivers"]:
         width = max(1, round(float(river["width"]) * size[1]))
         draw.line(
-            [point(item, size) for item in river["points"]],
+            natural_path(
+                river["points"],
+                size,
+                key=f"river:{river['key']}",
+                closed=False,
+                amplitude=float(river.get("wander", 0.0015)),
+                spacing=0.0025,
+            ),
             fill=255,
             width=width,
             joint="curve",
@@ -209,18 +418,26 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     for zone in projection["biome_zones"]:
         mask = Image.new("L", size, 0)
         draw_shape(
-            ImageDraw.Draw(mask),
+            mask,
             zone["shape"],
             zone["coords"],
             size,
             255,
+            key=f"biome:{zone['key']}",
         )
         active = (np.asarray(mask) > 0) & land_array
         biome[active] = BIOMES[zone["biome"]]
     biome[(ridge_array > 0.29) & land_array] = BIOMES["mountain"]
     for lake in projection["lakes"]:
         mask = Image.new("L", size, 0)
-        ImageDraw.Draw(mask).ellipse(box(lake["box"], size), fill=255)
+        draw_shape(
+            mask,
+            lake["shape"],
+            lake["coords"],
+            size,
+            255,
+            key=f"lake:{lake['key']}",
+        )
         biome[np.asarray(mask) > 0] = BIOMES["lake"]
     biome_image = Image.fromarray(biome.astype(np.uint8), "L")
 
@@ -229,7 +446,7 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         1.0 - yy
     ) * (LOWLAND_NORTH_SAMPLE - LOWLAND_SOUTH_SAMPLE)
     elevation = np.where(land_array, base_land, WATER_FLOOR_SAMPLE)
-    elevation += np.where(land_array, ridge_array * 45000.0, 0.0)
+    elevation += np.where(land_array, ridge_array * 36000.0, 0.0)
     river_blur = np.asarray(
         rivers.filter(ImageFilter.GaussianBlur(radius=max(1, size[1] // 240))),
         dtype=np.float32,
@@ -251,7 +468,7 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         peak.filter(ImageFilter.GaussianBlur(radius=max(2, radius // 2))),
         dtype=np.float32,
     ) / 255.0
-    elevation += np.where(land_array, peak_array * 26000.0, 0.0)
+    elevation += np.where(land_array, peak_array * 22000.0, 0.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
     minimum_land_height = int(elevation[land_array].min())
     maximum_water_height = int(elevation[~land_array].max())
@@ -278,11 +495,12 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     for zone in projection["density_zones"]:
         mask = Image.new("L", size, 0)
         draw_shape(
-            ImageDraw.Draw(mask),
+            mask,
             zone["shape"],
             zone["coords"],
             size,
             255,
+            key=f"density:{zone['key']}",
         )
         active = (np.asarray(mask) > 0) & land_array
         density[active] = np.maximum(density[active], int(zone["value"]))
@@ -305,7 +523,14 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     for river in projection["rivers"]:
         width = max(1, round(float(river["width"]) * size[1]))
         preview_draw.line(
-            [point(item, size) for item in river["points"]],
+            natural_path(
+                river["points"],
+                size,
+                key=f"river:{river['key']}",
+                closed=False,
+                amplitude=float(river.get("wander", 0.0015)),
+                spacing=0.0025,
+            ),
             fill=(68, 132, 167),
             width=width,
             joint="curve",

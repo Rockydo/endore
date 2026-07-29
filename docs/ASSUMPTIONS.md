@@ -80,3 +80,12 @@ about Middle-earth.
 - † Starting armies use one provisional installed foot-unit type and scale only by broad
   population bands. They establish a loadable M5 economy and do not pre-empt M7's
   canonical unit rosters or final military balance.
+
+## Reopened M2 physical production
+
+- â€  The control atlas now contains 42 stable anchors. Fields of Nurn represents the
+  canon-described slave-worked farmlands by NÃºrnen; its exact coordinate and town rank
+  are gameplay extrapolations. The anchor prevents Mordor's 350k Mannish field population
+  from depending on an unstable generated location key.
+- â€  Coast, lake, forest, ridge, valley, and tributary micro-geometry is deterministic
+  cartographic interpretation beneath the cited macro ordering, not survey accuracy.

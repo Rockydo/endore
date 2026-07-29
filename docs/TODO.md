@@ -3,10 +3,12 @@
 1. REOPENED M2 — physical geography: replace the rough control geometry with
    cartographically natural coasts, bays, islands, inland seas, lakes, forest boundaries,
    mountain masses, valleys, and river catchments at several scales. Follow
-   `docs/m2/VISUAL_REOPEN_GATE.md`; do not add gameplay content while this gate is open.
+   `docs/m2/VISUAL_REOPEN_GATE.md`; the first polygon/massif/23-river batch is static-green,
+   but continue theatre refinement after real-game review.
 2. REOPENED M2 — close-zoom renderer: prove visible 3D relief, terrain materials,
-   Arda-native forest objects/coverage, and correctly scaled rivers in the actual
-   non-debug game. No Earth-authored transform or decal may return.
+   420,000 Arda-native forest objects/coverage, and the corrected 12-major-channel river
+   raster in the actual non-debug game. Paired smoke is green; regional/close screenshots
+   and live Observer remain pending. No Earth-authored transform or decal may return.
 3. REOPENED M2 — scale and granularity: the engine already uses the full native
    16384×8192 locations canvas, so enlarge Middle-earth's footprint within that canvas
    where useful, then increase geographic location granularity only after the revised
