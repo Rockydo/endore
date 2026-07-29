@@ -23,6 +23,7 @@ class Command:
 
 VALIDATE_COMMANDS = (
     Command("tools/m1_proof_map.py", ("--check",)),
+    Command("tools/m2_controls.py", ("--check",)),
     Command("tools/pdxlint.py"),
 )
 SMOKE_COMMANDS = (Command("tools/smoketest.py"),)

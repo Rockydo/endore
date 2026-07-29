@@ -26,3 +26,7 @@
 - M1 gate is green: `gmake validate` passed, the paired vanilla/mod smoke reported zero
   mod-only `error.log` lines, screenshots are committed, and a live in-game assertion
   executed. Work may now proceed to M2.
+- M2 projection controls are authored at 1024×512 for an 8192×4096 production canvas:
+  coastline and bays, four lakes, seven ridge systems, five strategic passes, biome and
+  density zones, nine river axes, and 41 cited settlement anchors. The deterministic
+  renderer produces six committed QA/control rasters and a source-hash manifest.

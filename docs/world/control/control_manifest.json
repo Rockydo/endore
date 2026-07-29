@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "canvas": [
+    8192,
+    4096
+  ],
+  "control_resolution": [
+    1024,
+    512
+  ],
+  "settlements": 41,
+  "ridges": 7,
+  "passes": 5,
+  "rivers": 9,
+  "lakes": 4,
+  "land_fraction": 0.500559,
+  "biome_ids": {
+    "ocean": 0,
+    "temperate": 1,
+    "forest": 2,
+    "dense_forest": 3,
+    "mountain": 4,
+    "tundra": 5,
+    "marsh": 6,
+    "lake": 7,
+    "ash": 8,
+    "steppe": 9,
+    "arid": 10
+  },
+  "source_sha256": "3dd8bbd72b1b79f65e4ebf224f210a904e9ebd57e205c89f1563408f044dfe62"
+}
