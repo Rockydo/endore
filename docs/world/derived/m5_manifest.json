@@ -46,14 +46,14 @@
     "WOO": 35.0
   },
   "population_types_k": {
-    "burghers": 858.178,
-    "clergy": 144.528,
-    "laborers": 1464.13,
-    "nobles": 268.285,
-    "peasants": 3706.452,
-    "slaves": 773.437,
-    "soldiers": 1339.687,
-    "tribesmen": 473.903
+    "burghers": 858.168,
+    "clergy": 112.756,
+    "laborers": 1464.106,
+    "nobles": 262.839,
+    "peasants": 3737.617,
+    "slaves": 773.415,
+    "soldiers": 1345.827,
+    "tribesmen": 473.872
   },
   "culture_population_k": {
     "me_arnor_dunedain": 8.0,
@@ -65,21 +65,21 @@
     "me_dol_amrothian": 180.0,
     "me_dorwinrim": 162.0,
     "me_druedain": 6.0,
-    "me_dunlending": 165.263,
-    "me_eriadoran": 23.028,
+    "me_dunlending": 165.444,
+    "me_eriadoran": 23.523,
     "me_far_haradrim": 350.0,
     "me_firebeard_broadbeam": 13.0,
     "me_galadhrim": 25.0,
-    "me_gondorian": 2000.732,
+    "me_gondorian": 2000.768,
     "me_isengard_uruk": 12.0,
     "me_karmachi": 550.0,
     "me_longbeard": 67.0,
-    "me_lossoth": 10.975,
+    "me_lossoth": 10.452,
     "me_misty_orc": 108.0,
     "me_mordor_orc": 1240.0,
     "me_near_haradrim": 1040.0,
     "me_noldor": 3.8,
-    "me_northern_orc": 188.348,
+    "me_northern_orc": 188.12,
     "me_onodrim": 0.5,
     "me_rohirric": 500.0,
     "me_sagath": 500.0,
@@ -88,19 +88,19 @@
     "me_sindar": 15.0,
     "me_umbarite": 375.0,
     "me_variag": 300.0,
-    "me_woodman": 56.954
+    "me_woodman": 56.993
   },
   "faith_population_k": {
     "me_druedain_ways": 6.0,
-    "me_dunland_ways": 165.263,
+    "me_dunland_ways": 165.444,
     "me_eldest_ways": 0.5,
-    "me_lossoth_ways": 10.975,
+    "me_lossoth_ways": 10.452,
     "me_mahal_cult": 80.0,
-    "me_melkorism": 1646.348,
-    "me_northern_ways": 1109.982,
+    "me_melkorism": 1646.12,
+    "me_northern_ways": 1110.516,
     "me_sauron_cult": 2352.0,
     "me_southron_ways": 1390.0,
-    "me_valar_worship": 2267.532
+    "me_valar_worship": 2267.568
   },
   "markets": 12,
   "urban_locations": 58,
@@ -138,5 +138,5 @@
     "wine": 1,
     "wool": 945
   },
-  "source_sha256": "1c8adbce1de7d7329c129dd3add870008ddb2cc370fb676bb81afbb12524b0ad"
+  "source_sha256": "08f7abbcea569d15e3dd0ee47bad0c4aba3167c3b88ec460a5316dc9fb834cbf"
 }

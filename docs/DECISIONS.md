@@ -202,3 +202,26 @@ A size `0.001` experiment is rejected because the engine rounded it away and rep
 2,086 cultures without populations. The narrow Sinicization compatibility overlay keeps
 the installed script structure and variable reads intact while replacing only its
 country-base lookup with zero, preventing a selection-screen type error.
+
+## 2026-07-29 — M5 robust population-ABI hosts
+
+Assign the 2,086 size `0.01` compatibility populations only after the authored census has
+been allocated, selecting the 2,086 largest custom-dominant locations and enforcing at
+least 1.0k authored population per host. Fresh-game evidence rejected 23 ABI populations
+placed in 0.063k–0.095k Lossoth locations even after reducing their setup entry count,
+while larger Lossoth hosts were accepted. The robust-host policy keeps compatibility
+populations non-dominant without inflating them or encoding inherited cultures as lore.
+
+## 2026-07-29 — Owner visual review reopens M2 as the blocking gate
+
+The current map proves that a self-contained Arda canvas loads, but it is not an accepted
+production map. Owner close-zoom review found geometric oval inland waters and forests,
+imprecise line-like coasts, absent visible mountain relief, absent forest and terrain
+detail, weak or invisible rivers, and insufficient geographic polish/granularity.
+
+Suspend new M5–M12 gameplay, faction, mechanic, lore, and art expansion. Preserve already
+green work, but return active development to Part 5 and require a vanilla-detail
+player-facing physical map before resuming later milestones. The full native 16384×8192
+locations canvas is already in use; “larger” therefore means improving Middle-earth's
+footprint on that canvas and its locations-per-region density, not inventing an
+unsupported larger raster contract.

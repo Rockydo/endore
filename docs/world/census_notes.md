@@ -23,7 +23,10 @@ The binding choices are:
   not create churches. “Wild Folk” is the visible name for `tribesmen`.
 - The installed build requires 2,086 inherited culture symbols to retain a population.
   Their distributed size `0.01` presences are parser ABI only, excluded from every
-  authored total, and always subordinate to the local Middle-earth population.
+  authored total, and always subordinate to the local Middle-earth population. They are
+  assigned after census allocation to the 2,086 largest custom-dominant locations, each
+  with at least 1.0 thousand authored inhabitants; low-population hosts proved unreliable
+  during fresh bookmark initialization.
 - M5 uses only timeless installed raw goods and modest generic workshops. Bespoke
   pipeweed, mithril, athelas, mûmakil logistics, final prices, demand, and signature
   buildings belong to M9; final armies and units belong to M7.

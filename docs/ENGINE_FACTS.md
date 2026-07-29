@@ -165,6 +165,15 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
 - The engine continues to require 2,086 installed culture ABI keys to have populations.
   Size `0.001` rounds away in this build; distributed size `0.01` presences are accepted
   and remain subordinate to size `1.0` custom populations.
+- Fresh M5 bookmark initialization rejected 23 size `0.01` inherited-culture ABI pops
+  hosted in very small Lossoth locations (0.063k–0.095k authored population), while the
+  two larger Lossoth ABI hosts and all hosts elsewhere were accepted. Reducing the same
+  locations from eight entries to seven did not change the rejection set, disproving an
+  entry-count explanation. ABI hosts are therefore selected only after census allocation
+  and must contain at least 1.0k authored population.
+- The robust-host census then passed fresh non-debug bookmark initialization with the
+  accepted 1,486-byte baseline and zero missing-culture lines. Live Observer advanced to
+  3018.2.17 without a census or economy diagnostic.
 - Exact overlays for all 29 installed religion files retain their parser symbols but gate
   availability to 3200.1.2, beyond the campaign.
 - The actual Culture (Location) and Religion (Location) map modes visibly render custom

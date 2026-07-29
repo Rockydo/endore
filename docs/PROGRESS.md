@@ -106,3 +106,16 @@
   while the smoke produced zero mod-unique error lines on fingerprint `ee4afc6a`.
 - M5 remains active: a fresh five-year Observer economy run and native road-spline
   serialization are still required before its milestone gate can be declared.
+- Fresh M5 initialization exposed 23 inherited culture-ABI populations placed in
+  0.063k–0.095k Lossoth locations. Reducing entry count did not alter the failures;
+  assigning all 2,086 ABI populations after census allocation to hosts with at least
+  1.0k authored inhabitants eliminated every missing-culture line.
+- The repaired non-debug selection screen loaded the custom map with the accepted
+  1,486-byte baseline, and live Observer advanced to 3018.2.17. The census remained
+  clean; a separate late vanilla boat-model `waves_vfx` state-machine diagnostic is
+  recorded as an open M5 deep-test blocker rather than being hidden or misclassified.
+- Owner close-zoom review has reopened M2 and superseded M5 as the active priority. The
+  current world remains a valid technical proof but fails the production visual bar:
+  geometric internal waters/forest masks, crude coasts, weak rivers, and missing
+  close-zoom relief, vegetation, and terrain texture. New gameplay work is paused until
+  `docs/m2/VISUAL_REOPEN_GATE.md` passes in the real non-debug renderer.

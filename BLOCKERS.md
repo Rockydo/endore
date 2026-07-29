@@ -95,3 +95,27 @@ paths as source truth, omit the runtime road graph from any green M5 census slic
 continue census/economy verification. Revisit native spline serialization only through a
 materially different route, such as an editor-safe content-source overlay or a proven
 binary writer; do not repeat the two exhausted editor launches.
+
+## 2026-07-29 — Boat foam state event lacks `waves_vfx`
+
+Status: bounded M5 deep-test blocker; census initialization is green, but the five-year
+economy gate remains open.
+
+A fresh non-debug Observer run initialized with the accepted 1,486-byte baseline and
+advanced cleanly through early February. On 3018.2.17, the installed
+`boat_with_oars_unit` state machine emitted:
+
+`Couldn't find an entity at hierarchy place waves_vfx`
+
+`Error on state machine [boat_with_oars_unit] when trying to execute event [foam_stop]`
+
+The repository contains no override for that entity or state machine, and a text search
+found no writable source definition in either the mod or installed game. A same-duration
+direct “vanilla” control was attempted, but the direct launch still loaded ENDÓRË's map
+despite selecting the vanilla playset, so it cannot classify the lines as a vanilla
+baseline.
+
+Bounded fallback: retain the green paired menu smoke and the zero-error fresh census
+initialization as evidence for the current census repair, but do not claim the M5 deep
+gate. Pursue a materially different unit-entity resolver or a truly isolated vanilla
+Observer control before the five-year economy run.

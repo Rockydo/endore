@@ -81,6 +81,10 @@ POP_TYPES = (
     "tribesmen",
     "slaves",
 )
+# Eight entries are accepted in live M4/M5 setup evidence. Compatibility-only
+# culture ABI pops are placed only in robust, custom-dominant locations below.
+MAX_SETUP_POP_ENTRIES = 8
+MIN_ABI_HOST_UNITS = 1_000
 RAW_GOODS = frozenset(
     {
         "wheat",
@@ -291,10 +295,27 @@ def _nonruin_land() -> list[str]:
     ]
 
 
-def _abi_assignments(keys: list[str]) -> dict[str, tuple[str, ...]]:
+def _abi_assignments(
+    keys: list[str],
+    custom_units: dict[str, int],
+) -> dict[str, tuple[str, ...]]:
+    cultures = _installed_cultures()
+    ranked = sorted(
+        keys,
+        key=lambda key: (custom_units[key], key),
+        reverse=True,
+    )
+    if len(ranked) < len(cultures):
+        raise ValueError("not enough custom-dominant locations for installed culture ABI")
+    hosts = ranked[: len(cultures)]
+    if custom_units[hosts[-1]] < MIN_ABI_HOST_UNITS:
+        raise ValueError(
+            "installed culture ABI host population falls below "
+            f"{MIN_ABI_HOST_UNITS / 1000:.1f}k"
+        )
     result: dict[str, list[str]] = defaultdict(list)
-    for index, culture in enumerate(_installed_cultures()):
-        result[keys[index % len(keys)]].append(culture)
+    for culture, key in zip(cultures, hosts, strict=True):
+        result[key].append(culture)
     return {key: tuple(values) for key, values in result.items()}
 
 
@@ -389,7 +410,7 @@ def _cap_type_split(
     values: list[tuple[str, int]],
     maximum: int,
 ) -> list[tuple[str, int]]:
-    """Keep one slot for the installed culture ABI in eight-pop locations."""
+    """Merge the smallest strata until all reserved setup slots remain available."""
     result = list(values)
     while len(result) > maximum:
         smallest = min(range(len(result)), key=lambda index: result[index][1])
@@ -602,71 +623,82 @@ def build_m5_state() -> M5State:
     profiles = population_profiles()
     targets = realm_census()
     keys = _nonruin_land()
-    abi = _abi_assignments(keys)
     by_realm: dict[str, list[str]] = defaultdict(list)
     for key in keys:
         by_realm[political.ownership[key]].append(key)
 
-    locations: dict[str, CensusLocation] = {}
+    majority_units: dict[str, int] = {}
+    profile_by_location: dict[str, PopulationProfile] = {}
+    minority_by_location: dict[str, PopEntry] = {}
     for tag, target in targets.items():
         realm_keys = by_realm[tag]
         weights = {
             key: _location_weight(political.model, key, political.rank[key])
             for key in realm_keys
         }
-        minima = {
-            key: 15 if key in abi else 5
-            for key in realm_keys
-        }
+        minima = {key: 5 for key in realm_keys}
         if tag == WILD:
             preferred = max(realm_keys, key=lambda key: weights[key])
         else:
             realm = political.by_tag[tag]
             preferred = political.ref_to_location[realm.capital_ref]
-        majority_units = target.total_units - target.minority_units
+        realm_majority_units = target.total_units - target.minority_units
         allocation = _allocate_units(
-            majority_units,
+            realm_majority_units,
             realm_keys,
             weights,
             minima,
             preferred,
         )
         profile = profiles[target.profile]
-        minority_key = (
-            _resolve_location(target.minority_location)
-            if target.minority_units
-            else ""
-        )
         for key in realm_keys:
-            person = people[key]
-            split = _split_types(allocation[key], profile)
-            reserved_slots = (1 if key in abi else 0) + (
-                1 if key == minority_key else 0
-            )
-            split = _cap_type_split(split, 8 - reserved_slots)
-            entries = [
-                PopEntry(pop_type, units, person.culture, person.faith)
-                for pop_type, units in split
-            ]
-            locations[key] = CensusLocation(
-                location=key,
-                realm=tag,
-                custom_units=allocation[key],
-                entries=tuple(entries),
-            )
+            majority_units[key] = allocation[key]
+            profile_by_location[key] = profile
         if target.minority_units:
-            key = minority_key
-            current = locations[key]
-            minority = PopEntry(
+            key = _resolve_location(target.minority_location)
+            minority_by_location[key] = PopEntry(
                 target.minority_type,
                 target.minority_units,
                 target.minority_culture,
                 target.minority_faith,
             )
+
+    custom_units = dict(majority_units)
+    for key, minority in minority_by_location.items():
+        custom_units[key] += minority.units
+    abi = _abi_assignments(keys, custom_units)
+
+    locations: dict[str, CensusLocation] = {}
+    for key in keys:
+        person = people[key]
+        split = _split_types(
+            majority_units[key],
+            profile_by_location[key],
+        )
+        reserved_slots = (1 if key in abi else 0) + (
+            1 if key in minority_by_location else 0
+        )
+        split = _cap_type_split(
+            split,
+            MAX_SETUP_POP_ENTRIES - reserved_slots,
+        )
+        entries = [
+            PopEntry(pop_type, units, person.culture, person.faith)
+            for pop_type, units in split
+        ]
+        locations[key] = CensusLocation(
+            location=key,
+            realm=political.ownership[key],
+            custom_units=custom_units[key],
+            entries=tuple(entries),
+        )
+        if key in minority_by_location:
+            current = locations[key]
+            minority = minority_by_location[key]
             locations[key] = CensusLocation(
                 location=key,
-                realm=tag,
-                custom_units=current.custom_units + target.minority_units,
+                realm=current.realm,
+                custom_units=current.custom_units,
                 entries=current.entries + (minority,),
             )
 
@@ -1185,8 +1217,18 @@ def check() -> list[str]:
     custom_faiths: set[str] = set()
     abi_entries = 0
     for key, location in state.locations.items():
-        if len(location.entries) > 8:
-            failures.append(f"{key} exceeds the installed eight-pop slot contract")
+        if len(location.entries) > MAX_SETUP_POP_ENTRIES:
+            failures.append(
+                f"{key} exceeds the installed "
+                f"{MAX_SETUP_POP_ENTRIES}-pop setup contract"
+            )
+        if state.abi_cultures.get(key) and (
+            location.custom_units < MIN_ABI_HOST_UNITS
+        ):
+            failures.append(
+                f"{key} hosts installed culture ABI below "
+                f"{MIN_ABI_HOST_UNITS / 1000:.1f}k custom population"
+            )
         realm_units[location.realm] += location.custom_units
         custom_total = 0
         for entry in location.entries:
