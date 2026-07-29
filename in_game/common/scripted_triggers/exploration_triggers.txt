@@ -1,0 +1,74 @@
+﻿# Generated M1 geography compatibility overlay; replaced wholesale by M2.
+country_can_start_exploration_trigger = {
+	modifier:may_explore = yes
+	OR = {
+		is_ai = no
+		AND = {
+			country_tax_base > 30
+			OR = {
+				has_game_rule = all_countries_explore
+				trigger_if = {
+					limit = {
+						has_game_rule = western_exploration_only
+					}
+					this != c:PAP
+					not = { has_preference_tag = "warfare" }
+					OR = {
+						capital.continent = continent:middle_earth
+						and = {
+							is_subject = yes
+							overlord ?= {
+								capital.continent = continent:middle_earth
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+discovered_any_in_americas_trigger = {
+	OR = {
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+	}
+}
+
+
+capital_in_old_world_trigger = {
+	capital = {
+		OR = {
+			continent = continent:middle_earth
+			continent = continent:middle_earth
+			continent = continent:middle_earth
+		}
+	}
+}
+
+
+discovered_route_to_india = {
+	OR = {
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+		has_discovered_area = area:endore_area
+	}
+	has_discovered_area = area:endore_area
+	has_discovered_area = area:endore_area
+}
+
+
+discovered_any_in_moluccas_trigger = {
+	has_discovered_area = area:endore_area
+}

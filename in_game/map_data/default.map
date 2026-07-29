@@ -1,0 +1,65 @@
+﻿provinces = "locations.png"
+rivers = "rivers.png"
+topology = "heightmap.heightmap"
+adjacencies = "adjacencies.csv"
+setup = "definitions.txt"
+ports = "ports.csv"
+location_templates = "location_templates.txt"
+
+equator_y = 3340
+wrap_x = no
+sound_toll = {
+}
+
+
+
+
+
+volcanoes = {
+}
+
+
+
+
+
+earthquakes = {
+}
+
+
+
+
+
+
+sea_zones = {
+	oslo_fjord bokna_fjord sogne_fjord hardanger_fjord trondheim_fjord vestfjord north_cape kristiansand_fjord frier_fjord lindesnes_cape obrestad_cape bjorna_fjord fens_fjord nordfjord_sea tingvoll_fjord bindals_fjord ran_fjord lofoten_islands2 senja_island lyngen tana_fjord faroe_islands1 faxa_bay isa_fjord fontur_point skaga_fjord glettinga_point vestmanna_islands stokks_point arnar_fjord greenland_sea3 denmark_strait1 denmark_strait2 denmark_strait4 denmark_strait7 baffin_bay greenland_high_sea2 greenland_high_sea4 greenland_high_sea6 greenland_high_sea8 greenland_high_sea9 greenland_high_sea11 greenland_high_sea21 norwegian_sea7 norwegian_sea8 norwegian_sea10 norwegian_sea13 norwegian_sea14 norwegian_sea16 norwegian_sea18
+}
+
+
+
+
+
+
+
+
+
+
+
+lakes = {
+	torne_trask storavan uddjaur vastenjaure akkajaure nasisalki enare_trask oulujarvi saima paijanne
+}
+
+
+
+
+
+
+
+
+impassable_mountains = {
+	s_jamtland_wasteland n_jamtland_wasteland jotunheim hardangervidda skanderna north_skanderna norway_wasteland_a norway_wasteland_b norway_wasteland_c vattnajokull icelandic_highlands hofsjokull langjokull eyjafjallajokull berwyn_range scilly_isles cambrian_mountains brecon_beacons ochil_hills north_york_moors
+}
+
+non_ownable = {
+}
+
+

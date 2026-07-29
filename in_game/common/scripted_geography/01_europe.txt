@@ -1,0 +1,149 @@
+﻿# Generated M1 geography compatibility overlay; replaced wholesale by M2.
+scotland_geography = {
+	area = {
+		endore_area
+	}
+}
+
+england_geography = {
+	area = {
+		endore_area
+	}
+}
+
+netherlands_geography = {
+	area = {
+		endore_area
+	}
+}
+
+portugal_geography = {
+	area = {
+		endore_area
+	}
+}
+
+baltic_sea_geography = {
+	province_definition = {
+		endore_province_001
+	}
+}
+
+mediterranean_sea_geography = {
+	area = {
+		endore_area
+	}
+}
+
+greece_geography = {
+	area = {
+		endore_area
+	}
+	province_definition = {
+		endore_province_001
+	}
+}
+
+#HRE Kingdoms
+kingdom_of_italy_geography = {
+	area = {
+		endore_area
+	}
+	province_definition = {
+		endore_province_001
+	}
+}
+kingdom_of_burgundy_geography = {
+	area = {
+		endore_area
+	}
+}
+kingdom_of_lotharingia_geography = {
+	area = {
+		endore_area
+	}
+	province_definition = {
+		endore_province_001
+	}
+}
+kingdom_of_bohemia_geography = {
+	area = {
+		endore_area
+	}
+}
+
+roman_borders_geography = {
+	region = {
+		endore_region
+	}
+	area = {
+		endore_area
+	}
+}
+
+mystras_scholarship_geography = {
+	area = {
+		endore_area
+	}
+	region = {
+		endore_region
+	}
+}
+
+#Byzantine Empire during the reign of Basil II, plus a few extra places
+macedonian_dynasty_byzantine_empire_geography = {
+	area = {
+		endore_area
+	}
+	region = {
+		endore_region
+	}
+
+	province_definition = {
+		endore_province_001
+	}
+}
+
+justinian_borders_geography = {
+	# The territorial extent of the Byzantine Empire at the death of Justinian I in 565 CE,
+	# covering both the core empire from 527 and Justinian's reconquests.
+
+	area = {
+		endore_area
+		
+	}
+
+	province_definition = {
+
+		endore_province_001
+	}
+}
+
+mare_nostrum_geography = {
+	province_definition = {
+		endore_province_001
+	}
+}
+
+serbian_empire_geography = {
+	# Maximum territorial extent of the Serbian Empire under Stefan Dušan, ca. 1354.
+	# Incorporates conquests from 1330 (core Serbia) through 1348 (Thessaly),
+	# plus Syrmia held 1336–1342 and regained in 1354.
+
+	area = {
+		endore_area
+	}
+
+	province_definition = {
+		endore_province_001
+	}
+}
+
+byzantine_aegean_coastline = {
+	province_definition = {
+		endore_province_001
+	}
+	area = {
+		endore_area
+	}
+}

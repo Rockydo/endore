@@ -1,0 +1,575 @@
+﻿# Generated M1 geography compatibility overlay; replaced wholesale by M2.
+# area preference definitions - pure data, no country or allowed fields.
+# Use add_area_preference = <key> in on_game_start, missions, or events to assign them.
+#
+# example = {
+#	preference_type = exploration / conquest
+#	modifier = 2 (can be below 1 to reduce desire)
+#	area = endore_area
+#	region = endore_region
+#	continent = bla_bla
+#	sub_continent = bla
+#	allow = { <area triggers> } (area must fulfil the triggers to be considered)
+#	consider_capital_region = yes (add dynamically the areas of the capital at the time when this preference gets added; default = no)
+#}
+
+##################
+##### CONQUEST ###
+##################
+
+# Generic
+generic_conquer_home_region = {
+	preference_type = conquest
+	modifier = 20
+
+    consider_capital_region = yes
+}
+
+# Historical
+aragon_conquer_mediterranean_islands = {
+	preference_type = conquest
+	modifier = 5.5
+
+    area = endore_area
+    area = endore_area
+}
+
+france_english_holdings = {
+    preference_type = conquest
+    modifier = 100 #100 for 100 years of being angry at the English
+
+	region = endore_region
+	allow = {
+		country_exists = c:ENG
+		any_location_in_area = {
+			is_ownable = yes
+			owner ?= {
+				OR = {
+					this = c:ENG
+					is_subject_or_below_of = c:ENG
+				}
+			}
+		}
+	}
+}
+
+foreign_league_italy_conquest = {
+	preference_type = conquest
+	modifier = 6
+
+	region = endore_region
+}
+
+france_no_hre = {
+    preference_type = conquest
+    modifier = 0.1	#we do not want France to charge into the HRE yet
+
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+france_little_bit_of_hre = {
+    preference_type = conquest
+    modifier = 4	#we do not want France to charge into the HRE yet
+	
+	area = endore_area
+	area = endore_area
+}
+
+france_conquer_northern_italy = {
+    preference_type = conquest
+    modifier = 3
+
+    area = endore_area
+    area = endore_area
+    area = endore_area
+    area = endore_area
+    area = endore_area
+    area = endore_area
+}
+
+france_revolutionary_conquer_europe = {
+    preference_type = conquest
+    modifier = 15
+
+    region = endore_region
+    region = endore_region
+    region = endore_region
+    region = endore_region
+}
+
+naples_conquer_siciliy = {
+	preference_type = conquest
+	modifier = 10.0
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+siciliy_conquer_naples = {
+	preference_type = conquest
+	modifier = 10.0
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+castile_conquer_spain = {
+	preference_type = conquest
+	modifier = 10.0
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+castile_conquer_new_world = {
+	preference_type = conquest
+	modifier = 10.0
+
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	region = endore_region
+}
+
+# when their capital gets moved to constantinople they lose their conquest for their previous home area so we need this also
+ottoman_expansion_anatolia = {
+	preference_type = conquest
+	modifier = 10
+
+	region = endore_region
+}
+
+ottoman_expansion_balkan = {
+	preference_type = conquest
+	modifier = 10
+
+	region = endore_region
+}
+
+ottoman_expansion_caucasus = {
+	preference_type = conquest
+	modifier = 10
+
+	region = endore_region
+}
+
+ottoman_expansion_crescent_egypt = {
+	preference_type = conquest
+	modifier = 10
+
+	region = endore_region
+	region = endore_region
+}
+
+ottoman_expansion_maghreb = {
+	preference_type = conquest
+	modifier = 3
+
+	region = endore_region
+}
+
+ottoman_expansion_carpathia = {
+	preference_type = conquest
+	modifier = 3
+
+	region = endore_region
+}
+
+ottoman_expansion_pontic = {
+	preference_type = conquest
+	modifier = 3
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+ottoman_expansion_persia = {
+	preference_type = conquest
+	modifier = 3
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+ottoman_expansion_arabia = {
+	preference_type = conquest
+	modifier = 3
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+ottoman_expansion_hre = {
+	preference_type = conquest
+	modifier = 3
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+dutch_conquest = {
+	preference_type = conquest
+	modifier = 3
+
+	formable_country = NED_f
+}
+
+austria_minor_conquest = {
+	preference_type = conquest
+	modifier = 10
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+austria_swiss_intention = {
+	preference_type = conquest
+	modifier = 2
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+austria_bohemia_conquest = {
+	preference_type = conquest
+	modifier = 4
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+austria_northern_italy_conquest = {
+	preference_type = conquest
+	modifier = 8
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+austria_hungary_conquest = {
+	preference_type = conquest	#actually, this was all via PUs and what not, but let the AI just take it through military foce instead
+	modifier = 8
+
+	region = endore_region
+}
+
+austria_empire_conquest = {
+	preference_type = conquest
+	modifier = 6
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+brandenburg_conquest = {
+	preference_type = conquest
+	modifier = 5
+
+	formable_country = PRU_f
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+prussia_conquest = {
+	preference_type = conquest
+	modifier = 5
+
+	formable_country = PRU_f
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+german_unification_conquest = {
+	#yes, historically, Germany was unified through a diplomatic play by Bismark - waaaaay outside of our timeframe
+	#however, it would be interesting to see the Prussian AI to try to unify Germany
+	preference_type = conquest
+	modifier = 5
+
+	formable_country = PRU_f
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+bohemia_core_region = {
+	preference_type = conquest
+	modifier = 5
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+saxony_conquest = {
+	preference_type = conquest
+	modifier = 5
+
+	area = endore_area
+}
+
+russia_conquer_region = {
+	preference_type = conquest
+	modifier = 25
+	region = endore_region
+	region = endore_region
+	region = endore_region
+}
+
+russia_conquer_scandinavia = {
+	preference_type = conquest
+	modifier = 5
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+russia_conquer_ruthenia_baltic = {
+	preference_type = conquest
+	modifier = 10
+
+	region = endore_region
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+russia_conquer_siberia = {
+	preference_type = conquest
+	modifier = 10
+
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	area = endore_area
+	area = endore_area
+}
+
+lithuania_conquer_livonia = {
+	preference_type = conquest
+	modifier = 10
+	area = endore_area
+}
+
+lithuania_conquer_ruthenia = {
+	preference_type = conquest
+	modifier = 5
+	region = endore_region
+	area = endore_area
+}
+
+poland_conquer_prussia = {
+	preference_type = conquest
+	modifier = 5
+	area = endore_area
+}
+
+poland_conquer_ruthenia = {
+	preference_type = conquest
+	modifier = 2.5
+	region = endore_region
+	area = endore_area
+}
+
+england_conquer_britain = {
+	preference_type = conquest
+	modifier = 5
+	region = endore_region
+}
+
+england_conquer_ireland = {
+    preference_type = conquest
+    modifier = 3
+
+    region = endore_region
+}
+
+england_conquer_france = {
+	preference_type = conquest
+	modifier = 15
+	region = endore_region
+}
+
+scotland_conquer_scotland = {
+	preference_type = conquest
+	modifier = 5
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+byzantium_conquer_anatolia = {
+	preference_type = conquest
+	modifier = 5
+	region = endore_region
+}
+
+byzantium_conquer_balkans = {
+	preference_type = conquest
+	modifier = 5
+	region = endore_region
+}
+
+byzantium_conquer_italy = {
+	preference_type = conquest
+	modifier = 2.5
+	region = endore_region
+}
+
+sweden_swedish_empire_conquests = {
+	preference_type = conquest
+	modifier = 15
+
+	region = endore_region
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}
+
+timurids_timur_conquests = {
+	preference_type = conquest
+	modifier = 15
+
+	region = endore_region
+	region = endore_region
+}
+
+timurids_anatolian_conquest = {
+	preference_type = conquest
+	modifier = 15
+
+	region = endore_region
+	region = endore_region
+	area = endore_area
+	area = endore_area
+}
+
+timurids_indian_conquest = {
+	preference_type = conquest
+	modifier = 7.5
+
+	region = endore_region
+}
+
+timurids_chinese_conquest = {
+	preference_type = conquest
+	modifier = 5
+
+	region = endore_region
+	region = endore_region
+}
+
+timurids_disallow_steppes = {
+	preference_type = conquest
+	modifier = 0.1
+
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	region = endore_region
+}
+
+china_chinese_unification = {
+	preference_type = conquest
+	modifier = 25
+
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	region = endore_region
+}
+
+china_expanded_ambition = {
+	preference_type = conquest
+	modifier = 3
+
+	region = endore_region
+	region = endore_region
+	region = endore_region
+	region = endore_region
+}
+
+venice_conquest = {
+	preference_type = conquest
+	modifier = 3
+
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+	area = endore_area
+}

@@ -1,0 +1,14 @@
+﻿# Generated M1 geography compatibility overlay; replaced wholesale by M2.
+include = "amerindian_tribe"
+include = "expl_mesoamerica"
+
+discovered_regions = {
+	endore_region
+}
+government = {
+	ruler = random
+	privilege = {
+		tribes_tribal_levies
+		tribes_allow_gatherings
+	}
+}

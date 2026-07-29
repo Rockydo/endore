@@ -1,0 +1,38 @@
+﻿middle_earth = {
+	endore_subcontinent = {
+		endore_region = {
+			endore_area = {
+				endore_province_001 = { stockholm norrtalje nykoping arboga enkoping uppsala kastelholm kolmarden soderkoping norrkoping }
+				endore_province_002 = { linkoping alvastra vadstena strangnas tierp heby vasteras oppunda nora sala }
+				endore_province_003 = { orebro riseberga goksholm skinskatteberg sodertalje tjust sevede handbord kalmar kinda }
+				endore_province_004 = { jonkoping oland vallsjo vetlanda albo konga vaxjo uppvidinge ljungby trollaborg }
+				endore_province_005 = { waestbo hjo tiveden vartofta skara lodose hornborg utlandet kungsbacka ekholm }
+				endore_province_006 = { falkoping allingsas bogesund lidkoping skene slite hoborg visby gefle hedesunda }
+				endore_province_007 = { hamrange ockelbo linde grythyttan dalaborg amal vedbo varnum tingvalla gillberg }
+				endore_province_008 = { nas nordmark farnebo josse fryksdal hudiksvall alfta soderala hogdal avesta }
+				endore_province_009 = { falun leksand grange malung mora idre hedemora orsa havero selanger }
+				endore_province_010 = { hammerdal offerdal berg froso ragunda soderbarke stora_tuna floda oviken harnosand }
+				endore_province_011 = { solatunum ramsele sjalevad anundsjo grundsunda umea vindeln skelleftea tornea bygdea }
+				endore_province_012 = { pitea lulea ranea gratesk hienatiemi pajala branna byske bodebyn alvsby }
+				endore_province_013 = { asele lycksele sorsele arvidsjaur arjeplog silbojock volgsjo stensele tarna ortrask }
+				endore_province_014 = { akkajaur socksjock jokkmokk kvikkjock porjus gellivaara juckasjarvi mourionska enontakis raunala }
+				endore_province_015 = { abisko sarek korpilombo nikkaluokta kasivarren torne_trask storavan uddjaur vastenjaure akkajaure }
+				endore_province_016 = { abo nystad poytis sauvo helsinge ekenas sjundea porvoo kymi_fi ikalis }
+				endore_province_017 = { raumo bjorneborg hvittis sastmola birkala sastamala orivesi hollola lohja tavastehus }
+				endore_province_018 = { janakkala forssa itis liljendal jyvaskyla jamsa saarijarvi viitasaari laukas sysma }
+				endore_province_019 = { kiemi simo korsholm koppo pedersore storkyro vora uleaborg brahestad karleby }
+				endore_province_020 = { kaustby lappo kuivaniemi nasisalki mikkeli olofsborg heinola kangasniemi ristiina joroinen }
+				endore_province_021 = { kuopio idensalmi kajana rautavaara savonranta vyborg villmanstrand veckelax elimaki vederlax }
+				endore_province_022 = { toksovo valkeasaari korela kyyrola beryozovskoye konevets kurkijoki heinjoki jaskis joensuu }
+				endore_province_023 = { vartsila sordavala ilomantsi lieksa nurmes juuka enare_trask oulujarvi saima paijanne }
+				endore_province_024 = { s_jamtland_wasteland n_jamtland_wasteland jotunheim hardangervidda skanderna north_skanderna norway_wasteland_a norway_wasteland_b norway_wasteland_c oslo_fjord }
+				endore_province_025 = { bokna_fjord sogne_fjord hardanger_fjord trondheim_fjord vestfjord north_cape kristiansand_fjord frier_fjord lindesnes_cape obrestad_cape }
+				endore_province_026 = { bjorna_fjord fens_fjord nordfjord_sea tingvoll_fjord bindals_fjord ran_fjord lofoten_islands2 senja_island lyngen tana_fjord }
+				endore_province_027 = { vattnajokull icelandic_highlands hofsjokull langjokull eyjafjallajokull faroe_islands1 faxa_bay isa_fjord fontur_point skaga_fjord }
+				endore_province_028 = { glettinga_point vestmanna_islands stokks_point arnar_fjord greenland_sea3 denmark_strait1 denmark_strait2 denmark_strait4 denmark_strait7 baffin_bay }
+				endore_province_029 = { greenland_high_sea2 greenland_high_sea4 greenland_high_sea6 greenland_high_sea8 greenland_high_sea9 greenland_high_sea11 greenland_high_sea21 norwegian_sea7 norwegian_sea8 norwegian_sea10 }
+				endore_province_030 = { norwegian_sea13 norwegian_sea14 norwegian_sea16 norwegian_sea18 berwyn_range scilly_isles cambrian_mountains brecon_beacons ochil_hills north_york_moors }
+			}
+		}
+	}
+}

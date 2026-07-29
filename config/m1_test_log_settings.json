@@ -1,0 +1,28 @@
+{
+  "loggers": [
+    {
+      "category": "automated_test_results",
+      "always_flush_level": "debug",
+      "sinks": [
+        {
+          "type": "file",
+          "log_level": "debug",
+          "file_name": "automated_test_results",
+          "format_pattern": "%v"
+        }
+      ]
+    },
+    {
+      "category": "tests",
+      "always_flush_level": "debug",
+      "sinks": [
+        {
+          "type": "file",
+          "log_level": "debug",
+          "file_name": "tests",
+          "format_pattern": "%v"
+        }
+      ]
+    }
+  ]
+}

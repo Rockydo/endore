@@ -17,3 +17,31 @@ the monuments framework for later Middle-earth landmarks.
 Use a temporary 512×512 recomposition of the installed EU5 paper-map table texture for the
 M0 metadata contract. It is explicitly tracked for replacement through the reference-driven
 art pipeline before M11 and is not treated as bespoke final art.
+
+## 2026-07-29 — M1 proof-world scope
+
+Use exactly 300 installed location identities and colors on a new Middle-earth-shaped
+geometry: 50 sea, 190 plains, 10 lakes, 20 impassable mountains, and 30 forests. Group
+them into 30 temporary provinces and one temporary owned realm using the installed `SWE`
+identity solely to satisfy the start contract. These are engineering scaffolds, not world
+content; M2 replaces the hierarchy and M3 replaces ownership.
+
+The accepted proof canvas is 16384×8192 because it matches the installed renderer contract
+and remained stable at roughly 5–6 GB. M2 will still study and target the plan's 8192×4096
+production canvas before committing the final projection.
+
+## 2026-07-29 — Temporary geography compatibility overlays
+
+Generate token-level overlays for retained retail scripts that name removed Earth
+geography. They preserve the engine definitions required to reach a playable 300-location
+world while redirecting only geography symbols to the proof hierarchy. Every file is
+marked as M1-only, generated from the read-only install, and listed in a manifest. M2 must
+remove the entire layer during its quarantine sweep; none of these overlays are final
+Middle-earth content.
+
+## 2026-07-29 — Locator source of truth
+
+Use the automated engine command `MapObjects.GenerateGameLocators <type>` to establish
+eligibility, then encode the resulting rule in the generator. Combat and unit-stack
+locators cover all live locations except impassable mountains (280 of 300); deterministic
+member-cell positions are valid and avoid any manual map-editor step.

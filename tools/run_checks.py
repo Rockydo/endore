@@ -21,7 +21,10 @@ class Command:
         return [sys.executable, str(ROOT / self.script), *self.args]
 
 
-VALIDATE_COMMANDS = (Command("tools/pdxlint.py"),)
+VALIDATE_COMMANDS = (
+    Command("tools/m1_proof_map.py", ("--check",)),
+    Command("tools/pdxlint.py"),
+)
 SMOKE_COMMANDS = (Command("tools/smoketest.py"),)
 
 

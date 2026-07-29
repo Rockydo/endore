@@ -20,6 +20,9 @@ DATE_RE = re.compile(r"(?<![\w.\-])(\d{1,4})\.(\d{1,2})\.(\d{1,2})(?![\w.])")
 BIOGRAPHY_DATE_RE = re.compile(
     r"(?m)^\s*(?:birth_date|death_date)\s*=\s*(-?\d{1,4}\.\d{1,2}\.\d{1,2})\s*(?:#.*)?$"
 )
+M1_COMPATIBILITY_MARKER = (
+    "# Generated M1 geography compatibility overlay; replaced wholesale by M2."
+)
 
 
 def balanced_script(text: str) -> tuple[bool, str]:
@@ -136,7 +139,10 @@ def validate() -> list[str]:
                 okay, reason = balanced_script(text)
                 if not okay:
                     failures.append(f"{path.relative_to(ROOT)}: {reason}")
-            if relative not in EXACT_SOURCE_DATE_OVERLAYS:
+            if (
+                relative not in EXACT_SOURCE_DATE_OVERLAYS
+                and not text.startswith(M1_COMPATIBILITY_MARKER)
+            ):
                 for match in BIOGRAPHY_DATE_RE.finditer(text):
                     try:
                         value = match.group(1)

@@ -1,0 +1,72 @@
+﻿# Generated M1 geography compatibility overlay; replaced wholesale by M2.
+discovered_regions = {
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+	endore_region
+}
+
+discovered_areas = {
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	#endore_region
+	endore_area
+	endore_area
+	#endore_region
+	endore_area
+	endore_area
+	#endore_region
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	#endore_region
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	#endore_region
+	endore_area
+	#endore_region
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+	endore_area
+}
+discovered_provinces = {
+	#endore_region
+	#endore_area
+	endore_province_001
+	endore_province_001
+}

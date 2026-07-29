@@ -1,0 +1,62 @@
+﻿# Generated M1 geography compatibility overlay; replaced wholesale by M2.
+chinese_canal_geography = {
+	location = {
+		liljendal
+	}
+}
+
+# For flavor_teu.4
+ducal_prussia_geography = {
+	province_definition = {
+		endore_province_001
+	}
+
+	location = {
+		liljendal
+	}
+}
+
+royal_prussia_geography = {
+	province_definition = {
+		endore_province_001
+	}
+
+	location = {
+		liljendal
+	}
+}
+
+albanian_migration_source_geography = {
+	area = {
+		endore_area
+	}
+}
+
+albanian_migration_destination_geography = {
+	area = {
+		endore_area
+	}
+}		
+frankokratia_geography = {
+	area = {
+		endore_area
+	}
+	province_definition = {
+		endore_province_001
+	}
+}
+
+claims_of_thessalonica_geography = {
+	province_definition = {
+		endore_province_001
+	}
+}
+
+scaligeri_conquests_geography = {
+	province_definition = {
+		endore_province_001
+	}
+	location = {
+		liljendal
+	}
+}

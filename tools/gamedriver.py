@@ -110,6 +110,10 @@ def set_fixed_settings(user_dir: Path) -> None:
     )
     value.setdefault("Graphics", {}).update(
         {
+            # The completed ANTIQVITAS harness on this exact machine pins
+            # DX12. Leaving this unset made the fresh ENDÓRË user directory
+            # choose Vulkan, which crashed after custom-map game generation.
+            "renderer": "DX12",
             "display_mode": "windowed",
             "resolution": f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}",
             # 70% is an installed-UI setting value verified in a live menu.
@@ -635,23 +639,19 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
     click_normalized(0.23, 0.047)
     time.sleep(args.ui_settle)
     save_window_capture(target_dir / f"{prefix}_observer_enabled.png")
-    # Toggling Observer leaves its dropdown above the map. Physical Escape
-    # opens the selector's "go back to main menu" confirmation; a second
-    # physical Escape cancels it and dismisses the dropdown while preserving
-    # Observer. This is invariant across Windows DPI scaling, unlike the
-    # confirmation button coordinates. An ordinary outside click instead
-    # disables Observer.
-    press_scan_code(0x01)
+    # With country changes prohibited by the active game rule, toggling
+    # Observer opens a confirmation dialog. The locally verified OK button is
+    # stable in normalized window coordinates; accepting it immediately
+    # enables Observer and exposes the bottom-center start button.
+    click_normalized(0.60, 0.606)
     time.sleep(args.ui_settle)
-    press_scan_code(0x01)
-    time.sleep(args.ui_settle)
-    save_window_capture(target_dir / f"{prefix}_observer_popup_dismissed.png")
+    save_window_capture(target_dir / f"{prefix}_observer_rule_accepted.png")
     # The map is visible as soon as cached data finishes, but the observer
     # start button is not reliably interactive until its following UI frame.
     # This value was calibrated against the local save-load sequence.
     for start_attempt in range(1, 3):
         time.sleep(args.observer_enable_settle if start_attempt == 1 else args.ui_settle)
-        click_normalized(0.50, 0.860)
+        click_normalized(0.50, 0.899)
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_start_attempt{start_attempt}.png")
         if wait_for_observer_pause(max(15, args.live_timeout // 2)):
