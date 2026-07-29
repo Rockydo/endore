@@ -9,10 +9,10 @@ flavor_lat.1 = { # The New Latin Bureaucracy
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1360.1.1
-        to = 1600.1.1
-        monthly_chance = 5
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -104,10 +104,10 @@ flavor_lat.2 = { # The Rising Turkish Threat in Anatolia
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 40
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -180,10 +180,10 @@ flavor_lat.3 = { # Old Enemies of Bulgaria and Serbia
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 12
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -249,10 +249,10 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 8
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -378,10 +378,10 @@ flavor_lat.5 = { # Control of Anatolia Reasserted
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 18
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -438,10 +438,10 @@ flavor_lat.6 = { # Bulgaria Crushed
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 18
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -512,10 +512,10 @@ flavor_lat.7 = { # Serbia Ambitions Defeated
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 18
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -586,10 +586,10 @@ flavor_lat.8 = { # Old Byzantine Elite
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 5
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -640,10 +640,10 @@ flavor_lat.9 = { # Papal Request Conversion of Byzantine Lands
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
-        from = 1338.1.1
-        to = 1600.1.1
-        monthly_chance = 6
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 

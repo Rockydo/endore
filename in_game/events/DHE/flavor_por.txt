@@ -13,10 +13,10 @@ flavor_por.1 = { #Christopher Columbus in Portugal
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1485.1.1
-		to = 1520.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -106,10 +106,10 @@ flavor_por.2 = { #Atlantic Slave Trade
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -149,10 +149,10 @@ flavor_por.3 = { #Missionaries in the Spice Islands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1480.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -198,10 +198,10 @@ flavor_por.4 = { #Founding Casa da India
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1480.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -237,10 +237,10 @@ flavor_por.5 = { #Tower of Belem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1490.1.1
-		to = 1520.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -297,10 +297,10 @@ flavor_por.6 = { #Jerónimos Monastery
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1490.1.1
-		to = 1520.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -337,10 +337,10 @@ flavor_por.7 = { #Discovery of Indian Sea Route
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1490.1.1
-		to = 1520.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -375,10 +375,10 @@ flavor_por.8 = {  #Governorate General of Brazil
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -424,10 +424,10 @@ flavor_por.9 = { #Spice Trade in Indian Ocean
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1300.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -497,10 +497,10 @@ flavor_por.10 = { #Afonso de Sousa Colonial Governor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1530.1.1
-		to = 1580.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -561,10 +561,10 @@ flavor_por.11 = { #Crusade in Morocco
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -623,10 +623,10 @@ flavor_por.12 = { #Methuen Agreement
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1690.1.1
-		to = 1706.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -704,10 +704,10 @@ flavor_por.13 = { #Luís de Meneses Cabinet Member
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1662.1.1
-		to = 1690.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -760,10 +760,10 @@ flavor_por.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1380.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -926,10 +926,10 @@ flavor_por.19 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1624.1.1
-		to = 1674.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1151,10 +1151,10 @@ flavor_por.21 = { #The Lusiads
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1554.1.1
-		to = 1584.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1212,10 +1212,10 @@ flavor_por.22 = { #Vasco da Gama
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1495.1.1
-		to = 1520.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1366,10 +1366,10 @@ flavor_por.25 = { #The New Seat of the Order of Christ
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1337.1.1
-		to = 1382.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1428,10 +1428,10 @@ flavor_por.26 = { #Madeira Wine
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1530.1.1
-		to = 1630.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1491,10 +1491,10 @@ flavor_por.27 = { #Saint Thomas Christians
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1551,10 +1551,10 @@ flavor_por.28 = { #The Establishment of Portuguese Inquisition
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1515.1.1
-		to = 1615.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1622,10 +1622,10 @@ flavor_por.29 = { #The Epistola de Victoria Contra Infideles
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1490.1.1
-		to = 1540.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1959,10 +1959,10 @@ flavor_por.30 = { #The Lisbon Massacre
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1506.1.1
-		to = 1556.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2141,10 +2141,10 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1471.1.1
-		to = 1531.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2624,10 +2624,10 @@ flavor_por.33 = { #Ribeira das Naus
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1490.1.1
-		to = 1540.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2671,10 +2671,10 @@ flavor_por.34 = { # Transferring the University of Coimbra
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1338.1.1
-		to = 1340.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2739,10 +2739,10 @@ flavor_por.35 = { # Ericeira's policies - Mercantilist Ideals of [target_charact
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1675.10.16
-		to = 1690.5.26
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2824,10 +2824,10 @@ flavor_por.36 = { # Pombal - Ambitions of [target_character.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1750.1.1
-		to = 1777.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2894,10 +2894,10 @@ flavor_por.37 = { # Esmeraldo de Situ Orbis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1500.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2971,10 +2971,10 @@ flavor_por.38 = { # Gaspar da India
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1470.1.1
-		to = 1510.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3056,10 +3056,10 @@ flavor_por.39 = { # Cronica Geral de Espanha
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1344.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3103,10 +3103,10 @@ flavor_por.40 = { # Lei Mental
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1430.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3297,10 +3297,10 @@ flavor_por.43 = { # The Last Troubadour - Livro das Cantigas
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1350.1.1
-		to = 1360.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3408,10 +3408,10 @@ flavor_por.45 = { # Ordenações Afonsinas
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1420.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3462,10 +3462,10 @@ flavor_por.46 = { # Ordenações Manuelinas
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1510.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3500,10 +3500,10 @@ flavor_por.47 = { # The Misericórdia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1498.1.1
-		to = 1525.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3567,10 +3567,10 @@ flavor_por.48 = { # Established Feitoria in Bruges
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3635,10 +3635,10 @@ flavor_por.49 = { # Fernão Lopes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1415.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3687,10 +3687,10 @@ flavor_por.50 = { # End of the Orders of Avis, Christ and Santiago in Portugal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1537.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3795,10 +3795,10 @@ flavor_por.51 = { # São Jorge da Mina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1470.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3873,10 +3873,10 @@ flavor_por.52 = { # Navigator Prince
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1420.1.1
-		to = 1460.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3965,10 +3965,10 @@ flavor_por.53 = { # Bartolomeu Dias
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1485.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4031,10 +4031,10 @@ flavor_por.54 = { #Formation of the Terço
 	historical_info = flavor_por.54.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1520.1.1
-		to = 1650.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4116,10 +4116,10 @@ flavor_por.55 = { #Feitoria of Arguin
 	historical_info = flavor_por.55.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1445.1.1
-		to = 1500.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4177,10 +4177,10 @@ flavor_por.56 = { #Feitoria of Macau
 	historical_info = flavor_por.56.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1550.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4246,10 +4246,10 @@ flavor_por.57 = { #Feitoria of Goa
 	historical_info = flavor_por.57.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4328,10 +4328,10 @@ flavor_por.58 = { #Feitoria of Hormuz
 	historical_info = flavor_por.58.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1510.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -4408,10 +4408,10 @@ flavor_por.59 = { #Feitoria of Malacca
 	historical_info = flavor_por.59.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1505.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -4485,10 +4485,10 @@ flavor_por.60 = {
 	historical_info = flavor_por.60.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1445.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -4571,10 +4571,10 @@ flavor_por.61 = { #Ceuta Crusade
 	historical_info = flavor_por.61.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1415.1.1
-		to = 1500.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -4642,10 +4642,10 @@ flavor_por.62 = { #Magellan
 	historical_info = flavor_por.62.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1510.1.1
-		to = 1570.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -4743,10 +4743,10 @@ flavor_por.64 = { #Feitoria in the Gold Coast
 	image = "gfx/interface/illustrations/institutions/new_world.dds"
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1480.1.1
-		to = 1550.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -4820,10 +4820,10 @@ flavor_por.65 = { # The House of Mendes
 
 	major = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1510.1.1
-		to = 1575.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4953,10 +4953,10 @@ flavor_por.1000 = { #Capture of the Santa Catarina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1600.1.1
-		to = 1620.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5112,10 +5112,10 @@ flavor_por.2000 = { # Inês de Castro joins the court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1340.1.1
-		to = 1345.1.1
-		monthly_chance = 33
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	major = yes
@@ -5169,10 +5169,10 @@ flavor_por.2001 = { # Pedro's affair with Inês
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5557,10 +5557,10 @@ flavor_por.2100 = { # A Letter to the Persian King
 	historical_info = flavor_por.2100.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -5686,10 +5686,10 @@ flavor_por.2200 = { # Gaining a port in Japan
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1540.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 

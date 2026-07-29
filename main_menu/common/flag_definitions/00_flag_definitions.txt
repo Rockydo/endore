@@ -1,0 +1,18 @@
+﻿# Generated M2 gate registry: one technical country only.
+DEFAULT = {
+	flag_definition = {
+		coa = SWE
+		priority = -100
+		trigger = {
+			always = no
+			has_variable = has_had_war_of_the_roses_disaster
+			has_variable = hab_imperial_flag
+		}
+	}
+}
+SWE = {
+	flag_definition = {
+		coa = SWE
+		priority = 1
+	}
+}

@@ -11,10 +11,10 @@ flavor_mos.1 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -87,10 +87,10 @@ flavor_mos.2 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1420.1.1
-		to = 1480.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -154,10 +154,10 @@ flavor_mos.3 = {
 	image = "gfx/interface/illustrations/government/diplomacy_illustration.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1353.1.1
-		to = 1373.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -294,10 +294,10 @@ flavor_mos.4 = {
 	image = "gfx/interface/illustrations/institutions/feudalism.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1347.1.1
-		to = 1397.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -491,10 +491,10 @@ flavor_mos.5 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1337.1.1
-		to = 1387.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -597,10 +597,10 @@ flavor_mos.6 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1337.1.1
-		to = 1387.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -730,10 +730,10 @@ flavor_mos.7 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1400.1.1
-		to = 1440.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -828,10 +828,10 @@ flavor_mos.8 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1370.1.1
-		to = 1390.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -948,10 +948,10 @@ flavor_mos.9 = {
 	image = "gfx/interface/illustrations/international_organization_types/tatar_yoke.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1337.1.1
-		to = 1377.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1094,10 +1094,10 @@ flavor_mos.10 = {
 	image = "gfx/interface/illustrations/institutions/banking.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1338.1.1
-		to = 1378.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1246,10 +1246,10 @@ flavor_mos.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1380.1.1
-		to = 1430.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1409,10 +1409,10 @@ flavor_mos.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1380.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1527,10 +1527,10 @@ flavor_mos.13 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_paper.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1353.1.1
-		to = 1393.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1611,10 +1611,10 @@ flavor_mos.14 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1340.1.1
-		to = 1378.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1743,10 +1743,10 @@ flavor_mos.15 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1404.1.1
-		to = 1434.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1856,10 +1856,10 @@ flavor_mos.16 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1389.1.1
-		to = 1453.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2091,10 +2091,10 @@ flavor_mos.21 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1360.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2165,10 +2165,10 @@ flavor_mos.22 = {
 	image = "gfx/interface/illustrations/institutions/banking.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2242,10 +2242,10 @@ flavor_mos.23 = {
 	image = "gfx/interface/illustrations/government/diplomacy_illustration.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1400.1.1
-		to = 1480.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2358,10 +2358,10 @@ flavor_mos.24 = {
 	image = "gfx/interface/illustrations/institutions/banking.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1410.1.1
-		to = 1480.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2584,10 +2584,10 @@ flavor_mos.27 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1436.1.1
-		to = 1456.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = happy
@@ -2709,10 +2709,10 @@ flavor_mos.28 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2820,10 +2820,10 @@ flavor_mos.29 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1360.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2925,10 +2925,10 @@ flavor_mos.30 = {
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1400.1.1
-		to = 1430.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3042,10 +3042,10 @@ flavor_mos.31 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1447.1.1
-		to = 1547.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3143,10 +3143,10 @@ flavor_mos.32 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1497.1.1
-		to = 1547.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3221,10 +3221,10 @@ flavor_mos.33 = {
 	#Or... We can use image = "gfx/interface/illustrations/disaster/decline_of_empire.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1469.1.1
-		to = 1484.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -3349,10 +3349,10 @@ flavor_mos.34 = {
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1455.1.1
-		to = 1485.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3486,10 +3486,10 @@ flavor_mos.35 = {
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1485.1.1
-		to = 1515.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3635,10 +3635,10 @@ flavor_mos.36 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1530.1.1
-		to = 1550.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3780,10 +3780,10 @@ flavor_mos.37 = { #DEVASTATION
 	image = "gfx/interface/illustrations/situation/_default.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1547.1.1
-		to = 1548.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3943,10 +3943,10 @@ flavor_mos.38 = {
 	image = "gfx/interface/illustrations/international_organization_types/autocephalous_patriarchate.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1450.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4028,10 +4028,10 @@ flavor_mos.39 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1482.1.1
-		to = 1542.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4146,10 +4146,10 @@ flavor_mos.40 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1475.1.1
-		to = 1525.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4334,10 +4334,10 @@ flavor_mos.41 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1475.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4525,10 +4525,10 @@ flavor_mos.42 = {
 	image = "gfx/interface/illustrations/disaster/coup_attempt.dds"# GRAVEYARD
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1530.1.1
-		to = 1560.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4672,10 +4672,10 @@ flavor_mos.43 = {
 	image = "gfx/interface/illustrations/international_organization_types/tatar_yoke.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1490.1.1
-		to = 1540.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4819,10 +4819,10 @@ flavor_mos.44 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1460.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4917,10 +4917,10 @@ flavor_mos.45 = {
 	image = "gfx/interface/illustrations/institutions/printing_press.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1530.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5047,10 +5047,10 @@ flavor_mos.46 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_books.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1540.1.1
-		to = 1570.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5162,10 +5162,10 @@ flavor_mos.47 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1460.1.1
-		to = 1540.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5254,10 +5254,10 @@ flavor_mos.48 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1530.1.1
-		to = 1640.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5381,10 +5381,10 @@ flavor_mos.49 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1500.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5525,10 +5525,10 @@ flavor_mos.50 = {
 	image = "gfx/interface/illustrations/government/diplomacy_illustration.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1485.1.1
-		to = 1535.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5661,10 +5661,10 @@ flavor_mos.51 = {
 	image = "gfx/interface/illustrations/international_organization_types/autocephalous_patriarchate.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1475.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5834,10 +5834,10 @@ flavor_mos.52 = {
 	image = "gfx/interface/illustrations/international_organization_types/autocephalous_patriarchate.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1530.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5953,10 +5953,10 @@ flavor_mos.53 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6124,10 +6124,10 @@ flavor_mos.54 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1553.1.1
-		to = 1583.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6245,10 +6245,10 @@ flavor_mos.55 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1470.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 		illustration_tags = {
 		10 = angry
@@ -6412,10 +6412,10 @@ flavor_mos.56 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1547.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6594,10 +6594,10 @@ flavor_mos.57 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1490.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6715,10 +6715,10 @@ flavor_mos.58 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1500.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6809,10 +6809,10 @@ flavor_mos.59 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1580.1.1
-		to = 1680.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6920,10 +6920,10 @@ flavor_mos.60 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1537.1.1
-		to = 1637.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6999,10 +6999,10 @@ flavor_mos.61 = {
 	image = "gfx/interface/illustrations/trade_market/trade.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1537.1.1
-		to = 1577.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7109,10 +7109,10 @@ flavor_mos.62 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1555.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7245,10 +7245,10 @@ flavor_mos.63 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1525.1.1
-		to = 1625.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7342,10 +7342,10 @@ flavor_mos.64 = {
 	image = "gfx/interface/illustrations/institutions/artillery_institution.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1585.1.1
-		to = 1675.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7416,10 +7416,10 @@ flavor_mos.65 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1550.1.1
-		to = 1625.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7555,10 +7555,10 @@ flavor_mos.66 = { #GRAVEYARD
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1570.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7672,10 +7672,10 @@ flavor_mos.67 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1555.1.1
-		to = 1605.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7739,10 +7739,10 @@ flavor_mos.68 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1520.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7855,10 +7855,10 @@ flavor_mos.69 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1540.1.1
-		to = 1640.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7937,10 +7937,10 @@ flavor_mos.70 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1549.1.1
-		to = 1579.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8042,10 +8042,10 @@ flavor_mos.71 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1550.1.1
-		to = 1590.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8110,10 +8110,10 @@ flavor_mos.72 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1550.1.1
-		to = 1625.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = armed
@@ -8195,10 +8195,10 @@ flavor_mos.73 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8273,10 +8273,10 @@ flavor_mos.74 = {
 	desc = flavor_mos.74.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1537.1.1
-		to = 1736.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = angry
@@ -8509,10 +8509,10 @@ flavor_mos.75 = {
 	image = "gfx/interface/illustrations/institutions/legalism.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1537.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8588,10 +8588,10 @@ flavor_mos.76 = {
 	image = "gfx/interface/illustrations/government/diplomacy_illustration.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1605.1.1
-		to = 1638.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8667,10 +8667,10 @@ flavor_mos.77 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1605.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8753,10 +8753,10 @@ flavor_mos.78 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8841,10 +8841,10 @@ flavor_mos.79 = {
 	image = "gfx/interface/illustrations/international_organization_types/tatar_yoke.dds"
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1582.1.1
-		to = 1610.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8983,10 +8983,10 @@ flavor_mos.80 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1580.1.1
-		to = 1620.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9149,10 +9149,10 @@ flavor_mos.81 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1610.1.1
-		to = 1647.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -9248,10 +9248,10 @@ flavor_mos.82 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1600.1.1
-		to = 1680.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9333,10 +9333,10 @@ flavor_mos.83 = {
 
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9419,10 +9419,10 @@ flavor_mos.84 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1570.1.1
-		to = 1670.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9516,10 +9516,10 @@ flavor_mos.85 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1643.1.1
-		to = 1670.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9657,10 +9657,10 @@ flavor_mos.86 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1580.1.1
-		to = 1630.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9751,10 +9751,10 @@ flavor_mos.87 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1579.1.1
-		to = 1690.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9857,10 +9857,10 @@ flavor_mos.88 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1656.1.1
-		to = 1680.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10018,10 +10018,10 @@ flavor_mos.89 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1661.1.1
-		to = 1699.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10138,10 +10138,10 @@ flavor_mos.90 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1690.1.1
-		to = 1740.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10277,10 +10277,10 @@ flavor_mos.91 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1728.1.1
-		to = 1770.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10406,10 +10406,10 @@ flavor_mos.92 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1745.1.1
-		to = 1775.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10555,10 +10555,10 @@ flavor_mos.93 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1690.1.1
-		to = 1750.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -10660,10 +10660,10 @@ flavor_mos.94 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1685.1.1
-		to = 1725.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 		illustration_tags = {
@@ -10814,10 +10814,10 @@ flavor_mos.95 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1648.1.1
-		to = 1680.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10984,10 +10984,10 @@ flavor_mos.96 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1625.1.1
-		to = 1680.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -11136,10 +11136,10 @@ flavor_mos.97 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1700.1.1
-		to = 1770.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11286,10 +11286,10 @@ flavor_mos.98 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1700.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11372,10 +11372,10 @@ flavor_mos.99 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1690.1.1
-		to = 1790.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -11490,10 +11490,10 @@ flavor_mos.100 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1690.1.1
-		to = 1730.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11617,10 +11617,10 @@ flavor_mos.101 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1690.1.1
-		to = 1740.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -11837,10 +11837,10 @@ flavor_mos.102 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1695.1.1
-		to = 1745.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11942,10 +11942,10 @@ flavor_mos.103 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1700.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12078,10 +12078,10 @@ flavor_mos.104 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1675.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12204,10 +12204,10 @@ flavor_mos.105 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1672.1.1
-		to = 1722.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12351,10 +12351,10 @@ flavor_mos.106 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1672.1.1
-		to = 1752.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12434,10 +12434,10 @@ flavor_mos.107 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1674.1.1
-		to = 1710.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12526,10 +12526,10 @@ flavor_mos.108 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1700.1.1
-		to = 1750.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -12706,10 +12706,10 @@ flavor_mos.109 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1700.1.1
-		to = 1755.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12900,10 +12900,10 @@ flavor_mos.110 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1703.1.1
-		to = 1760.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -13032,10 +13032,10 @@ flavor_mos.111 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1705.1.1
-		to = 1775.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13188,10 +13188,10 @@ flavor_mos.112 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1710.1.1
-		to = 1729.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13324,10 +13324,10 @@ flavor_mos.113 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1712.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13423,10 +13423,10 @@ flavor_mos.114 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1671.1.1
-		to = 1681.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 		illustration_tags = {
 		10 = regular
@@ -13589,10 +13589,10 @@ flavor_mos.115 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MOS
-		from = 1687.1.1
-		to = 1735.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 

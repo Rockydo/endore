@@ -18,10 +18,10 @@ flavor_ser.10 = { #The Weakness of [ROOT.GetRuler.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -210,10 +210,10 @@ flavor_ser.11 = { #The Nobility's Bid for Power
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -406,10 +406,10 @@ flavor_ser.12 = { #The Fleeting Control of the Crown
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -542,10 +542,10 @@ flavor_ser.30 = { #The Dreams of [GetCharacter('ser_stefan_dusan').GetNameWithNo
 	historical_info = flavor_ser.30.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -632,10 +632,10 @@ flavor_ser.31 = { #The Dawn of a New Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -789,10 +789,10 @@ flavor_ser.40 = { #The Flight of [target_character.GetNameWithNoTooltip]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -868,10 +868,10 @@ flavor_ser.50 = { #[target_character.GetNameWithNoTooltip]'s Code
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -959,10 +959,10 @@ flavor_ser.60 = { #Growth of Vlasi & Meropsi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1375.1.1
-		to = 1453.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1123,10 +1123,10 @@ flavor_ser.70 = { #A Capital Befitting an Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1375.1.1
-		to = 1453.6.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1187,10 +1187,10 @@ flavor_ser.80 = { #Shield of the Balkans
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1375.1.1
-		to = 1453.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1525,10 +1525,10 @@ flavor_ser.90 = { #The Monastery of Manasija
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1385.1.1
-		to = 1443.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1595,10 +1595,10 @@ flavor_ser.91 = { #The Resava School
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1385.1.1
-		to = 1543.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1715,10 +1715,10 @@ flavor_ser.110 = { #Novo Brdo grows
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1768,10 +1768,10 @@ flavor_ser.120 = { #Gold found in Lece
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1337.1.1
-		to = 1387.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1832,10 +1832,10 @@ flavor_ser.130 = { #The Fortress of Smederevo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1402.1.1
-		to = 1455.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1917,10 +1917,10 @@ flavor_ser.140 = { #The Father of Modern Serbian Literature
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1757.1.1
-		to = 1811.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1997,10 +1997,10 @@ flavor_ser.150 = { #The Recapture of Belgrade
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1340.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2046,10 +2046,10 @@ flavor_ser.160 = { #Battle of Kosovo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1340.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2089,10 +2089,10 @@ flavor_ser.170 = { # Belgrade - the White Phoenix
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2135,10 +2135,10 @@ flavor_ser.180 = { # Revising the Zakonopravilo
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2182,10 +2182,10 @@ flavor_ser.190 = { # Hilandar Monastery
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2230,10 +2230,10 @@ flavor_ser.200 = { #Vidovdan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
-		from = 1340.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2278,10 +2278,10 @@ flavor_ser.210 = { # The Novo Brdo Code
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2336,10 +2336,10 @@ flavor_ser.220 = { #Palman Bracht
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1340.1.1
-		to = 1363.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2390,10 +2390,10 @@ flavor_ser.230 = { #The Golubac Fortress
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1377.1.1
-		to = 1420.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2437,10 +2437,10 @@ flavor_ser.240 = { #The Illyrian Movement
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1780.1.1
-		to = 1836.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2478,10 +2478,10 @@ flavor_ser.250 = { #Makarije Sokolovic
 	image = "gfx/interface/illustrations/international_organization_types/autocephalous_patriarchate.dds"
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1550.1.1
-		to = 1574.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2530,10 +2530,10 @@ flavor_ser.260 = { #The Secession of Zeta
 	historical_info = flavor_ser.260.historical_info
 
 	dynamic_historical_event = {
-		tag = SER
-		from = 1365.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

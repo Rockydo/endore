@@ -1120,4 +1120,3 @@ colonial_charter.200 = {
 		add_prestige = prestige_weak_penalty	#you are already punished hard enough by losing that colonial charter, no reason to add more penalties
 	}
 }
-

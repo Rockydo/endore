@@ -11,10 +11,10 @@ flavor_hab.1 = { #Johann Ribi von Lenzburg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1358.1.1
-		to = 1374.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -79,10 +79,10 @@ flavor_hab.2 = { #Liber certarum historiarum
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1337.1.1
-		to = 1347.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -160,10 +160,10 @@ flavor_hab.3 = { #Loss of the Habsburg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1337.1.1
-		to = 1537.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -206,12 +206,10 @@ flavor_hab.4 = { #Goldenes Dachl Innsbruck
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1499.1.1
-		to = 1517.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -286,10 +284,10 @@ flavor_hab.5 = { #Meteorite of Ensisheim
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1470.1.1
-		to = 1520.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/event/backgrounds/special/comet_sighted.dds"
@@ -317,10 +315,10 @@ flavor_hab.6 = { #Generallandtag
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1400.1.1
-		to = 1520.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -349,10 +347,10 @@ flavor_hab.7 = { #Reichshofrat
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1490.1.1
-		to = 1520.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -391,12 +389,10 @@ flavor_hab.8 = { #Monastery Reform of Melk
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1400.1.1
-		to = 1430.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -442,12 +438,10 @@ flavor_hab.9 = { #Concordat of Vienna
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1430.1.1
-		to = 1460.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -493,12 +487,10 @@ flavor_hab.10 = { #Cathedral of Graz Fresco
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1455.1.1
-		to = 1485.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -562,10 +554,10 @@ flavor_hab.11 = { #AEIOU
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1430.1.1
-		to = 1460.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -608,10 +600,10 @@ flavor_hab.12 = { #Kaspar Schlick
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1420.1.1
-		to = 1449.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -669,10 +661,10 @@ flavor_hab.13 = { #Cameralism in Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1660.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -748,10 +740,10 @@ flavor_hab.14 = { #Tractatus de iuribus incorporalibus
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1640.1.1
-		to = 1680.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -798,10 +790,10 @@ flavor_hab.15 = { #Founding of the Wiener Zeitung
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1680.1.1
-		to = 1720.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -852,10 +844,10 @@ flavor_hab.16 = { #Melchior Khlesl
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1572.1.1
-		to = 1630.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -933,11 +925,10 @@ flavor_hab.17 = { #Expulsion of Lutherans in Salzburg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = SLZ
-		from = 1700.1.1
-		to = 1750.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1066,10 +1057,10 @@ flavor_hab.18 = { #Geheime Kabinettskanzlei
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1690.1.1
-		to = 1740.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1106,10 +1097,10 @@ flavor_hab.19 = { #Prince Eugene of Savoy
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1683.1.1
-		to = 1736.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1170,10 +1161,10 @@ flavor_hab.20 = { #Ludwig van Beethoven
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1791.1.1
-		to = 1827.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1227,10 +1218,10 @@ flavor_hab.21 = { #Wolfgang Amadeus Mozart
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1774.1.1
-		to = 1791.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1279,10 +1270,10 @@ flavor_hab.22 = { #Resettlements into Hungary
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1700.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1337,10 +1328,10 @@ flavor_hab.23 = { #Klemens von Metternich
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1798.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1384,10 +1375,10 @@ flavor_hab.24 = { #Johann Wenzel Radetzky
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1791.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1452,10 +1443,10 @@ flavor_hab.25 = { #Schönbrunn Palace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1736.1.1
-		to = 1790.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1538,10 +1529,10 @@ flavor_hab.26 = { #Joseph Haydn
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1764.1.1
-		to = 1809.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1608,10 +1599,10 @@ flavor_hab.27 = { #Imperial Colors
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1750.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1650,10 +1641,10 @@ flavor_hab.29 = { #Finishing the St. Stephen's Cathedral
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1340.1.1
-		to = 1360.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1706,10 +1697,10 @@ flavor_hab.30 = { #University of Vienna
 	historical_info = flavor_hab.30.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1350.1.1
-		to = 1370.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1758,10 +1749,10 @@ flavor_hab.31 = { #Vienna Gesera
 	historical_info = flavor_hab.31.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1420.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1881,10 +1872,10 @@ flavor_hab.32 = { #Paracelsus
 	historical_info = flavor_hab.32.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1530.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1942,10 +1933,10 @@ flavor_hab.33 = { #Oswald von Wolkenstein
 	historical_info = flavor_hab.33.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1420.1.1
-		to = 1440.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2008,10 +1999,10 @@ flavor_hab.34 = { #Petrus Zwicker
 	historical_info = flavor_hab.34.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1440.1.1
-		to = 1460.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2082,11 +2073,10 @@ flavor_hab.35 = { #Peasant Uprising in Salzburg
 	historical_info = flavor_hab.35.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = SLZ
-		from = 1520.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2160,11 +2150,10 @@ flavor_hab.36 = { #The Peasant Rebellion Spreads
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = SLZ
-		from = 1520.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2289,10 +2278,10 @@ flavor_hab.38 = { #The Tomb of the First Emperor
 	historical_info = flavor_hab.38.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2354,10 +2343,10 @@ flavor_hab.39 = { #Reichstürkenhilfe
 	historical_info = flavor_hab.39.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2407,10 +2396,10 @@ flavor_hab.40 = { #The Frauenstein Madonna
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1510.1.1
-		to = 1520.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2493,10 +2482,10 @@ flavor_hab.41 = { #The Ambras Castle
 	historical_info = flavor_hab.41.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1560.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2538,10 +2527,10 @@ flavor_hab.42 = { #The Trial of Martin Siebenbürger
 	historical_info = flavor_hab.42.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1520.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2606,10 +2595,10 @@ flavor_hab.43 = { #A Merchant of Influence
 	historical_info = flavor_hab.43.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1520.1.1
-		to = 1539.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2667,10 +2656,10 @@ flavor_hab.44 = { #An Appeal for Salamanca's Dismissal
 	historical_info = flavor_hab.44.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1520.1.1
-		to = 1539.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2715,10 +2704,10 @@ flavor_hab.45 = { #The Wiener Neustadt Blood Court
 	historical_info = flavor_hab.45.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1520.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2782,10 +2771,10 @@ flavor_hab.46 = { #Fall of Hungary
 	historical_info = flavor_hab.46.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2838,10 +2827,10 @@ flavor_hab.47 = { #A Palace of Splendor
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1430.1.1
-		to = 1580.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2882,10 +2871,10 @@ flavor_hab.48 = { #Bernhard von Cles
 	historical_info = flavor_hab.48.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1520.1.1
-		to = 1539.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2941,10 +2930,10 @@ flavor_hab.49 = { #Georg Tannstetter
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1515.1.1
-		to = 1535.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2996,10 +2985,10 @@ flavor_hab.50 = { #Tannstetter Creates the Tabula Hungariae
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1515.1.1
-		to = 1535.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3082,10 +3071,10 @@ flavor_hab.52 = { #Fortifying Vienna
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1450.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3135,10 +3124,10 @@ flavor_hab.53 = { #Tearing Down the Walls of Vienna
 	historical_info = flavor_hab.53.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1750.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3174,10 +3163,10 @@ flavor_hab.54 = { #Landtafel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1334.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3214,10 +3203,10 @@ flavor_hab.55 = { #Military Frontier
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1550.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3249,10 +3238,10 @@ flavor_hab.56 = { #Populating the Military Frontier
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1550.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3325,11 +3314,10 @@ flavor_hab.57 = { #Peasant Revolt in Tirol
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		from = 1520.1.1
-		to = 1540.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3442,10 +3430,10 @@ flavor_hab.58 = { #An Elephant Gift
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1540.1.1
-		to = 1580.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3485,10 +3473,10 @@ flavor_hab.59 = { #Expanding the Hofburg
 	historical_info = flavor_hab.59.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3540,10 +3528,10 @@ flavor_hab.60 = { #Giovanni Pierluigi da Palestrina
 	historical_info = flavor_hab.60.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1560.1.1
-		to = 1570.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3606,10 +3594,10 @@ flavor_hab.61 = { #Pieter Bruegel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1560.1.1
-		to = 1570.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3671,10 +3659,10 @@ flavor_hab.62 = { #Kaiserkrone
 	historical_info = flavor_hab.62.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1600.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3734,10 +3722,10 @@ flavor_hab.64 = { #Institutionalizing the Geheimer Rat
 	}
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3769,10 +3757,10 @@ flavor_hab.65 = { #The Hammer of Heretics
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1590.1.1
-		to = 1610.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3837,10 +3825,10 @@ flavor_hab.66 = { #Gundakar von Liechtenstein
 	historical_info = flavor_hab.66.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1620.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3916,10 +3904,10 @@ flavor_hab.67 = { #Karl von Liechtenstein
 	historical_info = flavor_hab.67.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1620.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3996,10 +3984,10 @@ flavor_hab.68 = { #Maximilian von Liechtenstein
 	historical_info = flavor_hab.68.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1620.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4078,10 +4066,10 @@ flavor_hab.69 = { #Maximilian Trauttmansdorff
 	historical_info = flavor_hab.69.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1620.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4134,10 +4122,10 @@ flavor_hab.70 = { #Franz von Dietrichstein
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1600.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_hab.70.historical_info
@@ -4188,10 +4176,10 @@ flavor_hab.71 = { #Gerhard von Questenberg
 	historical_info = flavor_hab.71.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1600.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4239,10 +4227,10 @@ flavor_hab.72 = { #Johann Baptist Verda
 	historical_info = flavor_hab.72.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1610.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4290,10 +4278,10 @@ flavor_hab.73 = { #Nicolas Esterhazy
 	historical_info = flavor_hab.73.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1610.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4363,10 +4351,10 @@ flavor_hab.74 = { #Vilem Slavata
 	historical_info = flavor_hab.74.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1620.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4421,10 +4409,10 @@ flavor_hab.75 = { #Geheimer Rat Growing Inefficient
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1660.1.1
-		to = 1705.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4479,10 +4467,10 @@ flavor_hab.76 = { #The Marian Column
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4544,10 +4532,10 @@ flavor_hab.77 = { #Antonio Cesti
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1650.1.1
-		to = 1670.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4606,11 +4594,10 @@ flavor_hab.78 = { #Disempowering the Tirolean Parliament
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		from = 1650.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4684,10 +4671,10 @@ flavor_hab.79 = { #St Stephens Cathedral Bell
 	historical_info = flavor_hab.79.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -4742,10 +4729,10 @@ flavor_hab.80 = { #König Ottokars Glück und Ende
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1820.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -4802,10 +4789,10 @@ flavor_hab.81 = { #Kingdom of Galicia-Lodomeria
 	historical_info = flavor_hab.81.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4891,10 +4878,10 @@ flavor_hab.82 = { #Johann Anton von Pergen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1760.1.1
-		to = 1775.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4987,10 +4974,10 @@ flavor_hab.84 = { #Bocskais Uprising
 	historical_info = flavor_hab.84.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1600.1.1
-		to = 1630.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5096,10 +5083,10 @@ flavor_hab.85 = { #Bethlens Uprising
 	historical_info = flavor_hab.85.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1620.1.1
-		to = 1640.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5207,10 +5194,10 @@ flavor_hab.86 = { #Rakoczis Uprising
 	historical_info = flavor_hab.86.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1700.1.1
-		to = 1715.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5306,10 +5293,10 @@ flavor_hab.88 = { #Primož Trubar's Religious Mission
 	historical_info = flavor_hab.88.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1550.1.1
-		to = 1580.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5401,10 +5388,10 @@ flavor_hab.90 = { #Böhmer Publishes the Regesta Imperii
 	historical_info = flavor_hab.90.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1820.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5462,10 +5449,10 @@ flavor_hab.91 = { #The Biedermeier Era
 	historical_info = flavor_hab.91.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1815.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5500,10 +5487,10 @@ flavor_hab.92 = { #Johann Strauss
 	historical_info = flavor_hab.92.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1825.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -5557,10 +5544,10 @@ flavor_hab.93 = { #Imperial Artillery
 	historical_info = flavor_hab.93.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1737.1.1
-		to = 1770.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5629,10 +5616,10 @@ flavor_hab.94 = { #Multicultural Empire
 	historical_info = flavor_hab.94.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5662,10 +5649,10 @@ flavor_hab.95 = { #Wiener Klassik
 	historical_info = flavor_hab.95.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5702,10 +5689,10 @@ flavor_hab.96 = { #The Pragmatic Sanction
 	historical_info = flavor_hab.96.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1334.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5750,10 +5737,10 @@ flavor_hab.97 = { #Marianna Martines
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1775.1.1
-		to = 1795.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -5802,10 +5789,10 @@ flavor_hab.98 = { #Antonio Salieri
 	historical_info = flavor_hab.98.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1785.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -5856,10 +5843,10 @@ flavor_hab.99 = { #Proclaiming the Austrian Empire
 	historical_info = flavor_hab.99.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1750.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5918,10 +5905,10 @@ flavor_hab.100 = { #Johann Lukas von Hildebrandt
 	historical_info = flavor_hab.100.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1700.1.1
-		to = 1720.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5975,10 +5962,10 @@ flavor_hab.101 = { #The Belvedere Palace
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1720.1.1
-		to = 1740.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -6021,10 +6008,10 @@ flavor_hab.102 = { #Composing the Kaiserhymne
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1780.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -6105,10 +6092,10 @@ flavor_hab.103 = { #Regulating the Danube
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1770.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6197,12 +6184,10 @@ flavor_hab.1000 = { #Forge the Privilegium Maius
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
-		from = 1345.1.1
-		to = 1370.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6546,12 +6531,10 @@ flavor_hab.1008 = { #Grant ourselves the Privilegium Maius
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
-		from = 1380.1.1
-		to = 1700.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6606,12 +6589,10 @@ flavor_hab.1009 = { #Rudolfine House Rules - formerly flavor_hab.28
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
-		from = 1380.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -6779,10 +6760,10 @@ flavor_hab.1101 = { #Permanent Capital for the Habsburgs
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1550.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6866,12 +6847,10 @@ flavor_hab.1200 = { #The beginning of Silver Mining in Schwaz
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
-		from = 1380.1.1
-		to = 1420.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6913,12 +6892,10 @@ flavor_hab.1201 = { #Schwaz Silver Mine
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
-		from = 1400.1.1
-		to = 1440.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6961,12 +6938,10 @@ flavor_hab.1202 = { #Schladminger Bergbrief
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
-		from = 1400.1.1
-		to = 1440.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7045,12 +7020,10 @@ flavor_hab.1300 = { #Maximilian as Patron of the Arts
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1480.1.1
-		to = 1530.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7100,12 +7073,10 @@ flavor_hab.1301 = { #College of Poets - Conrad Celtes
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1480.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7176,12 +7147,10 @@ flavor_hab.1302 = { #Theuerdank
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1480.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7234,12 +7203,10 @@ flavor_hab.1303 = { #Johannes Cuspinian
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1493.1.1
-		to = 1530.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7321,10 +7288,10 @@ flavor_hab.1400 = { #Mailberger Bund and Noble resistance
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1440.1.1
-		to = 1470.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7433,10 +7400,10 @@ flavor_hab.1401 = { #Ulrich von Eyczing declares for the rebels
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1440.1.1
-		to = 1475.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7502,10 +7469,10 @@ flavor_hab.1402 = { #Mailberger Bund Demands Privileges
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1440.1.1
-		to = 1475.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7566,10 +7533,10 @@ flavor_hab.1403 = { #Styrian Noble Rebellion
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1460.1.1
-		to = 1480.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7648,10 +7615,10 @@ flavor_hab.1500 = { #Georg von Peuerbach
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1446.1.1
-		to = 1461.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7807,10 +7774,10 @@ flavor_hab.1600 = { #Mandate of Ofen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1510.1.1
-		to = 1541.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7885,10 +7852,10 @@ flavor_hab.1601 = { #Johann Pfauser becomes Court Preacher in Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1540.1.1
-		to = 1569.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -7969,10 +7936,10 @@ flavor_hab.1602 = { #Protestant Nobles demand lutheran confession for Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1545.1.1
-		to = 1575.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8072,10 +8039,10 @@ flavor_hab.1603 = { #Harnessed Diet of Augsburg and Augsburg Interim
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1540.1.1
-		to = 1560.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8192,10 +8159,10 @@ flavor_hab.1604 = { #Jesuit Colleges in Bohemia
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1560.1.1
-		to = 1590.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8294,10 +8261,10 @@ flavor_hab.1605 = { #Lutherans are unhappy with Jesuit Colleges
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1590.1.1
-		to = 1620.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8386,10 +8353,10 @@ flavor_hab.1606 = { #Pope and Spain is unhappy about Jesuit refusal
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1590.1.1
-		to = 1620.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8472,10 +8439,10 @@ flavor_hab.1607 = { #Monastery Council of Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1555.1.1
-		to = 1585.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8526,10 +8493,10 @@ flavor_hab.1608 = { #Confessio Bohemica
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1550.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8652,10 +8619,10 @@ flavor_hab.1609 = { #Austrian Recatholicization - formerly flavor_hab.63
 	}
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8721,10 +8688,10 @@ flavor_hab.1700 = { #Founding a state owned bank for Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1680.1.1
-		to = 1720.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8784,10 +8751,10 @@ flavor_hab.1701 = { #The fate of the state owned bank
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1680.1.1
-		to = 1720.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8834,10 +8801,10 @@ flavor_hab.1800 = { #Mühlviertel Textile Production
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1620.1.1
-		to = 1680.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8896,10 +8863,10 @@ flavor_hab.1801 = { #Mühlviertel Textile Production Success
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1670.1.1
-		to = 1720.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8944,10 +8911,10 @@ flavor_hab.1802 = { #Mühlviertel Textile Production Failure
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1670.1.1
-		to = 1720.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8996,10 +8963,10 @@ flavor_hab.1900 = {  #Samuel Oppenheimer
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1655.1.1
-		to = 1703.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9055,10 +9022,10 @@ flavor_hab.1901 = {  #Samson Wertheimer
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1680.1.1
-		to = 1724.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9123,10 +9090,10 @@ flavor_hab.1902 = { #The Court Bankers finance in wartime
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1655.1.1
-		to = 1740.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9188,10 +9155,10 @@ flavor_hab.1903 = { #The Court Bankers finance in wartime
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1655.1.1
-		to = 1740.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9259,10 +9226,10 @@ flavor_hab.2000 = { #Wenzel Anton Kaunitz - Diplomatic Revolution
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1737.1.1
-		to = 1794.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9373,10 +9340,10 @@ flavor_hab.2100 = { #Reforms of Maria Theresia and Joseph II
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1750.1.1
-		to = 1800.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9417,10 +9384,10 @@ flavor_hab.2101 = { #Pushback against enlightenment reforms
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1780.1.1
-		to = 1830.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9484,10 +9451,10 @@ flavor_hab.2102 = { #Embracement of enlighten reforms
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1790.1.1
-		to = 1830.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9531,10 +9498,10 @@ flavor_hab.2103 = { #The Raabization of the Land Management - formerly flavor_ha
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1750.1.1
-		to = 1770.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9609,10 +9576,10 @@ flavor_hab.2104 = { #Reforms of Adam František Kollár - formerly flavor_hab.89
 	historical_info = flavor_hab.2104.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1750.1.1
-		to = 1760.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9681,12 +9648,10 @@ flavor_hab.2200 = { #Growth of Wiener Neustadt
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9743,12 +9708,10 @@ flavor_hab.2201 = { #Bastion of Wiener Neustadt
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
-		from = 1537.1.1
-		to = 1580.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9812,10 +9775,10 @@ flavor_hab.2202 = { #Military Academy of Maria Theresia
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1740.1.1
-		to = 1780.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -9881,10 +9844,10 @@ flavor_hab.2300 = { #Burgundian Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -10016,10 +9979,10 @@ flavor_hab.2400 = { #Bohemian Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -10194,10 +10157,10 @@ flavor_hab.2500 = { #The Austro-Prussian Rivalry
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1600.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -10326,10 +10289,10 @@ flavor_hab.2600 = { #Spanish Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		from = 1350.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {

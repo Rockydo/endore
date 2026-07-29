@@ -3668,4 +3668,3 @@ latinization_vs_hellenization.30 = {    #Peasants Resist Current Trend
         add_stability = stability_weak_penalty
     }
 }
-

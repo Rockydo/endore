@@ -472,6 +472,3 @@ military_order_events.9 = { #The Banners of KOJremer
 		add_stability = stability_extreme_bonus
 	}
 }
-
-
-

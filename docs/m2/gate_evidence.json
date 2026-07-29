@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "milestone": "M2",
+  "date": "2026-07-29",
+  "game_version": "1.3.1.1",
+  "steam_build": 24187685,
+  "model_sha256": "ffa5374bd9d080f2fc53db32144df2ee61c609d79825b74748138bff4d684818",
+  "locations": {
+    "total": 5812,
+    "passable_land": 5200,
+    "impassable_mountains": 260,
+    "lakes": 32,
+    "sea_zones": 320,
+    "anchors": 41
+  },
+  "navigation": [
+    {"key": "minas_tirith", "id": 3246, "display": "Minas Tirith"},
+    {"key": "rivendell", "id": 2095, "display": "Rivendell"},
+    {"key": "mount_doom", "id": 4008, "display": "Orodruin"}
+  ],
+  "time_advance": {
+    "from": "3018.1.1 08:00",
+    "to": "3018.1.9 13:00",
+    "new_error_log_lines": 0
+  },
+  "deep_log": {
+    "mod_content_errors": 0,
+    "dangling_reference_errors": 0,
+    "known_machine_notices": ["AudioArena size is too small"]
+  },
+  "artifacts": {
+    "deep_error.log": "bacf647bd82cea504863158d3a72c042a406c8d0ea953b084a2ddcdf2abfa103",
+    "observer_live.png": "87544f2ad1f5fef524394a07231846f00ebb289aeca5e8806dce9de17c914391",
+    "time_advanced.png": "34298fff331af06b446a036b8c7613413209d9bf34c9ef1e8db3910aef0cba20",
+    "world_map_in_game.png": "678d329d46621f68ac756ccd3089efa14847849817e3da5582fb3acf08d33153"
+  }
+}

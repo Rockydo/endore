@@ -2244,4 +2244,3 @@ hindu_events.2601 = {
 		add_stability = stability_severe_bonus
 	}
 }
-

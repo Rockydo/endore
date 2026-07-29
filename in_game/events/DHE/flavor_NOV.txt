@@ -18,10 +18,10 @@ flavor_nov.1 = {
 	desc = flavor_nov.1.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1330.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -85,10 +85,10 @@ flavor_nov.2 = {
 
 
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1345.1.1
-		to = 1360.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:PSK
@@ -366,10 +366,10 @@ flavor_nov.6 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_fur.dds"
 
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		num_locations < 80
@@ -654,10 +654,10 @@ flavor_nov.10 = {
 	desc = flavor_nov.10.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1382.1.1
-		to = 1402.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:HSA
@@ -717,10 +717,10 @@ flavor_nov.12 = {
 	desc = flavor_nov.12.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1364.1.1
-		to = 1384.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:novgorod
@@ -778,10 +778,10 @@ flavor_nov.13 = {
 	desc = flavor_nov.13.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		religion:strigolniki = {
@@ -931,10 +931,10 @@ flavor_nov.14 = {
 	desc = flavor_nov.14.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		religion:strigolniki = {
@@ -1015,10 +1015,10 @@ flavor_nov.15 = {
 	desc = flavor_nov.15.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:KRL
@@ -1317,10 +1317,10 @@ flavor_nov.20 = {
 	desc = flavor_nov.20.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1366,10 +1366,10 @@ flavor_nov.21 = {
 	desc = flavor_nov.21.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1450.1.1
-		to = 1490.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:MOS
@@ -1417,10 +1417,10 @@ flavor_nov.22 = {
 	desc = flavor_nov.22.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1430.1.1
-		to = 1480.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1632,10 +1632,10 @@ flavor_nov.26 = { #DEVASTATION
 	desc = flavor_nov.26.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1550.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:novgorod
@@ -1687,10 +1687,10 @@ flavor_nov.28 = {
 	desc = flavor_nov.28.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1564.1.1
-		to = 1604.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:arkhangelsk
@@ -1755,10 +1755,10 @@ flavor_nov.30 = {
 	desc = flavor_nov.30.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1378.1.1
-		to = 1425.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:novgorod
@@ -1853,10 +1853,10 @@ flavor_nov.33 = {
 	desc = flavor_nov.33.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1350.1.1
-		to = 1365.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		government_type = government_type:republic
@@ -1915,10 +1915,10 @@ flavor_nov.34 = {
 	desc = flavor_nov.34.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		has_reform = government_reform:veche_republic
@@ -1970,10 +1970,10 @@ flavor_nov.35 = {
 	desc = flavor_nov.35.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1426.1.1
-		to = 1446.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:solovetsky
@@ -2040,10 +2040,10 @@ flavor_nov.36 = {
 	desc = flavor_nov.36.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1435.1.1
-		to = 1470.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	image = "gfx/interface/illustrations/institutions/legalism.dds"
 	trigger = {
@@ -2077,10 +2077,10 @@ flavor_nov.100 = { # Ivan's Hundred Merchant Association
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1360.1.1
-		to = 1480.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2131,10 +2131,10 @@ flavor_nov.101 = { # Ivan's Hundred Request Beeswax Monopoly
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1370.1.1
-		to = 1485.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2182,10 +2182,10 @@ flavor_nov.102 = { # Hanseatic Kontor of Peterhof
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1380.1.1
-		to = 1437.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2259,10 +2259,10 @@ flavor_nov.103 = { # Influence Over Peterhof Yields Benefits
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1380.1.1
-		to = 1437.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2302,10 +2302,10 @@ flavor_nov.104 = { # Financing the Ushkuyniks Pirates
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1401.1.1
-		to = 1480.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2352,10 +2352,10 @@ flavor_nov.105 = { # Dismantling of the Ushkuyniks
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1480.1.1
-		to = 1580.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2406,10 +2406,10 @@ flavor_nov.106 = { # Continued Expansion of the Posadnik
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1410.1.1
-		to = 1440.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2473,10 +2473,10 @@ flavor_nov.107 = { # Encroached Posadnik Offices
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1440.1.1
-		to = 1478.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2536,10 +2536,10 @@ flavor_nov.108 = { # Abolishment of the Posadnikdom
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1478.1.1
-		to = 1530.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2594,10 +2594,10 @@ flavor_nov.109 = { # Growth of Tysiatskii Influence
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1350.1.1
-		to = 1399.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2671,10 +2671,10 @@ flavor_nov.110 = { # Tysiatskii Demands Higher Fees on Ivan Hundred's Associatio
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1350.1.1
-		to = 1399.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2724,10 +2724,10 @@ flavor_nov.111 = { # Expanding Novgorod's Reach
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1360.1.1
-		to = 1481.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2768,10 +2768,10 @@ flavor_nov.112 = { # Minting of the Novgorodka
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1415.1.1
-		to = 1481.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2806,10 +2806,10 @@ flavor_nov.113 = { # Introduction of Gunpowder Weaponry to Novgorod
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1390.1.1
-		to = 1481.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2846,10 +2846,10 @@ flavor_nov.114 = { # The Novgorodian Monopoly of the Beeswax and Fur Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NOV
-		from = 1360.1.1
-		to = 1420.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 

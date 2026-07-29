@@ -8,10 +8,10 @@ flavor_hsa.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		from = 1520.1.1
-		to = 1540.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -63,10 +63,10 @@ flavor_hsa.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		from = 1300.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -212,10 +212,10 @@ flavor_hsa.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		from = 1555.1.1
-		to = 1580.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -254,10 +254,10 @@ flavor_hsa.5 = {	#Adoption of the League's Seal
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		from = 1355.1.1
-		to = 1385.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		location:lubeck = { has_building = building_type:hanseatic_kontor }
@@ -411,10 +411,10 @@ flavor_hsa.6 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		from = 1370.6.1
-		to = 1430.12.13
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -495,10 +495,10 @@ flavor_hsa.7 = {
 	historical_info = flavor_hsa.7.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		from = 1340.6.1
-		to = 1500.6.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -578,11 +578,10 @@ flavor_hsa.8 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		tag = LUB
-		from = 1460.6.1
-		to = 1515.6.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -641,10 +640,10 @@ flavor_hsa.9 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HSA
-		from = 1465.6.1
-		to = 1550.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

@@ -11,10 +11,10 @@ flavor_mam.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1500.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -55,10 +55,10 @@ flavor_mam.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1457.1.1
-		to = 1458.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -85,10 +85,10 @@ flavor_mam.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1458.1.1
-		to = 1470.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -247,10 +247,10 @@ flavor_mam.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1440.1.1
-		to = 1470.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -309,10 +309,10 @@ flavor_mam.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1480.1.1
-		to = 1490.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -364,10 +364,10 @@ flavor_mam.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1450.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -450,10 +450,10 @@ flavor_mam.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1207,10 +1207,10 @@ flavor_mam.23 = {
 	historical_info = flavor_mam.23.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1330.1.1
-		to = 1375.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1252,10 +1252,10 @@ flavor_mam.24 = { #GRAVEYARD
 	fire_only_once = yes
 	historical_info = flavor_mam.24.historical_info
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1330.1.1
-		to = 1365.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1295,10 +1295,10 @@ flavor_mam.25 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1330.1.1
-		to = 1400.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1332,10 +1332,10 @@ flavor_mam.26 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1330.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1387,10 +1387,10 @@ flavor_mam.27 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1448,10 +1448,10 @@ flavor_mam.28 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1345.1.1
-		to = 1380.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1508,10 +1508,10 @@ flavor_mam.29 = { #Mamluk Administration - The Offices of the Court
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1337.1.1
-		to = 1395.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1739,10 +1739,10 @@ flavor_mam.30 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1375.1.1
-		to = 1437.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	image = "gfx/interface/illustrations/institutions/banking.dds"
 
@@ -1785,10 +1785,10 @@ flavor_mam.31 = {
 	fire_only_once = yes
 	historical_info = flavor_mam.31.historical_info
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1337.1.1
-		to = 1453.6.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1873,10 +1873,10 @@ flavor_mam.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1911,10 +1911,10 @@ flavor_mam.33 = {
 	historical_info = flavor_mam.33.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1382.1.1
-		to = 1406.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	image = "gfx/interface/illustrations/government/throne_rooms/throne_room_syrian.dds"
 
@@ -1968,10 +1968,10 @@ flavor_mam.34 = { #Ibn Khaldun's Family Tragedy  #GRAVEYARD
 	historical_info = flavor_mam.34.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1370.1.1
-		to = 1390.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2022,10 +2022,10 @@ flavor_mam.35 = { #Ibn Khaldun Requests Funding
 	}
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1370.1.1
-		to = 1390.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2071,10 +2071,10 @@ flavor_mam.36 = { #Ibn Khaldun Finishes the Kitāb al-ʻIbar
 	}
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1380.1.1
-		to = 1390.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2129,10 +2129,10 @@ flavor_mam.37 = { #al-Maqrizi
 	}
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1400.1.1
-		to = 1410.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2182,10 +2182,10 @@ flavor_mam.38 = { #Bedouin Warfare Disrupts Trade
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2252,10 +2252,10 @@ flavor_mam.39 = { #Relocating the Bedouins
 	historical_info = flavor_mam.39.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1380.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2335,10 +2335,10 @@ flavor_mam.40 = { #The Pride of Alexandria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1380.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2379,10 +2379,10 @@ flavor_mam.41 = { #The Al Azhar Madrasa
 	historical_info = flavor_mam.41.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1360.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2431,10 +2431,10 @@ flavor_mam.42 = { #Conquest of Cyprus
 	historical_info = flavor_mam.42.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2505,10 +2505,10 @@ flavor_mam.43 = { #Uprooting Christianity
 	historical_info = flavor_mam.43.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1350.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2615,10 +2615,10 @@ flavor_mam.44 = { #Converting the Copts
 	historical_info = flavor_mam.44.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2780,10 +2780,10 @@ flavor_mam.46 = { #The Muhtasib Inspectors
 	historical_info = flavor_mam.46.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2831,10 +2831,10 @@ flavor_mam.47 = { #Royal Mamluks
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2870,10 +2870,10 @@ flavor_mam.48 = { #Printing Press
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1430.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2962,10 +2962,10 @@ flavor_mam.49 = { #Europeans Circumnavigate Africa
 	historical_info = flavor_mam.49.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3017,10 +3017,10 @@ flavor_mam.50 = { #Rising Demand of Ship Supplies
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3076,10 +3076,10 @@ flavor_mam.51 = { #Eclipsing Portugal
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3128,10 +3128,10 @@ flavor_mam.52 = { #Amir Husain Al-Kurdi
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1505.1.1
-		to = 1520.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3208,10 +3208,10 @@ flavor_mam.53 = { #The Red Sea Fleet
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3269,10 +3269,10 @@ flavor_mam.54 = { #The Rise of Barquq
 	historical_info = flavor_mam.54.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1380.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3373,10 +3373,10 @@ flavor_mam.55 = { #The Great Naval Reform
 	historical_info = flavor_mam.55.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1505.1.1
-		to = 1520.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3453,10 +3453,10 @@ flavor_mam.56 = { #Administrative Reform
 	historical_info = flavor_mam.56.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1380.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3580,10 +3580,10 @@ flavor_mam.58 = {
 	historical_info = flavor_mam.58.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1380.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3670,10 +3670,10 @@ flavor_mam.59 = {
 	historical_info = flavor_mam.59.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1480.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3739,10 +3739,10 @@ flavor_mam.60 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3782,10 +3782,10 @@ flavor_mam.61 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5025,10 +5025,10 @@ flavor_mam.77 = {
 	historical_info = flavor_mam.77.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5068,10 +5068,10 @@ flavor_mam.78 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1455.1.1
-		to = 1470.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5130,10 +5130,10 @@ flavor_mam.79 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1410.1.1
-		to = 1440.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = happy
@@ -5188,10 +5188,10 @@ flavor_mam.100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
-		from = 1300.1.1
-		to = 1340.1.1
-		monthly_chance = 80
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

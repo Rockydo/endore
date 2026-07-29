@@ -112,10 +112,10 @@ flavor_wls.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = WLS
-		from = 1370.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -199,10 +199,10 @@ flavor_wls.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = WLS
-		from = 1390.1.1
-		to = 1420.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -461,10 +461,10 @@ flavor_wls.15 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = WLS
-		from = 1400.1.1
-		to = 1420.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

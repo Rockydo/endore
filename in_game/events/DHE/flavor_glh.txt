@@ -11,10 +11,10 @@ flavor_glh.1 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = GLH
-		from = 1337.1.1
-		to = 1377.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

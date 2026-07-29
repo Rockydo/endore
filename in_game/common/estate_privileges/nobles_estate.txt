@@ -1334,7 +1334,7 @@ rajput_society = {
 				value = "culture_percentage_in_country(culture:mewari)"
 				add = "culture_percentage_in_country(culture:harauti)"
 				add = "culture_percentage_in_country(culture:dhundhari)"
-				add = "culture_percentage_in_country(culture:me_ithilien_area_07_07_province_01)"
+				add = "culture_percentage_in_country(culture:shekhawati)"
 				add = "culture_percentage_in_country(culture:mewati)"
 				add = 1
 			}

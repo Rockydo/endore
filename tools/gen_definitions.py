@@ -60,7 +60,12 @@ def area_key(location: Location) -> str:
     stem = location.region.removesuffix("_region")
     grid_x = location.x // 82
     grid_y = location.y // 52
-    return f"{stem}_area_{grid_y:02d}_{grid_x:02d}"
+    # EU5 rejects an area which contains both sea zones and non-sea
+    # locations.  Preserve the strategic grid while giving sea areas their
+    # own identity at coastlines.  Lakes and impassable mountains follow the
+    # surrounding land hierarchy, matching their non-sea engine domain.
+    domain = "_sea" if location.kind == "sea" else ""
+    return f"{stem}{domain}_area_{grid_y:02d}_{grid_x:02d}"
 
 
 def hierarchy(
@@ -195,6 +200,18 @@ def check() -> list[str]:
         failures.append("hierarchy repeats one or more locations")
     if set(flattened) != {location.key for location in model.locations}:
         failures.append("hierarchy is not bijective with the location model")
+    for continent in hierarchy(model).values():
+        for areas in continent.values():
+            for area, provinces in areas.items():
+                kinds = {
+                    location.kind
+                    for province in provinces
+                    for location in province
+                }
+                if "sea" in kinds and len(kinds) > 1:
+                    failures.append(
+                        f"{area} mixes sea and non-sea locations"
+                    )
     return failures
 
 

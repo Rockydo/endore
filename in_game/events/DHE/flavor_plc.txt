@@ -44,10 +44,10 @@ flavor_plc.1 = {
 	historical_info = flavor_plc.1.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1570.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -128,10 +128,10 @@ flavor_plc.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1565.4.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -197,10 +197,10 @@ flavor_plc.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1600.4.1
-		to = 1630.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -258,10 +258,10 @@ flavor_plc.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1590.1.1
-		to = 1821.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -314,10 +314,10 @@ flavor_plc.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1750.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -376,10 +376,10 @@ flavor_plc.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1700.4.1
-		to = 1750.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	option = {
@@ -423,10 +423,10 @@ flavor_plc.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1730.4.1
-		to = 1780.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -481,10 +481,10 @@ flavor_plc.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1750.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -535,10 +535,10 @@ flavor_plc.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1605.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -604,10 +604,10 @@ flavor_plc.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1560.4.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -689,10 +689,10 @@ flavor_plc.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1650.1.1
-		to = 1690.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -755,10 +755,10 @@ flavor_plc.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1750.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -833,10 +833,10 @@ flavor_plc.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1750.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -913,10 +913,10 @@ flavor_plc.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1600.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1160,10 +1160,10 @@ flavor_plc.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1640.4.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1248,10 +1248,10 @@ flavor_plc.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1600.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1315,10 +1315,10 @@ flavor_plc.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1500.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1376,10 +1376,10 @@ flavor_plc.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1423,10 +1423,10 @@ flavor_plc.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PLC
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1502,11 +1502,10 @@ flavor_plc.1001 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		tag = LIT
-		from = 1585.1.1
-		to = 1610.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1727,10 +1726,10 @@ flavor_plc.2000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIV
-		from = 1450.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2084,10 +2083,10 @@ flavor_plc.2004 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1337.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

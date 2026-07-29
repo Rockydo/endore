@@ -13,5 +13,3 @@ eastern_african_trade = {
 	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 	allow_tributary_subject = yes
 }
-
-

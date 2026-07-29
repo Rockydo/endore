@@ -707,4 +707,3 @@ cossack_estate_events.1003 = {
 		change_gold_effect = { scale = 0.1 }
 	}
 }
-

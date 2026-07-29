@@ -766,4 +766,3 @@ a_clan_retainer_cavalry = {
 
 	gfx_tags = { archer_tag medium_tag }
 }
-

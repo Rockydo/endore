@@ -91,3 +91,25 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   stay disjoint, allowing inherited references to parse without adding Earth geometry.
 - The final M2 production-stack paired smoke on 2026-07-29 passed with zero mod-unique
   `error.log` lines.
+- One installed `area` cannot contain both sea-zone and non-sea locations. M2 gives sea
+  areas a distinct `_sea` domain suffix and generator-checks the invariant.
+- A mod file under `main_menu/setup/templates` replaces the corresponding installed
+  template directory rather than merging one file. M2 embeds its sanitized technical
+  monarchy in the setup country and does not shadow the template directory.
+- Country setup definitions load from `in_game/setup/countries`. The M2 gate exact-file
+  quarantine keeps one technical `SWE` definition and blanks the remaining Earth country
+  setup files; the flag registry alone cannot restrict the country database.
+- Retained dynamic-historical-event blocks must remain registered even when disabled.
+  Replacing each schedule with an unreachable `SWE` schedule avoids both absent-tag and
+  orphan-event diagnostics.
+- The deep M2 load requires a technical census covering every retained active culture and
+  enabled religion database entry. Pop sizes below `0.01` round to zero in setup.
+- The neutral setup needs a sanitized full government, a valid market capital, and
+  discovery of all 24 generated regions. A capital alone is not implicitly discovered.
+- Retail building potentials can evaluate before every custom location has a market link
+  on the first daily tick. Optional `market ?= { ... }` scopes preserve valid behavior and
+  prevent invalid-link errors; absent Earth dynasty comparisons in formable triggers must
+  likewise be disabled against the neutral no-dynasty setup.
+- Final deep verification entered Observer, resolved Minas Tirith, Rivendell, and Orodruin
+  through `goto`, and advanced cleanly from 3018.1.1 to 3018.1.9. The only deep-load line
+  beyond the paired menu baseline is the machine `AudioArena` allocation notice.

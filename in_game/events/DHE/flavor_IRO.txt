@@ -9,14 +9,10 @@ flavor_iro.1 = { # The Legacy of the Great Peacemaker
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1337.1.1
-		to = 1380.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -107,14 +103,10 @@ flavor_iro.2 = { # A chance for leadership
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -155,14 +147,10 @@ flavor_iro.3 = { # Sense of Betrayal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -202,14 +190,10 @@ flavor_iro.10 = { # Tale of Jigonsaseh, Mother of Nations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -265,14 +249,10 @@ flavor_iro.13 = { # The Legend of Hiawatha
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -325,14 +305,10 @@ flavor_iro.15 = { # The Cleansing of Tadodaho
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -385,10 +361,10 @@ flavor_iro.20 = { # Reforging of the Great Law of Peace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 100 # Should trigger the moment conditions are met
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -428,10 +404,10 @@ flavor_iro.30 = { # Shikellamy and Pennsylvania
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1700.1.1
-		to = 1750.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -509,10 +485,10 @@ flavor_iro.31 = { # Shikellamy and the Walking Purchase
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1700.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -608,10 +584,10 @@ flavor_iro.32 = { # Arrival of the Moravian Missionaries
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1700.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -712,10 +688,10 @@ flavor_iro.33 = { # <Character> converts to Christianity from Missionaries
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1700.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -783,10 +759,10 @@ flavor_iro.40 = { # Strong Tribal Unity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1337.1.1
-		to = 1737.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -824,10 +800,10 @@ flavor_iro.41 = { # Trading in Firearms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1530.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -882,10 +858,10 @@ flavor_iro.42 = { # Colonists Impressed with <culture_name> Unity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1530.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -947,10 +923,10 @@ flavor_iro.43 = { # Adoption of Prisoners
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1337.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1005,10 +981,10 @@ flavor_iro.44 = { # Shared Brotherhood # Unlocks Advance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1400.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1042,10 +1018,10 @@ flavor_iro.45 = { # Welcoming of the Skarure # Tuscarora
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1637.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1090,14 +1066,10 @@ flavor_iro.46 = { # Benefits of the Three Sisters
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1337.1.1
-		to = 1600.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1141,14 +1113,10 @@ flavor_iro.47 = { # Matriarchal Agriculture
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
-		from = 1437.1.1
-		to = 1736.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1186,10 +1154,10 @@ flavor_iro.50 = { # Exchange of Fur
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1530.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1253,10 +1221,10 @@ flavor_iro.51 = { # Beaver Wars
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1560.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1319,10 +1287,10 @@ flavor_iro.52 = { # Depletion of the beaver population
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1560.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1380,10 +1348,10 @@ flavor_iro.60 = { # Grand Council of the Iroquois # Reform Unlock
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1357.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1428,10 +1396,10 @@ flavor_iro.61 = { # Council of the Fifty Intervenes in Colonial Diplomacy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1530.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1491,10 +1459,10 @@ flavor_iro.62 = { # Champlain aids the Hurons
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1610.1.1
-		to = 1660.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1593,10 +1561,10 @@ flavor_iro.63 = { # Destruction of Wendake
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1600.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1662,10 +1630,10 @@ flavor_iro.64 = { # Growth of Villages Along Lake Ontario
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1650.1.1
-		to = 1776.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1716,10 +1684,10 @@ flavor_iro.65 = { # Expedition of Simon Le Moyne and Sainte Marie de Ganentaa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1640.1.1
-		to = 1670.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1792,10 +1760,10 @@ flavor_iro.66 = { # Outbreak of Smallpox due to Simon le moyne
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1450.1.1
-		to = 1776.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1863,10 +1831,10 @@ flavor_iro.70 = { # Forming of a New Delegation
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
-		from = 1450.1.1
-		to = 1776.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

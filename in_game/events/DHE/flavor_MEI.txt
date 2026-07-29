@@ -12,10 +12,10 @@ flavor_mei.1 = { #Second Freiberger Berggeschrey
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_iron.dds"
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1450.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -75,10 +75,10 @@ flavor_mei.2 = { #Schiller
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1779.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -140,10 +140,10 @@ flavor_mei.10 = { #Johann Sebastian Bach
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1710.1.1
-		to = 1750.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -204,10 +204,10 @@ flavor_mei.20 = { #Lucas Cranach the Elder
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1505.1.1
-		to = 1555.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -268,10 +268,10 @@ flavor_mei.30 = { #Gottfried Wilhelm Leibniz
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1675.1.1
-		to = 1725.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -325,10 +325,10 @@ flavor_mei.40 = { #Georg Bartisch
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1560.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -375,10 +375,10 @@ flavor_mei.50 = { #The Rise of Dresden
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1470.1.1
-		to = 1520.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -501,10 +501,10 @@ flavor_mei.70 = { #A New Frauenkirche is demanded
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1400.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -566,10 +566,10 @@ flavor_mei.80 = { #The Sorrows of Young Werther
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1770.1.1
-		to = 1790.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -628,10 +628,10 @@ flavor_mei.90 = { #The Tragedy of Faust
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1770.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -679,10 +679,10 @@ flavor_mei.100 = { #A New Town Hall in Leipzig
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1530.1.1
-		to = 1580.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -747,10 +747,10 @@ flavor_mei.110 = { #The Zwinger
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1700.1.1
-		to = 1750.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -797,10 +797,10 @@ flavor_mei.120 = { #The Acquisition of Landsberg
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1337.1.1
-		to = 1357.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1176,10 +1176,10 @@ flavor_mei.140 = { #Heinrich von Brühl
 	historical_info = flavor_mei.140.historical_info
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1740.1.1
-		to = 1763.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1258,10 +1258,10 @@ flavor_mei.150 = { #Gottfried Silbermann
 	historical_info = flavor_mei.150.historical_info
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1710.1.1
-		to = 1730.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/confessionalism.dds"
@@ -1319,10 +1319,10 @@ flavor_mei.160 = { #University of Wittenberg
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = MEI
-        from = 1502.1.1
-        to = 1530.1.1
-        monthly_chance = 1
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
     illustration_tags = {
@@ -1387,10 +1387,10 @@ flavor_mei.170 = { #University of Freiberg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1750.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1463,10 +1463,10 @@ flavor_mei.180 = { #Centralization of Minting
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1516,10 +1516,10 @@ flavor_mei.190 = { #The Leipzig Debate
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1515.1.1
-		to = 1540.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1610,10 +1610,10 @@ flavor_mei.200 = { #A Generous Gift
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1710,10 +1710,10 @@ flavor_mei.210 = { #The Meissen Porcelain Factory
 	historical_info = flavor_mei.210.historical_info
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1710.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1793,10 +1793,10 @@ flavor_mei.220 = { #Johann Melchior Dinglinger
 	historical_info = flavor_mei.220.historical_info
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1700.1.1
-		to = 1730.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/manufactories.dds"
@@ -1850,10 +1850,10 @@ flavor_mei.230 = { #The Theory of Neptunism
 	historical_info = flavor_mei.230.historical_info
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1780.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1918,10 +1918,10 @@ flavor_mei.240 = { #The Arrival of Hasse
 	historical_info = flavor_mei.240.historical_info
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1780.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1976,10 +1976,10 @@ flavor_mei.1000 = { #A Brewing Storm
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MEI
-		from = 1340.1.1
-		to = 1370.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

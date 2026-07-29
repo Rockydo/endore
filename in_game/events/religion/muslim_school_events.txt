@@ -1279,4 +1279,3 @@ muslim_school_events.23 = {
 		add_legitimacy = legitimacy_mild_bonus
 	}
 }
-

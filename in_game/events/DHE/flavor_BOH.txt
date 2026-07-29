@@ -9,10 +9,10 @@ flavor_boh.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1450.1.1
-		to = 1470.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -111,10 +111,10 @@ flavor_boh.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1350.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -176,10 +176,10 @@ flavor_boh.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1465.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -236,10 +236,10 @@ flavor_boh.4 = {
 	historical_info = flavor_boh.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1493.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -303,10 +303,10 @@ flavor_boh.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1595.1.1
-		to = 1610.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
@@ -392,10 +392,10 @@ flavor_boh.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1450.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -465,10 +465,10 @@ flavor_boh.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1580.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -778,10 +778,10 @@ flavor_boh.17 = { #The First Congress of Visegrad
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1337.1.1
-		to = 1345.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -918,10 +918,10 @@ flavor_boh.18 = { #Staroměstská Radnice - The Old Town Hall
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1337.12.30
-		to = 1345.12.30
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -988,10 +988,10 @@ flavor_boh.19 = { #The Districts' Taxation Rights
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1337.1.1
-		to = 1350.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1043,10 +1043,10 @@ flavor_boh.20 = { #The University of [ShowLocationName('prague')]
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1345.1.1
-		to = 1356.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1109,10 +1109,10 @@ flavor_boh.21 = { #Nové Město - The New Town
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1347.1.1
-		to = 1375.12.30
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1170,10 +1170,10 @@ flavor_boh.22 = { #A Joint General Assembly
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1337.12.10
-		to = 1444.12.30
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1232,10 +1232,10 @@ flavor_boh.23 = { #The Land Court of [target_area.GetNameWithNoTooltip] (Moravia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1340.1.1
-		to = 1444.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1303,10 +1303,10 @@ flavor_boh.24 = { #Maiestas Carolina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1340.1.1
-		to = 1444.12.30
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1365,10 +1365,10 @@ flavor_boh.25 = { #Master of Vyšší Brod
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1345.1.1
-		to = 1370.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -1455,10 +1455,10 @@ flavor_boh.26 = { #The Crown of Saint Wenceslas
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1340.1.1
-		to = 1375.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1549,10 +1549,10 @@ flavor_boh.27 = { #The Cathedral of Saint Vitus
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1340.1.1
-		to = 1500.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1624,10 +1624,10 @@ flavor_boh.28 = { #Liquid Delight
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1337.1.1
-		to = 1444.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1703,10 +1703,10 @@ flavor_boh.29 = { #Greatness from Humble Beginnings
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1385.1.1
-		to = 1500.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1772,10 +1772,10 @@ flavor_boh.30 = { #Silver Found in [target_location.GetNameWithNoTooltip]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1490.1.1
-		to = 1520.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1890,10 +1890,10 @@ flavor_boh.32 = { #The Fate of [GetCountry('LUX').GetNameWithNoTooltip]
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1967,10 +1967,10 @@ flavor_boh.33 = { #The Purchase of the [GetCountry('BRA').GetLongNameWithNoToolt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2190,10 +2190,10 @@ flavor_boh.37 = { #The Unity of Brethren
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1485.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = { religion = religion:hussite }
@@ -2237,10 +2237,10 @@ flavor_boh.38 = { # The Unification of Prague
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1750.1.1
-		to = 1790.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2288,10 +2288,10 @@ flavor_boh.39 = { # The Bohemian Commonwealth
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1650.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2332,10 +2332,10 @@ flavor_boh.40 = { # Expanding Kutná Hora
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2381,10 +2381,10 @@ flavor_boh.41 = { # The Flooding of Kutná Hora
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1490.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2425,10 +2425,10 @@ flavor_boh.42 = { # The Pan-Slavic Congress
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1780.1.1
-		to = 1840.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2465,10 +2465,10 @@ flavor_boh.43 = { # Jan Amos Komensky
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1650.1.1
-		to = 1670.1.1
-		monthly_chance = 7
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2523,10 +2523,10 @@ flavor_boh.44 = { # Prague - The Golden City
     }
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2566,10 +2566,10 @@ flavor_boh.45 = { # Discovery of the Voynich Manuscript
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2616,10 +2616,10 @@ flavor_boh.46 = { # Jan Rokycana
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1450.1.1
-		to = 1470.1.1
-		monthly_chance = 7
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2672,10 +2672,10 @@ flavor_boh.47 = { # Jiri Melantrich z Aventina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1550.1.1
-		to = 1580.1.1
-		monthly_chance = 7
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2732,10 +2732,10 @@ flavor_boh.48 = { # Kilián Ignác Dientzenhofer
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1730.1.1
-		to = 1751.1.1
-		monthly_chance = 7
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2784,10 +2784,10 @@ flavor_boh.49 = { # Josef Dobrovský
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1780.1.1
-		to = 1829.1.1
-		monthly_chance = 7
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_boh.49.historical_info
@@ -2840,10 +2840,10 @@ flavor_boh.50 = { # Bohemian Crystal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_glass.dds"
@@ -2888,10 +2888,10 @@ flavor_boh.51 = { # Bohemian Brewing Traditions
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2936,10 +2936,10 @@ flavor_boh.52 = { # The Swamp Monster of Vizovice
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

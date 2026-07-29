@@ -9,10 +9,10 @@ flavor_ach.1 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1337.6.1
-        to = 1339.1.1
-        monthly_chance = 20
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
     illustration_tags = {
@@ -205,10 +205,10 @@ flavor_ach.4 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1337.1.1
-        to = 1338.1.1
-        monthly_chance = 75
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
     illustration_tags = {
@@ -259,10 +259,10 @@ flavor_ach.5 = { # The Titular Empire
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1337.1.1
-        to = 1351.1.1
-        monthly_chance = 100
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -354,10 +354,10 @@ flavor_ach.6 = { # Ties to the Naples Court
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1338.1.1
-        to = 1351.1.1
-        monthly_chance = 12
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -449,10 +449,10 @@ flavor_ach.7 = { # Secession in Epirus
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1340.1.1
-        to = 1370.1.1
-        monthly_chance = 18
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -572,10 +572,10 @@ flavor_ach.8 = { # #Orsini seizes Epirus ## If Orsini revolt succeeds
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1340.1.1
-        to = 1370.1.1
-        monthly_chance = 100
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -752,10 +752,10 @@ flavor_ach.10 = { # Reconquest of the Peloponnese # Territory lost to Byzantium 
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1343.1.1
-        to = 1370.1.1
-        monthly_chance = 18
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -823,10 +823,10 @@ flavor_ach.11 = { # Exploit the Byzantine Civil war # Opportunity should Byzanti
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1343.1.1
-        to = 1380.1.1
-        monthly_chance = 12
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -886,10 +886,10 @@ flavor_ach.12 = { # The Greek Populace of Achaea ## Appeasing the Greeks
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1345.1.1
-        to = 1375.1.1
-        monthly_chance = 6
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -956,10 +956,10 @@ flavor_ach.13 = { # Catalan Rule over Athens
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1345.1.1
-        to = 1537.1.1
-        monthly_chance = 25
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1030,10 +1030,10 @@ flavor_ach.14 = { # French rule restored over Athens. ## Dynamic reward event fo
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1345.1.1
-        to = 1537.1.1
-        monthly_chance = 50
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1204,10 +1204,10 @@ flavor_ach.15 = { # The Passing of the Latin Emperorship
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1337.1.1
-        to = 1437.1.1
-        monthly_chance = 100
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1278,10 +1278,10 @@ flavor_ach.16 = { # Pope Takes Interest in restoration of the Latin empire
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1337.1.1
-        to = 1351.1.1
-        monthly_chance = 25
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1372,10 +1372,10 @@ flavor_ach.17 = { # Constantinople reclaimed!
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ACH
-        from = 1337.1.1
-        to = 1537.1.1
-        monthly_chance = 100
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 

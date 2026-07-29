@@ -10,10 +10,10 @@ flavor_mfa.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	major = yes
@@ -150,10 +150,10 @@ flavor_mfa.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
-		from = 1386.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -286,10 +286,10 @@ flavor_mfa.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
-		from = 1337.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	major = yes
@@ -522,10 +522,10 @@ flavor_mfa.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
-		from = 1337.1.1
-		to = 1821.1.1
-		monthly_chance = 75
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -683,10 +683,10 @@ flavor_mfa.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

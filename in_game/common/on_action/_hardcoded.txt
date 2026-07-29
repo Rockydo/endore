@@ -17,17 +17,17 @@ on_game_start = {
 					not = {
 						is_member_of_international_organization_of_type = { type = catholic_church }
 						#they get added at the end
-						this = c:ARA
+						always = no
 					}
 				}
-				international_organization:catholic_church = {
-					add_country_to_international_organization_no_update = prev
+				international_organization:catholic_church ?= {
+
 				}
 			}
 		}
-		international_organization:catholic_church = {
+		international_organization:catholic_church ?= {
 			#just do one update at the end
-			add_country_to_international_organization = c:ARA
+
 		}
 
 		if = {
@@ -51,16 +51,16 @@ on_game_start = {
 				not = {
 					is_member_of_international_organization_of_type = { type = shinto }
 					#they get added at the end
-					this = c:STC
+					always = no
 				}
 			}
-			international_organization:shinto = {
-				add_country_to_international_organization_no_update = prev
+			international_organization:shinto ?= {
+
 			}
 		}
-		international_organization:shinto = {
+		international_organization:shinto ?= {
 			#just do one update at the end
-			add_country_to_international_organization = c:STC
+
 		}
 
 		# HRE
@@ -74,7 +74,7 @@ on_game_start = {
 				}
 				owner = {
 					international_organization:hre = {
-						add_country_to_international_organization_no_update = prev
+
 					}
 				}
 			}
@@ -118,25 +118,25 @@ on_game_start = {
 			}
 		}
 
-		c:CHI = {
-			china_set_up = yes
+		c:CHI ?= {
+
 		}
-		c:MAJ = {
-			majapahit_set_up = yes
+		c:MAJ ?= {
+
 		}
-		c:JAP = {
-			japan_set_up = yes
+		c:JAP ?= {
+
 		}
-		c:BYZ = {
-			byz_set_up = yes
+		c:BYZ ?= {
+
 		}
-		c:VER = {
-			ver_set_up = yes
+		c:VER ?= {
+
 		}
-		c:TEU = {
+		c:TEU ?= {
 			every_current_war = {
 				limit = {
-					c:LIT = {
+					c:LIT ?= {
 						is_war_leader_of = prev
 					}
 				}
@@ -196,7 +196,7 @@ on_game_start = {
 			character:byz_john_xiv_kalekas = {
 				set_pentarch_variable = { location = location:constantinople }
 			}
-			c:BYZ = {
+			c:BYZ ?= {
 				add_pentarchy_modifier = { location = location:constantinople }
 			}
 		}
@@ -261,7 +261,7 @@ on_game_start = {
 			}
 		}
 
-		c:BUL = {
+		c:BUL ?= {
 			trigger_event_silently = flavor_bul.7
 		}
 
@@ -341,7 +341,7 @@ on_siege_won = {
 		}
 		if = {
 			limit = {
-				this = c:PIS
+				always = no
 				scope:target = location:genoa
 			}
 			trigger_event_silently = flavor_pis.2
@@ -471,7 +471,7 @@ on_location_occupied = {
 
 		if = {
 			limit = {
-				this = c:PIS
+				always = no
 				scope:target = location:genoa
 			}
 			trigger_event_silently = flavor_pis.2
@@ -1084,7 +1084,7 @@ on_civil_war_start = {
 		if = {
 			limit = {
 				country_exists = c:NAP
-				c:NAP = {
+				c:NAP ?= {
 					this = root
 					has_variable = future_republic_of_naples
 					scope:rebel = root.var:future_republic_of_naples
@@ -1144,16 +1144,16 @@ on_bankruptcy = {
 				country_exists = c:BYZ
 			}
 			trigger_event_non_silently = { id = flavor_byz_ven.11 }
-			c:BYZ = { trigger_event_non_silently = { id = flavor_byz_ven.12 } }
+			c:BYZ ?= { trigger_event_non_silently = { id = flavor_byz_ven.12 } }
 		}
 		if = {
 			limit = {
 				has_country_modifier = BYZ_lacking_jewels
 				country_exists = c:VEN
-				c:VEN = { has_variable = original_crown_jewels_lender }
+				c:VEN ?= { has_variable = original_crown_jewels_lender }
 			}
 			trigger_event_non_silently = { id = flavor_byz_ven.13 }
-			c:VEN = { trigger_event_non_silently = { id = flavor_byz_ven.14 } }
+			c:VEN ?= { trigger_event_non_silently = { id = flavor_byz_ven.14 } }
 		}
 	}
 }
@@ -1213,7 +1213,7 @@ on_civil_war_lost = {
 				is_member_of_international_organization = international_organization:hre
 			}
 			international_organization:hre = {
-				add_country_to_international_organization = scope:winner
+
 			}
 
 			#if the loser was an elector, the winner gains their elector place
@@ -1320,7 +1320,7 @@ on_civil_war_won = {
 				country_exists = c:ARA
 				root = c:ARA
 			}
-			c:ARA = {
+			c:ARA ?= {
 				trigger_event_non_silently = {
 					id = flavor_ara.219
 				}
@@ -1411,7 +1411,7 @@ on_winning_war = {
 						tag = VEN
 					}
 				}
-				c:VER = {
+				c:VER ?= {
 					trigger_event_non_silently = {
 						id = flavor_ver.7
 					}
@@ -1505,7 +1505,7 @@ on_winning_war = {
 				current_year >= 1337
 				current_year <= 1588
 			}
-			c:POR = {
+			c:POR ?= {
 				trigger_event_non_silently = {
 					id = flavor_por.23
 				}
@@ -1626,7 +1626,7 @@ on_winning_war = {
 				scope:winner = c:JAP
 				scope:loser = c:SBA
 			}
-			c:JAP = {
+			c:JAP ?= {
 				set_variable = { name = jap_recently_won_against_shiba years = 20 }
 			}
 		}
@@ -1699,7 +1699,7 @@ on_losing_war = {
 				global_var:cas_aljubarrota_var ?= scope:war
 				scope:loser = c:CAS
 			}
-			c:CAS = {
+			c:CAS ?= {
 				trigger_event_non_silently = flavor_cas.20
 			}
 		}
@@ -1709,7 +1709,7 @@ on_losing_war = {
 				scope:winner = c:ENG
 				scope:loser = c:FRA
 			}
-			c:FRA = {
+			c:FRA ?= {
 				set_variable = { name = recently_lost_to_england years = 5 }
 			}
 		}
@@ -1816,7 +1816,7 @@ on_ending_war = {
 				country_exists = c:DAN
 				scope:winner = c:HSA
 				scope:loser = c:DAN
-				c:DAN = {
+				c:DAN ?= {
 					owns = location:kobenhavn
 				}
 				location:kobenhavn = {
@@ -1942,11 +1942,11 @@ on_ending_war = {
 			limit = {
 				global_var:cas_aljubarrota_var ?= scope:war
 				scope:winner = c:CAS
-				c:POR = {
+				c:POR ?= {
 					in_union_with = c:CAS
 				}
 			}
-			c:CAS = {
+			c:CAS ?= {
 				trigger_event_non_silently = flavor_cas.21
 			}
 		}
@@ -1958,7 +1958,7 @@ on_ending_war = {
 				}
 				country_exists = c:MOR
 				country_exists = c:GRA
-				this = c:MOR
+				always = no
 				area:me_ithilien_area_07_07 = {
 					any_location_in_area = {
 						percent >= 0.8
@@ -2087,8 +2087,8 @@ on_war_declared = {
 				limit = {
 					scope:actor = {
 						OR = {
-							this = c:ENG
-							this = c:FRA
+							always = no
+							always = no
 						}
 						has_variable = ccw_pretender_promises_100yw_support
 						country_exists = var:ccw_pretender_promises_100yw_support
@@ -2112,8 +2112,8 @@ on_war_declared = {
 				limit = {
 					scope:recipient = {
 						OR = {
-							this = c:ENG
-							this = c:FRA
+							always = no
+							always = no
 						}
 						has_variable = ccw_pretender_promises_100yw_support
 						country_exists = var:ccw_pretender_promises_100yw_support
@@ -2203,7 +2203,7 @@ on_war_declared = {
 					scope:recipient = c:SIC
 				}
 			}
-			c:SIC = {
+			c:SIC ?= {
 				remove_variable = sicily_pays_tribute
 			}
 		}
@@ -2590,8 +2590,8 @@ on_battle_lost_character = {
 			}
 			random_list = {
 				25 = {
-					c:FRA = { set_variable = { name = jeanne_d_arc_captured value = 1 } }
-					c:ENG = { set_variable = { name = jeanne_d_arc_captured_eng value = 1 } }
+					c:FRA ?= { set_variable = { name = jeanne_d_arc_captured value = 1 } }
+					c:ENG ?= { set_variable = { name = jeanne_d_arc_captured_eng value = 1 } }
 				}
 				75 = {
 				}
@@ -3421,7 +3421,7 @@ on_new_ruler = {
 					c:CAS.heir.first_spouse.dynasty ?= scope:old_ruler.dynasty
 				}
 			}
-			c:CAS = {
+			c:CAS ?= {
 				trigger_event_non_silently = {
 					id = flavor_cas.19
 				}
@@ -3707,8 +3707,8 @@ on_religion_changed = {
 			limit = {
 				religion = religion:catholic
 			}
-			international_organization:catholic_church = {
-				add_country_to_international_organization = root
+			international_organization:catholic_church ?= {
+
 			}
 		}
 		else = {
@@ -3725,8 +3725,8 @@ on_religion_changed = {
 			limit = {
 				religion = religion:shinto
 			}
-			international_organization:shinto = {
-				add_country_to_international_organization = root
+			international_organization:shinto ?= {
+
 			}
 		}
 		else = {
@@ -3786,7 +3786,7 @@ on_religion_changed = {
 						add_policy_to_international_organization = policy:confucianism_policy
 						set_variable = { name = sect_favor value = 0.10 }
 						set_variable = { name = religion value = religion:sanjiao }
-						add_country_to_international_organization = root
+
 					}
 				}
 				else = { #if confucianism sect exists, add the country to it
@@ -3795,7 +3795,7 @@ on_religion_changed = {
 							international_organization_type = international_organization_type:sect
 							international_organization_has_policy = policy:confucianism_policy
 						}
-						add_country_to_international_organization = root
+
 					}
 				}
 			}
@@ -3821,7 +3821,7 @@ on_religion_changed = {
 						add_policy_to_international_organization = policy:daoism_policy
 						set_variable = { name = sect_favor value = 0.10 }
 						set_variable = { name = religion value = religion:sanjiao }
-						add_country_to_international_organization = root
+
 					}
 				}
 				else = { #if daoism sect exists, add the country to it
@@ -3830,7 +3830,7 @@ on_religion_changed = {
 							international_organization_type = international_organization_type:sect
 							international_organization_has_policy = policy:daoism_policy
 						}
-						add_country_to_international_organization = root
+
 					}
 				}
 			}
@@ -4282,14 +4282,14 @@ on_location_changed_owner = {
 		if = {
 			limit = {
 				scope:winner ?= c:BYZ
-				c:BYZ = { has_country_modifier = BYZ_lacking_jewels }
+				c:BYZ ?= { has_country_modifier = BYZ_lacking_jewels }
 				work_of_art:byzantine_crown_jewels.location ?= root
 			}
 			work_of_art:byzantine_crown_jewels = {
 				save_scope_as = target_woa
 			}
 			save_scope_as = target
-			c:BYZ = {
+			c:BYZ ?= {
 				trigger_event_non_silently = {
 					id = flavor_byz_ven.6
 				}
@@ -4637,7 +4637,7 @@ on_new_country_formed = {
 				NOT = { is_member_of_international_organization = international_organization:hre }
 			}
 			international_organization:hre = {
-				add_country_to_international_organization = root
+
 			}
 		}
 		#catholics
@@ -4648,8 +4648,8 @@ on_new_country_formed = {
 					is_member_of_international_organization_of_type = { type = catholic_church }
 				}
 			}
-			international_organization:catholic_church = {
-				add_country_to_international_organization = prev
+			international_organization:catholic_church ?= {
+
 			}
 		}
 
@@ -4661,8 +4661,8 @@ on_new_country_formed = {
 					is_member_of_international_organization_of_type = { type = shinto }
 				}
 			}
-			international_organization:shinto = {
-				add_country_to_international_organization = prev
+			international_organization:shinto ?= {
+
 			}
 		}
 	}
@@ -4681,7 +4681,7 @@ on_released_country = {
 				NOT = { is_member_of_international_organization = international_organization:hre }
 			}
 			international_organization:hre = {
-				add_country_to_international_organization_no_update = root
+
 			}
 		}
 		if = {
@@ -5211,7 +5211,7 @@ on_work_of_art_looted = {
 					}
 				}
 				save_scope_as = target_woa
-				c:BYZ = {
+				c:BYZ ?= {
 					trigger_event_non_silently = {
 						id = flavor_byz_ven.8
 					}

@@ -19,10 +19,10 @@ flavor_tur.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -178,10 +178,10 @@ flavor_tur.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -264,10 +264,10 @@ flavor_tur.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1430.1.1
-		to = 1480.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.6.historical_info
@@ -374,10 +374,10 @@ flavor_tur.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1460.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.7.historical_info
@@ -430,10 +430,10 @@ flavor_tur.8 = { #The Enderun Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.8.historical_info
@@ -487,10 +487,10 @@ flavor_tur.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.9.historical_info
@@ -552,10 +552,10 @@ flavor_tur.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -601,10 +601,10 @@ flavor_tur.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.14.historical_info
@@ -650,10 +650,10 @@ flavor_tur.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.15.historical_info
@@ -733,10 +733,10 @@ flavor_tur.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1540.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -826,10 +826,10 @@ flavor_tur.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1400.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -866,10 +866,10 @@ flavor_tur.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1520.1.1
-		to = 1550.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.18.historical_info
@@ -963,10 +963,10 @@ flavor_tur.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1520.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1027,10 +1027,10 @@ flavor_tur.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1630.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1169,10 +1169,10 @@ flavor_tur.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.21.historical_info
@@ -1243,10 +1243,10 @@ flavor_tur.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1680.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1307,10 +1307,10 @@ flavor_tur.23 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1700.1.1
-		to = 1850.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1404,10 +1404,10 @@ flavor_tur.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1555,10 +1555,10 @@ flavor_tur.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1700.1.1
-		to = 1850.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1614,10 +1614,10 @@ flavor_tur.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1338.1.1
-		to = 1500.5.29
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1728,10 +1728,10 @@ flavor_tur.28 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1345.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1784,10 +1784,10 @@ flavor_tur.29 = {
 	fire_only_once = yes
 	historical_info = flavor_tur.29.historical_info
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1861,10 +1861,10 @@ flavor_tur.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1367.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1909,10 +1909,10 @@ flavor_tur.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1400.1.1 #The city was extensively pillaged by the Timurids in 1402
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1960,10 +1960,10 @@ flavor_tur.32 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1400.1.1
-		to = 1437.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1997,10 +1997,10 @@ flavor_tur.33 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.33.historical_info
@@ -2078,10 +2078,10 @@ flavor_tur.34 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.34.historical_info
@@ -2137,10 +2137,10 @@ flavor_tur.35 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.35.historical_info
@@ -2183,10 +2183,10 @@ flavor_tur.36 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.36.historical_info
@@ -2282,10 +2282,10 @@ flavor_tur.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2333,10 +2333,10 @@ flavor_tur.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1360.1.1
-		to = 1390.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.38.historical_info
@@ -2397,10 +2397,10 @@ flavor_tur.39 = { #The Mosques of Bursa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.39.historical_info
@@ -2502,10 +2502,10 @@ flavor_tur.40 = { #The Restoration of Iznik
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2556,10 +2556,10 @@ flavor_tur.43 = { #CB against of Ahi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2640,10 +2640,10 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1415.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2762,10 +2762,10 @@ flavor_tur.46 = { #The Basilic - # This event can only be triggered after flavor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1422.1.1
-		to = 1470.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2860,10 +2860,10 @@ flavor_tur.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1380.1.1
-		to = 1437.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.47.historical_info
@@ -2923,10 +2923,10 @@ flavor_tur.48 = { #The Drums of War
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.48.historical_info
@@ -2959,10 +2959,10 @@ flavor_tur.49 = { #A Fifth of the Spoils
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.49.historical_info
@@ -2998,10 +2998,10 @@ flavor_tur.50 = { #The Heir and the Hurufis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1370.1.1
-		to = 1437.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.50.historical_info
@@ -3136,10 +3136,10 @@ flavor_tur.51 = { #A Question of Customs
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.51.historical_info
@@ -3261,10 +3261,10 @@ flavor_tur.52 = { #The Anatolian Wheat Ban
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.52.historical_info
@@ -3337,10 +3337,10 @@ flavor_tur.53 = { #The Wolves of the Aegean
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.53.historical_info
@@ -3475,10 +3475,10 @@ flavor_tur.54 = { #The Pull of Piracy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.54.historical_info
@@ -3533,10 +3533,10 @@ flavor_tur.55 = { #The Fortress at Gallipoli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3607,10 +3607,10 @@ flavor_tur.56 = { #The Hurufiyya Arrives
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1390.1.1
-		to = 1437.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.56.historical_info
@@ -3800,10 +3800,10 @@ flavor_tur.57 = { #The Lord of the Dervishes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1380.1.1
-		to = 1437.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.57.historical_info
@@ -3916,10 +3916,10 @@ flavor_tur.58 = { #The Island of Death
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 30
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.58.historical_info
@@ -3975,10 +3975,10 @@ flavor_tur.59 = { #Martial Madmen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.59.historical_info
@@ -4031,10 +4031,10 @@ flavor_tur.60 = { #The Interior Service
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.60.historical_info
@@ -4074,10 +4074,10 @@ flavor_tur.61 = { #The Silent Service
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.61.historical_info
@@ -4122,10 +4122,10 @@ flavor_tur.62 = { #The Hidden Language
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.62.historical_info
@@ -4180,10 +4180,10 @@ flavor_tur.63 = { #The Caesar of Rome
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.63.historical_info
@@ -4258,10 +4258,10 @@ flavor_tur.64 = { #Sibling Killing on a fine day
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.64.historical_info
@@ -4464,10 +4464,10 @@ flavor_tur.67 = { #Shaykh al-Islām #1
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.67.historical_info
@@ -4537,10 +4537,10 @@ flavor_tur.68 = { #Shaykh al-Islām #2
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1460.1.1
-		to = 1537.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.68.historical_info
@@ -4616,10 +4616,10 @@ flavor_tur.69 = { #Shaykh al-Islām
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.69.historical_info
@@ -4680,10 +4680,10 @@ flavor_tur.70 = { #Kemal Reis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1470.1.1
-		to = 1500.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.70.historical_info
@@ -4849,10 +4849,10 @@ flavor_tur.72 = { #Piri Reis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1540.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.72.historical_info
@@ -5069,10 +5069,10 @@ flavor_tur.74 = { #the Aegean Issue
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.74.historical_info
@@ -5163,10 +5163,10 @@ flavor_tur.75 = { #The Mirror of God's Will
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.75.historical_info
@@ -5225,10 +5225,10 @@ flavor_tur.76 = { #The Beauties of [location]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5313,10 +5313,10 @@ flavor_tur.77 = { #The Words of a Woman
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1480.1.1
-		to = 1506.1.1
-		monthly_chance = 30
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5407,10 +5407,10 @@ flavor_tur.78 = { #The Matter of the Nile
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1737.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5527,10 +5527,10 @@ flavor_tur.79 = { #The Arabic Salons
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5587,10 +5587,10 @@ flavor_tur.80 = { #A foothold in Italy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5772,10 +5772,10 @@ flavor_tur.84 = { #The Art of Italy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5862,10 +5862,10 @@ flavor_tur.85 = { #The Matter of History
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1470.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6005,10 +6005,10 @@ flavor_tur.87 = { #Looking to the Heavens
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1450.1.1
-		to = 1480.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6103,10 +6103,10 @@ flavor_tur.88 = { #The Imperial Harem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1637.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.88.historical_info
@@ -6190,10 +6190,10 @@ flavor_tur.89 = { #Intervention in Crimea
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6365,10 +6365,10 @@ flavor_tur.90 = { #Securing the Slave Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1400.1.1
-		to = 1700.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6521,10 +6521,10 @@ flavor_tur.91 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1357.1.1
-		to = 1380.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6625,10 +6625,10 @@ flavor_tur.93 = { #The Ottoman Tulip Fever
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.93.historical_info
@@ -6677,10 +6677,10 @@ flavor_tur.94 = { #Moses Harmon
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1560.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.94.historical_info
@@ -6755,10 +6755,10 @@ flavor_tur.95 = { #The One True Emperor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1737.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.95.historical_info
@@ -6859,10 +6859,10 @@ flavor_tur.96 = { #The Traitor Prince
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.96.historical_info
@@ -7128,10 +7128,10 @@ flavor_tur.99 = { #The Price of Ambition (Pargalı Ibrahim Pasha)
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.99.historical_info
@@ -7230,10 +7230,10 @@ flavor_tur.100 = { #Constantinople by Night
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.100.historical_info
@@ -7374,10 +7374,10 @@ flavor_tur.101 = { #The Power of Night
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.101.historical_info
@@ -7551,10 +7551,10 @@ flavor_tur.102 = { #A Revolving Wonder
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1560.1.1
-		to = 1610.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.102.historical_info
@@ -7853,10 +7853,10 @@ flavor_tur.106 = { #The Restoration of Jerusalem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7952,10 +7952,10 @@ flavor_tur.107 = { #The Coffee of Cairo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8056,10 +8056,10 @@ flavor_tur.108 = { #The Great Debasement
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1637.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8124,10 +8124,10 @@ flavor_tur.109 = { #The Cage
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1737.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8211,10 +8211,10 @@ flavor_tur.110 = { #The Capitulations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1540.1.1
-		to = 1640.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8302,10 +8302,10 @@ flavor_tur.111 = { #Shadow Play
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1637.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8351,10 +8351,10 @@ flavor_tur.112 = { #The End of the Timars
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8422,10 +8422,10 @@ flavor_tur.113 = { #Advice for Kings
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8498,10 +8498,10 @@ flavor_tur.114 = { #A Mother's Right is God's Right
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1637.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.114.historical_info
@@ -8583,10 +8583,10 @@ flavor_tur.115 = { #The Sultanate of Women
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1737.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.115.historical_info
@@ -8737,10 +8737,10 @@ flavor_tur.116 = { #The [GetCountryAdjective] Faction
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1737.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.116.historical_info
@@ -8836,10 +8836,10 @@ flavor_tur.117 = { #The Reforms of [ambitious_ruler.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1737.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.117.historical_info
@@ -9065,10 +9065,10 @@ flavor_tur.119 = { #The Guardians of Felicity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1570.1.1
-		to = 1600.1.1
-		monthly_chance = 30
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.119.historical_info
@@ -9208,10 +9208,10 @@ flavor_tur.120 = { #The Cannons of [super_sinister_rival.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.120.historical_info
@@ -9474,10 +9474,10 @@ flavor_tur.123 = { #[target_character.GetNameWithNoTooltip] the Mad
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1737.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.123.historical_info
@@ -9679,10 +9679,10 @@ flavor_tur.124 = { #Anatolian Brigands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1737.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9957,10 +9957,10 @@ flavor_tur.126 = { #Barbary Sailors
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10058,10 +10058,10 @@ flavor_tur.127 = { #The Kadızade Movement
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1620.1.1
-		to = 1657.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10161,10 +10161,10 @@ flavor_tur.128 = { #The Age of the Grand Vizier, associated with flavor_tur.20
 	historical_info = flavor_tur.128.historical_info
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1660.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10298,10 +10298,10 @@ flavor_tur.129 = { #The Ayazmakapi Fire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10419,10 +10419,10 @@ flavor_tur.130 = { #The Doctrine of Reason
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10510,10 +10510,10 @@ flavor_tur.131 = { #Sheeps among the Wolves
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10595,10 +10595,10 @@ flavor_tur.132 = { #The Tax Farming Reform
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10660,10 +10660,10 @@ flavor_tur.133 = { #The Cost of Science
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10734,10 +10734,10 @@ flavor_tur.134 = { #The War for Crete
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10830,10 +10830,10 @@ flavor_tur.135 = { #The Unsavory Influences on [Sultan]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -10951,10 +10951,10 @@ flavor_tur.136 = { #[Ruler] the Extravagant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11047,10 +11047,10 @@ flavor_tur.137 = { #The Judges of the Faithful
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11094,10 +11094,10 @@ flavor_tur.138 = { #A Scarcity of Scribes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11199,10 +11199,10 @@ flavor_tur.140 = { #The Tulip Period
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1677.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11264,10 +11264,10 @@ flavor_tur.141 = { #The Power of Printing
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1700.1.1
-		to = 1745.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11454,10 +11454,10 @@ flavor_tur.143 = { #The Iron Castle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11582,10 +11582,10 @@ flavor_tur.144 = { #Modesty in Peril
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11662,10 +11662,10 @@ flavor_tur.145 = { #The Ransom from Iceland
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11822,10 +11822,10 @@ flavor_tur.146 = { #The Tree of Corpses
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -11967,10 +11967,10 @@ flavor_tur.147 = { #The Houses of Wisdom
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12113,10 +12113,10 @@ flavor_tur.148 = { #Blood on Silk
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12223,10 +12223,10 @@ flavor_tur.149 = { #The Eunuchs in Cairo
 	historical_info = flavor_tur.149.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12358,10 +12358,10 @@ flavor_tur.150 = { #The Wronged Servant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1680.1.1
-		to = 1720.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12465,10 +12465,10 @@ flavor_tur.151 = { #The Beauty of Letters
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1670.1.1
-		to = 1710.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12563,10 +12563,10 @@ flavor_tur.152 = { #The Red Coins
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12639,10 +12639,10 @@ flavor_tur.153 = { #The Baron de Tott
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1768.1.1
-		to = 1800.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12728,10 +12728,10 @@ flavor_tur.154 = { #The Burning of [Location]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -12829,10 +12829,10 @@ flavor_tur.155 = { #The Mosques of [Ruler]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1760.1.1
-		to = 1790.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_tur.155.historical_info
@@ -12911,10 +12911,10 @@ flavor_tur.156 = { #Tulip's End
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1700.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13106,10 +13106,10 @@ flavor_tur.157 = { #Suspicious Societies
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1700.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13165,10 +13165,10 @@ flavor_tur.158 = { #The Queen of the Poets
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1745.1.1
-		to = 1770.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13236,10 +13236,10 @@ flavor_tur.159 = { #Dangerous Words
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1775.1.1
-		to = 1800.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13318,10 +13318,10 @@ flavor_tur.160 = { #The Lord of Acre
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1740.1.1
-		to = 1775.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13436,10 +13436,10 @@ flavor_tur.161 = { #Halva Nights
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13511,10 +13511,10 @@ flavor_tur.162 = { #Black as Sin, Sweet as Sedition
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13574,10 +13574,10 @@ flavor_tur.163 = { #An Insulting Spectacle?
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1774.1.1
-		to = 1791.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13656,10 +13656,10 @@ flavor_tur.164 = { #The Blessings of Baklava
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13729,10 +13729,10 @@ flavor_tur.165 = { #The Flooding of the Euphrates
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1670.1.1
-		to = 1730.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13897,10 +13897,10 @@ flavor_tur.167 = { #The Medical School of [capital]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1637.1.1
-		to = 1837.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -13966,10 +13966,10 @@ flavor_tur.168 = { #The Grievances of Greece
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14234,10 +14234,10 @@ flavor_tur.170 = { #The Judge of the Grasslands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1537.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14353,10 +14353,10 @@ flavor_tur.171 = { #The Circassian Beauty
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14449,10 +14449,10 @@ flavor_tur.172 = { #Cutting Corners
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14518,10 +14518,10 @@ flavor_tur.173 = { #Abolishing Devshirme
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14598,10 +14598,10 @@ flavor_tur.174 = { #The Chief of Poets
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1700.1.1
-		to = 1760.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14697,10 +14697,10 @@ flavor_tur.175 = { #The Local Powers
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14782,10 +14782,10 @@ flavor_tur.176 = { #The Dash of Death
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -14984,10 +14984,10 @@ flavor_tur.179 = { #The New Order Army
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -15178,10 +15178,10 @@ flavor_tur.181 = { #The Calligrapher Couple
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1800.1.1
-		to = 1837.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -15275,10 +15275,10 @@ flavor_tur.182 = { #The Giant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1740.1.1
-		to = 1863.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -15362,10 +15362,10 @@ flavor_tur.183 = { #The Tortoise and the Candle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1737.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -15467,10 +15467,10 @@ flavor_tur.184 = {
 	historical_info = flavor_tur.184.historical_info
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1821.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -15521,10 +15521,10 @@ flavor_tur.185 = {
 	historical_info = flavor_tur.185.historical_info
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1760.1.1
-		to = 1821.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -15638,10 +15638,10 @@ flavor_tur.186 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -15696,10 +15696,10 @@ flavor_tur.187 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_sugar.dds"
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1780.1.1
-		to = 1821.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -15806,10 +15806,10 @@ flavor_tur.189 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1821.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -15877,10 +15877,10 @@ flavor_tur.190 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_weaponry.dds"
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1550.1.1
-		to = 1821.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -15943,10 +15943,10 @@ flavor_tur.191 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16005,10 +16005,10 @@ flavor_tur.192 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16084,10 +16084,10 @@ flavor_tur.193 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1750.1.1
-		to = 1790.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16170,10 +16170,10 @@ flavor_tur.194 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1444.1.1
-		to = 1821.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16226,10 +16226,10 @@ flavor_tur.195 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16294,10 +16294,10 @@ flavor_tur.196 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1460.1.1
-		to = 1821.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16348,10 +16348,10 @@ flavor_tur.197 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1700.1.1
-		to = 1821.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16402,10 +16402,10 @@ flavor_tur.198 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1821.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16501,10 +16501,10 @@ flavor_tur.199 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16553,10 +16553,10 @@ flavor_tur.200 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1444.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16594,10 +16594,10 @@ flavor_tur.201 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16679,10 +16679,10 @@ flavor_tur.202 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16746,10 +16746,10 @@ flavor_tur.203 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1444.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16877,10 +16877,10 @@ flavor_tur.205 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1437.1.1
-		to = 1530.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -16947,10 +16947,10 @@ flavor_tur.206 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1821.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17005,10 +17005,10 @@ flavor_tur.207 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17062,10 +17062,10 @@ flavor_tur.208 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17126,10 +17126,10 @@ flavor_tur.209 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1520.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17210,10 +17210,10 @@ flavor_tur.210 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17619,10 +17619,10 @@ flavor_tur.217 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1590.1.1
-		to = 1650.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17747,10 +17747,10 @@ flavor_tur.218 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1460.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17817,10 +17817,10 @@ flavor_tur.219 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1821.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17912,10 +17912,10 @@ flavor_tur.220 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -17967,10 +17967,10 @@ flavor_tur.221 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1560.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -18048,10 +18048,10 @@ flavor_tur.1000 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1410.1.1
-		to = 1450.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -18189,10 +18189,10 @@ flavor_tur.1002 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -18242,10 +18242,10 @@ flavor_tur.1003 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -18382,10 +18382,10 @@ flavor_tur.1004 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -18481,10 +18481,10 @@ flavor_tur.1005 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -18579,10 +18579,10 @@ flavor_tur.1100 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1520.1.1
-		to = 1821.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -18690,10 +18690,10 @@ flavor_tur.1200 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -18827,10 +18827,10 @@ flavor_tur.1300 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 

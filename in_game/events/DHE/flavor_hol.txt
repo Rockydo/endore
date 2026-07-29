@@ -10,10 +10,10 @@ flavor_hol.1 = {
 	historical_info = flavor_hol.1.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1575.1.1
-		to = 1650.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -64,10 +64,10 @@ flavor_hol.2 = {
 	historical_info = flavor_hol.2.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1640.1.1
-		to = 1660.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:dordrecht
@@ -141,10 +141,10 @@ flavor_hol.3 = {
 	historical_info = flavor_hol.3.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1630.1.1
-		to = 1655.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:dordrecht
@@ -204,10 +204,10 @@ flavor_hol.4 = {
 	historical_info = flavor_hol.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1570.1.1
-		to = 1620.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:the_hague
@@ -276,10 +276,10 @@ flavor_hol.5 = {
 	historical_info = flavor_hol.5.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1574.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		culture = culture:low_franconian
@@ -313,10 +313,10 @@ flavor_hol.6 = {
 	historical_info = flavor_hol.6.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1630.1.1
-		to = 1640.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		custom_tooltip = {
@@ -369,10 +369,10 @@ flavor_hol.7 = {
 	historical_info = flavor_hol.7.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1560.1.1
-		to = 1620.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -421,10 +421,10 @@ flavor_hol.8 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1590.1.1
-		to = 1640.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		OR = {
@@ -472,10 +472,10 @@ flavor_hol.9 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1610.1.1
-		to = 1630.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:hoorn
@@ -538,10 +538,10 @@ flavor_hol.10 = {
 	historical_info = flavor_hol.10.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1495.1.1
-		to = 1536.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:rotterdam
@@ -595,10 +595,10 @@ flavor_hol.11 = {
 	historical_info = flavor_hol.11.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1615.1.1
-		to = 1645.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -647,10 +647,10 @@ flavor_hol.12 = {
 	historical_info = flavor_hol.12.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1647.1.1
-		to = 1687.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -701,10 +701,10 @@ flavor_hol.13 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1740.1.1
-		to = 1790.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -744,10 +744,10 @@ flavor_hol.14 = {
 	historical_info = flavor_hol.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLA
-		from = 1540.1.1
-		to = 1590.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -790,10 +790,10 @@ flavor_hol.15 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NED
-		from = 1616.1.1
-		to = 1620.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:dordrecht
@@ -834,10 +834,10 @@ flavor_hol.16 = {
 	historical_info = flavor_hol.16.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1650.1.1
-		to = 1672.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:dordrecht
@@ -888,10 +888,10 @@ flavor_hol.17 = {
 	historical_info = flavor_hol.17.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1500.1.1
-		to = 1800.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -925,10 +925,10 @@ flavor_hol.18 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1650.1.1
-		to = 1800.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -1003,10 +1003,10 @@ flavor_hol.20 = {
 	historical_info = flavor_hol.20.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1601.1.1
-		to = 1626.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = armed
@@ -1050,10 +1050,10 @@ flavor_hol.21 = {
 	historical_info = flavor_hol.21.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1688.1.1
-		to = 1720.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -1101,10 +1101,10 @@ flavor_hol.22 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		"culture_percentage_in_country(culture:frisian)" > 0
@@ -1158,10 +1158,10 @@ flavor_hol.23 = {
 	historical_info = flavor_hol.23.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1655.1.1
-		to = 1677.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:amsterdam
@@ -1205,10 +1205,10 @@ flavor_hol.24 = {
 	historical_info = flavor_hol.24.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1590
-		to = 1620
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:utrecht
@@ -1279,10 +1279,10 @@ flavor_hol.25 = {
 	historical_info = flavor_hol.25.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1590
-		to = 1650
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:bruges
@@ -1358,10 +1358,10 @@ flavor_hol.26 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1340
-		to = 1430
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:FRI
@@ -1393,10 +1393,10 @@ flavor_hol.27 = {
 	historical_info = flavor_hol.27.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1600
-		to = 1700
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -1440,10 +1440,10 @@ flavor_hol.28 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1584.1.1
-		to = 1634.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -1481,10 +1481,10 @@ flavor_hol.29 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1564,10 +1564,10 @@ flavor_hol.30 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1520.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1637,10 +1637,10 @@ flavor_hol.31 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1724,10 +1724,10 @@ flavor_hol.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1434.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1816,10 +1816,10 @@ flavor_hol.33 = {
 	}
 
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1866,10 +1866,10 @@ flavor_hol.34 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HOL
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes

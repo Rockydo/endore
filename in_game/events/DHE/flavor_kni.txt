@@ -9,10 +9,10 @@ flavor_kni.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -50,10 +50,10 @@ flavor_kni.4 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1520.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -99,10 +99,10 @@ flavor_kni.5 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1520.1.1
-		to = 1568.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -142,10 +142,10 @@ flavor_kni.7 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1380.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -191,10 +191,10 @@ flavor_kni.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1337.1.1
-		to = 1374.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -247,10 +247,10 @@ flavor_kni.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1450.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -303,10 +303,10 @@ flavor_kni.10 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -372,10 +372,10 @@ flavor_kni.11 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1337.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -433,10 +433,10 @@ flavor_kni.12 = { #The Knights of the New World
 	historical_info = flavor_kni.12.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -503,10 +503,10 @@ flavor_kni.13 = { #Philippe de Longvilliers de Poincy
 	historical_info = flavor_kni.13.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1635.1.1
-		to = 1660.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -571,10 +571,10 @@ flavor_kni.14 = { #Giovanni Paolo Lascaris
 	historical_info = flavor_kni.14.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1610.1.1
-		to = 1630.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -643,10 +643,10 @@ flavor_kni.15 = { #Natives Attack Our Colonies
 	historical_info = flavor_kni.15.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -743,10 +743,10 @@ flavor_kni.16 = { #The Knights Turn to Piracy
 	historical_info = flavor_kni.16.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -831,10 +831,10 @@ flavor_kni.17 = { #The Capture of Tripoli
 	historical_info = flavor_kni.17.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -906,10 +906,10 @@ flavor_kni.18 = { #The History of the Hospitallers
 	historical_info = flavor_kni.18.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1570.1.1
-		to = 1590.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1062,10 +1062,10 @@ flavor_kni.110 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1255,10 +1255,10 @@ flavor_kni.120 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1340.1.1
-		to = 1405.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1338,10 +1338,10 @@ flavor_kni.121 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1340.1.1
-		to = 1405.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1501,10 +1501,10 @@ flavor_kni.130 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1466.1.1
-		to = 1486.1.1
-		monthly_chance = 33
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1595,11 +1595,10 @@ flavor_kni.150 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1390.1.1
-		#1402 in our timeline
-		to = 1410.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1740,10 +1739,10 @@ flavor_kni.1000 = {
 	historical_info = flavor_kni.1000.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1450.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1949,10 +1948,10 @@ flavor_kni.2000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KNI
-		from = 1450.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

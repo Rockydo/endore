@@ -14,10 +14,10 @@ flavor_vij.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -69,10 +69,10 @@ flavor_vij.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1530.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -121,10 +121,10 @@ flavor_vij.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1530.1.1
-		to = 1580.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -187,10 +187,10 @@ flavor_vij.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1530.1.1
-		to = 1580.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -237,10 +237,10 @@ flavor_vij.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1560.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -290,10 +290,10 @@ flavor_vij.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -343,10 +343,10 @@ flavor_vij.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1465.1.1
-		to = 1480.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -413,10 +413,10 @@ flavor_vij.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1460.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -483,10 +483,10 @@ flavor_vij.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1440.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -531,10 +531,10 @@ flavor_vij.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1470.1.1
-		to = 1530.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -584,10 +584,10 @@ flavor_vij.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1400.1.1
-		to = 1837.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -664,10 +664,10 @@ flavor_vij.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1500.1.1
-		to = 1530.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -709,10 +709,10 @@ flavor_vij.13 = { #DEVASTATION?
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1450.1.1
-		to = 1520.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -757,10 +757,10 @@ flavor_vij.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -857,10 +857,10 @@ flavor_vij.16 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1340.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -910,10 +910,10 @@ flavor_vij.17 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1050,10 +1050,10 @@ flavor_vij.19 = { #GRAVEYARD?
 	}
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1350.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1110,10 +1110,10 @@ flavor_vij.20 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1360.1.1
-		to = 1390.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1168,10 +1168,10 @@ flavor_vij.21 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1235,10 +1235,10 @@ flavor_vij.22 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1288,10 +1288,10 @@ flavor_vij.23 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1341,10 +1341,10 @@ flavor_vij.24 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1463,10 +1463,10 @@ flavor_vij.26 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1563,10 +1563,10 @@ flavor_vij.27 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1680,10 +1680,10 @@ flavor_vij.28 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1400.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1739,10 +1739,10 @@ flavor_vij.29 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1790,10 +1790,10 @@ flavor_vij.30 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1340.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1846,10 +1846,10 @@ flavor_vij.31 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1910,10 +1910,10 @@ flavor_vij.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1988,10 +1988,10 @@ flavor_vij.33 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2117,10 +2117,10 @@ flavor_vij.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1350.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2280,10 +2280,10 @@ flavor_vij.1100 = { #Rumors of a Tamil Rebellion
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2617,10 +2617,10 @@ flavor_vij.1200 = { #Pushing Northwards, Dynamic Bahmanis-Vijayanagar rivalry
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VIJ
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

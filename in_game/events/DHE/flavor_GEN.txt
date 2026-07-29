@@ -41,10 +41,10 @@ flavor_gen.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1339.1.1
-		to = 1363.3.14
-		monthly_chance = 25	#We want this to happen almost guaranteed
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -122,10 +122,10 @@ flavor_gen.2 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1340.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:kaffa
@@ -194,10 +194,10 @@ flavor_gen.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1300.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -344,10 +344,10 @@ flavor_gen.7 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1441.1.1
-		to = 1537.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -404,10 +404,10 @@ flavor_gen.8 = {
 	major = yes
 
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1440.1.1
-		to = 1450.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -459,10 +459,10 @@ flavor_gen.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1400.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -502,10 +502,10 @@ flavor_gen.10 = {
 	desc = flavor_gen.10.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1520.1.1
-		to = 1540.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -556,10 +556,10 @@ flavor_gen.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1520.1.1
-		to = 1699.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		government_type = government_type:republic
@@ -603,10 +603,10 @@ flavor_gen.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1540.1.1
-		to = 1699.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -661,10 +661,10 @@ flavor_gen.13 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1557.1.1
-		to = 1627.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = happy
@@ -702,10 +702,10 @@ flavor_gen.14 = {
 	major = yes
 
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1337.1.1
-		to = 1537.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = angry
@@ -798,10 +798,10 @@ flavor_gen.15 = {
 	desc = flavor_gen.15.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1337.1.1
-		to = 1341.6.15
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:BYZ
@@ -849,10 +849,10 @@ flavor_gen.16 = {
 	desc = flavor_gen.16.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1337.1.1
-		to = 1453.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		custom_tooltip = {
@@ -923,10 +923,10 @@ flavor_gen.17 = {
 	desc = flavor_gen.17.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1362.1.1
-		to = 1401.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns_corsica = yes
@@ -1031,10 +1031,10 @@ flavor_gen.18 = {
 	desc = flavor_gen.18.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1347.1.1
-		to = 1370.1.1
-		monthly_chance = 80
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns_corsica = yes
@@ -1116,10 +1116,10 @@ flavor_gen.19 = {
 	desc = flavor_gen.19.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -1172,10 +1172,10 @@ flavor_gen.20 = {
 	desc = flavor_gen.20.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		any_rented_out_mercenary = {
@@ -1244,10 +1244,10 @@ flavor_gen.21 = {
 	desc = flavor_gen.21.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = happy
@@ -1286,10 +1286,10 @@ flavor_gen.22 = {
 	desc = flavor_gen.22.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1337.1.1
-		to = 1453.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:FRA
@@ -1565,10 +1565,10 @@ flavor_gen.25 = {
 	desc = flavor_gen.25.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1340.1.1
-		to = 1380.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = angry
@@ -1628,10 +1628,10 @@ flavor_gen.26 = {
 	desc = flavor_gen.26.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1370.1.1
-		to = 1410.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -1722,10 +1722,10 @@ flavor_gen.27 = {
 	desc = flavor_gen.27.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1340.1.1
-		to = 1400.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:kaffa
@@ -1826,10 +1826,10 @@ flavor_gen.28 = {
 	desc = flavor_gen.28.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1400.1.1
-		to = 1440.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		OR = {
@@ -1885,10 +1885,10 @@ flavor_gen.29 = {
 	desc = flavor_gen.29.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1407.1.1
-		to = 1805.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = happy
@@ -1925,10 +1925,10 @@ flavor_gen.30 = {
 	desc = flavor_gen.30.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1407.1.1
-		to = 1805.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -1966,10 +1966,10 @@ flavor_gen.31 = {
 	desc = flavor_gen.31.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1475.1.1
-		to = 1485.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = exterior
@@ -2031,10 +2031,10 @@ flavor_gen.32 = {
 	desc = flavor_gen.32.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1520.1.1
-		to = 1567.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns_corsica = yes
@@ -2134,10 +2134,10 @@ flavor_gen.33 = {
 	desc = flavor_gen.33.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1700.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns_corsica = yes
@@ -2232,10 +2232,10 @@ flavor_gen.34 = {
 	desc = flavor_gen.34.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1750.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		custom_tooltip = {
@@ -2332,10 +2332,10 @@ flavor_gen.35 = {
 	desc = flavor_gen.35.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1755.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = angry
@@ -2456,10 +2456,10 @@ flavor_gen.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1339.1.1
-		to = 1363.3.14
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2522,10 +2522,10 @@ flavor_gen.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1542.1.1
-		to = 1572.12.30
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2567,10 +2567,10 @@ flavor_gen.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1620.1.1
-		to = 1657.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 	trigger = {
@@ -2612,10 +2612,10 @@ flavor_gen.40 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1596.1.1
-		to = 1644.8.2
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2659,10 +2659,10 @@ flavor_gen.41 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1645.1.1
-		to = 1664.5.5
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2707,10 +2707,10 @@ flavor_gen.42 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1645.1.1
-		to = 1659.10.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2755,10 +2755,10 @@ flavor_gen.43 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1735.1.1
-		to = 1749.3.12
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2802,10 +2802,10 @@ flavor_gen.44 = {
 	desc = flavor_gen.44.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1340.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	image = "gfx/interface/illustrations/situation/black_death.dds"
 	trigger = {
@@ -2851,10 +2851,10 @@ flavor_gen.45 = {
 	desc = flavor_gen.45.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1520.1.1
-		to = 1567.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		custom_tooltip = {
@@ -2919,10 +2919,10 @@ flavor_gen.46 = { # Formation of the Bank of Saint George https://en.wikipedia.o
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3242,10 +3242,10 @@ flavor_gen.52 = { # The Grimaldi Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1500.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3391,10 +3391,10 @@ flavor_gen.54 = { # The Spinola Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1480.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3541,10 +3541,10 @@ flavor_gen.56 = { # The Pallavicino Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
-		from = 1500.1.1
-		to = 1580.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

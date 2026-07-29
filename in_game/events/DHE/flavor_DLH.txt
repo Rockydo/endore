@@ -25,10 +25,10 @@ flavor_dlh.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1650.1.1
-		to = 1750.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -73,10 +73,10 @@ flavor_dlh.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1340.1.1
-		to = 1370.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -296,10 +296,10 @@ flavor_dlh.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1348.1.1
-		to = 1389.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -505,10 +505,10 @@ flavor_dlh.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1370.1.1
-		to = 1405.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -687,10 +687,10 @@ flavor_dlh.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1370.1.1
-		to = 1405.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -893,10 +893,10 @@ flavor_dlh.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1340.1.1
-		to = 1360.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1162,10 +1162,10 @@ flavor_dlh.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1341.1.1
-		to = 1405.12.30
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1231,10 +1231,10 @@ flavor_dlh.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1339.1.1
-		to = 1350.12.30
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1290,10 +1290,10 @@ flavor_dlh.10 = {
 	historical_info = flavor_dlh.10.historical_info
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1399,10 +1399,10 @@ flavor_dlh.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1440.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1518,10 +1518,10 @@ flavor_dlh.13 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1689,10 +1689,10 @@ flavor_dlh.15 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1750,10 +1750,10 @@ flavor_dlh.16 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2000,10 +2000,10 @@ flavor_dlh.20 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1420.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2104,10 +2104,10 @@ flavor_dlh.21 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1360.1.1
-		to = 1420.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2217,10 +2217,10 @@ flavor_dlh.22 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2288,10 +2288,10 @@ flavor_dlh.23 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1490.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2351,10 +2351,10 @@ flavor_dlh.24 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1360.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2417,10 +2417,10 @@ flavor_dlh.25 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2476,11 +2476,11 @@ flavor_dlh.26 = {
 		10 = regular
 	}
 
-	dynamic_historical_event = { #Should be created as soon as you have a Lodi ruler
-		tag = DLH
-		from = 1440.1.1			#Can't fire before event 12 which starts checking in 1440
-		to = 1821.1.1
-		monthly_chance = 1
+	dynamic_historical_event = {
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2559,10 +2559,10 @@ flavor_dlh.27 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1821.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2813,10 +2813,10 @@ flavor_dlh.32 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2888,10 +2888,10 @@ flavor_dlh.33 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -2972,10 +2972,10 @@ flavor_dlh.34 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3145,10 +3145,10 @@ flavor_dlh.35 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3208,10 +3208,10 @@ flavor_dlh.36 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3270,10 +3270,10 @@ flavor_dlh.37 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3355,10 +3355,10 @@ flavor_dlh.38 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3477,10 +3477,10 @@ flavor_dlh.40 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1500.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_slaves_goods.dds"
@@ -3573,10 +3573,10 @@ flavor_dlh.42 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3657,10 +3657,10 @@ flavor_dlh.43 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1505.1.1
-		to = 1520.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3791,10 +3791,10 @@ flavor_dlh.45 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3857,10 +3857,10 @@ flavor_dlh.46 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1360.1.1
-		to = 1420.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3917,10 +3917,10 @@ flavor_dlh.47 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4021,10 +4021,10 @@ flavor_dlh.48 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1380.1.1
-		to = 1410.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4084,10 +4084,10 @@ flavor_dlh.50 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4578,10 +4578,10 @@ flavor_dlh.56 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1390.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	option = {
@@ -4621,10 +4621,10 @@ flavor_dlh.57 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1350.1.1
-		to = 1380.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4691,10 +4691,10 @@ flavor_dlh.58 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1380.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4784,10 +4784,10 @@ flavor_dlh.59 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4871,10 +4871,10 @@ flavor_dlh.60 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1340.1.1
-		to = 1360.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4922,10 +4922,10 @@ flavor_dlh.61 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1340.1.1
-		to = 1360.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5104,10 +5104,10 @@ flavor_dlh.64 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1365.1.1
-		to = 1375.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5231,10 +5231,10 @@ flavor_dlh.65 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5319,10 +5319,10 @@ flavor_dlh.66 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1337.1.1
-		to = 1345.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5577,10 +5577,10 @@ flavor_dlh.1100 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1340.1.1
-		to = 1380.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -5745,10 +5745,10 @@ flavor_dlh.1200 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes

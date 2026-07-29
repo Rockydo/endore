@@ -11,10 +11,10 @@ flavor_mol.1000 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1340.1.1
-		to = 1360.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

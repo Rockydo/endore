@@ -10,10 +10,10 @@ flavor_bng.1 = { #Nur Qutb Alam and the Chishti Order
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1380.1.1
-		to = 1410.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -72,10 +72,10 @@ flavor_bng.2 = { #Syed Sultan finishes the Nabibangsha
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1575.1.1
-		to = 1650.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -141,10 +141,10 @@ flavor_bng.3 = { #Khan Jahan Ali - Khalifatabad
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1410.1.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -201,10 +201,10 @@ flavor_bng.4 = { #Minting Towns in Bengal
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -235,10 +235,10 @@ flavor_bng.5 = { #Adina Mosque Pandua
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1370.1.1
-		to = 1440.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_bng.5.historical_info
@@ -314,10 +314,10 @@ flavor_bng.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = STN
-		from = 1337.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -410,10 +410,10 @@ flavor_bng.7 = { #Pandua as the capital
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1337.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -467,10 +467,10 @@ flavor_bng.8 = { #Hindu pretender
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1440.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -562,10 +562,10 @@ flavor_bng.9 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -639,10 +639,10 @@ flavor_bng.10 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -696,10 +696,10 @@ flavor_bng.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -768,10 +768,10 @@ flavor_bng.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1450.1.1
-		to = 1500.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -828,10 +828,10 @@ flavor_bng.13 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1500.1.1
-		to = 1550.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -890,10 +890,10 @@ flavor_bng.14 = {
 	historical_info = flavor_bng.14.historical_info
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1550.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -976,10 +976,10 @@ flavor_bng.1000 = { #China relations event chain
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
-		from = 1360.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

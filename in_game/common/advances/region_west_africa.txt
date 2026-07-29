@@ -28,4 +28,3 @@ skilled_cavalry_raids = {
 
 	requires = nomadic_tendencies
 }
-

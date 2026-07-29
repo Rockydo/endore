@@ -24,10 +24,10 @@ flavor_chi.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1420.1.1
-		to = 1430.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -275,10 +275,10 @@ flavor_chi.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1558.1.1
-		to = 1588.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -341,10 +341,10 @@ flavor_chi.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1450.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -468,10 +468,10 @@ flavor_chi.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1640.1.1
-		to = 1660.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -523,10 +523,10 @@ flavor_chi.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1700.1.1
-		to = 1720.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -633,10 +633,10 @@ flavor_chi.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1760.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -716,10 +716,10 @@ flavor_chi.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1590.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -788,10 +788,10 @@ flavor_chi.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1601.1.1
-		to = 1604.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -838,10 +838,10 @@ flavor_chi.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1590.1.1
-		to = 1595.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1671,10 +1671,10 @@ flavor_chi.21 = {	#Restoration of Prince's Teng's Pavilion
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1441.1.1
-		to = 1480.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		character:chi_han_yong_script ?= {
@@ -1765,10 +1765,10 @@ flavor_chi.22 = {	#Zheng He
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1390.5.5
-		to = 1435.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -1873,10 +1873,10 @@ flavor_chi.23 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1338.6.1
-		to = 1343.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1942,10 +1942,10 @@ flavor_chi.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1340.1.1
-		to = 1341.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2043,10 +2043,10 @@ flavor_chi.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1340.1.1
-		to = 1341.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2110,10 +2110,10 @@ flavor_chi.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2173,10 +2173,10 @@ flavor_chi.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2236,10 +2236,10 @@ flavor_chi.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1345.1.1
-		to = 1350.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2281,10 +2281,10 @@ flavor_chi.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1360.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2384,10 +2384,10 @@ flavor_chi.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1345.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2487,10 +2487,10 @@ flavor_chi.33 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1337.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2592,10 +2592,10 @@ flavor_chi.34 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = YUA
-		from = 1380.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2696,10 +2696,10 @@ flavor_chi.36 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2825,10 +2825,10 @@ flavor_chi.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -2873,10 +2873,10 @@ flavor_chi.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2994,10 +2994,10 @@ flavor_chi.41 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1595.1.1
-		to = 1625.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3050,10 +3050,10 @@ flavor_chi.42 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1440.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3162,10 +3162,10 @@ flavor_chi.43 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1792.1.1
-		to = 1806.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3250,10 +3250,10 @@ flavor_chi.44 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3316,10 +3316,10 @@ flavor_chi.45 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1500.1.1
-		to = 1530.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3363,10 +3363,10 @@ flavor_chi.46 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1600.1.1
-		to = 1630.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3433,10 +3433,10 @@ flavor_chi.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1784.1.1
-		to = 1797.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3490,10 +3490,10 @@ flavor_chi.48 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1425.1.1
-		to = 1447.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3566,10 +3566,10 @@ flavor_chi.49 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1821.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3638,10 +3638,10 @@ flavor_chi.50 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1475.1.1
-		to = 1520.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3693,10 +3693,10 @@ flavor_chi.51 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3794,10 +3794,10 @@ flavor_chi.53 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3919,10 +3919,10 @@ flavor_chi.55 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1350.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4102,10 +4102,10 @@ flavor_chi.56 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1375.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4188,10 +4188,10 @@ flavor_chi.57 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1384.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -4234,10 +4234,10 @@ flavor_chi.58 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4344,10 +4344,10 @@ flavor_chi.59 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1350.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -4926,10 +4926,10 @@ flavor_chi.71 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1380.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4987,10 +4987,10 @@ flavor_chi.72 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -5048,10 +5048,10 @@ flavor_chi.73 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1360.1.1
-		to = 1390.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5110,10 +5110,10 @@ flavor_chi.74 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1390.1.1
-		to = 1420.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5158,10 +5158,10 @@ flavor_chi.75 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1360.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5253,10 +5253,10 @@ flavor_chi.76 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5346,10 +5346,10 @@ flavor_chi.78 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1580.1.1
-		to = 1680.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5400,10 +5400,10 @@ flavor_chi.79 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1420.1.1
-		to = 1821.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5504,10 +5504,10 @@ flavor_chi.80 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1440.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5841,10 +5841,10 @@ flavor_chi.84 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1475.1.1
-		to = 1525.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -6081,10 +6081,10 @@ flavor_chi.88 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1640.1.1
-		to = 1659.8.22
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6138,10 +6138,10 @@ flavor_chi.89 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6233,10 +6233,10 @@ flavor_chi.90 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1420.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6417,10 +6417,10 @@ flavor_chi.92 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1730.1.1
-		to = 1780.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -6521,10 +6521,10 @@ flavor_chi.93 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6610,10 +6610,10 @@ flavor_chi.94 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6704,10 +6704,10 @@ flavor_chi.95 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1337.1.1
-		to = 1370.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6796,10 +6796,10 @@ flavor_chi.96 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1337.1.1
-		to = 1380.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6894,10 +6894,10 @@ flavor_chi.97 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1444.1.1
-		to = 1480.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6980,10 +6980,10 @@ flavor_chi.98 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1500.1.1
-		to = 1530.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7065,10 +7065,10 @@ flavor_chi.99 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1490.1.1
-		to = 1530.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7150,10 +7150,10 @@ flavor_chi.100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1515.1.1
-		to = 1545.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7239,10 +7239,10 @@ flavor_chi.101 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1660.1.1
-		to = 1690.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7319,10 +7319,10 @@ flavor_chi.102 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1655.1.1
-		to = 1690.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7404,10 +7404,10 @@ flavor_chi.103 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1660.1.1
-		to = 1690.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7484,10 +7484,10 @@ flavor_chi.104 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1620.1.1
-		to = 1665.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7564,10 +7564,10 @@ flavor_chi.105 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1660.1.1
-		to = 1695.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7644,10 +7644,10 @@ flavor_chi.106 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1650.1.1
-		to = 1685.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7723,10 +7723,10 @@ flavor_chi.107 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1707.1.1
-		to = 1750.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7987,10 +7987,10 @@ flavor_chi.111 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1490.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -8465,10 +8465,10 @@ flavor_chi.117 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1635.1.1
-		to = 1650.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = angry
@@ -8613,10 +8613,10 @@ flavor_chi.119 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CSH
-		from = 1635.1.1
-		to = 1821.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8667,10 +8667,10 @@ flavor_chi.120 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CSH
-		from = 1635.1.1
-		to = 1821.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8730,10 +8730,10 @@ flavor_chi.121 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1375.1.1
-		to = 1425.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8988,10 +8988,10 @@ flavor_chi.126 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = regular
@@ -9024,10 +9024,10 @@ flavor_chi.127 = { #Xi'an
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1370.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9092,10 +9092,10 @@ flavor_chi.128 = { #Nanjing
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1370.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9166,10 +9166,10 @@ flavor_chi.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -9427,10 +9427,10 @@ flavor_chi.1100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
-		from = 1650.1.1
-		to = 1767.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

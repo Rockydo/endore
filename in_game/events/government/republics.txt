@@ -1014,5 +1014,3 @@ republics.41 = {
 		add_stability = stability_weak_penalty
 	}
 }
-
-

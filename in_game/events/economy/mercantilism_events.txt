@@ -444,4 +444,3 @@ mercantilism_events.10 = {
 		}
 	}
 }
-

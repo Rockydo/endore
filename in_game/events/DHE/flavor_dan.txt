@@ -19,10 +19,10 @@ flavor_dan.1 = { #Bruchardi Flood
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1600.1.1
-		to = 1680.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -154,10 +154,10 @@ flavor_dan.2 = { #University of Copenhagen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1475.1.1
-		to = 1485.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -222,10 +222,10 @@ flavor_dan.3 = { #Order of Saint Clare in Copenhagen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1480.1.1
-		to = 1500.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -294,10 +294,10 @@ flavor_dan.4 = { #Reforms of Christian II
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1515.1.1
-		to = 1545.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -345,10 +345,10 @@ flavor_dan.5 = { #double check with Kalmar Union Work - Scandinavian Constitutio
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -402,10 +402,10 @@ flavor_dan.6 = { #A new dynasty in Denmark
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1440.1.1
-		to = 1837.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -454,10 +454,10 @@ flavor_dan.7 = { #Naval Reforms of John I
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1500.1.1
-		to = 1520.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -516,10 +516,10 @@ flavor_dan.8 = { #House Oldenburg in Denmark
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1400.1.1
-		to = 1837.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -615,10 +615,10 @@ flavor_dan.10 = { #Great Fire of Copenhagen of 1728 #DEVASTATION
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1720.1.1
-		to = 1730.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -701,10 +701,10 @@ flavor_dan.11 = { #Dutch Relations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1500.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -757,10 +757,10 @@ flavor_dan.12 = { #Hans Tausen start preaching in Denmark
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1520.1.1
-		to = 1561.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -864,10 +864,10 @@ flavor_dan.13 = { #Cattle Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1540.1.1
-		to = 1580.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -901,10 +901,10 @@ flavor_dan.14 = { #Jens Dinesen Jersin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1610.1.1
-		to = 1634.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -967,10 +967,10 @@ flavor_dan.15 = { #Niels Juel offers service
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1649.1.1
-		to = 1690.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1037,10 +1037,10 @@ flavor_dan.16 = { #1660 state of emergency
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1637.1.1
-		to = 1737.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1101,10 +1101,10 @@ flavor_dan.17 = { #Peder Griffenfeld
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1673.1.1
-		to = 1693.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1163,10 +1163,10 @@ flavor_dan.18 = { #Tycho Brahe
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1574.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1219,11 +1219,10 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1340.1.1
-		to = 1345.1.1
-		monthly_chance = 5
-
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1339,10 +1338,10 @@ flavor_dan.20 = { #Moving to Copenhagen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1425,10 +1424,10 @@ flavor_dan.21 = { #Peter Tordenskjold
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1715.1.1
-		to = 1725.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1495,10 +1494,10 @@ flavor_dan.22 = { #Hans Christian Andersen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1819.1.1
-		to = 1837.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1559,10 +1558,10 @@ flavor_dan.23 = { #Ludvig Holberg
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1714.1.1
-		to = 1754.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1623,10 +1622,10 @@ flavor_dan.24 = { #The Translation of the New Testament
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1524.1.1
-		to = 1540.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1759,10 +1758,10 @@ flavor_dan.25 = { #Storming of the Church of Our Lady
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1530.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1831,10 +1830,10 @@ flavor_dan.26 = { #Chronica Jutensis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1342.1.1
-		to = 1836.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.26.historical_info
@@ -1896,10 +1895,10 @@ flavor_dan.27 = { #Resettling Greenland
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1700.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.27.historical_info
@@ -1953,10 +1952,10 @@ flavor_dan.28 = { #The Rediscovery of Vinland
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.28.historical_info
@@ -1989,10 +1988,10 @@ flavor_dan.29 = { #The Kastellet
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1664.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.29.historical_info
@@ -2037,10 +2036,10 @@ flavor_dan.30 = { #Preserving Gesta Danorum
 	image = "gfx/interface/illustrations/institutions/printing_press.dds"
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2090,10 +2089,10 @@ flavor_dan.31 = { #Kronborg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1420.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.31.historical_info
@@ -2133,10 +2132,10 @@ flavor_dan.32 = { #Anders Sørensen Vedel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1572.1.1
-		to = 1602.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2196,10 +2195,10 @@ flavor_dan.33 = { #Otto Ruud
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1545.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2252,10 +2251,10 @@ flavor_dan.34 = { #Pal Laxmand
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1535.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2307,10 +2306,10 @@ flavor_dan.35 = { #The Murder of Pal Laxmand #GRAVEYARD
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1535.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2353,10 +2352,10 @@ flavor_dan.36 = { #Legacy of the North Sea Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2404,10 +2403,10 @@ flavor_dan.37 = { #Decline of the Hanseatic League
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2441,10 +2440,10 @@ flavor_dan.38 = { #Lion from the North
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2476,10 +2475,10 @@ flavor_dan.39 = { #Danish Colonial Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1400.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.39.historical_info
@@ -2516,10 +2515,10 @@ flavor_dan.40 = { #Reconquest of Scania
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2573,10 +2572,10 @@ flavor_dan.41 = { #Danish Golden Age of Painting
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1800.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2637,10 +2636,10 @@ flavor_dan.43 = { #Founding of Christianstad
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1614.1.1
-		to = 1837.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2698,10 +2697,10 @@ flavor_dan.44 = { #The Trinity Chruch of Christianstad
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1617.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.44.historical_info
@@ -2786,10 +2785,10 @@ flavor_dan.46 = { #Expanding the Royal Life Guards
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2831,10 +2830,10 @@ flavor_dan.47 = { #The Scanian Regiment
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2877,10 +2876,10 @@ flavor_dan.48 = { #Andrew Sinclair
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1580.1.1
-		to = 1625.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2948,10 +2947,10 @@ flavor_dan.49 = { #Falk Lykke
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1615.1.1
-		to = 1640.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = armed
@@ -3014,10 +3013,10 @@ flavor_dan.50 = { #The King's Law
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3053,10 +3052,10 @@ flavor_dan.51 = { #Rebuilding Jomsborg
 	historical_info = flavor_dan.51.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3103,10 +3102,10 @@ flavor_dan.52 = { #The Nyhavn Canal
 	historical_info = flavor_dan.52.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1670.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3156,10 +3155,10 @@ flavor_dan.53 = { #Appointment of General Building Master
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1660.1.1
-		to = 1670.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3217,10 +3216,10 @@ flavor_dan.54 = { #Christian Frederik Hansen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1780.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3261,10 +3260,10 @@ flavor_dan.55 = { #Christiansborg Palace
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1785.1.1
-		to = 1820.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3313,10 +3312,10 @@ flavor_dan.56 = { #Berthel Thorvaldsen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1795.1.1
-		to = 1815.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.56.historical_info
@@ -3374,10 +3373,10 @@ flavor_dan.57 = { #Thorvaldsen's Museum
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1795.1.1
-		to = 1815.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.57.historical_info
@@ -3441,10 +3440,10 @@ flavor_dan.58 = { #Royal Academy of Fine Arts
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1750.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3488,10 +3487,10 @@ flavor_dan.59 = { #Fall of Visby
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3569,10 +3568,10 @@ flavor_dan.61 = { #College of Missions
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3613,10 +3612,10 @@ flavor_dan.62 = { #Royal Porcelain Factory
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1775.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_dan.62.historical_info
@@ -3660,10 +3659,10 @@ flavor_dan.63 = { #The Vornedskab #GRAVEYARD
 	historical_info = flavor_dan.63.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1370.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3700,10 +3699,10 @@ flavor_dan.64 = { #Amazigh Raid on Iceland #DEVASTATION
 	historical_info = flavor_dan.64.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1627.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3757,10 +3756,10 @@ flavor_dan.65 = { #Royal Life Guards' Mutiny
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1750.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3799,10 +3798,10 @@ flavor_dan.66 = { #Expanding the Copenhagen Dockyard
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1600.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3847,10 +3846,10 @@ flavor_dan.67 = { #The Elmelunde Frescos
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1550.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3890,10 +3889,10 @@ flavor_dan.68 = { #Dominium Maris Baltici
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3943,10 +3942,10 @@ flavor_dan.1000 = { #Danish-Indian Charter
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4127,10 +4126,10 @@ flavor_dan.1100 = { #Peder Oxe pushed into exile? #PRISON
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1552.1.1
-		to = 1560.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4226,10 +4225,10 @@ flavor_dan.1200 = { #A Royal Marriage
 	historical_info = flavor_dan.1200.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
-		from = 1337.1.1
-		to = 1345.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes

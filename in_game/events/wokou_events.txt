@@ -712,10 +712,10 @@ wokou_events.101 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
-		from = 1530.1.1
-		to = 1580.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

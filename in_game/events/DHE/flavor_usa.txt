@@ -1363,4 +1363,3 @@ flavor_usa.1003 = {
 		 add_prestige = prestige_weak_bonus
 	}
 }
-

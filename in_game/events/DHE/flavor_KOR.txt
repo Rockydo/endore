@@ -9,10 +9,10 @@ flavor_kor.1 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1340.1.1
-		to = 1380.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:CHI
@@ -371,10 +371,10 @@ flavor_kor.4 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 100	#Should always happen
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		custom_tooltip = {
@@ -418,10 +418,10 @@ flavor_kor.5 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		custom_tooltip = {
@@ -473,10 +473,10 @@ flavor_kor.6 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:CHI
@@ -642,10 +642,10 @@ flavor_kor.10 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		NOT = { own_entire_province = province_definition:me_ithilien_area_07_07_province_01 }
@@ -711,10 +711,10 @@ flavor_kor.11 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
         10 = regular
@@ -762,10 +762,10 @@ flavor_kor.12 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1360.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		any_port_in_country = {
@@ -860,10 +860,10 @@ flavor_kor.13 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1360.1.1
-		to = 1460.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -898,10 +898,10 @@ flavor_kor.14 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1400.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -951,10 +951,10 @@ flavor_kor.15 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		OR = {
@@ -1073,10 +1073,10 @@ flavor_kor.16 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1460.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		stability > 20
@@ -1113,10 +1113,10 @@ flavor_kor.17 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		custom_tooltip = {
@@ -1237,10 +1237,10 @@ flavor_kor.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1375.4.1
-		to = 1410.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1469,10 +1469,10 @@ flavor_kor.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1380.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	option = {
@@ -1515,10 +1515,10 @@ flavor_kor.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1455.8.3 # Coup of https://en.wikipedia.org/wiki/Sejo_of_Joseon
-		to = 1600.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	option = {
@@ -1539,10 +1539,10 @@ flavor_kor.23 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1703,10 +1703,10 @@ flavor_kor.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1581.1.1
-		to = 1590.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -1768,10 +1768,10 @@ flavor_kor.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1608.1.1
-		to = 1633.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1827,10 +1827,10 @@ flavor_kor.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1380.4.1
-		to = 1440.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1900,10 +1900,10 @@ flavor_kor.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1420.1.1
-		to = 1450.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1958,10 +1958,10 @@ flavor_kor.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2042,10 +2042,10 @@ flavor_kor.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1460.1.1
-		to = 1560.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2108,10 +2108,10 @@ flavor_kor.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1395.1.1
-		to = 1410.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2241,10 +2241,10 @@ flavor_kor.32 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1600.1.1
-		to = 1625.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	option = {
@@ -2264,10 +2264,10 @@ flavor_kor.33 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1420.1.1
-		to = 1510.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2332,10 +2332,10 @@ flavor_kor.34 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1500.1.1
-		to = 1821.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2453,10 +2453,10 @@ flavor_kor.35 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1670.1.1
-		to = 1720.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2529,10 +2529,10 @@ flavor_kor.36 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1390.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2597,10 +2597,10 @@ flavor_kor.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1390.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2677,10 +2677,10 @@ flavor_kor.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1390.1.1
-		to = 1425.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2793,10 +2793,10 @@ flavor_kor.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1350.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2846,10 +2846,10 @@ flavor_kor.40 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1395.1.1
-		to = 1420.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2913,10 +2913,10 @@ flavor_kor.41 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1400.1.1
-		to = 1550.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2998,10 +2998,10 @@ flavor_kor.100 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -3066,10 +3066,10 @@ flavor_kor.101 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1497.1.1
-		to = 1499.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3139,10 +3139,10 @@ flavor_kor.102 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1502.1.1
-		to = 1505.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3192,10 +3192,10 @@ flavor_kor.103 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1518.1.1
-		to = 1520.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3239,10 +3239,10 @@ flavor_kor.104 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1580.1.1
-		to = 1582.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
         10 = regular
@@ -3291,10 +3291,10 @@ flavor_kor.200 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1411.1.1
-		to = 1433.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:gongju
@@ -3352,10 +3352,10 @@ flavor_kor.201 = { #The Goryeosa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
-		from = 1450.1.1
-		to = 1455.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		character:kor_kim_jong_seo ?= {

@@ -17,10 +17,10 @@ flavor_bos.1 = { #Aspiration for Independence
 	historical_info = flavor_bos.1.historical_info
 
 	dynamic_historical_event = {
-		tag = BOS
-		from = 1338.1.1
-		to = 1370.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -90,10 +90,10 @@ flavor_bos.2 = { #The Decline of Serbia
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOS
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -182,10 +182,10 @@ flavor_bos.3 = { #The First King of Bosnia
 	}
 
 	dynamic_historical_event = {
-		tag = BOS
-		from = 1350.1.1
-		to = 1420.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -304,10 +304,10 @@ flavor_bos.5 = { #Fate of the Bosnian Church
 	historical_info = flavor_bos.5.historical_info
 
 	dynamic_historical_event = {
-		tag = BOS
-		from = 1337.1.1
-		to = 1380.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

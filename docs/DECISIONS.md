@@ -1,5 +1,19 @@
 # Decisions
 
+## 2026-07-29 — M2 deep-load quarantine
+
+Keep the M2 inherited-content quarantine exact, generated, and milestone-scoped. The
+production world retains one installed technical country only to satisfy the setup
+contract. Installed cultures and religions receive a tiny technical census so their
+retained registries validate; Earth country setup, unsafe hardcoded on-actions, flag
+predicates, historical schedules, and unreferenced Earth-only static modifiers are
+neutralized by deterministic exact-file overlays.
+
+Guard retail building `market` scopes during the neutral world's first tick and disable
+Earth dynasty comparisons where the corresponding historical database is deliberately
+absent. These are parser/runtime isolation measures, not ENDÓRË content. M3 and later
+replace the scaffolds as bespoke databases become authoritative.
+
 ## 2026-07-28 — Workspace path precedence
 
 The explicit task path `G:\EUV mods\endore` supersedes the older `G:\endore` path embedded

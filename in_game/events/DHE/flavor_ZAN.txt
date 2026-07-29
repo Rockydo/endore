@@ -10,10 +10,10 @@ flavor_zan.1 = {
 	historical_info = flavor_zan.1.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1337.1.1
-		to = 1444.6.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -60,10 +60,10 @@ flavor_zan.2 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1339.1.1
-		to = 1345.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -138,10 +138,10 @@ flavor_zan.3 = {
 	fire_only_once = yes
 	historical_info = flavor_zan.3.historical_info
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		has_ruler = yes
@@ -210,10 +210,10 @@ flavor_zan.4 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1337.1.1
-		to = 1380.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -334,10 +334,10 @@ flavor_zan.5 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1340.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -394,10 +394,10 @@ flavor_zan.6 = {
 	historical_info = flavor_zan.6.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		location:engeruka = {
@@ -482,10 +482,10 @@ flavor_zan.7 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		location:bandire = {
@@ -574,10 +574,10 @@ flavor_zan.8 = {	#Shirazi Islam and the Patricians of Kilwa
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1350.1.1
-		to = 1480.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		religion = religion:sunni
@@ -693,10 +693,10 @@ flavor_zan.9 = {	#The Kilwa Chronicle
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1380.6.1
-		to = 1520.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -751,10 +751,10 @@ flavor_zan.10 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
-		from = 1450.1.1
-		to = 1650.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		c:POR ?= {
@@ -879,7 +879,3 @@ flavor_zan.12 = {
 		add_stability = stability_extreme_bonus
 	}
 }
-
-
-
-

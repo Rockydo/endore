@@ -12,10 +12,10 @@ flavor_bul.1 = { #Principality of Dobruja
 	historical_info = flavor_bul.1.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1356.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -145,10 +145,10 @@ flavor_bul.2 = { #Tsardom of Vidin
 	historical_info = flavor_bul.2.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1369.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -252,10 +252,10 @@ flavor_bul.3 = { #The Second Golden Age of Bulgaria
 	historical_info = flavor_bul.3.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1345.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -313,10 +313,10 @@ flavor_bul.4 = { #Gospels of Tsar Ivan Alexander
 	historical_info = flavor_bul.4.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1347.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -451,10 +451,10 @@ flavor_bul.6 = { #A Royal Divorce
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1337.1.1
-		to = 1380.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -583,10 +583,10 @@ flavor_bul.8 = { #A Crumbling Empire
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -642,10 +642,10 @@ flavor_bul.9 = { #A Recognized Great Power
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -684,10 +684,10 @@ flavor_bul.1000 = { #Fall of Constantinople - Event for the modifier removal if 
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BUL
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

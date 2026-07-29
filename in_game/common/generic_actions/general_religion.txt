@@ -613,4 +613,3 @@ remove_religious_aspect = {
 		}
 	}
 }
-

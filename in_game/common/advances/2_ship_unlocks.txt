@@ -447,4 +447,3 @@ unlock_eastindiaman_advance = {
 
 	in_tree_of = enlightenment_advance
 }
-

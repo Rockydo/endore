@@ -9,4 +9,3 @@ discovered_areas = {
 	me_ithilien_area_07_07
 	me_ithilien_area_07_07
 }
-

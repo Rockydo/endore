@@ -10,10 +10,10 @@ flavor_jap.1 = { #The Sakoku Law
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1600.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -47,10 +47,10 @@ flavor_jap.2 = { #Rangaku
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1630.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -112,10 +112,10 @@ flavor_jap.3 = { #William Adams #PRISON
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1599.1.1
-		to = 1610.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -267,10 +267,10 @@ flavor_jap.6 = { #Kirishitan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1400.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -341,10 +341,10 @@ flavor_jap.7 = { #Buke Shohatto
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1610.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -430,10 +430,10 @@ flavor_jap.9 = { #Gokaidō
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -470,10 +470,10 @@ flavor_jap.10 = { #Kyōhō Reforms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1720.1.1
-		to = 1740.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -506,10 +506,10 @@ flavor_jap.11 = { #Genroku
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1688.1.1
-		to = 1704.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -546,10 +546,10 @@ flavor_jap.12 = { #Kokugaku
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1650.1.1
-		to = 1750.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -582,10 +582,10 @@ flavor_jap.13 = { #Kakitsu Treaty
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SOU
-		from = 1420.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -648,10 +648,10 @@ flavor_jap.101 = { # Proclamation of Takauji as Shogun
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1338.1.1
-		to = 1339.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -691,10 +691,10 @@ flavor_jap.102 = { # Appointment of Ko no Moronao as Shitsuji
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1348.1.1
-		to = 1360.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -752,10 +752,10 @@ flavor_jap.103 = { # Attempted Assination of Moronao by Tadayoshi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1348.8.1
-		to = 1360.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -835,10 +835,10 @@ flavor_jap.104 = { # Tadayoshi Defects to the South Court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1351.1.1
-		to = 1360.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -949,10 +949,10 @@ flavor_jap.106 = { # Yamana Shugo Sides with Southern Court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1353.1.1
-		to = 1370.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1022,10 +1022,10 @@ flavor_jap.107 = { # Submission of the Yamana and Ouchi clans
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1361.1.1
-		to = 1390.1.1
-		monthly_chance = 14
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1121,10 +1121,10 @@ flavor_jap.110 = { # Early Phase of Shugo integration into Bureaucracy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1360.1.1
-		to = 1390.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1174,10 +1174,10 @@ flavor_jap.111 = { # Kanrei Council System
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1362.1.1
-		to = 1399.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1217,10 +1217,10 @@ flavor_jap.112 = { # Inclusion of Powerful clans to the Kanrei Council
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1362.1.1
-		to = 1399.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1300,10 +1300,10 @@ flavor_jap.113 = { # The Shukurō Kaigi Expansion (Expansion of the Senior vassa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1363.1.1
-		to = 1399.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1375,10 +1375,10 @@ flavor_jap.114 = { # Samurai-Dokoro #Board of Retainers
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1369.1.1
-		to = 1405.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1471,10 +1471,10 @@ flavor_jap.115 = { # Kanrei Council Builds Kinship Among Shugo Lords
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1372.1.1
-		to = 1405.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1517,10 +1517,10 @@ flavor_jap.120 = { # Discontentment with Shiba Shugo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1365.1.1
-		to = 1405.1.1
-		monthly_chance = 16
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1589,10 +1589,10 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1365.1.1
-		to = 1405.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1762,10 +1762,10 @@ flavor_jap.122 = { # Hatakeyama or Hosokawa assumes Kanrei council
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1365.1.1
-		to = 1405.1.1
-		monthly_chance = 60 # A dynmamic aftermath event time wise
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1862,10 +1862,10 @@ flavor_jap.123 = { # Growth of Punitive Authority
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1365.1.1
-		to = 1405.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1906,10 +1906,10 @@ flavor_jap.130 = { # Legitimization of the Ashikaga Shogunate
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1372.1.1
-		to = 1405.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1988,10 +1988,10 @@ flavor_jap.131 = { # Half-Tax Decree
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1368.1.1
-		to = 1405.1.1
-		monthly_chance = 9
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2030,10 +2030,10 @@ flavor_jap.132 = { # Kyūshū Tandai
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1370.1.1
-		to = 1405.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2114,10 +2114,10 @@ flavor_jap.133 = { # Development of the Shogunal Army
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1375.1.1
-		to = 1410.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2164,10 +2164,10 @@ flavor_jap.134 = { # Shugo Compulsory Residence Within Kyoto
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1379.1.1
-		to = 1410.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2218,10 +2218,10 @@ flavor_jap.135 = { # Defiance of Toki
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1389.1.1
-		to = 1415.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2281,10 +2281,10 @@ flavor_jap.136 = { # Meitoku Uprising
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1391.1.1
-		to = 1410.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2340,10 +2340,10 @@ flavor_jap.137 = { # Taxing of the Sakaya-Doso
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1393.1.1
-		to = 1430.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2394,10 +2394,10 @@ flavor_jap.138 = { # Reestablishment with China
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1401.1.1
-		to = 1430.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2450,10 +2450,10 @@ flavor_jap.140 = { # Hana no Gosho Palace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1375.1.1
-		to = 1410.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2503,10 +2503,10 @@ flavor_jap.141 = { # Construction of Kinkaku-ji
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1395.1.1
-		to = 1420.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2554,10 +2554,10 @@ flavor_jap.142 = { # Jinnō Shōtōki # Chronicles of the Authentic Lineages of 
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1339.1.1
-		to = 1361.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2631,10 +2631,10 @@ flavor_jap.143 = { # Revival of the Ashikaga Gakko Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1432.1.1
-		to = 1470.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2669,10 +2669,10 @@ flavor_jap.144 = { # Francis Xavier
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1546.1.1
-		to = 1570.1.1 # Passed Xavier historical death, but made plausible
-		monthly_chance = 40
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2746,10 +2746,10 @@ flavor_jap.145 = { # Construction of Shōkoku-ji
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1382.1.1
-		to = 1420.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2818,10 +2818,10 @@ flavor_jap.146 = { # Josetsu
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1440.1.1
-		to = 1470.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2895,10 +2895,10 @@ flavor_jap.147 = { # Tensho Shubun
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1440.1.1
-		to = 1470.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2971,10 +2971,10 @@ flavor_jap.148 = { # Sesshu Toyo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1452.1.1
-		to = 1500.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3049,10 +3049,10 @@ flavor_jap.150 = { # Founding of Kano School
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1460.1.1
-		to = 1500.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 		illustration_tags = {
@@ -3120,10 +3120,10 @@ flavor_jap.151 = { # Favoring of Noh Theatre
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1388.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3163,10 +3163,10 @@ flavor_jap.152 = { # Development of Shoin-Zukuri Architecture
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1399.1.1
-		to = 1545.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3204,10 +3204,10 @@ flavor_jap.153 = { # The Way of Tea # Sen-no-Rikyu and Chanoyu
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1550.1.1
-		to = 1595.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3261,10 +3261,10 @@ flavor_jap.154 = { # Kyoto Shosidai
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1600.1.1
-		to = 1836.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3301,10 +3301,10 @@ flavor_jap.155 = { # Institutionalisation of the Hatamoto
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1610.1.1
-		to = 1836.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3351,10 +3351,10 @@ flavor_jap.156 = { # Construction of Dejima Island
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1570.1.1
-		to = 1836.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3422,10 +3422,10 @@ flavor_jap.160 = { # Establishment of Yoshiwara District
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1617.1.1
-		to = 1836.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3482,10 +3482,10 @@ flavor_jap.161 = { # Kinchu Narabini Kuge Shohatto # Laws for the Imperial Court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1615.1.1
-		to = 1836.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -3544,10 +3544,10 @@ flavor_jap.162 = { # Construction of Osaka Castle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1583.1.1
-		to = 1610.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -3662,10 +3662,10 @@ flavor_jap.170 = { # Kansei Reforms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
-		from = 1780.1.1
-		to = 1836.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

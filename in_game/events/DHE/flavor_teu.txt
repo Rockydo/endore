@@ -13,10 +13,10 @@ flavor_teu.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1450.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -129,10 +129,10 @@ flavor_teu.3 = {
 	historical_info = flavor_teu.3.historical_info
 
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1400.1.1
-		to = 1420.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -180,10 +180,10 @@ flavor_teu.4 = {
 	outcome = neutral
 	historical_info = flavor_teu.4.historical_info
 	dynamic_historical_event = {
-		tag = POL
-		from = 1337.1.1
-		to = 1525.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -449,10 +449,10 @@ flavor_teu.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1340.1.1
-		to = 1360.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -533,10 +533,10 @@ flavor_teu.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1410.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -633,10 +633,10 @@ flavor_teu.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1350.1.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -711,10 +711,10 @@ flavor_teu.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1360.1.1
-		to = 1660.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -813,10 +813,10 @@ flavor_teu.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1385.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -888,10 +888,10 @@ flavor_teu.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1370.1.1
-		to = 1385.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1030,10 +1030,10 @@ flavor_teu.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1132,11 +1132,10 @@ flavor_teu.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		tag = TEU
-		from = 1430.1.1
-		to = 1460.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1458,10 +1457,10 @@ flavor_teu.300 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
-		from = 1400.1.1
-		to = 1420.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

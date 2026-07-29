@@ -1761,4 +1761,3 @@ crown_new_ruler = {	#Crown a New Ruler
 		}
 	}
 }
-

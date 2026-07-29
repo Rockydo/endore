@@ -9,10 +9,10 @@ flavor_oma.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1430.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -56,10 +56,10 @@ flavor_oma.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -122,10 +122,10 @@ flavor_oma.3 = {
 	historical_info = flavor_oma.3.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -188,10 +188,10 @@ flavor_oma.4 = {
 	historical_info = flavor_oma.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1650.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -269,10 +269,10 @@ flavor_oma.5 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -335,10 +335,10 @@ flavor_oma.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -433,10 +433,10 @@ flavor_oma.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -488,10 +488,10 @@ flavor_oma.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -570,10 +570,10 @@ flavor_oma.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -629,10 +629,10 @@ flavor_oma.10 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -715,10 +715,10 @@ flavor_oma.11 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -788,10 +788,10 @@ flavor_oma.12 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -851,10 +851,10 @@ flavor_oma.13 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -944,10 +944,10 @@ flavor_oma.14 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1041,10 +1041,10 @@ flavor_oma.15 = { #It is debated as to how this happened. There are assumptions 
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1430.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1126,10 +1126,10 @@ flavor_oma.16 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1243,10 +1243,10 @@ flavor_oma.17 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1291,10 +1291,10 @@ flavor_oma.18 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
-		from = 1337.1.1
-		to = 1800.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

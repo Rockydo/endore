@@ -11,10 +11,10 @@ flavor_mal.1 = {
 	historical_info = flavor_mal.1_historical_info
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -59,10 +59,10 @@ flavor_mal.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -126,10 +126,10 @@ flavor_mal.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1400.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -180,10 +180,10 @@ flavor_mal.4 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1300.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -219,10 +219,10 @@ flavor_mal.5 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1450.1.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -264,10 +264,10 @@ flavor_mal.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1350.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -330,10 +330,10 @@ flavor_mal.7 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_firearms.dds"
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1350.1.1
-		to = 1500.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		capital.market = {
@@ -508,10 +508,10 @@ flavor_mal.11 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -584,10 +584,10 @@ flavor_mal.12 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1378.1.1
-		to = 1405.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -684,10 +684,10 @@ flavor_mal.13 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1340.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -746,10 +746,10 @@ flavor_mal.14 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -948,10 +948,10 @@ flavor_mal.18 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1375.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1115,10 +1115,10 @@ flavor_mal.19 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1360.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1182,10 +1182,10 @@ flavor_mal.20 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1360.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1250,10 +1250,10 @@ flavor_mal.21 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1360.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1359,10 +1359,10 @@ flavor_mal.22 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1360.4.1
-		to = 1821.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1429,10 +1429,10 @@ flavor_mal.23 = {
 	historical_info = flavor_mal.23.historical_info
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1350.4.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1476,10 +1476,10 @@ flavor_mal.24 = {
 	historical_info = flavor_mal.24.historical_info
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1337.4.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1608,10 +1608,10 @@ flavor_mal.26 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1380.4.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1657,10 +1657,10 @@ flavor_mal.27 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1400.4.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1708,10 +1708,10 @@ flavor_mal.28 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1500.4.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1760,10 +1760,10 @@ flavor_mal.29 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1400.4.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1822,10 +1822,10 @@ flavor_mal.30 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1380.4.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1878,10 +1878,10 @@ flavor_mal.31 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1440.4.1
-		to = 1600.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1960,10 +1960,10 @@ flavor_mal.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1337.4.1
-		to = 1821.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2048,10 +2048,10 @@ flavor_mal.33 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
-		from = 1337.4.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes

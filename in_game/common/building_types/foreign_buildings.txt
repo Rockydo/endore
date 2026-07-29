@@ -28,7 +28,7 @@ trade_office = {
 	}
 
 	allow = {
-		market = { in_trade_range_of = scope:actor }
+		market ?= { in_trade_range_of = scope:actor }
 	}
 
 
@@ -464,5 +464,3 @@ viceroyalty = {
 		subject_income_modifier = 0.1
 	}
 }
-
-

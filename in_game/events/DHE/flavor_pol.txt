@@ -10,10 +10,10 @@ flavor_pol.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1600.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -85,10 +85,10 @@ flavor_pol.2 = {#https://en.wikipedia.org/wiki/Sigismund%27s_Column
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1640.1.1
-		to = 1655.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -175,10 +175,10 @@ flavor_pol.3 = { #https://pl.wikipedia.org/wiki/Merkuriusz_Polski_Ordynaryjny
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1640.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -294,10 +294,10 @@ flavor_pol.4 = { #https://en.wikipedia.org/wiki/Vilnius_University
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
-		from = 1570.1.1
-		to = 1610.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -650,10 +650,10 @@ flavor_pol.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1490.1.1
-		to = 1515.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -715,10 +715,10 @@ flavor_pol.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1460.1.1
-		to = 1485.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -763,10 +763,10 @@ flavor_pol.10 = { #https://en.wikipedia.org/wiki/Sigismund_III_Vasa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1580.1.1
-		to = 1680.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1053,10 +1053,10 @@ flavor_pol.14 = {
 	historical_info = flavor_pol.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1560.1.1
-		to = 1575.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		has_unlocked_global_law_trigger = { type = society_of_jesus }
@@ -1174,10 +1174,10 @@ flavor_pol.15 = {
 	historical_info = flavor_pol.15.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1550.1.1
-		to = 1580.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		religion = religion:catholic
@@ -1247,10 +1247,10 @@ flavor_pol.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1310,10 +1310,10 @@ flavor_pol.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1690.1.1
-		to = 1710.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1436,10 +1436,10 @@ flavor_pol.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1400.1.1
-		to = 1700.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1480,10 +1480,10 @@ flavor_pol.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1680.1.1
-		to = 1695.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1531,10 +1531,10 @@ flavor_pol.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1692.1.1
-		to = 1712.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1579,10 +1579,10 @@ flavor_pol.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1765.1.1
-		to = 1780.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1652,10 +1652,10 @@ flavor_pol.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1785.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1803,10 +1803,10 @@ flavor_pol.25 = { #The University of Krakow
 	historical_info = flavor_pol.25.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1340.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -1858,10 +1858,10 @@ flavor_pol.26 = { #The City of [target_location.GetNameWithNoTooltip]
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1375.6.1
-		to = 1475.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -1923,10 +1923,10 @@ flavor_pol.27 = { #Expanding the Quarter Army
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1525
-		to = 1612.3.12
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		army_tradition >= 50
@@ -1974,10 +1974,10 @@ flavor_pol.28 = { #Collegium Maius & the Growth of Thought
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1400.6.1
-		to = 1460.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:krakow
@@ -2021,10 +2021,10 @@ flavor_pol.29 = { #The reforms of [target_character.GetNameWithNoTooltip]
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1345.6.1
-		to = 1390.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		ruler_or_regent ?= {
@@ -2104,10 +2104,10 @@ flavor_pol.30 = { #The Statutes of [target_character.GetNameWithNoTooltip] the G
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1345.6.1
-		to = 1390.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		ruler_or_regent ?= {
@@ -2433,10 +2433,10 @@ flavor_pol.35 = { #The Passing of [target_character2] / the Queen
 		10 = angry
 	}
 	dynamic_historical_event = {
-		tag = POL
-		from = 1337.6.1
-		to = 1342.6.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		has_regent = no
@@ -2483,10 +2483,10 @@ flavor_pol.36 = { #Esterka
 		10 = angry
 	}
 	dynamic_historical_event = {
-		tag = POL
-		from = 1345.6.1
-		to = 1365.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		ruler ?= character:pol_casimir_iii_piast
@@ -2586,10 +2586,10 @@ flavor_pol.37 = { #The Shooting Societies of Poland
 		10 = regular
 	}
 	dynamic_historical_event = {
-		tag = POL
-		from = 1350.6.1
-		to = 1370.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		is_during_bankruptcy = no
@@ -2780,10 +2780,10 @@ flavor_pol.40 = {
 	desc = flavor_pol.40.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
-		from = 1365.6.1
-		to = 1444.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 	trigger = {
@@ -2840,10 +2840,10 @@ flavor_pol.41 = {
 	desc = flavor_pol.41.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
-		from = 1385.6.1
-		to = 1450.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 	trigger = {
@@ -2905,10 +2905,10 @@ flavor_pol.42 = {
 	desc = flavor_pol.42.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
-		from = 1410.1.1
-		to = 1430.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 	trigger = {
@@ -2979,10 +2979,10 @@ flavor_pol.43 = {
 	outcome = neutral
 	historical_info = flavor_pol.43.historical_info
 	dynamic_historical_event = {
-		tag = POL
-		from = 1567.1.1
-		to = 1667.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3048,10 +3048,10 @@ flavor_pol.44 = {
 	outcome = neutral
 	historical_info = flavor_pol.44.historical_info
 	dynamic_historical_event = {
-		tag = POL
-		from = 1370.1.1
-		to = 1400.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3125,10 +3125,10 @@ flavor_pol.45 = {
 	historical_info = flavor_pol.45.historical_info
 
 	dynamic_historical_event = {
-		tag = POL
-		from = 1370.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3322,10 +3322,10 @@ flavor_pol.47 = {
 	historical_info = flavor_pol.47.historical_info
 
 	dynamic_historical_event = {
-		tag = POL
-		from = 1370.1.1
-		to = 1520.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3423,10 +3423,10 @@ flavor_pol.48 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_salt.dds"
 
 	dynamic_historical_event = {
-		tag = POL
-		from = 1360.1.1 #21.4.1368 - statutes of Żupy Krakowskie
-		to = 1375.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -3480,10 +3480,10 @@ flavor_pol.49 = {
 	outcome = neutral
 	historical_info = flavor_pol.49.historical_info
 	dynamic_historical_event = {
-		tag = POL
-		from = 1420.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3564,10 +3564,10 @@ flavor_pol.50 = {
 	outcome = neutral
 	historical_info = flavor_pol.50.historical_info
 	dynamic_historical_event = {
-		tag = POL
-		from = 1350.1.1
-		to = 1370.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3668,10 +3668,10 @@ flavor_pol.51 = {
 	outcome = neutral
 	historical_info = flavor_pol.51.historical_info
 	dynamic_historical_event = {
-		tag = POL
-		from = 1500.1.1
-		to = 1510.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3726,10 +3726,10 @@ flavor_pol.52 = {
 	desc = flavor_pol.52.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3779,10 +3779,10 @@ flavor_pol.54 = {
 	outcome = neutral
 	historical_info = flavor_pol.54.historical_info
 	dynamic_historical_event = {
-		tag = POL
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3866,10 +3866,10 @@ flavor_pol.55 = {
 	desc = flavor_pol.55.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
-		from = 1370.1.1
-		to = 1500.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4117,10 +4117,10 @@ flavor_pol.57 = {
 	historical_info = flavor_pol.57.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1477.1.1
-		to = 1496.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4191,10 +4191,10 @@ flavor_pol.58 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1510.1.1
-		to = 1530.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4278,10 +4278,10 @@ flavor_pol.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1600.1.1
-		to = 1636.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4414,10 +4414,10 @@ flavor_pol.1100 = {#https://en.wikipedia.org/wiki/Jan_Zamoyski
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1560.1.1
-		to = 1580.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4469,10 +4469,10 @@ flavor_pol.1101 = {#https://en.wikipedia.org/wiki/Zamoyski_Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1590.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4546,10 +4546,10 @@ flavor_pol.1102 = {#https://en.wikipedia.org/wiki/Zamoyski_Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1570.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4792,10 +4792,10 @@ flavor_pol.1300 = {#https://en.wikipedia.org/wiki/Jan_Kochanowski
 	historical_info = flavor_pol.1300.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1559.1.1 #when Kochanowski returned to Poland
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4868,10 +4868,10 @@ flavor_pol.1301 = {#https://en.wikipedia.org/wiki/Jan_Kochanowski
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1578.1.1 #when Kochanowski returned to Poland
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4920,10 +4920,10 @@ flavor_pol.1400 = {#https://en.wikipedia.org/wiki/Jan_D%C5%82ugosz
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1435.1.1
-		to = 1480.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4984,10 +4984,10 @@ flavor_pol.1401 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1475.1.1 #when Kochanowski returned to Poland
-		to = 1485.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5036,10 +5036,10 @@ flavor_pol.1500 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1540.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5101,10 +5101,10 @@ flavor_pol.1501 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		from = 1540.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5203,10 +5203,10 @@ flavor_pol.1600 = {
 	desc = flavor_pol.1600.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -5365,10 +5365,10 @@ flavor_pol.1602 = {
 	}
 
 	dynamic_historical_event = {
-		tag = POL
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes

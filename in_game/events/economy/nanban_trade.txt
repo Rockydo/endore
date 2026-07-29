@@ -585,4 +585,3 @@ nanban_trade.12 = { #A Military Revolution
 		}
 	}
 }
-

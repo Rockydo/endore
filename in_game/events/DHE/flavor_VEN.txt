@@ -7,10 +7,10 @@ flavor_ven.1 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		government_type = government_type:republic
@@ -54,10 +54,10 @@ flavor_ven.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1300.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -105,10 +105,10 @@ flavor_ven.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -154,10 +154,10 @@ flavor_ven.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1475.1.1
-		to = 1501.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	option = {
@@ -177,10 +177,10 @@ flavor_ven.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -220,10 +220,10 @@ flavor_ven.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -261,10 +261,10 @@ flavor_ven.7 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1530.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:vicenza
@@ -299,10 +299,10 @@ flavor_ven.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1550.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -341,10 +341,10 @@ flavor_ven.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1545.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -385,10 +385,10 @@ flavor_ven.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1585.1.1
-		to = 1595.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -422,10 +422,10 @@ flavor_ven.11 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1600.1.1
-		to = 1620.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		location:venice = {
@@ -483,10 +483,10 @@ flavor_ven.12 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1610.1.1
-		to = 1640.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	immediate = {
 		if = {
@@ -531,10 +531,10 @@ flavor_ven.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1498.1.1
-		to = 1515.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -592,10 +592,10 @@ flavor_ven.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1350.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_glass.dds"
@@ -633,10 +633,10 @@ flavor_ven.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1730.1.1
-		to = 1770.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -702,10 +702,10 @@ flavor_ven.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1570.1.1
-		to = 1590.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/legalism.dds"
@@ -771,10 +771,10 @@ flavor_ven.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1550.1.1
-		to = 1580.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -809,10 +809,10 @@ flavor_ven.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1550.1.1
-		to = 1610.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -937,10 +937,10 @@ flavor_ven.20 = { #Domini di Terraferma
 	historical_info = flavor_ven.20.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -996,10 +996,10 @@ flavor_ven.21 = { #Teatro San Cassiano
 	historical_info = flavor_ven.21.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1637.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1105,10 +1105,10 @@ flavor_ven.24 = { #The Flooding of Venice
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1190,10 +1190,10 @@ flavor_ven.25 = { #Fall of Constantinople
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1343.1.1
-		to = 1836.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1283,10 +1283,10 @@ flavor_ven.26 = { #Liberation of Jerusalem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1343.1.1
-		to = 1836.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1364,10 +1364,10 @@ flavor_ven.27 = { #Expanding the Doge's Palace
 	historical_info = flavor_ven.27.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1413,10 +1413,10 @@ flavor_ven.28 = { #The Venetian Arsenal
 	historical_info = flavor_ven.28.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/units/navy_heavy_ship_3.dds"
@@ -1443,10 +1443,10 @@ flavor_ven.29 = { #Basilica dei Santi Giovanni e Paolo
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1430.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1489,10 +1489,10 @@ flavor_ven.30 = { #Mediterranean Naval Superpower
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1437.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/units/navy_heavy_ship_3.dds"
@@ -1567,10 +1567,10 @@ flavor_ven.31 = { # Tiziano Vecelli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1520.1.1
-		to = 1540.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -1621,10 +1621,10 @@ flavor_ven.32 = { # Venice During the Renaissance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1350.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -1664,10 +1664,10 @@ flavor_ven.33 = { # The Venetian Carnival
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1714,10 +1714,10 @@ flavor_ven.34 = { # Revising the Promissione Ducale
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1766,10 +1766,10 @@ flavor_ven.35 = { # The Question of Relazioni
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1834,10 +1834,10 @@ flavor_ven.36 = { # The Golden Republic
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1888,10 +1888,10 @@ flavor_ven.38 = { #The Loredanian Academy
 	historical_info = flavor_ven.38.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1940,10 +1940,10 @@ flavor_ven.39 = { #Venetian School of Music
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1537.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1988,10 +1988,10 @@ flavor_ven.40 = { #Fall of Genoa
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2033,10 +2033,10 @@ flavor_ven.41 = { #Devotion of Verona to Venice
 	historical_info = flavor_ven.41.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2078,10 +2078,10 @@ flavor_ven.43 = { #Lorenzo Marcello
 	historical_info = flavor_ven.43.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1640.1.1
-		to = 1660.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2139,10 +2139,10 @@ flavor_ven.44 = { #Adrian Willaert
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1530.1.1
-		to = 1562.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2191,10 +2191,10 @@ flavor_ven.45 = { #Giuseppe Zarlino
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1540.1.1
-		to = 1570.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2243,10 +2243,10 @@ flavor_ven.46 = { #Baldassare Donato
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1555.1.1
-		to = 1570.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2298,10 +2298,10 @@ flavor_ven.47 = { #Claudio Merulo
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1560.1.1
-		to = 1580.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2350,10 +2350,10 @@ flavor_ven.48 = { #Giovanni Gabrieli
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1575.1.1
-		to = 1590.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2404,10 +2404,10 @@ flavor_ven.49 = { #Revolt of Saint Titus
 	historical_info = flavor_ven.49.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1360.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2471,10 +2471,10 @@ flavor_ven.50 = { #Rebellion of the Callergis
 	historical_info = flavor_ven.50.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1360.1.1
-		to = 1400.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2553,10 +2553,10 @@ flavor_ven.51 = { #Piazza San Marco
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1360.1.1
-		to = 1420.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_ven.51.historical_info
@@ -2604,10 +2604,10 @@ flavor_ven.52 = { #St Marks Clocktower
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_ven.52.historical_info
@@ -2653,10 +2653,10 @@ flavor_ven.53 = { # The Venetian Salt Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1350.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2693,10 +2693,10 @@ flavor_ven.54 = { #Jacopo Robusti
 
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1550.1.1
-		to = 1570.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2741,10 +2741,10 @@ flavor_ven.55 = { #Tintoretto's Crucifixion
 	historical_info = flavor_ven.55.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1565.1.1
-		to = 1590.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2790,10 +2790,10 @@ flavor_ven.56 = { #Jacopo Sansovino
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1520.1.1
-		to = 1540.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2854,10 +2854,10 @@ flavor_ven.57 = { #Designing the Zecca of Venice
 	historical_info = flavor_ven.57.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1550.1.1
-		to = 1570.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -2896,10 +2896,10 @@ flavor_ven.58 = { #The Patriarchate of Venice
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2952,10 +2952,10 @@ flavor_ven.59 = { #The Doge's Power Grab
 	historical_info = flavor_ven.59.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1837.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3030,10 +3030,10 @@ flavor_ven.60 = { #Fortifying Ragusa
 	historical_info = flavor_ven.60.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3080,10 +3080,10 @@ flavor_ven.61 = { #Bartolomeo Platina
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1450.1.1
-		to = 1470.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3150,10 +3150,10 @@ flavor_ven.62 = { #The Marriage of the Sea
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3201,10 +3201,10 @@ flavor_ven.63 = { #Renovating the Bucentaur
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3256,10 +3256,10 @@ flavor_ven.64 = { #Voyage of the Zeno Brothers
 	historical_info = flavor_ven.64.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/situation/treaty_of_tordesillas.dds"
@@ -3316,10 +3316,10 @@ flavor_ven.65 = { #Castello a Mare
 	historical_info = flavor_ven.65.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3371,10 +3371,10 @@ flavor_ven.66 = { #Pietro Loredan
 	historical_info = flavor_ven.66.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1400.1.1
-		to = 1438.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3441,10 +3441,10 @@ flavor_ven.67 = { #Bartolomeo Bono
 	historical_info = flavor_ven.67.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1430.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3503,10 +3503,10 @@ flavor_ven.68 = { #Antonio Vivaldi
 	historical_info = flavor_ven.68.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1715.1.1
-		to = 1740.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -3550,10 +3550,10 @@ flavor_ven.69 = { #War of Padua
 	historical_info = flavor_ven.69.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1450.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3597,10 +3597,10 @@ flavor_ven.70 = { #Benedetto Marcello
 	historical_info = flavor_ven.70.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1715.1.1
-		to = 1730.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3660,10 +3660,10 @@ flavor_ven.71 = { #The Question of Concio
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1370.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_ven.71.historical_info
@@ -3715,10 +3715,10 @@ flavor_ven.72 = { #Magistrato alla Sanità
 	historical_info = flavor_ven.72.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
@@ -3757,10 +3757,10 @@ flavor_ven.73 = { # The Banco del Giro
 
 	major = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1610.1.1
-		to = 1660.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3896,10 +3896,10 @@ flavor_ven.74 = { #Venetian Holy Inquisition
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1542.1.1
-		to = 1650.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3948,10 +3948,10 @@ flavor_ven.75 = { #Supporting the Muda Convoys
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1533.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3986,10 +3986,10 @@ flavor_ven.76 = { # Alessandro Leopardi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1485.1.1
-		to = 1510.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -4041,10 +4041,10 @@ flavor_ven.77 = { #Expanding Domini di Terraferma
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4086,10 +4086,10 @@ flavor_ven.78 = { # Paolo Sarpi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1580.1.1
-		to = 1610.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4151,10 +4151,10 @@ flavor_ven.79 = { #A Foothold in Cyprus
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4218,10 +4218,10 @@ flavor_ven.80 = { #Divine Intervention
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4264,10 +4264,10 @@ flavor_ven.81 = { #Francesco Foscari & Ca' Foscari
 	historical_info = flavor_ven.81.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1420.1.1
-		to = 1453.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4336,10 +4336,10 @@ flavor_ven.82 = { #The Venetian Statutes
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1360.1.1
-		to = 1390.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4398,10 +4398,10 @@ flavor_ven.83 = { #Fra Mauro and the Map of the World
 	historical_info = flavor_ven.83.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1440.1.1
-		to = 1460.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4464,10 +4464,10 @@ flavor_ven.84 = { #A Foscari Doge of Venice
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1450.1.1
-		to = 1836.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4530,10 +4530,10 @@ flavor_ven.85 = { #The Diarii
 	historical_info = flavor_ven.85.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1530.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -4595,10 +4595,10 @@ flavor_ven.86 = { #Greek Printing of Venice
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4670,10 +4670,10 @@ flavor_ven.87 = { #A Scholar Against All Odds
 	historical_info = flavor_ven.87.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1675.1.1
-		to = 1690.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4737,10 +4737,10 @@ flavor_ven.88 = { #The Musical Bridge
 	historical_info = flavor_ven.88.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1600.1.1
-		to = 1620.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4826,10 +4826,10 @@ flavor_ven.89 = { #Castelli's Experiments
 	historical_info = flavor_ven.89.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1610.1.1
-		to = 1640.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4900,10 +4900,10 @@ flavor_ven.90 = { #Nicolò Minato
 	historical_info = flavor_ven.90.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1650.1.1
-		to = 1670.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4977,10 +4977,10 @@ flavor_ven.91 = { #Expanding the Venetian Ghetto
 	historical_info = flavor_ven.91.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1570.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5060,10 +5060,10 @@ flavor_ven.92 = { #The Botanical Garden of Padua
 	historical_info = flavor_ven.92.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1545.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5111,10 +5111,10 @@ flavor_ven.93 = { #The Reforms of Lazzaretto Vecchio
 	historical_info = flavor_ven.93.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5167,10 +5167,10 @@ flavor_ven.94 = { #The Coffeehouse Controversy
 	historical_info = flavor_ven.94.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1750.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_cocoa.dds"
@@ -5234,10 +5234,10 @@ flavor_ven.95 = { #An Expedition to Dalmatia
 	historical_info = flavor_ven.95.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1770.1.1
-		to = 1790.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5317,10 +5317,10 @@ flavor_ven.96 = { #The Exhibition of Rosalba Carriera
 	historical_info = flavor_ven.96.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1700.1.1
-		to = 1720.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5381,10 +5381,10 @@ flavor_ven.97 = { #The Suppression of the Ridotto
 	historical_info = flavor_ven.97.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1700.1.1
-		to = 1720.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -5485,10 +5485,10 @@ flavor_ven.98 = { #The Astrarium
 	historical_info = flavor_ven.98.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1350.1.1
-		to = 1370.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5566,10 +5566,10 @@ flavor_ven.99 = { #The Cipher Secretary
 	historical_info = flavor_ven.99.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5620,10 +5620,10 @@ flavor_ven.100 = { #The Inventions of Tito Livio Burattini
 	historical_info = flavor_ven.98.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1645.1.1
-		to = 1670.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5683,10 +5683,10 @@ flavor_ven.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5757,4 +5757,3 @@ flavor_ven.1001 = {
 		}
 	}
 }
-

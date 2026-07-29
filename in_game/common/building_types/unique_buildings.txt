@@ -27,7 +27,7 @@ pounamou_carver = {
 	}
 
 	allow = {
-		market = { is_produced_in_market = goods:gems }
+		market ?= { is_produced_in_market = goods:gems }
 	}
 
 	unique_production_methods = {

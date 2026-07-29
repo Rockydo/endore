@@ -11,10 +11,10 @@ flavor_kbo.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1430.1.1
-		to = 1550.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -65,10 +65,10 @@ flavor_kbo.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1450.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -105,10 +105,10 @@ flavor_kbo.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1565.1.1
-		to = 1610.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -168,10 +168,10 @@ flavor_kbo.7 = { #Thorns of a Royal Crown
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1337.1.1
-		to = 1339.12.30
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -310,10 +310,10 @@ flavor_kbo.9 = { #Trade Through the Sahel
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1350.1.1
-		to = 1420.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -361,10 +361,10 @@ flavor_kbo.10 = { #Legalism and Islam in [ROOT.GetCountry.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1337.1.1
-		to = 1400.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -423,10 +423,10 @@ flavor_kbo.11 = { #Relocation of the Zaghawa
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1337.1.1
-		to = 1450.12.30
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -578,10 +578,10 @@ flavor_kbo.13 = { #Reconquest of Kanem
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1500.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -619,10 +619,10 @@ flavor_kbo.14 = { #Lake Chad and the Kanembu Trade
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1337.1.1
-		to = 1340.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -685,10 +685,10 @@ flavor_kbo.15 = { #The Slave Trade in [ROOT.GetCountry.GetNameWithNoTooltip]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1437.1.1
-		to = 1537.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -741,10 +741,10 @@ flavor_kbo.16 = { #Azalai
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1375.1.1
-		to = 1450.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -797,10 +797,10 @@ flavor_kbo.17 = { #$sharia$ in [ROOT.GetCountry.GetNameWithNoTooltip]
 
 
 	dynamic_historical_event = {
-		tag = KBO
-		from = 1444.1.1
-		to = 1500.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	fire_only_once = yes
 
@@ -852,7 +852,3 @@ flavor_kbo.17 = { #$sharia$ in [ROOT.GetCountry.GetNameWithNoTooltip]
 		}
 	}
 }
-
-
-
-

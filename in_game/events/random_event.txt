@@ -5661,4 +5661,3 @@ random_event.112 = { #Poor Copper
 		add_government_power = government_power_weak_bonus
 	}
 }
-

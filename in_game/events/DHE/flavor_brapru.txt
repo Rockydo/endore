@@ -10,10 +10,10 @@ flavor_brapru.1 = { #The End of the Twin-Towns of Berlin and Kölln
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1685.1.1
-		to = 1735.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -112,10 +112,10 @@ flavor_brapru.3 = { #Brandenburgian East-African Company
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1680.1.1
-		to = 1685.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -159,10 +159,10 @@ flavor_brapru.4 = { #Immanuel Kant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1760.1.1
-		to = 1775.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -216,10 +216,10 @@ flavor_brapru.5 = { #The Soldier-King of Prussia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1700.1.1
-		to = 1740.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -258,10 +258,10 @@ flavor_brapru.6 = { #The Canton System First Chance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1737.1.1
-		to = 1750.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -304,10 +304,10 @@ flavor_brapru.7 = { #The Canton System Second Chance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1750.1.2
-		to = 1780.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -496,10 +496,10 @@ flavor_brapru.9 = { #The Capital moves to Berlin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1390.1.1
-		to = 1440.1.1
-		monthly_chance = 6
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -540,10 +540,10 @@ flavor_brapru.10 = { #Hallescher Pietism and Prussian virtues
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1637.1.1
-		to = 1780.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -583,10 +583,10 @@ flavor_brapru.11 = { #University of Königsberg
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1540.1.1
-		to = 1560.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -645,10 +645,10 @@ flavor_brapru.12 = { #Erasmus Reinhold and his Prutenic Tables
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1535.1.1
-		to = 1560.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -705,10 +705,10 @@ flavor_brapru.13 = { #Edict of Potsdam
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1650.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -837,10 +837,10 @@ flavor_brapru.14 = { #Königsberg Burghers rebell against us
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1640.1.1
-		to = 1720.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -917,10 +917,10 @@ flavor_brapru.15 = { # Johann Crüger and Praxis Pietatis Melica
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1622.1.1
-		to = 1660.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -973,10 +973,10 @@ flavor_brapru.16 = { #Moses Mendelssohn Phaedon
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1750.1.1
-		to = 1780.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1033,10 +1033,10 @@ flavor_brapru.17 = { #Johannes Agricola
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1530.1.1
-		to = 1566.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1099,10 +1099,10 @@ flavor_brapru.18 = { #Frankfurt Oder emerging University
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1480.1.1
-		to = 1540.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -1161,10 +1161,10 @@ flavor_brapru.19 = { #Knüppelkrieg between Spandau and Berlin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1550.1.1
-		to = 1580.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1219,10 +1219,10 @@ flavor_brapru.20 = { #Johann Gottlieb Fichte
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1795.1.1
-		to = 1814.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1290,10 +1290,10 @@ flavor_brapru.21 = { #Friedrich Nicolai and the Joys of Young Werther
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1770.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1363,10 +1363,10 @@ flavor_brapru.22 = { #Wilhelm von Humbolt - University of Berlin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1805.1.1
-		to = 1835.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1433,10 +1433,10 @@ flavor_brapru.23 = { #Gotthold Ephraim Lessing
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1748.1.1
-		to = 1780.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1498,10 +1498,10 @@ flavor_brapru.24 = { #Order of The Swan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1420.1.1 #1440 in our timeline
-		to = 1460.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1599,10 +1599,10 @@ flavor_brapru.26 = { #Order of the Black Eagle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1690.1.1 #1701 in our timeline
-		to = 1710.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1654,10 +1654,10 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1600.1.1 #1740 in our timeline
-		to = 1760.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1802,10 +1802,10 @@ flavor_brapru.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1450.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1909,10 +1909,10 @@ flavor_brapru.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1337.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2088,10 +2088,10 @@ flavor_brapru.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1575.1.1 #1662 but in reality it is better to have it earlier in game
-		to = 1675.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -2221,10 +2221,10 @@ flavor_brapru.33 = { #The Potato King
 	}
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2298,10 +2298,10 @@ flavor_brapru.34 = { #Peuplierung System
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_brapru.34.historical_info
@@ -2353,10 +2353,10 @@ flavor_brapru.35 = { #Monarch's Last Will
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2436,10 +2436,10 @@ flavor_brapru.36 = { #Charité
 	historical_info = flavor_brapru.36.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1710.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2478,10 +2478,10 @@ flavor_brapru.37 = { #Alexander von Humboldt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1805.1.1
-		to = 1835.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2540,10 +2540,10 @@ flavor_brapru.38 = { #Humboldt's Cosmos
 	historical_info = flavor_brapru.38.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1820.1.1
-		to = 1836.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2592,10 +2592,10 @@ flavor_brapru.39 = { #Georg Wilhelm Friedrich Hegel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1805.1.1
-		to = 1830.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2651,10 +2651,10 @@ flavor_brapru.40 = { #Anna Dorothea Therbusch
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1750.1.1
-		to = 1765.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2711,10 +2711,10 @@ flavor_brapru.41 = { #Christian Wolff
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1710.1.1
-		to = 1725.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2777,10 +2777,10 @@ flavor_brapru.42 = { #Kurt von Schwerin
 	historical_info = flavor_brapru.42.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1710.1.1
-		to = 1730.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2846,10 +2846,10 @@ flavor_brapru.43 = { #Andreas Schlüter
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1685.1.1
-		to = 1700.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2907,10 +2907,10 @@ flavor_brapru.1000 = { #Inheritance of Duchy of Prussia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1500.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2999,10 +2999,10 @@ flavor_brapru.1100 = { #Construction of Berlin Palace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1440.1.1
-		to = 1480.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3131,10 +3131,10 @@ flavor_brapru.1200 = { #Samuel von Cocceji and the Legal Reforms of Prussia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1720.1.1
-		to = 1740.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3243,10 +3243,10 @@ flavor_brapru.1300 = { #Carl von Clausewitz
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PRU
-		from = 1800.1.1
-		to = 1816.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3336,10 +3336,10 @@ flavor_brapru.1400 = { #Construction of Sanssouci
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1730.1.1
-		to = 1750.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3407,10 +3407,10 @@ flavor_brapru.1401 = { #Sanssouci finished and Potsdam
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1750.1.1
-		to = 1837.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3454,10 +3454,10 @@ flavor_brapru.1500 = { #Oder-Spree Friedrich Wilhelm Canal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3565,10 +3565,10 @@ flavor_brapru.1600 = { #The Kreditwerk takes charges of the finances
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1530.1.1
-		to = 1580.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3607,10 +3607,10 @@ flavor_brapru.1601 = { #Bankruptcy of the Kreditwerk
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1610.1.1
-		to = 1640.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3701,10 +3701,10 @@ flavor_brapru.1800 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = PRU
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3863,10 +3863,10 @@ flavor_brapru.1802 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = PRU
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4088,10 +4088,10 @@ flavor_brapru.1807 = {
 	}
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4340,11 +4340,10 @@ flavor_brapru.1811 = {
 	historical_info = flavor_brapru.1811.historical_info
 
 	dynamic_historical_event = {
-		tag = PRU
-		tag = TEU
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -4395,10 +4394,10 @@ flavor_brapru.2000  = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1338.1.1
-		to = 1800.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4470,10 +4469,10 @@ flavor_brapru.2001  = {
 	historical_info = flavor_brapru.2001.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
-		from = 1338.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

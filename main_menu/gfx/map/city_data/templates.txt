@@ -2125,4 +2125,3 @@ template player_buildings {
 		load_template small_city_walls_under_construction {}
 	]]
 }
-

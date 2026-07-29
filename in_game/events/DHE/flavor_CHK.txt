@@ -9,10 +9,10 @@ flavor_chk.1 = { # The Sunset of Cahokia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1356.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -70,10 +70,10 @@ flavor_chk.2 = { # Rebuilding of the Woodhenge
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1339.1.1
-		to = 1437.1.1
-		monthly_chance = 18
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -122,10 +122,10 @@ flavor_chk.3 = { # Expansion of the Woodhenge
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1340.1.1
-		to = 1437.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -178,10 +178,10 @@ flavor_chk.4 = { # Flooding in the Cahokian Woodlands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -223,10 +223,10 @@ flavor_chk.5 = { # Fortifying Against Woodlands Floods
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -293,10 +293,10 @@ flavor_chk.6 = { # Revitalization of the Cahokian Elite
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -337,10 +337,10 @@ flavor_chk.7 = { # Worsening Food Conditions of Cahokia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -398,10 +398,10 @@ flavor_chk.8 = { # Pollution of the Waterways
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -450,10 +450,10 @@ flavor_chk.9 = { # Cahokian reliance on Maize
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -502,10 +502,10 @@ flavor_chk.10 = { # Resurrection of Nixtamalized Maize
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 16
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -557,10 +557,10 @@ flavor_chk.11 = { # Renewed Rejection of Nixtamalized Maize
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -624,10 +624,10 @@ flavor_chk.12 = { # Veneration of [our_ruler.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -684,10 +684,10 @@ flavor_chk.20 = { # Repopulation of Outer Cahokia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -747,10 +747,10 @@ flavor_chk.21 = { # Rebuilding the Outer City
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -801,10 +801,10 @@ flavor_chk.22 = { # A Center of Varying Cultures
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -885,10 +885,10 @@ flavor_chk.23 = { # Reemergence of Cahokian Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -936,10 +936,10 @@ flavor_chk.24 = { # A New Cahokian Golden age
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1363.1.1
-		to = 1437.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1026,10 +1026,10 @@ flavor_chk.30 = { # Fortifying the Cahokian Center
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1101,10 +1101,10 @@ flavor_chk.31 = { # Selective Construction
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1291,10 +1291,10 @@ flavor_chk.33 = { # Decline of Trading Glory
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1341,10 +1341,10 @@ flavor_chk.34 = { # Lost of shared cultural ties
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1397,10 +1397,10 @@ flavor_chk.35 = { # Shadow Over Cahokia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHK
-		from = 1370.1.1
-		to = 1437.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

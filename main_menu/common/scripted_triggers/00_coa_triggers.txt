@@ -346,10 +346,10 @@ coa_def_teutonic_order_trigger = {
 # Government Types
 
 coa_monarchy_trigger = {
-	government_type = government_type:monarchy
+	always = no
 }
 coa_republic_trigger = {
-	government_type = government_type:republic
+	always = no
 }
 coa_revolutionary_republic_trigger = {
 	scope:actor ?= {
@@ -357,7 +357,7 @@ coa_revolutionary_republic_trigger = {
 	}
 }
 coa_theocracy_trigger = {
-	government_type = government_type:theocracy
+	always = no
 }
 
 coa_def_monarchy_trigger = {
@@ -375,7 +375,7 @@ coa_def_revolutionary_republic_trigger = {
 
 coa_def_absolute_monarchy_trigger = {
 	scope:actor ?= {
-		government_type = government_type:monarchy
+		always = no
 		OR = {
 			has_reform = government_reform:french_centralized_monarchy
 			has_reform = government_reform:centralization_of_power_act

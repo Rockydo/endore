@@ -11,10 +11,10 @@ flavor_geo.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1337.1.1
-		to = 1350.6.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -115,10 +115,10 @@ flavor_geo.2 = { #Trade with the West
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1337.1.1
-		to = 1370.3.14
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -259,10 +259,10 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 	historical_info = flavor_geo.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1337.1.1
-		to = 1363.3.14
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -482,10 +482,10 @@ flavor_geo.7 = { #Campaign Against the [target_country2.GetLongNameWithNoTooltip
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1337.1.1
-		to = 1364.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -545,10 +545,10 @@ flavor_geo.8 = { #Letters for [target_character2.GetLongName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1340.1.1
-		to = 1375.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -720,10 +720,10 @@ flavor_geo.11 = { #A Powerful Neighbor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1340.1.1
-		to = 1390.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -863,10 +863,10 @@ flavor_geo.13 = { #Order Across [ShowProvinceDefinitionNameWithNoTooltip('kutais
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1345.1.1
-		to = 1380.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -934,10 +934,10 @@ flavor_geo.14 = { #The Mint of Elegir
 	historical_info = flavor_geo.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1337.1.1
-		to = 1385.3.14
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1019,10 +1019,10 @@ flavor_geo.15 = { #The Walls of [target_location.GetNameWithNoTooltip]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1351.1.1
-		to = 1380.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1073,10 +1073,10 @@ flavor_geo.16 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Presence in 
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1340.1.1
-		to = 1375.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1243,10 +1243,10 @@ flavor_geo.19 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Spreads
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1365.1.1
-		to = 1390.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1561,10 +1561,10 @@ flavor_geo.22 = { #Restoration of the [ROOT.GetCountry.GetGovernment.GetEstateNa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1370.1.1
-		to = 1400.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1674,10 +1674,10 @@ flavor_geo.23 = { #Solar Eclipse of [GetCurrentYear]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1357.1.1
-		to = 1358.6.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	major = yes
 	major_trigger = {
@@ -1725,10 +1725,10 @@ flavor_geo.24 = { #The Demands of [target_character2.GetShortNameWithNoTooltip]
 	historical_info = flavor_geo.24.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1337.1.1
-		to = 1444.6.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1910,10 +1910,10 @@ flavor_geo.26 = { #[ROOT.GetCountry.GetNameWithNoTooltip]'s Religion Identity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1350.1.1
-		to = 1450.6.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1965,10 +1965,10 @@ flavor_geo.27 = { #Giorgi Saakadze
 	historical_info = flavor_geo.27.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1590.1.1
-		to = 1629.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2032,10 +2032,10 @@ flavor_geo.28 = { #Sulkhan-Saba Orbeliani
 	historical_info = flavor_geo.28.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
-		from = 1678.1.1
-		to = 1710.3.14
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

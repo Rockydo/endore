@@ -10,10 +10,10 @@ flavor_sco.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1440.1.1
-		to = 1460.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -82,10 +82,10 @@ flavor_sco.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1339.1.1
-		to = 1366.1.1
-		monthly_chance = 40
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/government/diplomacy_illustration.dds"
@@ -148,10 +148,10 @@ flavor_sco.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1529.1.1
-		to = 1556.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -222,10 +222,10 @@ flavor_sco.4 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1545.1.1
-		to = 1570.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -316,10 +316,10 @@ flavor_sco.5 = { # The First Congregation
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1557.1.1
-		to = 1584.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -366,10 +366,10 @@ flavor_sco.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1650.1.1
-		to = 1776.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -418,10 +418,10 @@ flavor_sco.7 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1725.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -481,10 +481,10 @@ flavor_sco.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1700.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -532,10 +532,10 @@ flavor_sco.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1570.1.1
-		to = 1625.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
@@ -566,10 +566,10 @@ flavor_sco.10 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1570.1.1
-		to = 1625.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -612,10 +612,10 @@ flavor_sco.11 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1300.1.1
-		to = 2000.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -668,10 +668,10 @@ flavor_sco.12 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1340.3.5
-		to = 1344.1.1
-		monthly_chance = 80
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -851,10 +851,10 @@ flavor_sco.14 = { # raising David II
 	}
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1337.1.1
-		to = 1342.3.5
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1005,10 +1005,10 @@ flavor_sco.16 = { # Mons Meg bombard
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_cannons.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1400.1.1
-		to = 1500.3.5
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1116,10 +1116,10 @@ flavor_sco.17 = { # Robert Burns
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1770.1.1
-		to = 1800.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1276,10 +1276,10 @@ flavor_sco.18 = { # Wolf of Badenoch
 	}
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1350.1.1
-		to = 1450.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1355,10 +1355,10 @@ flavor_sco.19 = { # John Fordun - Chronica Gentis Scotorum
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_paper.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1360.1.1
-		to = 1386.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1416,10 +1416,10 @@ flavor_sco.20 = { # Wild Haggis
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_fur.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1700.1.1
-		to = 1800.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -1460,10 +1460,10 @@ flavor_sco.100 = { # Aftermath of Halidon Hill
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1337.1.1
-		to = 1345.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1528,10 +1528,10 @@ flavor_sco.101 = { # The Balliol Claim
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SBL
-		from = 1337.1.1
-		to = 1345.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1583,10 +1583,10 @@ flavor_sco.102 = { # Resurgence Against the Rebels
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1337.1.1
-		to = 1356.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1639,10 +1639,10 @@ flavor_sco.103 = { # Honoring the Auld Alliance
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1347.1.1
-		to = 1376.1.1
-		monthly_chance = 33
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1737,10 +1737,10 @@ flavor_sco.104 = { # A Free and Independent Kingdom
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1353.1.1
-		to = 1370.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1793,10 +1793,10 @@ flavor_sco.105 = { # Rise of the Stewarts (Stuart)
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1360.1.1
-		to = 1390.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1866,10 +1866,10 @@ flavor_sco.106 = { # Ascension of the Stewarts
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1362.1.1
-		to = 1399.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1932,10 +1932,10 @@ flavor_sco.107 = { # Scottish Clans Rebuke Stewart Rule
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1371.1.1
-		to = 1391.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1986,10 +1986,10 @@ flavor_sco.108 = { # Consolidation of Clan Holdings
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1371.1.1
-		to = 1391.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2041,10 +2041,10 @@ flavor_sco.109 = { # The Brus Work of Art
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1371.1.1
-		to = 1381.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2138,10 +2138,10 @@ flavor_sco.110 = { # Flourishing Reign of Robert III (Strong Wool and Cloth prod
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_cloth.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1371.1.1
-		to = 1391.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2190,10 +2190,10 @@ flavor_sco.111 = { # English Border Enclaves
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1390.1.1
-		to = 1407.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2291,10 +2291,10 @@ flavor_sco.112 = { # Introduction of Modern Artillery
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1425.1.1
-		to = 1453.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2345,10 +2345,10 @@ flavor_sco.200 = { # Asserting Authority over the Clergy
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1407.1.1
-		to = 1436.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2428,10 +2428,10 @@ flavor_sco.201 = { # Pope Requests Reconciliation With <Ruler>
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1416.1.1
-		to = 1436.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2490,10 +2490,10 @@ flavor_sco.202 = { # Expedition into the Highlands
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1415.1.1
-		to = 1435.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2544,10 +2544,10 @@ flavor_sco.203 = { # Renewal of the Auld Alliance
 	historical_info = flavor_sco.203.historical_info
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1496.1.1
-		to = 1516.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2606,10 +2606,10 @@ flavor_sco.204 = { # Founding of Aberdeen University
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1485.1.1
-		to = 1510.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2678,10 +2678,10 @@ flavor_sco.205 = { # Expansion of the Scottish Royal Navy
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1485.1.1
-		to = 1510.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2727,10 +2727,10 @@ flavor_sco.206 = { # The Decline of the Scottish Parliament
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1485.1.1
-		to = 1510.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2780,10 +2780,10 @@ flavor_sco.207 = { # Palace of Holyroodhouse
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1495.1.1
-		to = 1510.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2845,10 +2845,10 @@ flavor_sco.209 = { # <ruler> and the Religious Transformation of Scotland
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1537.1.1
-		to = 1567.1.1
-		monthly_chance = 30
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2915,10 +2915,10 @@ flavor_sco.210 = { # The Rough Wooing
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1542.1.1
-		to = 1561.1.1
-		monthly_chance = 12
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3002,10 +3002,10 @@ flavor_sco.301 = { # Internal Division, Old Enemies
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1542.1.1
-		to = 1572.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3058,10 +3058,10 @@ flavor_sco.302 = { # True Law and Basilikon
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1597.1.1
-		to = 1612.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3123,10 +3123,10 @@ flavor_sco.303 = { # The Statutes of Iona
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1605.1.1
-		to = 1616.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3197,10 +3197,10 @@ flavor_sco.304 = { # Divine Art of Poesie
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1597.1.1
-		to = 1612.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3255,10 +3255,10 @@ flavor_sco.400 = { # Expedition to the New World
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1636.1.1
-		to = 1702.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3306,11 +3306,10 @@ flavor_sco.401 = { # David Hume, Treatise of Human Nature
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		tag = ENG
-		from = 1733.1.1
-		to = 1775.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3406,10 +3405,10 @@ flavor_sco.1000 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = ENG
-		from = 1330.1.1
-		to = 1500.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3591,10 +3590,10 @@ flavor_sco.1100 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
-		from = 1300.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3941,10 +3940,10 @@ flavor_sco.1200 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
-		from = 1490.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4094,10 +4093,10 @@ flavor_sco.1202 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
-		from = 1490.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4325,10 +4324,10 @@ flavor_sco.1300 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
-		from = 1550.1.1
-		to = 1700.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4510,10 +4509,10 @@ flavor_sco.1400 = { #Dunbar Castle
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SBL
-		from = 1337.1.1
-		to = 1340.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes
@@ -4631,10 +4630,10 @@ flavor_sco.1403 = { #Agnes the Black
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		from = 1337.1.1
-		to = 1340.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	fire_only_once = yes

@@ -10,10 +10,10 @@ flavor_flo.1 = { #Michelangelo
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1500.1.1
-		to = 1550.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -55,10 +55,10 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -165,10 +165,10 @@ flavor_flo.4 = { #The Construction Projects of [ROOT.GetCountry.GetGovernment.Ge
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1550.1.1
-		to = 1610.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -206,10 +206,10 @@ flavor_flo.5 = { #The [ROOT.GetCountry.GetGovernment.GetRulerTitle]'s Treasury
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -250,10 +250,10 @@ flavor_flo.6 = { #The Reforms of [ROOT.GetCountry.GetGovernment.GetRuler.GetName
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1760.1.1
-		to = 1790.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -303,10 +303,10 @@ flavor_flo.8 = { #The Medici Oriental Press
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1400.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
@@ -331,10 +331,10 @@ flavor_flo.20 = { #The Pazzi Conspiracy
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1475.1.1
-		to = 1480.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -386,10 +386,10 @@ flavor_flo.27 = { #The Clock Tower of the Palazzo della Signoria
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1337.1.1
-		to = 1400.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -447,10 +447,10 @@ flavor_flo.28 = { # The Florence Cathedral
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -521,10 +521,10 @@ flavor_flo.29 = { # The First Modern Engineer
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1397.1.1
-		to = 1440.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -596,10 +596,10 @@ flavor_flo.30 = { # A Great Italian Painter
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1415.1.1
-		to = 1425.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -671,10 +671,10 @@ flavor_flo.31 = { #"[target_artist.GetNameWithNoTooltip]"
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1470.1.1
-		to = 1475.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -790,10 +790,10 @@ flavor_flo.33 = { # Sandro Botticelli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1465.1.1
-		to = 1485.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -863,10 +863,10 @@ flavor_flo.34 = { # Gian Francesco Poggio Braccioloni
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1465.1.1
-		to = 1485.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -935,10 +935,10 @@ flavor_flo.35 = { # Manuel Chrysoloras
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1394.1.1
-		to = 1415.12.30
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1010,10 +1010,10 @@ flavor_flo.36 = { # Niccolo Niccoli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1384.1.1
-		to = 1450.1.1
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1089,10 +1089,10 @@ flavor_flo.37 = { # Donatello
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1405.1.1
-		to = 1444.12.30
-		monthly_chance = 4
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1166,10 +1166,10 @@ flavor_flo.38 = { # Nuova Cronica
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1337.1.1
-		to = 1348.12.30
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1257,10 +1257,10 @@ flavor_flo.39 = { #The First Modern Historian
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1390.1.1
-		to = 1444.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1332,10 +1332,10 @@ flavor_flo.40 = { # The History of Florence by Leonardo Bruni
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1410.1.1
-		to = 1445.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1396,10 +1396,10 @@ flavor_flo.42 = { #Societas Aluminum
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1400.1.1
-		to = 1499.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1535,10 +1535,10 @@ flavor_flo.43 = { #The Alum Mine of Volterra
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1450.1.1
-		to = 1499.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1590,10 +1590,10 @@ flavor_flo.44 = { #The New Urban Planning Registration System
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1370.1.1
-		to = 1500.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1656,10 +1656,10 @@ flavor_flo.45 = { #Leonardo da Vinci Paints the Mona Lisa
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1480.1.1
-		to = 1525.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1712,10 +1712,10 @@ flavor_flo.46 = { #Machiavelli
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1490.1.1
-		to = 1515.1.1
-		monthly_chance = 30
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -1828,10 +1828,10 @@ flavor_flo.47 = { #The Age of [target_character.GetNameWithNoTooltip] (Event for
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1400.1.1
-		to = 1450.12.30
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1934,10 +1934,10 @@ flavor_flo.48 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1500.1.1
-		to = 1599.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1992,10 +1992,10 @@ flavor_flo.49 = { # The Consolidation of Power
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1400.1.1
-		to = 1450.12.30
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2068,10 +2068,10 @@ flavor_flo.50 = { # The Office of the Night
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1400.1.1
-		to = 1500.12.30
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2124,10 +2124,10 @@ flavor_flo.51 = { # Medici Giraffe
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1485.1.1
-		to = 1500.12.30
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2270,10 +2270,10 @@ flavor_flo.53 = { # Financial Troubles of Bardi and Peruzzi
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2602,10 +2602,10 @@ flavor_flo.57 = { # Formation of the Medici Bank https://en.wikipedia.org/wiki/M
 
 	major = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1390.1.1
-		to = 1410.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2898,10 +2898,10 @@ flavor_flo.60 = {# Walter VI de Brienne on Florentine Throne
 	major = yes
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1342.1.1
-		to = 1345.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3019,10 +3019,10 @@ flavor_flo.62 = {
 	}
 
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1430.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3085,10 +3085,10 @@ flavor_flo.63 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1365.1.1
-		to = 1385.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

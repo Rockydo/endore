@@ -9,10 +9,10 @@ flavor_nor.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1420.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -75,10 +75,10 @@ flavor_nor.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1492.1.1
-		to = 1498.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -144,10 +144,10 @@ flavor_nor.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1450.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -196,10 +196,10 @@ flavor_nor.5 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1460.1.1
-		to = 1475.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -426,10 +426,10 @@ flavor_nor.16 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -459,10 +459,10 @@ flavor_nor.21 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1711.1.1
-		to = 1720.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -507,10 +507,10 @@ flavor_nor.22 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1650.1.1
-		to = 1675.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -553,10 +553,10 @@ flavor_nor.23 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1610.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -600,10 +600,10 @@ flavor_nor.24 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
-		from = 1520.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

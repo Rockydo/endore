@@ -31,4 +31,3 @@ government = {
 		tribes_allow_gatherings
 	}
 }
-

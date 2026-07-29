@@ -41,5 +41,9 @@
   quarantine sweep now isolates still-parsed inherited Earth scripts while preserving
   exact-source traceability.
 - The canonical validator and paired real-game menu smoke are green for the production
-  stack with zero mod-unique error lines. The deep M2 in-game navigation, screenshot, and
-  live-test gate remains the next required action before M2 is declared complete.
+  stack with zero mod-unique error lines. The deep M2 in-game gate then passed: the engine
+  resolved Minas Tirith, Rivendell, and Orodruin, Observer advanced eight days, and the
+  deep log retained zero content or dangling-reference diagnostics.
+- M2 is complete. Its evidence pack records the 5,812-location model, real-game map and
+  Observer screenshots, the 3018.1.9 time-advance result, hashes, and the final diagnostic
+  snapshot. The production map is now the binding base for M3.

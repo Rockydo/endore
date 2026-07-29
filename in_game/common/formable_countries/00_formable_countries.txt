@@ -3529,7 +3529,7 @@ MGE_f = {
 				has_ruler = yes
 				ruler ?= {
 					has_dynasty = yes
-					dynasty = dynasty:borjigin_dynasty
+					always = no
 				}
 			}
 			AND = {

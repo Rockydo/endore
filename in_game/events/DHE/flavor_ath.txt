@@ -50,10 +50,10 @@ flavor_ath.2 = { # Sudden Death of the Duke Guillem II
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        from = 1338.1.1
-        to = 1342.1.1
-        monthly_chance = 60
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -643,10 +643,10 @@ flavor_ath.8 = { # Rule of the Catalan Company
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        from = 1337.5.1
-        to = 1382.1.1
-        monthly_chance = 100
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -704,11 +704,10 @@ flavor_ath.9 = { # Byzantium Internal Strife
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1342.1.1
-        to = 1382.1.1
-        monthly_chance = 18
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -819,11 +818,10 @@ flavor_ath.10 = { # Rule in Greece ## Relations with the local populace
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1344.1.1
-        to = 1370.1.1
-        monthly_chance = 10
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -958,11 +956,10 @@ flavor_ath.11 = { # Conflict between the Catalan Company and Greeks in <location
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1340.1.1
-        to = 1440.1.1
-        monthly_chance = 2
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1100,11 +1097,10 @@ flavor_ath.12 = { # The Shifting Capitals ## Catalan Company shifting base of op
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1341.1.1
-        to = 1405.1.1
-        monthly_chance = 6
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1224,11 +1220,10 @@ flavor_ath.13 = { # Secession in Epirus ## Chance to strike Epirus
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1341.1.1
-        to = 1366.1.1
-        monthly_chance = 30
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1318,11 +1313,10 @@ flavor_ath.14 = { # The Titular Emperor in Achaea
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1339.1.1
-        to = 1390.1.1
-        monthly_chance = 8
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1413,11 +1407,10 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1337.1.1
-        to = 1600.1.1
-        monthly_chance = 50
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1517,21 +1510,10 @@ flavor_ath.16 = { # Reclamation of Thessalonican lands
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        tag = ALB
-        tag = BOD
-        tag = CEP
-        tag = CRT
-        tag = KNI
-        tag = NAX
-        tag = NEG
-        tag = NEO
-        tag = PAT
-        tag = SAO
-        from = 1337.1.1
-        to = 1600.1.1
-        monthly_chance = 33
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 
@@ -1624,11 +1606,10 @@ flavor_ath.17 = { # Constantinople Conquered!
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        from = 1337.1.1
-        to = 1537.1.1
-        monthly_chance = 100
+	tag = SWE
+	from = 9999.1.1
+	to = 9999.1.2
+	monthly_chance = 0
     }
 
 

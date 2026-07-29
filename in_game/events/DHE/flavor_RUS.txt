@@ -10,10 +10,10 @@ flavor_rus.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1450.1.1
-		to = 1551.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -129,10 +129,10 @@ flavor_rus.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1560.1.1
-		to = 1573.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -215,10 +215,10 @@ flavor_rus.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1450.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -321,10 +321,10 @@ flavor_rus.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1450.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -472,10 +472,10 @@ flavor_rus.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1450.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -554,10 +554,10 @@ flavor_rus.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1540.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -649,10 +649,10 @@ flavor_rus.7 = { #DEVASTATION
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1540.1.1
-		to = 1560.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -721,10 +721,10 @@ flavor_rus.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -779,10 +779,10 @@ flavor_rus.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1400.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -851,10 +851,10 @@ flavor_rus.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -955,10 +955,10 @@ flavor_rus.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1500.1.1
-		to = 1600.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -994,10 +994,10 @@ flavor_rus.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1620.1.1
-		to = 1650.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1086,10 +1086,10 @@ flavor_rus.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1650.1.1
-		to = 1700.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1151,10 +1151,10 @@ flavor_rus.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1635.1.1
-		to = 1685.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1255,10 +1255,10 @@ flavor_rus.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1640.1.1
-		to = 1750.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1374,10 +1374,10 @@ flavor_rus.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1690.1.1
-		to = 1740.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1603,10 +1603,10 @@ flavor_rus.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1650.1.1
-		to = 1750.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1705,10 +1705,10 @@ flavor_rus.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1650.1.1
-		to = 1750.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	illustration_tags = {
 		10 = armed
@@ -1838,10 +1838,10 @@ flavor_rus.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1650.1.1
-		to = 1750.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1938,10 +1938,10 @@ flavor_rus.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1680.1.1
-		to = 1730.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2020,10 +2020,10 @@ flavor_rus.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1680.1.1
-		to = 1740.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2094,10 +2094,10 @@ flavor_rus.23 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1720.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2185,10 +2185,10 @@ flavor_rus.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1724.1.1
-		to = 1784.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2308,10 +2308,10 @@ flavor_rus.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1740.1.1
-		to = 1840.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2369,10 +2369,10 @@ flavor_rus.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1750.1.1
-		to = 1830.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2434,10 +2434,10 @@ flavor_rus.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1762.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2561,10 +2561,10 @@ flavor_rus.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1750.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2620,10 +2620,10 @@ flavor_rus.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1775.1.1
-		to = 1825.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2702,10 +2702,10 @@ flavor_rus.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1792.1.1
-		to = 1840.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2770,10 +2770,10 @@ flavor_rus.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1778.1.1
-		to = 1820.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2894,10 +2894,10 @@ flavor_rus.32 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1763.1.1
-		to = 1793.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2996,10 +2996,10 @@ flavor_rus.33 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1706.1.1
-		to = 1746.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3105,10 +3105,10 @@ flavor_rus.34 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1741.1.1
-		to = 1765.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3191,10 +3191,10 @@ flavor_rus.35 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1525.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3279,10 +3279,10 @@ flavor_rus.36 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1515.1.1
-		to = 1565.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3327,10 +3327,10 @@ flavor_rus.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1370.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3389,10 +3389,10 @@ flavor_rus.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1620.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3465,10 +3465,10 @@ flavor_rus.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1632.1.1
-		to = 1662.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3561,10 +3561,10 @@ flavor_rus.40 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1730.1.1
-		to = 1830.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3634,10 +3634,10 @@ flavor_rus.41 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_fur.dds"
 
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1770.1.1
-		to = 1840.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3775,10 +3775,10 @@ flavor_rus.42 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1760.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3946,10 +3946,10 @@ flavor_rus.43 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1752.1.1
-		to = 1794.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4054,10 +4054,10 @@ flavor_rus.44 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1754.1.1
-		to = 1784.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4189,10 +4189,10 @@ flavor_rus.45 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1763.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4283,10 +4283,10 @@ flavor_rus.46 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1755.1.1
-		to = 1840.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4371,10 +4371,10 @@ flavor_rus.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1792.1.1
-		to = 1840.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4485,10 +4485,10 @@ flavor_rus.48 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1747.1.1
-		to = 1796.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4593,10 +4593,10 @@ flavor_rus.49 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1750.1.1
-		to = 1800.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4800,10 +4800,10 @@ flavor_rus.50 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1757.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -4925,10 +4925,10 @@ flavor_rus.51 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1745.1.1
-		to = 1790.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5060,10 +5060,10 @@ flavor_rus.52 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1760.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5278,10 +5278,10 @@ flavor_rus.53 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1760.1.1
-		to = 1820.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5446,10 +5446,10 @@ flavor_rus.54 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1734.1.1
-		to = 1780.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5560,10 +5560,10 @@ flavor_rus.55 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1750.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5743,10 +5743,10 @@ flavor_rus.56 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1783.1.1
-		to = 1840.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5890,10 +5890,10 @@ flavor_rus.57 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1766.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -5981,10 +5981,10 @@ flavor_rus.58 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1800.1.1
-		to = 1840.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6103,10 +6103,10 @@ flavor_rus.59 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1760.1.1
-		to = 1840.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6214,10 +6214,10 @@ flavor_rus.60 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1817.1.1
-		to = 1840.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6500,10 +6500,10 @@ flavor_rus.61 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1776.1.1
-		to = 1802.1.1
-		monthly_chance = 15
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6603,10 +6603,10 @@ flavor_rus.62 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1790.1.1
-		to = 1840.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6714,10 +6714,10 @@ flavor_rus.63 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1750.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -6837,10 +6837,10 @@ flavor_rus.64 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1710.1.1
-		to = 1750.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7004,10 +7004,10 @@ flavor_rus.65 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1775.1.1
-		to = 1840.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7099,10 +7099,10 @@ flavor_rus.66 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1770.1.1
-		to = 1840.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7192,10 +7192,10 @@ flavor_rus.67 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1760.1.1
-		to = 1840.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7293,10 +7293,10 @@ flavor_rus.68 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1815.1.1
-		to = 1840.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7388,10 +7388,10 @@ flavor_rus.69 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1815.1.1
-		to = 1840.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7540,10 +7540,10 @@ flavor_rus.70 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1760.1.1
-		to = 1790.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7686,10 +7686,10 @@ flavor_rus.71 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1780.1.1
-		to = 1840.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7758,10 +7758,10 @@ flavor_rus.72 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1780.1.1
-		to = 1840.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7851,10 +7851,10 @@ flavor_rus.73 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1750.1.1
-		to = 1780.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -7945,10 +7945,10 @@ flavor_rus.74 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
-		from = 1775.1.1
-		to = 1810.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -8100,4 +8100,3 @@ flavor_rus.74 = {
 	historical_info = flavor_rus.74.historical_info
 
 }
-

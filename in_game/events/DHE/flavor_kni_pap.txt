@@ -12,10 +12,10 @@ flavor_kni_pap.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
-		from = 1340.1.1
-		to = 1350.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

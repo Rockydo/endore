@@ -183,10 +183,10 @@ flavor_ver.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
-		from = 1337.1.1
-		to = 1340.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -273,10 +273,10 @@ flavor_ver.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
-		from = 1337.1.1
-		to = 1340.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -363,10 +363,10 @@ flavor_ver.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
-		from = 1337.1.1
-		to = 1340.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -633,10 +633,10 @@ flavor_ver.1002 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VER
-		from = 1339.1.1
-		to = 1340.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

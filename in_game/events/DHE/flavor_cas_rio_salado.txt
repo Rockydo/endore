@@ -11,10 +11,10 @@ flavor_cas_rio_salado.1 = { #Río Salado Prelude
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -237,10 +237,10 @@ flavor_cas_rio_salado.5 = { #Battle of Río Salado Morocco driven out of Iberia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -284,10 +284,10 @@ flavor_cas_rio_salado.6 = { #Monastery Guadalupe
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -352,10 +352,10 @@ flavor_cas_rio_salado.7 = { #Monastery Tordesillas
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
-		from = 1337.1.1
-		to = 1360.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {

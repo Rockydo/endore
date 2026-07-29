@@ -8,10 +8,10 @@ flavor_hun.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1430.1.1
-		to = 1443.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -59,10 +59,10 @@ flavor_hun.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1444.1.1
-		to = 1470.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -116,10 +116,10 @@ flavor_hun.110 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1466.1.1
-		to = 1470.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -162,10 +162,10 @@ flavor_hun.120 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1465.1.1
-		to = 1470.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
@@ -205,10 +205,10 @@ flavor_hun.130 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1473.1.1
-		to = 1500.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
@@ -255,10 +255,10 @@ flavor_hun.140 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1600.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -319,10 +319,10 @@ flavor_hun.150 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1550.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -372,10 +372,10 @@ flavor_hun.160 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1450.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -413,10 +413,10 @@ flavor_hun.170 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1490.1.1
-		to = 1520.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -533,10 +533,10 @@ flavor_hun.190 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1440.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -637,10 +637,10 @@ flavor_hun.200 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1455.1.1
-		to = 1470.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -673,10 +673,10 @@ flavor_hun.210 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1450.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -734,10 +734,10 @@ flavor_hun.220 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1337.1.1
-		to = 1600.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -801,10 +801,10 @@ flavor_hun.230 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1560.1.1
-		to = 1570.1.1
-		monthly_chance = 8
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -878,10 +878,10 @@ flavor_hun.240 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1530.1.1
-		to = 1555.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -920,10 +920,10 @@ flavor_hun.250 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1300.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -995,10 +995,10 @@ flavor_hun.260 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1600.1.1
-		to = 1750.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1048,10 +1048,10 @@ flavor_hun.270 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1583.1.1
-		to = 1610.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1095,10 +1095,10 @@ flavor_hun.280 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1530.1.1
-		to = 1540.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1164,10 +1164,10 @@ flavor_hun.290 = { #https://en.wikipedia.org/wiki/Janus_Pannonius
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1454.1.1
-		to = 1470.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
@@ -1216,10 +1216,10 @@ flavor_hun.300 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1580.1.1
-		to = 1640.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1265,10 +1265,10 @@ flavor_hun.310 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1600.1.1
-		to = 1700.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1307,10 +1307,10 @@ flavor_hun.320 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		exists = ruler
@@ -1346,10 +1346,10 @@ flavor_hun.330 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1337.1.1
-		to = 1370.1.1
-		monthly_chance = 75
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		country_exists = c:POL
@@ -1490,10 +1490,10 @@ flavor_hun.340 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1340.1.1
-		to = 1390.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		exists = ruler
@@ -1546,10 +1546,10 @@ flavor_hun.350 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1340.1.1
-		to = 1440.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		exists = ruler
@@ -1594,10 +1594,10 @@ flavor_hun.360 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1337.1.1
-		to = 1600.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		has_law = legal_code_law
@@ -1690,10 +1690,10 @@ flavor_hun.370 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		at_war = no
@@ -1734,10 +1734,10 @@ flavor_hun.380 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		ruler ?= { has_character_modifier = enacted_placitum_regium }
@@ -1777,10 +1777,10 @@ flavor_hun.390 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1345.1.1
-		to = 1370.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:bihar
@@ -1840,10 +1840,10 @@ flavor_hun.400 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1350.1.1
-		to = 1400.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		owns = location:pecs
@@ -1895,10 +1895,10 @@ flavor_hun.410 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1400.1.1
-		to = 1450.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		has_chivalric_order = yes
@@ -2169,10 +2169,10 @@ flavor_hun.421 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1337.1.1
-		to = 1437.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		has_ruler = yes
@@ -2426,10 +2426,10 @@ flavor_hun.450 = { #Expanding the Buda Castle
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1430.1.1
-		to = 1460.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2490,10 +2490,10 @@ flavor_hun.460 = { # Illuminated Chronicle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1358.1.1
-		to = 1375.12.30
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2562,10 +2562,10 @@ flavor_hun.470 = { #Privilegium Pro Slavis
 	historical_info = flavor_hun.470.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1381.1.1
-		to = 1391.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2665,10 +2665,10 @@ flavor_hun.480 = { #Austrian Noble Revolt
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1700.1.1
-		to = 1836.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2740,10 +2740,10 @@ flavor_hun.490 = { #Balázs Magyar
 	historical_info = flavor_hun.490.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1435.1.1
-		to = 1450.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2803,10 +2803,10 @@ flavor_hun.500 = { #Pál Kinizsi
 	historical_info = flavor_hun.500.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1460.1.1
-		to = 1470.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2866,10 +2866,10 @@ flavor_hun.510 = { #Bibliotheca Corviniana
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1450.1.1
-		to = 1490.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -2911,10 +2911,10 @@ flavor_hun.520 = { #Bran Castle
 	historical_info = flavor_hun.520.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1377.1.1
-		to = 1420.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2967,10 +2967,10 @@ flavor_hun.530 = { #Slovak National Awakening
 	historical_info = flavor_hun.530.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1750.1.1
-		to = 1810.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3052,10 +3052,10 @@ flavor_hun.540 = { #Transylvanian Germans Convert to Protestantism
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1530.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	historical_info = flavor_hun.540.historical_info
@@ -3128,10 +3128,10 @@ flavor_hun.550 = { #Vienna - A New Capital
 	historical_info = flavor_hun.550.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1470.1.1
-		to = 1490.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3184,10 +3184,10 @@ flavor_hun.560 = { #Tripartitum
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1517.1.1
-		to = 1530.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -3230,10 +3230,10 @@ flavor_hun.570 = { #Adam František Kollár
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1760.1.1
-		to = 1780.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
@@ -3299,10 +3299,10 @@ flavor_hun.580 = { #Evacuation of the Capital
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1526.1.1
-		to = 1600.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3372,10 +3372,10 @@ flavor_hun.590 = { #The Origin of the Hussars
 	historical_info = flavor_hun.590.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 1
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3424,10 +3424,10 @@ flavor_hun.600 = { #The Bosnian Question
 	historical_info = flavor_hun.600.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1340.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {

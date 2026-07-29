@@ -11,10 +11,10 @@ flavor_nap.3 = { #Renaissance in Naples
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1400.1.1
-		to = 1500.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -45,10 +45,10 @@ flavor_nap.4 = { #The Great City of the Baroque
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1600.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -90,10 +90,10 @@ flavor_nap.200 = { #The Will of Robert
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1340.1.1
-		monthly_chance = 50
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -208,10 +208,10 @@ flavor_nap.210 = { #Charles of Artois
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1345.1.1
-		to = 1360.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -275,10 +275,10 @@ flavor_nap.220 = { #The Husband's Crown
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1340.5.1
-		to = 1360.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 
@@ -486,10 +486,10 @@ flavor_nap.230 = { #The Neapolitan Prince Consort
 
 
 	dynamic_historical_event = {
-		tag = HUN
-		from = 1343.6.1
-		to = 1360.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -774,10 +774,10 @@ flavor_nap.240 = { #The Ruler of Avignon
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1348.1.1
-		to = 1370.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -955,10 +955,10 @@ flavor_nap.250 = { #The Trial of the Queen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1348.2.1
-		to = 1360.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1074,10 +1074,10 @@ flavor_nap.260 = { #Louis, a thorn in our side
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1352.1.1
-		to = 1360.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1158,10 +1158,10 @@ flavor_nap.270 = { #The pious Elzéar of Sabran
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1371.1.1
-		to = 1401.1.1
-		monthly_chance = 3
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1363,10 +1363,10 @@ flavor_nap.300 = { #The Future of Naples
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1368.1.1
-		to = 1450.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1560,10 +1560,10 @@ flavor_nap.101 = { #The Destruction of Amalfi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1318.1.1
-		to = 1368.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -1679,10 +1679,10 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1362.1.1
-		to = 1382.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
@@ -1998,10 +1998,10 @@ flavor_nap.109 = { #The Library of the Angevin Kings
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2057,10 +2057,10 @@ flavor_nap.110 = { #Grand Court of the Vicar
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1799.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -2100,10 +2100,10 @@ flavor_nap.111 = { #The Basilica of Santa Chiara
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1343.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2149,10 +2149,10 @@ flavor_nap.112 = { #The Destruction of the Scuola Medica Salernitana
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1650.1.1
-		monthly_chance = 100
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2197,10 +2197,10 @@ flavor_nap.113 = { #The Palace of Caserta
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1727.1.1
-		to = 1777.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2267,10 +2267,10 @@ flavor_nap.114 = { #La Pudizia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1727.1.1
-		to = 1777.1.1
-		monthly_chance = 2
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2334,10 +2334,10 @@ flavor_nap.115 = { #San Leucio Silk Factory
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1725.1.1
-		to = 1775.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2376,10 +2376,10 @@ flavor_nap.116 = { #Accademia Pontaniana's delights the World
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1443.1.1
-		to = 1542.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2420,10 +2420,10 @@ flavor_nap.117 = { #Albanians flee
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1500.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2496,10 +2496,10 @@ flavor_nap.118 = { #Croatians flee
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1550.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2731,10 +2731,10 @@ flavor_nap.121 = { #Boccaccio's family's debt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1339.1.1
-		to = 1341.1.1
-		monthly_chance = 20
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2779,11 +2779,10 @@ flavor_nap.6 = { #Fate of Prato
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1345.1.1
-		#1351 in our timeline
-		to = 1355.1.1
-		monthly_chance = 10
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -2964,10 +2963,10 @@ flavor_nap.9 = { #Giambattista della Porta
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1555.1.1
-		to = 1558.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	immediate = {
@@ -3019,10 +3018,10 @@ flavor_nap.10 = { #Magia Naturalis
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1558.1.1
-		to = 1565.1.1
-		monthly_chance = 25
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 	trigger = {
 		character:nap_giambattista_della_porta = {
@@ -3082,10 +3081,10 @@ flavor_nap.11 = { #Fraticelli
     }
 
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1337.1.1
-		to = 1350.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3171,10 +3170,10 @@ flavor_nap.12 = { #https://en.wikipedia.org/wiki/State_of_the_Presidi
     }
 
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1557.1.1
-		to = 1800.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	trigger = {
@@ -3222,10 +3221,10 @@ flavor_nap.400 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
-		from = 1640.1.1
-		to = 1650.1.1
-		monthly_chance = 5
+		tag = SWE
+		from = 9999.1.1
+		to = 9999.1.2
+		monthly_chance = 0
 	}
 
 	illustration_tags = {
