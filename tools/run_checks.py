@@ -22,6 +22,7 @@ class Command:
 
 
 VALIDATE_COMMANDS = (
+    Command("tools/test_eu5_slot.py"),
     Command("tools/m2_controls.py", ("--check",)),
     Command("tools/m2_world.py", ("--check",)),
     Command("tools/pdxlint.py"),
@@ -39,7 +40,13 @@ def run(label: str, commands: tuple[Command, ...]) -> int:
         print(f"[{index}/{len(commands)}] {command.script}")
         completed = subprocess.run(command.argv(), cwd=ROOT, check=False)
         if completed.returncode:
-            print(f"{label}: FAIL", file=sys.stderr)
+            if completed.returncode == 75:
+                print(
+                    f"{label}: DEFERRED — shared EU5 slot is busy",
+                    file=sys.stderr,
+                )
+            else:
+                print(f"{label}: FAIL", file=sys.stderr)
             return completed.returncode
     print(f"{label}: PASS")
     return 0
