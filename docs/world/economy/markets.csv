@@ -1,0 +1,13 @@
+location,name,kind,source,note
+minas_tirith,White City Market,free,"LOTR, Book V",Gondor highland and Anduin command hub
+pelargir,Lower Anduin Market,free,"LOTR, Book V",Gondor river and seaborne exchange
+edoras,Mark Market,free,"LOTR, Book III",Riddermark pastoral exchange
+me_bree,Crossroads Market,free,"LOTR, Book I",Great East Road and Greenway junction
+rivendell,Hidden Valley Exchange,free,"LOTR, Books I–II; †",Small refuge market required for access
+esgaroth,Long Lake Market,free,"The Hobbit",Northern commercial engine
+dale,Dale Market,free,"The Hobbit",Erebor hinterland and eastern trade
+umbar,Haven of Umbar,shadow,"LOTR, Appendix A",Corsair and Harad maritime hub
+qarsad,Harad Road Market,shadow,"† ENDORE plan realm extrapolation",On-map Near Harad hub
+burh_gath,Sea of Rhûn Market,shadow,"† ENDORE plan realm extrapolation",Western Easterling hub
+barad_dur,Dark Tower Stores,command,"LOTR, Book II",Mordor command economy
+dorwinion,Dorwinion Exchange,free,"The Hobbit",Wine country and east-west caravan exchange

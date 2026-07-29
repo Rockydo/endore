@@ -22,6 +22,7 @@ LOC_OUT = ROOT / "in_game/localization/english"
 M2_DATE = (3018, 1, 1)
 M3_REALMS = ROOT / "docs/world/realms.csv"
 M4_CULTURES = ROOT / "docs/world/peoples/cultures.csv"
+M5_CENSUS = ROOT / "docs/world/economy/realm_census.csv"
 
 
 def _script_line(text: str) -> str:
@@ -285,6 +286,12 @@ def start_payloads() -> dict[Path, str]:
         # M3 replaces the one-country gate scaffold with the political map.
         files.pop("10_countries.txt")
         files.pop("21_locations.txt")
+    if M5_CENSUS.is_file():
+        # M5 replaces the minimal demographic/economic bridge as one coherent
+        # census, settlement, market, road, development, and army setup.
+        from m5_census import runtime_payloads as m5_runtime_payloads
+
+        files.update(m5_runtime_payloads())
     return {START_OUT / name: prefix + text for name, text in files.items()}
 
 

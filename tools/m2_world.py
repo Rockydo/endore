@@ -24,6 +24,7 @@ import m2_quarantine
 import m2_runtime
 import m3_realms
 import m4_peoples
+import m5_census
 
 STAGES = (
     ("locations", gen_locations),
@@ -40,6 +41,7 @@ STAGES = (
     ("quarantine", m2_quarantine),
     ("realms", m3_realms),
     ("peoples", m4_peoples),
+    ("census", m5_census),
 )
 
 

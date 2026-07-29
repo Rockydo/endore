@@ -1,5 +1,19 @@
 # Decisions
 
+## 2026-07-29 — M5 census slice and road-source contract
+
+Treat the authored nine-route ledger and its 302 adjacent land edges as source data, not
+as permission to install a runtime road graph. EU5 requires a matching Arda-native strip
+inside `spline_network.splnet` for every starting road edge. The two bounded map-editor
+attempts could not produce that binary, and the installed Earth cache may not survive.
+Therefore M5 emits an explicitly empty `road_network` while continuing to validate every
+route waypoint and edge. Markets, settlements, development, census, raw materials, town
+setups, and provisional pre-M7 armies remain independently shippable.
+
+The M5 demographic total is 9.029 million for the represented map extent. This is a
+gameplay census, not an assertion that Tolkien supplied numerical totals. Installed
+culture presences remain parser ABI only and are excluded from all authored totals.
+
 ## 2026-07-29 — Physical-map gate precedence
 
 Treat political-shape screenshots as insufficient evidence for any custom-map milestone.

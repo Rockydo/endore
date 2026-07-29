@@ -1,0 +1,19 @@
+location,engine_rank,town_setup,development_bonus,source,note
+minas_tirith,city,me_m5_city,18,"LOTR, Book V",White City and chief western seed
+pelargir,city,me_m5_city_port,14,"LOTR, Book V",Great Gondorian river-port
+dol_amroth,city,me_m5_city_port,12,"LOTR, Book V",Fortified coastal city
+mithlond,city,me_m5_city_port,10,"LOTR, Book I",Grey Havens
+edoras,city,me_m5_city,10,"LOTR, Book III",Royal seat of Rohan
+barad_dur,city,me_m5_shadow_fortress,16,"LOTR, Book II",Command-economy fortress
+umbar,city,me_m5_city_port,14,"LOTR, Appendix A",Corsair metropolis
+erebor,city,me_m5_dwarf_hold,12,"The Hobbit",Kingdom under the Mountain
+dale,city,me_m5_city,10,"The Hobbit",Rebuilt northern city
+esgaroth,town,me_m5_town,8,"The Hobbit",Lake-town without a naval-port edge
+rivendell,town,me_m5_refuge,6,"LOTR, Book I",Small refuge rather than a large city
+caras_galadhon,town,me_m5_refuge,6,"LOTR, Book II",Galadhrim refuge
+thranduil_halls,town,me_m5_refuge,6,"The Hobbit",Woodland halls
+moria,town,me_m5_shadow_hold,4,"LOTR, Book II",Occupied Orc hold
+isengard,town,me_m5_fortress,7,"LOTR, Book II",Ring-fortress before full mobilization
+helms_deep,town,me_m5_fortress,6,"LOTR, Book III",Hornburg fortress
+morannon,town,me_m5_shadow_fortress,6,"LOTR, Book IV",Black Gate garrison
+minas_morgul,town,me_m5_shadow_fortress,7,"LOTR, Book IV",Morgul fortress

@@ -63,3 +63,20 @@ about Middle-earth.
 - M4 assigns a dominant people and faith profile to each land location. It is not the
   final M5 census: minorities, depopulated ruins, settlement types, and exact population
   weights remain M5 work.
+
+## M5 census and opening economy
+
+- † The represented world begins with 9.029 million people. Gondor has 2.0 million,
+  Rohan 0.5 million, the Shire 0.22 million, and Mordor 1.5 million including 0.35
+  million Mannish thralls in Nurn; exact totals and social shares are gameplay estimates
+  bounded by the master plan and the books' relative military and settlement evidence.
+- † On-map Harad, Khand, and Rhûn collectively exceed Gondor in population without
+  claiming to represent their much larger off-map peoples. Sparse wild non-ruin land has
+  only 22 thousand inhabitants in total, while all 21 canonical ruins begin empty.
+- † Twelve opening markets, 58 urban or fortified settlement seeds, regional development
+  values, and raw-material placement extrapolate exchange corridors, terrain, and named
+  centres into EU5's economic model. They are balance inputs rather than canonical
+  administrative statistics.
+- † Starting armies use one provisional installed foot-unit type and scale only by broad
+  population bands. They establish a loadable M5 economy and do not pre-empt M7's
+  canonical unit rosters or final military balance.

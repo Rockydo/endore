@@ -1,0 +1,13 @@
+profile,nobles,clergy,burghers,laborers,soldiers,peasants,tribesmen,slaves,note
+gondorian,0.025,0.025,0.120,0.100,0.070,0.660,0.000,0.000,Settled Dúnedain realm with towns garrisons and a broad rural base
+feudal,0.020,0.020,0.080,0.100,0.050,0.730,0.000,0.000,Ordinary settled Mannish population
+rohirric,0.030,0.010,0.040,0.050,0.120,0.750,0.000,0.000,Pastoral Northmen with an unusually broad military household stratum
+hobbit,0.005,0.010,0.200,0.030,0.005,0.750,0.000,0.000,Hobbit farmers craftsfolk and market households with almost no soldiers
+ranger,0.040,0.030,0.030,0.050,0.350,0.350,0.150,0.000,Sparse hidden Dúnedain households organized around watch and patrol
+elf,0.100,0.180,0.220,0.080,0.120,0.300,0.000,0.000,Few highly skilled and lettered immortal households
+dwarf,0.080,0.080,0.300,0.320,0.120,0.100,0.000,0.000,Hold society weighted toward craft mining trade and defence
+northman,0.020,0.020,0.060,0.080,0.080,0.620,0.120,0.000,Settled and woodland Northmen
+orc,0.010,0.010,0.020,0.330,0.350,0.180,0.050,0.050,Militarized Shadow population with coerced labour
+shadow_human,0.040,0.020,0.120,0.180,0.150,0.320,0.070,0.100,Southron or Easterling society under tribute warfare and bondage
+wild,0.010,0.010,0.020,0.080,0.080,0.100,0.700,0.000,Sparse kin-based communities beyond close state control
+ent,0.050,0.300,0.000,0.100,0.100,0.000,0.450,0.000,Tiny Onodrim population represented through elder keeper and wild strata

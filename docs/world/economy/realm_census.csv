@@ -1,0 +1,40 @@
+tag,total_k,profile,minority_culture,minority_faith,minority_k,minority_location,minority_type,source,note
+GON,2000,gondorian,,,,,,"LOTR, Appendix A; † population order from ENDORE plan 6.3",Largest Free realm; total is a gameplay demographic estimate
+DAM,180,gondorian,,,,,,"LOTR, Book V; †",Lebennin and Belfalas fief population represented by the first-class Dol Amroth realm
+ROH,500,rohirric,,,,,,"LOTR, Appendix A; † ENDORE plan 6.3",Binding plan order of magnitude
+SHI,220,hobbit,,,,,,"LOTR, Book I; † ENDORE plan 6.3",Middle of the plan's 150–300 thousand range
+BRE,20,feudal,me_bree_hobbit,me_northern_ways,7,me_bree,peasants,"LOTR, Book I; †",Four-village crossroads with a substantial Hobbit minority
+RAN,8,ranger,,,,,,"LOTR, Book I and Appendix A; †",Scattered Dúnedain households rather than an urban state
+RIV,0.8,elf,,,,,,"LOTR, Books I–II; † ENDORE plan 6.3",A few hundred immortal residents and dependants
+LIN,18,elf,me_noldor,me_valar_worship,3,mithlond,nobles,"LOTR, Appendix B; †",Sindar majority with a surviving Noldorin element
+BLU,18,dwarf,me_longbeard,me_mahal_cult,5,blue_halls,laborers,"The Hobbit, Ch. 1; †",Firebeard/Broadbeam halls sheltering Durin's-folk exiles
+LOR,25,elf,,,,,,"LOTR, Book II; † ENDORE plan 6.3",Low tens of thousands
+WOO,35,elf,,,,,,"The Hobbit; †",Woodland Realm low tens of thousands
+ERE,40,dwarf,,,,,,"The Hobbit; † ENDORE plan 6.3",Re-established populous royal hold
+IRO,22,dwarf,,,,,,"The Hobbit; †",Compact eastern Dwarven holds
+DAL,65,feudal,,,,,,"The Hobbit; †",Rebuilt Dale and its hinterland
+ESG,40,feudal,,,,,,"The Hobbit; †",Lake-town and shore settlements
+BEO,18,northman,,,,,,"The Hobbit; †",Sparse toll-keeping and pastoral households
+WDM,55,northman,,,,,,"LOTR, Appendix B; †",Scattered western Mirkwood communities
+DOR,180,feudal,me_dalish,me_northern_ways,18,dorwinion,burghers,"The Hobbit; †",Prosperous eastern wine country with Dalish merchants
+FAN,0.5,ent,,,,,,"LOTR, Book III; †",Very few Ents and Huorns abstracted into pop scale
+DRU,6,wild,,,,,,"LOTR, Book V; †",Small hidden Drúedain communities
+LOS,8,wild,,,,,,"LOTR, Appendix A; †",Seasonally mobile Forochel communities
+RHO,0.3,northman,,,,,,"The Hobbit; †",Radagast's household and nearby woodland folk
+MOR,1500,orc,me_near_haradrim,me_southron_ways,350,me_land_5092,slaves,"LOTR, Book VI; † ENDORE plan 6.3",Orc hosts plus the Mannish slave-fields of Nurn
+DOL,90,orc,,,,,,"LOTR, Appendix B; †",Southern Mirkwood garrison and subject tribes
+ISE,12,orc,,,,,,"LOTR, Book III; †",Pre-war Uruk pits and the ring of Isengard
+MOA,70,orc,me_northern_orc,me_melkorism,7,moria,soldiers,"LOTR, Book II; †",Large but fragmented Misty-mountain Orc hold
+GUN,110,orc,,,,,,"LOTR, Appendix A; †",Northern Orc stronghold and tributary warrens
+GOB,45,orc,,,,,,"The Hobbit; †",High Pass tunnel communities
+UMB,400,shadow_human,me_black_numenorean,me_sauron_cult,25,umbar,nobles,"LOTR, Appendix A; †",Corsair coast with a small ruling Black Númenórean stratum
+HNE,240,shadow_human,,,,,,"LOTR map; †",On-map Harnendor population only
+HRA,450,shadow_human,,,,,,"LOTR, Book IV; †",On-map Near Harad share only
+HFA,350,shadow_human,,,,,,"LOTR, Book V; †",On-map Far Harad share only
+KHA,300,shadow_human,,,,,,"LOTR map; †",On-map Variag population only
+RHU,700,shadow_human,,,,,,"LOTR, Appendices; †",Western on-map portion of Rhûn
+RH2,550,shadow_human,,,,,,"† ENDORE plan realm extrapolation",Karmachi on-map share
+RH3,500,shadow_human,,,,,,"† ENDORE plan realm extrapolation",Sagath eastern-march on-map share
+DUN,160,wild,,,,,,"LOTR, Book III; †",Dunlending hill and vale communities
+ANG,70,orc,,,,,,"LOTR, Appendix A; †",Mount Gram Orc communities
+WILD,22,wild,,,,,,"LOTR and map evidence; †",Scattered wild folk only; canonical ruins remain empty

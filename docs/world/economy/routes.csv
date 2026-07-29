@@ -1,0 +1,10 @@
+key,name,waypoints,condition,source,note
+great_east_road,Great East Road,harlond_lindon;michel_delving;me_bree;rivendell,kept,"LOTR map",The principal surviving east-west road of Eriador; the northern Haven is separated by the Lhûn estuary
+lindon_haven_road,Lindon Haven Road,forlond;mithlond,kept,"LOTR map; †",Road between the northern Grey Haven anchors
+greenway,Greenway,fornost;me_bree;me_land_1736;isengard,decayed,"LOTR map",The old North-South Road through ruined Tharbad
+gondor_rohan_road,Gondor–Rohan Road,isengard;edoras;minas_tirith;pelargir,kept,"LOTR map",Strategic road linking the Gap the Mark and the White City
+gondor_coast_road,Gondor Coast Road,dol_amroth;linhir;pelargir;minas_tirith,kept,"LOTR, Book V",Belfalas and Lebennin road system
+harad_road,Harad Road,pelargir;harnenhold;qarsad;mumak_gate,kept,"LOTR map",South road through Harnen into Harad
+northern_trade_road,Northern Trade Road,rivendell;carrock;thranduil_halls;esgaroth;dale;erebor,mixed,"The Hobbit; †",Playable reconstruction of the northern exchange corridor
+mordor_war_roads,Mordor War Roads,morannon;barad_dur;me_land_5092;minas_morgul,kept,"LOTR maps and Book VI",Interior command roads linking the gates tower and Nurn
+rhun_caravan_road,Rhûn Caravan Road,esgaroth;dorwinion;burh_gath;wainhold;eastern_march,mixed,"The Hobbit and LOTR map; †",On-map eastward caravan corridor

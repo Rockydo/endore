@@ -89,3 +89,20 @@
   3018.1.20 without recovery, while `error.log` remained byte-identical at 1,486 bytes.
 - M4 is complete. M5 census, settlements, markets, infrastructure, economy, and military
   setup is the next active milestone.
+- The first M5 slice now replaces the technical census with 9.029 million authored
+  inhabitants across 5,179 populated locations while leaving all 21 canonical ruins
+  empty. Every authored culture and faith appears, minorities are explicit, and the
+  installed culture ABI presences remain separately measured technical entries.
+- The same deterministic model seeds 12 markets, 58 towns/cities/holds, regional and
+  location development, timeless raw materials for every passable land location, modest
+  starting buildings, and one provisional army per first-class realm. Pop-type names are
+  relocalized in all 11 supported clients.
+- Nine canonical road corridors remain source-authored as 302 validated adjacent edges,
+  but the runtime road graph is deliberately empty until an Arda-native
+  `spline_network.splnet` exists. This removes every missing-strip diagnostic without
+  retaining Earth splines; the bounded editor blocker remains open.
+- Full validation and the paired vanilla/mod smoke are green for this slice. The terrain
+  regression gate still proves 174,763 custom-indexed tiles and zero Earth decal layers,
+  while the smoke produced zero mod-unique error lines on fingerprint `ee4afc6a`.
+- M5 remains active: a fresh five-year Observer economy run and native road-spline
+  serialization are still required before its milestone gate can be declared.

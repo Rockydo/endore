@@ -70,3 +70,28 @@ Resolution: M2 emits an exact zero-byte file and keeps the two intended crossing
 generator source. A later map-editor-backed experiment may activate them if it proves the
 runtime serialization contract. This does not block the production map or its ordinary
 land/sea graph.
+
+## 2026-07-29 — Arda road splines cannot be rebuilt within the retail map editor
+
+Status: bounded M5 blocker; the authored route ledger is retained, but the M5 gate remains
+open until an Arda-native `spline_network.splnet` can be produced.
+
+The gameplay road graph accepts 302 adjacent land edges across nine canonical routes, but
+the renderer correctly refuses to draw them through the installed Earth-authored spline
+cache. A live load reports one `Could not find spline network strip of type 0` diagnostic
+per missing Arda strip. Suppressing the diagnostics or retaining the Earth binary would
+violate the native-map contract.
+
+Two supported `-mapeditor` launches attempted the engine's own spline rebuild path. The
+first used the milestone visual-map profile; the second used minimum graphics. Both entered
+`MapEditorIdler`, loaded the Arda graph, then exhausted machine resources before the editor
+UI became interactive. The minimum-graphics attempt reached the 88% savegame phase, grew to
+about 30 GB private memory, consumed all 72 GB of swap, and terminated abnormally at
+2026-07-29 17:15 with 3.6 GB system memory remaining. Neither run emitted a mod-owned
+`.splnet`.
+
+Bounded fallback: keep `docs/world/economy/routes.csv` and the deterministic adjacency
+paths as source truth, omit the runtime road graph from any green M5 census slice, and
+continue census/economy verification. Revisit native spline serialization only through a
+materially different route, such as an editor-safe content-source overlay or a proven
+binary writer; do not repeat the two exhausted editor launches.
