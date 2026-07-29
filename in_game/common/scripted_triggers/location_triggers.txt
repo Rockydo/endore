@@ -35,42 +35,42 @@ is_endemic_typhus_location = {
 	#Endemic locations
 	OR = {
 		#Epidemic Typhus
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
 		#Murine Typhus
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		area = area:me_ithilien_area_07_07
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		area = area:me_anorien_area_07_07
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
 		#Scrub typhus
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
 
 	}
 }
@@ -85,23 +85,23 @@ is_endemic_bubonic_plague_location = {
 	}
 	#Endemic locations
 	OR = {
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
 	}
 }
 
@@ -192,11 +192,11 @@ is_part_of_chinese_grand_canal = {
 is_capital_in_south_america = {
 	capital ?= {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 }
@@ -204,12 +204,12 @@ is_capital_in_south_america = {
 is_capital_in_south_america_or_carribean = {
 	capital ?= {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 }
@@ -217,16 +217,16 @@ is_capital_in_south_america_or_carribean = {
 is_capital_mesoamerica = {
 	capital ?= {
 		OR = {
-			region = region:me_ithilien_region
-			area = area:me_ithilien_area_07_07
-			area = area:me_ithilien_area_07_07
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_07_07
+			region = region:me_anorien_region
 		}
 	}
 }
 
 can_clan_get_this_location_when_turning_into_normal_tag = {
-	region = region:me_ithilien_region
+	region = region:me_anorien_region
 	OR = {
 		has_owner = no
 		owner ?= {

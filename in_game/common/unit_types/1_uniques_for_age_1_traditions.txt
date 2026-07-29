@@ -357,15 +357,15 @@ a_hobelars = {
 
 	country_potential = {
 		OR = {
-			has_presence_in = region:me_ithilien_region
-			has_presence_in = region:me_ithilien_region
+			has_presence_in = region:me_anorien_region
+			has_presence_in = region:me_anorien_region
 		}
 	}
 
 	location_potential = {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 

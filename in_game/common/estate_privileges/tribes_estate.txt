@@ -176,7 +176,7 @@ local_tribal_strongholds = {
 	estate = tribes_estate
 
 	potential = {
-		capital ?= { region = region:me_ithilien_region }
+		capital ?= { region = region:me_anorien_region }
 		"estate_power(estate_type:tribes_estate)" > 0
 	}
 

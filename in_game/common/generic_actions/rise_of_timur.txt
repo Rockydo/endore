@@ -92,7 +92,7 @@ rot_declare_conquest_ambition = {
 				NOT = { scope:recipient = { has_variable = rot_conquest_ambition } }
 				trigger_if = {
 					limit = { has_game_rule = historical_ai_choices }
-					scope:target ?= region:me_ithilien_region
+					scope:target ?= region:me_anorien_region
 				}
 			}
 			value = 1000
@@ -380,85 +380,85 @@ rot_select_core_region = {
 		add = 25
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 100	#Historical AI should always aim for Persia
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = -100	#Timur should have relatively low interest in making Khorasan his core region
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = -20	#Arabia might be too poor for this
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 50	#Anatolia could make sense if Timur aims to role play as a Roman
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 75	#Sword of Islam larp
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 60	#$genghis_khan_name_no_tooltip$ larp
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = -50	#Mountains and horses do not go well together
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 90	#Replacing Yuán
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 90	#Replacing Yuán
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 90	#Replacing Yuán
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 90	#Replacing Yuán
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = -200	#He should never choose Siberia as his core region
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = -200	#He should never choose Siberia as his core region
 			}
 		}
 		add = {
 			if = {
-				limit = { exists = scope:target scope:target = region:me_ithilien_region }
+				limit = { exists = scope:target scope:target = region:me_anorien_region }
 				value = 50	#Might become an early Mughal then
 			}
 		}

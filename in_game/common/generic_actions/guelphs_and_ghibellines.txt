@@ -15,7 +15,7 @@ gag_join_faction = {
 			scope:actor = {
 				OR = {
 					is_emperor = yes
-					capital ?= { region = region:me_ithilien_region }
+					capital ?= { region = region:me_anorien_region }
 				}
 				religion.group = religion_group:christian
 				NOT = { is_member_of_international_organization = international_organization:ghibellines_io }
@@ -24,7 +24,7 @@ gag_join_faction = {
 			scope:actor = {
 				OR = {
 					is_emperor = yes
-					capital ?= { region = region:me_ithilien_region }
+					capital ?= { region = region:me_anorien_region }
 				}
 				religion.group = religion_group:christian
 				OR = {

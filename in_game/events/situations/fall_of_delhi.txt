@@ -7,11 +7,11 @@ scripted_trigger valid_bahmanis_land = {
 			OR = {
 				this = location:sindkedh.province
 				this = location:bijapur.province
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
-			NOT = { area = area:me_ithilien_area_07_07 }
+			NOT = { area = area:me_anorien_area_07_07 }
 		}
 		count > 4
 	}
@@ -20,7 +20,7 @@ scripted_trigger valid_bahmanis_land = {
 scripted_trigger valid_malwa_land = {
 	any_province = {
 		OR = {
-			area = { this = area:me_ithilien_area_07_07 }
+			area = { this = area:me_anorien_area_07_07 }
 			this = location:sabalgarh.province
 			this = location:bhojpur.province
 			this = location:deogarh.province
@@ -34,7 +34,7 @@ scripted_trigger valid_malwa_land = {
 
 scripted_trigger valid_gujarat_land = {
 	any_province = {
-		area = area:me_ithilien_area_07_07
+		area = area:me_anorien_area_07_07
 		count > 2
 	}
 }
@@ -42,9 +42,9 @@ scripted_trigger valid_gujarat_land = {
 scripted_trigger valid_jaunpur_land = {
 	any_province = {
 		OR = {
-			area = area:me_ithilien_area_07_07
-			area = area:me_ithilien_area_07_07
-			area = area:me_ithilien_area_07_07
+			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_07_07
 			this = location:asni.province
 			this = location:kalpi.province
 		}
@@ -66,9 +66,9 @@ scripted_effect pick_best_capital_bahmanis = {
 					province = location:sindkedh.province
 					province = location:bijapur.province
 					province = scope:target_province
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 			}
 			order_by = population
@@ -93,7 +93,7 @@ scripted_effect pick_best_capital_malwa = {
 		ordered_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
 					province = location:sabalgarh.province
 					province = location:bhojpur.province
 					province = location:deogarh.province
@@ -122,7 +122,7 @@ scripted_effect pick_best_capital_gujarat = {
 	}
 	else = {
 		ordered_owned_location = {
-			limit = { area = area:me_ithilien_area_07_07 }
+			limit = { area = area:me_anorien_area_07_07 }
 			order_by = population
 			check_range_bounds = no
 			max = 1
@@ -147,9 +147,9 @@ scripted_effect pick_best_capital_jaunpur = {
 		ordered_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 					province = location:asni.province
 					province = location:kalpi.province
 				}
@@ -203,9 +203,9 @@ scripted_effect release_bahmanis_effect = {
 				province = location:sindkedh.province
 				province = location:bijapur.province
 				province = scope:target_province
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 		}
 		change_location_owner = scope:target_bahmanis_revolter_scope
@@ -247,7 +247,7 @@ scripted_effect release_malwa_effect = {
 	every_owned_location = {
 		limit = {
 			OR = {
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
 				province = location:sabalgarh.province
 				province = location:bhojpur.province
 				province = location:deogarh.province
@@ -295,7 +295,7 @@ scripted_effect release_gujarat_effect = {
 	}
 	every_owned_location = {
 		limit = {
-			area = area:me_ithilien_area_07_07
+			area = area:me_anorien_area_07_07
 		}
 		change_location_owner = scope:target_gujarat_revolter_scope
 		add_core = scope:target_gujarat_revolter_scope
@@ -337,9 +337,9 @@ scripted_effect release_jaunpur_effect = {
 	every_owned_location = {
 		limit = {
 			OR = {
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 				province = location:asni.province
 				province = location:kalpi.province
 			}
@@ -1473,12 +1473,12 @@ fall_of_delhi.17 = {	#Irrigation Works along the Yamuna
 		ordered_province = {
 			limit = {
 				OR = {
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
 				}
 			}
 			order_by = {
@@ -1629,7 +1629,7 @@ fall_of_delhi.18 = {
 
 	immediate = {
 
-		discover_area = area:me_ithilien_area_07_07
+		discover_area = area:me_anorien_area_07_07
 		create_mercenary = {
 			name = mongol_converts_name
 			home = location:khar_balgas

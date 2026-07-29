@@ -1553,13 +1553,13 @@ exploration_monthly.39 = { #Hellish Insects
 		exploration_progress > 0.05
 		location = {
 			OR = {
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 		}
 		OR = {

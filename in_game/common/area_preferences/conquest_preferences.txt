@@ -5,8 +5,8 @@
 # example = {
 #	preference_type = exploration / conquest
 #	modifier = 2 (can be below 1 to reduce desire)
-#	area = me_ithilien_area_07_07
-#	region = me_ithilien_region
+#	area = me_anorien_area_07_07
+#	region = me_anorien_region
 #	continent = bla_bla
 #	sub_continent = bla
 #	allow = { <area triggers> } (area must fulfil the triggers to be considered)
@@ -30,15 +30,15 @@ aragon_conquer_mediterranean_islands = {
 	preference_type = conquest
 	modifier = 5.5
 
-    area = me_ithilien_area_07_07
-    area = me_ithilien_area_07_07
+    area = me_anorien_area_07_07
+    area = me_anorien_area_07_07
 }
 
 france_english_holdings = {
     preference_type = conquest
     modifier = 100 #100 for 100 years of being angry at the English
 
-	region = me_ithilien_region
+	region = me_anorien_region
 	allow = {
 		country_exists = c:ENG
 		any_location_in_area = {
@@ -57,99 +57,99 @@ foreign_league_italy_conquest = {
 	preference_type = conquest
 	modifier = 6
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 france_no_hre = {
     preference_type = conquest
     modifier = 0.1	#we do not want France to charge into the HRE yet
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 france_little_bit_of_hre = {
     preference_type = conquest
     modifier = 4	#we do not want France to charge into the HRE yet
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 france_conquer_northern_italy = {
     preference_type = conquest
     modifier = 3
 
-    area = me_ithilien_area_07_07
-    area = me_ithilien_area_07_07
-    area = me_ithilien_area_07_07
-    area = me_ithilien_area_07_07
-    area = me_ithilien_area_07_07
-    area = me_ithilien_area_07_07
+    area = me_anorien_area_07_07
+    area = me_anorien_area_07_07
+    area = me_anorien_area_07_07
+    area = me_anorien_area_07_07
+    area = me_anorien_area_07_07
+    area = me_anorien_area_07_07
 }
 
 france_revolutionary_conquer_europe = {
     preference_type = conquest
     modifier = 15
 
-    region = me_ithilien_region
-    region = me_ithilien_region
-    region = me_ithilien_region
-    region = me_ithilien_region
+    region = me_anorien_region
+    region = me_anorien_region
+    region = me_anorien_region
+    region = me_anorien_region
 }
 
 naples_conquer_siciliy = {
 	preference_type = conquest
 	modifier = 10.0
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 siciliy_conquer_naples = {
 	preference_type = conquest
 	modifier = 10.0
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 castile_conquer_spain = {
 	preference_type = conquest
 	modifier = 10.0
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 castile_conquer_new_world = {
 	preference_type = conquest
 	modifier = 10.0
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 # when their capital gets moved to constantinople they lose their conquest for their previous home area so we need this also
@@ -157,89 +157,89 @@ ottoman_expansion_anatolia = {
 	preference_type = conquest
 	modifier = 10
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 ottoman_expansion_balkan = {
 	preference_type = conquest
 	modifier = 10
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 ottoman_expansion_caucasus = {
 	preference_type = conquest
 	modifier = 10
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 ottoman_expansion_crescent_egypt = {
 	preference_type = conquest
 	modifier = 10
 
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 ottoman_expansion_maghreb = {
 	preference_type = conquest
 	modifier = 3
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 ottoman_expansion_carpathia = {
 	preference_type = conquest
 	modifier = 3
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 ottoman_expansion_pontic = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 ottoman_expansion_persia = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 ottoman_expansion_arabia = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 ottoman_expansion_hre = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 dutch_conquest = {
@@ -253,59 +253,59 @@ austria_minor_conquest = {
 	preference_type = conquest
 	modifier = 10
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 austria_swiss_intention = {
 	preference_type = conquest
 	modifier = 2
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 austria_bohemia_conquest = {
 	preference_type = conquest
 	modifier = 4
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 austria_northern_italy_conquest = {
 	preference_type = conquest
 	modifier = 8
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 austria_hungary_conquest = {
 	preference_type = conquest	#actually, this was all via PUs and what not, but let the AI just take it through military foce instead
 	modifier = 8
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 austria_empire_conquest = {
 	preference_type = conquest
 	modifier = 6
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 brandenburg_conquest = {
@@ -314,10 +314,10 @@ brandenburg_conquest = {
 
 	formable_country = PRU_f
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 prussia_conquest = {
@@ -326,14 +326,14 @@ prussia_conquest = {
 
 	formable_country = PRU_f
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 german_unification_conquest = {
@@ -344,232 +344,232 @@ german_unification_conquest = {
 
 	formable_country = PRU_f
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 bohemia_core_region = {
 	preference_type = conquest
 	modifier = 5
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 saxony_conquest = {
 	preference_type = conquest
 	modifier = 5
 
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 russia_conquer_region = {
 	preference_type = conquest
 	modifier = 25
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 russia_conquer_scandinavia = {
 	preference_type = conquest
 	modifier = 5
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 russia_conquer_ruthenia_baltic = {
 	preference_type = conquest
 	modifier = 10
 
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 russia_conquer_siberia = {
 	preference_type = conquest
 	modifier = 10
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 lithuania_conquer_livonia = {
 	preference_type = conquest
 	modifier = 10
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 lithuania_conquer_ruthenia = {
 	preference_type = conquest
 	modifier = 5
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	area = me_anorien_area_07_07
 }
 
 poland_conquer_prussia = {
 	preference_type = conquest
 	modifier = 5
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 poland_conquer_ruthenia = {
 	preference_type = conquest
 	modifier = 2.5
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	area = me_anorien_area_07_07
 }
 
 england_conquer_britain = {
 	preference_type = conquest
 	modifier = 5
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 england_conquer_ireland = {
     preference_type = conquest
     modifier = 3
 
-    region = me_ithilien_region
+    region = me_anorien_region
 }
 
 england_conquer_france = {
 	preference_type = conquest
 	modifier = 15
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 scotland_conquer_scotland = {
 	preference_type = conquest
 	modifier = 5
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 byzantium_conquer_anatolia = {
 	preference_type = conquest
 	modifier = 5
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 byzantium_conquer_balkans = {
 	preference_type = conquest
 	modifier = 5
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 byzantium_conquer_italy = {
 	preference_type = conquest
 	modifier = 2.5
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 sweden_swedish_empire_conquests = {
 	preference_type = conquest
 	modifier = 15
 
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 timurids_timur_conquests = {
 	preference_type = conquest
 	modifier = 15
 
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 timurids_anatolian_conquest = {
 	preference_type = conquest
 	modifier = 15
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	region = me_anorien_region
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 timurids_indian_conquest = {
 	preference_type = conquest
 	modifier = 7.5
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 timurids_chinese_conquest = {
 	preference_type = conquest
 	modifier = 5
 
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 timurids_disallow_steppes = {
 	preference_type = conquest
 	modifier = 0.1
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 china_chinese_unification = {
 	preference_type = conquest
 	modifier = 25
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 china_expanded_ambition = {
 	preference_type = conquest
 	modifier = 3
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 venice_conquest = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }

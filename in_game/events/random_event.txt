@@ -1464,7 +1464,7 @@ random_event.31 = {
 	trigger = {
 		capital ?= {
 			sub_continent = sub_continent:me_gondor_subcontinent
-			NOT = { region = region:me_ithilien_region }
+			NOT = { region = region:me_anorien_region }
 		}
 
 		current_age = age_2_renaissance
@@ -1525,7 +1525,7 @@ random_event.32 = {
 		has_ruler = yes
 		capital ?= {
 			sub_continent = sub_continent:me_gondor_subcontinent
-			NOT = { region = region:me_ithilien_region }
+			NOT = { region = region:me_anorien_region }
 		}
 		NOT = { has_country_modifier = italian_siege_engineer }
 

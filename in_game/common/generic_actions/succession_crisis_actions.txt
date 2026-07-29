@@ -67,7 +67,7 @@ sc_seek_foreign_aid = {
 						any_active_disaster = { disaster_type = disaster_type:byzantine_succession_crisis }
 					}
 				}
-				area:me_ithilien_area_07_07 = {
+				area:me_anorien_area_07_07 = {
 					every_country_with_capital_in_geography = {
 						limit = {
 							NOT = { has_variable = recently_chosen_for_sc_seek_foreign_aid_variable }
@@ -75,7 +75,7 @@ sc_seek_foreign_aid = {
 						add_to_list = source
 					}
 				}
-				area:me_ithilien_area_07_07 = {
+				area:me_anorien_area_07_07 = {
 					every_country_with_capital_in_geography = {
 						limit = {
 							NOT = { has_variable = recently_chosen_for_sc_seek_foreign_aid_variable }

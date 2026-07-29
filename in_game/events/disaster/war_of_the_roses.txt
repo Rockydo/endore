@@ -90,7 +90,7 @@ war_of_the_roses.1 = {
 
 		custom_tooltip = {
 			text = york_rebels_joining
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -100,7 +100,7 @@ war_of_the_roses.1 = {
 					}
 				}
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -165,7 +165,7 @@ war_of_the_roses.1 = {
 
 		custom_tooltip = {
 			text = lancaster_rebels_joining
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -175,7 +175,7 @@ war_of_the_roses.1 = {
 					}
 				}
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -470,8 +470,8 @@ war_of_the_roses.9 = {
 		any_owned_location = {
 			average_satisfaction < 0.4
 			AND = {
-					region != region:me_ithilien_region
-					region != region:me_ithilien_region
+					region != region:me_anorien_region
+					region != region:me_anorien_region
 			}
 		}
 	}
@@ -481,8 +481,8 @@ war_of_the_roses.9 = {
 			limit = {
 				average_satisfaction < 0.4
 				AND = {
-					region != region:me_ithilien_region
-					region != region:me_ithilien_region
+					region != region:me_anorien_region
+					region != region:me_anorien_region
 				}
 			}
 			save_scope_as = target_location

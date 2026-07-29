@@ -1,0 +1,1 @@
+﻿# ENDÓRË exact-file overlay: retail Earth-authored map-object transforms are intentionally disabled.

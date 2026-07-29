@@ -19,6 +19,7 @@ import gen_locations
 import gen_locators
 import gen_map_config
 import gen_rivers
+import gen_terrain_cache
 import m2_quarantine
 import m2_runtime
 
@@ -26,6 +27,7 @@ STAGES = (
     ("locations", gen_locations),
     ("definitions", gen_definitions),
     ("heightmap", gen_heightmap),
+    ("terrain_cache", gen_terrain_cache),
     ("rivers", gen_rivers),
     ("templates", gen_location_templates),
     ("adjacencies", gen_adjacencies),

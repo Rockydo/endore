@@ -8,7 +8,7 @@ expansionist_ambitions = {
 		country_rank = country_rank:rank_empire
 		AND = {
 			num_locations > 0
-			capital = { region = region:me_ithilien_region }
+			capital = { region = region:me_anorien_region }
 		}
 	}
 
@@ -25,8 +25,8 @@ poklisars = {
 		AND = {
 			num_locations > 0
 			OR = {
-				capital = { region = region:me_ithilien_region }
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
+				capital = { region = region:me_anorien_region }
 			}
 		}
 		OR = {
@@ -50,8 +50,8 @@ balkan_hajduks = {
 		AND = {
 			num_locations > 0
 			OR = {
-				capital = { region = region:me_ithilien_region }
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
+				capital = { region = region:me_anorien_region }
 			}
 			OR = {
 				culture = { has_culture_group = culture_group:hungarian_group }
@@ -77,8 +77,8 @@ cro_pandurs_recruitment = {
 		AND = {
 			num_locations > 0
 			OR = {
-				capital = { region = region:me_ithilien_region }
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
+				capital = { region = region:me_anorien_region }
 			}
 			OR = {
 				culture = { has_culture_group = culture_group:hungarian_group }

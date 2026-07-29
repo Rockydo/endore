@@ -12,7 +12,7 @@ cb_secure_italy = {
 			}
 		}
 		scope:target = {
-			any_owned_location = { region = region:me_ithilien_region }
+			any_owned_location = { region = region:me_anorien_region }
 		}
 	}
 	create_enabled = {
@@ -21,7 +21,7 @@ cb_secure_italy = {
 	}
 
 	province = {
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
 	}
 
 	war_goal_type = secure_italy_wargoal

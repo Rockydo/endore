@@ -677,7 +677,7 @@ flavor_ori.10 = {
 			text = ori_every_location_in_orissa_with_armory_gains_2_dev
 			every_owned_location = {
 				limit = {
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
 					has_building = building_type:armory
 				}
 				change_development = development_weak_bonus

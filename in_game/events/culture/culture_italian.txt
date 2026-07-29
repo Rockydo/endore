@@ -17,7 +17,7 @@ italian_renaissance_culture.1 = { # To Rival Florentine Wool
         NOT = { tag = FLO }
         NOT = { tag = TUS }
         NOT = { has_variable = italian_rival_wool_industry }
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             any_location_in_region = {
                 AND = {
                     raw_material ?= goods:wool
@@ -63,7 +63,7 @@ italian_renaissance_culture.1 = { # To Rival Florentine Wool
             every_owned_location = {
                 limit = {
                     raw_material = goods:wool
-                    region = region:me_ithilien_region
+                    region = region:me_anorien_region
                 }
                 if = {
                     limit = { is_full_expanded_rgo = no }
@@ -243,7 +243,7 @@ italian_renaissance_culture.4 = { # Capital Becomes a Center of Humanism
         }
         societal_value:spiritualist_vs_humanist > 20
         capital = {
-            region = region:me_ithilien_region
+            region = region:me_anorien_region
             OR = {
                 location_rank = location_rank:town
                 location_rank = location_rank:city
@@ -382,7 +382,7 @@ italian_renaissance_culture.6 = { # Spread of Humanist Ideas from a Italian huma
             current_age = age_2_renaissance
             current_age = age_3_discovery
         }
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             any_location_in_region = {
                 has_variable = is_a_center_of_renaissance_humanism
             }
@@ -400,7 +400,7 @@ italian_renaissance_culture.6 = { # Spread of Humanist Ideas from a Italian huma
         ruler_or_regent ?= {
             save_scope_as = target_character
         }
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             random_location_in_region = {
                 limit = {
                     has_variable = is_a_center_of_renaissance_humanism
@@ -1741,7 +1741,7 @@ italian_renaissance_culture.27 = { # Vittorino da Feltre # Humanist Artist
         current_year >= 1398
         current_year <= 1444
         capital = {
-            region = region:me_ithilien_region
+            region = region:me_anorien_region
             OR = {
                 location_rank = location_rank:town
                 location_rank = location_rank:city
@@ -1925,7 +1925,7 @@ italian_renaissance_culture.29 = { # Guarino da Verona # Student of Chrysoloras
 			is_alive = yes
 		}
         capital = {
-            region = region:me_ithilien_region
+            region = region:me_anorien_region
             OR = {
                 location_rank = location_rank:town
                 location_rank = location_rank:city
@@ -2006,7 +2006,7 @@ italian_renaissance_culture.30 = { # Antonello de Messina # Major Italian Oil Pa
         current_year >= 1444
         current_year <= 1479
         capital = {
-            region = region:me_ithilien_region
+            region = region:me_anorien_region
             OR = {
                 location_rank = location_rank:town
                 location_rank = location_rank:city

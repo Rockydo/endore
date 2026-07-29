@@ -707,10 +707,10 @@ caravanserai = {
 
 	allow = {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -760,11 +760,11 @@ caravan_stop = {
 
 	allow = {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -974,7 +974,7 @@ north_sea_shipyards = {
 
 	location_potential = {
 		is_port = yes
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
 	}
 
 	country_potential = {
@@ -1410,10 +1410,10 @@ ostrog = {
 		has_river = yes
 
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -1520,7 +1520,7 @@ brethren_marsh = {
 		is_port = yes
 		OR = {
 			dominant_culture ?= culture:basque
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 		}
 	}
 
@@ -2151,7 +2151,7 @@ peel_towers = {
 		has_advance = peel_towers_advance
 	}
 	location_potential = {
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
 		is_border = yes
 	}
 
@@ -4501,7 +4501,7 @@ fulani_cattle_rearing_pen = {
 
 	location_potential = {
 		raw_material = goods:livestock
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
 		any_pop = {
 			culture ?= culture:fulbe
 		}
@@ -5023,7 +5023,7 @@ tur_kodjabashi_office = {
 	location_potential = {
 		custom_tooltip = {
 			text = tur_kodjabashi_office_is_in_balkans
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 		OR = {
 			integration_level = conquered

@@ -100,8 +100,8 @@ unit_genoese_galley_location_trigger = {
 
 hobelars_location_trigger = {
 	OR = {
-		region = region:me_ithilien_region
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
+		region = region:me_anorien_region
 	}
 }
 
@@ -133,7 +133,7 @@ unit_is_tribal_pop_trigger = {
 
 
 unit_moa_hunter_location_trigger = {
-	region = region:me_ithilien_region
+	region = region:me_anorien_region
 	raw_material = goods:wild_game
 }
 

@@ -311,7 +311,7 @@ increase_control_in_britain = {
 		has_unlocked_parliament_issue_trigger = {
 			type = increase_control_in_britain
 		}
-		has_presence_in = region:me_ithilien_region
+		has_presence_in = region:me_anorien_region
 		culture_group_percentage_in_country = {
 			culture_group = culture_group:british_group
 			value > 0.1
@@ -321,7 +321,7 @@ increase_control_in_britain = {
 		ordered_owned_non_rural_location = {
 			limit = {
 				OR = {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 					culture_group_percentage = {
 						culture_group = culture_group:british_group
 						value > 0

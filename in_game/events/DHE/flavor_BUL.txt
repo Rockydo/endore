@@ -407,7 +407,7 @@ flavor_bul.5 = { #Bulgarian-Ottoman Wars
 		c:TUR = {
 			has_ruler = yes
 			any_owned_location = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 	}

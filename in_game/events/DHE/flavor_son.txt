@@ -847,7 +847,7 @@ flavor_son.1001 = {
 			save_scope_as = target_character
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_location_in_region = {
 				order_by = population
 				max = 1
@@ -972,7 +972,7 @@ flavor_son.1003 = {
 			save_scope_as = target_character
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_location_in_region = {
 				order_by = population
 				max = 1

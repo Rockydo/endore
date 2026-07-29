@@ -274,7 +274,7 @@ flavor_hsa.5 = {	#Adoption of the League's Seal
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		ordered_owned_foreign_building = {
 			limit = {
-				location.region = region:me_ithilien_region
+				location.region = region:me_anorien_region
 				location != location:lubeck
 			}
 			order_by = {
@@ -294,7 +294,7 @@ flavor_hsa.5 = {	#Adoption of the League's Seal
 			check_range_bounds = no
 			location = { set_variable = { name = eligible_for_event_variable years = 1 } }
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region = {
 				limit = { has_variable = eligible_for_event_variable }
 				save_scope_as = target_location2

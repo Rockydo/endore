@@ -96,7 +96,7 @@ def close_game_crash_reporters(game_exe: Path) -> int:
     return len(reporters)
 
 
-def set_fixed_settings(user_dir: Path) -> None:
+def set_fixed_settings(user_dir: Path, *, visual_map: bool = False) -> None:
     path = user_dir / "pdx_settings.json"
     value = json.loads(path.read_text(encoding="utf-8-sig")) if path.exists() else {}
     value.setdefault("Audio", {}).update(
@@ -151,11 +151,64 @@ def set_fixed_settings(user_dir: Path) -> None:
             "single_unit_armies": True,
         }
     )
+    if visual_map:
+        # Milestone map gates must exercise the renderer the player actually
+        # sees.  The ordinary smoke profile deliberately disables 3D terrain
+        # for speed, which can conceal stale or malformed terrain caches.
+        value["Graphics"].update(
+            {
+                "quality": "medium",
+                "mapobject_quality": "medium",
+                "texture_quality": "high",
+                "anisotropic_filtering": "x8",
+                "low_quality_shaders": False,
+                "render_scale": 1.0,
+            }
+        )
+    value.setdefault("Terrain", {}).update(
+        {
+            "3d_terrain_disable": not visual_map,
+            "triplanar_uv_quality": "medium" if visual_map else "disabled",
+        }
+    )
     value.setdefault("Game", {}).update(
         {"skip_welcome_new_game": True, "first_time_playing": False}
     )
+    value.setdefault("System", {}).update(
+        {
+            "scroll_speed": 100,
+            "zoom_speed": 100,
+            "mouse_cursor_zoom_mode": "mouse_cursor_zoom_mode_zoom_in_to_cursor",
+        }
+    )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent="\t") + "\n", encoding="utf-8")
+
+
+def set_fixed_bindings(user_dir: Path) -> None:
+    """Install deterministic camera keys for autonomous close-terrain inspection."""
+    path = user_dir / "user_bindings" / "user.bindings"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        """version=4
+
+binding={
+\tinput_action="max_zoom_out"
+\tscancode=43
+}
+
+binding={
+\tinput_action="camera_zoom_in"
+\tscancode=75
+}
+
+binding={
+\tinput_action="camera_zoom_out"
+\tscancode=78
+}
+""",
+        encoding="utf-8",
+    )
 
 
 def state() -> dict[str, object]:
@@ -220,7 +273,8 @@ def launch(args: argparse.Namespace) -> int:
     if stale:
         print(f"gamedriver: stopped stale configured EU5 session(s): {stale}")
     close_game_crash_reporters(game_exe)
-    set_fixed_settings(user_dir)
+    set_fixed_settings(user_dir, visual_map=getattr(args, "visual_map", False))
+    set_fixed_bindings(user_dir)
     logs = user_dir / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     command = [
@@ -651,7 +705,10 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
     # This value was calibrated against the local save-load sequence.
     for start_attempt in range(1, 3):
         time.sleep(args.observer_enable_settle if start_attempt == 1 else args.ui_settle)
-        click_normalized(0.50, 0.899)
+        # The country information panel can overlap the right half of this
+        # button after Observer is enabled. Click the stable exposed left
+        # segment at the release UI scale.
+        click_normalized(0.42, 0.86)
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_start_attempt{start_attempt}.png")
         if wait_for_observer_pause(max(15, args.live_timeout // 2)):
@@ -709,6 +766,7 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
                 leavepops=False,
                 debug_mode=False,
                 hidden=False,
+                visual_map=getattr(args, "visual_map", False),
                 extra=[],
             )
         )
@@ -903,8 +961,17 @@ def scroll(args: argparse.Namespace) -> int:
     x = window.left + round(window.width * args.x)
     y = window.top + round(window.height * args.y)
     pyautogui.FAILSAFE = False
-    pyautogui.moveTo(x, y, duration=args.duration)
-    pyautogui.scroll(args.clicks)
+    pyautogui.moveTo(x, y, duration=min(args.duration, 0.2))
+    # A large wheel delta delivered in one Windows message is coalesced by
+    # Clausewitz into only a handful of zoom steps. Emit physical detents over
+    # the requested duration so near/mid/far map gates are deterministic.
+    detents = abs(args.clicks)
+    direction = 1 if args.clicks > 0 else -1
+    interval = args.duration / detents if detents else 0.0
+    for _ in range(detents):
+        pyautogui.scroll(direction)
+        if interval:
+            time.sleep(interval)
     time.sleep(args.settle)
     print(
         f"scrolled {args.clicks:+d} detents at normalized "
@@ -1035,7 +1102,11 @@ def observer_pause_banner(image) -> tuple[bool, float]:
         if value_r >= 80 and value_r >= value_g * 1.45 and value_r >= value_b * 1.65
     )
     ratio = red / len(pixels)
-    return ratio >= 0.18, ratio
+    # The M3 political map can legitimately place a dark-red realm directly
+    # behind this crop. A lower threshold mistakes that map paint for the
+    # transient "Game is Paused" banner and toggles Space every polling pass.
+    # Live calibration: banner 0.436, banner-free political map 0.192.
+    return ratio >= 0.30, ratio
 
 
 def observer_run(args: argparse.Namespace) -> int:
@@ -1154,6 +1225,11 @@ def build_parser() -> argparse.ArgumentParser:
     )
     launch_parser.set_defaults(debug_mode=True)
     launch_parser.add_argument("--hidden", action="store_true")
+    launch_parser.add_argument(
+        "--visual-map",
+        action="store_true",
+        help="enable player-facing 3D terrain quality for milestone map gates",
+    )
     launch_parser.add_argument("extra", nargs="*")
     launch_parser.set_defaults(func=launch)
     wait_parser = sub.add_parser("wait")
@@ -1254,6 +1330,11 @@ def build_parser() -> argparse.ArgumentParser:
     observer_parser.set_defaults(func=observer_run)
     resume_parser = sub.add_parser("resume-observer")
     resume_parser.add_argument("--session", help="evidence session directory")
+    resume_parser.add_argument(
+        "--visual-map",
+        action="store_true",
+        help="enable player-facing 3D terrain quality while resuming",
+    )
     resume_parser.add_argument("--menu-timeout", type=int, default=240)
     resume_parser.add_argument("--menu-minimum", type=int, default=25)
     resume_parser.add_argument("--menu-quiet-seconds", type=int, default=15)
@@ -1312,6 +1393,11 @@ def build_parser() -> argparse.ArgumentParser:
     recover_parser.add_argument("--status-interval", type=float, default=10)
     recover_parser.add_argument("--poll-interval", type=float, default=1)
     recover_parser.add_argument("--session", help="evidence session directory")
+    recover_parser.add_argument(
+        "--visual-map",
+        action="store_true",
+        help="enable player-facing 3D terrain quality after every recovery",
+    )
     recover_parser.add_argument(
         "--maximum-speed",
         action="store_true",

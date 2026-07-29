@@ -22,9 +22,9 @@ is_swiss_for_advances = {
 	culture = { has_culture_group = culture_group:swiss_group }
 	capital ?= {
 		OR = {
-			area = area:me_ithilien_area_07_07
-			area = area:me_ithilien_area_07_07
-			area = area:me_ithilien_area_07_07
+			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_07_07
 		}
 	}
 }

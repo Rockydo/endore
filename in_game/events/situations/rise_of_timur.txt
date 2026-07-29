@@ -615,7 +615,7 @@ rise_of_timur.14 = {
 		}
 		custom_tooltip = {
 			text = rise_of_timur.14.a.tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = {
 						is_capital = yes
@@ -659,7 +659,7 @@ rise_of_timur.15 = {
 		random_neighbor_country = {
 			limit = {
 				capital = {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			save_scope_as = target_country
@@ -1077,7 +1077,7 @@ rise_of_timur.1020 = {
 		historical_option = yes
 		custom_tooltip = {
 			text = rise_of_timur.1020.a.tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = {
 						is_capital = yes
@@ -1100,7 +1100,7 @@ rise_of_timur.1020 = {
 		name = rise_of_timur.1020.b
 		custom_tooltip = {
 			text = rise_of_timur.1020.b.tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = {
 						is_capital = yes
@@ -1215,7 +1215,7 @@ scripted_effect timurs_demands = {
 			custom_tooltip = {
 				text = timurs_demands_at
 				every_subject = {
-					limit = { capital = { region = region:me_ithilien_region } }
+					limit = { capital = { region = region:me_anorien_region } }
 					scope:from_country = {
 						make_subject_of = {
 							target = PREV
@@ -1291,7 +1291,7 @@ rise_of_timur.1030 = {
 			timurs_demands = yes
 		}
 	}
-	#[ShowRegionNameWithNoTooltip('me_ithilien_region')] is big enough for the both of us.
+	#[ShowRegionNameWithNoTooltip('me_anorien_region')] is big enough for the both of us.
 	option = {
 		name = rise_of_timur.1030.b
 		add_government_power = government_power_mild_penalty

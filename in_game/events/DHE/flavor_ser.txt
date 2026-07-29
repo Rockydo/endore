@@ -576,34 +576,34 @@ flavor_ser.30 = { #The Dreams of [GetCharacter('ser_stefan_dusan').GetNameWithNo
 			add_casus_belli = {
 				target = location:thessaloniki.owner
 				type = casus_belli:cb_conquer_province
-				province = location:thessaloniki.province	#me_ithilien_area_07_07_province_01
+				province = location:thessaloniki.province	#me_anorien_area_07_07_province_01
 				years = 20
 			}
 
 			add_casus_belli = {
 				target = location:edessa.owner
 				type = casus_belli:cb_conquer_province
-				province = location:edessa.province			#me_ithilien_area_07_07_province_01
+				province = location:edessa.province			#me_anorien_area_07_07_province_01
 				years = 20
 			}
 
 			add_casus_belli = {
 				target = location:kastoria.owner
-				type = casus_belli:cb_conquer_province		#me_ithilien_area_07_07_province_01
+				type = casus_belli:cb_conquer_province		#me_anorien_area_07_07_province_01
 				province = location:kastoria.province
 				years = 20
 			}
 
 			add_casus_belli = {
 				target = location:rentina.owner
-				type = casus_belli:cb_conquer_province		#me_ithilien_area_07_07_province_01
+				type = casus_belli:cb_conquer_province		#me_anorien_area_07_07_province_01
 				province = location:rentina.province
 				years = 20
 			}
 
 			add_casus_belli = {
 				target = location:larissa.owner
-				type = casus_belli:cb_conquer_province		#me_ithilien_area_07_07_province_01
+				type = casus_belli:cb_conquer_province		#me_anorien_area_07_07_province_01
 				province = location:larissa.province
 				years = 20
 			}
@@ -644,7 +644,7 @@ flavor_ser.31 = { #The Dawn of a New Empire
 			is_alive = yes
 			is_ruler = yes
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			NOT = {
 				any_ownable_location_in_province_definition = {
 					NOT = {
@@ -653,7 +653,7 @@ flavor_ser.31 = { #The Dawn of a New Empire
 				}
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			NOT = {
 				any_ownable_location_in_province_definition = {
 					NOT = {
@@ -662,7 +662,7 @@ flavor_ser.31 = { #The Dawn of a New Empire
 				}
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			NOT = {
 				any_ownable_location_in_province_definition = {
 					NOT = {
@@ -671,7 +671,7 @@ flavor_ser.31 = { #The Dawn of a New Empire
 				}
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			NOT = {
 				any_ownable_location_in_province_definition = {
 					NOT = {
@@ -680,7 +680,7 @@ flavor_ser.31 = { #The Dawn of a New Empire
 				}
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			NOT = {
 				any_ownable_location_in_province_definition = {
 					NOT = {
@@ -1221,7 +1221,7 @@ flavor_ser.80 = { #Shield of the Balkans
 					NOT = { is_enemy_of = ROOT }
 					NOT = { is_rival_of = ROOT }
 					NOT = { has_truce_with = ROOT }
-					capital = { region = region:me_ithilien_region }
+					capital = { region = region:me_anorien_region }
 				}
 				save_scope_as = target_country
 			}
@@ -2100,7 +2100,7 @@ flavor_ser.170 = { # Belgrade - the White Phoenix
 		location:belgrad = {
 			is_capital = yes
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			NOT = {
 				any_location_in_region = {
 					NOT = { this = location:belgrad }

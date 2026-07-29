@@ -98,7 +98,7 @@ flavor_mor.2 = {
 
 		add_migration = {
 			owner = root
-			from = province_definition:me_ithilien_area_07_07_province_01
+			from = province_definition:me_anorien_area_07_07_province_01
 			to = scope:target_location1.province_definition
 			religion = root.religion
 			amount = 0.150
@@ -113,7 +113,7 @@ flavor_mor.2 = {
 
 		add_migration = {
 			owner = root
-			from = province_definition:me_ithilien_area_07_07_province_01
+			from = province_definition:me_anorien_area_07_07_province_01
 			to = scope:target_location2.province_definition
 			religion = root.religion
 			amount = 0.150
@@ -1025,9 +1025,9 @@ flavor_mor.18 = {
 	}
 
 	trigger = {
-		has_presence_in = area:me_ithilien_area_07_07
-		has_presence_in = area:me_ithilien_area_07_07
-		has_presence_in = area:me_ithilien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
 		has_ruler = yes
 		ruler = {
 			dynasty = { dynasty_name = wattasid_dynasty  }
@@ -1773,12 +1773,12 @@ flavor_mor.28 = {
 	trigger = {
 		at_war = yes
 		or = {
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				any_ownable_location_in_province_definition = {
 					top_owner = root
 				}
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				any_ownable_location_in_province_definition = {
 					top_owner = root
 				}
@@ -1830,7 +1830,7 @@ flavor_mor.28 = {
 						rebel != scope:abu_inan_faris_rebels_scope
 					}
 				}
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			every_pop = {
 				limit = {
@@ -2671,14 +2671,14 @@ flavor_mor.1100 = {
 
 	trigger = {
 		any_owned_location = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			raw_material = goods:sugar
 		}
 
 		any_known_country = {
 			num_pop_type_in_country:slaves > 5
 			capital ?= {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				market ?= {
 					is_produced_in_market = goods:slaves_goods
 				}
@@ -2695,7 +2695,7 @@ flavor_mor.1100 = {
 			limit = {
 				num_pop_type_in_country:slaves > 5
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 					market ?= {
 						is_produced_in_market = goods:slaves_goods
 					}
@@ -2720,7 +2720,7 @@ flavor_mor.1100 = {
 			order_by = development
 			max = 1
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				raw_material = goods:sugar
 			}
 			save_scope_as = target_location2

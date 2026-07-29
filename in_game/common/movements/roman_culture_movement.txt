@@ -51,7 +51,7 @@ roman_culture_movement = {
 				}
 
 				if = {
-					limit = { region = region:me_ithilien_region }
+					limit = { region = region:me_anorien_region }
 					add = 100000
 				}
 

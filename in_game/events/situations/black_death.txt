@@ -1010,7 +1010,7 @@ black_death.1010 = { # Armenian Mud
 		religion.group = religion_group:muslim
 		exists = capital.market
 		any_market_with_merchants = {
-			location.region = region:me_ithilien_region
+			location.region = region:me_anorien_region
 			NOT = { this = root.capital.market }
 			"stockpile_in_market(goods:clay)" > 15
 		}
@@ -1020,7 +1020,7 @@ black_death.1010 = { # Armenian Mud
 		set_variable = bd1010_cd
 		random_market_with_merchants = {
 			limit = {
-				location.region = region:me_ithilien_region
+				location.region = region:me_anorien_region
 				"stockpile_in_market(goods:clay)" > 15
 				NOT = { this = root.capital.market }
 			}
@@ -2092,7 +2092,7 @@ black_death.1024 = { # Silk Road Crisis
 		NOT = { has_variable = bd1024_cd }
 		country_has_disease = disease:bubonic_plague
 		NOT = { has_country_modifier = open_silk_trade_modifier }
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 		any_market_present_in_country = { exists = this }
 		NOT = {
 			any_owned_location = { has_location_modifier = state_textiles_modifier }

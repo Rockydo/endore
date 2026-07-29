@@ -151,7 +151,7 @@ japanese_shogunate = {
 		culture = {
 			has_culture_group = culture_group:japanese_group
 		}
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 	}
 
 	can_leave_trigger = {

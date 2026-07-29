@@ -46,6 +46,17 @@ PREVIEW_COLORS = {
     10: (174, 143, 94),
 }
 
+# Installed build 24187685 defines NJominiMap.WATERLEVEL as
+# 32 * 0.08340625. Heightmap samples span that same normalized 0..32 world
+# height, so the corresponding 16-bit shoreline threshold is about 5466.
+# Keep ordinary lowlands comfortably above it even after river incision.
+ENGINE_WATER_LEVEL_PERCENTAGE = 0.08340625
+ENGINE_WATER_LEVEL_SAMPLE = round(65535 * ENGINE_WATER_LEVEL_PERCENTAGE)
+LOWLAND_SOUTH_SAMPLE = 10500.0
+LOWLAND_NORTH_SAMPLE = 13000.0
+WATER_FLOOR_SAMPLE = 420.0
+RIVER_INCISION_SAMPLE = 1450.0
+
 
 @dataclass(frozen=True)
 class Settlement:
@@ -181,8 +192,10 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     if len(size) != 2 or min(size) < 128:
         raise ValueError("invalid control resolution")
     canvas = tuple(int(value) for value in projection["canvas"])
-    if canvas != (8192, 4096):
-        raise ValueError("M2 production canvas must remain 8192x4096")
+    if canvas != (16384, 8192):
+        raise ValueError(
+            "M2 production canvas must match EU5's installed 16384x8192 contract"
+        )
 
     land = land_mask(projection, size)
     land_array = np.asarray(land) > 0
@@ -212,14 +225,20 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     biome_image = Image.fromarray(biome.astype(np.uint8), "L")
 
     yy = np.linspace(0.0, 1.0, size[1], dtype=np.float32)[:, None]
-    base_land = 3500.0 + (1.0 - yy) * 1300.0
-    elevation = np.where(land_array, base_land, 420.0)
-    elevation += ridge_array * 51000.0
+    base_land = LOWLAND_SOUTH_SAMPLE + (
+        1.0 - yy
+    ) * (LOWLAND_NORTH_SAMPLE - LOWLAND_SOUTH_SAMPLE)
+    elevation = np.where(land_array, base_land, WATER_FLOOR_SAMPLE)
+    elevation += np.where(land_array, ridge_array * 45000.0, 0.0)
     river_blur = np.asarray(
         rivers.filter(ImageFilter.GaussianBlur(radius=max(1, size[1] // 240))),
         dtype=np.float32,
     ) / 255.0
-    elevation = np.where(land_array, elevation - river_blur * 1450.0, elevation)
+    elevation = np.where(
+        land_array,
+        elevation - river_blur * RIVER_INCISION_SAMPLE,
+        elevation,
+    )
     mount_doom = next(item for item in settlements if item.key == "mount_doom")
     peak = Image.new("L", size, 0)
     px, py = point((mount_doom.x, mount_doom.y), size)
@@ -232,8 +251,20 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         peak.filter(ImageFilter.GaussianBlur(radius=max(2, radius // 2))),
         dtype=np.float32,
     ) / 255.0
-    elevation += peak_array * 26000.0
+    elevation += np.where(land_array, peak_array * 26000.0, 0.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
+    minimum_land_height = int(elevation[land_array].min())
+    maximum_water_height = int(elevation[~land_array].max())
+    if minimum_land_height <= ENGINE_WATER_LEVEL_SAMPLE:
+        raise ValueError(
+            "authored lowland falls below EU5's installed water level: "
+            f"{minimum_land_height} <= {ENGINE_WATER_LEVEL_SAMPLE}"
+        )
+    if maximum_water_height >= ENGINE_WATER_LEVEL_SAMPLE:
+        raise ValueError(
+            "authored water rises above EU5's installed water level: "
+            f"{maximum_water_height} >= {ENGINE_WATER_LEVEL_SAMPLE}"
+        )
     elevation_image = Image.fromarray(elevation)
 
     density = np.full((size[1], size[0]), 18, dtype=np.uint8)
@@ -310,6 +341,9 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),
         "land_fraction": round(float(land_array.mean()), 6),
+        "engine_water_level_sample": ENGINE_WATER_LEVEL_SAMPLE,
+        "minimum_land_height": minimum_land_height,
+        "maximum_water_height": maximum_water_height,
         "biome_ids": BIOMES,
         "source_sha256": source_hash,
     }

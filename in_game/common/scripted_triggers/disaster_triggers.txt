@@ -689,7 +689,7 @@ fate_of_the_phoenix_end_trigger = {
 	}
 	custom_tooltip = {
 		text = remember_no_turk_tt
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			NOT = {
 				any_country_with_capital_in_geography = {
 					this != root

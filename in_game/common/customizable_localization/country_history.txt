@@ -101,12 +101,12 @@ country_history = {
 	text = { localization_key = country_history_irish_minors trigger = { culture = culture:irish } } # Irish Gaelic
 	text = { localization_key = country_history_anglo_irish_minors trigger = { culture = culture:anglo_irish } } # Anglo Irish
 	text = { localization_key = country_history_finnic trigger = { culture = { has_culture_group = culture_group:finnic_group } } } # Finnic Cultures
-	text = { localization_key = country_history_italian trigger = { culture = { has_culture_group = culture_group:italian_group } capital.region = region:me_ithilien_region } } # Italian Cultures
+	text = { localization_key = country_history_italian trigger = { culture = { has_culture_group = culture_group:italian_group } capital.region = region:me_anorien_region } } # Italian Cultures
 	text = { localization_key = country_history_polish trigger = { culture = { has_culture_group = culture_group:polish_group } } } # Polish Cultures
 	text = { localization_key = country_history_bohemian trigger = { culture = { has_culture_group = culture_group:bohemian_group } } } # Bohemian Cultures
-	text = { localization_key = country_history_ruthenia trigger = { capital.region = region:me_ithilien_region } } # Ruthenia
+	text = { localization_key = country_history_ruthenia trigger = { capital.region = region:me_anorien_region } } # Ruthenia
 	text = { localization_key = country_history_east_slavic trigger = { culture = { has_culture_group = culture_group:russian_group } } } # East Slavic Cultures
-	text = { localization_key = country_history_iberian trigger = { culture = { has_culture_group = culture_group:iberian_group } capital.region = region:me_ithilien_region } } # Iberian Cultures
+	text = { localization_key = country_history_iberian trigger = { culture = { has_culture_group = culture_group:iberian_group } capital.region = region:me_anorien_region } } # Iberian Cultures
 	# Africa
 	# Asia
 	text = { localization_key = country_history_georgian trigger = { culture = culture:georgian_culture } } # Georgian
@@ -126,36 +126,36 @@ country_history = {
 	text = { localization_key = country_history_scandinavia # Scandinavian and Northern Islands Region
 		trigger = {
 			OR = {
-				capital.region = region:me_ithilien_region capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region capital.region = region:me_anorien_region
 			}
 		}
 	}
-	text = { localization_key = country_history_france trigger = { capital.region = region:me_ithilien_region } } # France
-	text = { localization_key = country_history_britain trigger = { capital.region = region:me_ithilien_region } } # Britain
-	text = { localization_key = country_history_balkan trigger = { capital.region = region:me_ithilien_region } } # Balkan
+	text = { localization_key = country_history_france trigger = { capital.region = region:me_anorien_region } } # France
+	text = { localization_key = country_history_britain trigger = { capital.region = region:me_anorien_region } } # Britain
+	text = { localization_key = country_history_balkan trigger = { capital.region = region:me_anorien_region } } # Balkan
 	# Africa
-	text = { localization_key = country_history_maghreb trigger = { capital.region = region:me_ithilien_region } } # Maghreb
+	text = { localization_key = country_history_maghreb trigger = { capital.region = region:me_anorien_region } } # Maghreb
 	text = { # Sahel
 		localization_key = country_history_sahel
 		trigger = {
 			OR = {
-				capital.region = region:me_ithilien_region
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 	}
-	text = { localization_key = country_history_kongo trigger = { capital.region = region:me_ithilien_region } } # Kongo
+	text = { localization_key = country_history_kongo trigger = { capital.region = region:me_anorien_region } } # Kongo
 	text = { localization_key = country_history_east_africa trigger = { capital.sub_continent = sub_continent:me_gondor_subcontinent } } # East Africa
 	# Asia
-	text = { localization_key = country_history_anatolia trigger = { capital.region = region:me_ithilien_region } } # Anatolia
-	text = { localization_key = country_history_caucasus trigger = { capital.region = region:me_ithilien_region } } # Caucasus
+	text = { localization_key = country_history_anatolia trigger = { capital.region = region:me_anorien_region } } # Anatolia
+	text = { localization_key = country_history_caucasus trigger = { capital.region = region:me_anorien_region } } # Caucasus
 	text = { # Middle East
 		localization_key = country_history_middle_east
 		trigger = {
 			OR = {
-				capital.region = region:me_ithilien_region
-				capital.region = region:me_ithilien_region
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
+				capital.region = region:me_anorien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 	}
@@ -163,15 +163,15 @@ country_history = {
 		localization_key = country_history_china
 		trigger = {
 			OR = {
-				capital.region = region:me_ithilien_region
-				capital.region = region:me_ithilien_region
-				capital.region = region:me_ithilien_region
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
+				capital.region = region:me_anorien_region
+				capital.region = region:me_anorien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 	}
-	text = { localization_key = country_history_indonesia trigger = { capital.region = region:me_ithilien_region } } # Indonesia
-	text = { localization_key = country_history_indochina trigger = { capital.region = region:me_ithilien_region } } # Indochina
+	text = { localization_key = country_history_indonesia trigger = { capital.region = region:me_anorien_region } } # Indonesia
+	text = { localization_key = country_history_indochina trigger = { capital.region = region:me_anorien_region } } # Indochina
 
 	# Generic Continental
 	# America

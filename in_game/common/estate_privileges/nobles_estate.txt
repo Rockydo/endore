@@ -1102,13 +1102,13 @@ powerful_italian_families = {
 	can_revoke = {
 		custom_tooltip = {
 			text = powerful_italian_families.tt
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 		}
 	}
 	location_modifier = {
 
 		potential_trigger = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 		local_crown_estate_power = -0.5
 	}
@@ -1616,7 +1616,7 @@ justicia_de_aragon = {
 
 	location_modifier = {
         potential_trigger = {
-            area = area:me_ithilien_area_07_07
+            area = area:me_anorien_area_07_07
         }
         local_crown_estate_power = -0.25
     }
@@ -1647,7 +1647,7 @@ formalized_oath = {
 
 	location_modifier = {
         potential_trigger = {
-            area = area:me_ithilien_area_07_07
+            area = area:me_anorien_area_07_07
         }
         local_nobles_estate_power = 0.25
     }

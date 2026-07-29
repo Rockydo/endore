@@ -260,7 +260,7 @@ language.20 = {
 			triggered_desc = {
 				trigger = {
 					NOT = { culture = culture:norman }
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 					court_language = language:french_language
 				}
 				desc = language.20.desc_IRE
@@ -302,7 +302,7 @@ language.20 = {
 		set_variable = { name = language_20_flag value = 1 }
 		court_language = { save_scope_as = court_language }
 		culture:norman = { save_scope_as = norman_culture } # used in some country-specific loc
-		region:me_ithilien_region = { save_scope_as = me_ithilien_region } # used in some country-specific loc
+		region:me_anorien_region = { save_scope_as = me_anorien_region } # used in some country-specific loc
 
 		culture ?= {
 			save_scope_as = primary_culture

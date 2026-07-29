@@ -274,7 +274,7 @@ flavor_lit.3 = {
 
 		custom_tooltip = {
 			text = smolensk_owned_by_muscovy_tt
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				every_location_in_area = {
 					limit = {
 						top_owner = scope:target_root_country
@@ -1260,7 +1260,7 @@ flavor_lit.15 = {
 			any_country_in_religion = {
 				NOT = { this = c:MOS }
 				is_subject = no
-				has_presence_in = region:me_ithilien_region
+				has_presence_in = region:me_anorien_region
 				NOT = {
 					has_mutual_scripted_relation = {
 						type = relation_type:alliance
@@ -1287,7 +1287,7 @@ flavor_lit.15 = {
 				limit = {
 					NOT = { this = c:MOS }
 					is_subject = no
-					has_presence_in = region:me_ithilien_region
+					has_presence_in = region:me_anorien_region
 				}
 				order_by = total_population
 				position = 1
@@ -1299,7 +1299,7 @@ flavor_lit.15 = {
 				limit = {
 					NOT = { this = c:MOS }
 					is_subject = no
-					has_presence_in = region:me_ithilien_region
+					has_presence_in = region:me_anorien_region
 				}
 				order_by = total_population
 				position = 2
@@ -1311,7 +1311,7 @@ flavor_lit.15 = {
 				limit = {
 					NOT = { this = c:MOS }
 					is_subject = no
-					has_presence_in = region:me_ithilien_region
+					has_presence_in = region:me_anorien_region
 				}
 				order_by = total_population
 				position = 3
@@ -1562,9 +1562,9 @@ flavor_lit.19 = {#Fancy New Dishes
 		consort = {
 			birth_location = {
 				OR = {
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
 				}
 			}
 		}
@@ -2769,7 +2769,7 @@ flavor_lit.34 = {
 	}
 
 	trigger = {
-		has_presence_in = region:me_ithilien_region
+		has_presence_in = region:me_anorien_region
 	}
 
 	option = {
@@ -3026,7 +3026,7 @@ flavor_lit.38 = {
 	fire_only_once = yes
 
 	trigger = {
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_ownable_location_in_region = {
 				percent >= 0.05
 				raw_material = goods:wheat
@@ -3042,7 +3042,7 @@ flavor_lit.38 = {
 			text = lit_cheaper_granaries_in_ruthenia_tt
 			every_owned_location = {
 				limit = {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 					raw_material = goods:wheat
 				}
 				add_location_modifier = {

@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "canvas": [
-    8192,
-    4096
+    16384,
+    8192
   ],
   "control_resolution": [
     1024,
@@ -10,10 +10,13 @@
   ],
   "settlements": 41,
   "ridges": 7,
-  "passes": 5,
+  "passes": 7,
   "rivers": 9,
   "lakes": 4,
-  "land_fraction": 0.501457,
+  "land_fraction": 0.521782,
+  "engine_water_level_sample": 5466,
+  "minimum_land_height": 10477,
+  "maximum_water_height": 420,
   "biome_ids": {
     "ocean": 0,
     "temperate": 1,
@@ -27,5 +30,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "3dd8bbd72b1b79f65e4ebf224f210a904e9ebd57e205c89f1563408f044dfe62"
+  "source_sha256": "a8d4163722783ce133cdc07f1df7b343c4f3ee7e4102bbd8d3fbdcf201af5e7a"
 }

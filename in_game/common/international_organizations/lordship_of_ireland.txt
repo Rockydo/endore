@@ -119,7 +119,7 @@ lordship_of_ireland = {
 			NOT = { is_subject_of = scope:recipient.leader_country }
 			OR = {
 				NOT = {
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 				}
 				AND = {
 					opinion = {
@@ -139,7 +139,7 @@ lordship_of_ireland = {
 	auto_leave_trigger = {
 		OR = {
 			NOT = {
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 			is_member_of_international_organization_of_type = { type = high_kingship }
 		}

@@ -75,7 +75,7 @@ flavor_chi_mon.1 = {
 			limit = {
 				NOT = { exists = scope:location_for_capture }
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				ordered_location_in_region = {
 					limit = {
 						owner ?= scope:target_country

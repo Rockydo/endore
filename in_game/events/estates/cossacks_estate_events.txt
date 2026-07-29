@@ -14,9 +14,9 @@ scripted_trigger is_steppe_location = {
 		AND = {
 			climate = continental
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}

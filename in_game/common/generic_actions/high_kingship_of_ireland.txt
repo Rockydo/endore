@@ -15,7 +15,7 @@ reclaim_high_kingship_land = {
                 leader_country = prev
             }
         }
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
            any_ownable_location_in_region = {
                 owner = {
                     NOT = {
@@ -49,7 +49,7 @@ reclaim_high_kingship_land = {
     select_trigger = {
 		looking_for_a = province
 		interaction_source_list = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
                 every_ownable_location_in_region = {
                     limit = {
                         owner = {

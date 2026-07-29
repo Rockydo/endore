@@ -1088,7 +1088,7 @@ muslim_school_events.18 = {
 			dominant_religion = owner.religion
 			is_capital = no
 			integration_level = conquered
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			NOT = {	has_location_modifier = alevi_modifier }
 		}
 	}
@@ -1106,7 +1106,7 @@ muslim_school_events.18 = {
 					dominant_religion = owner.religion
 					is_capital = no
 					integration_level = conquered
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 					NOT = {	has_location_modifier = alevi_modifier }
 				}
 				save_scope_as = alevi_province

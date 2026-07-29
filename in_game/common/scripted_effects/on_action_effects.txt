@@ -155,7 +155,7 @@ byz_set_up = {
 		target = character:byz_john_kantakouzenos
 	}
 
-	province_definition:me_ithilien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_07_07_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -166,7 +166,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_ithilien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_07_07_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -177,13 +177,13 @@ byz_set_up = {
 			}
 		}
 	}
-	area:me_ithilien_area_07_07 = {
+	area:me_anorien_area_07_07 = {
 		every_ownable_location_in_area = {
 			limit = {
 				is_coastal = yes
 				NOR = {
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
 					this = location:corinth
 					this = location:xylokastro
 				}
@@ -194,7 +194,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_ithilien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_07_07_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -206,7 +206,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_ithilien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_07_07_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -217,7 +217,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_ithilien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_07_07_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -228,7 +228,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_ithilien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_07_07_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -409,7 +409,7 @@ setup_area_preferences = {
 			add_area_preference = avoid_south_east_asica_colonization
 		}
 	}
-	region:me_ithilien_region = {
+	region:me_anorien_region = {
 		every_country_with_capital_in_geography = {
 			add_area_preference = generic_conquer_home_region
 		}

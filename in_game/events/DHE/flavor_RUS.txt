@@ -228,12 +228,12 @@ flavor_rus.3 = {
 			controller = root
 		}
 
-		own_entire_area = area:me_ithilien_area_07_07
-		own_entire_area = area:me_ithilien_area_07_07
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
 		any_known_country = {
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			OR = {
 				country_type = army
 				country_type = location
@@ -262,7 +262,7 @@ flavor_rus.3 = {
 
 		every_known_country = {
 			limit = {
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 				OR = {
 					country_type = army
 					country_type = location
@@ -299,7 +299,7 @@ flavor_rus.3 = {
 
 		every_known_country = {
 			limit = {
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 			add_opinion = {
 				target = root
@@ -333,9 +333,9 @@ flavor_rus.4 = {
 			owner = root
 			controller = root
 		}
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
-		NOT = { own_entire_area = area:me_ithilien_area_07_07 }
+		NOT = { own_entire_area = area:me_anorien_area_07_07 }
 		country_exists = c:PLC
 		c:PLC = {
 			is_neighbor_of = root
@@ -356,7 +356,7 @@ flavor_rus.4 = {
 
 		root = { save_scope_as = target_root_country }
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -376,7 +376,7 @@ flavor_rus.4 = {
 		name = flavor_rus.4.a
 		historical_option = yes
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -434,7 +434,7 @@ flavor_rus.4 = {
 			}
 		}
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -485,15 +485,15 @@ flavor_rus.5 = {
 			controller = root
 		}
 
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
-		NOT = { own_entire_area = area:me_ithilien_area_07_07 }
+		NOT = { own_entire_area = area:me_anorien_area_07_07 }
 	}
 
 	illustration_tags = {
@@ -511,7 +511,7 @@ flavor_rus.5 = {
 	option = {
 		name = flavor_rus.5.a
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -1171,7 +1171,7 @@ flavor_rus.14 = {
 			}
 		}
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				owner = {
 					is_member_of_international_organization_of_type = {
@@ -1718,7 +1718,7 @@ flavor_rus.19 = {
 	trigger = {
 
 		any_owned_location = {
-			area = area:me_ithilien_area_07_07
+			area = area:me_anorien_area_07_07
 			dominant_culture = {
 				this != root.culture
 				has_culture_group = culture_group:russian_group
@@ -1737,7 +1737,7 @@ flavor_rus.19 = {
 
 		ordered_owned_location = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				dominant_culture = {
 					this != root.culture
 					has_culture_group = culture_group:russian_group
@@ -1769,7 +1769,7 @@ flavor_rus.19 = {
 			text = stenka_razin_tt
 			every_owned_location = {
 				limit = {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 				every_pop = {
 					limit = {
@@ -1795,7 +1795,7 @@ flavor_rus.19 = {
 			text = stenka_razin_gives_up_tt1
 			every_owned_location = {
 				limit = {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 				change_control = control_ultimate_penalty
 			}
@@ -1817,7 +1817,7 @@ flavor_rus.19 = {
 			text = stenka_razin_gives_up_tt2
 			every_owned_location = {
 				limit = {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 				change_control = control_mild_penalty
 			}
@@ -1852,13 +1852,13 @@ flavor_rus.20 = {
 
 		any_owned_location = {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 		c:CHI = {
 			any_owned_location = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 	}
@@ -1879,7 +1879,7 @@ flavor_rus.20 = {
 
 		every_owned_location = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			change_location_owner = c:CHI
 			remove_core = root
@@ -1899,8 +1899,8 @@ flavor_rus.20 = {
 			limit = {
 				any_owned_location = {
 					OR = {
-						region = region:me_ithilien_region
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
+						region = region:me_anorien_region
 					}
 				}
 			}
@@ -2448,7 +2448,7 @@ flavor_rus.27 = {
 		}
 		stability < 25
 		any_owned_location = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -2479,7 +2479,7 @@ flavor_rus.27 = {
 
 		random_owned_location = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			save_scope_as = target_location
 		}
@@ -2494,7 +2494,7 @@ flavor_rus.27 = {
 
 		custom_tooltip = {
 			text = pugatchev_uprising_tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					random_pop = {
 						limit = {
@@ -2515,12 +2515,12 @@ flavor_rus.27 = {
 				}
 				any_owned_location = {
 					count > 3
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			while = {
 				count = 3
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					random_location_in_region = {
 						every_pop = {
 							limit = {
@@ -2782,7 +2782,7 @@ flavor_rus.31 = {
 
 		c:SWE = {
 			government_type = government_type:monarchy
-			own_entire_area = area:me_ithilien_area_07_07
+			own_entire_area = area:me_anorien_area_07_07
 		}
 	}
 
@@ -2846,7 +2846,7 @@ flavor_rus.31 = {
 
 		custom_tooltip = {
 			text = flavor_rus.31.a.custom
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -3011,7 +3011,7 @@ flavor_rus.33 = {
 
 		OR = {
 			any_owned_location = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				has_institution = institution:enlightenment
 			}
 			has_reform = government_reform:autocracy
@@ -3074,7 +3074,7 @@ flavor_rus.33 = {
 		trigger = {
 			any_owned_location = {
 				count > 0
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 
@@ -3339,7 +3339,7 @@ flavor_rus.37 = {
 
 		any_owned_location = {
 			count > 10
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 
 	}
@@ -3651,11 +3651,11 @@ flavor_rus.41 = {
 		NOT = {
 			any_subject_or_below = {
 				is_subject_type = trade_company
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				is_coastal_within_range = yes
 			}
@@ -3672,7 +3672,7 @@ flavor_rus.41 = {
 
 
 	immediate = {
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region = {
 				limit = {
 					raw_material = goods:fur
@@ -6855,7 +6855,7 @@ flavor_rus.64 = {
 			}
 		}
 
-		own_entire_province = province_definition:me_ithilien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_07_07_province_01
 
 		NOT = {
 			has_policy = figurehead_position_policy
@@ -6872,7 +6872,7 @@ flavor_rus.64 = {
 
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = von_biron_origin
 			}

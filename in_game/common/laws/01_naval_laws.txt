@@ -176,7 +176,7 @@ piracy_law = {
 					has_reform = government_reform:crusade_sea_reform
 					has_reform = government_reform:galley_lords_reform
 					has_reform = government_reform:pirate_brethren_reform
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 				}
 			}
 		}

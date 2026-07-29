@@ -110,7 +110,7 @@ scripted_effect ccw_set_rebels_scope = {
 }
 
 scripted_effect ccw_set_promised_basque_land_scopes = {
-	province_definition:me_ithilien_area_07_07_province_01 = { save_scope_as = target_province_definition }
+	province_definition:me_anorien_area_07_07_province_01 = { save_scope_as = target_province_definition }
 	location:calahorra = { save_scope_as = target_location_1 }
 	location:logrono = { save_scope_as = target_location_2 }
 }
@@ -309,7 +309,7 @@ scripted_effect ccw_setup_rewards_for_joining_side = {
 	#British / French lands promised
 	#bilbao valmaseda laredo
 	#Random neighboring province for Aragon
-	province_definition:me_ithilien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_07_07_province_01 = {
 		save_scope_as = target_province_definition
 	}
 }
@@ -792,7 +792,7 @@ castilian_civil_war.2 = {
 		var:succession_crisis_pretender_variable = {
 			rebel_progress < 1
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_area_in_region = {
 				any_province_in_area = {
 					province_average_control < 0.5
@@ -821,7 +821,7 @@ castilian_civil_war.2 = {
 		var:succession_crisis_pretender_variable = {
 			save_scope_as = target_rebels
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_area_in_region = {
 				limit = {	#Yes, the limit is checked TWICE to make sure the game actually realizes that I want a) the area with a fitting province and b) the fitting province in the aforementioned area..
 					any_province_in_area = {

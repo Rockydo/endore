@@ -22,11 +22,11 @@ flavor_gra.1 = {
 
 		capital = {
 			OR = {
-				area = area:me_ithilien_area_07_07
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				area = area:me_anorien_area_07_07
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}
@@ -39,7 +39,7 @@ flavor_gra.1 = {
 		event_illustration_estate_background_effect = { background = estate_type:peasants_estate }
 		set_variable = { name = received_granada_refugees value = 1 }
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_location_in_region = {
 				limit = {
 					exists = dominant_religion
@@ -92,7 +92,7 @@ flavor_gra.2 = {
 	}
 
 	trigger = {
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 	}
 
 	illustration_tags = {

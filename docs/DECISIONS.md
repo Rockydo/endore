@@ -1,5 +1,27 @@
 # Decisions
 
+## 2026-07-29 — Physical-map gate precedence
+
+Treat political-shape screenshots as insufficient evidence for any custom-map milestone.
+M1/M2 is green only when the same authored coordinates agree across the political raster,
+16-bit height source, complete virtual terrain cache, and close physical renderer. The
+owner's close-zoom report superseded the earlier gate immediately; unfinished M3 realm
+work was isolated until the physical world was corrected.
+
+Use the installed raw-height waterline as an enforced generator contract. Keep every
+authored water sample below it and every ordinary land sample safely above it after river
+incision. Own the complete terrain cache and suppress every installed Earth-authored
+generated/static transform definition through deterministic exact-file overlays.
+
+## 2026-07-29 — Later generated-art reference direction
+
+For every later generated bitmap family, use precise real EU5 assets as the primary style
+and format references and actual images from Peter Jackson's three *Lord of the Rings*
+films as additional art-direction references. Film material guides mood, production
+design, costume, landscape, and lighting only; Tolkien canon remains authoritative for
+content. Reference images stay in a gitignored G:-drive cache and are not redistributed.
+Icons are generated four distinct designs per sheet, split locally, and individually QA'd.
+
 ## 2026-07-29 — M2 deep-load quarantine
 
 Keep the M2 inherited-content quarantine exact, generated, and milestone-scoped. The

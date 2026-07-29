@@ -37,9 +37,9 @@ convert_religion = {
 				OR = {
 					AND = {
 						is_member_of_international_organization = international_organization:hre
-						has_presence_in = region:me_ithilien_region
+						has_presence_in = region:me_anorien_region
 					}
-					has_presence_in = region:me_ithilien_region
+					has_presence_in = region:me_anorien_region
 				}
 			}
 			OR = {
@@ -311,9 +311,9 @@ convert_religion = {
 					OR = {
 						AND = {
 							is_member_of_international_organization = international_organization:hre
-							has_presence_in = region:me_ithilien_region
+							has_presence_in = region:me_anorien_region
 						}
-						has_presence_in = region:me_ithilien_region
+						has_presence_in = region:me_anorien_region
 					}
 				}
 			}

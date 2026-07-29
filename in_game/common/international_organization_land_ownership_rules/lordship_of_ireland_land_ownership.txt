@@ -11,7 +11,7 @@ lordship_of_ireland_land_ownership = {
 
 	# root = location, recipient = international organization
 	can_add_location_trigger = {
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
 		is_land = yes
 		is_passable = yes
 	}

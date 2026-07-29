@@ -39,9 +39,9 @@ swiss_eternal_alliance = {
 		}
 		original_capital ?= {
 			OR = {
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 		}
 	}

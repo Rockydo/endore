@@ -637,21 +637,21 @@ scripted_effect if_possible_make_tributary = {
 
 scripted_trigger exceptional_gift_cloves_trigger = {
 	capital ?= {
-		area = area:me_ithilien_area_07_07
+		area = area:me_anorien_area_07_07
 	}
 }
 
 scripted_trigger exceptional_gift_giraffe_trigger = {
 	capital ?= {
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
 	}
 }
 
 scripted_trigger exceptional_gift_persian_blue_trigger = {
 	capital ?= {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 }
@@ -2423,9 +2423,9 @@ flavor_chi.2205 = {
 				}
 				birth_location ?= {
 					OR = {
-						region = region:me_ithilien_region
-						region = region:me_ithilien_region
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
+						region = region:me_anorien_region
+						region = region:me_anorien_region
 					}
 				}
 			}
@@ -2439,9 +2439,9 @@ flavor_chi.2205 = {
 				random_owned_location = {
 					limit = {
 						OR = {
-							region = region:me_ithilien_region
-							region = region:me_ithilien_region
-							region = region:me_ithilien_region
+							region = region:me_anorien_region
+							region = region:me_anorien_region
+							region = region:me_anorien_region
 						}
 					}
 					save_scope_as = target_location

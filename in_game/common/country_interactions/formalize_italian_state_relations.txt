@@ -28,7 +28,7 @@ formalize_relations = {
 		}
 		visible = {
 			NOT = { tag = PAP }
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			is_subject = no
 		}
         enabled = {

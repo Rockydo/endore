@@ -263,9 +263,9 @@ flavor_swi.100 = {
 		}
 		custom_tooltip = {
 			text = sc_gain_cores_on_switzerland_proper_tt
-			area:me_ithilien_area_07_07 = { core_and_seize_swiss_lands = yes }
-			area:me_ithilien_area_07_07 = { core_and_seize_swiss_lands = yes }
-			area:me_ithilien_area_07_07 = { core_and_seize_swiss_lands = yes }
+			area:me_anorien_area_07_07 = { core_and_seize_swiss_lands = yes }
+			area:me_anorien_area_07_07 = { core_and_seize_swiss_lands = yes }
+			area:me_anorien_area_07_07 = { core_and_seize_swiss_lands = yes }
 		}
 		custom_tooltip = sc_seize_subject_locations_tt
 		if = {

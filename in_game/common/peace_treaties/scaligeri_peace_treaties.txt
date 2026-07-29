@@ -103,7 +103,7 @@ ver_milanese_demands = {
 			is_an_attacker = scope:winner
 			is_an_attacker = c:MLO
 		}
-		exists = scope:loser.province:me_ithilien_area_07_07_province_01
+		exists = scope:loser.province:me_anorien_area_07_07_province_01
 	}
 
 	allow = {
@@ -117,7 +117,7 @@ ver_milanese_demands = {
 				scope:war.var:MLO_demands = flag:brescia_demand
 			}
 			scope:loser = {
-				province:me_ithilien_area_07_07_province_01 = {
+				province:me_anorien_area_07_07_province_01 = {
 					change_province_owner = c:MLO
 				}
 			}
@@ -127,7 +127,7 @@ ver_milanese_demands = {
 				scaligeri_peace_treaty_tooltip_fallback_scopes = yes
 				scope:war.var:MLO_demands = flag:parma_demand
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= {
@@ -204,7 +204,7 @@ ver_florentine_demands = {
 				scaligeri_peace_treaty_tooltip_fallback_scopes = yes
 				scope:war.var:FLO_demands = flag:lucca_demand
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= {
@@ -281,7 +281,7 @@ ver_venetian_demands = {
 			limit = {
 				scope:war.var:VEN_demands = flag:treviso_demand
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_07_07_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= {

@@ -34,7 +34,7 @@ lordship_of_ireland_casus_belli = {
     select_trigger = {
         looking_for_a = country
 		interaction_source_list = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					owner ?= {
 						add_to_list = source
@@ -47,7 +47,7 @@ lordship_of_ireland_casus_belli = {
         column = { data = name }
         visible = {
 			NOT = { this = scope:actor }
-			capital = { region = region:me_ithilien_region }
+			capital = { region = region:me_anorien_region }
 			NOT = { is_member_of_international_organization = international_organization:lordship_of_ireland }
         }
 
@@ -139,7 +139,7 @@ lordship_of_ireland_invite_planters = {
 		name = "migrate_pop_based_country_select_source_area"
 
 		interaction_source_list = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_area_in_region = {
 					add_to_list = source
 				}
@@ -165,7 +165,7 @@ lordship_of_ireland_invite_planters = {
 		looking_for_a = province_definition
 		target_flag = target_province
 		interaction_source_list = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_area_in_region = {
 					every_province_definition_in_area = {
 						add_to_list = source
@@ -259,7 +259,7 @@ lordship_of_ireland_form_kingdom = {
 		}
 		custom_tooltip = {
 			text = lordship_of_ireland_form_kingdom_region_tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				NOT = {
 					any_location_in_region = {
 						owner ?= {

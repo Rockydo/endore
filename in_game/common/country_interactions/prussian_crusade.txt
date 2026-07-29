@@ -23,7 +23,7 @@ send_to_prussian_crusade =  {
 			data = name
 		}
 		visible = {
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			has_reform = government_reform:military_order_reform
 			religion = religion:catholic
 		}
@@ -123,7 +123,7 @@ invite_to_prussian_crusade =  {
 	type = diplomacy
 	potential = {
 		scope:actor = {
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			has_reform = government_reform:military_order_reform
 			religion = religion:catholic
 		}

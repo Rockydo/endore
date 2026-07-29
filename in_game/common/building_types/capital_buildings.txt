@@ -705,7 +705,7 @@ italian_administration_center = {
 		NOT = { is_situation_active = situation:italian_wars }
 	}
 
-	location_potential = { region = region:me_ithilien_region }
+	location_potential = { region = region:me_anorien_region }
 
 	allow = {
 		custom_tooltip = {

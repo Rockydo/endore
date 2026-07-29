@@ -97,9 +97,9 @@ personality_events.2 = {
 		random_owned_location = {
 			limit = {
 				OR = {
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
 				}
 				any_neighbor_location = {
 					NOT = { is_discovered_by = root }

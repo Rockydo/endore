@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "resolution": [
-    4096,
-    2048
+    8192,
+    4096
   ],
   "format": "DDS DXT5",
   "vanilla_reference": "in_game/gfx/map/flatmap/flatmap_staticbackup.dds",

@@ -113,3 +113,25 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
 - Final deep verification entered Observer, resolved Minas Tirith, Rivendell, and Orodruin
   through `goto`, and advanced cleanly from 3018.1.1 to 3018.1.9. The only deep-load line
   beyond the paired menu baseline is the machine `AudioArena` allocation notice.
+
+## Binding native physical-map correction
+
+- The earlier reduced-resolution M2 visual gate is superseded. The binding production
+  contract uses the installed native raster dimensions: 16384x8192 locations and rivers,
+  8192x4096 unsigned 16-bit height and flat map, and 8191x4095 biomes.
+- The renderer's sea threshold is explicit installed evidence:
+  `NJominiMap.WATERLEVEL = 32 * 0.08340625`, corresponding to raw 16-bit height sample
+  5466. Political land classification does not prevent a lower physical height from being
+  rendered as water. The generator now requires minimum land >5466 and maximum water
+  <5466.
+- `gfx/terrain2/terrain_cache` is a 65536x32768 virtual surface with 174,763 indexed
+  128-pixel tiles across its mip pyramid. If the mod does not own the complete cache,
+  retail Earth relief survives at close zoom. ENDÓRË emits all cache metadata and payloads
+  itself and leaves retail index/intensity decal layers explicitly empty.
+- Retail `gfx/map/map_objects/generated/*.txt` files reference hundreds of megabytes of
+  Earth-authored transform bins. Owning height, flat map, locations, and locators does not
+  suppress those objects. Exact overlays for all 41 generated definitions and nine static
+  instance definitions remove the Earth placement layer without copying the bins.
+- The corrected physical-map re-gate proved separate inland, open-sea, and shoreline
+  points in the non-debug renderer. Live Observer advanced the corrected shoreline from
+  3018.1.1 to 3018.1.4 with only the established machine baseline lines.

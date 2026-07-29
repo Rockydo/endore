@@ -1745,8 +1745,8 @@ enable_treasure_voyages = {
 						sub_continent = sub_continent:me_gondor_subcontinent
 					}
 					NOR = {
-						region = region:me_ithilien_region
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
+						region = region:me_anorien_region
 					}
 				}
 				add_to_global_variable_list = {

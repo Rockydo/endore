@@ -1695,7 +1695,7 @@ country_flavor = {
 				tag = GRA
 			}
 			OR = {
-				capital ?= { region = region:me_ithilien_region }
+				capital ?= { region = region:me_anorien_region }
 				culture = { has_culture_group = culture_group:iberian_group }
 			}
 			religion.group ?= religion_group:muslim
@@ -1854,7 +1854,7 @@ country_flavor = {
 			OR = {
 				AND = {
 					country_rank_is_county = yes
-					capital.area ?= area:me_ithilien_area_07_07
+					capital.area ?= area:me_anorien_area_07_07
 				}
 				AND = {
 					OR = {
@@ -2413,8 +2413,8 @@ country_flavor = {
 				AND = {
 					capital ?= {
 						OR = {
-							region = region:me_ithilien_region
-							region = region:me_ithilien_region
+							region = region:me_anorien_region
+							region = region:me_anorien_region
 						}
 					}
 				}
@@ -2592,8 +2592,8 @@ country_flavor_heir = {
 				AND = {
 					capital ?= {
 						OR = {
-							region = region:me_ithilien_region
-							region = region:me_ithilien_region
+							region = region:me_anorien_region
+							region = region:me_anorien_region
 						}
 					}
 				}

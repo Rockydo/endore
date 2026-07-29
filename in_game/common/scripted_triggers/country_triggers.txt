@@ -1119,7 +1119,7 @@ lordship_of_ireland_can_declare_wars_trigger = {
 					is_neighbor_of = scope:attacker
 					NOT = { is_member_of_international_organization = international_organization:lordship_of_ireland }
 					any_owned_location = {
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 				}
 			}
@@ -1163,12 +1163,12 @@ frankokratia_vassal_state_can_declare_wars_trigger = {
 					is_neighbor_of = scope:attacker
 					any_owned_location = {
 						OR = {
-							area = area:me_ithilien_area_07_07
-							area = area:me_ithilien_area_07_07
-							area = area:me_ithilien_area_07_07
-							area = area:me_ithilien_area_07_07
-							area = area:me_ithilien_area_07_07
-							area = area:me_ithilien_area_07_07
+							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_07_07
 						}
 					}
 				}
@@ -1274,11 +1274,11 @@ is_country_valid_for_tusi_subject = {
 	}
 	capital ?= {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 	num_locations <= 15
@@ -1490,10 +1490,10 @@ is_leader_of_any_league = {
 
 presence_in_eligible_regions_or_member_of_any_league = {
 	OR = {
-		has_presence_in = region:me_ithilien_region
-		has_presence_in = region:me_ithilien_region
-		has_presence_in = region:me_ithilien_region
-		has_presence_in = region:me_ithilien_region
+		has_presence_in = region:me_anorien_region
+		has_presence_in = region:me_anorien_region
+		has_presence_in = region:me_anorien_region
+		has_presence_in = region:me_anorien_region
 		is_member_of_international_organization = international_organization:foreign_league_balkan
 		is_member_of_international_organization = international_organization:foreign_league_france
 		is_member_of_international_organization = international_organization:foreign_league_hre

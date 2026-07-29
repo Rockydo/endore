@@ -9,9 +9,9 @@ subunit_nickname = {
 			subunit_home ?= {
 				area = {
 					OR = {
-						this = area:me_ithilien_area_07_07
-						this = area:me_ithilien_area_07_07
-						this = area:me_ithilien_area_07_07
+						this = area:me_anorien_area_07_07
+						this = area:me_anorien_area_07_07
+						this = area:me_anorien_area_07_07
 					}
 				}
 			}
@@ -31,9 +31,9 @@ subunit_nickname = {
 			subunit_home = {
 				area = {
 					OR = {
-						this = area:me_ithilien_area_07_07
-						this = area:me_ithilien_area_07_07
-						this = area:me_ithilien_area_07_07
+						this = area:me_anorien_area_07_07
+						this = area:me_anorien_area_07_07
+						this = area:me_anorien_area_07_07
 					}
 				}
 			}
@@ -51,12 +51,12 @@ subunit_nickname = {
 		trigger = {
 			definition_is_for_levy = no
 			subunit_home = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			owner ?= {
 				government_type ?= government_type:monarchy
 				language ?= language:english_language
-				capital.region != region:me_ithilien_region
+				capital.region != region:me_anorien_region
 				NOT = { culture = { has_culture_group = culture_group:hibernian_group } }
 			}
 		}
@@ -67,11 +67,11 @@ subunit_nickname = {
 		trigger = {
 			definition_is_for_levy = no
 			subunit_home = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			owner ?= {
 				language ?= language:english_language
-				capital.region != region:me_ithilien_region
+				capital.region != region:me_anorien_region
 				NOT = { culture = { has_culture_group = culture_group:hibernian_group } }
 			}
 		}
@@ -82,11 +82,11 @@ subunit_nickname = {
 		trigger = {
 			definition_is_for_levy = no
 			subunit_home = {
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			owner ?= {
 				language ?= language:english_language
-				capital.area != area:me_ithilien_area_07_07
+				capital.area != area:me_anorien_area_07_07
 			}
 		}
 	}
@@ -96,11 +96,11 @@ subunit_nickname = {
 		trigger = {
 			definition_is_for_levy = no
 			subunit_home = {
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			owner ?= {
 				language ?= language:english_language
-				capital.area != area:me_ithilien_area_07_07
+				capital.area != area:me_anorien_area_07_07
 			}
 		}
 	}
@@ -157,9 +157,9 @@ subunit_nickname = {
 			subunit_home = {
 				area = {
 					OR = {
-						this = area:me_ithilien_area_07_07
-						this = area:me_ithilien_area_07_07
-						this = area:me_ithilien_area_07_07
+						this = area:me_anorien_area_07_07
+						this = area:me_anorien_area_07_07
+						this = area:me_anorien_area_07_07
 					}
 				}
 			}

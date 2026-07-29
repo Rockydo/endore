@@ -47,3 +47,19 @@
 - M2 is complete. Its evidence pack records the 5,812-location model, real-game map and
   Observer screenshots, the 3018.1.9 time-advance result, hashes, and the final diagnostic
   snapshot. The production map is now the binding base for M3.
+- Owner close-zoom review correctly invalidated that visual gate: most authored lowlands
+  were below EU5's installed raw-height waterline, and retail Earth-authored generated
+  vegetation transforms still fell through the VFS. All M3 realm work was quarantined
+  without committing it while M1/M2 returned to red.
+- The production stack now uses the installed native resolutions throughout: 16384x8192
+  locations/rivers, 8192x4096 height/flat map, and 8191x4095 biomes. The complete
+  65536x32768 virtual terrain cache has 174,763 custom-indexed tiles and no retail decal
+  payloads.
+- The waterline mismatch is fixed and linted: installed `NJominiMap.WATERLEVEL` corresponds
+  to raw sample 5466; generated ENDÓRË lowland is at least 10477 and all authored water is
+  at most 420. Exact-file overlays also disable all 41 retail generated map-object
+  definitions and nine static Earth transform definitions.
+- The corrected physical map passed a new real-game visual gate at full-map, inland,
+  open-sea, and shoreline scales. The shoreline entered live Observer and advanced from
+  3018.1.1 to 3018.1.4 with no mod-caused diagnostic. The earlier visual evidence is
+  superseded by `docs/m1/screenshots/04` through `08`.

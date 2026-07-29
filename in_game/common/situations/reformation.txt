@@ -44,23 +44,23 @@ reformation = {
 					base = 1
 					modifier = {
 						add = 12
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 					modifier = {
 						add = 4
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 					modifier = {
 						add = 6
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 					modifier = {
 						add = -0.5
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 					modifier = {
 						add = -0.5
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 					modifier = {
 						add = 4

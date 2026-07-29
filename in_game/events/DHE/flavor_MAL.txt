@@ -1232,7 +1232,7 @@ flavor_mal.21 = {
 		total_effective_building_levels:marketplace > 15
 		total_effective_building_levels:armory > 5
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				percent >= 0.9
 				OR = {
@@ -1889,7 +1889,7 @@ flavor_mal.31 = {
 	trigger = {
 		any_port_in_country = {
 			count >= 10
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -1902,7 +1902,7 @@ flavor_mal.31 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		ordered_port_in_country = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			order_by = population
 			max = 1

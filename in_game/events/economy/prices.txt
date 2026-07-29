@@ -13,7 +13,7 @@ prices.1 = {
 			most_powerful_merchant = root
 		}
 		any_market_with_merchants = {
-			location.region = region:me_ithilien_region
+			location.region = region:me_anorien_region
 			has_merchant = root
 			most_powerful_merchant = root
 		}
@@ -46,7 +46,7 @@ prices.1 = {
 
 		every_market_with_merchants = {
 			limit = {
-				location.region = region:me_ithilien_region
+				location.region = region:me_anorien_region
 			}
 			add_temporary_demand = { type = demand:triangle_trade_africa months = 240 }
 		}
@@ -69,7 +69,7 @@ prices.2 = {
 			continent = continent:me_gondor
 		}
 		any_market_with_merchants = {
-			location.region = region:me_ithilien_region
+			location.region = region:me_anorien_region
 			most_powerful_merchant = root
 		}
 	}
@@ -391,7 +391,7 @@ prices.15 = {
 			continent = continent:me_gondor
 		}
 		any_owned_location = {
-			area = area:me_ithilien_area_07_07
+			area = area:me_anorien_area_07_07
 			integration_level = core
 		}
 	}
@@ -402,7 +402,7 @@ prices.15 = {
 		name = prices.15.a
 		every_market_in_world = {
 			limit = {
-				location.area = area:me_ithilien_area_07_07
+				location.area = area:me_anorien_area_07_07
 			}
 
 			add_temporary_demand = { type = demand:grand_bank_fisheries months = 240 scale_with_pop = 0.01 }

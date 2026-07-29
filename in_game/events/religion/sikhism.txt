@@ -929,67 +929,67 @@ sikhism.11 = {
 scripted_trigger location_sikhism_influence_areas = {
 	OR = {
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			province_definition = province_definition:me_ithilien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_07_07_province_01
 			current_year >= 1525
 		}
 		AND = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			current_year < 1515
 		}
 		AND = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			current_year < 1515
 		}
 		AND = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			current_year < 1515
 		}
 		AND = {
 			current_year >= 1519
 			current_year < 1521
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 		AND = {
 			current_year >= 1514
 			current_year < 1525
 			OR = {
-				area = area:me_ithilien_area_07_07
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
-				region = region:me_ithilien_region
+				area = area:me_anorien_area_07_07
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
+				region = region:me_anorien_region
 			}
 		}
 	}

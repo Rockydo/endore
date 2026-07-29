@@ -387,7 +387,7 @@ flavor_lat.5 = { # Control of Anatolia Reasserted
 
     trigger = {
         at_war = no
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             any_location_in_region = {
                 owner ?= {
                     top_overlord_or_this ?= ROOT
@@ -415,7 +415,7 @@ flavor_lat.5 = { # Control of Anatolia Reasserted
         add_stability = stability_extreme_bonus
         custom_tooltip = {
             text = flavor_lat_anatolia_secured
-            region:me_ithilien_region = {
+            region:me_anorien_region = {
                 every_location_in_region = {
                     limit = {
                         OR = {
@@ -447,7 +447,7 @@ flavor_lat.6 = { # Bulgaria Crushed
 
     trigger = {
         at_war = no
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             any_location_in_region = {
                 owner ?= {
                     top_overlord_or_this ?= c:BUL
@@ -455,7 +455,7 @@ flavor_lat.6 = { # Bulgaria Crushed
                 count < 20
             }
         }
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             any_location_in_region = {
                 is_core_of = c:BUL
                 owner ?= {
@@ -488,7 +488,7 @@ flavor_lat.6 = { # Bulgaria Crushed
         add_prestige = prestige_extreme_bonus
         custom_tooltip = {
             text = flavor_lat_balkan_rival_lands_secured
-            region:me_ithilien_region = {
+            region:me_anorien_region = {
                 every_location_in_region = {
                     limit = {
                         is_core_of = scope:target_country
@@ -521,7 +521,7 @@ flavor_lat.7 = { # Serbia Ambitions Defeated
 
     trigger = {
         at_war = no
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             any_location_in_region = {
                 owner ?= {
                     top_overlord_or_this ?= c:SER
@@ -529,7 +529,7 @@ flavor_lat.7 = { # Serbia Ambitions Defeated
                 count < 18
             }
         }
-        region:me_ithilien_region = {
+        region:me_anorien_region = {
             any_location_in_region = {
                 is_core_of = c:SER
                 owner ?= {
@@ -562,7 +562,7 @@ flavor_lat.7 = { # Serbia Ambitions Defeated
         add_prestige = prestige_extreme_bonus
         custom_tooltip = {
             text = flavor_lat_balkan_rival_lands_secured
-            region:me_ithilien_region = {
+            region:me_anorien_region = {
                 every_location_in_region = {
                     limit = {
                         is_core_of = scope:target_country

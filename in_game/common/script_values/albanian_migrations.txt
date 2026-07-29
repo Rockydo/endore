@@ -60,12 +60,12 @@ albanian_immigration_chance = {
 	# Italian locations will only be targetted if the source is in epirus or albania.
 	if = {
 		limit = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			scope:source_location = {
 				NOR = {
-					area = area:me_ithilien_area_07_07
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
-					province_definition = province_definition:me_ithilien_area_07_07_province_01
+					area = area:me_anorien_area_07_07
+					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_07_07_province_01
 				}
 			}
 		}

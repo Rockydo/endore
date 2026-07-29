@@ -530,7 +530,7 @@ italian_wars.100 = {
 		else_if = {
 			limit = {
 				is_subject = no
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 				NOT = { has_variable = was_sponsor_variable }
 			}
 			make_subject_of = { target = scope:target_country type = subject_type:vassal }
@@ -582,7 +582,7 @@ italian_wars.200 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { capital.region = region:me_ithilien_region }
+				trigger = { capital.region = region:me_anorien_region }
 				desc = italian_wars.200.desc
 			}
 			triggered_desc = { desc = italian_wars.200.desc_foreign }
@@ -603,7 +603,7 @@ italian_wars.200 = {
 	}
 	option = {
 		name = italian_wars.200.a
-		trigger = { capital.region = region:me_ithilien_region }
+		trigger = { capital.region = region:me_anorien_region }
 		if = {
 			limit = { exists = scope:winning_io_leader }
 			add_trust_equilibrium_mutual_effect = {
@@ -614,7 +614,7 @@ italian_wars.200 = {
 	}
 	option = {
 		name = italian_wars.200.b
-		trigger = { NOT = { capital.region = region:me_ithilien_region } }
+		trigger = { NOT = { capital.region = region:me_anorien_region } }
 		add_prestige = prestige_mild_penalty
 	}
 }
@@ -1587,7 +1587,7 @@ italian_wars.26 = { #Diplomatic Incident
 			is_leader_of_international_organization = international_organization:foreign_league_hre
 		}
 		any_neighbor_country = {
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			root = {
 				NOT = { has_truce_with = prev }
 			}
@@ -1609,7 +1609,7 @@ italian_wars.26 = { #Diplomatic Incident
 
 		random_neighbor_country = {
 			limit = {
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 				root = {
 					NOT = { has_truce_with = prev }
 				}

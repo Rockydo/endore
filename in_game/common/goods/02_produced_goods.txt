@@ -172,12 +172,12 @@ liquor = { 		#What it says
 	}
 
 	region_demand_modifier = {
-		me_ithilien_region = 0.5
-		me_ithilien_region = 0.5
-		me_ithilien_region = 0.5
-		me_ithilien_region = 2
-		me_ithilien_region = 2
-		me_ithilien_region = 2
+		me_anorien_region = 0.5
+		me_anorien_region = 0.5
+		me_anorien_region = 0.5
+		me_anorien_region = 2
+		me_anorien_region = 2
+		me_anorien_region = 2
 	}
 }
 
@@ -207,9 +207,9 @@ beer = { 		#the nectar of the gods
 	}
 
 	region_demand_modifier = {
-		me_ithilien_region = 0.5
-		me_ithilien_region = 0.5
-		me_ithilien_region = 0.5
+		me_anorien_region = 0.5
+		me_anorien_region = 0.5
+		me_anorien_region = 0.5
 	}
 }
 

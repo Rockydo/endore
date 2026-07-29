@@ -442,7 +442,7 @@ slave_raid_advance = {
 
 			AND = {
 				num_locations > 0
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
 			}
 		}
 

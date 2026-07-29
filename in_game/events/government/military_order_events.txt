@@ -453,7 +453,7 @@ military_order_events.9 = { #The Banners of KOJremer
 
 		every_owned_location = {
 			limit = {
-				province_definition = province_definition:me_ithilien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_07_07_province_01
 			}
 			change_location_owner = c:NAP
 		}

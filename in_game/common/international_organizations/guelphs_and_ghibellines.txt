@@ -29,7 +29,7 @@ guelphs_io = {
 	}
 
 	can_join_trigger = {
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 		in_civil_war = no
 		OR = {
 			NOT = { is_member_of_international_organization = international_organization:ghibellines_io }
@@ -94,7 +94,7 @@ guelphs_io = {
 		NOT = { has_variable = gag_blocked_from_leading }
 		religion = religion:catholic
 		capital ?= {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 	}
 	auto_leave_trigger = {
@@ -176,7 +176,7 @@ ghibellines_io = {
 	can_join_trigger = {
 		OR = {
 			is_emperor = yes
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 		}
 		is_rebel_country = no
 		OR = {
@@ -230,7 +230,7 @@ ghibellines_io = {
 		NOT = { has_variable = gag_blocked_from_leading }
 		religion = religion:catholic
 		capital ?= {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 	}
 	auto_leave_trigger = {

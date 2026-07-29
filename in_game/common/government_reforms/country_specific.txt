@@ -244,7 +244,7 @@ irish_earldom_reform = {
 	major = yes
 	potential = {
 		OR = {
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			culture = culture:anglo_irish
 		}
 		country_rank = country_rank:rank_county
@@ -986,10 +986,10 @@ french_appanage_reform = { # Unique Gov Reform for Appanage subjects
 
 	potential = {
 		OR = {
-			capital.region = region:me_ithilien_region
-			capital.area = area:me_ithilien_area_07_07
-			capital.area = area:me_ithilien_area_07_07
-			capital.area = area:me_ithilien_area_07_07
+			capital.region = region:me_anorien_region
+			capital.area = area:me_anorien_area_07_07
+			capital.area = area:me_anorien_area_07_07
+			capital.area = area:me_anorien_area_07_07
 		}
 		is_subject_type = appanage
 	}
@@ -1022,7 +1022,7 @@ french_appanage_reform = { # Unique Gov Reform for Appanage subjects
 french_ducal_vassal_reform = { # Unique Gov Reform for French vassals subjects
 
 	potential = {
-		capital = { region = region:me_ithilien_region }
+		capital = { region = region:me_anorien_region }
 		overlord ?= {
 			OR = {
 				has_reform = government_reform:french_feudal_nobility
@@ -1035,7 +1035,7 @@ french_ducal_vassal_reform = { # Unique Gov Reform for French vassals subjects
 		NOT = { has_or_had_tag = FRA }
 	}
 	allow = {
-		capital = { region = region:me_ithilien_region }
+		capital = { region = region:me_anorien_region }
 		overlord ?= {
 			OR = {
 				has_reform = government_reform:french_feudal_nobility
@@ -1066,7 +1066,7 @@ member_of_league_of_public_weal = {
 		has_global_variable = league_of_public_weal_enabled
 		OR = {
 			AND = {
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
 				NOT = { is_subject_type = vassal }
 				overlord ?= { has_reform = government_reform:french_feudal_nobility }
 				government_type = government_type:monarchy
@@ -2008,7 +2008,7 @@ japanese_clan = {
 		NOT = { has_reform = government_reform:daimyo }
 		NOT = { has_reform = government_reform:japanese_imperial_family }
 		NOT = { has_reform = government_reform:shogunate }
-		capital ?= { region = region:me_ithilien_region }
+		capital ?= { region = region:me_anorien_region }
 	}
 	locked = {
 		country_type = building

@@ -20,7 +20,7 @@ OUT_DIR = ROOT / "in_game/gfx/map/flatmap"
 OUT = OUT_DIR / "flatmap_staticbackup.dds"
 PREVIEW_OUT = DERIVED / "flatmap_preview.png"
 MANIFEST_OUT = DERIVED / "flatmap_manifest.json"
-WIDTH, HEIGHT = 4096, 2048
+WIDTH, HEIGHT = 8192, 4096
 
 BASE_COLORS = {
     0: (55, 81, 96),

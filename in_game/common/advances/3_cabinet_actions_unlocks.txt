@@ -104,13 +104,13 @@ settle_the_frontier_advance = {
 				OR = {
 					sub_continent = sub_continent:me_gondor_subcontinent
 					sub_continent = sub_continent:me_gondor_subcontinent
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
 					#North American Natives
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
-					area = area:me_ithilien_area_07_07
+					region = region:me_anorien_region
+					region = region:me_anorien_region
+					area = area:me_anorien_area_07_07
 					continent = continent:me_gondor
 				}
 			}

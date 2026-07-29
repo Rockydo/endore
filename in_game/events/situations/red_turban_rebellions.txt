@@ -764,20 +764,20 @@ red_turban_rebellions.3 = {
 			limit = { exists = scope:target_country }
 			scope:target_country = { rtr_create_io = yes }
 		}
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01		tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01				tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01		tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01		tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01				tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01		tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSO }
 		rtr_add_core_to_location = { location = qixian						tag = CSO }
 		rtr_add_core_to_location = { location = taikang						tag = CSO }
 		if = {
@@ -1008,21 +1008,21 @@ red_turban_rebellions.5 = {
 		}
 		dynasty:rtr_tianwan_xu_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = hanchuan	tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01				tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01		tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01				tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CTW }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01				tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01		tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01				tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CTW }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CTW }
 		rtr_add_core_to_location = { location = rongmei						tag = CTW }
 		rtr_add_core_to_location = { location = wufeng						tag = CTW }
 		rtr_add_core_to_location = { location = huarong						tag = CTW }
@@ -1190,24 +1190,24 @@ red_turban_rebellions.6 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_chen_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = dehua_jiujiang	tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CHE }
 		rtr_add_core_to_location = { location = yongan_youzhou						tag = CHE }
 		rtr_add_core_to_location = { location = liuyang						tag = CHE }
 		rtr_add_core_to_location = { location = liling						tag = CHE }
@@ -1311,13 +1311,13 @@ red_turban_rebellions.7 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_wu_zhang_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = gaoyou	tag = WUU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = WUU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = WUU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = WUU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = WUU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = WUU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = WUU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = WUU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = WUU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = WUU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = WUU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = WUU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = WUU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = WUU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = WUU }
 		rtr_add_core_to_location = { location = jiangyin					tag = WUU }
 		rtr_add_core_to_location = { location = wuxi						tag = WUU }
 		rtr_add_core_to_location = { location = tianchang					tag = WUU }
@@ -1424,13 +1424,13 @@ red_turban_rebellions.8 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_fang_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = yongjia	tag = CFN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CFN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CFN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CFN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CFN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CFN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CFN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CFN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CFN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CFN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CFN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CFN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CFN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CFN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CFN }
 		if = {
 			limit = { current_year < 1375 }
 			create_character = {
@@ -1530,13 +1530,13 @@ red_turban_rebellions.9 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_mao_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = zichuan	tag = CMO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CMO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CMO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CMO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CMO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01				tag = CMO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01				tag = CMO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CMO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CMO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CMO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CMO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CMO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01				tag = CMO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01				tag = CMO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CMO }
 		if = {
 			limit = { current_year < 1375 }
 			create_character = {
@@ -1627,26 +1627,26 @@ red_turban_rebellions.10 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_xia_ming_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = baxian	tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01		tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01		tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CXI }
 		if = {
 			limit = {
 				current_year > 1350
@@ -1745,11 +1745,11 @@ red_turban_rebellions.11 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_guo_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = zhongli	tag = CGU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CGU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CGU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CGU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CGU }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CGU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CGU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CGU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CGU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CGU }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CGU }
 		if = {
 			limit = { current_year < 1360 } #Dies in 1355, but given a bit extra time compared to the rest as he is born quite earlier
 			create_character = {
@@ -1828,14 +1828,14 @@ red_turban_rebellions.12 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_ming_zhu_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = shangyuan	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = MNG }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01		tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = MNG }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01		tag = MNG }
 		if = {
 			limit = {
 				current_year > 1350
@@ -2045,12 +2045,12 @@ red_turban_rebellions.13 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_nanping_chen_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = nanping	tag = CNP }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CNP }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CNP }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CNP }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CNP }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CNP }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CNP }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CNP }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CNP }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CNP }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CNP }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CNP }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CNP }
 		if = {
 			limit = {
 				current_year > 1350
@@ -2142,16 +2142,16 @@ red_turban_rebellions.14 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_dongguan_he_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = dongguan	tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01				tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01				tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CDN }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01				tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01				tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CDN }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CDN }
 		if = {
 			limit = { current_year < 1375 }
 			create_character = {
@@ -2234,15 +2234,15 @@ red_turban_rebellions.15 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:rtr_li_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = jingzhao	tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CSI }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CSI }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CSI }
 		if = {
 			limit = { current_year < 1375 }
 			create_character = {
@@ -2325,19 +2325,19 @@ red_turban_rebellions.16 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		dynasty:bayad_dynasty = { save_scope_as = target_dynasty }
 		rtr_create_revolter_capital = { location = kaifeng	tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CKO }
-		rtr_add_cores_to_area = { area = me_ithilien_area_07_07						tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CKO }
+		rtr_add_cores_to_area = { area = me_anorien_area_07_07						tag = CKO }
 		if = {
 			limit = {
 				current_year > 1350
@@ -2426,9 +2426,9 @@ red_turban_rebellions.17 = {
 			last_dynasty_in_location ?= { save_scope_as = target_dynasty }
 		}
 		rtr_create_revolter_capital = { location = liaoyang	tag = CNA }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CNA }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01			tag = CNA }
-		rtr_add_cores_to_province = { province = me_ithilien_area_07_07_province_01	tag = CNA }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CNA }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01			tag = CNA }
+		rtr_add_cores_to_province = { province = me_anorien_area_07_07_province_01	tag = CNA }
 		if = {
 			limit = {
 				current_year > 1360
@@ -3271,7 +3271,7 @@ red_turban_rebellions.42 = {
 	trigger = {
 		has_variable = rtr_manchuria_rebellion_event
 		OR = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_location_in_region = {
 					is_ownable = yes
 					owner ?= {
@@ -3287,7 +3287,7 @@ red_turban_rebellions.42 = {
 					country_type = pop
 					country_type = building
 				}
-				has_presence_in = region:me_ithilien_region
+				has_presence_in = region:me_anorien_region
 			}
 		}
 	}
@@ -3295,7 +3295,7 @@ red_turban_rebellions.42 = {
 		name = red_turban_rebellions.42.a
 		custom_tooltip = {
 			text = red_turban_rebellions.42.a.tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = {
 						is_ownable = yes
@@ -3314,17 +3314,17 @@ red_turban_rebellions.42 = {
 			text = red_turban_rebellions.42.b.tt
 			every_subject = {
 				limit = {
-					capital ?= { region = region:me_ithilien_region }
+					capital ?= { region = region:me_anorien_region }
 					culture != root.culture
 				}
 				root = { cancel_subject = prev }
 			}
 			every_subject = {
 				limit = {
-					capital ?= { NOT = { region = region:me_ithilien_region } }
+					capital ?= { NOT = { region = region:me_anorien_region } }
 				}
 				save_scope_as = target_country
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					every_location_in_region = {
 						limit = {
 							is_ownable = yes
@@ -3473,7 +3473,7 @@ red_turban_rebellions.44 = {
 
 	trigger = {
 		has_variable = rtr_tibet_rebellion_event
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_country_with_capital_in_geography = {
 				is_subject_of = c:CHI
 			}
@@ -3482,7 +3482,7 @@ red_turban_rebellions.44 = {
 
 	option = {
 		name = red_turban_rebellions.44.a
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_country_with_capital_in_geography = {
 				limit = { is_subject_of = c:CHI }
 				c:CHI = { cancel_subject = prev }
@@ -3809,8 +3809,8 @@ red_turban_rebellions.1000 = {
 		NOT = { has_variable = rtr_had_vassal_break_away_event }
 		capital = {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}

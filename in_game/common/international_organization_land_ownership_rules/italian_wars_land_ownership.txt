@@ -13,7 +13,7 @@ italian_wars_land_ownership = {
 	can_add_location_trigger = {
 		is_land = yes
 		is_passable = yes
-		region = region:me_ithilien_region
+		region = region:me_anorien_region
 	}
 
 	# root = location, recipient = international organization

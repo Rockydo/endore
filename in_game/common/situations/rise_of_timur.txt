@@ -173,7 +173,7 @@ rise_of_timur = {
 							situation = root
 							event = rot_claim_turkoman
 						}
-						region:me_ithilien_region = {
+						region:me_anorien_region = {
 							any_location_in_region = {
 								owner ?= {
 									OR = {
@@ -217,7 +217,7 @@ rise_of_timur = {
 							event = rot_prepare_conquest_of_persia
 						}
 						country_exists = c:TIM
-						region:me_ithilien_region = {
+						region:me_anorien_region = {
 							any_location_in_region = { owner ?= c:TIM }
 						}
 					}
@@ -230,7 +230,7 @@ rise_of_timur = {
 							event = rot_prepare_conquest_of_anatolia
 						}
 						country_exists = c:TIM
-						region:me_ithilien_region = {
+						region:me_anorien_region = {
 							any_location_in_region = {
 								owner ?= c:TIM
 								percent >= 0.7
@@ -238,7 +238,7 @@ rise_of_timur = {
 						}
 						any_neighbor_country = {
 							capital = {
-								region = region:me_ithilien_region
+								region = region:me_anorien_region
 							}
 						}
 					}

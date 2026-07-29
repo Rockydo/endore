@@ -311,7 +311,7 @@ flavor_kni.10 = {
 
 	trigger = {
 		religion = religion:catholic
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				is_coastal = yes
 				owner = {
@@ -333,7 +333,7 @@ flavor_kni.10 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			random_location_in_area = {
 				limit = {
 					is_coastal = yes
@@ -441,8 +441,8 @@ flavor_kni.12 = { #The Knights of the New World
 
 	trigger = {
 		has_global_variable = new_world_discovered
-		has_presence_in = region:me_ithilien_region
-		region:me_ithilien_region = {
+		has_presence_in = region:me_anorien_region
+		region:me_anorien_region = {
 			any_location_in_region = {
 				owner ?= root
 				province_definition != root.capital.province_definition
@@ -458,7 +458,7 @@ flavor_kni.12 = { #The Knights of the New World
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region = {
 				limit = {
 					owner ?= root
@@ -511,8 +511,8 @@ flavor_kni.13 = { #Philippe de Longvilliers de Poincy
 
 	trigger = {
 		has_global_variable = new_world_discovered
-		has_presence_in = region:me_ithilien_region
-		region:me_ithilien_region = {
+		has_presence_in = region:me_anorien_region
+		region:me_anorien_region = {
 			any_location_in_region = {
 				owner ?= root
 			}
@@ -579,8 +579,8 @@ flavor_kni.14 = { #Giovanni Paolo Lascaris
 
 	trigger = {
 		has_global_variable = new_world_discovered
-		has_presence_in = region:me_ithilien_region
-		region:me_ithilien_region = {
+		has_presence_in = region:me_anorien_region
+		region:me_anorien_region = {
 			any_location_in_region = {
 				owner ?= root
 			}
@@ -650,8 +650,8 @@ flavor_kni.15 = { #Natives Attack Our Colonies
 	}
 
 	trigger = {
-		has_presence_in = region:me_ithilien_region
-		region:me_ithilien_region = {
+		has_presence_in = region:me_anorien_region
+		region:me_anorien_region = {
 			any_location_in_region = {
 				owner ?= root
 				dominant_culture = culture:carib
@@ -667,7 +667,7 @@ flavor_kni.15 = { #Natives Attack Our Colonies
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region = {
 				limit = {
 					owner ?= root
@@ -1746,13 +1746,13 @@ flavor_kni.1000 = {
 	}
 
 	trigger = {
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_present_country = {
 				count >= 1
 				is_valid_colonial_target = yes
 			}
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				has_owner = yes
 				owner != root
@@ -1775,7 +1775,7 @@ flavor_kni.1000 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = from_country
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_present_country = {
 				order_by = "opinion(root)"
 				max = 1
@@ -1794,7 +1794,7 @@ flavor_kni.1000 = {
 			value = 0
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region = {
 				limit = {
 					owner ?= scope:target_country
@@ -1959,7 +1959,7 @@ flavor_kni.2000 = {
 			num_loans > 5
 			monthly_balance < 0
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_present_country = {
 				count >= 1
 				is_valid_colonial_target = yes
@@ -1967,8 +1967,8 @@ flavor_kni.2000 = {
 				this != root
 			}
 		}
-		has_presence_in = region:me_ithilien_region
-		region:me_ithilien_region = {
+		has_presence_in = region:me_anorien_region
+		region:me_anorien_region = {
 			any_location_in_region = {
 				owner ?= root
 			}
@@ -1983,7 +1983,7 @@ flavor_kni.2000 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = from_country
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_present_country = {
 				order_by = "opinion(root)"
 				max = 1
@@ -2001,7 +2001,7 @@ flavor_kni.2000 = {
 			value = 0
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_location_in_region = {
 				limit = {
 					owner ?= root

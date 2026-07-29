@@ -1535,7 +1535,7 @@ flavor_eth.156 = { #Revolt of Beta Israel
 	trigger = {
 		NOT = { religion = religion:judaism }
 		"religion_percentage_in_country(religion:judaism)" > 0.025
-		own_entire_province = province_definition:me_ithilien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_07_07_province_01
 	}
 
 	fire_only_once = yes

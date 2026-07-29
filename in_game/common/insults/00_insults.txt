@@ -178,12 +178,12 @@ insult_against_deccani = {
 				ruler ?= { dynasty ?= { dynasty_name = timurid } }
 			}
 			capital = {
-				NOT = { region = region:me_ithilien_region }
+				NOT = { region = region:me_anorien_region }
 			}
 		}
 		scope:recipient = {
 			capital = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 	}

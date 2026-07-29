@@ -180,15 +180,15 @@ unlock_dhow = {
 	potential = {
 		original_capital ?= {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}
@@ -271,10 +271,10 @@ unlock_archipelago_frigate = {
 	potential = {
 		original_capital ?= {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}
@@ -308,14 +308,14 @@ unlock_galiot = {
 	potential = {
 		original_capital ?= {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}

@@ -105,7 +105,7 @@ appanage = {
 		government_type = government_type:monarchy
 		has_reform = government_reform:french_feudal_nobility
 
-		scope:target_province = { region = region:me_ithilien_region }
+		scope:target_province = { region = region:me_anorien_region }
 	}
 
 	release_country_enabled = {
@@ -113,7 +113,7 @@ appanage = {
 		has_reform = government_reform:french_feudal_nobility
 
 		scope:target = {
-			capital = { region = region:me_ithilien_region }
+			capital = { region = region:me_anorien_region }
 			culture = { has_culture_group = culture_group:french_group }
 		}
 	}
@@ -124,10 +124,10 @@ appanage = {
 		scope:target = {
 			government_type = government_type:monarchy
 			OR = {
-				capital.region = region:me_ithilien_region
-				capital.area = area:me_ithilien_area_07_07
-				capital.area = area:me_ithilien_area_07_07
-				capital.area = area:me_ithilien_area_07_07
+				capital.region = region:me_anorien_region
+				capital.area = area:me_anorien_area_07_07
+				capital.area = area:me_anorien_area_07_07
+				capital.area = area:me_anorien_area_07_07
 				culture = { has_culture_group = culture_group:french_group }
 			}
 		}
@@ -138,10 +138,10 @@ appanage = {
 			is_subject_of = root
 			government_type = government_type:monarchy
 			OR = {
-				capital.region = region:me_ithilien_region
-				capital.area = area:me_ithilien_area_07_07
-				capital.area = area:me_ithilien_area_07_07
-				capital.area = area:me_ithilien_area_07_07
+				capital.region = region:me_anorien_region
+				capital.area = area:me_anorien_area_07_07
+				capital.area = area:me_anorien_area_07_07
+				capital.area = area:me_anorien_area_07_07
 				culture = { has_culture_group = culture_group:french_group }
 			}
 			exists = root.ruler_or_heir_if_regent.dynasty

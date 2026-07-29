@@ -156,7 +156,7 @@ foreign_league_balkan = {
 			limit = {
 				NOT = { tag = PAP }
 			}
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			country_rank_level < 4
 		}
 		trigger_if = {
@@ -214,7 +214,7 @@ foreign_league_balkan = {
 		}
 
 		every_owned_location = {
-			limit = { region = region:me_ithilien_region }
+			limit = { region = region:me_anorien_region }
 			scope:recipient = {
 				add_location_to_international_organization = prev
 			}
@@ -227,7 +227,7 @@ foreign_league_balkan = {
 
 	on_left = {
 		every_owned_location = {
-			limit = { region = region:me_ithilien_region }
+			limit = { region = region:me_anorien_region }
 			scope:recipient = {
 				remove_location_from_international_organization = prev
 			}
@@ -319,7 +319,7 @@ foreign_league_balkan = {
 				}
 
 				every_owned_location = {
-					limit = { region = region:me_ithilien_region }
+					limit = { region = region:me_anorien_region }
 					root = {
 						add_location_to_international_organization = prev
 					}

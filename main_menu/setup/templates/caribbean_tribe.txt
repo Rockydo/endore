@@ -3,7 +3,7 @@ include = "amerindian_tribe"
 include = "expl_mesoamerica"
 
 discovered_regions = {
-	me_ithilien_region
+	me_anorien_region
 }
 government = {
 	ruler = random

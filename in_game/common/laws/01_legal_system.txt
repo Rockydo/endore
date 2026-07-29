@@ -67,8 +67,8 @@ legal_code_law = {
 		potential = {
 			OR = {
 				culture.language = language:english_language
-				capital.region = region:me_ithilien_region
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 		allow = {
@@ -280,9 +280,9 @@ legal_code_law = {
 		potential = {
 			religion = religion:miaphysite
 			OR = {
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 				AND = {
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 					OR = {
 						has_unlocked_policy_trigger = { type = fetha_negest_policy }
 						current_year > 1500
@@ -292,7 +292,7 @@ legal_code_law = {
 					}
 				}
 				AND = {
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 					current_year > 1400
 					any_neighbor_country = {
 						has_policy = fetha_negest_policy

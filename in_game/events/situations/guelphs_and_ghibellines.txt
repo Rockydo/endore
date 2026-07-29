@@ -31,7 +31,7 @@ guelphs_and_ghibellines.2 = {
 		custom_tooltip = guelphs_and_ghibellines.2.a.tt
 		trigger = {
 			NOT = { tag = PAP }
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 		}
 		ai_chance = {
 			base = 10
@@ -70,7 +70,7 @@ guelphs_and_ghibellines.2 = {
 		custom_tooltip = guelphs_and_ghibellines.2.b.tt
 		trigger = {
 			is_emperor = no
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 		}
 		ai_chance = {
 			base = 10
@@ -112,7 +112,7 @@ guelphs_and_ghibellines.2 = {
 			modifier = {
 				factor = 10
 				NOT = {
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 					OR = {
 						is_member_of_international_organization = international_organization:guelphs_io
 						is_member_of_international_organization = international_organization:ghibellines_io
@@ -177,7 +177,7 @@ guelphs_and_ghibellines.4 = {
 					remove_from_international_organization = international_organization:hre
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_country_with_capital_in_geography = {
 					every_owned_location = {
 						remove_from_international_organization = international_organization:hre
@@ -243,15 +243,15 @@ guelphs_and_ghibellines.6 = {
 
 		custom_tooltip = {
 			text = guelphs_and_ghibellines.6.a.tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_country_with_capital_in_geography = {
 					limit = {
 						capital = {
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
 						}
 						can_join_international_organization = international_organization:hre
 					}
@@ -260,12 +260,12 @@ guelphs_and_ghibellines.6 = {
 					}
 					every_owned_location = {
 						limit = {
-							region = region:me_ithilien_region
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
-							NOT = { area = area:me_ithilien_area_07_07 }
+							region = region:me_anorien_region
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
+							NOT = { area = area:me_anorien_area_07_07 }
 						}
 						international_organization:hre = {
 							add_location_to_international_organization = prev
@@ -335,7 +335,7 @@ guelphs_and_ghibellines.8 = {
 				}
 				international_organization:guelphs_io = {
 					every_international_organization_member = {
-						limit = { capital.region = region:me_ithilien_region }
+						limit = { capital.region = region:me_anorien_region }
 						international_organization:hre = {
 							remove_country_from_international_organization = prev
 						}
@@ -457,7 +457,7 @@ guelphs_and_ghibellines.10 = {
 					years = 200
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_country_with_capital_in_geography = {
 					set_variable = {
 						name = gag_left_hre_guelph_victory
@@ -533,7 +533,7 @@ guelphs_and_ghibellines.100 = {
 			base = 10
 			modifier = {
 				factor = 0
-				NOT = { has_presence_in = region:me_ithilien_region }
+				NOT = { has_presence_in = region:me_anorien_region }
 			}
 		}
 	}
@@ -545,7 +545,7 @@ guelphs_and_ghibellines.100 = {
 			base = 10
 			modifier = {
 				factor = 0
-				NOT = { has_presence_in = region:me_ithilien_region }
+				NOT = { has_presence_in = region:me_anorien_region }
 			}
 		}
 	}
@@ -565,7 +565,7 @@ guelphs_and_ghibellines.100 = {
 			base = 10
 			modifier = {
 				factor = 0
-				has_presence_in = region:me_ithilien_region
+				has_presence_in = region:me_anorien_region
 			}
 		}
 	}

@@ -70,10 +70,10 @@ ilkhanate = {
 	invite_visible_trigger = {
 		any_owned_location = {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}
@@ -81,10 +81,10 @@ ilkhanate = {
 	can_join_trigger = {
 		capital = {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}

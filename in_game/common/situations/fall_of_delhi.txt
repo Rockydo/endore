@@ -160,12 +160,12 @@ fall_of_delhi = {
 					variable = fall_of_delhi_voters
 					limit = {
 						OR = {
-							own_entire_province = province_definition:me_ithilien_area_07_07_province_01
-							own_entire_province = province_definition:me_ithilien_area_07_07_province_01
-							own_entire_province = province_definition:me_ithilien_area_07_07_province_01
-							own_entire_province = province_definition:me_ithilien_area_07_07_province_01
-							own_entire_province = province_definition:me_ithilien_area_07_07_province_01
-							own_entire_province = province_definition:me_ithilien_area_07_07_province_01
+							own_entire_province = province_definition:me_anorien_area_07_07_province_01
+							own_entire_province = province_definition:me_anorien_area_07_07_province_01
+							own_entire_province = province_definition:me_anorien_area_07_07_province_01
+							own_entire_province = province_definition:me_anorien_area_07_07_province_01
+							own_entire_province = province_definition:me_anorien_area_07_07_province_01
+							own_entire_province = province_definition:me_anorien_area_07_07_province_01
 						}
 					}
 					trigger_event_non_silently = fall_of_delhi.17

@@ -209,7 +209,7 @@ flavor_nor.5 = {
 		c:SCO = {
 			NOT = { is_at_war_with = root }
 			NOT = { in_union_with = root }
-			own_entire_area = area:me_ithilien_area_07_07
+			own_entire_area = area:me_anorien_area_07_07
 		}
 	}
 
@@ -250,7 +250,7 @@ flavor_nor.5 = {
 	}
 	option = {
 		name = flavor_nor.5.b
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_location_in_area = {
 				limit = {
 					NOT = { is_core_of = c:NOR }
@@ -333,7 +333,7 @@ flavor_nor.6 = {
 			trigger_event_silently = { id = flavor_nor.9 }
 		}
 		show_as_tooltip = {
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				every_location_in_area = {
 					limit = {
 						NOT = { is_core_of = c:NOR }
@@ -402,7 +402,7 @@ flavor_nor.9 = {
 
 	option = {
 		name = flavor_nor.9.a
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_location_in_area = {
 				limit = {
 					NOT = { is_core_of = c:NOR }

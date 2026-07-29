@@ -23,7 +23,7 @@ flavor_usa.1 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		is_active_parliament = yes
 	}
@@ -66,7 +66,7 @@ flavor_usa.2 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 		is_active_parliament = yes
 
 	}
@@ -103,13 +103,13 @@ flavor_usa.3 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
-		has_presence_in = area:me_ithilien_area_07_07
-		has_presence_in = area:me_ithilien_area_07_07
-		has_presence_in = area:me_ithilien_area_07_07
-		has_presence_in = area:me_ithilien_area_07_07
-		has_presence_in = area:me_ithilien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_07_07
 	}
 
 	option = {
@@ -120,11 +120,11 @@ flavor_usa.3 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
 					}
 				}
 				change_development = development_weak_bonus
@@ -140,11 +140,11 @@ flavor_usa.3 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
 					}
 				}
 				change_development = development_weak_penalty
@@ -185,7 +185,7 @@ flavor_usa.4 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 
 	}
@@ -258,7 +258,7 @@ flavor_usa.5 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 	}
 
 	option = {
@@ -297,7 +297,7 @@ flavor_usa.6 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		produced_in_country:fur > 0
 	}
@@ -354,7 +354,7 @@ flavor_usa.7 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		NOT = {
 			has_policy = native_integration
@@ -399,7 +399,7 @@ flavor_usa.8 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		owns = location:shawmut
 	}
@@ -450,7 +450,7 @@ flavor_usa.9 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		"estate(estate_type:peasants_estate)" = { estate_tax_rate > 0.6 }
 	}
@@ -527,7 +527,7 @@ flavor_usa.10 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		owns = location:shawmut
 	}
@@ -574,7 +574,7 @@ flavor_usa.11 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		owns = location:shackamaxon
 	}
@@ -623,7 +623,7 @@ flavor_usa.12 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		owns = location:manhattan
 	}
@@ -742,10 +742,10 @@ flavor_usa.13 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
-		has_presence_in = region:me_ithilien_region
-		region:me_ithilien_region = {
+		has_presence_in = region:me_anorien_region
+		region:me_anorien_region = {
 			any_location_in_region = {
 				NOT = {
 					is_discovered_by = root
@@ -761,7 +761,7 @@ flavor_usa.13 = {
 		scope:target_character = { move_country = root }
 		scope:target_character_2 = { move_country = root }
 		change_gold_effect = { scale = -3 }
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_location_in_region = {
 				discover_location = root
 			}
@@ -804,7 +804,7 @@ flavor_usa.14 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 	}
 
 	option = {
@@ -850,7 +850,7 @@ flavor_usa.15 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 	}
 
 	option = {
@@ -909,7 +909,7 @@ flavor_usa.16 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 	}
 
 	option = {
@@ -957,7 +957,7 @@ flavor_usa.17 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		any_country_at_war_with = {
 			culture = { is_culture_native_american =yes }
@@ -1020,7 +1020,7 @@ flavor_usa.18 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		num_loans >= 2
 		"estate(estate_type:peasants_estate)" = { estate_tax_rate > 0.6 }
@@ -1082,7 +1082,7 @@ flavor_usa.19 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 		has_advance = recruitment_law_advance
 	}
 
@@ -1122,7 +1122,7 @@ flavor_usa.20 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		capital.market = {
 			market_food_percentage > 0.99
@@ -1169,7 +1169,7 @@ flavor_usa.1000 = {
 		}
 		is_subject = no
 		exists = capital
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 
 		is_leader_of_international_organization_of_type = {
 			type = colonial_federation

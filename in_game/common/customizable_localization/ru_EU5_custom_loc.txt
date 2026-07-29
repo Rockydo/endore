@@ -46902,7 +46902,7 @@ IO_GEN = {
 			leader_country ?= {
 				culture = culture:english
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 		}
@@ -47541,7 +47541,7 @@ IO_DAT = {
 			leader_country ?= {
 				culture = culture:english
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 		}
@@ -48180,7 +48180,7 @@ IO_ACC = {
 			leader_country ?= {
 				culture = culture:english
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 		}
@@ -48819,7 +48819,7 @@ IO_INST = {
 			leader_country ?= {
 				culture = culture:english
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 		}
@@ -49458,7 +49458,7 @@ IO_PREP = {
 			leader_country ?= {
 				culture = culture:english
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 		}

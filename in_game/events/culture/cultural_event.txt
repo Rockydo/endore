@@ -307,7 +307,7 @@ cultural_event.11 = {
 		}
 		NOT = {	has_country_modifier = south_german_organ_tradition }
 		capital = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			has_building_with_at_least_one_level = temple
 		}
 	}

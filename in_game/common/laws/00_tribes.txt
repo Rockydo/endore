@@ -36,7 +36,7 @@ tribal_legal_basis_law = {
 		potential = {
 			OR = {
 				culture.language = language:gaelic_language
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 		allow = {

@@ -988,7 +988,7 @@ catholic_flavor.100 = {
 				development >= 20.00
 			}
 			capital = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 		has_regent = no
@@ -1005,7 +1005,7 @@ catholic_flavor.100 = {
 					root = { opinion = { target = prev value >= 25 } }
 					opinion = { target = root value >= 25 }
 					any_owned_location = { NOT = { has_building = building_type:seat_of_cardinal } }
-					capital = { region = region:me_ithilien_region }
+					capital = { region = region:me_anorien_region }
 					NOT = {
 						has_variable = pap_cardinal_nephew_flag
 					}

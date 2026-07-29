@@ -56,15 +56,15 @@ press_claims = {
 				limit = {
 					scope:actor ?= {
 						num_locations < 120
-						has_presence_in = region:me_ithilien_region
+						has_presence_in = region:me_anorien_region
 					}
 				}
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			trigger_else = {
 				OR = {
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
 				}
 			}
 			any_location_in_province = {
@@ -369,7 +369,7 @@ raise_bey_fortress = {
 		column = { data = name }
 		column = { data = population }
 		visible = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			OR = { location_rank = location_rank:city  location_rank = location_rank:megalopolis }
 			NOT = { has_building = building_type:bey_fortress }
 			NOT = { has_location_modifier = stronghold_city_modifier }

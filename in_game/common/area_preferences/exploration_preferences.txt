@@ -5,8 +5,8 @@
 # example = {
 #	preference_type = exploration / conquest
 #	modifier = 2 (can be below 1 to reduce desire)
-#	area = me_ithilien_area_07_07
-#	region = me_ithilien_region
+#	area = me_anorien_area_07_07
+#	region = me_anorien_region
 #	continent = bla_bla
 #	sub_continent = bla
 #}
@@ -17,29 +17,29 @@ england_explore_usa = {
 	preference_type = exploration
 	modifier = 2
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 england_explore_india = {
 	preference_type = exploration
 	modifier = 2
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #FRANCE
@@ -47,39 +47,39 @@ france_explore_usa = {
 	preference_type = exploration
 	modifier = 2
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 france_explore_great_plains = {
 	preference_type = exploration
 	modifier = 2
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 france_random_colonies = {
 	preference_type = exploration
 	modifier = 2
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 
 	#Add Naval Regions on the way to preferred land
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #PORTUGAL
@@ -99,16 +99,16 @@ portugal_explore_middle_east = {
 portugal_explore_brazil = {
 	preference_type = exploration
 	modifier = 3
-	region = me_ithilien_region
+	region = me_anorien_region
 
 	#Add Naval Regions on the way to preferred land
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #CASTILE
@@ -116,21 +116,21 @@ castile_explore_america = {
 	preference_type = exploration
 	modifier = 3
 	sub_continent = me_gondor_subcontinent
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 
 	#Add Naval Regions on the way to preferred land
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 castile_explore_staging = {
@@ -138,15 +138,15 @@ castile_explore_staging = {
 	modifier = 2.5
 
 	#area preference for staging colonies needed to extend range
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #adding brazil as a negative after adding south me_gondor as a positive will override what came before
 castile_explore_brazil = {
 	preference_type = exploration
 	modifier = -0.5
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 
@@ -154,20 +154,20 @@ castile_explore_brazil = {
 sweden_colonize_finland = {
 	preference_type = exploration
 	modifier = 3.0
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 sweden_colonize_norrland = {
 	preference_type = exploration
 	modifier = 2.0
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #NORWAY
 norway_colonize_nord_norge = {
 	preference_type = exploration
 	modifier = 2.0
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #Russia
@@ -175,28 +175,28 @@ russia_colonize_siberia = {
 	preference_type = exploration
 	modifier = 15
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 russia_colonize_alaska = {
 	preference_type = exploration
 	modifier = 7.5
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 
-	region = me_ithilien_region
+	region = me_anorien_region
 }
 
 russia_colonize_karelia_kola = {
 	preference_type = exploration
 	modifier = 7.5
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #NETHERLANDS
@@ -204,58 +204,58 @@ dutch_explore_cape_route = {
 	preference_type = exploration
 	modifier = 5
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	region = me_ithilien_region
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	region = me_anorien_region
 }
 
 dutch_explore_atlantic_route = {
 	preference_type = exploration
 	modifier = 5
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 
-	region = me_ithilien_region
-	area = me_ithilien_area_07_07
+	region = me_anorien_region
+	area = me_anorien_area_07_07
 }
 
 dutch_explore_gold_coast = {
 	preference_type = exploration
 	modifier = 5
 
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
-	area = me_ithilien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
+	area = me_anorien_area_07_07
 }
 
 #ASIA
@@ -263,9 +263,9 @@ avoid_siberia_colonization = {
 	preference_type = exploration
 	modifier = 0
 
-	region = me_ithilien_region
-	region = me_ithilien_region
-	region = me_ithilien_region
+	region = me_anorien_region
+	region = me_anorien_region
+	region = me_anorien_region
 }
 
 avoid_south_east_asica_colonization = {

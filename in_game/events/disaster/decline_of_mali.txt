@@ -728,7 +728,7 @@ decline_of_mali.11 = {
 #Diawara Revolt
 scripted_trigger decline_of_mali_12_location_trigger = {
 	dominant_culture = culture:soninke
-	area = area:me_ithilien_area_07_07
+	area = area:me_anorien_area_07_07
 }
 decline_of_mali.12 = {
 	type = country_event
@@ -923,7 +923,7 @@ decline_of_mali.13 = {
 #Rise of Fulo
 scripted_trigger decline_of_mali_14_location_trigger = {
 	dominant_culture = culture:fulbe
-	area = area:me_ithilien_area_07_07
+	area = area:me_anorien_area_07_07
 }
 decline_of_mali.14 = {
 	type = country_event
@@ -1049,7 +1049,7 @@ scripted_trigger decline_of_mali_15_location_trigger = {
 		dominant_culture = culture:manjak
 		dominant_culture = culture:jola
 	}
-	area = area:me_ithilien_area_07_07
+	area = area:me_anorien_area_07_07
 }
 decline_of_mali.15 = {
 	hide_portraits = yes
@@ -1454,7 +1454,7 @@ decline_of_mali.20 = {
 		custom_tooltip = {
 			text = decline_of_mali.20.a.tt
 			every_owned_location = {
-				limit = { region = region:me_ithilien_region }
+				limit = { region = region:me_anorien_region }
 				every_pop = {
 					limit = {
 						owner = root

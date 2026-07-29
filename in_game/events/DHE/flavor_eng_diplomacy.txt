@@ -1270,7 +1270,7 @@ flavor_eng_diplomacy.1300 = {
 			c:GBR = { save_scope_as = target_root_country }
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region ?= {
 				limit = {
 					is_discovered_by = scope:target_root_country
@@ -1292,7 +1292,7 @@ flavor_eng_diplomacy.1300 = {
 
 		custom_tooltip = {
 			text = flavor_eng_diplomacy.1300.a.custom
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -1311,7 +1311,7 @@ flavor_eng_diplomacy.1300 = {
 				}
 			}
 
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -1338,7 +1338,7 @@ flavor_eng_diplomacy.1300 = {
 	option = {
 		name = flavor_eng_diplomacy.1300.b
 		trigger = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_location_in_region = {
 					is_discovered_by = scope:target_root_country
 					is_coastal = yes
@@ -1485,7 +1485,7 @@ flavor_eng_diplomacy.1400 = {
 		country_exists = c:NED
 		c:NED = {
 			capital = { is_market_center = yes }
-			own_entire_area = area:me_ithilien_area_07_07
+			own_entire_area = area:me_anorien_area_07_07
 			is_great_power = no
 		}
 
@@ -1793,7 +1793,7 @@ flavor_eng_diplomacy.1600 = {
 			 NOT = { is_allied_with = { target = c:TUR } }
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				is_coastal = yes
 				owner = c:IRA
@@ -1879,7 +1879,7 @@ flavor_eng_diplomacy.1601 = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
 		capital = { save_scope_as = target_location }
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region = {
 				limit = {
 					is_coastal = yes

@@ -390,7 +390,7 @@ flavor_ned.5 = {
 			owner != root
 			NOT = { location_rank = location_rank:rural_settlement }
 		}
-		has_presence_in = region:me_ithilien_region
+		has_presence_in = region:me_anorien_region
 	}
 
 	illustration_tags = {
@@ -668,8 +668,8 @@ flavor_ned.9 = {
 	}
 
 	trigger = {
-		has_discovered_area = area:me_ithilien_area_07_07
-		NOT = { has_presence_in = area:me_ithilien_area_07_07 }
+		has_discovered_area = area:me_anorien_area_07_07
+		NOT = { has_presence_in = area:me_anorien_area_07_07 }
 	}
 
 	illustration_tags = {
@@ -862,7 +862,7 @@ flavor_ned.11 = {
 	}
 
 	trigger = {
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				percent = 1
 				owner ?= root
@@ -1296,11 +1296,11 @@ flavor_ned.17 = {
 		any_owned_location = {
 			count >= 2
 			OR = {
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			has_building = building_type:fine_cloth_manufactory
 		}
@@ -1317,11 +1317,11 @@ flavor_ned.17 = {
 		ordered_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				has_building = building_type:fine_cloth_manufactory
 			}
@@ -1334,11 +1334,11 @@ flavor_ned.17 = {
 		ordered_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				has_building = building_type:fine_cloth_manufactory
 			}
@@ -2358,11 +2358,11 @@ flavor_ned.30 = {
 		societal_value:offensive_vs_defensive >= 50
 		any_owned_location = {
 			OR = {
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			any_buildings_in_location = {
 				building_category = defense_category
@@ -2380,11 +2380,11 @@ flavor_ned.30 = {
 		ordered_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				any_buildings_in_location = {
 					building_category = defense_category
@@ -2399,11 +2399,11 @@ flavor_ned.30 = {
 		ordered_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				any_buildings_in_location = {
 					building_category = defense_category
@@ -2418,11 +2418,11 @@ flavor_ned.30 = {
 		ordered_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				any_buildings_in_location = {
 					building_category = defense_category
@@ -2623,11 +2623,11 @@ flavor_ned.33 = {
 		any_owned_non_rural_location = {
 			percent >= 0.2
 			OR = {
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 		}
 	}
@@ -2641,11 +2641,11 @@ flavor_ned.33 = {
 		ordered_owned_non_rural_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 			}
 			order_by = population
@@ -2657,11 +2657,11 @@ flavor_ned.33 = {
 		ordered_owned_non_rural_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 			}
 			order_by = population
@@ -2673,11 +2673,11 @@ flavor_ned.33 = {
 		ordered_owned_non_rural_location = {
 			limit = {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 			}
 			order_by = population

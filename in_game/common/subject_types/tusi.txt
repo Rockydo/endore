@@ -36,11 +36,11 @@ tusi = {
 		can_country_have_tusi = yes
 		scope:target_province = {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 			dominant_culture ?= {
 				NOT = { has_culture_group = culture_group:chinese_group }

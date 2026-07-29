@@ -35,7 +35,7 @@ flavor_loi.10 = {
 		else = {
 			culture:norwegian = { save_scope_as = nordic_culture }
 		}
-		region:me_ithilien_region = { save_scope_as = scandinavia }
+		region:me_anorien_region = { save_scope_as = scandinavia }
 	}
 
 	# embrace norse roots

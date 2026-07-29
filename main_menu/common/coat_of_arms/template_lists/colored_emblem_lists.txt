@@ -685,7 +685,7 @@ colored_emblem_texture_lists = {
 				trigger = {
 					scope:actor ?= {
 						capital ?= {
-							region = region:me_ithilien_region
+							region = region:me_anorien_region
 						}
 					}
 				}
@@ -696,7 +696,7 @@ colored_emblem_texture_lists = {
 				trigger = {
 					scope:actor ?= {
 						capital ?= {
-							region = region:me_ithilien_region
+							region = region:me_anorien_region
 						}
 					}
 				}
@@ -1291,8 +1291,8 @@ colored_emblem_texture_lists = {
 					scope:actor ?= {
 						capital ?= {
 							OR = {
-								area = area:me_ithilien_area_07_07 # TODO
-								area = area:me_ithilien_area_07_07 # TODO
+								area = area:me_anorien_area_07_07 # TODO
+								area = area:me_anorien_area_07_07 # TODO
 							}
 						}
 					}
@@ -5976,7 +5976,7 @@ colored_emblem_texture_lists = {
 			trigger = {
 				scope:actor ?= {
 					capital ?= {
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 				}
 			}
@@ -5987,7 +5987,7 @@ colored_emblem_texture_lists = {
 			trigger = {
 				scope:actor ?= {
 					capital ?= {
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 				}
 			}
@@ -6016,7 +6016,7 @@ colored_emblem_texture_lists = {
 			trigger = {
 				scope:actor ?= {
 					capital ?= {
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 				}
 			}
@@ -6043,9 +6043,9 @@ colored_emblem_texture_lists = {
 				scope:actor ?= {
 					capital ?= {
 						OR = {
-							area = area:me_ithilien_area_07_07
-							area = area:me_ithilien_area_07_07
-							area = area:me_ithilien_area_07_07
+							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_07_07
 						}
 					}
 				}
@@ -6057,7 +6057,7 @@ colored_emblem_texture_lists = {
 			trigger = {
 				scope:actor ?= {
 					capital ?= {
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 				}
 			}
@@ -6073,8 +6073,8 @@ colored_emblem_texture_lists = {
 				scope:actor ?= {
 					capital ?= {
 					OR = {
-							region = region:me_ithilien_region
-							region = region:me_ithilien_region
+							region = region:me_anorien_region
+							region = region:me_anorien_region
 						}
 					}
 				}

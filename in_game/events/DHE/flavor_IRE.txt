@@ -231,7 +231,7 @@ ireland.40 = {
 	outcome = neutral
 
 	trigger = {
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 		has_ruler = yes
 		ruler.owner = this
 		NOT = { culture = culture:irish }

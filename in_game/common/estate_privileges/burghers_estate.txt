@@ -510,7 +510,7 @@ kulm_law = {
 			culture ?= { has_culture_group = culture_group:german_group }
 		}
 		capital ?= {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -864,15 +864,15 @@ magdeburg_rights = {
 	potential = {
 		capital ?= {
 			OR = {
-				area ?= area:me_ithilien_area_07_07
-				region ?= region:me_ithilien_region
-				region ?= region:me_ithilien_region
-				area ?= area:me_ithilien_area_07_07
-				area ?= area:me_ithilien_area_07_07
-				area ?= area:me_ithilien_area_07_07
-				area ?= area:me_ithilien_area_07_07
-				area ?= area:me_ithilien_area_07_07
-				area ?= area:me_ithilien_area_07_07
+				area ?= area:me_anorien_area_07_07
+				region ?= region:me_anorien_region
+				region ?= region:me_anorien_region
+				area ?= area:me_anorien_area_07_07
+				area ?= area:me_anorien_area_07_07
+				area ?= area:me_anorien_area_07_07
+				area ?= area:me_anorien_area_07_07
+				area ?= area:me_anorien_area_07_07
+				area ?= area:me_anorien_area_07_07
 			}
 		}
 		is_member_of_international_organization = international_organization:hre
@@ -893,9 +893,9 @@ novi_fori = {
 	potential = {
 		capital ?= {
 			OR = {
-				region ?= region:me_ithilien_region
-				region ?= region:me_ithilien_region
-				region ?= region:me_ithilien_region
+				region ?= region:me_anorien_region
+				region ?= region:me_anorien_region
+				region ?= region:me_anorien_region
 			}
 		}
 	}

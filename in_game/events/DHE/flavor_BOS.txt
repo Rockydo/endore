@@ -200,7 +200,7 @@ flavor_bos.3 = { #The First King of Bosnia
 			any_subject_or_below = {
 				culture = culture:serbian
 			}
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				any_location_in_area = {
 					owner ?= root
 					count > 15

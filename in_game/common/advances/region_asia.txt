@@ -16,11 +16,11 @@ saquiyah = {
 	potential = {
 		original_capital ?= {
 			OR = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				sub_continent = sub_continent:me_gondor_subcontinent
 				sub_continent = sub_continent:me_gondor_subcontinent
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 				sub_continent = sub_continent:me_gondor_subcontinent
 			}
 		}

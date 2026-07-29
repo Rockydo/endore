@@ -44,7 +44,7 @@ grant_italian_league_sponsor = {
 				is_member_of_international_organization = international_organization:foreign_league_france
 				is_member_of_international_organization = international_organization:foreign_league_hre
 				is_member_of_international_organization = international_organization:foreign_league_iberia
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 		enabled = {

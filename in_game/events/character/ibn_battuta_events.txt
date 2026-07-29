@@ -391,7 +391,7 @@ ibn_battuta_events.3 = { #1341 - 1343	He comes to China
 			}
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_location_in_region = {
 				limit = {
 					has_owner = yes
@@ -540,7 +540,7 @@ ibn_battuta_events.4 = {	#From China to Indian Port ~ 1342
 			move_country = root
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_location_in_region = {
 				limit = {
 					has_owner = yes
@@ -671,7 +671,7 @@ ibn_battuta_events.5 = {	#From Indian Port to Arabian Port	~1343
 			save_scope_as = target_character
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_location_in_region = {
 				limit = {
 					has_owner = yes
@@ -805,7 +805,7 @@ ibn_battuta_events.6 = {	#Arabian Port to Andalusia ~1350
 			save_scope_as = target_character
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_location_in_region = {
 				limit = {
 					has_owner = yes

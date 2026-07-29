@@ -2292,7 +2292,7 @@ amazigh_familial_connections = {
 	law_category = socioeconomic
 	potential = {
 		capital ?= {
-			region ?= region:me_ithilien_region
+			region ?= region:me_anorien_region
 		}
 		"estate_power(estate_type:tribes_estate)" > 0
 	}

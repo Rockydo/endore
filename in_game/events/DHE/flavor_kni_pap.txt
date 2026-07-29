@@ -272,7 +272,7 @@ flavor_kni_pap.4 = {
 		show_as_tooltip = {
 			every_province = {
 				limit = {
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				change_province_owner = scope:target_country
 			}
@@ -317,7 +317,7 @@ flavor_kni_pap.5 = {
 			set_variable = kni_accept
 			every_province = {
 				limit = {
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				change_province_owner = ROOT
 			}

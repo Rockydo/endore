@@ -73,8 +73,8 @@ scripted_effect union_expands = {
 		max = 1
 		limit = {
 			OR = {
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			not = {
 				OR = {
@@ -366,7 +366,7 @@ war_of_the_aragonese_union_disaster.8 = { #Valencia Rises
 			order_by = population
 			max = 2
 			limit = {
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
 				any_pop = {
 					rebel != scope:union_of_aragon
 				}

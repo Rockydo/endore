@@ -28,11 +28,11 @@ swe_slash_and_burn_new_farms = {
 			province_average_development < 20
 			population < 10
 			OR = {
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
-			province_definition != province_definition:me_ithilien_area_07_07_province_01
-			province_definition != province_definition:me_ithilien_area_07_07_province_01
+			province_definition != province_definition:me_anorien_area_07_07_province_01
+			province_definition != province_definition:me_anorien_area_07_07_province_01
 
 			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = swe_slash_and_burn_new_farms interaction_target = target } }
 			NOT = { cabinet_already_performing_same_task_on_target = { cabinet_action = expel_people interaction_target = target } }

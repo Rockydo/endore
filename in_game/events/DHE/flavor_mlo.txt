@@ -534,7 +534,7 @@ flavor_mlo.13 = { #A United Realm
 		hidden_effect = {
 			every_owned_location = {
 				limit = {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 				change_control = control_weak_bonus
 			}
@@ -1220,7 +1220,7 @@ flavor_mlo.23 = { #The Cloth Industry of Milan
 
 	major = yes
 	major_trigger = {
-		capital.region = region:me_ithilien_region
+		capital.region = region:me_anorien_region
 	}
 	trigger = {
 		owns = location:milano #If you are Milan and don't own Milano, you have problems

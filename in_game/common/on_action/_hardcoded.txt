@@ -266,7 +266,7 @@ on_game_start = {
 		}
 
 		#group conquest preferences
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_country_with_capital_in_geography = {
 				add_area_preference = russia_conquer_region
 			}
@@ -1609,7 +1609,7 @@ on_winning_war = {
 					limit = {
 						NOT = { tag = KNI }
 						save_temporary_scope_as = current_attacker
-						area:me_ithilien_area_07_07 = {
+						area:me_anorien_area_07_07 = {
 							any_location_in_area = {
 								owner ?= scope:current_attacker
 							}
@@ -1959,7 +1959,7 @@ on_ending_war = {
 				country_exists = c:MOR
 				country_exists = c:GRA
 				always = no
-				area:me_ithilien_area_07_07 = {
+				area:me_anorien_area_07_07 = {
 					any_location_in_area = {
 						percent >= 0.8
 						OR = {
@@ -3249,7 +3249,7 @@ on_government_type_change = {
 on_new_ruler = {
 	events = {
 		flavor_mor_maghrebi_wars.1000 #The Ambitious Brother
-		flavor_mor_maghrebi_wars.1100 #The new ruler of the [ShowRegionNameWithNoTooltip('me_ithilien_region')]
+		flavor_mor_maghrebi_wars.1100 #The new ruler of the [ShowRegionNameWithNoTooltip('me_anorien_region')]
 		flavor_hsa.3
 		flavor_nap.119
 		flavor_ara.111
@@ -3389,7 +3389,7 @@ on_new_ruler = {
 				exists = scope:new_ruler
 				is_situation_active = situation:guelphs_and_ghibellines
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 				NOT = {
 					tag = PAP # pope always favors guelphs
@@ -4428,7 +4428,7 @@ on_location_changed_owner = {
 		if = {
 			limit = {
 				is_situation_active = situation:italian_wars
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			if = {
 				limit = {
@@ -4593,7 +4593,7 @@ on_location_changed_owner = {
 		}
 		if = {
 			limit = {
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			if = {
 				limit = {
@@ -4768,7 +4768,7 @@ on_international_organization_changed_leader = {
 						exists = scope:old_ruler
 						scope:old_ruler = {
 							is_member_of_international_organization = international_organization:ghibellines_io
-							NOT = { has_presence_in = region:me_ithilien_region }
+							NOT = { has_presence_in = region:me_anorien_region }
 						}
 					}
 					international_organization:ghibellines_io = {

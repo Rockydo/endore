@@ -648,7 +648,7 @@ flavor_kor.10 = {
 		monthly_chance = 0
 	}
 	trigger = {
-		NOT = { own_entire_province = province_definition:me_ithilien_area_07_07_province_01 }
+		NOT = { own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
 		country_exists = c:SSG
 		c:SSG = {
 			owns = location:hwaju
@@ -724,14 +724,14 @@ flavor_kor.11 = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:peasants }
 	}
 	trigger = {
-		own_entire_province = province_definition:me_ithilien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_07_07_province_01
 		NOT = { country_exists = c:SSG }
 	}
 	option = {
 		name = flavor_kor.11.a
 		historical_option = yes
 		add_army_tradition = army_tradition_mild_bonus
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_location_in_region = {
 				limit = {
 					is_ownable = yes
@@ -1285,7 +1285,7 @@ flavor_kor.19 = {
 		every_owned_location = {
 			limit = {
 				raw_material = goods:cotton
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			change_max_raw_material_workers = 1
 			add_location_modifier = {
@@ -1597,7 +1597,7 @@ flavor_kor.24 = {
 		tag = KOR
 		NOT = { has_variable = flavor_kor_24_cooldown }
 		is_free_or_tributary_trigger = yes
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_area_in_region = {
 				any_province_in_area = {
 					owner ?= {
@@ -1621,7 +1621,7 @@ flavor_kor.24 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_area_in_region = {
 				limit = {
 					any_province_in_area = {

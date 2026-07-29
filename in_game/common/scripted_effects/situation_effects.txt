@@ -194,10 +194,10 @@ rtr_core_all_of_china_effect = {
 	custom_description = {
 		text = rtr_gain_annex_cb_on_china
 		object = $country$
-		rtr_grant_annexation_cb_in = { geography = region:me_ithilien_region country = $country$ }
-		rtr_grant_annexation_cb_in = { geography = region:me_ithilien_region country = $country$ }
-		rtr_grant_annexation_cb_in = { geography = region:me_ithilien_region country = $country$ }
-		rtr_grant_annexation_cb_in = { geography = region:me_ithilien_region country = $country$ }
+		rtr_grant_annexation_cb_in = { geography = region:me_anorien_region country = $country$ }
+		rtr_grant_annexation_cb_in = { geography = region:me_anorien_region country = $country$ }
+		rtr_grant_annexation_cb_in = { geography = region:me_anorien_region country = $country$ }
+		rtr_grant_annexation_cb_in = { geography = region:me_anorien_region country = $country$ }
 	}
 }
 
@@ -1175,7 +1175,7 @@ reconcile_italian_wars_league_land = {
 
 		limit = {
 			any_international_organization_owned_location = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 		reconcile_single_italian_wars_league_land = yes
@@ -1185,7 +1185,7 @@ reconcile_italian_wars_league_land = {
 
 		limit = {
 			any_international_organization_owned_location = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 		reconcile_single_italian_wars_league_land = yes
@@ -1211,7 +1211,7 @@ reconcile_single_italian_wars_league_land = {
 	every_international_organization_member = {
 		every_owned_location = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				is_land = yes
 				is_passable = yes
 				NOT = { is_owned_by_international_organization = scope:iw_reconcile_league }

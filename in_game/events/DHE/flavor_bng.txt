@@ -712,7 +712,7 @@ flavor_bng.11 = {
 	trigger = {
 		any_port_in_country = {
 			count >= 5
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -720,7 +720,7 @@ flavor_bng.11 = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		ordered_port_in_country = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			order_by = population
 			max = 1

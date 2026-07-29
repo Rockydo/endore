@@ -111,12 +111,12 @@ decline_of_majapahit.3 = {
 
 	trigger = {
 		OR = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_present_country = {
 					can_be_targetted_by_decline_of_majapahit_3 = yes
 				}
 			}
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				any_present_country = {
 					can_be_targetted_by_decline_of_majapahit_3 = yes
 				}
@@ -127,7 +127,7 @@ decline_of_majapahit.3 = {
 
 	immediate = {
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_present_country = {
 				limit = {
 					can_be_targetted_by_decline_of_majapahit_3 = yes
@@ -135,7 +135,7 @@ decline_of_majapahit.3 = {
 				add_to_list = stronger_countries
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_present_country = {
 				limit = {
 					can_be_targetted_by_decline_of_majapahit_3 = yes
@@ -206,7 +206,7 @@ decline_of_majapahit.4 = {
 
 	trigger = {
 		any_province = {
-			area = area:me_ithilien_area_07_07
+			area = area:me_anorien_area_07_07
 			NOT = { has_province_modifier = maj_province_discontent }
 		}
 	}
@@ -216,7 +216,7 @@ decline_of_majapahit.4 = {
 		random_province = {
 			limit = {
 				NOT = { has_province_modifier = maj_province_discontent }
-				area = area:me_ithilien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 			save_scope_as = target_province
 			random_location_in_province = {
@@ -373,7 +373,7 @@ decline_of_majapahit.6 = {
 	image = "gfx/interface/illustrations/disaster/death_of_hayan_wuruk.dds"
 
 	trigger = {
-		exists = province:me_ithilien_area_07_07_province_01
+		exists = province:me_anorien_area_07_07_province_01
 		dominant_religion = religion:sunni
 	}
 
@@ -381,7 +381,7 @@ decline_of_majapahit.6 = {
 	fire_only_once = yes
 
 	immediate = {
-		province:me_ithilien_area_07_07_province_01 = {
+		province:me_anorien_area_07_07_province_01 = {
 			save_scope_as = target_province
 		}
 		religion = {
@@ -410,7 +410,7 @@ decline_of_majapahit.6 = {
 
 		ordered_pop = {
 			limit = {
-				location.area = area:me_ithilien_area_07_07
+				location.area = area:me_anorien_area_07_07
 				religion = root.religion
 				OR = {
 					pop_type = pop_type:nobles
@@ -642,7 +642,7 @@ decline_of_majapahit.102 = {
 	fire_only_once = yes
 
 	immediate = {
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_location_in_area = {
 				limit = {
 					dominant_religion = religion:sunni

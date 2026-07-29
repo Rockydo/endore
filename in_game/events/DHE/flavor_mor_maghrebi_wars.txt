@@ -383,32 +383,32 @@ flavor_mor_maghrebi_wars.1100 = { #"The [ROOT.GetCountry.GetAdjectiveWithNoToolt
 
 	trigger = {
         religion.group = religion_group:muslim
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			any_location_in_province_definition = {
 				top_owner ?= root
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			any_location_in_province_definition = {
 				top_owner ?= root
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			any_location_in_province_definition = {
 				top_owner ?= root
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			any_location_in_province_definition = {
 				top_owner ?= root
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			any_location_in_province_definition = {
 				top_owner ?= root
 			}
 		}
-		province_definition:me_ithilien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_07_07_province_01 = {
 			any_location_in_province_definition = {
 				top_owner ?= root
 			}

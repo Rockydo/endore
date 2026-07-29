@@ -10,7 +10,7 @@ italian_wars = {
 		OR = {
 			current_year > 1495
 			any_great_power = {
-				any_enemy_war_leader = { capital.region = region:me_ithilien_region }
+				any_enemy_war_leader = { capital.region = region:me_anorien_region }
 			}
 		}
 	}
@@ -71,7 +71,7 @@ italian_wars = {
 	}
 	visible = {
 		OR = {
-			has_presence_in = region:me_ithilien_region
+			has_presence_in = region:me_anorien_region
 			is_leader_of_international_organization = international_organization:foreign_league_balkan
 			is_leader_of_international_organization = international_organization:foreign_league_france
 			is_leader_of_international_organization = international_organization:foreign_league_hre
@@ -157,7 +157,7 @@ italian_wars = {
 		#Calculate Strongest Balkan Country
 		if = {
 			limit = {
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					any_country_with_capital_in_geography = {
 						basic_checks_for_calculating_foreign_league_leaders = yes
 						religion.group = religion_group:christian
@@ -166,7 +166,7 @@ italian_wars = {
 					}
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				ordered_country_with_capital_in_geography = {
 					limit = {
 						basic_checks_for_calculating_foreign_league_leaders = yes
@@ -195,7 +195,7 @@ italian_wars = {
 		}
 
 		#Calculate Strongest French Country
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_country_with_capital_in_geography = {
 				limit = {
 					basic_checks_for_calculating_foreign_league_leaders = yes
@@ -223,7 +223,7 @@ italian_wars = {
 		}
 
 		#Calculate Strongest Iberian Country
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_country_with_capital_in_geography = {
 				limit = {
 					basic_checks_for_calculating_foreign_league_leaders = yes
@@ -279,7 +279,7 @@ italian_wars = {
 
 		#Calculate Strongest Italian Defenders
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_country_with_capital_in_geography = {
 				limit = {
 					basic_checks_for_calculating_foreign_league_leaders = yes
@@ -305,7 +305,7 @@ italian_wars = {
 			}
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_country_with_capital_in_geography = {
 				limit = {
 					basic_checks_for_calculating_foreign_league_leaders = yes
@@ -331,7 +331,7 @@ italian_wars = {
 			}
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			ordered_country_with_capital_in_geography = {
 				limit = {
 					basic_checks_for_calculating_foreign_league_leaders = yes
@@ -357,7 +357,7 @@ italian_wars = {
 			}
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_country_with_capital_in_geography = {
 				limit = {
 					is_subject = no
@@ -717,7 +717,7 @@ italian_wars = {
 			custom_tooltip = "IW_ADMIN_CENTER_MAP_TOOLTIP"
 		}
 		if = {
-			limit = { region = region:me_ithilien_region }
+			limit = { region = region:me_anorien_region }
 			custom_tooltip = "PART_OF_ITALY_TT"
 		}
 	}
@@ -1051,7 +1051,7 @@ italian_wars = {
 		}
 		else_if = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				owner ?= { is_member_of_no_foreign_or_italian_league = yes }
 			}
 			value = black

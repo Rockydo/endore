@@ -778,8 +778,8 @@ hre = {
 									not = { is_member_of_international_organization = root }
 								}
 								OR = {
-									region = region:me_ithilien_region
-									region = region:me_ithilien_region
+									region = region:me_anorien_region
+									region = region:me_anorien_region
 								}
 							}
 							add = 1
@@ -797,8 +797,8 @@ hre = {
 								}
 								NOT = {
 									OR = {
-										region = region:me_ithilien_region
-										region = region:me_ithilien_region
+										region = region:me_anorien_region
+										region = region:me_anorien_region
 									}
 								}
 							}

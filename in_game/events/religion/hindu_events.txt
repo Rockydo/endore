@@ -1998,7 +1998,7 @@ hindu_events.2401 = {
 		first_valid = {
 			triggered_desc = {
 				desc = hindu_events.2401.desc_presence
-				trigger = { has_presence_in = region:me_ithilien_region }
+				trigger = { has_presence_in = region:me_anorien_region }
 			}
 			triggered_desc = {
 				desc = hindu_events.2401.desc
@@ -2034,7 +2034,7 @@ hindu_events.2401 = {
 
 	option = {
 		name = hindu_events.2401.a
-		trigger = { NOT = { has_presence_in = region:me_ithilien_region } }
+		trigger = { NOT = { has_presence_in = region:me_anorien_region } }
 		change_gold_effect = { scale = -2.40 }
 		ruler = { add_character_modifier = { modifier = hindu_ganges_pilgrimage months = 12 mode = add_and_extend } }
 		trigger_event_silently = { id = hindu_events.2402 months = 12 }
@@ -2045,7 +2045,7 @@ hindu_events.2401 = {
 	}
 	option = {
 		name = hindu_events.2401.a_presence
-		trigger = { has_presence_in = region:me_ithilien_region }
+		trigger = { has_presence_in = region:me_anorien_region }
 		change_gold_effect = { scale = -1.20 }
 		trigger_event_silently = { id = hindu_events.2402 days = 20 }
 		add_government_power = government_power_weak_bonus
@@ -2055,12 +2055,12 @@ hindu_events.2401 = {
 	}
 	option = {
 		name = hindu_events.2401.b
-		trigger = { NOT = { has_presence_in = region:me_ithilien_region } }
+		trigger = { NOT = { has_presence_in = region:me_anorien_region } }
 		add_prestige = prestige_mild_penalty
 	}
 	option = {
 		name = hindu_events.2401.b_presence
-		trigger = { has_presence_in = region:me_ithilien_region }
+		trigger = { has_presence_in = region:me_anorien_region }
 		add_prestige = prestige_mild_penalty
 	}
 }

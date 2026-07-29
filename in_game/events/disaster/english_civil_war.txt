@@ -458,7 +458,7 @@ english_civil_war.257 = {	#Area Rebels
 	image = "gfx/interface/illustrations/disaster/english_civil_war.dds"
 	trigger = {
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_area_in_region = {
 				percent >= 0.5
 				any_province_in_area = {
@@ -484,7 +484,7 @@ english_civil_war.257 = {	#Area Rebels
 			save_scope_as = english_civil_war_rebels_scope
 		}
 		ruler_or_regent = { save_scope_as = target_character_1 }
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_area_in_region = {
 				limit = {
 					any_province_in_area = {

@@ -2684,7 +2684,7 @@ flavor_jap.144 = { # Francis Xavier
 		has_ruler = yes
 		num_of_ports >= 3
 		any_port_in_country = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 		international_organization:japanese_shogunate ?= {
 			custom_tooltip = {
@@ -2701,7 +2701,7 @@ flavor_jap.144 = { # Francis Xavier
 		}
 		random_port_in_country = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 			save_scope_as = arrival_location
 		}

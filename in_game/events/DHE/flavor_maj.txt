@@ -1198,7 +1198,7 @@ flavor_maj.18 = {
 			save_scope_as = target_location
 		}
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			random_location_in_area = {
 				limit = {
 					NOT = {
@@ -1660,13 +1660,13 @@ flavor_maj.25 = {
 	trigger = {
 		sumpah_palapa_trigger = yes
 		OR = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_present_country = {
 					count >= 1
 					can_be_targetted_by_gajah_mada = yes
 				}
 			}
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				any_present_country = {
 					count >= 1
 					can_be_targetted_by_gajah_mada = yes
@@ -1684,7 +1684,7 @@ flavor_maj.25 = {
 		set_sumpah_palapa_scopes = yes
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_present_country = {
 				limit = {
 					can_be_targetted_by_gajah_mada = yes
@@ -1693,7 +1693,7 @@ flavor_maj.25 = {
 			}
 		}
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_present_country = {
 				limit = {
 					can_be_targetted_by_gajah_mada = yes
@@ -1857,8 +1857,8 @@ flavor_maj.26 = {
 				exists = capital
 				capital = {
 					OR = {
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
 					}
 				}
 			}
@@ -1890,8 +1890,8 @@ flavor_maj.27 = {
 			this = scope:from
 			capital ?= {
 				OR = {
-					area = area:me_ithilien_area_07_07
-					region = region:me_ithilien_region
+					area = area:me_anorien_area_07_07
+					region = region:me_anorien_region
 				}
 			}
 		}

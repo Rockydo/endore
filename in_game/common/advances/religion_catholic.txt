@@ -120,7 +120,7 @@ conquistador_advance = {
 	potential = {
 		religion = religion:catholic
 		culture = { has_culture_group = culture_group:iberian_group }
-		capital.region ?= region:me_ithilien_region
+		capital.region ?= region:me_anorien_region
 	}
 
 	allow_conquistadors = yes

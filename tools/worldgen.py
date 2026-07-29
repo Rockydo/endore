@@ -26,8 +26,8 @@ MAP_OUT = ROOT / "in_game/map_data"
 TERRAIN_OUT = ROOT / "in_game/gfx/terrain2"
 
 CONTROL_W, CONTROL_H = 1024, 512
-WORLD_W, WORLD_H = 8192, 4096
-HEIGHT_W, HEIGHT_H = 4096, 2048
+WORLD_W, WORLD_H = 16384, 8192
+HEIGHT_W, HEIGHT_H = 8192, 4096
 BIOME_W, BIOME_H = HEIGHT_W - 1, HEIGHT_H - 1
 SEED = 3018
 
@@ -203,17 +203,24 @@ def spatial_group(x: float, y: float) -> tuple[str, str]:
         if y < 0.82:
             return "me_mordor_and_rhun", "me_mordor_region"
         return "me_mordor_and_rhun", "me_khand_region"
+    # The Mark lies north of the White Mountains and must be resolved before
+    # the broad southern Gondor bins. The M3 ownership audit caught the first
+    # coarse M2 boundary putting Edoras and Helm's Deep in Lebennin.
+    if 0.46 <= x < 0.615 and 0.59 <= y < 0.75:
+        return "me_rhovanion", "me_rohan_region"
     if y > 0.655:
-        if x < 0.46:
+        if x < 0.535:
             return "me_gondor", "me_belfalas_region"
-        if x < 0.58:
+        if x < 0.605 and y > 0.735:
             return "me_gondor", "me_lebennin_region"
-        if x > 0.62 and y < 0.79:
+        if x > 0.642 and y < 0.79:
             return "me_gondor", "me_ithilien_region"
-        if y < 0.78:
+        if y < 0.755:
             return "me_gondor", "me_anorien_region"
         return "me_gondor", "me_south_gondor_region"
-    if x >= 0.46:
+    if 0.455 <= x < 0.505 and 0.49 <= y < 0.57:
+        return "me_rhovanion", "me_anduin_vale_region"
+    if x >= 0.50:
         if y < 0.27:
             return "me_rhovanion", "me_grey_mountains_region"
         if x > 0.60 and y < 0.43:
@@ -225,11 +232,11 @@ def spatial_group(x: float, y: float) -> tuple[str, str]:
         if x < 0.58:
             return "me_rhovanion", "me_anduin_vale_region"
         return "me_rhovanion", "me_brown_lands_region"
-    if x < 0.32:
+    if x < 0.29:
         return "me_eriador", "me_lindon_region"
     if y < 0.35:
         return "me_eriador", "me_north_arnor_region"
-    if y < 0.49:
+    if 0.29 <= x < 0.49 and 0.35 <= y < 0.49:
         return "me_eriador", "me_shire_breeland_region"
     return "me_eriador", "me_enedwaith_region"
 
@@ -253,6 +260,18 @@ def kind_masks(biomes: np.ndarray, anchors: list[Anchor]) -> tuple[np.ndarray, d
             for nx in range(max(0, x - 1), min(CONTROL_W, x + 2)):
                 if kind_map[ny, nx] == KIND_CODE["mountain"]:
                     kind_map[ny, nx] = KIND_CODE["land"]
+    # Passes are authored movement contracts, not merely low-elevation paint.
+    # The blurred ridge control can otherwise leave a two-pixel mountain seam
+    # across a visually open gap. Hard-cut every pass disk into playable land
+    # before component cleanup and seed placement.
+    projection = json.loads((CONTROL / "projection.json").read_text(encoding="utf-8"))
+    yy, xx = np.ogrid[:CONTROL_H, :CONTROL_W]
+    for pass_data in projection["passes"]:
+        px = round(float(pass_data["center"][0]) * (CONTROL_W - 1))
+        py = round(float(pass_data["center"][1]) * (CONTROL_H - 1))
+        radius = max(2, round(float(pass_data["radius"]) * CONTROL_H))
+        disk = (xx - px) ** 2 + (yy - py) ** 2 <= radius**2
+        kind_map[disk & (kind_map == KIND_CODE["mountain"])] = KIND_CODE["land"]
     clean_small_components(kind_map, minimum=4)
     return kind_map, pinned
 

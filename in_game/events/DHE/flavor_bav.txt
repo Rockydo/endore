@@ -2162,7 +2162,7 @@ flavor_bav.1302 = {
 				owns = location:landshut
 				OR = {
 					stability <= 0
-					area:me_ithilien_area_07_07 = {
+					area:me_anorien_area_07_07 = {
 						any_location_in_area = {
 							owner = root
 							average_satisfaction <= 0.5
@@ -2301,7 +2301,7 @@ flavor_bav.1302 = {
 			owns = location:landshut
 		}
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_location_in_area = {
 				limit = { owner = root }
 				add_location_modifier = { modifier = bavaria_internal_division years = 25 mode=add_and_extend }

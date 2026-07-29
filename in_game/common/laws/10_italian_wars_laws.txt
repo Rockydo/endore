@@ -14,7 +14,7 @@ administration_of_italian_lands_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = locations_in_italy_gain_tt
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			local_max_control = 0.1
@@ -28,7 +28,7 @@ administration_of_italian_lands_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = locations_in_italy_gain_tt
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			local_monthly_development_modifier = 0.2
@@ -45,7 +45,7 @@ administration_of_italian_lands_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = locations_in_italy_gain_tt
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			local_production_efficiency = 0.1
@@ -58,7 +58,7 @@ administration_of_italian_lands_law = {
 		years = 2
 		potential = {
 			OR = {
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
 				culture = { has_culture_group = culture_group:french_group }
 			}
 		}
@@ -70,7 +70,7 @@ administration_of_italian_lands_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = locations_in_italy_gain_tt
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			local_crown_estate_power = 0.5
@@ -82,7 +82,7 @@ administration_of_italian_lands_law = {
 		years = 2
 		potential = {
 			OR = {
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
 				culture = { has_culture_group = culture_group:iberian_group }
 			}
 		}
@@ -94,7 +94,7 @@ administration_of_italian_lands_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = locations_in_italy_gain_tt
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			local_distance_from_capital_speed_propagation = 0.2
@@ -106,7 +106,7 @@ administration_of_italian_lands_law = {
 		years = 2
 		potential = {
 			OR = {
-				capital = { region = region:me_ithilien_region }
+				capital = { region = region:me_anorien_region }
 				culture = { has_culture_group = culture_group:greek_group }
 				culture = { has_culture_group = culture_group:south_slavic_group }
 				has_or_had_tag = BYZ
@@ -127,7 +127,7 @@ administration_of_italian_lands_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = locations_in_italy_gain_tt
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			local_pop_assimilation_speed_modifier = 0.5
@@ -151,7 +151,7 @@ administration_of_italian_lands_law = {
 			potential_trigger = {
 				custom_tooltip = {
 					text = locations_in_italy_gain_tt
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 			local_unrest = -0.25

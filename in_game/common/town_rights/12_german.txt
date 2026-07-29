@@ -15,7 +15,7 @@ magdeburg_rights_town_rights = {
 
 	potential = {
 		capital ?= {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 		modifier:allow_magdeburg_rights_town_rights = yes
 	}
@@ -82,7 +82,7 @@ nuremberg_rights_town_rights = {
 
 	potential = {
 		capital ?= {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 		modifier:allow_nuremberg_rights_town_rights = yes
 	}

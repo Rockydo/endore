@@ -831,7 +831,7 @@ flavor_ira.13 = {
 		any_pop = {
 			culture = culture:armenian_culture
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				owner = root
 				dominant_culture = culture:armenian_culture
@@ -857,7 +857,7 @@ flavor_ira.13 = {
 		capital = {
 			save_scope_as = target_location
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_location_in_region = {
 				limit = {
 					owner = root
@@ -1247,7 +1247,7 @@ flavor_ira.20 = {
 
 	trigger = {
 		has_ruler = yes
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				has_owner = yes
 				owner = root
@@ -1263,7 +1263,7 @@ flavor_ira.20 = {
 		}
 		sub_continent:me_gondor_subcontinent = {
 			any_location_in_sub_continent = {
-				NOT = { region = region:me_ithilien_region }
+				NOT = { region = region:me_anorien_region }
 				has_owner = yes
 				owner = root
 				count >= 250

@@ -176,11 +176,11 @@ plus_ultra = {
 			tag = CAS
 			tag = SPA
 		}
-		has_presence_in = region:me_ithilien_region
-		has_presence_in = region:me_ithilien_region
-		has_presence_in = region:me_ithilien_region
-		has_presence_in = region:me_ithilien_region
-		has_presence_in = region:me_ithilien_region
+		has_presence_in = region:me_anorien_region
+		has_presence_in = region:me_anorien_region
+		has_presence_in = region:me_anorien_region
+		has_presence_in = region:me_anorien_region
+		has_presence_in = region:me_anorien_region
 	}
 }
 
@@ -384,19 +384,19 @@ hongwu_di = {
 		international_organization:middle_kingdom.leader_country = root
 		has_or_had_tag = MNG
 		has_or_had_tag = CHI
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_ownable_location_in_region = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_ownable_location_in_region = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_ownable_location_in_region = {
 				percent = 1
 				top_owner ?= root
@@ -404,10 +404,10 @@ hongwu_di = {
 		}
 		custom_tooltip = {
 			text = hongwu_di_east_china_trigger_tt
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_ownable_location_in_region = {
 					OR = {
-						area = area:me_ithilien_area_07_07
+						area = area:me_anorien_area_07_07
 						top_owner ?= root
 					}
 					percent = 1
@@ -481,7 +481,7 @@ the_navigator = {
 		has_presence_in = continent:me_gondor
 		has_presence_in = continent:me_gondor
 		has_presence_in = sub_continent:me_gondor_subcontinent
-		has_presence_in = region:me_ithilien_region
+		has_presence_in = region:me_anorien_region
 
 		OR = {
 			current_age = age_1_traditions
@@ -697,37 +697,37 @@ saladin_legacy = {
 	possible = { has_or_had_tag = HSN }
 
 	happened = {
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_ownable_location_in_region = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
@@ -964,7 +964,7 @@ counting_circles = {
 if_you_cant_beat_em_join_em = {
 	possible = {
 		OR = {
-			has_presence_in = region:me_ithilien_region
+			has_presence_in = region:me_anorien_region
 			tag = PAP
 			is_leader_of_international_organization = international_organization:hre
 		}
@@ -986,10 +986,10 @@ if_you_cant_beat_em_join_em = {
 league_of_legends = {
 	possible = {
 		OR = {
-			has_presence_in = region:me_ithilien_region
-			has_presence_in = region:me_ithilien_region
-			has_presence_in = region:me_ithilien_region
-			has_presence_in = region:me_ithilien_region
+			has_presence_in = region:me_anorien_region
+			has_presence_in = region:me_anorien_region
+			has_presence_in = region:me_anorien_region
+			has_presence_in = region:me_anorien_region
 			is_member_of_international_organization = international_organization:hre
 		}
 	}

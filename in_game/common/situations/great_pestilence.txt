@@ -75,7 +75,7 @@ great_pestilence = {
 		if = {
 			limit = {
 				var:var_carib_was_infected = no
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					any_ownable_location_in_region = {
 						disease_presence = { disease = disease:great_pestilence value > 0 }
 					}
@@ -86,7 +86,7 @@ great_pestilence = {
 		if = {
 			limit = {
 				var:var_mesoamerica_was_infected = no
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					any_ownable_location_in_region = {
 						disease_presence = { disease = disease:great_pestilence value > 0 }
 					}
@@ -97,7 +97,7 @@ great_pestilence = {
 		if = {
 			limit = {
 				var:var_andes_was_infected = no
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					any_ownable_location_in_region = {
 						disease_presence = { disease = disease:great_pestilence value > 0 }
 					}

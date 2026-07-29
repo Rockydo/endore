@@ -56,10 +56,10 @@ cb_red_turban_rebellions_against_other_rebels = {
 		scope:target = {
 			capital = {
 				OR = {
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
+					region = region:me_anorien_region
 				}
 			}
 			is_neighbor_of = root

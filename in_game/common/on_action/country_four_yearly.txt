@@ -8,7 +8,7 @@ four_yearly_country_pulse = {
 	events = {
 		flavor_kor.2 #Mongol aristocrats in Korea making demands
 		privilege_events.110 #Libro d'Oro Recurring Event
-		flavor_mor_maghrebi_wars.1100  #The new ruler of the [ShowRegionNameWithNoTooltip('me_ithilien_region')]
+		flavor_mor_maghrebi_wars.1100  #The new ruler of the [ShowRegionNameWithNoTooltip('me_anorien_region')]
 		flavor_swi.999
 		flavor_kor.18 #Righteous Army
 		flavor_mam.45
@@ -22,11 +22,11 @@ four_yearly_country_pulse = {
 				NOT = { has_global_variable = albanian_migration_cooldown }
 				any_owned_location = {
 					OR = {
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
 					}
 				}
 				"scripted_geography:albanian_migration_source_geography.culture_population(culture:albanian)" > 10
@@ -261,10 +261,10 @@ on_albanian_migration = {
 		set_local_variable = {
 			name = weight_for_attica
 			value = {
-				value = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
-				add = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
-				add = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
-				add = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				value = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				add = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				add = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				add = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
 				divide = 4
 				max = 0.1
 				multiply = 10
@@ -273,11 +273,11 @@ on_albanian_migration = {
 		set_local_variable = {
 			name = weight_for_morea
 			value = {
-				value = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
-				add = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
-				add = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
-				add = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
-				add = "province_definition:me_ithilien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				value = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				add = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				add = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				add = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
+				add = "province_definition:me_anorien_area_07_07_province_01.culture_percentage(culture:albanian)"
 				divide = 5
 				max = 0.1
 				multiply = 10
@@ -286,8 +286,8 @@ on_albanian_migration = {
 		set_local_variable = {
 			name = weight_for_italy
 			value = {
-				value = "area:me_ithilien_area_07_07.culture_percentage(culture:albanian)"
-				add = "area:me_ithilien_area_07_07.culture_percentage(culture:albanian)"
+				value = "area:me_anorien_area_07_07.culture_percentage(culture:albanian)"
+				add = "area:me_anorien_area_07_07.culture_percentage(culture:albanian)"
 				divide = 2
 				max = 0.1
 				multiply = 10
@@ -296,15 +296,15 @@ on_albanian_migration = {
 
 		add_to_local_variable_map = {
 			name = previous_weights
-			key = province_definition:me_ithilien_area_07_07_province_01
+			key = province_definition:me_anorien_area_07_07_province_01
 			value = local_var:weight_for_attica
 		}
 		add_to_local_variable_map = {
 			name = previous_weights
-			key = province_definition:me_ithilien_area_07_07_province_01
+			key = province_definition:me_anorien_area_07_07_province_01
 			value = local_var:weight_for_attica
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_province_definition_in_area = {
 				add_to_local_variable_map = {
 					name = previous_weights
@@ -313,7 +313,7 @@ on_albanian_migration = {
 				}
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_province_definition_in_area = {
 				add_to_local_variable_map = {
 					name = previous_weights
@@ -322,7 +322,7 @@ on_albanian_migration = {
 				}
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			every_province_definition_in_area = {
 				add_to_local_variable_map = {
 					name = previous_weights

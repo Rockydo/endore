@@ -162,7 +162,7 @@ flavor_ven_tur_conflict.1100 = {
 
 	trigger = {
 		country_exists = c:TUR
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				owner = c:TUR
 			}
@@ -183,7 +183,7 @@ flavor_ven_tur_conflict.1100 = {
 		scope:rising_power = {
 			ordered_owned_location = {
 				limit = {
-					area = area:me_ithilien_area_07_07
+					area = area:me_anorien_area_07_07
 				}
 				order_by = population
 				max = 1

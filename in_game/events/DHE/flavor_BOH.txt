@@ -1239,7 +1239,7 @@ flavor_boh.23 = { #The Land Court of [target_area.GetNameWithNoTooltip] (Moravia
 	}
 
 	trigger = {
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 	}
 
 	illustration_tags = {
@@ -1249,7 +1249,7 @@ flavor_boh.23 = { #The Land Court of [target_area.GetNameWithNoTooltip] (Moravia
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		area:me_ithilien_area_07_07 = { save_scope_as = target_area }
+		area:me_anorien_area_07_07 = { save_scope_as = target_area }
 		capital.province = { save_scope_as = target_capital }
 	}
 
@@ -1258,7 +1258,7 @@ flavor_boh.23 = { #The Land Court of [target_area.GetNameWithNoTooltip] (Moravia
 
 		custom_tooltip = boh_control_prosp_dev_moravia_tt
 		hidden_effect = {
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				every_location_in_area = {
 					change_control = control_mild_bonus
 					change_prosperity = prosperity_very_weak_bonus
@@ -1407,7 +1407,7 @@ flavor_boh.25 = { #Master of Vyšší Brod
 }
 
 scripted_trigger control_all_bohemia_moravia_silesia_trigger = {
-	area:me_ithilien_area_07_07 = {
+	area:me_anorien_area_07_07 = {
 		NOT = {
 			any_location_in_area = {
 				AND = {
@@ -1419,7 +1419,7 @@ scripted_trigger control_all_bohemia_moravia_silesia_trigger = {
 			}
 		}
 	}
-	area:me_ithilien_area_07_07 = {
+	area:me_anorien_area_07_07 = {
 		NOT = {
 			any_location_in_area = {
 				AND = {
@@ -1431,7 +1431,7 @@ scripted_trigger control_all_bohemia_moravia_silesia_trigger = {
 			}
 		}
 	}
-	area:me_ithilien_area_07_07 = {
+	area:me_anorien_area_07_07 = {
 		NOT = {
 			any_location_in_area = {
 				AND = {

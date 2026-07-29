@@ -7,7 +7,7 @@ the_sahel_trade = {
 		original_capital ?= {
 			OR = {
 				sub_continent = sub_continent:me_gondor_subcontinent
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 			}
 		}
 	}

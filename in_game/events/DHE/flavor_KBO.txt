@@ -470,7 +470,7 @@ flavor_kbo.11 = { #Relocation of the Zaghawa
 			add_migration = {
 				owner = root
 				from = this.province_definition
-				to = province_definition:me_ithilien_area_07_07_province_01
+				to = province_definition:me_anorien_area_07_07_province_01
 				culture = culture:zaghawa_culture
 				amount = 0.2
 				months = 60
@@ -506,8 +506,8 @@ flavor_kbo.12 = { #Legacy of the [ROOT.GetCountry.GetLongNameWithNoTooltip]
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					NOT = {	own_entire_province = province_definition:me_ithilien_area_07_07_province_01 }
-					NOT = {	own_entire_province = province_definition:me_ithilien_area_07_07_province_01 }
+					NOT = {	own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
+					NOT = {	own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
 				}
 				desc = flavor_kbo.12.bad.desc
 			}
@@ -530,17 +530,17 @@ flavor_kbo.12 = { #Legacy of the [ROOT.GetCountry.GetLongNameWithNoTooltip]
 		capital.province = { save_scope_as = target_capital_province }
 		if = {
 			limit = {
-				own_entire_province = province_definition:me_ithilien_area_07_07_province_01
-				NOT = { own_entire_province = province_definition:me_ithilien_area_07_07_province_01 }
+				own_entire_province = province_definition:me_anorien_area_07_07_province_01
+				NOT = { own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = { save_scope_as = target_lost_province }
+			province_definition:me_anorien_area_07_07_province_01 = { save_scope_as = target_lost_province }
 		}
 		if = {
 			limit = {
-				own_entire_province = province_definition:me_ithilien_area_07_07_province_01
-				NOT = { own_entire_province = province_definition:me_ithilien_area_07_07_province_01 }
+				own_entire_province = province_definition:me_anorien_area_07_07_province_01
+				NOT = { own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
 			}
-			province_definition:me_ithilien_area_07_07_province_01 = { save_scope_as = target_lost_province }
+			province_definition:me_anorien_area_07_07_province_01 = { save_scope_as = target_lost_province }
 		}
 
 	}
@@ -548,7 +548,7 @@ flavor_kbo.12 = { #Legacy of the [ROOT.GetCountry.GetLongNameWithNoTooltip]
 	option = { #We must Accept our fate
 		name = flavor_kbo.12.a
 		trigger = {
-			NOT = { own_entire_province = province_definition:me_ithilien_area_07_07_province_01 }
+			NOT = { own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
 		}
 		custom_tooltip = flavor_kbo.12_become_bornu_tt
 		hidden_effect = {
@@ -598,7 +598,7 @@ flavor_kbo.13 = { #Reconquest of Kanem
 			text = variable_kbo_lost_kanem_tt
 			has_variable = kbo_lost_kanem
 		}
-		own_entire_province = province_definition:me_ithilien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_07_07_province_01
 		at_war = no
 	}
 

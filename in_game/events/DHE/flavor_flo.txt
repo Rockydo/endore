@@ -73,7 +73,7 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 			}
 			AND = {
 				has_reform = government_reform:dynastic_signoria_reform
-				own_entire_area = area:me_ithilien_area_07_07
+				own_entire_area = area:me_anorien_area_07_07
 			}
 		}
 
@@ -2134,7 +2134,7 @@ flavor_flo.51 = { # Medici Giraffe
 		has_ruler = yes
 		OR = {
 			country_exists = c:MAM
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_location_in_region = {
 					is_capital = yes
 				}
@@ -2157,7 +2157,7 @@ flavor_flo.51 = { # Medici Giraffe
 			c:MAM = { save_scope_as = egyptian_tag }
 		}
 		else = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				random_location_in_region = {
 					limit = {
 						is_capital = yes

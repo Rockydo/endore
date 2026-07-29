@@ -7,7 +7,7 @@ italy_great_families = {
 	potential = {
 		AND = {
 			num_locations > 0
-			capital = { region = region:me_ithilien_region }
+			capital = { region = region:me_anorien_region }
 		}
 	}
 
@@ -24,7 +24,7 @@ italian_condottieri = {
 	potential = {
 		AND = {
 			num_locations > 0
-			capital = { region = region:me_ithilien_region }
+			capital = { region = region:me_anorien_region }
 		}
 	}
 

@@ -75,7 +75,7 @@ hundred_years_war_unified_requirements = {
 		NOT = { country_exists = c:FRA }
 
 		AND = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_ownable_location_in_region = {
 					owner = {
 						top_overlord_or_this ?= c:ENG
@@ -83,7 +83,7 @@ hundred_years_war_unified_requirements = {
 					count < 4
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_ownable_location_in_region = {
 					custom_tooltip = {
 						text = owned_by_fra_tt
@@ -107,7 +107,7 @@ hundred_years_war_unified_requirements = {
 					}
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_ownable_location_in_region = {
 					owner = {
 						top_overlord_or_this ?= c:ENG
@@ -961,7 +961,7 @@ is_geographically_correct = {
 	sub_continent != sub_continent:me_gondor_subcontinent
 	sub_continent != sub_continent:me_gondor_subcontinent
 	sub_continent != sub_continent:me_gondor_subcontinent
-	region != region:me_ithilien_region
+	region != region:me_anorien_region
 }
 
 is_location_colonial = {

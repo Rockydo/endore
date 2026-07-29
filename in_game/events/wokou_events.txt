@@ -391,22 +391,22 @@ wokou_events.5 = {
 	trigger = {
 		is_wokou_nation = yes
 		OR = {
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_present_country =  {
 					wokou_events_5_target_trigger = yes
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_present_country =  {
 					wokou_events_5_target_trigger = yes
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_present_country =  {
 					wokou_events_5_target_trigger = yes
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				any_present_country =  {
 					wokou_events_5_target_trigger = yes
 				}
@@ -522,20 +522,20 @@ scripted_trigger land_viable_for_early_wokou = {
 	OR = {
 		this = location:tamna
 		this = location:seongwi
-		province_definition = province_definition:me_ithilien_area_07_07_province_01
+		province_definition = province_definition:me_anorien_area_07_07_province_01
 		this = location:minamimatsuura
 		this = location:gomu
 		this = location:kumage_oosumi
-		province_definition = province_definition:me_ithilien_area_07_07_province_01
+		province_definition = province_definition:me_anorien_area_07_07_province_01
 	}
 }
 
 scripted_trigger land_viable_for_latter_wokou = {
 	OR = {
-		area = area:me_ithilien_area_07_07
-		province_definition = province_definition:me_ithilien_area_07_07_province_01
-		province_definition = province_definition:me_ithilien_area_07_07_province_01
-		area = area:me_ithilien_area_07_07
+		area = area:me_anorien_area_07_07
+		province_definition = province_definition:me_anorien_area_07_07_province_01
+		province_definition = province_definition:me_anorien_area_07_07_province_01
+		area = area:me_anorien_area_07_07
 	}
 }
 
@@ -782,7 +782,7 @@ wokou_events.102 = {
 			has_culture_group = culture_group:chinese_group
 		}
 		OR = {
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				any_location_in_area = {
 					percent >= 0.5
 					owner ?= ROOT
@@ -792,7 +792,7 @@ wokou_events.102 = {
 					owner ?= ROOT
 				}
 			}
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				any_location_in_area = {
 					percent >= 0.5
 					owner ?= ROOT
@@ -802,7 +802,7 @@ wokou_events.102 = {
 					owner ?= ROOT
 				}
 			}
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				any_location_in_area = {
 					percent >= 0.5
 					owner ?= ROOT
@@ -812,7 +812,7 @@ wokou_events.102 = {
 					owner ?= ROOT
 				}
 			}
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				any_location_in_area = {
 					percent >= 0.5
 					owner ?= ROOT

@@ -1,0 +1,111 @@
+{
+  "generator": "gen_terrain_cache.py",
+  "generator_version": 6,
+  "source": "in_game/gfx/terrain2/heightmap.png",
+  "source_sha256": "f1f0cdad64b3cc5a2b0de4e680d66dfc066af7b3550cdabf71a7f73a34a60d44",
+  "source_resolution": [
+    65536,
+    32768
+  ],
+  "tile_size": 128,
+  "border_size": 2,
+  "tile_order": "fine_to_coarse_row_major_y_inverted",
+  "height_quantum": 256,
+  "mip_layout": [
+    [
+      0,
+      512,
+      256
+    ],
+    [
+      1,
+      256,
+      128
+    ],
+    [
+      2,
+      128,
+      64
+    ],
+    [
+      3,
+      64,
+      32
+    ],
+    [
+      4,
+      32,
+      16
+    ],
+    [
+      5,
+      16,
+      8
+    ],
+    [
+      6,
+      8,
+      4
+    ],
+    [
+      7,
+      4,
+      2
+    ],
+    [
+      8,
+      2,
+      1
+    ],
+    [
+      9,
+      1,
+      1
+    ]
+  ],
+  "tile_count": 174763,
+  "height_unique_tiles": 94250,
+  "earth_decal_layers": 0,
+  "outputs": {
+    "heightmap.bin": {
+      "bytes": 85711989,
+      "sha256": "48a7a777e13cd7476796bd6746c3d9468c76200f97496a07d2656ae29bf001f6"
+    },
+    "heightmap.info": {
+      "bytes": 5389684,
+      "sha256": "d19e28da18fd970fe536f329216c533916d0576c82cd1dbc6b1d31badf54b27d"
+    },
+    "index_map.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "index_map.info": {
+      "bytes": 4718678,
+      "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
+    },
+    "intensity_map.bin": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "intensity_map.info": {
+      "bytes": 4718678,
+      "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
+    },
+    "materials.bin": {
+      "bytes": 114,
+      "sha256": "b2cb10337c2e0d3b4a0582f76add2b76f74017c936c1d915e660a1a435a9bdfd"
+    },
+    "materials.info": {
+      "bytes": 4718744,
+      "sha256": "d132ae98df4840da50e1feb9df9e6f3975294ef371ae62766821f7f1d620aa86"
+    },
+    "quadtree_nodes.bin": {
+      "bytes": 67108880,
+      "sha256": "452816940799ecfdffa83b22b8b4c4cba43d1983189aea1d76b45fea15ff2e1d"
+    },
+    "checksum.json": {
+      "bytes": 58,
+      "sha256": "4b2f049ecbb530acaf41947796b0ea3ca248389e872a6ce07b10988db2481fce"
+    }
+  }
+}

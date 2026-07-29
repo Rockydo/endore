@@ -348,7 +348,7 @@ byz_capital_italy = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
 		capital ?= {
 			NOT = { this = location:rome }
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 	}
 
@@ -358,7 +358,7 @@ byz_capital_western_europe = {
 	potential_trigger = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
 		capital ?= {
-			NOT = { region = region:me_ithilien_region }
+			NOT = { region = region:me_anorien_region }
 			sub_continent = sub_continent:me_gondor_subcontinent
 		}
 	}
@@ -381,8 +381,8 @@ byz_capital_balkans_or_anatolia = {
 		capital ?= {
 			NOT = { this = location:constantinople }
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
+				region = region:me_anorien_region
 			}
 		}
 	}
@@ -393,7 +393,7 @@ byz_capital_eastern_europe = {
 	potential_trigger = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
 		capital ?= {
-			NOT = {region = region:me_ithilien_region }
+			NOT = {region = region:me_anorien_region }
 			sub_continent = sub_continent:me_gondor_subcontinent
 		}
 	}
@@ -404,7 +404,7 @@ byz_capital_asia = {
 	potential_trigger = {
 		has_societal_value = societal_value_type:latinization_vs_hellenization
 		capital ?= {
-			NOT = {region = region:me_ithilien_region }
+			NOT = {region = region:me_anorien_region }
 			continent = continent:me_gondor
 		}
 	}

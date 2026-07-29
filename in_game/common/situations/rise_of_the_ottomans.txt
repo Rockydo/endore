@@ -29,8 +29,8 @@ rise_of_the_ottomans = {
 					is_subject_or_below_of = situation:rise_of_the_ottomans.var:strongest_beylik_variable
 				}
 			}
-			has_presence_in = region:me_ithilien_region
-			has_presence_in = region:me_ithilien_region
+			has_presence_in = region:me_anorien_region
+			has_presence_in = region:me_anorien_region
 			has_reform = government_reform:anatolian_beylik
 		}
 	}
@@ -153,8 +153,8 @@ rise_of_the_ottomans = {
 					has_reform = government_reform:anatolian_beylik
 					capital = {
 						OR = {
-							region = region:me_ithilien_region
-							region = region:me_ithilien_region
+							region = region:me_anorien_region
+							region = region:me_anorien_region
 						}
 					}
 				}

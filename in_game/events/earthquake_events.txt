@@ -5611,7 +5611,7 @@ earthquake_events.1100 = { #this will follow earthquake_events.1001, if you have
 
 		exists = capital
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				dominant_religion ?= root.religion
 				location_rank = location_rank:rural_settlement
@@ -5631,7 +5631,7 @@ earthquake_events.1100 = { #this will follow earthquake_events.1001, if you have
 			save_scope_as = capital_location
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			random_location_in_region = {
 				limit = {
 					dominant_religion ?= root.religion

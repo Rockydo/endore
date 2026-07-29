@@ -177,7 +177,10 @@ def check() -> list[str]:
             ):
                 failures.append("river_preview.png differs from deterministic river model")
     used = set(int(value) for value in np.unique(np.asarray(expected)))
-    if not {0, 4, 5, 6, 254, 255}.issubset(used):
+    if (
+        not {0, 1, 254, 255}.issubset(used)
+        or not used.intersection({4, 5, 6})
+    ):
         failures.append(f"river raster lacks expected source/flow/background indices: {used}")
     return failures
 

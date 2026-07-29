@@ -102,7 +102,7 @@ high_kingship = {
 	can_leave_trigger = {
 		OR = {
 			NOT = {
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 			is_member_of_international_organization = international_organization:lordship_of_ireland
 		}

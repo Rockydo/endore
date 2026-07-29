@@ -666,7 +666,7 @@ flavor_mos.6 = {
 			text = flavor_mos.6.a.custom
 			while = {
 				count = 10
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					random_location_in_region = {
 						limit = {
 							num_pop_type:clergy > 0
@@ -872,7 +872,7 @@ flavor_mos.8 = {
 			limit = {
 				unit_location = {
 					OR = {
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 					}
 					owner = c:GLH
 				}
@@ -1761,7 +1761,7 @@ flavor_mos.15 = {
 			c:SER = { is_at_war_with = c:TUR }
 			AND = {
 				country_exists = c:SER
-				area:me_ithilien_area_07_07 = {
+				area:me_anorien_area_07_07 = {
 					any_location_in_area = {
 						owner ?= c:TUR
 					}
@@ -1973,7 +1973,7 @@ flavor_mos.16 = {
 
 		custom_tooltip = {
 			text = flavor_mos.16.a.custom
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = {
 						owner ?= root
@@ -2008,7 +2008,7 @@ flavor_mos.16 = {
 
 		custom_tooltip = {
 			text = flavor_mos.16.b.custom
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = {
 						owner = root
@@ -2261,7 +2261,7 @@ flavor_mos.23 = {
 			at_war = no
 			NOT = { has_truce_with = c:TEU }
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				percent > 0.5
 				top_owner ?= ROOT
@@ -3496,7 +3496,7 @@ flavor_mos.35 = {
 
 		OR = {
 			any_owned_location = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				has_institution = institution:renaissance
 			}
 			societal_value:outward_vs_inward <= 10
@@ -3586,14 +3586,14 @@ flavor_mos.35 = {
 		name = flavor_mos.35.c
 		trigger = {
 			any_owned_location = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				NOT = { has_institution = institution:renaissance }
 			}
 		}
 
 		random_owned_location = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				NOT = { has_institution = institution:renaissance }
 			}
 			change_institution_progress = { type = institution:renaissance value = institution_progress_ultimate_bonus }
@@ -4347,7 +4347,7 @@ flavor_mos.41 = {
 			is_great_power = no
 			has_ruler = yes
 			ruler.dynasty ?= root.ruler.dynasty
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			OR = {
 				is_subject = no
 				is_member_of_international_organization = international_organization:tatar_yoke
@@ -4401,13 +4401,13 @@ flavor_mos.41 = {
 		name = flavor_mos.41.a
 		historical_option = yes
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_country = {
 				limit = {
 					is_great_power = no
 					has_ruler = yes
 					ruler.dynasty ?= root.ruler.dynasty
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 					OR = {
 						is_subject = no
 						is_member_of_international_organization = international_organization:tatar_yoke
@@ -4464,7 +4464,7 @@ flavor_mos.41 = {
 				is_great_power = no
 				has_ruler = yes
 				ruler.dynasty ?= root.ruler.dynasty
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 				OR = {
 					is_subject = no
 					is_member_of_international_organization = international_organization:tatar_yoke
@@ -4479,13 +4479,13 @@ flavor_mos.41 = {
 			}
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			every_country = {
 				limit = {
 					is_ai = yes
 					is_great_power = no
 					ruler.dynasty = root.ruler.dynasty
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 					OR = {
 						is_subject = no
 						is_member_of_international_organization = international_organization:tatar_yoke
@@ -4680,7 +4680,7 @@ flavor_mos.43 = {
 
 	trigger = {
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				province ?= {
 					OR = {
@@ -4736,7 +4736,7 @@ flavor_mos.43 = {
 
 		custom_tooltip = {
 			text = flavor_mos.43.a.custom
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = {
 						NOT = {
@@ -4832,8 +4832,8 @@ flavor_mos.44 = {
 
 	trigger = {
 
-		own_entire_area = area:me_ithilien_area_07_07
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
 		NOT = { country_exists = c:NOV }
 
@@ -5266,7 +5266,7 @@ flavor_mos.48 = {
 
 		societal_value:capital_economy_vs_traditional_economy <= 10
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				owner = root
 				market = {
@@ -5962,7 +5962,7 @@ flavor_mos.53 = {
 	trigger = {
 
 		has_ruler = yes
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_location_in_region = {
 				count > 10
 				owner ?= root
@@ -6023,7 +6023,7 @@ flavor_mos.53 = {
 			save_scope_as = salt_riot
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			while = {
 				count = 10
 				random_location_in_region = {
@@ -6824,7 +6824,7 @@ flavor_mos.59 = {
 				has_building = building_type:port_authority
 			}
 		}
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				count < 3
 				OR = {
@@ -7124,7 +7124,7 @@ flavor_mos.62 = {
 
 		religion = religion:orthodox
 
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
 		location:moscow = {
 			owner = root
@@ -7264,7 +7264,7 @@ flavor_mos.63 = {
 			is_capital = yes
 		}
 
-		own_entire_area = area:me_ithilien_area_07_07
+		own_entire_area = area:me_anorien_area_07_07
 
 		at_war = no
 
@@ -7429,7 +7429,7 @@ flavor_mos.65 = {
 
 	trigger = {
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				count < 1
 				OR = {
@@ -7448,7 +7448,7 @@ flavor_mos.65 = {
 		}
 
 		capital = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 
 		at_war = no
@@ -7473,7 +7473,7 @@ flavor_mos.65 = {
 
 		custom_tooltip = {
 		text = flavor_mos.65.a.custom
-			area:me_ithilien_area_07_07 = {
+			area:me_anorien_area_07_07 = {
 				every_location_in_area = {
 					limit = {
 						has_owner = yes
@@ -8209,7 +8209,7 @@ flavor_mos.73 = {
 
 		any_owned_rural_location = {
 			count > 3
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 
 	}
@@ -8226,7 +8226,7 @@ flavor_mos.73 = {
 
 		ordered_owned_rural_location = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				province != root.capital.province
 			}
 			order_by = population
@@ -8849,7 +8849,7 @@ flavor_mos.79 = {
 
 	trigger = {
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				OR = {
 					AND = {
@@ -8873,7 +8873,7 @@ flavor_mos.79 = {
 	immediate = {
 		capital = { save_scope_as = target_location }
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			random_location_in_area = {
 				limit = {
 					AND = {
@@ -9007,7 +9007,7 @@ flavor_mos.80 = {
 
 		any_owned_rural_location = {
 			count > 10
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 
 		societal_value:serfdom_vs_free_subjects <= 20
@@ -9036,7 +9036,7 @@ flavor_mos.80 = {
 		name = flavor_mos.80.a
 		historical_option = yes
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			while = {
 				count = 10
 				random_location_in_region = {
@@ -9057,7 +9057,7 @@ flavor_mos.80 = {
 			}
 		}
 
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			while = {
 				count = 5
 				random_location_in_region = {
@@ -9676,7 +9676,7 @@ flavor_mos.86 = {
 		}
 
 		any_owned_non_rural_location = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 			controller != root
 			owner = root
 		}
@@ -9691,7 +9691,7 @@ flavor_mos.86 = {
 
 		random_owned_non_rural_location = {
 			limit = {
-				region = region:me_ithilien_region
+				region = region:me_anorien_region
 				controller != root
 			}
 			save_scope_as = target_location
@@ -10029,7 +10029,7 @@ flavor_mos.89 = {
 		is_at_war_with = c:SWE
 
 		capital = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 
 		any_army = {
@@ -10147,7 +10147,7 @@ flavor_mos.90 = {
 	trigger = {
 
 		capital = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 
 		weighted_calc_true_if = {
@@ -11845,7 +11845,7 @@ flavor_mos.102 = {
 
 	trigger = {
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				any_neighbor_location = {
 					is_coastal = yes
@@ -12723,7 +12723,7 @@ flavor_mos.109 = {
 			}
 		}
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			any_location_in_area = {
 				OR = {
 					owner = c:TUR
@@ -12753,7 +12753,7 @@ flavor_mos.109 = {
 
 	immediate = {
 
-		area:me_ithilien_area_07_07 = {
+		area:me_anorien_area_07_07 = {
 			random_location_in_area = {
 				limit = {
 					OR = {
@@ -13197,7 +13197,7 @@ flavor_mos.112 = {
 	trigger = {
 
 		capital = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 
 		location:neva = {
@@ -13248,7 +13248,7 @@ flavor_mos.112 = {
 			text = flavor_mos.112.a.custom
 			while = {
 				count = 10
-				region:me_ithilien_region = {
+				region:me_anorien_region = {
 					random_location_in_region = {
 						limit = {
 							num_pop_type:peasants > 0

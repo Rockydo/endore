@@ -32,7 +32,7 @@ claim_french_throne = {
 		scope:loser ?= c:FRA
 	}
 	allow = {
-		region:me_ithilien_region = {
+		region:me_anorien_region = {
 			any_ownable_location_in_region = {
 				is_owned_or_owned_by_subjects_or_below_of = scope:winner
 				percent >= 0.15

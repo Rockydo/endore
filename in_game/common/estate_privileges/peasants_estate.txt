@@ -427,11 +427,11 @@ invite_german_settlers = { #Encourage German Migration
 		religion = religion:catholic
 		capital ?= {
 			OR = {
-				region = region:me_ithilien_region
-				region = region:me_ithilien_region
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
-				area = area:me_ithilien_area_07_07
+				region = region:me_anorien_region
+				region = region:me_anorien_region
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_07_07
 			}
 		}
 	}

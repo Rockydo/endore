@@ -15,7 +15,7 @@ guelphs_and_ghibellines = {
 
 	visible = {
 		OR = { #The Pope and Emperor can see it every Italian country is involved
-			has_presence_in = region:me_ithilien_region
+			has_presence_in = region:me_anorien_region
 			tag = PAP
 			is_leader_of_international_organization = international_organization:hre
 			is_member_of_international_organization = international_organization:guelphs_io
@@ -33,7 +33,7 @@ guelphs_and_ghibellines = {
 				OR = {
 					is_member_of_international_organization = international_organization:guelphs_io
 					is_member_of_international_organization = international_organization:ghibellines_io
-					has_presence_in = region:me_ithilien_region
+					has_presence_in = region:me_anorien_region
 					is_leader_of_international_organization = international_organization:hre
 				}
 			}
@@ -75,7 +75,7 @@ guelphs_and_ghibellines = {
 		religion:catholic = {
 			ordered_country_in_religion = {
 				limit = {
-					capital.region = region:me_ithilien_region
+					capital.region = region:me_anorien_region
 					NAND = {
 						is_allied_with = { target = c:PAP }
 						OR = {
@@ -139,7 +139,7 @@ guelphs_and_ghibellines = {
 					}
 				}
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_present_country = {
 					limit = {
 						NOR = {
@@ -160,7 +160,7 @@ guelphs_and_ghibellines = {
 				name = gag_total_tax
 				value = 0
 			}
-			region:me_ithilien_region = {
+			region:me_anorien_region = {
 				every_location_in_region = {
 					limit = { is_capital = yes }
 					owner = {

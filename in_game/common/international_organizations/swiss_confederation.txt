@@ -161,9 +161,9 @@ swiss_confederation = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
-						area = area:me_ithilien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_07_07
 					}
 				}
 				scope:recipient = { add_location_to_international_organization = prev }

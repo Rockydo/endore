@@ -12,7 +12,7 @@ join_a_league = {
 		scope:actor ?= {
 			OR = {
 				tag = PAP
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 	}
@@ -23,7 +23,7 @@ join_a_league = {
 				limit = {
 					NOT = { tag = PAP }
 				}
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 
 			at_war = no
@@ -191,7 +191,7 @@ create_italian_league = {
 
 	potential = {
 		scope:actor ?= {
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			religion.group = religion_group:christian
 			is_leader_of_any_league = no
 		}
@@ -615,7 +615,7 @@ plan_campaign_in_italy = {
 		column = { data = name }
 		column = { data = population }
 		visible = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 		enabled = {
 			scope:actor = {
@@ -772,7 +772,7 @@ fortify_key_location = {
 				is_member_of_international_organization = international_organization:foreign_league_hre
 				is_member_of_international_organization = international_organization:foreign_league_iberia
 				is_member_of_international_organization = international_organization:foreign_league_balkan
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 			}
 		}
 	}
@@ -837,7 +837,7 @@ fortify_key_location = {
 		column = { data = name }
 		column = { data = rank }
 		visible = {
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
 		}
 		enabled = {
 			owner ?= scope:actor
@@ -1712,7 +1712,7 @@ establish_italian_administration_center = {
 			scope:actor = {
 				every_owned_non_rural_location = {
 					limit = {
-						region = region:me_ithilien_region
+						region = region:me_anorien_region
 						OR = {
 							location_rank = location_rank:city
 							location_rank = location_rank:megalopolis

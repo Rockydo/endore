@@ -46,7 +46,7 @@ violate_italian_sovereignty = {
 		}
 		visible = {
 			OR = {
-				capital.region = region:me_ithilien_region
+				capital.region = region:me_anorien_region
 				is_member_of_any_italian_wars_league = yes
 			}
 			at_war = no
@@ -317,7 +317,7 @@ italian_wars_bribe_country = {
 			data = population
 		}
 		visible = {
-			capital.region = region:me_ithilien_region
+			capital.region = region:me_anorien_region
 			NOT = { this = scope:actor }
 			NOT = { is_leader_of_any_league = yes }
 			NOT = { has_cooldown = join_a_league }

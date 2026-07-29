@@ -261,7 +261,7 @@ flavor_cas_rio_salado.5 = { #Battle of Río Salado Morocco driven out of Iberia
 		owns = location:algeciras
 		c:MOR = {
 			NOT = {
-				has_presence_in = region:me_ithilien_region
+				has_presence_in = region:me_anorien_region
 			}
 		}
 	}

@@ -277,7 +277,7 @@ colonial_federation_name = {
 			leader_country ?= {
 				culture = culture:english
 				capital ?= {
-					region = region:me_ithilien_region
+					region = region:me_anorien_region
 				}
 			}
 		}

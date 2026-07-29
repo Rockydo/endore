@@ -1430,29 +1430,29 @@ weather_monthly_pulse = {
 						limit = {
 							OR = {
 								AND = {
-									region = region:me_ithilien_region
+									region = region:me_anorien_region
 									NOT = {
-										area = area:me_ithilien_area_07_07
+										area = area:me_anorien_area_07_07
 									}
 								}
 								AND = {
-									region = region:me_ithilien_region
+									region = region:me_anorien_region
 									OR = {
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
 									}
 								}
 								AND = {
-									region = region:me_ithilien_region
+									region = region:me_anorien_region
 									OR = {
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
-										area = area:me_ithilien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
+										area = area:me_anorien_area_07_07
 									}
 								}
 							}

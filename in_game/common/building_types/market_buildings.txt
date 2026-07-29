@@ -268,12 +268,12 @@ funduq = { #https://es.wikipedia.org/wiki/Funduq
 
 	allow = {
 		OR = {
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
-			region = region:me_ithilien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
+			region = region:me_anorien_region
 		}
 	}
 
