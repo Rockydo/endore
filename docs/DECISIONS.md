@@ -277,3 +277,15 @@ Assign raw materials from each location's dominant biome, matching the terrain-t
 emitter, rather than from its seed pixel. A seed-pixel mismatch assigned lumber to two
 grassland locations during the live Observer gate; dominant-biome allocation and a
 lumber/forest compatibility invariant prevent recurrence after map regeneration.
+
+## 2026-07-30 — Arda-native continuous terrain materials
+
+Generate the terrain-cache material layer directly from ENDÓRË's continuous biome,
+height, river, and projection controls. Use the installed 16-bit bitmask ABI and only the
+universally populated material-variation slots 10-12. Blend neighboring variation bits
+instead of assigning hard location-sized patches.
+
+Keep `index_map.bin` and `intensity_map.bin` empty because they are Earth-authored decal
+layers, not required material paint. Never copy installed Earth cache payloads. Record
+source hashes, coverage, tile diversity, preview hash, and output sizes in the manifest,
+and fail validation if the material layer regresses to a shared placeholder tile.

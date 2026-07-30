@@ -32,7 +32,7 @@ HNE,Harnendor,Harnendorean,harnenhold,0.585,0.865,me_near_harad_region|me_umbar_
 HRA,Qarsad of Harad,Qarsadi,qarsad,0.675,0.900,me_near_harad_region|me_far_harad_region,haradric,146 96 48,ce_sun_radiant_small.dds,90,"† Haradrim city-king added under the ENDORE plan 8.1 micro-tag allowance"
 HFA,Far Harad,Far Haradrim,mumak_gate,0.570,0.965,me_far_harad_region,haradric,132 72 38,ce_elephant_african.dds,0,"† ENDORE plan 8.1; on-map fringe polity invented from the Far Harad host"
 KHA,Khand,Variag,khazan,0.750,0.875,me_khand_region|me_near_harad_region|me_far_harad_region,khandish,120 62 46,ce_axes_saltire.dds,0,"LOTR, Appendix A; † seat and exact frontier invented"
-RHU,Kingdom of Rhûn,Rhûnic,burh_gath,0.805,0.410,me_rhun_region|me_northern_wastes_region,rhunic,132 58 38,ce_horse_head.dds,0,"† ENDORE plan 8.1; Balchoth-descended polity invented from canon seeds"
+RHU,Kingdom of Rhûn,Rhûnic,burh_gath,0.860,0.410,me_rhun_region|me_northern_wastes_region,rhunic,132 58 38,ce_horse_head.dds,0,"† ENDORE plan 8.1; Balchoth-descended polity invented from canon seeds"
 RH2,Wain-kingdom of Karmach,Karmachi,wainhold,0.875,0.500,me_rhun_region,rhunic,154 88 36,ce_wheel_02.dds,0,"† ENDORE plan 8.1; wain-kingdom invented from Appendix A"
 RH3,Sagath of the Eastern March,Sagath,eastern_march,0.910,0.350,me_rhun_region|me_northern_wastes_region,rhunic,104 48 34,ce_bow_arrow_pale.dds,0,"† ENDORE plan 8.1; third Rhûnic confederation invented for eastern texture"
 DUN,Dunland,Dunlending,dunland_moot,0.425,0.630,me_enedwaith_region|me_rohan_region,westron,104 76 52,ce_boar_head.dds,0,"LOTR, Appendix A; † seat invented because canon gives no capital"

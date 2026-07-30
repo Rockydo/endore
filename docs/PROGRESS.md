@@ -174,3 +174,23 @@
   the census used their forest seed pixel while the terrain template used their dominant
   biome. Raw materials now use the same dominant-biome contract; both locations resolve
   to wheat and static validation forbids lumber outside woods/forest.
+- Installed terrain-cache evidence has now replaced the 114-byte placeholder material
+  payload with a fully Arda-authored 16-bit material-mask cache. The 8192x4096 continuous
+  source paints coast/topography, shore/water, biome/climate, elevation variation, and
+  all 23 river controls independently of political-location polygons.
+- The final cache contains 174,763 indexed tiles, 89,777 unique height tiles, 95,028
+  unique material tiles, a 55,986,036-byte `materials.bin`, and zero Earth index/intensity
+  decals. Generator checks reject placeholder coverage, wrong provenance, low tile
+  diversity, oversized payloads, or a missing material preview.
+- Natural paths now use six spatial-frequency bands, and Rhûn, Núrnen, Evendim, and Long
+  Lake have hand-authored irregular shore outlines. The regenerated world remains 12,104
+  locations with 11,200 passable land, 520 mountains, 64 lakes, 320 sea zones, 630 legal
+  ports, and 11,179 populated locations.
+- The enlarged Sea of Rhûn exposed an honest static defect: Burh Gath's old point had
+  fallen into water. Moving the invented seat to its eastern shore reduced its snap to
+  0.000377 and the global capital maximum to 0.018362 without weakening the validator.
+- Full validation passed. Paired vanilla/mod smoke passed with zero mod-unique lines on
+  fingerprint `f004fab1`. An earlier non-debug 3D session proved the material cache
+  renders continuous ground variation, snow/rock mountain material, and shore
+  transitions; the final refined state did not complete a stable close-zoom capture
+  after two resource-bound UI attempts, so the reopened M2 visual gate remains red.

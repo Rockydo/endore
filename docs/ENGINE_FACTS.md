@@ -214,3 +214,19 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   water plus a monotonic source at Lake Evendim's southern outlet fixes the contract
   without changing its valley-incision axis. Paired smoke then produced zero mod-unique
   lines.
+- Installed `materials.bin` payloads are deduplicated 132x132 PNG tiles in unsigned
+  16-bit mode. Each pixel is a bitmask over the 16 entries in installed
+  `gfx/terrain2/materials.txt`: bits 0-4 coast topography, 5 coast transition, 6
+  rivers/lakes, 7 water transition, 8 vegetation transition, 9 climate transition, and
+  10-15 material-variation slots.
+- ENDÓRË may safely use variation slots 10-12 because every retained gameplay biome
+  supplies those material-array positions. Adjacent variation bits can overlap to avoid
+  hard threshold bands; the material source must remain continuous and independent of
+  location polygons.
+- `index_map.bin` is the 16-bit terrain-decal index payload and `intensity_map.bin` is its
+  RGBA intensity companion. Empty payloads with complete `.info` indexes are the correct
+  no-Earth-decal contract; they are not missing biome or terrain paint.
+- A non-debug explicit 3D-map run proved that a populated custom material cache affects
+  the real renderer: continuous within-location variation, mountain snow/rock material,
+  and shoreline transition bands all appeared where the former shared zero tile did not.
+  The exact final refinement still requires a stable multi-theatre visual acceptance run.

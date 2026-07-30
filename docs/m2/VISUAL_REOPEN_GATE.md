@@ -10,10 +10,13 @@ not substitute for geographic quality.
 Current iteration: the authored control lattice is 4096×2048 and generates 12,104
 locations on the proven 16384×8192 engine canvas. Static validation is green, including
 all anchors, realm connectivity, ports, rivers, locators, and terrain-cache quarantine.
-Real-game non-debug review proves that ridge systems produce physical 3D relief, but also
-shows coarse location-shaped terrain-material patches, no visible trees, and no convincing
-major rivers. Vegetation remains blocked after every tested generated-layer route parsed
-but rendered no objects. This gate therefore remains red.
+Real-game non-debug review proves that ridge systems produce physical 3D relief. A new
+Arda-native material cache also proves continuous ground variation, mountain snow/rock
+material, and shoreline transition bands instead of the former shared zero tile and
+coarse location-shaped patches. Vegetation remains blocked after every tested
+generated-layer route parsed but rendered no objects, major-river readability is not yet
+accepted, and the final refined tree did not complete a stable multi-theatre close-zoom
+capture. This gate therefore remains red.
 
 ## Binding defects
 

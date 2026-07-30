@@ -24,31 +24,31 @@ locations = {
 	isengard = { rank = town town_setup = me_m5_fortress }
 	linhir = { rank = town town_setup = me_m5_town }
 	me_bree = { rank = town town_setup = me_m5_town }
-	me_land_0433 = { rank = town town_setup = me_m5_town_port }
-	me_land_0887 = { rank = town town_setup = me_m5_town }
-	me_land_10012 = { rank = town town_setup = me_m5_fortress }
-	me_land_10130 = { rank = town town_setup = me_m5_town }
-	me_land_10707 = { rank = city town_setup = me_m5_city }
-	me_land_11115 = { rank = town town_setup = me_m5_refuge }
-	me_land_11145 = { rank = city town_setup = me_m5_city }
-	me_land_1184 = { rank = town town_setup = me_m5_dwarf_hold }
-	me_land_1294 = { rank = city town_setup = me_m5_city }
-	me_land_1349 = { rank = town town_setup = me_m5_refuge }
-	me_land_1856 = { rank = town town_setup = me_m5_refuge }
-	me_land_2103 = { rank = town town_setup = me_m5_dwarf_hold }
-	me_land_2538 = { rank = town town_setup = me_m5_refuge }
-	me_land_3063 = { rank = town town_setup = me_m5_fortress }
-	me_land_4335 = { rank = city town_setup = me_m5_city }
-	me_land_5197 = { rank = town town_setup = me_m5_refuge }
-	me_land_6163 = { rank = town town_setup = me_m5_fortress }
-	me_land_6382 = { rank = city town_setup = me_m5_city }
-	me_land_6492 = { rank = town town_setup = me_m5_town }
-	me_land_6516 = { rank = town town_setup = me_m5_shadow_hold }
-	me_land_7238 = { rank = city town_setup = me_m5_city }
-	me_land_7409 = { rank = town town_setup = me_m5_fortress }
-	me_land_8255 = { rank = town town_setup = me_m5_fortress }
-	me_land_8297 = { rank = city town_setup = me_m5_city }
-	me_land_9114 = { rank = town town_setup = me_m5_refuge }
+	me_land_0204 = { rank = city town_setup = me_m5_city }
+	me_land_0208 = { rank = town town_setup = me_m5_refuge }
+	me_land_0532 = { rank = town town_setup = me_m5_fortress }
+	me_land_0535 = { rank = city town_setup = me_m5_city }
+	me_land_10021 = { rank = town town_setup = me_m5_town }
+	me_land_10385 = { rank = town town_setup = me_m5_dwarf_hold }
+	me_land_10769 = { rank = town town_setup = me_m5_refuge }
+	me_land_1725 = { rank = town town_setup = me_m5_fortress }
+	me_land_1950 = { rank = town town_setup = me_m5_refuge }
+	me_land_2159 = { rank = town town_setup = me_m5_fortress }
+	me_land_3431 = { rank = town town_setup = me_m5_fortress }
+	me_land_3557 = { rank = city town_setup = me_m5_city }
+	me_land_4137 = { rank = city town_setup = me_m5_city }
+	me_land_4213 = { rank = city town_setup = me_m5_city }
+	me_land_5167 = { rank = town town_setup = me_m5_town_port }
+	me_land_5435 = { rank = town town_setup = me_m5_refuge }
+	me_land_6327 = { rank = town town_setup = me_m5_town }
+	me_land_6956 = { rank = town town_setup = me_m5_fortress }
+	me_land_8158 = { rank = city town_setup = me_m5_city }
+	me_land_8310 = { rank = city town_setup = me_m5_city }
+	me_land_8507 = { rank = town town_setup = me_m5_refuge }
+	me_land_9088 = { rank = town town_setup = me_m5_shadow_hold }
+	me_land_9335 = { rank = town town_setup = me_m5_town }
+	me_land_9478 = { rank = town town_setup = me_m5_dwarf_hold }
+	me_land_9752 = { rank = town town_setup = me_m5_refuge }
 	michel_delving = { rank = town town_setup = me_m5_town }
 	minas_morgul = { rank = town town_setup = me_m5_shadow_fortress }
 	minas_tirith = { rank = city town_setup = me_m5_city }

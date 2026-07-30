@@ -1,8 +1,8 @@
 {
   "generator": "gen_terrain_cache.py",
-  "generator_version": 7,
+  "generator_version": 8,
   "source": "in_game/gfx/terrain2/heightmap.png",
-  "source_sha256": "247d8dbe421b702aaeeb0beb891c7eb401d856598e1a03485b69f237f0b6e86d",
+  "source_sha256": "e1b7b31545f825d6bf8095e948aba136c462abc8f30f63c14a7dab2fbc1ea64f",
   "source_resolution": [
     65536,
     32768
@@ -11,6 +11,15 @@
   "border_size": 2,
   "tile_order": "fine_to_coarse_row_major_y_inverted",
   "height_quantum": 512,
+  "material_resolution": [
+    8192,
+    4096
+  ],
+  "material_sources": {
+    "in_game/gfx/terrain2/heightmap.png": "e1b7b31545f825d6bf8095e948aba136c462abc8f30f63c14a7dab2fbc1ea64f",
+    "docs/world/control/biomes.png": "2821b7069984091eed53b24639ed09eefc9caade031d07ad1a95306a0c3d30e4",
+    "docs/world/control/projection.json": "c3a389cb2f0c2c71b0174ff210d17bcdf02e67719194b4d1cd36809a4ee46ac4"
+  },
   "mip_layout": [
     [
       0,
@@ -64,16 +73,23 @@
     ]
   ],
   "tile_count": 174763,
-  "height_unique_tiles": 89927,
+  "height_unique_tiles": 89777,
+  "material_unique_tiles": 95028,
+  "material_nonzero_fraction": 0.5320379734039307,
   "earth_decal_layers": 0,
+  "material_preview": {
+    "path": "docs/world/derived/terrain_material_preview.png",
+    "bytes": 147744,
+    "sha256": "f6113e54692c91af85f5b77d933870edf1a5dd90b378b19e69014c4f241bbbb4"
+  },
   "outputs": {
     "heightmap.bin": {
-      "bytes": 77790963,
-      "sha256": "dc20a61609d20f56d2197325be1349c11b399f228536595fc0ae432ccc5a5bd1"
+      "bytes": 77625718,
+      "sha256": "2e1b9b050017506f71ecf5bacd2468139589390bb4b029c0967e8c4dd07ae900"
     },
     "heightmap.info": {
-      "bytes": 5383845,
-      "sha256": "b28628ea57b5ce321c692cb45fddefc2457cd017c7c7a8c2a4f854e97d40fb8d"
+      "bytes": 5383306,
+      "sha256": "650c8e67c85257076dc4d40f032df7cc3a3579ab7c56983a27b2af9c76614a20"
     },
     "index_map.bin": {
       "bytes": 0,
@@ -92,12 +108,12 @@
       "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
     },
     "materials.bin": {
-      "bytes": 114,
-      "sha256": "b2cb10337c2e0d3b4a0582f76add2b76f74017c936c1d915e660a1a435a9bdfd"
+      "bytes": 55986036,
+      "sha256": "55c5d38221d326af7d5a144d9688d84d706736b515c26621ad95155afab9677d"
     },
     "materials.info": {
-      "bytes": 4718744,
-      "sha256": "d132ae98df4840da50e1feb9df9e6f3975294ef371ae62766821f7f1d620aa86"
+      "bytes": 5365502,
+      "sha256": "1dda815afa88555e48c0398bfad1acfa837f03eb2a4773b63fec250964f74b76"
     },
     "quadtree_nodes.bin": {
       "bytes": 67108880,
@@ -105,7 +121,7 @@
     },
     "checksum.json": {
       "bytes": 58,
-      "sha256": "190340f0087d9af6760c1473bec95309eae61add5d981b8ed2e85f2dc064c35f"
+      "sha256": "6ebbe565dc6acaf153ecd2edec370c47cebda981f00e92b152fbb33967e5de57"
     }
   }
 }

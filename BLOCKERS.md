@@ -140,3 +140,23 @@ including after 30 additional close-zoom detents. A direct vanilla visual contro
 inconclusive because the shared user directory still loaded ENDÓRË. Do not repeat these
 generated-layer variants; pursue another renderer mechanism or a truly isolated vanilla
 control.
+
+## 2026-07-30 — Final native-material visual pass exhausts the interactive renderer
+
+Status: bounded reopened-M2 visual blocker; validation and paired menu smoke are green,
+but the exact-state close-zoom gate is not accepted.
+
+Two non-debug `--visual-map` attempts reached the custom-map transition on fingerprint
+`f004fab1`. The first completed `ClearAndRecalculateCachedData` and save serialization,
+but the screenshot helper exceeded its bound before a stable country-selection capture.
+The second completed the same cache transaction, then remained Windows-unresponsive while
+CPU time advanced and working memory cycled between roughly 12 and 24 GB. The process was
+stopped cleanly after two additional bounded monitoring intervals. Neither attempt added
+a mod-specific `error.log` line.
+
+The immediately preceding material-cache iteration did reach live 3D Map mode and proved
+continuous ground variation, snow/rock mountain material, shoreline transitions, and
+physical relief. That evidence proves the custom material mechanism, but it does not
+accept the final refined tree. Do not repeat the same timed country-selection route.
+Pursue a materially different bounded renderer route, reduce first-render pressure, or
+obtain a fresh current-tree Observer save before repeating the multi-theatre gate.

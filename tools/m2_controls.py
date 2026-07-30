@@ -149,8 +149,11 @@ def natural_path(
     if closed:
         vertices.append(vertices[0])
     rng = np.random.default_rng(stable_seed(key))
-    phase = rng.uniform(0.0, 2.0 * math.pi, 4)
-    frequency = rng.uniform((0.75, 1.55, 3.2, 6.5), (1.25, 2.45, 5.1, 10.5))
+    phase = rng.uniform(0.0, 2.0 * math.pi, 6)
+    frequency = rng.uniform(
+        (0.75, 1.55, 3.2, 6.5, 13.0, 27.0),
+        (1.25, 2.45, 5.1, 10.5, 21.0, 43.0),
+    )
     result: list[tuple[int, int]] = []
     pixel_spacing = max(2.0, spacing * size[1])
     amplitude_px = amplitude * size[1]
@@ -170,10 +173,12 @@ def natural_path(
             # Pin authored vertices exactly. Variation grows between them.
             envelope = math.sin(math.pi * t)
             wave = (
-                0.50 * math.sin(2 * math.pi * frequency[0] * global_t + phase[0])
-                + 0.27 * math.sin(2 * math.pi * frequency[1] * global_t + phase[1])
-                + 0.15 * math.sin(2 * math.pi * frequency[2] * global_t + phase[2])
-                + 0.08 * math.sin(2 * math.pi * frequency[3] * global_t + phase[3])
+                0.43 * math.sin(2 * math.pi * frequency[0] * global_t + phase[0])
+                + 0.24 * math.sin(2 * math.pi * frequency[1] * global_t + phase[1])
+                + 0.14 * math.sin(2 * math.pi * frequency[2] * global_t + phase[2])
+                + 0.09 * math.sin(2 * math.pi * frequency[3] * global_t + phase[3])
+                + 0.06 * math.sin(2 * math.pi * frequency[4] * global_t + phase[4])
+                + 0.04 * math.sin(2 * math.pi * frequency[5] * global_t + phase[5])
             )
             displaced = start + delta * t + normal * amplitude_px * envelope * wave
             result.append((round(displaced[0]), round(displaced[1])))
@@ -219,13 +224,20 @@ def draw_shape(
     elif shape == "polygon":
         draw.polygon([point(item, size) for item in coords], fill=fill)
     elif shape == "organic_polygon":
+        amplitude = (
+            0.0090
+            if key.startswith("biome:")
+            else 0.0065
+            if key.startswith("lake:")
+            else 0.0045
+        )
         draw_organic_polygon(
             image,
             coords,
             size,
             key=key,
             fill=fill,
-            amplitude=0.0035,
+            amplitude=amplitude,
         )
     else:
         raise ValueError(f"unknown control shape {shape!r}")
