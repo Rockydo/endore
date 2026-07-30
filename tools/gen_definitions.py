@@ -55,6 +55,13 @@ DISPLAY_NAMES = {
     "me_enedwaith_region": "Enedwaith",
 }
 
+# Engine-reported 32-bit localization hash collisions are remapped
+# deterministically instead of accepted into the baseline. These are runtime
+# facts: the source keys are otherwise valid and do not collide textually.
+AREA_KEY_OVERRIDES = {
+    "me_belfalas_sea_area_30_21": "me_belfalas_sea_area_30_21_arda",
+}
+
 
 def area_key(location: Location) -> str:
     stem = location.region.removesuffix("_region")
@@ -65,7 +72,8 @@ def area_key(location: Location) -> str:
     # own identity at coastlines.  Lakes and impassable mountains follow the
     # surrounding land hierarchy, matching their non-sea engine domain.
     domain = "_sea" if location.kind == "sea" else ""
-    return f"{stem}{domain}_area_{grid_y:02d}_{grid_x:02d}"
+    key = f"{stem}{domain}_area_{grid_y:02d}_{grid_x:02d}"
+    return AREA_KEY_OVERRIDES.get(key, key)
 
 
 def hierarchy(

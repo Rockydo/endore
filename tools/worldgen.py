@@ -32,10 +32,10 @@ BIOME_W, BIOME_H = HEIGHT_W - 1, HEIGHT_H - 1
 SEED = 3018
 
 TARGETS = {
-    "land": 11200,
+    "land": 11320,
     "mountain": 520,
     "lake": 64,
-    "sea": 320,
+    "sea": 200,
 }
 
 KIND_ORDER = ("land", "mountain", "lake", "sea")

@@ -8,8 +8,10 @@ Observer play. It is not yet a release-quality physical map. Political readabili
 not substitute for geographic quality.
 
 Current iteration: the authored control lattice is 4096×2048 and generates 12,104
-locations on the proven 16384×8192 engine canvas. Static validation is green, including
-all anchors, realm connectivity, ports, rivers, locators, and terrain-cache quarantine.
+locations on the proven 16384×8192 engine canvas: 11,320 passable land, 520 mountains,
+64 lakes, and 200 seas. Rhûn and Harad now continue through the east/south borders instead
+of being enclosed by a false ocean ring. Static validation is green, including all
+anchors, realm connectivity, ports, rivers, locators, and terrain-cache quarantine.
 Real-game non-debug review proves that ridge systems produce physical 3D relief. A new
 Arda-native material cache also proves continuous ground variation, mountain snow/rock
 material, and shoreline transition bands instead of the former shared zero tile and

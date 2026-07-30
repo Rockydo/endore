@@ -230,3 +230,10 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   the real renderer: continuous within-location variation, mountain snow/rock material,
   and shoreline transition bands all appeared where the former shared zero tile did not.
   The exact final refinement still requires a stable multi-theatre visual acceptance run.
+- The custom canvas may terminate land at its east and south edges with `wrap_x = no`;
+  those borders do not require a surrounding sea ring. A 70.13% land / 29.87% water
+  height source reaches menu-ready with 200 sea zones and 495 unique legal ports.
+- Build 24187685 reports 32-bit localization hash collisions even for textually distinct
+  generated hierarchy keys. `me_belfalas_sea_area_30_21` collides with installed
+  `indian_southcurrent23`; the deterministic `_arda` suffix is accepted with zero new
+  smoke diagnostics.

@@ -370,7 +370,10 @@ def river_material_mask(projection: dict) -> np.ndarray:
         points = [point(values) for values in river["points"]]
         if len(points) < 2:
             continue
-        nominal = max(2.0, float(river["width"]) * MATERIAL_H * 0.55)
+        # The material channel is the player-facing wet corridor, not the
+        # one-pixel parser graph. Give major rivers a readable bank-to-bank
+        # footprint while preserving their authored hierarchy and taper.
+        nominal = max(3.0, float(river["width"]) * MATERIAL_H * 0.90)
         segments = len(points) - 1
         for index, (start, end) in enumerate(zip(points, points[1:])):
             progress = (index + 0.5) / segments

@@ -289,3 +289,20 @@ Keep `index_map.bin` and `intensity_map.bin` empty because they are Earth-author
 layers, not required material paint. Never copy installed Earth cache payloads. Record
 source hashes, coverage, tile diversity, preview hash, and output sizes in the manifest,
 and fail validation if the material layer regresses to a shared placeholder tile.
+
+## 2026-07-30 — Crop beyond-edge Rhûn and Harad as land
+
+Supersede the rounded-island outline and the earlier 320-sea-zone density. The plan says
+beyond-edge lands are handled by the map border: western Rhûn therefore continues through
+the east edge and Far Harad through the south edge. Only actual western and internal
+waters remain water. A 25% heightmap-water floor replaces the old one-third heuristic;
+the authored crop is 29.87% water and still cannot regress to an accidental all-land map.
+
+The reduced true-ocean footprint cannot sustain 320 unique sea-zone ports. Use 200 sea
+zones and transfer the 120 cells to passable land, preserving exactly 12,104 locations:
+11,320 land, 520 impassable mountains, 64 lakes, and 200 seas. Keep the strict one-port
+per coastal water-zone matching invariant.
+
+Engine-reported localization hash collisions are never baselined. Remap the specific
+`me_belfalas_sea_area_30_21` runtime key to a deterministic `_arda` suffix while retaining
+its generated display label and geography.

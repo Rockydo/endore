@@ -44,21 +44,6 @@ sea_zones = {
 	me_sea_0177 me_sea_0178 me_sea_0179 me_sea_0180 me_sea_0181 me_sea_0182 me_sea_0183 me_sea_0184
 	me_sea_0185 me_sea_0186 me_sea_0187 me_sea_0188 me_sea_0189 me_sea_0190 me_sea_0191 me_sea_0192
 	me_sea_0193 me_sea_0194 me_sea_0195 me_sea_0196 me_sea_0197 me_sea_0198 me_sea_0199 me_sea_0200
-	me_sea_0201 me_sea_0202 me_sea_0203 me_sea_0204 me_sea_0205 me_sea_0206 me_sea_0207 me_sea_0208
-	me_sea_0209 me_sea_0210 me_sea_0211 me_sea_0212 me_sea_0213 me_sea_0214 me_sea_0215 me_sea_0216
-	me_sea_0217 me_sea_0218 me_sea_0219 me_sea_0220 me_sea_0221 me_sea_0222 me_sea_0223 me_sea_0224
-	me_sea_0225 me_sea_0226 me_sea_0227 me_sea_0228 me_sea_0229 me_sea_0230 me_sea_0231 me_sea_0232
-	me_sea_0233 me_sea_0234 me_sea_0235 me_sea_0236 me_sea_0237 me_sea_0238 me_sea_0239 me_sea_0240
-	me_sea_0241_endore me_sea_0242 me_sea_0243 me_sea_0244 me_sea_0245 me_sea_0246 me_sea_0247 me_sea_0248
-	me_sea_0249 me_sea_0250 me_sea_0251 me_sea_0252 me_sea_0253 me_sea_0254 me_sea_0255 me_sea_0256
-	me_sea_0257 me_sea_0258 me_sea_0259 me_sea_0260 me_sea_0261 me_sea_0262 me_sea_0263 me_sea_0264
-	me_sea_0265 me_sea_0266 me_sea_0267 me_sea_0268 me_sea_0269 me_sea_0270 me_sea_0271 me_sea_0272
-	me_sea_0273 me_sea_0274 me_sea_0275 me_sea_0276 me_sea_0277 me_sea_0278 me_sea_0279 me_sea_0280
-	me_sea_0281 me_sea_0282 me_sea_0283 me_sea_0284 me_sea_0285 me_sea_0286 me_sea_0287 me_sea_0288
-	me_sea_0289 me_sea_0290 me_sea_0291 me_sea_0292 me_sea_0293 me_sea_0294 me_sea_0295 me_sea_0296
-	me_sea_0297 me_sea_0298 me_sea_0299 me_sea_0300 me_sea_0301 me_sea_0302 me_sea_0303 me_sea_0304
-	me_sea_0305 me_sea_0306 me_sea_0307 me_sea_0308 me_sea_0309 me_sea_0310 me_sea_0311 me_sea_0312
-	me_sea_0313 me_sea_0314 me_sea_0315 me_sea_0316 me_sea_0317 me_sea_0318 me_sea_0319 me_sea_0320
 }
 
 lakes = {

@@ -6,8 +6,9 @@
    and smoke-green, but the exact-state close-zoom acceptance run remains red.
 2. REOPENED M2 — hand-refine the remaining broad control forms theatre by theatre:
    natural bays, headlands, islands, estuaries, inland-sea/lake shores, forest margins,
-   ridge shoulders, valleys, and tributary catchments. Preserve the 4096×2048 source
-   lattice, 16384×8192 engine canvas, and 12,104-location production density.
+   ridge shoulders, valleys, and tributary catchments. The false east/south ocean ring is
+   removed; preserve the 4096×2048 source lattice, 16384×8192 engine canvas, and
+   12,104-location production density while improving the remaining western coast.
 3. REOPENED M2 — close-zoom renderer: verify the new continuous terrain-material paint,
    physical relief, shore transitions, and all 23 river controls in a stable non-debug
    3D-map session. Strengthen river readability where the live renderer still loses

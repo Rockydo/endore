@@ -194,3 +194,19 @@
   renders continuous ground variation, snow/rock mountain material, and shore
   transitions; the final refined state did not complete a stable close-zoom capture
   after two resource-bound UI attempts, so the reopened M2 visual gate remains red.
+- The map extent now follows the plan's border rule: Rhûn continues through the east
+  edge and Harad through the south edge instead of enclosing north-western Middle-earth
+  in a false ocean ring. The western seas, Icebay, Gulf of Lune, Bay of Belfalas, and
+  Ethir Anduin remain physical coasts; the authored land fraction is 0.701271.
+- Sea tessellation dropped from 320 to 200 after the smaller true-ocean footprint made
+  two zones compete for one legal coastal land zone. The 120 recovered cells were added
+  to land, preserving exactly 12,104 locations while raising passable granularity to
+  11,320. The regenerated world has 495 unique ports, 11,299 populated locations, and a
+  maximum capital snap of 0.017499.
+- The denser continental cache contains 116,189 unique height tiles in 88,822,519 bytes
+  and 124,679 unique material tiles in 73,573,766 bytes. Both remain below the repository
+  ceiling; all 174,763 virtual entries and zero Earth decal layers remain validated.
+- The first paired smoke exposed one changed-hierarchy localization hash collision with
+  installed `indian_southcurrent23`. A deterministic `_arda` area-key remap removed it;
+  the confirming paired smoke passed with zero mod-unique lines on fingerprint
+  `ad2b237d`.
