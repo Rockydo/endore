@@ -206,14 +206,23 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
 - The river parser rejects self-touching meanders. It also rejected every tested custom
   affluent layout, including single red index-1 endpoints orthogonally adjacent to a
   clean parent channel. The green engine raster therefore contains 12 independent major
-  source-to-water channels using installed width indices 4â€“6; 23 axes remain in the
-  height/biome drainage control.
+  source-to-water channels; 23 axes remain in the height/biome drainage control.
+- Installed `rivers.png` uses index 4 for the overwhelming majority of upstream flow,
+  then transitions through 5 and 11 to 15 on the widest downstream reaches. Sources are
+  overwhelmingly adjacent to index 4, while red/yellow junction markers touch all four
+  widths. Index 6 is absent from the installed raster and is not a valid basis for the
+  previous width heuristic.
+- Naturalized independent channels are parser-safe when a static graph proof forbids
+  repeated pixels, diagonal gaps, non-consecutive orthogonal neighbours, and contact
+  between channels. The exact current tree loaded in no-debug Observer with downstream
+  4/5/11/15 transitions and zero river diagnostics. This does not change the separate
+  finding that custom affluent junctions remain rejected.
 - Every independent channel must reach palette-index-254 water. After the west coast
   rewrite, the Baranduin control endpoint remained inland and produced one isolated
   `River source not found`; an engine-only continuation across the coastal plain to open
-  water plus a monotonic source at Lake Evendim's southern outlet fixes the contract
-  without changing its valley-incision axis. Paired smoke then produced zero mod-unique
-  lines.
+  water plus a monotonic source at Lake Evendim's southern outlet fixes the contract.
+  Equivalent current-coast extensions now complete the Anduin, Ringló, Gilrain, Poros,
+  and Harnen without changing their valley-incision axes.
 - Installed `materials.bin` payloads are deduplicated 132x132 PNG tiles in unsigned
   16-bit mode. Each pixel is a bitmask over the 16 entries in installed
   `gfx/terrain2/materials.txt`: bits 0-4 coast topography, 5 coast transition, 6

@@ -4,22 +4,22 @@ locations = {
 	# ruin: amon_sul
 	# ruin: annuminas
 	# ruin: fornost
-	# ruin: me_land_0322
-	# ruin: me_land_0399
-	# ruin: me_land_0661
-	# ruin: me_land_0699
-	# ruin: me_land_0804
-	# ruin: me_land_0814
-	# ruin: me_land_10017
-	# ruin: me_land_10214
-	# ruin: me_land_1536
-	# ruin: me_land_2054
-	# ruin: me_land_2114
-	# ruin: me_land_3430
-	# ruin: me_land_5068
-	# ruin: me_land_5452
-	# ruin: me_land_6495
-	# ruin: me_land_9368
-	# ruin: me_land_9917
+	# ruin: me_land_0492
+	# ruin: me_land_10093
+	# ruin: me_land_1032
+	# ruin: me_land_10553
+	# ruin: me_land_1864
+	# ruin: me_land_2296
+	# ruin: me_land_2844
+	# ruin: me_land_2914
+	# ruin: me_land_2927
+	# ruin: me_land_4248
+	# ruin: me_land_4447
+	# ruin: me_land_5700
+	# ruin: me_land_6093
+	# ruin: me_land_7239
+	# ruin: me_land_7802
+	# ruin: me_land_7810
+	# ruin: me_land_8183
 	# ruin: osgiliath
 }

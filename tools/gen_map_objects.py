@@ -18,7 +18,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -27,7 +27,7 @@ from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 2
+GENERATOR_VERSION = 6
 
 
 @dataclass(frozen=True)
@@ -51,7 +51,7 @@ FAMILIES = (
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (120_000, 60_000, 30_000),
+        (1_201_686, 598_983, 596_430),
         (0.72, 0.92),
     ),
     Family(
@@ -64,7 +64,7 @@ FAMILIES = (
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (64_000, 32_000, 16_000),
+        (444_518, 224_087, 237_269),
         (0.68, 0.88),
     ),
     Family(
@@ -77,11 +77,12 @@ FAMILIES = (
             "vegetation_diorama_arctic_tree3_mesh",
             "vegetation_diorama_arctic_tree4_mesh",
         ),
-        (56_000, 28_000, 14_000),
+        (3_456_217, 1_727_474, 1_706_548),
         (0.70, 0.86),
     ),
 )
 LODS = ("high", "medium", "low")
+EXPECTED_RECORDS = 10_193_212
 
 
 def seed(*parts: str) -> int:
@@ -89,24 +90,112 @@ def seed(*parts: str) -> int:
     return int.from_bytes(hashlib.sha256(payload.encode("utf-8")).digest()[:8], "little")
 
 
-def controls() -> tuple[np.ndarray, np.ndarray]:
+def controls() -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     with Image.open(CONTROL / "biomes.png") as image:
         biomes = np.asarray(image, dtype=np.uint8)
     with Image.open(CONTROL / "density.png") as image:
         density = np.asarray(image, dtype=np.uint8)
+    with Image.open(CONTROL / "rivers.png") as image:
+        rivers = np.asarray(image, dtype=np.uint8)
     if biomes.shape != (CONTROL_H, CONTROL_W):
         raise ValueError("vegetation source has the wrong control resolution")
-    return biomes, density
+    return biomes, density, rivers
 
 
-def eligible_cells(family: Family, biomes: np.ndarray) -> np.ndarray:
-    mask = np.isin(biomes, family.biome_ids)
+def placement_field(
+    family: Family,
+    biomes: np.ndarray,
+    rivers: np.ndarray,
+) -> np.ndarray:
+    """Return continuous placement suitability with a feathered forest edge."""
+
+    core = np.isin(biomes, family.biome_ids)
+    land = ~np.isin(biomes, (0, 4, 7, 8, 10))
     if family.y_max < 1.0:
-        mask[round(family.y_max * CONTROL_H) :, :] = False
-    cells = np.argwhere(mask)
+        land[round(family.y_max * CONTROL_H) :, :] = False
+    radius = {"forest": 18, "woods": 28, "pine": 22}[family.key]
+    blurred = np.asarray(
+        Image.fromarray(core.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.GaussianBlur(radius=radius)
+        ),
+        dtype=np.float64,
+    ) / 255.0
+    rng = np.random.default_rng(seed(family.key, "placement-field"))
+    noise = Image.fromarray(
+        rng.integers(0, 256, (256, 512), dtype=np.uint8),
+        "L",
+    ).resize((CONTROL_W, CONTROL_H), Image.Resampling.BICUBIC)
+    modulation = 0.70 + np.asarray(noise, dtype=np.float64) / 255.0 * 0.60
+    suitability = np.power(blurred, 1.18) * modulation
+    # Rare broad low-density clearings belong to placement, not the discrete
+    # gameplay biome. Cutting holes in the biome made whole Voronoi locations
+    # flip to grass and exposed polygon-shaped glades in the renderer.
+    glades = Image.fromarray(
+        rng.integers(0, 256, (96, 192), dtype=np.uint8),
+        "L",
+    ).resize((CONTROL_W, CONTROL_H), Image.Resampling.BICUBIC)
+    glade_values = np.asarray(glades, dtype=np.uint8)
+    suitability[glade_values < 14] *= 0.08
+    # Preserve readable water and banks through dense woodland. Rivers are
+    # already organic authored controls; this merely prevents millions of
+    # valid tree instances from obscuring their terrain material at close zoom.
+    river_corridor = np.asarray(
+        Image.fromarray((rivers > 0).astype(np.uint8) * 255, "L").filter(
+            ImageFilter.MaxFilter(15)
+        ),
+        dtype=np.uint8,
+    ) > 0
+    suitability[river_corridor] = 0.0
+    suitability[~land] = 0.0
+    suitability[suitability < 0.025] = 0.0
+    return suitability
+
+
+def eligible_cells(
+    family: Family,
+    biomes: np.ndarray,
+    rivers: np.ndarray,
+) -> tuple[np.ndarray, np.ndarray]:
+    suitability = placement_field(family, biomes, rivers)
+    cells = np.argwhere(suitability > 0.0)
     if not len(cells):
         raise ValueError(f"{family.key} has no eligible authored cells")
-    return cells
+    return cells, suitability
+
+
+def hilbert_order(x: np.ndarray, z: np.ndarray) -> np.ndarray:
+    """Return a locality-preserving order for 2D generated instances.
+
+    EU5's retail transform bins are not arbitrary bags of instances.  Adjacent
+    records remain spatially local (the installed forest bins have a median
+    consecutive distance of roughly 27 world units), which allows the map
+    object renderer to batch and cull generated content by contiguous ranges.
+    A random serialization made every small ENDÓRË range span most of Arda.
+
+    Quantize the full engine canvas to a 16-bit Hilbert lattice and serialize
+    each mesh variant along that curve.  Positions remain authored and random;
+    only their on-disk order changes.
+    """
+
+    qx = np.clip(x / WORLD_W * 65_535.0, 0, 65_535).astype(np.int64)
+    qz = np.clip(z / WORLD_H * 65_535.0, 0, 65_535).astype(np.int64)
+    hx = qx.copy()
+    hz = qz.copy()
+    distance = np.zeros(len(qx), dtype=np.int64)
+    scale = 1 << 15
+    while scale:
+        rx = (hx & scale) != 0
+        rz = (hz & scale) != 0
+        distance += scale * scale * ((3 * rx.astype(np.int64)) ^ rz.astype(np.int64))
+        rotate = ~rz
+        invert = rotate & rx
+        hx[invert] = scale - 1 - hx[invert]
+        hz[invert] = scale - 1 - hz[invert]
+        swap = hx[rotate].copy()
+        hx[rotate] = hz[rotate]
+        hz[rotate] = swap
+        scale >>= 1
+    return np.argsort(distance, kind="stable")
 
 
 def transforms(
@@ -115,11 +204,16 @@ def transforms(
     count: int,
     biomes: np.ndarray,
     density: np.ndarray,
+    rivers: np.ndarray,
 ) -> tuple[bytes, ...]:
     rng = np.random.default_rng(seed(family.key, lod))
-    cells = eligible_cells(family, biomes)
-    weights = density[cells[:, 0], cells[:, 1]].astype(np.float64)
-    weights = np.square(np.clip(weights / 255.0, 0.18, 1.0))
+    cells, suitability = eligible_cells(family, biomes, rivers)
+    weights = suitability[cells[:, 0], cells[:, 1]]
+    weights *= np.clip(
+        density[cells[:, 0], cells[:, 1]].astype(np.float64) / 255.0,
+        0.35,
+        1.0,
+    )
     choices = rng.choice(len(cells), size=count, replace=True, p=weights / weights.sum())
     selected = cells[choices]
     # Random position inside its authored control cell; source Y is inverted
@@ -129,23 +223,36 @@ def transforms(
     yaw = rng.uniform(0.0, 2.0 * math.pi, count)
     scale = rng.uniform(family.scale[0], family.scale[1], count)
     variants = rng.integers(0, len(family.meshes), count)
-    payloads = [bytearray() for _ in family.meshes]
-    for index in range(count):
-        half = yaw[index] * 0.5
-        value = RECORD.pack(
-            float(x[index]),
-            0.0,
-            float(z[index]),
-            0.0,
-            float(math.sin(half)),
-            0.0,
-            float(math.cos(half)),
-            float(scale[index]),
-            float(scale[index]),
-            float(scale[index]),
-        )
-        payloads[int(variants[index])].extend(value)
-    return tuple(bytes(payload) for payload in payloads)
+    half = yaw * 0.5
+    records = np.zeros((count, 10), dtype="<f4")
+    records[:, 0] = x
+    records[:, 2] = z
+    records[:, 4] = np.sin(half)
+    records[:, 6] = np.cos(half)
+    records[:, 7] = scale
+    records[:, 8] = scale
+    records[:, 9] = scale
+    payloads: list[bytes] = []
+    for variant in range(len(family.meshes)):
+        selected_records = records[variants == variant]
+        order = hilbert_order(selected_records[:, 0], selected_records[:, 2])
+        payloads.append(selected_records[order].tobytes(order="C"))
+    return tuple(payloads)
+
+
+def locality_metrics(data: bytes) -> tuple[float, float]:
+    """Return consecutive and 32-record spatial locality in world units."""
+
+    records = np.frombuffer(data, dtype="<f4").reshape(-1, 10)
+    if len(records) < 2:
+        return 0.0, 0.0
+    points = records[:, (0, 2)]
+    consecutive = np.linalg.norm(np.diff(points, axis=0), axis=1)
+    chunk = min(32, len(points))
+    complete = len(points) // chunk
+    groups = points[: complete * chunk].reshape(complete, chunk, 2)
+    spans = np.linalg.norm(groups.max(axis=1) - groups.min(axis=1), axis=1)
+    return float(np.median(consecutive)), float(np.median(spans))
 
 
 def definition_text(family: Family, lod: str) -> str:
@@ -176,7 +283,7 @@ def definition_text(family: Family, lod: str) -> str:
 
 
 def payloads() -> dict[Path, bytes]:
-    biomes, density = controls()
+    biomes, density, rivers = controls()
     result: dict[Path, bytes] = {}
     for family in FAMILIES:
         for lod_index, lod in enumerate(LODS):
@@ -192,6 +299,7 @@ def payloads() -> dict[Path, bytes]:
                 family.counts[lod_index],
                 biomes,
                 density,
+                rivers,
             )
             for index, data in enumerate(bins):
                 result[
@@ -247,6 +355,25 @@ def check() -> list[str]:
     bin_count = sum(path.suffix == ".bin" for path in expected)
     if definition_count != 9 or bin_count != 36:
         failures.append("vegetation output family/LOD contract is incomplete")
+    records = sum(
+        len(data) // RECORD.size
+        for path, data in expected.items()
+        if path.suffix == ".bin"
+    )
+    if records != EXPECTED_RECORDS:
+        failures.append(
+            f"vegetation density regressed ({records:,} != {EXPECTED_RECORDS:,})"
+        )
+    for path, data in expected.items():
+        if path.suffix != ".bin":
+            continue
+        median_step, median_chunk_span = locality_metrics(data)
+        if median_step > 250 or median_chunk_span > 800:
+            failures.append(
+                f"{path.name} is not spatially serialized "
+                f"(median step {median_step:.1f}, 32-record span "
+                f"{median_chunk_span:.1f})"
+            )
     return failures
 
 

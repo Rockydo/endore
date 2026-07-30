@@ -64,7 +64,7 @@ unit_manager = {
 
 	army = {
 		country = RAN
-		location = me_land_7185
+		location = me_land_0734
 		sub_units = {
 			a_footmen = { strength = 1 }
 		}
@@ -92,7 +92,7 @@ unit_manager = {
 
 	army = {
 		country = BLU
-		location = me_land_2797
+		location = me_land_0171
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -132,7 +132,7 @@ unit_manager = {
 
 	army = {
 		country = IRO
-		location = me_land_4673
+		location = me_land_6717
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -173,7 +173,7 @@ unit_manager = {
 
 	army = {
 		country = WDM
-		location = me_land_0535
+		location = me_land_4053
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -195,7 +195,7 @@ unit_manager = {
 
 	army = {
 		country = FAN
-		location = me_land_1565
+		location = me_land_0520
 		sub_units = {
 			a_footmen = { strength = 1 }
 		}
@@ -204,7 +204,7 @@ unit_manager = {
 
 	army = {
 		country = DRU
-		location = me_land_3895
+		location = me_land_9254
 		sub_units = {
 			a_footmen = { strength = 1 }
 		}
@@ -213,7 +213,7 @@ unit_manager = {
 
 	army = {
 		country = LOS
-		location = me_land_3849
+		location = me_land_10003
 		sub_units = {
 			a_footmen = { strength = 1 }
 		}
@@ -222,7 +222,7 @@ unit_manager = {
 
 	army = {
 		country = RHO
-		location = me_land_3909
+		location = me_land_7262
 		sub_units = {
 			a_footmen = { strength = 1 }
 		}
@@ -311,7 +311,7 @@ unit_manager = {
 
 	army = {
 		country = HNE
-		location = me_land_3054
+		location = me_land_2739
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -323,7 +323,7 @@ unit_manager = {
 
 	army = {
 		country = HRA
-		location = me_land_2830
+		location = me_land_9985
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -335,7 +335,7 @@ unit_manager = {
 
 	army = {
 		country = HFA
-		location = me_land_8366
+		location = me_land_3949
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -347,7 +347,7 @@ unit_manager = {
 
 	army = {
 		country = KHA
-		location = me_land_6509
+		location = me_land_3062
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -359,7 +359,7 @@ unit_manager = {
 
 	army = {
 		country = RHU
-		location = me_land_7674
+		location = me_land_5805
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -372,7 +372,7 @@ unit_manager = {
 
 	army = {
 		country = RH2
-		location = me_land_4436
+		location = me_land_2704
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -385,7 +385,7 @@ unit_manager = {
 
 	army = {
 		country = RH3
-		location = me_land_9520
+		location = me_land_1749
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -398,7 +398,7 @@ unit_manager = {
 
 	army = {
 		country = DUN
-		location = me_land_7074
+		location = me_land_5591
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }
@@ -409,7 +409,7 @@ unit_manager = {
 
 	army = {
 		country = ANG
-		location = me_land_0978
+		location = me_land_0750
 		sub_units = {
 			a_footmen = { strength = 1 }
 			a_footmen = { strength = 1 }

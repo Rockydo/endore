@@ -122,8 +122,7 @@ Observer control before the five-year economy run.
 
 ## 2026-07-30 — Arbitrary generated vegetation definitions are not renderer-discovered
 
-Status: bounded reopened-M2 visual blocker; all tested generated-layer variants are
-exhausted and a materially different renderer route is required.
+Status: resolved by spatial serialization; quality refinement remains under reopened M2.
 
 Two non-debug live-Observer attempts reached maximum close zoom over Mirkwood with zero
 tree objects. The first used new `endore_forest_*`, `endore_woods_*`, and
@@ -141,10 +140,21 @@ inconclusive because the shared user directory still loaded ENDÓRË. Do not rep
 generated-layer variants; pursue another renderer mechanism or a truly isolated vanilla
 control.
 
+New installed evidence changed the next experiment without invalidating those results:
+retail generated bins keep contiguous records spatially local, whereas the prior ENDÓRË
+writer randomized each 32-record batch across most of the continent. The new writer
+Hilbert-orders Arda-only transforms and lint-enforces retail-like locality. This is a
+format/batching change, not a fourth filename variant.
+
+Resolution: a fresh no-debug full-3D Observer rendered dense physical tree objects over
+Mirkwood from those Hilbert-ordered bins. The same session used no Earth transform or
+decal. The renderer-discovery blocker is closed. Reopened M2 now treats forest margin,
+glade, density, and theatre coverage as ordinary quality work rather than a missing
+engine capability.
+
 ## 2026-07-30 — Final native-material visual pass exhausts the interactive renderer
 
-Status: bounded reopened-M2 visual blocker; validation and paired menu smoke are green,
-but the exact-state close-zoom gate is not accepted.
+Status: renderer bootstrap resolved; the broader reopened-M2 quality gate remains red.
 
 Two non-debug `--visual-map` attempts reached the custom-map transition on fingerprint
 `f004fab1`. The first completed `ClearAndRecalculateCachedData` and save serialization,
@@ -160,3 +170,10 @@ physical relief. That evidence proves the custom material mechanism, but it does
 accept the final refined tree. Do not repeat the same timed country-selection route.
 Pursue a materially different bounded renderer route, reduce first-render pressure, or
 obtain a fresh current-tree Observer save before repeating the multi-theatre gate.
+
+Resolution: a lightweight debug Observer now writes a named `autosave_*` checkpoint.
+The driver then cold-loads that checkpoint with no debug mode and full 3D terrain,
+avoiding the resource-heavy new-game renderer during country selection. The current tree
+reached live 3D Map in 122 seconds at about 5.6 GB working memory. Use this two-stage
+route for all remaining M2 captures; do not return to the exhausted direct visual-map
+country-selection path.

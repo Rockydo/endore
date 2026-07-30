@@ -13,6 +13,7 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from m2_controls import natural_path
 from worldgen import CONTROL, DERIVED, MAP_OUT, ROOT, WORLD_H, WORLD_W
 
 RIVERS_OUT = MAP_OUT / "rivers.png"
@@ -22,6 +23,21 @@ ENGINE_MOUTHS = {
     # endpoint. Keep its full valley axis in the physical controls and extend
     # only the parser-visible channel across the coastal plain to open water.
     "baranduin": [[0.270, 0.565], [0.240, 0.570], [0.190, 0.570]],
+    # Several southern controls intentionally stopped at their named delta
+    # anchors. Continue their wet corridors through the delta/coastal plain so
+    # every parser-visible channel actually terminates in the current coast.
+    "anduin": [[0.548, 0.806], [0.540, 0.805], [0.536, 0.805]],
+    "ringlo": [[0.508, 0.790]],
+    "gilrain": [[0.536, 0.802], [0.533, 0.802]],
+    "poros": [[0.570, 0.814], [0.560, 0.814], [0.554, 0.814]],
+    "harnen": [
+        [0.500, 0.892],
+        [0.470, 0.890],
+        [0.440, 0.886],
+        [0.405, 0.884],
+        [0.370, 0.886],
+        [0.345, 0.887],
+    ],
 }
 ENGINE_SOURCES = {
     # The control axis begins inside Lake Evendim; the engine river begins at
@@ -77,6 +93,100 @@ def orthogonal_path(points: list[tuple[int, int]]) -> list[tuple[int, int]]:
     return result
 
 
+def river_control_points(river: dict) -> list[list[float]]:
+    """Return the parser/material axis including proven source/mouth fixes."""
+
+    points = (
+        [ENGINE_SOURCES[river["key"]]] + river["points"][2:]
+        if river["key"] in ENGINE_SOURCES
+        else river["points"]
+    )
+    return points + ENGINE_MOUTHS.get(river["key"], [])
+
+
+def validate_simple_path(key: str, path: list[tuple[int, int]]) -> None:
+    """Enforce the retail parser's non-self-touching channel contract."""
+
+    if len(path) < 3:
+        raise ValueError(f"river {key} has fewer than three parser pixels")
+    positions: dict[tuple[int, int], int] = {}
+    for index, current in enumerate(path):
+        if current in positions:
+            raise ValueError(
+                f"river {key} revisits parser pixel {current} at "
+                f"{positions[current]} and {index}"
+            )
+        positions[current] = index
+        if index:
+            previous = path[index - 1]
+            if abs(current[0] - previous[0]) + abs(current[1] - previous[1]) != 1:
+                raise ValueError(f"river {key} is not strictly four-connected")
+    for index, (x, y) in enumerate(path):
+        for neighbour in (
+            (x - 1, y),
+            (x + 1, y),
+            (x, y - 1),
+            (x, y + 1),
+        ):
+            other = positions.get(neighbour)
+            if other is not None and abs(other - index) > 1:
+                raise ValueError(
+                    f"river {key} self-touches between parser pixels "
+                    f"{index} and {other}"
+                )
+
+
+def parser_safe_path(
+    river: dict,
+    size: tuple[int, int] = (WORLD_W, WORLD_H),
+) -> list[tuple[int, int]]:
+    """Naturalize a channel while mechanically forbidding parser-unsafe loops.
+
+    The first reopened-M2 experiment sent unconstrained naturalized tributary
+    graphs to the engine and was rejected. This route is deliberately narrower:
+    independent major channels only, exact proven endpoints, and a static graph
+    proof that every pixel has only its predecessor and successor as neighbours.
+    """
+
+    controls = river_control_points(river)
+    dense = natural_path(
+        controls,
+        size,
+        key=f"river:{river['key']}",
+        closed=False,
+        amplitude=float(river.get("wander", 0.0015)),
+        spacing=0.00075,
+    )
+    path = orthogonal_path(dense)
+    validate_simple_path(river["key"], path)
+    expected_start = (
+        round(float(controls[0][0]) * (size[0] - 1)),
+        round(float(controls[0][1]) * (size[1] - 1)),
+    )
+    expected_end = (
+        round(float(controls[-1][0]) * (size[0] - 1)),
+        round(float(controls[-1][1]) * (size[1] - 1)),
+    )
+    if path[0] != expected_start or path[-1] != expected_end:
+        raise ValueError(f"river {river['key']} lost an authored endpoint")
+    return path
+
+
+def flow_palette_index(river: dict, progress: float) -> int:
+    """Approximate vanilla's downstream 4 -> 5 -> 11 -> 15 widening."""
+
+    nominal_width = float(river["width"]) * WORLD_H
+    if nominal_width < 18:
+        return 4 if progress < 0.78 else 5
+    if progress < 0.68:
+        return 4
+    if progress < 0.90:
+        return 5
+    if river["key"] != "anduin" or progress < 0.975:
+        return 11
+    return 15
+
+
 def render() -> Image.Image:
     projection = json.loads(
         (CONTROL / "projection.json").read_text(encoding="utf-8")
@@ -103,7 +213,7 @@ def render() -> Image.Image:
     if palette[:15] != expected_head:
         raise ValueError("installed river marker palette changed; re-investigate contract")
     rivers = {item["key"]: item for item in projection["rivers"]}
-    paths: dict[str, tuple[list[tuple[int, int]], int]] = {}
+    paths: dict[str, list[tuple[int, int]]] = {}
     for river in projection["rivers"]:
         parent = river.get("joins")
         if parent and parent not in rivers:
@@ -114,88 +224,64 @@ def render() -> Image.Image:
         # major channels until an editor-authored junction contract is proven.
         if parent:
             continue
-        nominal_width = float(river["width"]) * WORLD_H
-        palette_index = 4 if nominal_width >= 16 else 5 if nominal_width >= 9 else 6
-        paths[river["key"]] = (
-            orthogonal_path(
-                [
-                    point(item)
-                    for item in (
-                        (
-                            [ENGINE_SOURCES[river["key"]]]
-                            + river["points"][2:]
-                            if river["key"] in ENGINE_SOURCES
-                            else river["points"]
-                        )
-                        + ENGINE_MOUTHS.get(river["key"], [])
-                    )
-                ]
-            ),
-            palette_index,
-        )
+        paths[river["key"]] = parser_safe_path(river)
 
     result = pixels
     occupied: set[tuple[int, int]] = set()
-    rendered_paths: dict[str, set[tuple[int, int]]] = {}
-    order: list[str] = []
-    visiting: set[str] = set()
-
-    def schedule(key: str) -> None:
-        if key in order:
-            return
-        if key in visiting:
-            raise ValueError(f"river join cycle includes {key}")
-        visiting.add(key)
-        parent = rivers[key].get("joins")
-        if parent:
-            schedule(parent)
-        visiting.remove(key)
-        order.append(key)
-
-    for key in paths:
-        schedule(key)
-
-    for key in order:
-        path, palette_index = paths[key]
-        land_path = [(x, y) for x, y in path if not water[y, x]]
-        if not land_path:
-            continue
-        parent = rivers[key].get("joins")
-        confluence: tuple[int, int] | None = None
-        if parent:
-            target = rendered_paths.get(parent)
-            if not target:
-                raise ValueError(f"river {key} parent {parent} was not rendered")
-            join_index = None
-            for index, (x, y) in enumerate(land_path):
-                if (x, y) in target:
-                    join_index = index - 1
-                    break
-                if any(
-                    neighbor in target
-                    for neighbor in (
-                        (x - 1, y),
-                        (x + 1, y),
-                        (x, y - 1),
-                        (x, y + 1),
-                    )
-                ):
-                    join_index = index
-                    break
-            if join_index is None or join_index < 1:
-                raise ValueError(f"river {key} does not reach parent {parent} cleanly")
-            land_path = land_path[: join_index + 1]
-            confluence = land_path[-1]
-        for x, y in land_path:
-            if (x, y) in occupied:
-                raise ValueError(f"river {key} overlaps another river before its join")
-            result[y, x] = palette_index
+    for key, path in paths.items():
+        land_runs: list[list[tuple[int, int]]] = []
+        current_run: list[tuple[int, int]] = []
+        for x, y in path:
+            if water[y, x]:
+                if current_run:
+                    land_runs.append(current_run)
+                    current_run = []
+            else:
+                current_run.append((x, y))
+        if current_run:
+            land_runs.append(current_run)
+        if not land_runs:
+            raise ValueError(f"river {key} never crosses land")
+        land_path = max(land_runs, key=len)
+        if any(len(run) > 8 for run in land_runs if run is not land_path):
+            raise ValueError(f"river {key} leaves and re-enters land before its mouth")
+        mouth_x, mouth_y = land_path[-1]
+        if not any(
+            0 <= neighbour_y < WORLD_H
+            and 0 <= neighbour_x < WORLD_W
+            and water[neighbour_y, neighbour_x]
+            for neighbour_x, neighbour_y in (
+                (mouth_x - 1, mouth_y),
+                (mouth_x + 1, mouth_y),
+                (mouth_x, mouth_y - 1),
+                (mouth_x, mouth_y + 1),
+            )
+        ):
+            raise ValueError(
+                f"river {key} does not terminate orthogonally against "
+                "palette-index-254 water"
+            )
+        validate_simple_path(key, land_path)
+        if any(
+            (x, y) in occupied
+            or any(
+                neighbour in occupied
+                for neighbour in (
+                    (x - 1, y),
+                    (x + 1, y),
+                    (x, y - 1),
+                    (x, y + 1),
+                )
+            )
+            for x, y in land_path
+        ):
+            raise ValueError(f"independent river {key} touches another channel")
+        for index, (x, y) in enumerate(land_path):
+            progress = index / max(1, len(land_path) - 1)
+            result[y, x] = flow_palette_index(rivers[key], progress)
             occupied.add((x, y))
         source_x, source_y = land_path[0]
         result[source_y, source_x] = 0
-        if confluence:
-            result[confluence[1], confluence[0]] = 1
-        rendered_paths[key] = set(land_path)
     output = Image.fromarray(result, "P")
     output.putpalette(palette)
     return output
@@ -245,8 +331,7 @@ def check() -> list[str]:
                 failures.append("river_preview.png differs from deterministic river model")
     used = set(int(value) for value in np.unique(np.asarray(expected)))
     if (
-        not {0, 254, 255}.issubset(used)
-        or not used.intersection({4, 5, 6})
+        not {0, 4, 5, 11, 15, 254, 255}.issubset(used)
     ):
         failures.append(f"river raster lacks expected source/flow/background indices: {used}")
     return failures

@@ -210,3 +210,91 @@
   installed `indian_southcurrent23`. A deterministic `_arda` area-key remap removed it;
   the confirming paired smoke passed with zero mod-unique lines on fingerprint
   `ad2b237d`.
+- A fresh current-tree debug checkpoint now separates country selection from the heavy
+  renderer. Reopening that 41 MB save with no debug mode and the full visual profile
+  reached live Observer in 122 seconds at about 5.6 GB working memory. The selected 3D
+  Map proved that the current Arda height/material cache renders physical relief,
+  continuous ground variation, and non-Earth waters. It also honestly confirmed broad
+  pale mountain tubes, weak rivers, and no visible tree objects; reopened M2 stayed red.
+- Installed transform evidence exposed a format-level difference missed by the earlier
+  vegetation path tests. Retail forest records are spatially coherent (about 27 world
+  units between consecutive records and about 84 units across a typical 32-record
+  batch), while randomized ENDÓRË batches spanned roughly 5,700 units. The generator now
+  Hilbert-orders each mesh/LOD bin and validates locality; representative high-forest
+  output measures 9.7-unit consecutive and 102.5-unit 32-record medians without copying
+  an Earth transform.
+- Mountain topography now begins at the high massif core (`ridge > 0.45`) instead of the
+  broad physical shoulder (`ridge > 0.29`). Broad authored foothill elevation remains,
+  while mountain-template coverage drops from 8.81% to 4.65% of land to eliminate the
+  continuous snow-tube appearance.
+- Player-facing river material now follows the same deterministic organic paths and
+  corrected source/mouth extensions as the engine graph. Its downstream-tapered width
+  increases from 0.90× to 1.45× the authored control, with a five-pixel material floor,
+  so major channels remain legible outside the one-pixel parser graph.
+- The complete downstream world regenerated after those physical changes: 12,104
+  locations, 38 realms, 33 cultures, 11,299 populated locations, 467 recalculated ports,
+  320 recalculated authored road edges, and 12 markets. Deterministic M2 verification
+  passed all stages, including 174,763 cache entries, 124,680 unique material tiles, and
+  zero Earth decal layers. Smoke and the new close-zoom vegetation/river capture are
+  deferred only while Antiquitas owns the shared EU5 lease; no gate is claimed yet.
+- The Hilbert-ordered transform route is now live-proven rather than merely static:
+  a no-debug, full-3D Observer rendered physical tree objects and dense woodland canopy
+  over Mirkwood. Direct `WM_MOUSEWHEEL` delivery also moved the camera deterministically
+  from regional view to ground-level terrain after the former synthesized-wheel and
+  numpad-binding routes had no effect.
+- That close capture honestly exposed the next quality defect: forest coverage ended in
+  hard walls and the snow/rock mountain material remained too continuous. Forest controls
+  now use deterministic porous margins and internal glades, object placement uses a
+  continuous noise-modulated edge field, and terrain transition paint follows the
+  dominant biome actually assigned to each gameplay location as well as the source atlas.
+  Mountain classification now begins at `ridge > 0.56`, while broad physical foothill
+  elevation remains modulated by independent rock-mass fields.
+- Rhûn and Núrnen received asymmetric multi-headland shoreline controls, and coast/lake
+  sub-macro displacement increased without changing the full-canvas border contract.
+  The coherent downstream rebuild remains 12,104 locations with 11,320 passable land,
+  520 mountain, 64 lake, and 200 sea zones; 488 ports, 313 authored route edges, 38
+  realms, 33 cultures, 11,299 populated locations, and 12 markets were recalculated.
+  Independent M2 verification passed 174,763 indexed cache tiles, 115,834 unique height
+  tiles, 124,315 unique material tiles, and zero Earth decal layers. Exact-state visual
+  proof and smoke are pending the shared EU5 lease; reopened M2 remains red.
+- A fresh current-tree game replaced the stale visual checkpoint and entered Observer
+  with no disconnected-path diagnostics. Its no-debug full-3D relaunch proved markedly
+  better mountain relief: continuous white tubes are gone, with exposed brown massif
+  shoulders and isolated snow/rock cores. Direct-window zoom then proved dense base
+  canopy and a visible dark channel in Mirkwood, but physical tree clusters remained too
+  sparse and the proposed location-biome transition paint visibly emphasized pale
+  Voronoi patches. The renderer evidence rejected that transition route; M2 stays red.
+- Installed bins contain about 10.2 million vegetation transforms across the same
+  forest/woods/pine meshes and three LODs, versus 420,000 in the proof batch. The next
+  exact-state iteration therefore matches those installed per-family/LOD counts with
+  wholly Arda-generated, Hilbert-ordered positions. Glades now suppress object placement
+  only, so they cannot flip an entire generated location's base vegetation.
+- The exact-state vanilla-density probe succeeded under the full renderer at the same
+  roughly 5.7 GB working-memory scale as the proof batch. Maximum close zoom over
+  Mirkwood now shows continuous physical mixed canopy and small irregular clearings,
+  rather than sparse clusters over a flat forest template. This is the first live proof
+  that ENDÓRË can match vanilla vegetation density with no Earth-authored transform.
+- Dense canopy also hid the player-facing river material. All three vegetation families
+  now exclude a narrow dilation of the 23 authored river controls before sampling; the
+  complete 10,193,212-transform set regenerated and retained its Hilbert locality.
+  A no-debug maximum-close renderer pass then proved both the clearance and continuous
+  mixed canopy: the wet corridor and banks remain legible without returning any
+  Earth-authored transform.
+- That same close pass exposed a final engine-raster defect: parser-safe major channels
+  still rendered as constant-width canals because every pixel used one palette width and
+  sparse authored vertices were joined by straight orthogonal runs. Installed-raster
+  analysis proved vanilla widens rivers downstream through indices 4, 5, 11, and 15.
+- The replacement raster keeps the already-proven 12 independent major-channel topology
+  but naturalizes each centerline between authored vertices, extends every southern mouth
+  to the current coast, and varies width downstream. A new graph validator rejects any
+  duplicate pixel, diagonal gap, self-touch, inter-channel touch, or non-water mouth.
+  The matching player-facing material uses the same deterministic centerline phase.
+- The exact current tree loaded into no-debug full 3D Observer on fingerprint `5782310a`
+  with no river-source, affluent, self-touch, disconnected-path, or other mod-caused
+  error. Ground-level evidence shows an irregular wet corridor through vanilla-density
+  woodland rather than the former straight blue ribbon. Required multi-theatre evidence,
+  and explicit owner acceptance remain outstanding; M2 stays red.
+- Full deterministic validation passed in 243.4 seconds, including 174,763 terrain-cache
+  tiles, all 12 naturalized major channels, all 10,193,212 vegetation transforms, and
+  every downstream world subsystem. Paired vanilla/mod smoke then passed with zero
+  mod-unique error lines on exact game-visible fingerprint `09192b66`.

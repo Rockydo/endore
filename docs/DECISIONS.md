@@ -306,3 +306,65 @@ per coastal water-zone matching invariant.
 Engine-reported localization hash collisions are never baselined. Remap the specific
 `me_belfalas_sea_area_30_21` runtime key to a deterministic `_arda` suffix while retaining
 its generated display label and geography.
+
+## 2026-07-30 — Spatial vegetation batches and high mountain cores
+
+Treat generated map-object transform order as part of EU5's renderer ABI. The installed
+bins keep contiguous instance records spatially local, consistent with range-based
+generated-instance batching and culling. Serialize each ENDÓRË mesh/LOD payload on a
+16-bit Hilbert curve and reject bins whose median consecutive distance exceeds 250 world
+units or whose median 32-record span exceeds 800. This changes only disk order: all
+positions, rotations, scales, and meshes remain deterministic Arda-derived placements.
+
+Separate physical mountain relief from the gameplay mountain material/classification.
+Broad massif shoulders and foothills remain in the height field, but only modulated ridge
+values above 0.56 receive the mountain topography template. This preserves physical
+barriers and passes while preventing whole ranges from becoming uniform snow/rock
+ribbons.
+
+The terrain-cache river channel is a visible wet-corridor material, not the parser's
+one-pixel directed graph. It therefore follows naturalized control paths, shares the
+Baranduin source/mouth corrections, and uses a stronger downstream taper. The parser
+raster remains unchanged and authoritative for river topology.
+
+## 2026-07-30 — Porous margins and vanilla-density Arda vegetation
+
+Keep forest polygons as binding large forms, but never serialize or render their vector
+boundaries as a wall. Deterministic broad fields feather each woodland, and Arda-native
+transforms are weighted continuously across its margin. Internal glades suppress only
+object placement; they do not cut holes in the discrete gameplay biome.
+
+Reject transition paint along every generated location-biome boundary. A live close
+probe showed that this makes the renderer emphasize pale Voronoi patches rather than
+hide them. Terrain transition bits remain tied to the authored continuous atlas, while
+dense, feathered physical tree coverage carries the forest margin across location seams.
+
+Match vanilla's installed transform counts per forest, woods, and pine LOD: about 10.2
+million deterministic Arda placements rather than the proof batch of 420,000. All bins
+remain Hilbert-ordered and every position remains generated from ENDÓRË controls.
+
+Exclude a narrow dilation of the 23 authored river controls from every vegetation
+placement field. This is a renderer clearance, not a second hydrology model: it keeps
+the visible wet material and banks legible through vanilla-density canopy while the
+indexed river raster remains authoritative for topology.
+
+Keep the installed 16384×8192 canvas and 12,104-location target. The current map already
+uses the full vanilla raster contract; perceived scale and quality must be solved through
+physical detail, coherent terrain layers, and close-view density rather than inventing a
+larger unsupported canvas.
+
+## 2026-07-30 — Parser-safe natural major rivers
+
+Supersede the constant-width straight engine raster without reopening the rejected custom
+affluent topology. Keep exactly 12 independent major channels, but densify the
+hand-authored axes with the same deterministic natural-path phase used by the terrain
+material. Statically prove that each result is four-connected, has no duplicate or
+self-touching pixel, never touches another independent channel, and terminates against
+palette-index-254 water. Any failure aborts generation before EU5 can parse the raster.
+
+Follow the installed downstream width grammar rather than assigning one width per river:
+index 4 at sources, then 5 and 11 downstream, with index 15 reserved for the final Anduin
+reach. Extend the Anduin, Ringló, Gilrain, Poros, and Harnen through their coastal plains
+to the current authored coast, just as the proven Baranduin override already does.
+Tributaries remain physical valley/material controls until a genuinely editor-proven
+affluent contract exists.

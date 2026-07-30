@@ -37,6 +37,8 @@ from PIL import Image, ImageDraw, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from gen_rivers import river_control_points
+from m2_controls import natural_path
 from worldgen import CONTROL, DERIVED, TERRAIN_OUT
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,7 +57,7 @@ TILE_SIZE = 128
 BORDER_SIZE = 2
 STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 HEIGHT_QUANTUM = 512
-GENERATOR_VERSION = 8
+GENERATOR_VERSION = 12
 
 # Installed materials.txt establishes the native mask-channel meanings.  The
 # cache stores a bitset rather than a material index: several bits may be set
@@ -360,20 +362,24 @@ def river_material_mask(projection: dict) -> np.ndarray:
     image = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
     draw = ImageDraw.Draw(image)
 
-    def point(values: list[float]) -> tuple[int, int]:
-        return (
-            round(float(values[0]) * (MATERIAL_W - 1)),
-            round(float(values[1]) * (MATERIAL_H - 1)),
-        )
-
     for river in projection["rivers"]:
-        points = [point(values) for values in river["points"]]
+        source_points = river_control_points(river)
+        points = natural_path(
+            source_points,
+            (MATERIAL_W, MATERIAL_H),
+            key=f"river:{river['key']}",
+            closed=False,
+            amplitude=float(river.get("wander", 0.0015)),
+            spacing=0.00125,
+        )
         if len(points) < 2:
             continue
         # The material channel is the player-facing wet corridor, not the
         # one-pixel parser graph. Give major rivers a readable bank-to-bank
-        # footprint while preserving their authored hierarchy and taper.
-        nominal = max(3.0, float(river["width"]) * MATERIAL_H * 0.90)
+        # footprint while preserving their authored hierarchy, organic path,
+        # mouth, and downstream taper.  The previous 0.90 multiplier vanished
+        # at regional zoom even for the Anduin.
+        nominal = max(5.0, float(river["width"]) * MATERIAL_H * 1.45)
         segments = len(points) - 1
         for index, (start, end) in enumerate(zip(points, points[1:])):
             progress = (index + 0.5) / segments

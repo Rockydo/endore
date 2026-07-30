@@ -2,21 +2,24 @@
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
-   receives explicit owner acceptance. The native Arda material cache is now generated
-   and smoke-green, but the exact-state close-zoom acceptance run remains red.
-2. REOPENED M2 — hand-refine the remaining broad control forms theatre by theatre:
-   natural bays, headlands, islands, estuaries, inland-sea/lake shores, forest margins,
-   ridge shoulders, valleys, and tributary catchments. The false east/south ocean ring is
-   removed; preserve the 4096×2048 source lattice, 16384×8192 engine canvas, and
-   12,104-location production density while improving the remaining western coast.
-3. REOPENED M2 — close-zoom renderer: verify the new continuous terrain-material paint,
-   physical relief, shore transitions, and all 23 river controls in a stable non-debug
-   3D-map session. Strengthen river readability where the live renderer still loses
-   channels. Do not claim this gate from control previews or menu smoke.
-4. REOPENED M2 — vegetation: pursue a materially different Arda-native coverage route.
-   Arbitrary definition siblings, exact retail filenames/object names, and exact retail
-   transform-bin paths all parsed but rendered no trees. No Earth-authored transform or
-   decal may return.
+   receives explicit owner acceptance. A fresh current-tree checkpoint now reaches a
+   stable non-debug 3D Observer, but the exact-state visual gate remains red.
+2. REOPENED M2 — finish the physical-control pass theatre by theatre: natural bays,
+   headlands, islands, estuaries, inland-sea/lake shores, forest margins, ridge
+   shoulders, valleys, and tributary catchments. Preserve the 4096×2048 source lattice,
+   16384×8192 engine canvas, and 12,104-location production density. The new high-core
+   mountain classification must replace the former continuous snow tubes in every
+   close/regional capture.
+3. REOPENED M2 — renderer verification: inspect the strengthened organic river-material
+   paths, vegetation clearances, and all 23 valley controls in the stable non-debug 3D
+   route. The exact tree now proves a ground-level organic wet corridor and parser-safe
+   downstream width progression. Still require readable Anduin, Baranduin, Greyflood,
+   Isen, Celduin, Carnen, Poros, and Harnen channels at regional/close zoom; do not infer
+   multi-theatre acceptance from the single Mirkwood corridor.
+4. REOPENED M2 — vegetation theatre coverage: vanilla-density Hilbert-ordered Arda
+   transforms, porous margins, object-only glades, river clearances, and continuous
+   canopy are live-proven in Mirkwood. Confirm the same contract in Fangorn, the Old
+   Forest, Lórien, and Ithilien with no location-cell seams and no Earth transform/decal.
 5. REOPENED M2 gate: capture full-map, regional, and close-zoom terrain/political
    screenshots at the Shire/Old Forest, Misty Mountains/Anduin, Mirkwood, Rohan/White
    Mountains, Mordor, Belfalas, Forochel, Rhûn, and Harad; run fresh Observer and require

@@ -192,6 +192,7 @@ def set_fixed_settings(user_dir: Path, *, visual_map: bool = False) -> None:
             "scroll_speed": 100,
             "zoom_speed": 100,
             "mouse_cursor_zoom_mode": "mouse_cursor_zoom_mode_zoom_in_to_cursor",
+            "user_bindings": "user_bindings/user.bindings",
         }
     )
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -1027,12 +1028,37 @@ def scroll(args: argparse.Namespace) -> int:
     direction = 1 if args.clicks > 0 else -1
     interval = args.duration / detents if detents else 0.0
     for _ in range(detents):
-        pyautogui.scroll(direction)
+        if args.backend == "post":
+            # Some Clausewitz windows ignore the synthesized global input used
+            # by pyautogui while still consuming ordinary WM_MOUSEWHEEL
+            # messages. Deliver the message to the verified EU5 window, with
+            # the cursor coordinates encoded exactly as Windows expects.
+            wheel_delta = direction * 120
+            wheel_wparam = ctypes.c_size_t((wheel_delta & 0xFFFF) << 16).value
+            wheel_lparam = ctypes.c_size_t(
+                ((y & 0xFFFF) << 16) | (x & 0xFFFF)
+            ).value
+            ctypes.windll.user32.SendMessageW(
+                window._hWnd,
+                0x020A,  # WM_MOUSEWHEEL
+                wheel_wparam,
+                wheel_lparam,
+            )
+        elif args.backend == "native":
+            ctypes.windll.user32.mouse_event(
+                0x0800,  # MOUSEEVENTF_WHEEL
+                0,
+                0,
+                direction * 120,
+                0,
+            )
+        else:
+            pyautogui.scroll(direction)
         if interval:
             time.sleep(interval)
     time.sleep(args.settle)
     print(
-        f"scrolled {args.clicks:+d} detents at normalized "
+        f"scrolled {args.clicks:+d} {args.backend} detents at normalized "
         f"({args.x:.3f}, {args.y:.3f})"
     )
     if args.capture:
@@ -1381,6 +1407,12 @@ def build_parser() -> argparse.ArgumentParser:
     scroll_parser.add_argument("--y", type=float, default=0.5)
     scroll_parser.add_argument("--duration", type=float, default=0.2)
     scroll_parser.add_argument("--settle", type=float, default=2)
+    scroll_parser.add_argument(
+        "--backend",
+        choices=("post", "native", "pyautogui"),
+        default="post",
+        help="wheel injection route; direct window messages are deterministic",
+    )
     scroll_parser.add_argument("--capture", help="capture this name after scrolling")
     scroll_parser.add_argument("--session")
     scroll_parser.set_defaults(func=scroll)

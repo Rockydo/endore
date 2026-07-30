@@ -13,7 +13,7 @@
   "passes": 9,
   "rivers": 23,
   "lakes": 4,
-  "land_fraction": 0.701271,
+  "land_fraction": 0.698443,
   "engine_water_level_sample": 5466,
   "minimum_land_height": 10454,
   "maximum_water_height": 420,
@@ -30,5 +30,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "d4749faf451d148563a4264a64d5cdb8790bbd75df0e825cb3d532f4c278e391"
+  "source_sha256": "e859b006580858a0ec9e90138f5924bbc9c5effb02e84bb03b29137e03f8d907"
 }

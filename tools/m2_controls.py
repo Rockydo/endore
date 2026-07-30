@@ -57,6 +57,10 @@ LOWLAND_SOUTH_SAMPLE = 10500.0
 LOWLAND_NORTH_SAMPLE = 13000.0
 WATER_FLOOR_SAMPLE = 420.0
 RIVER_INCISION_SAMPLE = 1450.0
+# Keep physical foothills broad while reserving the snow/rock mountain
+# topography template for isolated massif cores. The earlier 0.29 and 0.45
+# thresholds both left continuous pale ridge segments at regional zoom.
+MOUNTAIN_BIOME_THRESHOLD = 0.56
 
 
 @dataclass(frozen=True)
@@ -73,6 +77,28 @@ class Settlement:
 
 def load_projection() -> dict:
     return json.loads(PROJECTION.read_text(encoding="utf-8"))
+
+
+def validate_geometry_contract(projection: dict) -> None:
+    """Reject a return to primitive proof-map lakes, forests, or coasts."""
+
+    if len(projection["land_polygons"]["mainland"]) < 48:
+        raise ValueError("mainland coastline lacks hand-authored macro detail")
+    for key, coords in projection["sea_cutouts"].items():
+        if len(coords) < 12:
+            raise ValueError(f"sea cutout {key} lacks bay/headland detail")
+    for lake in projection["lakes"]:
+        if lake["shape"] != "organic_polygon" or len(lake["coords"]) < 14:
+            raise ValueError(
+                f"lake {lake['key']} regressed to primitive geometry"
+            )
+    for zone in projection["biome_zones"]:
+        if zone["biome"] not in {"forest", "dense_forest"}:
+            continue
+        if zone["shape"] != "organic_polygon" or len(zone["coords"]) < 8:
+            raise ValueError(
+                f"forest {zone['key']} regressed to primitive geometry"
+            )
 
 
 def load_settlements() -> list[Settlement]:
@@ -225,9 +251,9 @@ def draw_shape(
         draw.polygon([point(item, size) for item in coords], fill=fill)
     elif shape == "organic_polygon":
         amplitude = (
-            0.0090
+            0.0110
             if key.startswith("biome:")
-            else 0.0065
+            else 0.0080
             if key.startswith("lake:")
             else 0.0045
         )
@@ -243,6 +269,60 @@ def draw_shape(
         raise ValueError(f"unknown control shape {shape!r}")
 
 
+def naturalize_forest_mask(
+    image: Image.Image,
+    *,
+    key: str,
+) -> Image.Image:
+    """Break a hand-authored forest envelope into a natural, porous margin.
+
+    The polygon remains the binding large form. A deterministic broad field
+    feathers its edge, avoiding both an oval wall of trees and a hard vector
+    boundary at close zoom. Glades belong to object placement so whole
+    gameplay locations do not flip their base terrain.
+    """
+
+    size = image.size
+    radius = max(5, round(size[1] * 0.006))
+    softened = np.asarray(
+        image.filter(ImageFilter.GaussianBlur(radius=radius)),
+        dtype=np.float32,
+    ) / 255.0
+    rng = np.random.default_rng(stable_seed(f"forest-field:{key}"))
+    broad = Image.fromarray(
+        rng.integers(
+            0,
+            256,
+            (max(16, size[1] // 24), max(32, size[0] // 24)),
+            dtype=np.uint8,
+        ),
+        "L",
+    ).resize(size, Image.Resampling.BICUBIC)
+    broad_values = np.asarray(broad, dtype=np.float32) / 255.0
+    active = softened + (broad_values - 0.5) * 0.48 > 0.50
+
+    return Image.fromarray(active.astype(np.uint8) * 255, "L")
+
+
+def relief_modulation(size: tuple[int, int]) -> np.ndarray:
+    """Return broad and medium rock-mass variation for authored ridges."""
+
+    rng = np.random.default_rng(stable_seed("ridge-relief-field"))
+    broad = Image.fromarray(
+        rng.integers(0, 256, (128, 256), dtype=np.uint8),
+        "L",
+    ).resize(size, Image.Resampling.BICUBIC)
+    medium = Image.fromarray(
+        rng.integers(0, 256, (384, 768), dtype=np.uint8),
+        "L",
+    ).resize(size, Image.Resampling.BICUBIC)
+    values = (
+        np.asarray(broad, dtype=np.float32) * 0.62
+        + np.asarray(medium, dtype=np.float32) * 0.38
+    ) / 255.0
+    return 0.66 + values * 0.58
+
+
 def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
     image = Image.new("L", size, 0)
     polygons = projection["land_polygons"]
@@ -252,7 +332,7 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
         size,
         key="coast:mainland",
         fill=255,
-        amplitude=0.0045,
+        amplitude=0.0065,
     )
     for key, polygon in projection["sea_cutouts"].items():
         draw_organic_polygon(
@@ -261,7 +341,7 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             size,
             key=f"coast:{key}",
             fill=0,
-            amplitude=0.0035,
+            amplitude=0.0050,
         )
     # Offshore islands are independent landmasses and must be restored after
     # bays/gulfs carve the mainland; both Himling and Tolfalas sit inside the
@@ -408,6 +488,7 @@ def river_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
 
 def render() -> tuple[dict[str, Image.Image], dict]:
     projection = load_projection()
+    validate_geometry_contract(projection)
     settlements = load_settlements()
     size = tuple(int(value) for value in projection["control_resolution"])
     if len(size) != 2 or min(size) < 128:
@@ -421,7 +502,14 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     land = land_mask(projection, size)
     land_array = np.asarray(land) > 0
     ridges = ridge_mask(projection, size)
-    ridge_array = np.asarray(ridges, dtype=np.float32) / 255.0
+    ridge_array = np.clip(
+        np.asarray(ridges, dtype=np.float32)
+        / 255.0
+        * relief_modulation(size),
+        0.0,
+        1.0,
+    )
+    ridges = Image.fromarray(np.round(ridge_array * 255.0).astype(np.uint8), "L")
     rivers = river_mask(projection, size)
 
     biome_image = Image.new("L", size, BIOMES["ocean"])
@@ -437,9 +525,13 @@ def render() -> tuple[dict[str, Image.Image], dict]:
             255,
             key=f"biome:{zone['key']}",
         )
+        if zone["biome"] in {"forest", "dense_forest"}:
+            mask = naturalize_forest_mask(mask, key=zone["key"])
         active = (np.asarray(mask) > 0) & land_array
         biome[active] = BIOMES[zone["biome"]]
-    biome[(ridge_array > 0.29) & land_array] = BIOMES["mountain"]
+    biome[
+        (ridge_array > MOUNTAIN_BIOME_THRESHOLD) & land_array
+    ] = BIOMES["mountain"]
     for lake in projection["lakes"]:
         mask = Image.new("L", size, 0)
         draw_shape(

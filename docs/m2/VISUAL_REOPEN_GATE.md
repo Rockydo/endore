@@ -15,10 +15,25 @@ anchors, realm connectivity, ports, rivers, locators, and terrain-cache quaranti
 Real-game non-debug review proves that ridge systems produce physical 3D relief. A new
 Arda-native material cache also proves continuous ground variation, mountain snow/rock
 material, and shoreline transition bands instead of the former shared zero tile and
-coarse location-shaped patches. Vegetation remains blocked after every tested
-generated-layer route parsed but rendered no objects, major-river readability is not yet
-accepted, and the final refined tree did not complete a stable multi-theatre close-zoom
-capture. This gate therefore remains red.
+coarse location-shaped patches. A two-stage checkpoint route now reaches the current
+tree in stable non-debug 3D Observer, resolving the earlier resource-bound capture
+bootstrap. A later exact-state session proves that Hilbert-ordered Arda transforms render
+real tree objects and dense canopy in Mirkwood; native `WM_MOUSEWHEEL` delivery also
+provides deterministic close zoom. That same close evidence still shows hard woodland
+walls and too-continuous snow/rock ridges. The current physical batch therefore adds
+porous forest margins, object-only glades, continuously feathered tree placement,
+modulated massif relief, isolated mountain cores, and asymmetric Rhûn/Núrnen shores.
+Exact-state renderer proof accepted the relief change but rejected transition paint along
+generated location-biome seams because it emphasized pale Voronoi patches. The current
+vegetation iteration removes that route and matches vanilla's roughly 10.2 million
+installed per-family/LOD transforms with wholly Arda-generated positions. This gate
+now has live maximum-close proof of continuous physical Mirkwood canopy at that density.
+The final batch adds authored river clearances so the canopy cannot obscure the wet
+channels. Ground-level evidence now proves those clearances and a parser-safe naturalized
+major-channel raster with installed downstream width progression. The exact current tree
+entered no-debug Observer without a river or map diagnostic, and paired smoke is green
+with zero mod-unique lines. Multi-theatre evidence and explicit owner acceptance remain
+outstanding; this gate remains red.
 
 ## Binding defects
 
