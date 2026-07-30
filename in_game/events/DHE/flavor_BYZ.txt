@@ -115,7 +115,7 @@ flavor_byz.2 = {
 
 	trigger = {
 		has_or_had_tag = BYZ
-		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_07_07_province_01
+		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	immediate = {
@@ -127,7 +127,7 @@ flavor_byz.2 = {
 		trigger = { religion = religion:orthodox }
 		add_prestige = prestige_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner = root }
 				change_integration_progress = 50
@@ -140,7 +140,7 @@ flavor_byz.2 = {
 		trigger = { religion = religion:hellenism_religion }
 		add_prestige = prestige_severe_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner = root }
 				change_integration_progress = 50
@@ -156,7 +156,7 @@ flavor_byz.2 = {
 		}
 		add_prestige = prestige_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner = root }
 				change_integration_progress = 50
@@ -193,7 +193,7 @@ flavor_byz.3 = {
 
 	trigger = {
 		has_or_had_tag = BYZ
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	immediate = {
@@ -249,7 +249,7 @@ flavor_byz.4 = {
 
 	trigger = {
 		has_or_had_tag = BYZ
-		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_07_07_province_01
+		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	immediate = {
@@ -261,7 +261,7 @@ flavor_byz.4 = {
 		trigger = { religion = religion:orthodox }
 		add_prestige = prestige_severe_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -274,7 +274,7 @@ flavor_byz.4 = {
 		trigger = { religion = religion:hellenism_religion }
 		add_prestige = prestige_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -290,7 +290,7 @@ flavor_byz.4 = {
 		}
 		add_prestige = prestige_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -326,7 +326,7 @@ flavor_byz.5 = {
 
 	trigger = {
 		has_or_had_tag = BYZ
-		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_07_07_province_01
+		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	immediate = {
@@ -338,7 +338,7 @@ flavor_byz.5 = {
 		trigger = { religion = religion:orthodox }
 		add_prestige = prestige_severe_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -351,7 +351,7 @@ flavor_byz.5 = {
 		trigger = { religion = religion:hellenism_religion }
 		add_prestige = prestige_weak_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -367,7 +367,7 @@ flavor_byz.5 = {
 		}
 		add_prestige = prestige_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -404,7 +404,7 @@ flavor_byz.6 = {
 
 	trigger = {
 		has_or_had_tag = BYZ
-		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_07_07_province_01
+		owns_or_non_sovereign_subject_owns_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	immediate = {
@@ -419,7 +419,7 @@ flavor_byz.6 = {
 		trigger = { religion = religion:orthodox }
 		add_prestige = prestige_severe_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -432,7 +432,7 @@ flavor_byz.6 = {
 		trigger = { religion = religion:hellenism_religion }
 		add_prestige = prestige_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -448,7 +448,7 @@ flavor_byz.6 = {
 		}
 		add_prestige = prestige_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner ?= root }
 				change_integration_progress = 50
@@ -718,7 +718,7 @@ flavor_byz.11 = { #https://en.wikipedia.org/wiki/Cretan_School
 		trigger_else = {
 			has_or_had_tag = BYZ
 		}
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		location:candia = {
 			province = {
 				any_location_in_province = {
@@ -827,7 +827,7 @@ flavor_byz.12 = { #https://en.wikipedia.org/wiki/El_Greco
 		trigger_else = {
 			has_or_had_tag = BYZ
 		}
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		cultural_maintenance > 0.5
 	}
 
@@ -2110,7 +2110,7 @@ flavor_byz.28 = { #New Sparta https://en.wikipedia.org/wiki/Constantine_XI_Palai
 				}
 			}
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_ownable_location_in_area = {
 				percent > 0.4
 				owner = root
@@ -2124,7 +2124,7 @@ flavor_byz.28 = { #New Sparta https://en.wikipedia.org/wiki/Constantine_XI_Palai
 		}
 		ordered_owned_location = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 			}
 			order_by = {
 				value = population
@@ -3087,7 +3087,7 @@ flavor_byz.39 = { #A New Capital
 			has_variable = morea_focus_flag
 		}
 		location:constantinople.owner = root
-		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_28_31
 	}
 
 	immediate = {
@@ -3096,7 +3096,7 @@ flavor_byz.39 = { #A New Capital
 
 		ordered_owned_location = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 			}
 			order_by = population
 			max = 1
@@ -3500,7 +3500,7 @@ flavor_byz.43 = { #hhttps://en.wikipedia.org/wiki/Heptanese_school_(painting)
 		trigger_else = {
 			has_or_had_tag = BYZ
 		}
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		location:corfu = {
 			province = {
 				any_location_in_province = {
@@ -3565,7 +3565,7 @@ flavor_byz.43 = { #hhttps://en.wikipedia.org/wiki/Heptanese_school_(painting)
 		name = flavor_byz.43.d
 
 		trigger = {
-			own_entire_province = province_definition:me_anorien_area_07_07_province_01
+			own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		}
 
 		location:candia = {
@@ -3597,7 +3597,7 @@ flavor_byz.44 = { #https://en.wikipedia.org/wiki/Philotheos_Skoufos
 			has_or_had_tag = BYZ
 		}
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	illustration_tags = {
@@ -5530,7 +5530,7 @@ flavor_byz.62 = {
 			scale = -3
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_ownable_location_in_area = {
 				if = {
 					limit = {
@@ -5662,14 +5662,14 @@ flavor_byz.64 = {
 	trigger = {
 		has_or_had_tag = BYZ
 		john_kantakouzenos_is_co_emperor = yes
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_ownable_location_in_area = {
 				owner ?= ROOT
 				percent >= 0.1
 			}
 		}
 		NOT = {
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_ownable_location_in_area = {
 					owner ?= ROOT
 					percent >= 0.75
@@ -5702,7 +5702,7 @@ flavor_byz.64 = {
 	option = {
 		name = flavor_byz.64.a
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_present_country = {
 				limit = {
 					NOR = {
@@ -5713,7 +5713,7 @@ flavor_byz.64 = {
 				}
 				ordered_province = {
 					limit = {
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
 					}
 					order_by = population
 					max = 1

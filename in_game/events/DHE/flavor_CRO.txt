@@ -39,7 +39,7 @@ flavor_cro.1000 = { #The Unification of Croatia and Slavonia - Croatia
 		}
 		c:HUN = {
 			any_owned_location = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 				is_core_of = c:SVN
 			}
 		}
@@ -86,7 +86,7 @@ flavor_cro.1001 = { #The Unification of Croatia and Slavonia - Croatia
 				limit = {
 					has_owner = yes
 					OR = {
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
 						is_core_of = c:SVN
 					}
 				}

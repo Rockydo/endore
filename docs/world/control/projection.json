@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "canvas": [16384, 8192],
-  "control_resolution": [1024, 512],
+  "control_resolution": [4096, 2048],
   "extent": {
     "west": "Forlindon and Harlindon coast",
     "north": "Icebay of Forochel, Carn Dum, Grey Mountains, Withered Heath",
@@ -240,7 +240,7 @@
   ],
   "passes": [
     {"key": "lindon_road", "center": [0.296, 0.420], "radius": 0.014},
-    {"key": "high_pass", "center": [0.468, 0.355], "radius": 0.014},
+    {"key": "high_pass", "center": [0.472, 0.350], "radius": 0.026},
     {"key": "imladris_valley", "center": [0.475, 0.405], "radius": 0.017},
     {"key": "redhorn_gate", "center": [0.472, 0.505], "radius": 0.027},
     {"key": "gap_of_rohan", "center": [0.475, 0.650], "radius": 0.019},

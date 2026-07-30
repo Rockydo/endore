@@ -81,7 +81,7 @@ flavor_zmw.1 = { #The Rise of the Mwenemutapa
 
 		custom_tooltip = {
 			text = mutapa_rebels_joining
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner = root }
 					every_pop = {
@@ -180,7 +180,7 @@ flavor_zmw.2 = { #The Rise of the Rozvi
 
 		custom_tooltip = {
 			text = rozwi_rebels_joining
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner = root }
 					every_pop = {
@@ -461,9 +461,9 @@ flavor_zmw.1101 = { #Antonio Fernandes Supplies Maps to Portugal
 		name = flavor_zmw.1101.a
 
 		change_gold_effect = { scale = -4 }
-		discover_area = area:me_anorien_area_07_07
-		discover_area = area:me_anorien_area_07_07
-		discover_area = area:me_anorien_area_07_07
+		discover_area = area:me_anorien_area_28_31
+		discover_area = area:me_anorien_area_28_31
+		discover_area = area:me_anorien_area_28_31
 	}
 
 	option = {

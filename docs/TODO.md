@@ -3,16 +3,21 @@
 1. REOPENED M2 — physical geography: replace the rough control geometry with
    cartographically natural coasts, bays, islands, inland seas, lakes, forest boundaries,
    mountain masses, valleys, and river catchments at several scales. Follow
-   `docs/m2/VISUAL_REOPEN_GATE.md`; the first polygon/massif/23-river batch is static-green,
-   but continue theatre refinement after real-game review.
+   `docs/m2/VISUAL_REOPEN_GATE.md`. The 4096×2048 real-game review proves physical ridge
+   relief, but location-shaped material patches remain conspicuous; continue theatre
+   refinement and replace those boundaries with continuous physical terrain paint.
 2. REOPENED M2 — close-zoom renderer: prove visible 3D relief, terrain materials,
    420,000 Arda-native forest objects/coverage, and the corrected 12-major-channel river
-   raster in the actual non-debug game. Paired smoke is green; regional/close screenshots
-   and live Observer remain pending. No Earth-authored transform or decal may return.
-3. REOPENED M2 — scale and granularity: the engine already uses the full native
-   16384×8192 locations canvas, so enlarge Middle-earth's footprint within that canvas
-   where useful, then increase geographic location granularity only after the revised
-   coast, relief, hydrology, and biome controls are stable.
+   raster in the actual non-debug game. Arbitrary definition siblings, exact retail
+   filenames, exact retail object names, and exact retail bin paths all rendered no
+   trees. The bounded generated-layer blocker is recorded; pursue a materially different
+   map-object route after the current physical-scale gate. No Earth-authored transform
+   or decal may return.
+3. REOPENED M2 — scale and granularity: the 4096×2048 source lattice (fourfold linear
+   precision) and 12,104-location production world are static-green on the proven
+   16384×8192 engine canvas. Confirm the finer coasts, 11,200 land cells, 520 mountain
+   cells, 64 lake cells, 605 ports, anchors, census, and locators across the remaining
+   required real-game theatres.
 4. REOPENED M2 gate: capture full-map, regional, and close-zoom terrain/political
    screenshots at the Shire/Old Forest, Misty Mountains/Anduin, Mirkwood, Rohan/White
    Mountains, Mordor, Belfalas, Forochel, Rhûn, and Harad; run fresh Observer and require

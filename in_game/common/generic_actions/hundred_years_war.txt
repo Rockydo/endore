@@ -1417,9 +1417,9 @@ hyw_defect_action = {	#Betray our Allegiance
 
 			OR = {
 				capital.region = region:me_anorien_region
-				capital.area = area:me_anorien_area_07_07
-				capital.area = area:me_anorien_area_07_07
-				capital.area = area:me_anorien_area_07_07
+				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_28_31
 			}
 		}
 	}

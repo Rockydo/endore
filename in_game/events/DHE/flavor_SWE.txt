@@ -44,10 +44,10 @@ flavor_swe.1 = {
 		if = {
 			limit = {
 				NOT = {
-					own_entire_province = province_definition:me_anorien_area_07_07_province_01
+					own_entire_province = province_definition:me_anorien_area_28_31_province_01
 				}
 			}
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				ordered_location_in_province_definition = {
 					limit = {
 						owner != root
@@ -65,10 +65,10 @@ flavor_swe.1 = {
 		if = {
 			limit = {
 				NOT = {
-					own_entire_area = area:me_anorien_area_07_07
+					own_entire_area = area:me_anorien_area_28_31
 				}
 			}
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				ordered_location_in_area= {
 					limit = {
 						owner != root
@@ -384,14 +384,14 @@ flavor_swe.7 = {
 	trigger = {
 		produced_in_country:iron > 0
 		has_or_had_tag = SWE
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				dominant_culture = culture:walloon
 			}
 		}
 	}
 	immediate = {
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			ordered_location_in_area = {
 				limit = {
 					dominant_culture = culture:walloon
@@ -411,7 +411,7 @@ flavor_swe.7 = {
 		add_migration = {
 			owner = this
 			from = scope:source_location.province_definition
-			to = province_definition:me_anorien_area_07_07_province_01
+			to = province_definition:me_anorien_area_28_31_province_01
 			culture = culture:walloon
 			amount = 0.1
 			months = 120
@@ -420,7 +420,7 @@ flavor_swe.7 = {
 		add_migration = {
 			owner = this
 			from = scope:source_location.province_definition
-			to = province_definition:me_anorien_area_07_07_province_01
+			to = province_definition:me_anorien_area_28_31_province_01
 			culture = culture:walloon
 			amount = 0.1
 			months = 120
@@ -554,7 +554,7 @@ flavor_swe.10 = {
 		name = flavor_swe.10.a
 		ordered_owned_location = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 			}
 			order_by = population
 			max = 7
@@ -1439,7 +1439,7 @@ flavor_swe.28 = {
 
 	trigger = {
 		has_or_had_tag = SWE
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		num_estate_privileges:nobles_estate > num_estate_privileges:peasants_estate
 	}
 
@@ -1457,7 +1457,7 @@ flavor_swe.28 = {
 		historical_option = yes
 		every_owned_location = {
 			limit = {
-				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_28_31_province_01
 			}
 			every_pop = {
 				limit = {
@@ -2104,12 +2104,12 @@ flavor_swe.42 = {
 		character:swe_mikael_agricola ?= {
 			is_alive = yes
 		}
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 		OR = {
 			"culture_percentage_in_country(culture:savonian)" > 0.0
@@ -2957,10 +2957,10 @@ flavor_swe.57 = {
 	trigger = {
 		has_or_had_tag = SWE
 		"culture_percentage_in_country(culture:finnish)" > 0.0
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	option = {
@@ -2969,8 +2969,8 @@ flavor_swe.57 = {
 
 		add_migration = {
 			owner = this
-			from = province_definition:me_anorien_area_07_07_province_01
-			to = province_definition:me_anorien_area_07_07_province_01
+			from = province_definition:me_anorien_area_28_31_province_01
+			to = province_definition:me_anorien_area_28_31_province_01
 			culture = culture:finnish
 			amount = 0.025
 			months = 240
@@ -2978,8 +2978,8 @@ flavor_swe.57 = {
 
 		add_migration = {
 			owner = this
-			from = province_definition:me_anorien_area_07_07_province_01
-			to = province_definition:me_anorien_area_07_07_province_01
+			from = province_definition:me_anorien_area_28_31_province_01
+			to = province_definition:me_anorien_area_28_31_province_01
 			culture = culture:finnish
 			amount = 0.025
 			months = 240
@@ -3021,9 +3021,9 @@ flavor_swe.58 = {
 	option = {
 		name = flavor_swe.58.a
 		historical_option = yes
-		area:me_anorien_area_07_07 = {	hire_privateer = root }
-		area:me_anorien_area_07_07 = {	hire_privateer = root }
-		area:me_anorien_area_07_07 = {	hire_privateer = root }
+		area:me_anorien_area_28_31 = {	hire_privateer = root }
+		area:me_anorien_area_28_31 = {	hire_privateer = root }
+		area:me_anorien_area_28_31 = {	hire_privateer = root }
 	}
 	option = {
 		name = flavor_swe.58.b

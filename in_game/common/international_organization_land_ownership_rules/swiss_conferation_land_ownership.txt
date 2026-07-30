@@ -17,18 +17,18 @@ swiss_confederation_land_ownership = {
 		is_land = yes
 		is_passable = yes
 		OR = {
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
 			is_neighbor_of_international_organization = scope:recipient
 		}
 	}
 
 	# root = location, recipient = international organization
 	can_remove_location_trigger = {
-		NOT = { area = area:me_anorien_area_07_07 }
-		NOT = { area = area:me_anorien_area_07_07 }
-		NOT = { area = area:me_anorien_area_07_07 }
+		NOT = { area = area:me_anorien_area_28_31 }
+		NOT = { area = area:me_anorien_area_28_31 }
+		NOT = { area = area:me_anorien_area_28_31 }
 		owner ?= {
 			NOT = { is_leader_of_international_organization = international_organization:swiss_confederation }
 		}

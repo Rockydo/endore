@@ -27,7 +27,7 @@ from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 1
+GENERATOR_VERSION = 2
 
 
 @dataclass(frozen=True)
@@ -154,17 +154,21 @@ def definition_text(family: Family, lod: str) -> str:
         "# Vanilla EU5 meshes and LOD layers; ENDÓRË-authored transforms only.",
     ]
     for index, mesh in enumerate(family.meshes):
-        name = f"endore_{family.key}_{lod}_{index}"
+        # The renderer keys these generated layers by the installed object
+        # name as well as by their exact definition filename. Keep the object
+        # ABI exact while redirecting only its transform payload to Arda.
+        object_name = f"{family.key}_generator_{lod}_{index}"
+        transform_name = object_name
         lines.extend(
             (
                 "object={",
-                f'\tname="{name}"',
+                f'\tname="{object_name}"',
                 "\tclamp_to_water_level=no",
                 "\trender_under_water=no",
                 "\tgenerated_content=yes",
                 f'\tlayer="vegetation_{lod}"',
                 f'\tpdxmesh="{mesh}"',
-                f'\ttransform_bin_file="gfx/map/map_objects/{name}.bin"',
+                f'\ttransform_bin_file="gfx/map/map_objects/{transform_name}.bin"',
                 "}",
             )
         )
@@ -176,7 +180,10 @@ def payloads() -> dict[Path, bytes]:
     result: dict[Path, bytes] = {}
     for family in FAMILIES:
         for lod_index, lod in enumerate(LODS):
-            result[GENERATED / f"endore_{family.key}_{lod}.txt"] = (
+            # EU5's renderer discovers these generated layers by the exact
+            # retail definition filename. Arbitrary sibling definitions parse
+            # without an error but are not activated by the map-object system.
+            result[GENERATED / f"{family.key}_generator_{lod}.txt"] = (
                 definition_text(family, lod).encode("utf-8")
             )
             bins = transforms(
@@ -187,7 +194,9 @@ def payloads() -> dict[Path, bytes]:
                 density,
             )
             for index, data in enumerate(bins):
-                result[OUT / f"endore_{family.key}_{lod}_{index}.bin"] = data
+                result[
+                    OUT / f"{family.key}_generator_{lod}_{index}.bin"
+                ] = data
     return result
 
 
@@ -196,6 +205,14 @@ def write() -> None:
     for path, data in expected.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
+    expected_names = {path.name for path in expected}
+    for directory, pattern in (
+        (GENERATED, "endore_*.txt"),
+        (OUT, "endore_*.bin"),
+    ):
+        for path in directory.glob(pattern):
+            if path.name not in expected_names:
+                path.unlink()
     records = sum(
         len(data) // RECORD.size
         for path, data in expected.items()

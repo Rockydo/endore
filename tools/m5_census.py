@@ -421,8 +421,18 @@ def _cap_type_split(
     return result
 
 
+def _dominant_biomes(model: WorldModel) -> np.ndarray:
+    """Return the biome that owns most control cells in each location."""
+    counts = np.bincount(
+        (model.labels.ravel() * 11 + model.biomes.ravel()).astype(np.int64),
+        minlength=len(model.locations) * 11,
+    ).reshape((len(model.locations), 11))
+    return np.argmax(counts, axis=1)
+
+
 def _base_raw_materials(model: WorldModel) -> dict[str, str]:
     coast = set(coastal_edges(model))
+    dominant_biomes = _dominant_biomes(model)
     result: dict[str, str] = {}
     for location in model.locations:
         if location.kind != "land":
@@ -431,6 +441,7 @@ def _base_raw_materials(model: WorldModel) -> dict[str, str]:
             hashlib.sha256(location.key.encode("utf-8")).digest()[:4],
             "little",
         )
+        biome_id = int(dominant_biomes[location.index])
         biome_choices = {
             1: ("wheat", "livestock", "clay", "wool"),
             2: ("lumber", "wild_game", "wool", "medicaments"),
@@ -441,7 +452,7 @@ def _base_raw_materials(model: WorldModel) -> dict[str, str]:
             8: ("iron", "stone", "salt"),
             9: ("horses", "livestock", "wool", "wheat"),
             10: ("livestock", "salt", "wool", "copper"),
-        }.get(location.biome_id, ("wheat", "livestock", "clay"))
+        }.get(biome_id, ("wheat", "livestock", "clay"))
         good = biome_choices[token % len(biome_choices)]
         if location.index in coast and token % 4 == 0:
             good = "fish"
@@ -1272,6 +1283,18 @@ def check() -> list[str]:
     invalid_goods = set(state.raw_materials.values()) - RAW_GOODS
     if invalid_goods:
         failures.append("invalid M5 raw goods: " + ", ".join(sorted(invalid_goods)))
+    dominant_biomes = _dominant_biomes(political.model)
+    invalid_lumber = [
+        location.key
+        for location in political.model.locations
+        if state.raw_materials.get(location.key) == "lumber"
+        and int(dominant_biomes[location.index]) not in (2, 3)
+    ]
+    if invalid_lumber:
+        failures.append(
+            "lumber assigned outside dominant woods/forest vegetation: "
+            + ", ".join(invalid_lumber[:20])
+        )
 
     market_keys = {_resolve_location(market.location) for market in markets()}
     if len(market_keys) != len(markets()):

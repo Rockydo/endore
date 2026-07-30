@@ -22,7 +22,7 @@ flavor_gra.1 = {
 
 		capital = {
 			OR = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 				region = region:me_anorien_region
 				region = region:me_anorien_region
 				region = region:me_anorien_region
@@ -92,7 +92,7 @@ flavor_gra.2 = {
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
 	}
 
 	illustration_tags = {

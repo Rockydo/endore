@@ -5,7 +5,7 @@ discovered_regions = {
 
 discovered_areas = {
 	#central_lakes_region
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
 }

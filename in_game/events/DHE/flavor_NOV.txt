@@ -3,10 +3,10 @@ namespace = flavor_nov
 
 scripted_trigger is_dvina_lands = {
 	OR = {
-		area = area:me_anorien_area_07_07
-		province_definition = province_definition:me_anorien_area_07_07_province_01
-		province_definition = province_definition:me_anorien_area_07_07_province_01
-		province_definition = province_definition:me_anorien_area_07_07_province_01
+		area = area:me_anorien_area_28_31
+		province_definition = province_definition:me_anorien_area_28_31_province_01
+		province_definition = province_definition:me_anorien_area_28_31_province_01
+		province_definition = province_definition:me_anorien_area_28_31_province_01
 	}
 }
 
@@ -374,7 +374,7 @@ flavor_nov.6 = {
 	trigger = {
 		num_locations < 80
 		num_of_non_rural < 5
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				percent >= 0.5
 				NOT = { owner ?= root }
@@ -384,7 +384,7 @@ flavor_nov.6 = {
 				}
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				percent >= 0.5
 				NOT = { owner = root }
@@ -396,7 +396,7 @@ flavor_nov.6 = {
 				}
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				percent >= 0.5
 				NOT = { owner = root }
@@ -611,25 +611,25 @@ flavor_nov.9 = {
 		name = flavor_nov.9.b
 		add_stability = stability_extreme_penalty
 		add_prestige = prestige_extreme_penalty
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_location_in_area = {
 				limit = { is_core_of = root }
 				remove_core = root
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { is_core_of = root }
 				remove_core = root
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { is_core_of = root }
 				remove_core = root
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { is_core_of = root }
 				remove_core = root

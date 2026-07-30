@@ -972,9 +972,9 @@ flavor_hab.17 = { #Expulsion of Lutherans in Salzburg
 
 	trigger = {
 		religion = religion:catholic
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
 		any_province = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			religion_percentage = {
 				religion = religion:lutheran
 				value > 0
@@ -990,7 +990,7 @@ flavor_hab.17 = { #Expulsion of Lutherans in Salzburg
 
 		custom_tooltip = flavor_hab.17.a.tt
 		hidden_effect = {
-			area:me_anorien_area_07_07  = {
+			area:me_anorien_area_28_31  = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -1005,7 +1005,7 @@ flavor_hab.17 = { #Expulsion of Lutherans in Salzburg
 			}
 			every_province = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 					religion_percentage = {
 						religion = religion:lutheran
 						value > 0
@@ -1287,14 +1287,14 @@ flavor_hab.22 = { #Resettlements into Hungary
 
 		random_province = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 			}
 			save_scope_as = target_province
 		}
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
 	}
 
 	option = {
@@ -1942,7 +1942,7 @@ flavor_hab.33 = { #Oswald von Wolkenstein
 	trigger = {
 		owns = location:vienna
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 10
 		}
 	}
@@ -2171,7 +2171,7 @@ flavor_hab.36 = { #The Peasant Rebellion Spreads
 		}
 		any_owned_rural_location = {
 			count >= 3
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			average_satisfaction < 0.40
 		}
 	}
@@ -2180,14 +2180,14 @@ flavor_hab.36 = { #The Peasant Rebellion Spreads
 		event_illustration_poptype_effect = { foreground = pop_type:clergy   background = pop_type:clergy }
 		random_owned_location = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 				this != location:salzburg
 			}
 			save_scope_as = rebel_spread_1
 		}
 		random_owned_location = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 				NOT = { this = scope:rebel_spread_1 }
 				this != location:salzburg
 			}
@@ -3327,7 +3327,7 @@ flavor_hab.57 = { #Peasant Revolt in Tirol
 
 	trigger = {
 		stability < 10
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				any_pop = {
 					pop_type = pop_type:peasants
@@ -3336,7 +3336,7 @@ flavor_hab.57 = { #Peasant Revolt in Tirol
 		}
 		estate_satisfaction:peasants_estate < 0.5
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 10
 		}
 	}
@@ -3390,7 +3390,7 @@ flavor_hab.57 = { #Peasant Revolt in Tirol
 			text = flavor_hab.57.b.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -3440,7 +3440,7 @@ flavor_hab.58 = { #An Elephant Gift
 		country_exists = c:POR
 		c:POR = {
 			has_royal_marriage_with = root
-			has_presence_in = area:me_anorien_area_07_07
+			has_presence_in = area:me_anorien_area_28_31
 		}
 	}
 
@@ -4602,7 +4602,7 @@ flavor_hab.78 = { #Disempowering the Tirolean Parliament
 
 	trigger = {
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 10
 		}
 		"estate_power(estate_type:nobles_estate)" > 0.5
@@ -4620,7 +4620,7 @@ flavor_hab.78 = { #Disempowering the Tirolean Parliament
 			text = flavor_hab.78.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -4646,7 +4646,7 @@ flavor_hab.78 = { #Disempowering the Tirolean Parliament
 			text = flavor_hab.78.b.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -4797,11 +4797,11 @@ flavor_hab.81 = { #Kingdom of Galicia-Lodomeria
 
 	trigger = {
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 10
 		}
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 10
 		}
 	}
@@ -4814,8 +4814,8 @@ flavor_hab.81 = { #Kingdom of Galicia-Lodomeria
 			random_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
 					}
 				}
 				save_scope_as = target_location
@@ -4840,8 +4840,8 @@ flavor_hab.81 = { #Kingdom of Galicia-Lodomeria
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
 					}
 				}
 				change_location_owner = scope:galicia_lodomeria
@@ -4855,12 +4855,12 @@ flavor_hab.81 = { #Kingdom of Galicia-Lodomeria
 		name = flavor_hab.81.b
 		custom_tooltip = flavor_hab.81.b.tt
 		hidden_effect = {
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					change_control = control_severe_bonus
 				}
 			}
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					change_control = control_severe_bonus
 				}
@@ -4982,14 +4982,14 @@ flavor_hab.84 = { #Bocskais Uprising
 
 	trigger = {
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 20
 		}
 		religion:calvinist = {
 			is_religion_enabled = yes
 		}
 		NOT = { has_reform = government_reform:religious_tolerance }
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				owner = root
 				any_pop = {
@@ -5033,7 +5033,7 @@ flavor_hab.84 = { #Bocskais Uprising
 			text = flavor_hab.84.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -5063,7 +5063,7 @@ flavor_hab.84 = { #Bocskais Uprising
 			text = flavor_hab.84.b.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				change_control = control_severe_penalty
 			}
@@ -5095,14 +5095,14 @@ flavor_hab.85 = { #Bethlens Uprising
 			has_variable = hab_bethlen_uprising
 		}
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 20
 		}
 		religion:calvinist = {
 			is_religion_enabled = yes
 		}
 		NOT = { has_reform = government_reform:religious_tolerance }
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				owner = root
 				any_pop = {
@@ -5148,7 +5148,7 @@ flavor_hab.85 = { #Bethlens Uprising
 			text = flavor_hab.85.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -5206,7 +5206,7 @@ flavor_hab.86 = { #Rakoczis Uprising
 			has_variable = hab_rakoczi_uprising
 		}
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 20
 		}
 	}
@@ -5245,7 +5245,7 @@ flavor_hab.86 = { #Rakoczis Uprising
 			text = flavor_hab.86.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -5269,7 +5269,7 @@ flavor_hab.86 = { #Rakoczis Uprising
 			text = flavor_hab.85.b.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				change_control = control_ultimate_penalty
 			}
@@ -5303,7 +5303,7 @@ flavor_hab.88 = { #Primož Trubar's Religious Mission
 		religion = religion:catholic
 		religion:lutheran = { is_religion_enabled = yes }
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			count >= 10
 		}
 	}
@@ -5331,7 +5331,7 @@ flavor_hab.88 = { #Primož Trubar's Religious Mission
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
 		custom_tooltip = {
 			text = flavor_hab.88.a.tt
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -5359,7 +5359,7 @@ flavor_hab.88 = { #Primož Trubar's Religious Mission
         }
 		custom_tooltip = {
 			text = flavor_hab.88.b.tt
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -7348,7 +7348,7 @@ flavor_hab.1400 = { #Mailberger Bund and Noble resistance
 
 	trigger = {
 		has_ruler = yes
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				owner = root
 			}
@@ -7375,7 +7375,7 @@ flavor_hab.1400 = { #Mailberger Bund and Noble resistance
 			text = mailberger_noble_rebels_joining
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -7575,7 +7575,7 @@ flavor_hab.1403 = { #Styrian Noble Rebellion
 
 	trigger = {
 		has_ruler = yes
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				owner = root
 			}
@@ -7590,7 +7590,7 @@ flavor_hab.1403 = { #Styrian Noble Rebellion
 			text = styria_noble_rebels_joining
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -8517,8 +8517,8 @@ flavor_hab.1608 = { #Confessio Bohemica
 		religion = religion:catholic
 		culture = culture:danube_bavarian
 		OR = {
-			has_presence_in = area:me_anorien_area_07_07
-			has_presence_in = area:me_anorien_area_07_07
+			has_presence_in = area:me_anorien_area_28_31
+			has_presence_in = area:me_anorien_area_28_31
 		}
 		"religion_percentage_in_country(religion:lutheran)" > 0
 		OR = {
@@ -9587,7 +9587,7 @@ flavor_hab.2104 = { #Reforms of Adam František Kollár - formerly flavor_hab.89
 		exists = international_organization:hre.leader_country
 		OR = {
 			any_owned_location = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 				count >= 20
 			}
 			"culture_percentage_in_country(culture:slovak)" > 0
@@ -9670,7 +9670,7 @@ flavor_hab.2200 = { #Growth of Wiener Neustadt
 	trigger = {
 		has_ruler = yes
 		owns = location:wiener_neustadt
-		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_28_31
 	}
 
 	option = {
@@ -10552,7 +10552,7 @@ flavor_hab.2603 = { #Negative Response
 # 	trigger = {
 # 		"culture_percentage_in_country(culture:hungarian)" > 0
 
-# 		area:me_anorien_area_07_07 = {
+# 		area:me_anorien_area_28_31 = {
 # 			any_location_in_area = {
 # 				owner = root
 # 			}

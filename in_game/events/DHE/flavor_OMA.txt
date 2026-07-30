@@ -75,7 +75,7 @@ flavor_oma.2 = {
 		country_exists = c:POR
 		owns = location:masqat
 		c:POR = {
-			has_discovered_area = area:me_anorien_area_07_07
+			has_discovered_area = area:me_anorien_area_28_31
 		}
 		capital.market = {
 			any_merchant_in_market = {
@@ -722,8 +722,8 @@ flavor_oma.11 = {
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_07_07
-		area:me_anorien_area_07_07 = {
+		own_entire_area = area:me_anorien_area_28_31
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				percent = 1
 				OR = {
@@ -795,7 +795,7 @@ flavor_oma.12 = {
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
 		has_policy = anti_piracy_policy
 		OR = {
 			has_advance = privateers

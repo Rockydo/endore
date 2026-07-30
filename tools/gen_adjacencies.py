@@ -72,7 +72,14 @@ def matched_port_edges(
         if not match_water(water, set())
     ]
     if unmatched:
-        raise ValueError(f"cannot give {len(unmatched)} coastal water zones unique ports")
+        details = ", ".join(
+            f"{water}:{len(water_to_lands[water])}"
+            for water in unmatched
+        )
+        raise ValueError(
+            "cannot give coastal water zones unique ports "
+            f"(water:candidate-land-count {details})"
+        )
 
     result: list[tuple[int, int, tuple[int, int, int, int]]] = []
     for land in sorted(edges):

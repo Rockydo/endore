@@ -187,13 +187,22 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   little-endian floats: position xyz, quaternion xyzw, and scale xyz. Installed
   forest/woods/pine definitions use `generated_content=yes` and the exact layers
   `vegetation_high`, `vegetation_medium`, and `vegetation_low`.
-- New files under `gfx/map/map_objects/generated/` can reference mod-owned transform bins
-  while the 41 exact retail filenames remain quarantined. ENDÃ“RÃ‹ generates 420,000
-  transforms using installed meshes but only Arda-authored positions.
+- Generated vegetation definitions parse arbitrary mod-owned transform paths without
+  diagnostics, but the live renderer did not draw them. Exact retail definition
+  filenames, exact retail object names, and exact retail transform-bin path overrides
+  also rendered no trees at maximum zoom. These paths are not a proven custom-map
+  vegetation mechanism in build 24187685.
 - The detailed full-precision height source produced a 116 MB virtual-cache payload at
   256-unit quantization, exceeding GitHub's single-file limit. A 512-unit cache quantum is
   0.78% of the 16-bit engine range and yields an 82.2 MB `heightmap.bin`; the committed
   `heightmap.png` remains full precision.
+- In non-debug Observer with the explicit 3D map mode, the custom height and cache produce
+  genuinely raised mountain masses visible from a tilted horizon camera. The same live
+  evidence shows that current terrain-material transitions follow coarse location-shaped
+  patches, while custom trees and major river channels remain visually absent.
+- Build 24187685 emits `map.cpp:2698` for every passable land location whose four-connected
+  land component contains no legal port. Capital-only connectivity validation is
+  insufficient; ENDÓRË now checks every passable location against port components.
 - The river parser rejects self-touching meanders. It also rejected every tested custom
   affluent layout, including single red index-1 endpoints orthogonally adjacent to a
   clean parent channel. The green engine raster therefore contains 12 independent major

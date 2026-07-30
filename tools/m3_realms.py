@@ -982,6 +982,18 @@ def check() -> list[str]:
         find(state.model.by_key[key].index)
         for key in port_locations
     }
+    no_port_land = [
+        location.key
+        for location in state.model.locations
+        if location.kind == "land"
+        and find(location.index) not in port_components
+    ]
+    if no_port_land:
+        sample = ", ".join(no_port_land[:20])
+        failures.append(
+            f"{len(no_port_land)} passable locations have no reachable port component: "
+            f"{sample}"
+        )
     for realm in realms:
         capital = state.ref_to_location[realm.capital_ref]
         capital_component = find(state.model.by_key[capital].index)

@@ -125,9 +125,9 @@ appanage = {
 			government_type = government_type:monarchy
 			OR = {
 				capital.region = region:me_anorien_region
-				capital.area = area:me_anorien_area_07_07
-				capital.area = area:me_anorien_area_07_07
-				capital.area = area:me_anorien_area_07_07
+				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_28_31
 				culture = { has_culture_group = culture_group:french_group }
 			}
 		}
@@ -139,9 +139,9 @@ appanage = {
 			government_type = government_type:monarchy
 			OR = {
 				capital.region = region:me_anorien_region
-				capital.area = area:me_anorien_area_07_07
-				capital.area = area:me_anorien_area_07_07
-				capital.area = area:me_anorien_area_07_07
+				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_28_31
 				culture = { has_culture_group = culture_group:french_group }
 			}
 			exists = root.ruler_or_heir_if_regent.dynasty

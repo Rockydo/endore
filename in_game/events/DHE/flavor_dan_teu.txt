@@ -18,7 +18,7 @@ flavor_dan_teu.1 = {
 	}
 
 	trigger = {
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				owner = ROOT
 			}
@@ -39,7 +39,7 @@ flavor_dan_teu.1 = {
 			culture = culture:estonian
 			religion = religion:muinaisusko
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = { owner = ROOT }
 				every_pop = {
@@ -511,7 +511,7 @@ flavor_dan_teu.7 = {
 			name = teu_price_for_estonia
 			value = 0
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner = scope:the_rebellion
@@ -538,7 +538,7 @@ flavor_dan_teu.7 = {
 			value = societal_value_large_move_to_right
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner = scope:the_rebellion
@@ -549,7 +549,7 @@ flavor_dan_teu.7 = {
 
 		custom_tooltip = teu_if_teutons_accept
 		show_as_tooltip = {
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner = scope:the_rebellion
@@ -573,7 +573,7 @@ flavor_dan_teu.7 = {
 	option = {
 		name = flavor_dan_teu.7.b
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner = scope:the_rebellion
@@ -607,7 +607,7 @@ flavor_dan_teu.8 = {
 		historical_option = yes
 
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner = scope:the_rebellion

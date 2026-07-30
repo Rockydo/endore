@@ -960,12 +960,12 @@ flavor_eng.9 = {
 	trigger = {
 		has_policy = enclosure_allowed
 		estate_satisfaction:peasants_estate < 0.5
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = target_location
 			}
@@ -992,7 +992,7 @@ flavor_eng.9 = {
 			save_scope_as = kett_rebellion
 		}
 
-		province:me_anorien_area_07_07_province_01 = {
+		province:me_anorien_area_28_31_province_01 = {
 			every_location_in_province = {
 				every_pop = {
 					limit = {
@@ -1039,7 +1039,7 @@ flavor_eng.9 = {
 
 		custom_tooltip = {
 			text = every_location_norfolk_kett_rebellion_tt
-			province:me_anorien_area_07_07_province_01 = {
+			province:me_anorien_area_28_31_province_01 = {
 				every_location_in_province = {
 					add_location_modifier = {
 						modifier = kett_rebellion
@@ -1441,11 +1441,11 @@ flavor_eng.13 = {
 		NOT = { country_exists = c:NOL }
 
 		capital = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 		}
 
-		own_entire_area = area:me_anorien_area_07_07
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_28_31
 
 	}
 
@@ -1456,13 +1456,13 @@ flavor_eng.13 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			save_scope_as = north
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			save_scope_as = midlands
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			save_scope_as = south
 		}
 	}
@@ -1503,7 +1503,7 @@ flavor_eng.13 = {
 	option = {
 		name = flavor_eng.13.c
 		trigger = {
-			own_entire_area = area:me_anorien_area_07_07
+			own_entire_area = area:me_anorien_area_28_31
 		}
 
 		custom_tooltip = {
@@ -1658,9 +1658,9 @@ flavor_eng.15 = {
 		}
 
 		"religion_percentage_in_country(religion:anglican)" > 0
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_province_in_area = {
 				religion_percentage = {
 					religion = religion:anglican
@@ -1715,7 +1715,7 @@ flavor_eng.15 = {
 
 		custom_tooltip = {
 			text = jane_grey_support_nobles_joining
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -2295,16 +2295,16 @@ flavor_eng.20 = {
 			religion = religion:anglican
 		}
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		province:me_anorien_area_07_07_province_01 = {
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		province:me_anorien_area_28_31_province_01 = {
 			religion_percentage = {
 				religion = religion:catholic
 				value > 0.1
 			}
 		}
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		province:me_anorien_area_07_07_province_01 = {
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		province:me_anorien_area_28_31_province_01 = {
 			religion_percentage = {
 				religion = religion:catholic
 				value > 0.1
@@ -2365,7 +2365,7 @@ flavor_eng.20 = {
 		name = flavor_eng.20.a
 		historical_option = yes
 
-		province:me_anorien_area_07_07_province_01 ?= {
+		province:me_anorien_area_28_31_province_01 ?= {
 			province_capital = { change_control = control_mild_penalty }
 			custom_tooltip = {
 				text = every_pop_in_province_pop_satisfaction_ultimate_penalty_and_northern_rebellion_tt
@@ -2383,7 +2383,7 @@ flavor_eng.20 = {
 			}
 		}
 
-		province:me_anorien_area_07_07_province_01 ?= {
+		province:me_anorien_area_28_31_province_01 ?= {
 			province_capital = { change_control = control_mild_penalty }
 			custom_tooltip = {
 				text = every_pop_in_province_pop_satisfaction_ultimate_penalty_and_northern_rebellion_tt
@@ -2439,8 +2439,8 @@ flavor_eng.20 = {
 			limit = {
 				owner = root
 				OR = {
-					location.province_definition = province_definition:me_anorien_area_07_07_province_01
-					location.province_definition = province_definition:me_anorien_area_07_07_province_01
+					location.province_definition = province_definition:me_anorien_area_28_31_province_01
+					location.province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 				NOT = { religion = religion:catholic }
 			}
@@ -3378,11 +3378,11 @@ flavor_eng.29 = {
 		}
 		NOT = { country_exists = c:SCO }
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			province ?= {
 				culture_percentage = {
 					culture = culture:highland
@@ -3426,7 +3426,7 @@ flavor_eng.29 = {
 
 		custom_tooltip = {
 			text = jacobite_uprising_joining
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -3611,10 +3611,10 @@ flavor_eng.32 = {
 
 		NOT = { country_exists = c:SCO }
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_province_in_area = {
 				culture_percentage = {
 					culture = culture:highland
@@ -3653,7 +3653,7 @@ flavor_eng.32 = {
 			text = jacobite_uprising_joining
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -5974,8 +5974,8 @@ flavor_eng.65 = {
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	illustration_tags = {
@@ -5987,15 +5987,15 @@ flavor_eng.65 = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		character:eng_john_lackland = { save_scope_as = john_lackland }
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = devon
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = cornwall
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = target_location
 			}
@@ -6009,13 +6009,13 @@ flavor_eng.65 = {
 
 		set_variable = { name = stannary_law value = 1 }
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				change_control = control_mild_penalty
 			}
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				change_control = control_mild_penalty
 			}
@@ -6030,8 +6030,8 @@ flavor_eng.65 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-					province_definition = province_definition:me_anorien_area_07_07_province_01
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 			}
 			change_control = control_severe_penalty
@@ -6045,8 +6045,8 @@ flavor_eng.65 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-					province_definition = province_definition:me_anorien_area_07_07_province_01
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 
 			}
@@ -6084,8 +6084,8 @@ flavor_eng.66 = {
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		custom_tooltip = {
 			text = variable_tt_stannary_law
 			has_variable = stannary_law
@@ -6099,11 +6099,11 @@ flavor_eng.66 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = devon
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = cornwall
 		}
 
@@ -6128,8 +6128,8 @@ flavor_eng.66 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						province_definition = province_definition:me_anorien_area_07_07_province_01
-						province_definition = province_definition:me_anorien_area_07_07_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
 					}
 					NOT = {
 						this = location:launceston
@@ -6169,8 +6169,8 @@ flavor_eng.67 = {
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		total_effective_building_levels:stannary_court > 0
 
 		custom_tooltip = {
@@ -6186,11 +6186,11 @@ flavor_eng.67 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = devon
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = cornwall
 		}
 
@@ -6202,13 +6202,13 @@ flavor_eng.67 = {
 
 		remove_variable = stannary_law
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				destroy_building = "building(building_type:stannary_court|owner)"
 			}
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				destroy_building = "building(building_type:stannary_court|owner)"
 			}
@@ -6380,7 +6380,7 @@ flavor_eng.70 = {
 
 	trigger = {
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				count > 1
 				owner ?= root
@@ -6404,7 +6404,7 @@ flavor_eng.70 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				limit = {
 					owner ?= root
@@ -6508,8 +6508,8 @@ flavor_eng.71 = {
 
 	trigger = {
 		location:calais = { owner = root }
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	illustration_tags = {
@@ -6519,11 +6519,11 @@ flavor_eng.71 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = hampshire
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = somerset
 		}
 
@@ -6541,7 +6541,7 @@ flavor_eng.71 = {
 		name = flavor_eng.71.a
 		historical_option = yes
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				every_pop = {
 					limit = {
@@ -6561,7 +6561,7 @@ flavor_eng.71 = {
 	option = {
 		name = flavor_eng.71.b
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				every_pop = {
 					limit = {
@@ -6584,7 +6584,7 @@ flavor_eng.71 = {
 
 		change_gold_effect = { scale = -2 }
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				every_pop = {
 					limit = {
@@ -6599,7 +6599,7 @@ flavor_eng.71 = {
 			}
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				every_pop = {
 					limit = {
@@ -6770,7 +6770,7 @@ flavor_eng.72 = {
 			}
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				every_pop = {
 					limit = {
@@ -6914,10 +6914,10 @@ flavor_eng.73 = {
 scripted_trigger unit_eng_74_trigger = {
 	unit_location = {
 		OR = {
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
 		}
 		OR = {
 			vegetation = forest
@@ -6952,10 +6952,10 @@ flavor_eng.74 = {
 		any_army = {
 			unit_location = {
 				OR = {
-					area = area:me_anorien_area_07_07
-					area = area:me_anorien_area_07_07
-					area = area:me_anorien_area_07_07
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_28_31
 				}
 				owner = c:FRA
 			}
@@ -6974,10 +6974,10 @@ flavor_eng.74 = {
 			limit = {
 				unit_location = {
 					OR = {
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
 						}
 					owner = c:FRA
 				}
@@ -7975,7 +7975,7 @@ flavor_eng.91 = {
 
 		country_exists = c:WLS
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 	}
 
@@ -8009,7 +8009,7 @@ flavor_eng.91 = {
 
 		character:wls_edmund_mortimer_1376 ?= { save_scope_as = edmund_mortimer }
 
-		province_definition:me_anorien_area_07_07_province_01 = { save_scope_as = northumberland }
+		province_definition:me_anorien_area_28_31_province_01 = { save_scope_as = northumberland }
 
 		c:WLS.capital = { save_scope_as = target_location }
 
@@ -8361,7 +8361,7 @@ scripted_effect tripartite_add_percy_pops = {
 	}
 	scope:henry_percy = { change_character_allegiance = scope:tripartite_uprising }
 
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			limit = { owner ?= root }
 			every_pop = {
@@ -8379,7 +8379,7 @@ scripted_effect tripartite_add_percy_pops = {
 scripted_effect tripartite_add_mortimer_pops = {
 	character:wls_edmund_mortimer_1376 ?= { change_character_allegiance = scope:tripartite_uprising }
 
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			limit = { owner ?= root }
 			every_pop = {
@@ -8432,9 +8432,9 @@ flavor_eng.95 = {
 
 		character:wls_edmund_mortimer_1376 ?= { is_alive = yes }
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 	}
 
@@ -8451,7 +8451,7 @@ flavor_eng.95 = {
 
 		character:wls_edmund_mortimer_1376 ?= { save_scope_as = edmund_mortimer }
 
-		province_definition:me_anorien_area_07_07_province_01 ?= { save_scope_as = northumberland }
+		province_definition:me_anorien_area_28_31_province_01 ?= { save_scope_as = northumberland }
 
 		location:london = { save_scope_as = target_location }
 
@@ -10077,7 +10077,7 @@ flavor_eng.105 = {
 				}
 			}
 
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					limit = {
 						OR = {
@@ -10104,7 +10104,7 @@ flavor_eng.105 = {
 
 		custom_tooltip = {
 			text = flavor_eng.105.b.custom
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					limit = {
 						OR = {
@@ -10389,7 +10389,7 @@ flavor_eng.109 = {
 
 	trigger = {
 
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
 
 	}
 	illustration_tags = {
@@ -10422,7 +10422,7 @@ flavor_eng.109 = {
 
 		add_legitimacy = legitimacy_extreme_bonus
 		add_prestige = prestige_extreme_bonus
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_location_in_area = {
 				add_location_modifier = { modifier = lack_of_conciliar_justice months = -1 mode = add_and_extend }
 			}
@@ -10571,7 +10571,7 @@ flavor_eng.111 = {
 		}
 
 		NOT = {
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				any_location_in_province_definition = {
 				controller != root
 				owner != root
@@ -10580,7 +10580,7 @@ flavor_eng.111 = {
 		}
 
 		NOT = {
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				any_location_in_province_definition = {
 				controller != root
 				owner != root
@@ -10600,11 +10600,11 @@ flavor_eng.111 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = devon
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = cornwall
 		}
 
@@ -10621,8 +10621,8 @@ flavor_eng.111 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						province_definition = province_definition:me_anorien_area_07_07_province_01
-						province_definition = province_definition:me_anorien_area_07_07_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
 					}
 				}
 				change_prosperity = prosperity_weak_penalty
@@ -10661,8 +10661,8 @@ flavor_eng.111 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						province_definition = province_definition:me_anorien_area_07_07_province_01
-						province_definition = province_definition:me_anorien_area_07_07_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
 					}
 				}
 				add_location_modifier = { modifier = tin_mining_reduced months = 12 mode = add_and_extend }
@@ -10682,8 +10682,8 @@ flavor_eng.111 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-					province_definition = province_definition:me_anorien_area_07_07_province_01
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 			}
 			every_pop = {
@@ -10733,11 +10733,11 @@ flavor_eng.112 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = devon
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			save_scope_as = cornwall
 		}
 
@@ -10751,8 +10751,8 @@ flavor_eng.112 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-					province_definition = province_definition:me_anorien_area_07_07_province_01
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 			}
 			every_pop = {
@@ -11278,9 +11278,9 @@ flavor_eng.118 = {
 		country_exists = c:FRA
 		any_owned_location = {
 			OR = {
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 			}
 			is_coastal = yes
 			any_neighbor_location = { owner ?= c:FRA }
@@ -11307,9 +11307,9 @@ flavor_eng.118 = {
 		random_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_anorien_area_07_07
-					area = area:me_anorien_area_07_07
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_28_31
 				}
 				is_coastal = yes
 				any_neighbor_location = { owner = c:FRA }
@@ -11464,7 +11464,7 @@ flavor_eng.121 = {
 			religion = religion:lollardy
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				any_pop = {
 					pop_type = pop_type:peasants
@@ -11477,7 +11477,7 @@ flavor_eng.121 = {
 			}
 		}
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 	}
 
@@ -11515,7 +11515,7 @@ flavor_eng.121 = {
 			count = 10
 			random_owned_rural_location = {
 				limit = {
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 				every_pop = {
 					limit = {
@@ -11545,7 +11545,7 @@ flavor_eng.121 = {
 			count = 10
 			random_owned_rural_location = {
 				limit = {
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 				every_pop = {
 					limit = {
@@ -13150,16 +13150,16 @@ flavor_eng.137 = {
 
 		any_exploration_from_country = {
 			OR = {
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 			}
 			leader ?= character:eng_francis_drake
 		}
 
 		OR = {
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
@@ -13174,7 +13174,7 @@ flavor_eng.137 = {
 					}
 				}
 			}
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
@@ -13189,7 +13189,7 @@ flavor_eng.137 = {
 					}
 				}
 			}
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
@@ -13204,7 +13204,7 @@ flavor_eng.137 = {
 					}
 				}
 			}
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
@@ -13259,10 +13259,10 @@ flavor_eng.137 = {
 					NOT = { has_variable = drake_recent_raid }
 					any_neighbor_location = {
 						OR = {
-							area = area:me_anorien_area_07_07
-							area = area:me_anorien_area_07_07
-							area = area:me_anorien_area_07_07
-							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_28_31
+							area = area:me_anorien_area_28_31
+							area = area:me_anorien_area_28_31
+							area = area:me_anorien_area_28_31
 						}
 					}
 				}
@@ -13992,7 +13992,7 @@ flavor_eng.144 = {
 
 	trigger = {
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				dominant_culture ?= { has_culture_group = culture_group:hibernian_group }
 				OR = {
@@ -14022,7 +14022,7 @@ flavor_eng.144 = {
 
 		if = {
 			limit = {
-				province_definition:me_anorien_area_07_07_province_01 = {
+				province_definition:me_anorien_area_28_31_province_01 = {
 					any_location_in_province_definition = {
 						num_pop_type:nobles > 0
 						OR = {
@@ -14032,7 +14032,7 @@ flavor_eng.144 = {
 					}
 				}
 			}
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				random_location_in_province_definition = {
 					save_scope_as = emigration_province_1
 				}
@@ -14050,7 +14050,7 @@ flavor_eng.144 = {
 
 		if = {
 			limit = {
-				province_definition:me_anorien_area_07_07_province_01 = {
+				province_definition:me_anorien_area_28_31_province_01 = {
 					any_location_in_province_definition = {
 						num_pop_type:nobles > 0
 						OR = {
@@ -14060,7 +14060,7 @@ flavor_eng.144 = {
 					}
 				}
 			}
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				random_location_in_province_definition = {
 					save_scope_as = emigration_province_2
 				}
@@ -14090,7 +14090,7 @@ flavor_eng.144 = {
 
 		custom_tooltip = {
 			text = flavor_eng.144.a.custom1
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_province_in_area = {
 					limit = {
 						any_location_in_province = {
@@ -14157,7 +14157,7 @@ flavor_eng.144 = {
 
 		custom_tooltip = {
 			text = flavor_eng.144.a.custom2
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					limit = {
 						OR = {
@@ -14183,7 +14183,7 @@ flavor_eng.144 = {
 
 		culture:anglo_irish = { add_cultural_influence = cultural_influence_severe_penalty }
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_location_in_area = {
 				limit = {
 					OR = {
@@ -14325,18 +14325,18 @@ flavor_eng.147 = {
 		}
 		any_exploration_from_country = {
 			OR = {
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 			}
 
 			leader ?= character:eng_walter_raleigh
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				is_coastal = yes
 				root = { has_colonial_charter_in = prev.province_definition }
@@ -14356,7 +14356,7 @@ flavor_eng.147 = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
 		character:eng_walter_raleigh ?= { save_scope_as = walter_raleigh }
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					is_coastal = yes
@@ -15421,9 +15421,9 @@ flavor_eng.156 = {
 
 		any_exploration_from_country = {
 			OR = {
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 			}
 			leader = character:eng_james_lancaster
 		}
@@ -15944,7 +15944,7 @@ flavor_eng.160 = {
 			NOT = { has_policy = de_heretico_comburendo }
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				every_pop = {
 					limit = {
@@ -16010,7 +16010,7 @@ flavor_eng.161 = {
 			rebel_progress < 1
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				OR = {
 					owner ?= root
@@ -16023,7 +16023,7 @@ flavor_eng.161 = {
 			}
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				owner = {
 					religion.group = religion_group:christian
@@ -16046,7 +16046,7 @@ flavor_eng.161 = {
 			save_scope_as = target_character
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				limit = {
 					owner = {
@@ -16069,7 +16069,7 @@ flavor_eng.161 = {
 
 		custom_tooltip = {
 			text = flavor_eng.161.a.custom
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_province_in_area = {
 					limit = {
 						any_location_in_province = {
@@ -16086,7 +16086,7 @@ flavor_eng.161 = {
 					add_migration = {
 						owner = ROOT
 						from = this.province_definition
-						to = province_definition:me_anorien_area_07_07_province_01
+						to = province_definition:me_anorien_area_28_31_province_01
 						culture = culture:irish
 						type = pop_type:nobles
 						amount = 0.01
@@ -16113,7 +16113,7 @@ flavor_eng.161 = {
 	option = {
 		name = flavor_eng.161.b
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_location_in_area = {
 				limit = {
 					OR = {
@@ -16158,7 +16158,7 @@ flavor_eng.162 = {
 
 	trigger = {
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 					is_coastal = yes
 					root = { has_colonial_charter_in = prev.province_definition }
@@ -16205,7 +16205,7 @@ flavor_eng.162 = {
 
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					is_coastal = yes
@@ -16235,7 +16235,7 @@ flavor_eng.162 = {
 			}
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					is_coastal = yes
@@ -16618,7 +16618,7 @@ flavor_eng.166 = {
 			controller = root
 		}
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 		current_month >= 9
 
@@ -16641,7 +16641,7 @@ flavor_eng.166 = {
 		name = flavor_eng.166.a
 		historical_option = yes
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					is_coastal = yes
@@ -16703,7 +16703,7 @@ flavor_eng.166 = {
 			NOT = { has_variable = embankment_constructed }
 		}
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					is_coastal = yes
@@ -16801,7 +16801,7 @@ flavor_eng.167 = {
 		}
 
 		NOT = {
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					is_discovered_by = root
 				}
@@ -16826,7 +16826,7 @@ flavor_eng.167 = {
 			save_scope_as = target_colony
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				save_scope_as = target_location
 			}
@@ -16857,11 +16857,11 @@ flavor_eng.167 = {
 		random_list = {
 			25 = {
 				add_prestige = prestige_mild_bonus
-				discover_area = area:me_anorien_area_07_07
+				discover_area = area:me_anorien_area_28_31
 			}
 			75 = {
 				hidden_effect = { kill_character_silently = scope:henry_hudson }
-				discover_area = area:me_anorien_area_07_07
+				discover_area = area:me_anorien_area_28_31
 				custom_tooltip = flavor_eng.167.tt1
 			}
 		}
@@ -16902,7 +16902,7 @@ flavor_eng.168 = {
 
 	trigger = {
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 	}
 
@@ -16915,7 +16915,7 @@ flavor_eng.168 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		ruler ?= { save_scope_as = target_character }
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				limit = {
 					location_rank = location_rank:rural_settlement
@@ -16949,7 +16949,7 @@ flavor_eng.168 = {
 
 		add_stability = stability_mild_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner ?= ROOT
@@ -17011,7 +17011,7 @@ flavor_eng.168 = {
 
 		add_stability = stability_weak_bonus
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner ?= ROOT
@@ -17749,7 +17749,7 @@ flavor_eng.177 = {
 
 	trigger = {
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				is_coastal = yes
 				OR = {
@@ -17759,7 +17759,7 @@ flavor_eng.177 = {
 			}
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				any_neighbor_location = {
 					is_discovered_by = root
@@ -17809,7 +17809,7 @@ flavor_eng.177 = {
 			}
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					is_coastal = yes
@@ -18277,7 +18277,7 @@ flavor_eng.181 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					area:me_anorien_area_07_07 = {
+					area:me_anorien_area_28_31 = {
 						any_location_in_area = {
 							market = { is_produced_in_market = goods:fur }
 							OR = {
@@ -18309,7 +18309,7 @@ flavor_eng.181 = {
 
 	trigger = {
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				raw_material ?= goods:fur
 				is_discovered_by = root
@@ -18329,13 +18329,13 @@ flavor_eng.181 = {
 
 	immediate = {
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				save_scope_as = target_location
 			}
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			if = {
 				limit = {
 					any_location_in_area = {
@@ -18371,7 +18371,7 @@ flavor_eng.181 = {
 
 		change_gold_effect = { scale = -6 }
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			ordered_location_in_area = {
 				limit = {
 					location_rank = location_rank:rural_settlement
@@ -18404,7 +18404,7 @@ flavor_eng.181 = {
 	option = {
 		name = flavor_eng.181.b
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			ordered_location_in_area = {
 				limit = {
 					location_rank = location_rank:rural_settlement
@@ -18454,7 +18454,7 @@ flavor_eng.182 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					area:me_anorien_area_07_07 = {
+					area:me_anorien_area_28_31 = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
@@ -18477,7 +18477,7 @@ flavor_eng.182 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					OR = {
@@ -18495,7 +18495,7 @@ flavor_eng.182 = {
 		name = flavor_eng.182.a
 		historical_option = yes
 		trigger = {
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					is_discovered_by = root
 					location_rank = location_rank:rural_settlement
@@ -18512,7 +18512,7 @@ flavor_eng.182 = {
 
 		change_gold_effect = { scale = -6 }
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			ordered_location_in_area = {
 				limit = {
 					location_rank = location_rank:rural_settlement
@@ -18547,7 +18547,7 @@ flavor_eng.182 = {
 		name = flavor_eng.182.c
 		trigger = {
 			NOT = {
-				area:me_anorien_area_07_07 = {
+				area:me_anorien_area_28_31 = {
 					any_location_in_area = {
 						is_discovered_by = root
 						location_rank = location_rank:rural_settlement
@@ -18558,7 +18558,7 @@ flavor_eng.182 = {
 
 		change_gold_effect = { scale = -3 }
 
-		discover_area = area:me_anorien_area_07_07
+		discover_area = area:me_anorien_area_28_31
 
 	}
 
@@ -19048,7 +19048,7 @@ flavor_eng.186 = {
 			}
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area ?= {
 				limit = {
 					NOT = {
@@ -21520,7 +21520,7 @@ flavor_eng.214 = {
 
 	trigger = {
 
-		has_discovered_area = area:me_anorien_area_07_07
+		has_discovered_area = area:me_anorien_area_28_31
 
 		location:london = { owner = root }
 
@@ -21768,7 +21768,7 @@ flavor_eng.216 = {
 
 		if = {
 			limit = {
-				area:me_anorien_area_07_07 = {
+				area:me_anorien_area_28_31 = {
 					any_location_in_area = {
 						OR = {
 							owner ?= root
@@ -21779,7 +21779,7 @@ flavor_eng.216 = {
 			}
 			custom_tooltip = {
 				text = flavor_eng.216.a.custom
-				area:me_anorien_area_07_07 = {
+				area:me_anorien_area_28_31 = {
 					random_location_in_area = {
 						limit = {
 							OR = {
@@ -22973,7 +22973,7 @@ flavor_eng.226 = {
 
 	trigger = {
 
-		NOT = { has_discovered_area = area:me_anorien_area_07_07 }
+		NOT = { has_discovered_area = area:me_anorien_area_28_31 }
 
 	}
 	image = "gfx/interface/illustrations/units/navy_heavy_ship_6.dds"
@@ -23054,15 +23054,15 @@ flavor_eng.227 = {
 
 		any_exploration_from_country = {
 			OR = {
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 			}
 
 			leader = character:eng_james_cook
 		}
 
 		OR = {
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
@@ -23076,7 +23076,7 @@ flavor_eng.227 = {
 					}
 				}
 			}
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					any_neighbor_location = {
 						is_coastal = yes
@@ -23109,7 +23109,7 @@ flavor_eng.227 = {
 					OR = {
 						region = region:me_anorien_region
 						region = region:me_anorien_region
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
 						region = region:me_anorien_region
 					}
 					any_neighbor_location = {
@@ -23158,8 +23158,8 @@ flavor_eng.227 = {
 	option = {
 		name = flavor_eng.227.b
 		trigger = {
-			has_discovered_area = area:me_anorien_area_07_07
-			area:me_anorien_area_07_07 = {
+			has_discovered_area = area:me_anorien_area_28_31
+			area:me_anorien_area_28_31 = {
 				any_location_in_area = {
 					count < 1
 					OR = {
@@ -23170,7 +23170,7 @@ flavor_eng.227 = {
 			}
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					is_coastal = yes
@@ -23995,7 +23995,7 @@ flavor_eng.235 = {
 
 	trigger = {
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				owner ?= {
 					any_owned_location = {
@@ -24011,7 +24011,7 @@ flavor_eng.235 = {
 		any_army = {
 			owner = root
 			unit_location = {
-				province_definition = province_definition:me_anorien_area_07_07_province_01
+				province_definition = province_definition:me_anorien_area_28_31_province_01
 			}
 		}
 
@@ -24024,7 +24024,7 @@ flavor_eng.235 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:peasants background = pop_type:soldiers }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				limit = {
 					owner = {
@@ -24103,7 +24103,7 @@ flavor_eng.235 = {
 						count > 3
 						owner = root
 						unit_location = {
-							province_definition = province_definition:me_anorien_area_07_07_province_01
+							province_definition = province_definition:me_anorien_area_28_31_province_01
 						}
 					}
 				}
@@ -24140,7 +24140,7 @@ flavor_eng.236 = {
 
 	trigger = {
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				OR = {
 					owner ?= { is_subject_of = root }
@@ -24164,7 +24164,7 @@ flavor_eng.236 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					OR = {
@@ -24182,7 +24182,7 @@ flavor_eng.236 = {
 		name = flavor_eng.236.a
 		historical_option = yes
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					OR = {
@@ -24575,7 +24575,7 @@ flavor_eng.240 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					province_definition:me_anorien_area_07_07_province_01 = {
+					province_definition:me_anorien_area_28_31_province_01 = {
 						any_location_in_province_definition = {
 							count >= 3
 							has_midgame_manufactory_building = yes
@@ -24630,13 +24630,13 @@ flavor_eng.240 = {
 		}
 
 
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 
 	}
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
 	immediate = {
 
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = target_location
 			}

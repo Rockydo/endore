@@ -20,10 +20,10 @@ flavor_dah.1 = { #Founding of Dahomey
 		country_type = location
 		OR = {
 			AND = {
-				own_entire_province = province_definition:me_anorien_area_07_07_province_01
-				capital.province_definition != province_definition:me_anorien_area_07_07_province_01
+				own_entire_province = province_definition:me_anorien_area_28_31_province_01
+				capital.province_definition != province_definition:me_anorien_area_28_31_province_01
 			}
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				any_location_in_province_definition = {
 					is_ownable = yes
 					has_owner = no
@@ -41,7 +41,7 @@ flavor_dah.1 = { #Founding of Dahomey
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
 		if = {
 			limit = {
-				province_definition:me_anorien_area_07_07_province_01 = {
+				province_definition:me_anorien_area_28_31_province_01 = {
 					any_location_in_province_definition = {
 						is_ownable = yes
 						has_owner = no
@@ -49,7 +49,7 @@ flavor_dah.1 = { #Founding of Dahomey
 				}
 			}
 			set_variable = dah_spawned_from_uncolonized_flag
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				random_location_in_province_definition = {
 					limit = {
 						is_ownable = yes
@@ -71,7 +71,7 @@ flavor_dah.1 = { #Founding of Dahomey
 				form_country = formable_country:DAH_f
 			}
 
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						is_ownable = yes
@@ -84,10 +84,10 @@ flavor_dah.1 = { #Founding of Dahomey
 		}
 		else_if = {
 			limit = {
-				own_entire_province = province_definition:me_anorien_area_07_07_province_01
+				own_entire_province = province_definition:me_anorien_area_28_31_province_01
 			}
 
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				random_location_in_province_definition = {
 					limit = {
 						is_ownable = yes
@@ -107,7 +107,7 @@ flavor_dah.1 = { #Founding of Dahomey
 				change_country_color = map_dahomey
 			}
 
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						is_ownable = yes
@@ -260,7 +260,7 @@ flavor_dah.1 = { #Founding of Dahomey
 		}
 
 		show_as_tooltip = {
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						is_ownable = yes
@@ -297,7 +297,7 @@ flavor_dah.2 = { #Founding of Dahomey - Message for Everyone
 		name = flavor_dah.2.a
 
 		show_as_tooltip = {
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
                     limit = {
 						is_ownable = yes

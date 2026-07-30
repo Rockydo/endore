@@ -366,8 +366,8 @@ crisis_of_the_sayfawa_dynasty.6 = { #The End of the Sayfawa Crisis
 		if = {
 			limit = {
 				OR = {
-					NOT = {	own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
-					NOT = {	own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
+					NOT = {	own_entire_province = province_definition:me_anorien_area_28_31_province_01 }
+					NOT = {	own_entire_province = province_definition:me_anorien_area_28_31_province_01 }
 				}
 			}
 			trigger_event_silently = { id = flavor_kbo.12 days = 30 }

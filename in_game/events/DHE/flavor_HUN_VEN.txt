@@ -2,7 +2,7 @@
 namespace = flavor_hun_ven
 
 scripted_effect hun_ven_list_of_provinces = {
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			limit = {
 				NOT = {
@@ -12,12 +12,12 @@ scripted_effect hun_ven_list_of_provinces = {
 			add_to_list = list_of_dalmatian_locations
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			add_to_list = list_of_dalmatian_locations
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			add_to_list = list_of_dalmatian_locations
 		}

@@ -2,7 +2,7 @@
   "generator": "gen_terrain_cache.py",
   "generator_version": 7,
   "source": "in_game/gfx/terrain2/heightmap.png",
-  "source_sha256": "707bca0a0cd36e479859ccf431c86dd0a36a9117f8232bb0a7d5c83bb46071b7",
+  "source_sha256": "247d8dbe421b702aaeeb0beb891c7eb401d856598e1a03485b69f237f0b6e86d",
   "source_resolution": [
     65536,
     32768
@@ -64,16 +64,16 @@
     ]
   ],
   "tile_count": 174763,
-  "height_unique_tiles": 90248,
+  "height_unique_tiles": 89927,
   "earth_decal_layers": 0,
   "outputs": {
     "heightmap.bin": {
-      "bytes": 82208427,
-      "sha256": "533cde49572375a857d1a39818337c0cb278c17024370bebba024661fa71b111"
+      "bytes": 77790963,
+      "sha256": "dc20a61609d20f56d2197325be1349c11b399f228536595fc0ae432ccc5a5bd1"
     },
     "heightmap.info": {
-      "bytes": 5390083,
-      "sha256": "61c57464e603c6853bb55f81d494326a5d3fc59b136abd4d9fe682aa93977aa8"
+      "bytes": 5383845,
+      "sha256": "b28628ea57b5ce321c692cb45fddefc2457cd017c7c7a8c2a4f854e97d40fb8d"
     },
     "index_map.bin": {
       "bytes": 0,
@@ -105,7 +105,7 @@
     },
     "checksum.json": {
       "bytes": 58,
-      "sha256": "1a83dd876b87bfbebdcbb2e3962ca0b3c463b0b156e4b74766a72dda0345590d"
+      "sha256": "190340f0087d9af6760c1473bec95309eae61add5d981b8ed2e85f2dc064c35f"
     }
   }
 }

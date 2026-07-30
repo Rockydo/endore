@@ -24,10 +24,10 @@ scripted_trigger can_target_livonian_lands = {
 scripted_trigger is_port_on_the_baltic = {
 	any_neighbor_location = {
 		OR = {
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_28_31
 		}
 	}
 }
@@ -2098,7 +2098,7 @@ flavor_plc.2004 = {
 			NOT = { country_exists = c:KUR }
 		}
 		at_war = no
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			any_location_in_province_definition = {
 				percent >= 0.5
 				is_owned_by_target_or_subject = { owner = ROOT }
@@ -2113,7 +2113,7 @@ flavor_plc.2004 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_province_in_province_definition = {
 				limit = {
 					is_owned_by_target_or_subject = { owner = ROOT }
@@ -2122,7 +2122,7 @@ flavor_plc.2004 = {
 				add_to_list = provinces_to_cede_to_KUR
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_province_in_province_definition = {
 				limit = {
 					is_owned_by_target_or_subject = { owner = ROOT }

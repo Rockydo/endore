@@ -119,3 +119,24 @@ Bounded fallback: retain the green paired menu smoke and the zero-error fresh ce
 initialization as evidence for the current census repair, but do not claim the M5 deep
 gate. Pursue a materially different unit-entity resolver or a truly isolated vanilla
 Observer control before the five-year economy run.
+
+## 2026-07-30 — Arbitrary generated vegetation definitions are not renderer-discovered
+
+Status: bounded reopened-M2 visual blocker; all tested generated-layer variants are
+exhausted and a materially different renderer route is required.
+
+Two non-debug live-Observer attempts reached maximum close zoom over Mirkwood with zero
+tree objects. The first used new `endore_forest_*`, `endore_woods_*`, and
+`endore_pine_*` definition siblings under the installed `generated/` directory. The
+second moved the same Arda-native transforms onto exact overrides of all nine retail
+`forest_generator_*`, `woods_generator_*`, and `pine_generator_*` filenames. Both
+variants parsed without a diagnostic and both rendered no vegetation.
+
+Binary comparison rules out transform elevation: installed and ENDÓRË records are the
+same headerless 40-byte position/quaternion/scale layout, and both store world-space Y as
+zero. The exact-object-name test and the final override of all 36 exact
+`{forest,woods,pine}_generator_{high,medium,low}_N.bin` paths also rendered no vegetation,
+including after 30 additional close-zoom detents. A direct vanilla visual control was
+inconclusive because the shared user directory still loaded ENDÓRË. Do not repeat these
+generated-layer variants; pursue another renderer mechanism or a truly isolated vanilla
+control.

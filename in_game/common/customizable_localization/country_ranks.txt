@@ -1854,7 +1854,7 @@ country_flavor = {
 			OR = {
 				AND = {
 					country_rank_is_county = yes
-					capital.area ?= area:me_anorien_area_07_07
+					capital.area ?= area:me_anorien_area_28_31
 				}
 				AND = {
 					OR = {

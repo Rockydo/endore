@@ -796,7 +796,7 @@ coa_def_navarre_trigger = {
 	scope:actor ?= {
 		exists = culture
 		culture = culture:basque
-		any_core_location = { area = area:me_anorien_area_07_07 }
+		any_core_location = { area = area:me_anorien_area_28_31 }
 	}
 }
 
@@ -804,7 +804,7 @@ coa_def_majorca_trigger = {
 	scope:actor ?= {
 		exists = culture
 		culture = culture:catalan
-		any_core_location = { area = area:me_anorien_area_07_07 }
+		any_core_location = { area = area:me_anorien_area_28_31 }
 	}
 }
 
@@ -812,7 +812,7 @@ coa_def_galician_primary_trigger = {
 	scope:actor ?= {
 		exists = culture
 		culture = culture:galician
-		any_core_location = { area = area:me_anorien_area_07_07 }
+		any_core_location = { area = area:me_anorien_area_28_31 }
 	}
 }
 
@@ -931,9 +931,9 @@ coa_def_bars_crescents_flag_trigger = { # Flag only trigger
 			any_core_location = { region = region:me_anorien_region }
 			any_core_location = { region = region:me_anorien_region }
 			any_core_location = { region = region:me_anorien_region }
-			any_core_location = { area = area:me_anorien_area_07_07 }
-			any_core_location = { area = area:me_anorien_area_07_07 }
-			any_core_location = { area = area:me_anorien_area_07_07 }
+			any_core_location = { area = area:me_anorien_area_28_31 }
+			any_core_location = { area = area:me_anorien_area_28_31 }
+			any_core_location = { area = area:me_anorien_area_28_31 }
 		}
 	}
 }
@@ -2167,8 +2167,8 @@ coa_def_navarre_ownership_trigger = {
 coa_def_navarre_ownership_full_trigger = { # Also owns french basque country
 	scope:actor ?= {
 		OR = {
-			own_entire_province = province_definition:me_anorien_area_07_07_province_01
-			any_subject_or_below = { own_entire_province = province_definition:me_anorien_area_07_07_province_01 }
+			own_entire_province = province_definition:me_anorien_area_28_31_province_01
+			any_subject_or_below = { own_entire_province = province_definition:me_anorien_area_28_31_province_01 }
 		}
 		OR = {
 			NOT = { country_exists = c:NAV }
@@ -2449,8 +2449,8 @@ coa_def_novgorod_ownership_trigger = {
 coa_def_pomerania_ownership_trigger = {
 	scope:actor ?= {
 		OR = {
-			own_entire_area = area:me_anorien_area_07_07
-			any_subject_or_below = { own_entire_area = area:me_anorien_area_07_07 }
+			own_entire_area = area:me_anorien_area_28_31
+			any_subject_or_below = { own_entire_area = area:me_anorien_area_28_31 }
 		}
 		OR = {
 			NOT = { country_exists = c:POM }

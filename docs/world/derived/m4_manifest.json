@@ -7,9 +7,9 @@
   "languages": 10,
   "dialects": 33,
   "semantic_language_families": 8,
-  "assigned_land_locations": 5200,
-  "owned_land_locations": 4120,
-  "wild_land_locations": 1080,
+  "assigned_land_locations": 11200,
+  "owned_land_locations": 8222,
+  "wild_land_locations": 2978,
   "major_pool_targets": [
     60,
     40,

@@ -311,7 +311,7 @@ flavor_kni.10 = {
 
 	trigger = {
 		religion = religion:catholic
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				is_coastal = yes
 				owner = {
@@ -333,7 +333,7 @@ flavor_kni.10 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			random_location_in_area = {
 				limit = {
 					is_coastal = yes

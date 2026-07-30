@@ -391,7 +391,7 @@ prices.15 = {
 			continent = continent:me_gondor
 		}
 		any_owned_location = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			integration_level = core
 		}
 	}
@@ -402,7 +402,7 @@ prices.15 = {
 		name = prices.15.a
 		every_market_in_world = {
 			limit = {
-				location.area = area:me_anorien_area_07_07
+				location.area = area:me_anorien_area_28_31
 			}
 
 			add_temporary_demand = { type = demand:grand_bank_fisheries months = 240 scale_with_pop = 0.01 }

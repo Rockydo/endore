@@ -5,8 +5,8 @@ ukrainian_farmlands = {
 	potential = {
 		any_owned_location = {
 			OR = {
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 			}
 		}
 	}

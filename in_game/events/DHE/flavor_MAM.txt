@@ -99,7 +99,7 @@ flavor_mam.3 = {
 			is_subject = no
 			at_war = no
 			religion.group = religion_group:christian
-			own_entire_province = province_definition:me_anorien_area_07_07_province_01
+			own_entire_province = province_definition:me_anorien_area_28_31_province_01
 			government_type = government_type:monarchy
 			OR = {
 				ruler ?= { is_female = yes }
@@ -469,8 +469,8 @@ flavor_mam.15 = {
 				location = {
 					OR = {
 						region = region:me_anorien_region
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
 					}
 				}
 			}
@@ -485,8 +485,8 @@ flavor_mam.15 = {
 					location = {
 						OR = {
 							region = region:me_anorien_region
-							area = area:me_anorien_area_07_07
-							area = area:me_anorien_area_07_07
+							area = area:me_anorien_area_28_31
+							area = area:me_anorien_area_28_31
 						}
 					}
 				}
@@ -1748,7 +1748,7 @@ flavor_mam.30 = {
 
 	trigger = {
 		at_war = no
-		has_presence_in = area:me_anorien_area_07_07
+		has_presence_in = area:me_anorien_area_28_31
 		has_presence_in = region:me_anorien_region
 	}
 
@@ -2263,20 +2263,20 @@ flavor_mam.39 = { #Relocating the Bedouins
 			text = variable_mam_relocate_bedouins_tt
 			has_variable = mam_relocate_bedouins
 		}
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
 		"culture_percentage_in_country(culture:bedouin_culture)" > 0
 		culture != culture:bedouin_culture
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				dominant_culture = culture:bedouin_culture
 			}
 		}
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 	}
 
 	immediate = {
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			ordered_location_in_area = {
 				limit = {
 					dominant_culture = culture:bedouin_culture
@@ -2300,7 +2300,7 @@ flavor_mam.39 = { #Relocating the Bedouins
 		add_migration = {
 			owner = this
 			from = scope:source_location.province_definition
-			to = province_definition:me_anorien_area_07_07_province_01
+			to = province_definition:me_anorien_area_28_31_province_01
 			culture = culture:bedouin_culture
 			amount = 0.1
 			months = 120
@@ -2309,7 +2309,7 @@ flavor_mam.39 = { #Relocating the Bedouins
 		add_migration = {
 			owner = this
 			from = scope:source_location.province_definition
-			to = province_definition:me_anorien_area_07_07_province_01
+			to = province_definition:me_anorien_area_28_31_province_01
 			culture = culture:bedouin_culture
 			amount = 0.1
 			months = 120
@@ -2443,7 +2443,7 @@ flavor_mam.42 = { #Conquest of Cyprus
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		NOT = {
 			country_exists = c:CYP
 		}
@@ -2458,7 +2458,7 @@ flavor_mam.42 = { #Conquest of Cyprus
 		historical_option = yes
 		custom_tooltip = {
 			text = flavor_mam.42.a.tt
-			province_definition:me_anorien_area_07_07_province_01 = {
+			province_definition:me_anorien_area_28_31_province_01 = {
 				every_location_in_province_definition = {
 					remove_core = root
 					add_core = c:CYP
@@ -2486,7 +2486,7 @@ flavor_mam.42 = { #Conquest of Cyprus
 
 	option = {
 		name = flavor_mam.42.b
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				change_control = control_mild_bonus
 			}
@@ -2521,7 +2521,7 @@ flavor_mam.43 = { #Uprooting Christianity
 		"religion_percentage_in_country(religion:orthodox)" > 0
 		"religion_percentage_in_country(religion:miaphysite)" > 0
 		"religion_percentage_in_country(religion:nestorianism)" > 0
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				count > 20
 				owner ?= c:MAM
@@ -2554,7 +2554,7 @@ flavor_mam.43 = { #Uprooting Christianity
 			text = flavor_mam.43.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -2579,7 +2579,7 @@ flavor_mam.43 = { #Uprooting Christianity
 			text = flavor_mam.43.b.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -2629,7 +2629,7 @@ flavor_mam.44 = { #Converting the Copts
 	trigger = {
 		religion = religion:sunni
 		"religion_percentage_in_country(religion:miaphysite)" > 0
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				count > 15
 				exists = owner
@@ -2663,7 +2663,7 @@ flavor_mam.44 = { #Converting the Copts
 			text = flavor_mam.44.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				every_pop = {
 					limit = {
@@ -2696,9 +2696,9 @@ flavor_mam.45 = { #Flooding of the Nile #DEVASTATION?
 
 	trigger = {
 		tag = MAM
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		NOT = {
 			has_variable = mam_had_nile_flood
 		}
@@ -2706,17 +2706,17 @@ flavor_mam.45 = { #Flooding of the Nile #DEVASTATION?
 
 	immediate = {
 		set_variable = { name = mam_had_nile_flood days = 18250 }
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = target_location
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = target_location_two
 			}
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = target_location_three
 			}
@@ -3215,7 +3215,7 @@ flavor_mam.53 = { #The Red Sea Fleet
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_07_07_province_01
+		own_entire_province = province_definition:me_anorien_area_28_31_province_01
 		custom_tooltip = {
 			text = variable_mam_enable_exploration_events_tt
 			has_variable = mam_enable_exploration_events
@@ -3224,7 +3224,7 @@ flavor_mam.53 = { #The Red Sea Fleet
 	}
 
 	immediate = {
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			random_location_in_province_definition = {
 				limit = {
 					owner = root

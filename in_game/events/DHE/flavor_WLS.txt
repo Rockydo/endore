@@ -246,7 +246,7 @@ flavor_wls.12 = {
 scripted_effect flavor_wls_13_create_revolt = {
 	every_owned_location = {
 		limit = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 		}
 		every_pop = {
 			limit = {
@@ -505,7 +505,7 @@ flavor_wls.15 = {
 
 		character:wls_edmund_mortimer_1376 ?= { save_scope_as = edmund_mortimer }
 
-		province_definition:me_anorien_area_07_07_province_01 = { save_scope_as = northumberland }
+		province_definition:me_anorien_area_28_31_province_01 = { save_scope_as = northumberland }
 
 		location:cardiff = { save_scope_as = target_location }
 

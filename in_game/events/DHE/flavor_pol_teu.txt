@@ -200,7 +200,7 @@ flavor_pol_teu.3 = {
 		location:zlotow = {
 			add_to_list = teu_list_of_borderlands_to_cede
 		}
-		province_definition:me_anorien_area_07_07_province_01 = {
+		province_definition:me_anorien_area_28_31_province_01 = {
 			every_location_in_province_definition = {
 				add_to_list = teu_list_of_borderlands_to_cede
 			}

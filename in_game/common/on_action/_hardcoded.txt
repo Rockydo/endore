@@ -1609,7 +1609,7 @@ on_winning_war = {
 					limit = {
 						NOT = { tag = KNI }
 						save_temporary_scope_as = current_attacker
-						area:me_anorien_area_07_07 = {
+						area:me_anorien_area_28_31 = {
 							any_location_in_area = {
 								owner ?= scope:current_attacker
 							}
@@ -1959,7 +1959,7 @@ on_ending_war = {
 				country_exists = c:MOR
 				country_exists = c:GRA
 				always = no
-				area:me_anorien_area_07_07 = {
+				area:me_anorien_area_28_31 = {
 					any_location_in_area = {
 						percent >= 0.8
 						OR = {
@@ -4593,7 +4593,7 @@ on_location_changed_owner = {
 		}
 		if = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 			}
 			if = {
 				limit = {

@@ -33,7 +33,7 @@ flavor_zaz.1 = { #Rise of Zaporozhie
 
 	trigger = {
 		NOT = { dominant_culture = culture:cossack_culture }
-		area:me_anorien_area_07_07 = { #Previously was has_presence_in, however this was changed to this to be able to make them spawning more viable
+		area:me_anorien_area_28_31 = { #Previously was has_presence_in, however this was changed to this to be able to make them spawning more viable
 			any_location_in_area = {
 				percent >= 0.1
 				is_ownable =  yes
@@ -50,7 +50,7 @@ flavor_zaz.1 = { #Rise of Zaporozhie
 			save_scope_as = target_ruler
 		}
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_location_in_area = {
 				add_core = c:ZAZ
 			}
@@ -73,7 +73,7 @@ flavor_zaz.1 = { #Rise of Zaporozhie
 		hidden_effect = {
 			random_owned_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				create_dynasty_from_location = random
 				last_dynasty_in_location = { save_scope_as = target_dynasty }

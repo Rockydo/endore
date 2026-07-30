@@ -39,6 +39,11 @@ EARTH_OBJECT_QUARANTINE = (
     "# ENDÓRË exact-file overlay: retail Earth-authored map-object transforms "
     "are intentionally disabled.\n"
 )
+ACTIVE_VEGETATION_DEFINITIONS = frozenset(
+    f"{family}_generator_{lod}.txt"
+    for family in ("forest", "woods", "pine")
+    for lod in ("high", "medium", "low")
+)
 
 
 def game_object_text(kind: str, keys: list[str], model: WorldModel) -> str:
@@ -109,6 +114,8 @@ def locator_payloads(model: WorldModel) -> dict[Path, str]:
     installed = installed_map_objects()
     generated = installed / "generated"
     for source in sorted(generated.glob("*.txt"), key=lambda item: item.name):
+        if source.name in ACTIVE_VEGETATION_DEFINITIONS:
+            continue
         payloads[OUT / "generated" / source.name] = EARTH_OBJECT_QUARANTINE
     for name in EARTH_STATIC_OBJECT_DEFINITIONS:
         source = installed / name
@@ -167,7 +174,9 @@ def check() -> list[str]:
         failures.append("combat locator completeness does not match passable map")
     generated_count = len(list((installed_map_objects() / "generated").glob("*.txt")))
     expected_quarantine_count = (
-        generated_count + len(EARTH_STATIC_OBJECT_DEFINITIONS)
+        generated_count
+        - len(ACTIVE_VEGETATION_DEFINITIONS)
+        + len(EARTH_STATIC_OBJECT_DEFINITIONS)
     )
     actual_quarantine_count = sum(
         payload == EARTH_OBJECT_QUARANTINE

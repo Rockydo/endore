@@ -18,7 +18,7 @@ scripted_effect TEU_reject = {
 }
 
 scripted_effect pru_list_of_neumark_provs = {
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			limit = {
 				NOR = {
@@ -30,7 +30,7 @@ scripted_effect pru_list_of_neumark_provs = {
 			add_to_list = list_of_neumark_locations
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			limit = {
 				NOT = { this = location:gryfow }
@@ -38,17 +38,17 @@ scripted_effect pru_list_of_neumark_provs = {
 			add_to_list = list_of_neumark_locations
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			add_to_list = list_of_neumark_locations
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			add_to_list = list_of_neumark_locations
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_location_in_province_definition = {
 			add_to_list = list_of_neumark_locations
 		}
@@ -80,7 +80,7 @@ flavor_brapru_teu.1 = {
 		country_exists = c:TEU
 		at_war = no
 		any_owned_non_rural_location = {
-			province_definition = province_definition:me_anorien_area_07_07_province_01
+			province_definition = province_definition:me_anorien_area_28_31_province_01
 		}
 	}
 	immediate = {
@@ -337,9 +337,9 @@ flavor_brapru_teu.4 = {
 			random_province = {
 				limit = {
 					OR = {
-						province_definition = province_definition:me_anorien_area_07_07_province_01
-						province_definition = province_definition:me_anorien_area_07_07_province_01
-						province_definition = province_definition:me_anorien_area_07_07_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
+						province_definition = province_definition:me_anorien_area_28_31_province_01
 					}
 				}
 				save_scope_as = target_province

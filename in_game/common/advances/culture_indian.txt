@@ -12,8 +12,8 @@ paik_system_advance = {
 				culture = { has_culture_group = culture_group:indian_group }
 				original_capital ?= {
 					OR = {
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
 					}
 				}
 			}
@@ -55,8 +55,8 @@ paik_regiments_advance = {
 				culture = { has_culture_group = culture_group:indian_group }
 				original_capital ?= {
 					OR = {
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
 					}
 				}
 			}
@@ -85,8 +85,8 @@ advanced_paik_system_advance = {
 				culture = { has_culture_group = culture_group:indian_group }
 				original_capital ?= {
 					OR = {
-						area = area:me_anorien_area_07_07
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_28_31
 					}
 				}
 			}

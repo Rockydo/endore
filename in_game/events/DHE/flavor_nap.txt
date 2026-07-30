@@ -1085,7 +1085,7 @@ flavor_nap.260 = { #Louis, a thorn in our side
 			is_alive = yes
 		}
 		any_province = {
-			area = area:me_anorien_area_07_07
+			area = area:me_anorien_area_28_31
 			province_average_control < 0.30
 			any_location_in_province = { num_pop_type:nobles > 0 }
 			NOT = { has_province_modifier = local_noble_autonomy }
@@ -1106,7 +1106,7 @@ flavor_nap.260 = { #Louis, a thorn in our side
 		}
 		random_province = {
 			limit = {
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
 				province_average_control < 0.30
 				any_location_in_province = { num_pop_type:nobles > 0 }
 				NOT = { has_province_modifier = local_noble_autonomy }
@@ -1704,7 +1704,7 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 		c:SIC = {
 			is_subject = no
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_location_in_area = {
 				is_core_of = root
 			}
@@ -1728,7 +1728,7 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 		hidden_effect = {
 			every_core_location = {
 				limit = {
-					area = area:me_anorien_area_07_07
+					area = area:me_anorien_area_28_31
 				}
 				remove_core = root
 			}
@@ -1920,7 +1920,7 @@ flavor_nap.107 = { #The Treaty of Villeneuve (Naples Reaction Refusal)
 
 	option = {
 		name = flavor_nap.107.a
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			every_location_in_area = {
 				add_core = c:NAP
 			}
@@ -2450,9 +2450,9 @@ flavor_nap.117 = { #Albanians flee
 		every_province = {
 			limit = {
 				OR = {
-					area = area:me_anorien_area_07_07
-					province_definition = province_definition:me_anorien_area_07_07_province_01
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					area = area:me_anorien_area_28_31
+					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 
 				c:NAP = {
@@ -2463,7 +2463,7 @@ flavor_nap.117 = { #Albanians flee
 
 			add_migration = {
 				owner = prev
-				from = province_definition:me_anorien_area_07_07_province_01
+				from = province_definition:me_anorien_area_28_31_province_01
 				to = province_definition
 				culture = culture:albanian
 				religion = religion:catholic
@@ -2508,7 +2508,7 @@ flavor_nap.118 = { #Croatians flee
 			"culture_percentage_in_country(culture:croatian)" > 0
 		}
 		c:NAP = {
-			own_entire_province = location:trivento.province_definition #me_anorien_area_07_07_province_01
+			own_entire_province = location:trivento.province_definition #me_anorien_area_28_31_province_01
 		}
 	}
 
@@ -2542,7 +2542,7 @@ flavor_nap.118 = { #Croatians flee
 				add_migration = {
 					owner = prev
 					from = province_definition
-					to = province_definition:me_anorien_area_07_07_province_01
+					to = province_definition:me_anorien_area_28_31_province_01
 					culture = culture:croatian
 					religion = religion:catholic
 

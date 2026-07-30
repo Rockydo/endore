@@ -20,86 +20,86 @@ discovered_regions = {
 }
 
 discovered_areas = {
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
 	#me_anorien_region
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
 	#me_anorien_region
-	me_anorien_area_07_07
+	me_anorien_area_28_31
 	#me_anorien_region
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
 	#me_anorien_region
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
 	#me_anorien_region
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
 	#me_anorien_region
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
-	me_anorien_area_07_07
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
+	me_anorien_area_28_31
 }
 discovered_provinces = {
 	#me_anorien_region
-	#me_anorien_area_07_07
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	#me_anorien_area_07_07
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
-	me_anorien_area_07_07_province_01
+	#me_anorien_area_28_31
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	#me_anorien_area_28_31
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
+	me_anorien_area_28_31_province_01
 	#oman_sea_area
 }
 discovered_areas = {
-	me_anorien_area_07_07
+	me_anorien_area_28_31
 }

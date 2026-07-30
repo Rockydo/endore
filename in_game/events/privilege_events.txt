@@ -9,21 +9,21 @@ scripted_trigger is_correct_region = {
 }
 scripted_trigger is_correct_area = {
     OR = {
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
-        this = area:me_anorien_area_07_07
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
+        this = area:me_anorien_area_28_31
     }
 }
 scripted_trigger has_correct_dominant_culture = {
@@ -201,21 +201,21 @@ privilege_events.100 = {
         # of the chosen culture and
         # that is starving or has negative prosperity?
         OR = {
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07    = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
-            area:me_anorien_area_07_07 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31    = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
+            area:me_anorien_area_28_31 = { is_valid_for_immigration = yes }
         }
         sub_continent:me_gondor_subcontinent = {
             any_region_in_continent = {

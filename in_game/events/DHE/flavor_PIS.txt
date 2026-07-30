@@ -130,7 +130,7 @@ flavor_pis.3 = { #Reclaiming Sardinian Territory
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
 
 		owns = location:pisa
 	}
@@ -140,7 +140,7 @@ flavor_pis.3 = { #Reclaiming Sardinian Territory
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			ordered_location_in_area = {
 				order_by = population
 				limit = {
@@ -177,7 +177,7 @@ flavor_pis.3 = { #Reclaiming Sardinian Territory
 
 		custom_tooltip = {
 			text = pis_all_of_sardinia_gains_development_and_prosperity
-			area:me_anorien_area_07_07 = {
+			area:me_anorien_area_28_31 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root

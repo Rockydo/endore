@@ -52,8 +52,8 @@ flavor_ayu.1 = { #Formation of Ayutthaya
 				ruler = c:LAV.ruler
 			}
 			AND = {
-				own_entire_province = province_definition:me_anorien_area_07_07_province_01
-				own_entire_province = province_definition:me_anorien_area_07_07_province_01
+				own_entire_province = province_definition:me_anorien_area_28_31_province_01
+				own_entire_province = province_definition:me_anorien_area_28_31_province_01
 			}
 		}
 	}

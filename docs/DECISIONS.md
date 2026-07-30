@@ -248,3 +248,32 @@ red-endpoint variants were parser-safe.
 Quantize only the derived terrain-cache height tiles to 512 units so the single payload
 stays below GitHub's 100 MiB hard limit. Preserve the authored 8192Ã—4096 16-bit heightmap
 at full precision and keep all generator/check manifests explicit about the cache quantum.
+
+## 2026-07-30 — Reopened-M2 native-detail lattice
+
+Raise the authored physical-control lattice from 1024×512 to 4096×2048 while retaining
+the installed-proven 16384×8192 locations canvas. This reduces source-derived coastline
+steps from 16 engine pixels to four and supports 11,200 passable land locations without
+changing the engine raster contract.
+
+Use 520 impassable mountain locations, 64 lake locations, and the proven 320 sea-zone
+count, for 12,104 locations total. Attempts at 520, 480, and 440 sea zones over-partitioned
+a narrow coastal pocket whose two zones shared only one eligible land port; 320 preserves
+the complete 605-port one-to-one contract while shoreline precision remains controlled by
+the higher-resolution source mask.
+
+Scale location-seed spacing with the new lattice and pin infrastructure routes only to
+named anchors. Tharbad and Fields of Nurn replace obsolete generated-number waypoints.
+Widen the High Pass cut around Goblin-town so the hold remains connected through the
+Misty Mountains rather than becoming an isolated passable island.
+
+Treat every passable location as requiring a land path to a legal port component. Ridge
+anchors now carve narrow access paths rather than isolated 3×3 cells, and unprotected
+mountain-enclosed land pockets are absorbed before seeding. The first live smoke exposed
+14 such locations that the former capital-only static check missed; the generator now
+checks all 11,200 passable locations.
+
+Assign raw materials from each location's dominant biome, matching the terrain-template
+emitter, rather than from its seed pixel. A seed-pixel mismatch assigned lumber to two
+grassland locations during the live Observer gate; dominant-biome allocation and a
+lumber/forest compatibility invariant prevent recurrence after map regeneration.

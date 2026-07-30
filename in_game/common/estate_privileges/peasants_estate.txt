@@ -429,9 +429,9 @@ invite_german_settlers = { #Encourage German Migration
 			OR = {
 				region = region:me_anorien_region
 				region = region:me_anorien_region
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 			}
 		}
 	}

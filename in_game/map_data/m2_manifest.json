@@ -2,8 +2,8 @@
   "schema": 1,
   "seed": 3018,
   "control_resolution": [
-    1024,
-    512
+    4096,
+    2048
   ],
   "world_resolution": [
     16384,
@@ -17,26 +17,26 @@
     8191,
     4095
   ],
-  "location_count": 5812,
+  "location_count": 12104,
   "kind_counts": {
-    "lake": 32,
-    "land": 5200,
-    "mountain": 260,
+    "lake": 64,
+    "land": 11200,
+    "mountain": 520,
     "sea": 320
   },
-  "passable_land_locations": 5200,
+  "passable_land_locations": 11200,
   "anchor_locations": 42,
   "continent_counts": {
-    "me_eriador": 1398,
-    "me_forodwaith": 858,
-    "me_gondor": 412,
-    "me_harad": 812,
-    "me_mordor_and_rhun": 1290,
-    "me_rhovanion": 1042
+    "me_eriador": 2848,
+    "me_forodwaith": 1794,
+    "me_gondor": 849,
+    "me_harad": 1550,
+    "me_mordor_and_rhun": 2850,
+    "me_rhovanion": 2213
   },
-  "minimum_control_area": 6,
-  "median_control_area": 43.0,
-  "maximum_control_area": 1848,
-  "control_source_sha256": "88924a4bb73345cafb25c4343d27689d5f196185a0d8765cfef3ff599c7ccb70",
-  "model_sha256": "9e362bf215e9dd91c314f96ea5b8a53933876c576b8c2dbeb4f1fe42a356b7c6"
+  "minimum_control_area": 47,
+  "median_control_area": 332.0,
+  "maximum_control_area": 29848,
+  "control_source_sha256": "d3601e96e9c382689f31380690b3dc928b8bcbf007a2c07f8d97a3b5605e0f1a",
+  "model_sha256": "0d692f3d363029e3080ace5d1a2d70cabf2303a6a416b0a769383ab5d6f0587c"
 }

@@ -145,3 +145,32 @@
 - The repository-safe 512-unit terrain-cache rebuild reduced `heightmap.bin` from 116 MB
   to 82.2 MB while preserving the full-precision source. Paired smoke passed again with
   zero mod-unique lines on fingerprint `fa9123dc`.
+- Maximum-close non-debug evidence disproved three generated-vegetation discovery routes:
+  arbitrary definition siblings, exact retail definition/object names redirected to
+  mod-owned bins, and exact retail transform-bin overrides. All parsed silently and none
+  rendered a tree. The bounded blocker is recorded; no Earth transform was re-enabled.
+- The physical source lattice is now 4096×2048 rather than 1024×512, reducing engine-raster
+  shoreline steps from 16 to four pixels. The production world now contains 12,104
+  locations: 11,200 passable land, 520 impassable mountain, 64 lake, and 320 sea zones.
+- The finer world regenerates end-to-end with all 42 anchors, 38 realms, 33 cultures,
+  11,179 populated locations, 604 unique legal ports, 12 markets, and 524 recalculated
+  authored road edges. Generated-key route waypoints were replaced by stable Tharbad and
+  Fields of Nurn anchors.
+- The High Pass was widened and recentered around Goblin-town after the first finer-world
+  validation correctly found the hold isolated inside the Misty Mountain barrier. Full
+  validation is green, including realm connectivity and zero Earth decal layers.
+- The first 4096×2048 paired smoke correctly rejected 14 passable pockets isolated inside
+  ridge masks plus one generated localization hash collision. Anchor access carving,
+  enclosed-pocket cleanup, all-land port-component validation, and a collision-safe key
+  eliminated both engine-only defect classes. The regenerated world has a minimum
+  47-control-cell location and 605 legal ports.
+- Paired smoke then passed with zero mod-unique lines, with the final census-compatible
+  tree confirmed on fingerprint `ad12be19`. A fresh
+  non-debug Observer loaded and advanced to 3018.1.2. Tilted 3D evidence proves that the
+  authored mountain systems have physical relief, but it also proves that terrain
+  materials still break into coarse location-shaped patches and that trees and major
+  rivers remain absent. Reopened M2 remains red.
+- The live Observer initialization found two grassland locations assigned lumber because
+  the census used their forest seed pixel while the terrain template used their dominant
+  biome. Raw materials now use the same dominant-biome contract; both locations resolve
+  to wheat and static validation forbids lumber outside woods/forest.

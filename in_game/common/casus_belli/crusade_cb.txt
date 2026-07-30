@@ -23,7 +23,7 @@ cb_crusade = {
 		add = {
 			if = {
 				limit = {
-					scope:location.area = area:me_anorien_area_07_07
+					scope:location.area = area:me_anorien_area_28_31
 				}
 				add = 50
 			}

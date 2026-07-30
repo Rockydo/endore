@@ -63,9 +63,9 @@ albanian_immigration_chance = {
 			region = region:me_anorien_region
 			scope:source_location = {
 				NOR = {
-					area = area:me_anorien_area_07_07
-					province_definition = province_definition:me_anorien_area_07_07_province_01
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					area = area:me_anorien_area_28_31
+					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 				}
 			}
 		}

@@ -155,7 +155,7 @@ byz_set_up = {
 		target = character:byz_john_kantakouzenos
 	}
 
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -166,7 +166,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -177,13 +177,13 @@ byz_set_up = {
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_ownable_location_in_area = {
 			limit = {
 				is_coastal = yes
 				NOR = {
-					province_definition = province_definition:me_anorien_area_07_07_province_01
-					province_definition = province_definition:me_anorien_area_07_07_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_28_31_province_01
 					this = location:corinth
 					this = location:xylokastro
 				}
@@ -194,7 +194,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -206,7 +206,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -217,7 +217,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes
@@ -228,7 +228,7 @@ byz_set_up = {
 			}
 		}
 	}
-	province_definition:me_anorien_area_07_07_province_01 = {
+	province_definition:me_anorien_area_28_31_province_01 = {
 		every_ownable_location_in_province_definition = {
 			limit = {
 				is_coastal = yes

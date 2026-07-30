@@ -407,7 +407,7 @@ hongwu_di = {
 			region:me_anorien_region = {
 				any_ownable_location_in_region = {
 					OR = {
-						area = area:me_anorien_area_07_07
+						area = area:me_anorien_area_28_31
 						top_owner ?= root
 					}
 					percent = 1
@@ -703,31 +703,31 @@ saladin_legacy = {
 				top_owner ?= root
 			}
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root
 			}
 		}
-		area:me_anorien_area_07_07 = {
+		area:me_anorien_area_28_31 = {
 			any_ownable_location_in_area = {
 				percent = 1
 				top_owner ?= root

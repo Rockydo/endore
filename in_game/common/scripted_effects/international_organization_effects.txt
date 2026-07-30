@@ -1663,7 +1663,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1671,7 +1671,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1679,7 +1679,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1687,7 +1687,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1695,7 +1695,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1703,7 +1703,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1711,7 +1711,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1719,7 +1719,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {
@@ -1727,7 +1727,7 @@ set_up_proper_china_for_middle_kingdom = { # If changed, apply changes too to th
 			}
 		}
 	}
-	area:me_anorien_area_07_07 = {
+	area:me_anorien_area_28_31 = {
 		every_location_in_area = {
 			limit = { is_ownable = yes }
 			international_organization:middle_kingdom ?= {

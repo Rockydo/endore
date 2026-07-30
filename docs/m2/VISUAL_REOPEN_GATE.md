@@ -7,6 +7,14 @@ canvas size, retains no Earth terrain decals, and supports custom locations, rea
 Observer play. It is not yet a release-quality physical map. Political readability does
 not substitute for geographic quality.
 
+Current iteration: the authored control lattice is 4096×2048 and generates 12,104
+locations on the proven 16384×8192 engine canvas. Static validation is green, including
+all anchors, realm connectivity, ports, rivers, locators, and terrain-cache quarantine.
+Real-game non-debug review proves that ridge systems produce physical 3D relief, but also
+shows coarse location-shaped terrain-material patches, no visible trees, and no convincing
+major rivers. Vegetation remains blocked after every tested generated-layer route parsed
+but rendered no objects. This gate therefore remains red.
+
 ## Binding defects
 
 1. Inland seas, lakes, and forest regions read as geometric ovals rather than natural

@@ -19,8 +19,8 @@ saquiyah = {
 				region = region:me_anorien_region
 				sub_continent = sub_continent:me_gondor_subcontinent
 				sub_continent = sub_continent:me_gondor_subcontinent
-				area = area:me_anorien_area_07_07
-				area = area:me_anorien_area_07_07
+				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_28_31
 				sub_continent = sub_continent:me_gondor_subcontinent
 			}
 		}

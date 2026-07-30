@@ -116,9 +116,9 @@ flavor_mch.3 = {
 
 	trigger = {
 		culture ?= { has_culture_group = culture_group:jurchen_group }
-		own_entire_area = area:me_anorien_area_07_07
-		own_entire_area = area:me_anorien_area_07_07
-		own_entire_area = area:me_anorien_area_07_07
+		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_28_31
 	}
 
 	illustration_tags = {

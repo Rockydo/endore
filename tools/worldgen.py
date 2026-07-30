@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Deterministic shared model for the M2 Middle-earth map generators.
 
-The authored 1024x512 controls are the single source of truth.  This module
+The authored 4096x2048 controls are the single source of truth.  This module
 turns them into a labelled raster model; individual generators package that
 model into EU5 files.
 """
@@ -25,16 +25,16 @@ DERIVED = ROOT / "docs/world/derived"
 MAP_OUT = ROOT / "in_game/map_data"
 TERRAIN_OUT = ROOT / "in_game/gfx/terrain2"
 
-CONTROL_W, CONTROL_H = 1024, 512
+CONTROL_W, CONTROL_H = 4096, 2048
 WORLD_W, WORLD_H = 16384, 8192
 HEIGHT_W, HEIGHT_H = 8192, 4096
 BIOME_W, BIOME_H = HEIGHT_W - 1, HEIGHT_H - 1
 SEED = 3018
 
 TARGETS = {
-    "land": 5200,
-    "mountain": 260,
-    "lake": 32,
+    "land": 11200,
+    "mountain": 520,
+    "lake": 64,
     "sea": 320,
 }
 
@@ -43,6 +43,7 @@ KIND_CODE = {"sea": 0, "land": 1, "lake": 2, "mountain": 3}
 LOCALIZATION_COLLISION_RENAMES = {
     # Live EU5 localization-table evidence from the first M2 smoke.
     "me_land_2436": "me_land_2436_endore",
+    "me_land_5457": "me_land_5457_endore",
     "me_sea_0241": "me_sea_0241_endore",
 }
 CONTROL_BIOMES = {
@@ -254,12 +255,10 @@ def kind_masks(biomes: np.ndarray, anchors: list[Anchor]) -> tuple[np.ndarray, d
         if kind_map[y, x] in (KIND_CODE["sea"], KIND_CODE["lake"]):
             raise ValueError(f"anchor {anchor.key} is not on authored land")
         pinned[anchor.key] = (y, x)
-        # A pinned stronghold or pass is a playable location even where its
-        # exact control pixel intersects a ridge.
-        for ny in range(max(0, y - 1), min(CONTROL_H, y + 2)):
-            for nx in range(max(0, x - 1), min(CONTROL_W, x + 2)):
-                if kind_map[ny, nx] == KIND_CODE["mountain"]:
-                    kind_map[ny, nx] = KIND_CODE["land"]
+        # A pinned stronghold or pass is playable even where its exact point
+        # intersects a ridge. Connect it to nearby authored land instead of
+        # creating an isolated 3x3 passable island inside the mountains.
+        carve_anchor_access(kind_map, y, x)
     # Passes are authored movement contracts, not merely low-elevation paint.
     # The blurred ridge control can otherwise leave a two-pixel mountain seam
     # across a visually open gap. Hard-cut every pass disk into playable land
@@ -272,12 +271,50 @@ def kind_masks(biomes: np.ndarray, anchors: list[Anchor]) -> tuple[np.ndarray, d
         radius = max(2, round(float(pass_data["radius"]) * CONTROL_H))
         disk = (xx - px) ** 2 + (yy - py) ** 2 <= radius**2
         kind_map[disk & (kind_map == KIND_CODE["mountain"])] = KIND_CODE["land"]
-    clean_small_components(kind_map, minimum=4)
+    clean_small_components(
+        kind_map,
+        minimum=4,
+        protected_land=set(pinned.values()),
+    )
     return kind_map, pinned
 
 
-def clean_small_components(kind_map: np.ndarray, minimum: int) -> None:
-    """Absorb single-pixel control artifacts into their dominant neighbour."""
+def carve_anchor_access(kind_map: np.ndarray, y: int, x: int) -> None:
+    """Cut a narrow deterministic connection from a ridge anchor to land."""
+    if kind_map[y, x] == KIND_CODE["land"]:
+        return
+    search_radius = 96
+    y0, y1 = max(0, y - search_radius), min(CONTROL_H, y + search_radius + 1)
+    x0, x1 = max(0, x - search_radius), min(CONTROL_W, x + search_radius + 1)
+    candidates = np.argwhere(
+        kind_map[y0:y1, x0:x1] == KIND_CODE["land"]
+    )
+    if not len(candidates):
+        raise ValueError(f"anchor {(y, x)} has no land within {search_radius} cells")
+    candidates[:, 0] += y0
+    candidates[:, 1] += x0
+    distances = np.square(candidates[:, 0] - y) + np.square(candidates[:, 1] - x)
+    target_y, target_x = (
+        int(value) for value in candidates[int(np.argmin(distances))]
+    )
+    steps = max(abs(target_y - y), abs(target_x - x), 1)
+    for line_y, line_x in zip(
+        np.rint(np.linspace(y, target_y, steps + 1)).astype(int),
+        np.rint(np.linspace(x, target_x, steps + 1)).astype(int),
+    ):
+        for ny in range(max(0, line_y - 2), min(CONTROL_H, line_y + 3)):
+            for nx in range(max(0, line_x - 2), min(CONTROL_W, line_x + 3)):
+                if kind_map[ny, nx] == KIND_CODE["mountain"]:
+                    kind_map[ny, nx] = KIND_CODE["land"]
+
+
+def clean_small_components(
+    kind_map: np.ndarray,
+    minimum: int,
+    protected_land: set[tuple[int, int]] | None = None,
+) -> None:
+    """Absorb raster artifacts and unplayable mountain-enclosed land pockets."""
+    protected_land = protected_land or set()
     for class_id in KIND_CODE.values():
         mask = kind_map == class_id
         seen = np.zeros(mask.shape, dtype=bool)
@@ -301,7 +338,15 @@ def clean_small_components(kind_map: np.ndarray, minimum: int) -> None:
                             queue.append((ny, nx))
                     else:
                         neighbours[int(kind_map[ny, nx])] += 1
-            if len(cells) < minimum and neighbours:
+            protected = class_id == KIND_CODE["land"] and any(
+                cell in protected_land for cell in cells
+            )
+            enclosed_land = (
+                class_id == KIND_CODE["land"]
+                and neighbours[KIND_CODE["sea"]] == 0
+                and not protected
+            )
+            if (len(cells) < minimum or enclosed_land) and neighbours:
                 replacement = neighbours.most_common(1)[0][0]
                 for y, x in cells:
                     kind_map[y, x] = replacement
@@ -454,7 +499,7 @@ def build_model() -> WorldModel:
         density,
         rng,
         land_pins,
-        radius=3,
+        radius=10,
     )
     seeds_by_kind["mountain"] = choose_seeds(
         masks["mountain"],
@@ -462,7 +507,7 @@ def build_model() -> WorldModel:
         np.full_like(density, 128),
         rng,
         cover_components(masks["mountain"], []),
-        radius=3,
+        radius=10,
     )
     seeds_by_kind["lake"] = choose_seeds(
         masks["lake"],
@@ -470,7 +515,7 @@ def build_model() -> WorldModel:
         np.full_like(density, 128),
         rng,
         cover_components(masks["lake"], []),
-        radius=5,
+        radius=20,
     )
     seeds_by_kind["sea"] = choose_seeds(
         masks["sea"],
@@ -478,7 +523,7 @@ def build_model() -> WorldModel:
         np.full_like(density, 128),
         rng,
         cover_components(masks["sea"], []),
-        radius=10,
+        radius=40,
     )
 
     offsets: dict[str, int] = {}

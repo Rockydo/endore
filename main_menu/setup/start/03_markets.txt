@@ -9,8 +9,8 @@ market_manager = {
 	add_market = esgaroth
 	add_market = dale
 	add_market = umbar
-	add_market = me_land_0578
-	add_market = me_land_4759
+	add_market = me_land_4335
+	add_market = me_land_11145
 	add_market = barad_dur
 	add_market = dorwinion
 }
