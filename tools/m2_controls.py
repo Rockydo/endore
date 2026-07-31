@@ -65,14 +65,6 @@ RIVER_INCISION_SAMPLE = 1450.0
 # counterpart. Reserve it for genuinely high crest islands; regional audit
 # showed that 0.56 still painted broad white slabs through the White Mountains.
 MOUNTAIN_BIOME_THRESHOLD = 0.68
-# These exact Arda Maps pools east of Hobbiton are substantially smaller than
-# one runtime location. Engine-water classification turns that host cell into
-# a deep quarry regardless of template or near-water bed height. Retain their
-# source polygons as lake-biome material controls while keeping physical land
-# and political topology continuous beneath them.
-DECORATIVE_LAKE_KEYS = frozenset(
-    {"minor_lake_10", "minor_lake_11", "minor_lake_12"}
-)
 
 
 @dataclass(frozen=True)
@@ -110,10 +102,6 @@ def validate_geometry_contract(projection: dict) -> None:
             )
         if len(lake["coords"]) < 4:
             raise ValueError(f"lake {lake['key']} lacks shoreline detail")
-    lake_keys = {lake["key"] for lake in projection["lakes"]}
-    if not DECORATIVE_LAKE_KEYS <= lake_keys:
-        missing = sorted(DECORATIVE_LAKE_KEYS - lake_keys)
-        raise ValueError(f"decorative source lakes are missing: {missing}")
     for zone in projection["biome_zones"]:
         if zone["biome"] not in {"forest", "dense_forest"}:
             continue
@@ -403,8 +391,6 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             key=f"island:{key}",
         )
     for lake in projection["lakes"]:
-        if lake["key"] in DECORATIVE_LAKE_KEYS:
-            continue
         draw_shape(
             image,
             lake["shape"],
@@ -785,19 +771,6 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     )
     elevation += np.where(land_array, doom_relief, 0.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
-    decorative_lake_mask = (biome == BIOMES["lake"]) & land_array
-    decorative_lake_pixels = int(decorative_lake_mask.sum())
-    if decorative_lake_pixels != 43:
-        raise ValueError(
-            "sub-location pond footprint changed without review: "
-            f"{decorative_lake_pixels} != 43 pixels"
-        )
-    decorative_lake_height = [
-        int(elevation[decorative_lake_mask].min()),
-        int(elevation[decorative_lake_mask].max()),
-    ]
-    if decorative_lake_height[0] <= ENGINE_WATER_LEVEL_SAMPLE:
-        raise ValueError("decorative pond terrain fell below the engine water plane")
     minimum_land_height = int(elevation[land_array].min())
     maximum_water_height = int(elevation[~land_array].max())
     if minimum_land_height <= ENGINE_WATER_LEVEL_SAMPLE:
@@ -924,9 +897,6 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "passes": len(projection["passes"]),
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),
-        "decorative_lake_keys": sorted(DECORATIVE_LAKE_KEYS),
-        "decorative_lake_pixels": decorative_lake_pixels,
-        "decorative_lake_height": decorative_lake_height,
         "land_fraction": round(float(land_array.mean()), 6),
         "land_bbox_pixels": land_bbox,
         "land_bbox_occupancy": land_bbox_occupancy,

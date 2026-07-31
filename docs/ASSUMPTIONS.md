@@ -135,6 +135,7 @@ about Middle-earth.
   river controls. Its unnamed `line_river` geometry 8 is the only substantial
   channel in the Harnen corridor and is used for that river's detailed upper
   and middle course; only its short final reach to the coast is reconciled
-  against the owner-approved macro map. The payload exposes no equivalent
-  Morgulduin line, so that short axis remains a restrained reconciliation from
-  its canonical endpoints rather than being presented as surveyed data.
+  against the owner-approved macro map. Unnamed geometry 14 occupies the exact
+  Morgulduin corridor and supplies that channel from the Morgul Vale to its
+  Anduin confluence. These identifications are cartographic reconciliations,
+  not claims that the source itself labels either river.

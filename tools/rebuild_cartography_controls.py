@@ -276,6 +276,26 @@ def harnen_geometry(topology: Topology) -> list[list[float]]:
     return [[round(x, 6), round(y, 6)] for x, y in path]
 
 
+def morgulduin_geometry(topology: Topology) -> list[list[float]]:
+    """Recover Arda Maps' unnamed Morgulduin channel."""
+
+    geometry = topology.data["objects"]["line_river"]["geometries"][14]
+    properties = geometry.get("properties") or {}
+    if properties.get("eventname") is not None or geometry["type"] != "LineString":
+        raise ValueError("Arda Maps unnamed Morgulduin source contract changed")
+    source = topology.line_parts(geometry)[0]
+    if len(source) < 35:
+        raise ValueError("Arda Maps unnamed Morgulduin source lost detail")
+    # Source storage runs Anduin-ward-to-Morgul-ward; production rivers flow
+    # toward their receiving channel.
+    path = rdp(list(reversed(source)), 0.00020)
+    if math.dist(path[0], [0.603831, 0.594698]) > 0.001:
+        raise ValueError("Arda Maps unnamed Morgulduin headwater moved")
+    if math.dist(path[-1], [0.594108, 0.605029]) > 0.001:
+        raise ValueError("Arda Maps unnamed Morgulduin confluence moved")
+    return [[round(x, 6), round(y, 6)] for x, y in path]
+
+
 def append_path(
     destination: list[list[float]],
     source: list[list[float]],
@@ -807,10 +827,9 @@ def build(reference_root: Path) -> dict:
                 joins = "upper_anduin"
             item["joins"] = joins
         rivers.append(item)
-    # Arda Maps does not name these two channels. The Harnen nevertheless has
-    # a detailed unnamed source line in the correct corridor; only its final
-    # coastward reach is reconciled. The short Morgulduin remains constrained
-    # by its canonical endpoints and the owner-approved macro map.
+    # Arda Maps does not name these two channels, but both have detailed
+    # unnamed source lines in their exact corridors. Only Harnen's final
+    # coastward reach requires a two-point reconciliation.
     rivers.extend(
         [
             {
@@ -818,10 +837,7 @@ def build(reference_root: Path) -> dict:
                 "width": 0.0018,
                 "wander": 0.00035,
                 "joins": "anduin",
-                "points": [
-                    [0.6073, 0.5955], [0.6020, 0.5990],
-                    [0.5960, 0.6015], [0.5925, 0.6038],
-                ],
+                "points": morgulduin_geometry(topology),
             },
             {
                 "key": "harnen",

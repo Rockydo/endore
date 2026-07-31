@@ -9,14 +9,13 @@
    ridge-feather cache missed the post-cache interactivity bound twice and is rejected;
    do not relaunch fingerprint `0f65a5e`. Revisit the coarse rock ribbons only through a
    materially different representation or after an independent runtime cause is found.
-3. REOPENED M2 INLAND WATER — the three sub-location Arda Maps pools east of Hobbiton
-   now keep exact source lake-biome footprints over continuous dry terrain and wet pond
-   material, while all larger lakes remain engine water. Targeted static checks are
-   green. The first actual v27 launch completed setup/cache work but missed the
-   600-second country-selection interactivity bound without a diagnostic; later retries
-   deferred before launch behind Antiquitas and consumed no additional strike. Run the
-   one permitted cached repeat when the shared lease clears. Accept only if the blue
-   quarry and the dry bowl are both absent.
+3. REOPENED M2 INLAND WATER — the v27 material-pond representation for the three
+   sub-location Arda Maps pools east of Hobbiton missed the post-cache interactivity
+   bound twice and is rejected. Do not relaunch it. The runtime is restored to v25
+   engine-water semantics while exact source outlines remain binding. The visible
+   cell-shaped quarry is therefore an acknowledged red defect; pursue only a materially
+   different representation, potentially by omitting these sub-location physical water
+   cells while retaining their source record for later scenery support.
 4. REOPENED M2 BELFALAS — preserve the hash-pinned Arda Maps mainland ring: the apparent
    inlet is backed by 2,043 raw Belfalas-window source vertices and the committed
    simplification deviates by at most roughly three location-raster pixels. Treat the
@@ -27,7 +26,9 @@
    Ithilien canopy. Preserve source axes, downstream width grammar, porous margins,
    river clearances, and zero Earth transforms/decals. Harnen now uses the matching
    unnamed Arda Maps source channel plus only a two-point coast continuation; do not
-   restore the rejected straight diagonal or farther-west mouth.
+   restore the rejected straight diagonal or farther-west mouth. Morgulduin likewise
+   uses its matching unnamed source line. All 24 production river axes are now
+   source-derived.
 6. REOPENED M2 SCALE/GRANULARITY — the measured source frame already occupies 100% of
    canvas height and 70.3% of width, with substantial land contact at both north and
    south crop edges. Do not enlarge uniformly: it would clip Forochel or Far Harad.

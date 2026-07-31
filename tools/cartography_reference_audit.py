@@ -28,7 +28,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "04696d43a3d14a6c0774bf339194cf119281f5639b1c48a3b31a2ed44f1399fe"
+    "937928b45c1ac34cf77fc560367f0fb941112feae86df37d09fbc611e303e21e"
 )
 EXPECTED_FOREST_KEYS = {
     "lothlorien",
@@ -174,6 +174,8 @@ def render_report() -> dict:
         raise ValueError("named river coverage changed without cartographic review")
     if len(river_by_key["harnen"]["points"]) < 50:
         raise ValueError("source-backed Harnen detail regressed")
+    if len(river_by_key["morgulduin"]["points"]) < 6:
+        raise ValueError("source-backed Morgulduin detail regressed")
     expected_confluences = {
         "langwell": "upper_anduin",
         "greylin": "upper_anduin",

@@ -631,7 +631,7 @@ Do not trade cartographic fidelity for canvas occupancy. Keep the honest western
 and eastern margin. Improve close detail through source geometry, height/material
 precision, and later political tessellation within the runtime envelope.
 
-## 2026-07-31 — Sub-location Shire pools are material ponds, not engine water
+## 2026-07-31 — Rejected experiment: sub-location Shire material ponds
 
 Retain the exact Arda Maps polygons for `minor_lake_10`, `minor_lake_11`, and
 `minor_lake_12`, but exclude only those three from the physical-water land cut. They
@@ -641,10 +641,15 @@ pond plus feathered water-transition material. Every larger lake, including Long
 Mirrormere, Lake Evendim, Nen Hithoel, Núrnen, and the Sea of Rhûn, remains real engine
 water.
 
-This is the materially different route required after template substitution and a
-near-water bed both left the cell-shaped quarry. It preserves source existence, outline,
+This was the materially different route required after template substitution and a
+near-water bed both left the cell-shaped quarry. It preserved source existence, outline,
 and placement while refusing an engine topology that cannot represent the feature at
 the current political scale.
+
+Runtime decision: reject this implementation. Two fresh New Games completed cache/setup
+work and then remained noninteractive for the full post-cache bound. Remove generator
+v27 and restore v25 engine-water semantics without weakening the exact source geometry
+or the audit. A later attempt must use a materially different runtime representation.
 
 ## 2026-07-31 — Belfalas source geometry outranks an unaudited visual redraw
 
@@ -658,7 +663,7 @@ The close-view defect is therefore shoreline/material/location presentation unle
 second binding source demonstrates a specific geometric contradiction. Preserve the
 source coast and repair the renderer layer rather than making the map less faithful.
 
-## 2026-07-31 — Recover the unnamed Arda Maps Harnen channel
+## 2026-07-31 — Recover the unnamed Arda Maps Harnen and Morgulduin channels
 
 Replace the former eight-point manual Harnen diagonal with the hash-pinned Arda Maps
 `line_river` geometry 8. It is the only substantial unnamed channel in the Harnen
@@ -672,3 +677,9 @@ analysis proves that continuing there crosses the sea and can re-enter land. The
 corrected x=0.516/y=0.858 mouth stays on land until its final eight parser pixels enter
 open water. The strict river writer accepts the resulting 51-point control with no
 self-touch, land re-entry, or palette error.
+
+Likewise replace the four-point manual Morgulduin with unnamed `line_river` geometry 14.
+Its 40 raw vertices occupy the exact Morgul Vale-to-Anduin corridor and retain six
+meaningful bends after bounded simplification. The source endpoints match the prior
+canonical reconciliation, but the intervening course now comes from the same
+hash-verified payload as every other production river.

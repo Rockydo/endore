@@ -343,3 +343,22 @@ ridge feathering only through a materially different cache representation or aft
 independent runtime cause is identified. Evidence:
 `docs/screens/20260731_m2_ridge_feather_probe/` and
 `docs/screens/20260731_m2_ridge_feather_probe_repeat/`.
+
+## 2026-07-31 — Decorative Shire-pond material v27 fresh-load envelope
+
+Status: two-strike runtime blocker; candidate rejected and v25 restoration required.
+
+Generator v27 kept `minor_lake_10`, `minor_lake_11`, and `minor_lake_12` as exact
+lake-biome footprints over continuous dry terrain and selected wet river/transition
+material instead of engine water. Two actual fresh visual New Games completed the menu,
+accepted New Game, and completed setup/cache work, then remained nonresponsive for the
+full 600-second post-cache interactivity bound without a rendered country-selection
+window. Neither emitted a map, material, terrain-cache, river, or locator diagnostic.
+Several intervening attempts deferred before launch because Antiquitas owned the shared
+EU5 lease and do not count as runtime strikes.
+
+Do not launch this exact v27 representation again. It has no renderer evidence and may
+not replace the live- and smoke-proven v25 engine-water baseline. Preserve the
+hash-pinned source pool outlines, but pursue only a materially different runtime route.
+Evidence: `docs/screens/20260731_m2_decorative_pond_probe_live/` and
+`docs/screens/20260731_m2_source_rivers_pond_final/`.

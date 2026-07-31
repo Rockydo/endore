@@ -528,29 +528,36 @@
   geography, so the equal-scale projection is retained. Belfalas likewise remains on
   its hash-pinned source ring: 2,043 raw vertices cover the audited window and the
   committed simplification is already sub-location-pixel precise.
-- The first alternate small-water representation is now generated coherently. The three
-  exact Arda Maps pools east of Hobbiton remain lake-biome polygons but no longer cut
-  engine water or depress their host terrain; wet pond and feathered transition material
-  carry their visible identity. The full 12,104-location world and generator-v27 cache
-  rebuilt successfully, and targeted control/cache/reference checks pass. Its live
-  Hobbiton close probe deferred without launch because Antiquitas owned the shared slot.
+- The first alternate small-water representation generated coherently but failed its
+  runtime gate. The three exact Arda Maps pools east of Hobbiton were tested as
+  lake-biome polygons over continuous dry terrain with wet pond and transition material.
+  Both permitted fresh New Games completed setup/cache work and then missed the
+  600-second post-cache interactivity bound without a diagnostic. Generator v27 is
+  rejected and removed; the runtime returns to the v25 engine-water baseline.
 - Cartographic validation now hash-pins the complete reviewed projection geometry in
   addition to its feature counts and landmark tolerances. Any future movement of a coast,
   island, lake, mountain, summit, pass, woodland, river, or density envelope must be an
   explicit source-review event rather than an unnoticed generator drift.
 - A fresh in-memory rebuild against the quarantined, hash-verified Arda Maps payload
   reproduced the committed projection exactly: 1,251 mainland vertices, 15 lakes, 43
-  mountain footprints, 18 named peaks, all 15 named forests, and 24 rivers with 814
+  mountain footprints, 18 named peaks, all 15 named forests, and 24 rivers with 816
   retained vertices. This verifies source reproducibility without copying the raw map
   payload into the repository.
-- The first actual v27 decorative-pond New Game completed setup/cache work but remained
-  noninteractive through the 600-second country-selection bound, with no map, cache,
-  material, river, or locator diagnostic. This is one runtime strike, not a visual
-  rejection. Two later attempts correctly deferred before launching when Antiquitas
-  reacquired the shared EU5 slot; neither consumes the one remaining cached repeat.
+- The final cached v27 decorative-pond repeat independently completed menu and
+  setup/cache transition but remained nonresponsive for 600 seconds and shut down
+  cleanly. Together with the first actual attempt this exhausts the route's two-strike
+  allowance. The intervening Antiquitas lock deferrals never launched EU5 and remain
+  correctly excluded from the strike count. No renderer verdict exists for v27.
 - The Harnen no longer uses an eight-point manual diagonal. An unnamed 216-vertex Arda
   Maps channel in the exact Harnen corridor now supplies 49 retained bends, followed by
   only two reconciled points to its source-coast mouth. The obsolete farther-west mouth
   was rejected after the native river gate proved that it crossed sea and re-entered
-  land. The coherent 12,104-location world rebuilt with 814 total river vertices, 79,924
-  unique height tiles, 63,584 material tiles, and a parser-green indexed river raster.
+  land. The formerly four-point Morgulduin now follows the matching unnamed 40-vertex
+  source channel as well. The coherent 12,104-location world rebuilt with 816 total river
+  vertices, 79,924 unique height tiles, 63,583 material tiles, and a parser-green indexed
+  river raster.
+- After v27's second runtime strike, the complete world was regenerated with v25
+  engine-water and material semantics while retaining the source-pinned projection,
+  Harnen, Morgulduin, equal-scale safeguards, and all 24 source-derived river axes. The
+  clean restoration produced the same 12,104-location topology, 79,924 unique height
+  tiles, 63,583 unique material tiles, and zero Earth-authored map objects or decals.
