@@ -763,3 +763,32 @@ source coordinates over continuous dry topology; retain the other 12 source lake
 true engine water. This representation is now admissible because the independent
 6,004-location runtime fix proved a fresh full-visual load, unlike the earlier v27 test on
 the unreliable 12,104-location memory cliff.
+
+## 2026-07-31 — Make the Observer HUD authoritative for live-game automation
+
+The centered red `Game is Paused` crop is not a unique state signal: country-selection
+political paint can satisfy the same red-pixel heuristic before Observer has started.
+Never accept or act on that crop alone. Require the independent top-left Observer HUD to
+prove live state, and require the same HUD before sending a pause-resume key. With that
+independent guard, use the empirically calibrated 0.24 red threshold to cover real pause
+banners measured from 0.293 to 0.436 while keeping banner-free live political paint at
+0.192. Regression-test both the false lobby frame and the valid HUD-backed frame.
+
+## 2026-07-31 — Classify sub-location lakes by source-raster scale
+
+Engine water owns whole runtime cells, so any source lake substantially smaller than one
+cell becomes a deep rectangular quarry regardless of its authored shoreline. At the
+release-safe 6,004-location scale, classify every source lake occupying at most 64 pixels
+in the 4096x2048 control atlas as an exact wet-material pond over continuous physical
+land. Keep the explicit ten-key set and validate it against the threshold on every build;
+retain the five larger lakes as engine water. This generalizes the proven Shire fix to
+Mirrormere and the other sub-location pools without subjective one-off exceptions.
+
+## 2026-07-31 — Paint mountain exposure from source crests, not hard bands
+
+Retain the source-pinned heightfield as physical authority, but derive rock/snow exposure
+continuously from all source ridge axes and branches, named peaks, smoothed physical
+slope, altitude, and deterministic organic noise. Hard altitude/slope thresholds broke
+continuous ranges into coarse grey ribbons and islands. The v28 field improves regional
+continuity without changing relief, passes, impassability, or location topology; it is an
+intermediate renderer correction, not M2 acceptance.

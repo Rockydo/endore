@@ -825,13 +825,13 @@ def autosave_fingerprint(user_dir: Path) -> list[dict[str, object]]:
 
 
 def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
-    """Wait for either stable signal that the live Observer HUD has loaded.
+    """Wait until the live Observer HUD proves that country selection ended.
 
     Debug-mode fresh games do not always render the centered red pause banner.
     They do render the fixed top-left ``You are currently in Observer Mode``
-    panel once the country-selection lobby has actually transitioned.  Accept
-    that panel as the equivalent success signal so a slow loading overlay
-    cannot turn a successful start into a second blind click.
+    panel once the country-selection lobby has actually transitioned. The
+    centered crop alone is deliberately insufficient: a red political-map
+    region can occupy the same pixels while the lobby is still active.
     """
     import pyautogui
 
@@ -844,15 +844,14 @@ def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
         image = pyautogui.screenshot(
             region=(window.left, window.top, window.width, window.height)
         )
-        paused, ratio = observer_pause_banner(image)
-        if paused:
-            print(f"gamedriver: live Observer pause banner detected (red={ratio:.3f})")
-            return True
-        observer_hud, dark_ratio, light_ratio = observer_hud_banner(image)
+        observer_hud, paused, ratio, dark_ratio, light_ratio = (
+            observer_frame_state(image)
+        )
         if observer_hud:
             print(
                 "gamedriver: live Observer HUD detected "
-                f"(dark={dark_ratio:.3f} light={light_ratio:.3f})"
+                f"(paused={paused} red={ratio:.3f} "
+                f"dark={dark_ratio:.3f} light={light_ratio:.3f})"
             )
             return True
         time.sleep(poll_interval)
@@ -1698,11 +1697,10 @@ def observer_pause_banner(image) -> tuple[bool, float]:
         if value_r >= 80 and value_r >= value_g * 1.45 and value_r >= value_b * 1.65
     )
     ratio = red / len(pixels)
-    # The M3 political map can legitimately place a dark-red realm directly
-    # behind this crop. A lower threshold mistakes that map paint for the
-    # transient "Game is Paused" banner and toggles Space every polling pass.
-    # Live calibration: banner 0.436, banner-free political map 0.192.
-    return ratio >= 0.30, ratio
+    # This detector is intentionally permissive because every action based on
+    # it is now gated by observer_frame_state's independent Observer HUD. Live
+    # calibration spans 0.293..0.436 for the banner and 0.192 without it.
+    return ratio >= 0.24, ratio
 
 
 def observer_hud_banner(image) -> tuple[bool, float, float]:
@@ -1731,6 +1729,22 @@ def observer_hud_banner(image) -> tuple[bool, float, float]:
     dark_ratio = sum(1 for red, green, blue in pixels if max(red, green, blue) < 70) / len(pixels)
     light_ratio = sum(1 for red, green, blue in pixels if min(red, green, blue) > 150) / len(pixels)
     return dark_ratio >= 0.70 and light_ratio >= 0.005, dark_ratio, light_ratio
+
+
+def observer_frame_state(
+    image,
+) -> tuple[bool, bool, float, float, float]:
+    """Classify an Observer frame using the HUD as the live-state authority.
+
+    The pause banner remains useful for deciding whether playback should be
+    resumed, but it is not unique to the live game: country-selection map
+    paint can satisfy the same red-pixel heuristic. Requiring the independent
+    top-left Observer HUD prevents that lobby state from passing either the
+    fresh-game gate or the playback pause check.
+    """
+    paused, red_ratio = observer_pause_banner(image)
+    observer_hud, dark_ratio, light_ratio = observer_hud_banner(image)
+    return observer_hud, paused and observer_hud, red_ratio, dark_ratio, light_ratio
 
 
 def observer_run(args: argparse.Namespace) -> int:
@@ -1789,7 +1803,7 @@ def observer_run(args: argparse.Namespace) -> int:
         image = pyautogui.screenshot(
             region=(window.left, window.top, window.width, window.height)
         )
-        paused, red_ratio = observer_pause_banner(image)
+        _, paused, red_ratio, _, _ = observer_frame_state(image)
         if paused:
             press_scan_code(0x39)
             resumes += 1

@@ -143,8 +143,9 @@ about Middle-earth.
   Morgulduin corridor and supplies that channel from the Morgul Vale to its
   Anduin confluence. These identifications are cartographic reconciliations,
   not claims that the source itself labels either river.
-- † The three mapped pools east of Hobbiton are valid cartographic features but are too
-  small to justify independent EU5 water locations at the current release-safe political
-  tessellation. Their exact source shapes are represented as wet surface material rather
-  than navigable engine water; this is a scale conversion, not a claim that the pools are
-  dry in-world.
+- † Mirrormere and minor lakes 04-07/10-14 are valid cartographic features but each
+  occupies at most 64 pixels in the 4096x2048 source-control atlas, too small to justify
+  an independent EU5 water location at the current release-safe political tessellation.
+  Their exact source shapes are represented as wet surface material rather than
+  navigable engine water; this is a scale conversion, not a claim that they are dry
+  in-world. Long Lake, Lake Evendim, Nen Hithoel, Nurnen, and Rhun remain true water.

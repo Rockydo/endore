@@ -643,3 +643,31 @@
   grey/white mountain-location slabs and Hobbiton water quarries are gone. It also keeps
   M2 honestly red: exposed rock remains patchy/geometric at regional zoom, several ranges
   need stronger physical readability, and the full nine-theatre refresh is outstanding.
+
+- Generator v28 replaces hard altitude/slope rock cuts with a continuous material field
+  derived from all nine source ridge axes, their branches, all 18 named peaks, smoothed
+  physical slope, altitude, and deterministic organic noise. The heightfield, passes,
+  600-cell impassability topology, q64 cache budget, and source geometry remain unchanged.
+  Fresh Khazad-dum evidence shows a more coherent crest-following massif rather than the
+  former disconnected grey islands, but M2 remains red pending softer material fringes
+  and the full nine-theatre review.
+- The lake policy is now systematic at the release-safe political scale. Exactly ten
+  source lakes occupy at most 64 pixels each in the 4096x2048 atlas (189 pixels total):
+  Mirrormere and minor lakes 04-07/10-14 remain exact wet-material polygons over physical
+  land. Long Lake, Lake Evendim, Nen Hithoel, Nurnen, and Rhun remain engine water. The
+  complete world regenerated coherently at 6,004 locations and 2,038,645 Arda-native
+  vegetation transforms; fresh Mirrormere evidence proves the deep host-cell quarry is
+  gone, while the replacement surface still needs later scenery polish.
+- The apparent fresh-start failure was an automation false positive, not a map-load
+  regression. Country-selection political paint could satisfy the centered red-banner
+  heuristic before Observer started. The driver now requires the independent top-left
+  Observer HUD for both live-state and pause actions, with regression coverage for a red
+  lobby frame. Full validation passed in 285.3 seconds; paired smoke passed on exact
+  game-visible fingerprint
+  `8ca808d78c535292a60f2439130797c6e28514a3e063310253e2ca703369b0a4`
+  with zero new and zero mod-unique lines. Two cold full-visual New Games independently
+  reached HUD-proven live Observer in 115-117 seconds. The corrected monitor resumed the
+  second game exactly once, advanced from 3018.1.1 to 3018.1.15 in 45 seconds, and the
+  location-focus evidence continued to 3018.2.1 without error-log growth. Evidence:
+  `docs/m2/LOAD_PROOF_20260731.md` and
+  `docs/screens/20260731_m2_loadproof_v28_tick/`.

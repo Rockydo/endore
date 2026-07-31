@@ -15,18 +15,43 @@
   "passes": 10,
   "rivers": 24,
   "lakes": 15,
-  "engine_water_lakes": 12,
+  "engine_water_lakes": 5,
   "material_pond_keys": [
+    "minor_lake_04",
+    "minor_lake_05",
+    "minor_lake_06",
+    "minor_lake_07",
     "minor_lake_10",
     "minor_lake_11",
-    "minor_lake_12"
+    "minor_lake_12",
+    "minor_lake_13",
+    "minor_lake_14",
+    "mirrormere"
   ],
-  "material_pond_pixels": 43,
+  "material_pond_max_source_pixels": 64,
+  "source_lake_pixel_areas": {
+    "long_lake": 155,
+    "mirrormere": 19,
+    "lake_evendim": 1267,
+    "nen_hithoel": 430,
+    "minor_lake_04": 12,
+    "minor_lake_05": 17,
+    "minor_lake_06": 23,
+    "minor_lake_07": 42,
+    "sea_of_nurnen": 8848,
+    "sea_of_rhun": 29349,
+    "minor_lake_10": 11,
+    "minor_lake_11": 6,
+    "minor_lake_12": 26,
+    "minor_lake_13": 23,
+    "minor_lake_14": 10
+  },
+  "material_pond_pixels": 189,
   "material_pond_height": [
-    12422,
-    12445
+    11136,
+    43908
   ],
-  "land_fraction": 0.464575,
+  "land_fraction": 0.464592,
   "land_bbox_pixels": [
     582,
     0,

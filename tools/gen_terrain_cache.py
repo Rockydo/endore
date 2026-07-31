@@ -61,9 +61,9 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 26
+GENERATOR_VERSION = 28
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {17, 18, 19, 20, 21, 22, 23, 24, 25, 26}
+    {17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28}
 )
 
 # Installed materials.txt establishes the native mask-channel meanings.  The
@@ -413,6 +413,107 @@ def physical_slope(height: np.ndarray) -> np.ndarray:
     return slope
 
 
+def ridge_material_weight(projection: dict) -> np.ndarray:
+    """Return organic source-crest exposure without location-cell geometry.
+
+    Height remains the authority for physical relief. This companion field
+    only tells the material painter where a source-aligned chain or named
+    summit can plausibly expose rock. Broad blurred bodies prevent binary
+    height/slope contours from becoming disconnected grey ribbons, while a
+    narrower spine retains readable crests at regional zoom.
+    """
+
+    result = np.zeros((MATERIAL_H, MATERIAL_W), dtype=np.float32)
+
+    def path_field(
+        points: list[list[float]],
+        *,
+        key: str,
+        width: int,
+        strength: float,
+        wander: float,
+    ) -> None:
+        path = natural_path(
+            points,
+            (MATERIAL_W, MATERIAL_H),
+            key=key,
+            closed=False,
+            amplitude=wander,
+            spacing=0.003,
+        )
+        body = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+        ImageDraw.Draw(body).line(
+            path,
+            fill=255,
+            width=max(3, round(width * 2.15)),
+            joint="curve",
+        )
+        body = body.filter(
+            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.72)))
+        )
+        spine = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+        ImageDraw.Draw(spine).line(
+            path,
+            fill=255,
+            width=max(2, round(width * 0.58)),
+            joint="curve",
+        )
+        spine = spine.filter(
+            ImageFilter.GaussianBlur(radius=max(1, round(width * 0.20)))
+        )
+        field = np.maximum(
+            np.asarray(body, dtype=np.float32) * 0.62,
+            np.asarray(spine, dtype=np.float32),
+        )
+        np.maximum(result, field / 255.0 * strength, out=result)
+
+    for ridge in projection["ridges"]:
+        width = max(3, round(float(ridge["width"]) * MATERIAL_H))
+        strength = float(ridge["height"])
+        wander = float(ridge.get("wander", 0.001))
+        path_field(
+            ridge["points"],
+            key=f"ridge:{ridge['key']}",
+            width=width,
+            strength=strength,
+            wander=wander,
+        )
+        for branch_index, branch in enumerate(ridge.get("branches", [])):
+            path_field(
+                branch,
+                key=f"ridge:{ridge['key']}:branch:{branch_index}",
+                width=max(3, round(width * 0.72)),
+                strength=strength * 0.72,
+                wander=wander,
+            )
+
+    for peak in projection.get("named_peaks", []):
+        x = round(float(peak["center"][0]) * (MATERIAL_W - 1))
+        y = round(float(peak["center"][1]) * (MATERIAL_H - 1))
+        radius = max(3, round(float(peak["radius"]) * MATERIAL_H))
+        image = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+        ImageDraw.Draw(image).ellipse(
+            (
+                x - round(radius * 1.45),
+                y - round(radius * 1.45),
+                x + round(radius * 1.45),
+                y + round(radius * 1.45),
+            ),
+            fill=255,
+        )
+        image = image.filter(
+            ImageFilter.GaussianBlur(radius=max(2, round(radius * 0.62)))
+        )
+        field = (
+            np.asarray(image, dtype=np.float32)
+            / 255.0
+            * float(peak["strength"])
+        )
+        np.maximum(result, field, out=result)
+
+    return np.clip(result, 0.0, 1.0)
+
+
 def river_material_mask(projection: dict) -> np.ndarray:
     image = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
     draw = ImageDraw.Draw(image)
@@ -545,22 +646,46 @@ def render_material_source() -> np.ndarray:
     material[ash_rock] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
 
     # Mordor's high volcanic surfaces must remain basaltic. Everywhere else,
-    # altitude establishes highland ground while measured physical slope
-    # decides where exposed rock belongs. Altitude-only bands painted broad
-    # source-polygon shoulders as flat grey slabs even after their geometry
-    # had been reduced to foothill envelopes.
+    # blend altitude, a locally smoothed physical slope, the source-aligned
+    # crest field, and broad organic noise. The former hard height/slope cuts
+    # broke one continuous range into coarse grey ribbons and islands even
+    # after location-scoped mountain_wasteland rendering was removed.
     slope = physical_slope(height)
+    slope_strength = np.clip(
+        slope.astype(np.float32) / 12.0,
+        0.0,
+        255.0,
+    ).astype(np.uint8)
+    slope_weight = np.asarray(
+        Image.fromarray(slope_strength, "L").filter(
+            ImageFilter.GaussianBlur(radius=3.5)
+        ),
+        dtype=np.float32,
+    ) / 255.0
+    height_weight = np.clip(
+        (height.astype(np.float32) - 28_000.0) / 34_000.0,
+        0.0,
+        1.0,
+    )
+    crest_weight = ridge_material_weight(projection)
+    organic_weight = (selector - 127.5) / 127.5
+    exposure = (
+        crest_weight * 0.52
+        + height_weight * 0.36
+        + slope_weight * 0.34
+        + organic_weight * 0.10
+    )
     highland = land & (height >= 28_000) & (ash_weight < 0.62)
     highland_grass_earth = highland & (height < 35_000)
     highland_earth = highland & (height >= 35_000)
     highland_dark = (
-        highland & (height >= 40_000) & (slope >= 450)
+        highland & (height >= 38_000) & (exposure >= 0.58)
     )
     highland_blend = (
-        highland & (height >= 47_000) & (slope >= 625)
+        highland & (height >= 44_000) & (exposure >= 0.72)
     )
     highland_rock = (
-        highland & (height >= 52_000) & (slope >= 700)
+        highland & (height >= 50_000) & (exposure >= 0.83)
     )
     material[highland_grass_earth] = MATERIAL_GRASS | MATERIAL_EARTH
     material[highland_earth] = MATERIAL_EARTH
@@ -568,14 +693,13 @@ def render_material_source() -> np.ndarray:
     material[highland_blend] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
     material[highland_rock] = MATERIAL_ROCK
 
-    # Snow follows both altitude and steep physical relief, never the broad
-    # mountain-class footprint. This keeps caps on source-pinned summits while
-    # leaving gentle high shoulders as earth instead of rectangular snowfields.
+    # Snow is the most selective crest material. It follows source-aligned
+    # exposure plus actual altitude rather than a mountain-class footprint.
     crest = land & (ash_weight < 0.62)
     rock_snow = crest & (
-        (height >= 57_000) & (slope >= 750)
+        (height >= 57_000) & (exposure >= 0.78)
     )
-    snow = crest & (height >= 61_500) & (slope >= 900)
+    snow = crest & (height >= 61_500) & (exposure >= 0.86)
     material[rock_snow] = MATERIAL_ROCK | MATERIAL_SNOW
     material[snow] = MATERIAL_SNOW
 
@@ -584,11 +708,11 @@ def render_material_source() -> np.ndarray:
     )
     material[volcanic_highland] = MATERIAL_DARK_ROCK
 
-    # Major coasts receive EU5's complete shore channel stack. The three tiny
-    # source pools east of Hobbiton remain physical land because engine-water
-    # classification turns their entire host cells into deep quarries. Their
-    # exact lake-biome polygons instead receive wet pond material and a soft
-    # margin, preserving the cartography without breaking the heightfield.
+    # Major coasts receive EU5's complete shore channel stack. Source lakes
+    # smaller than one runtime location remain physical land because engine-
+    # water classification turns their entire host cells into deep quarries.
+    # Their exact lake-biome polygons instead receive wet pond material and a
+    # soft margin, preserving the cartography without breaking the heightfield.
     lake_water = (biomes == 7) & water
     material_pond = (biomes == 7) & land
     ocean_water = water & ~lake_water

@@ -65,13 +65,25 @@ RIVER_INCISION_SAMPLE = 1450.0
 # counterpart. Reserve it for genuinely high crest islands; regional audit
 # showed that 0.56 still painted broad white slabs through the White Mountains.
 MOUNTAIN_BIOME_THRESHOLD = 0.68
-# These exact Arda Maps pools east of Hobbiton are substantially smaller than
-# one runtime location. Engine-water classification turns each host cell into
-# a deep quarry regardless of its authored shoreline. Preserve the source
-# polygons as wet material controls while keeping the heightfield and location
-# topology continuous beneath them.
+# Source lakes smaller than one runtime location become deep location-shaped
+# quarries when classified as engine water. Preserve every such source polygon
+# as a wet material control over continuous physical land. The explicit set is
+# cross-checked below against the current source-raster area threshold so a
+# cartography update cannot silently change the policy.
+MATERIAL_POND_MAX_SOURCE_PIXELS = 64
 MATERIAL_POND_KEYS = frozenset(
-    {"minor_lake_10", "minor_lake_11", "minor_lake_12"}
+    {
+        "mirrormere",
+        "minor_lake_04",
+        "minor_lake_05",
+        "minor_lake_06",
+        "minor_lake_07",
+        "minor_lake_10",
+        "minor_lake_11",
+        "minor_lake_12",
+        "minor_lake_13",
+        "minor_lake_14",
+    }
 )
 
 
@@ -682,6 +694,32 @@ def render() -> tuple[dict[str, Image.Image], dict]:
             "M2 production canvas must match EU5's installed 16384x8192 contract"
         )
 
+    lake_pixel_areas: dict[str, int] = {}
+    for lake in projection["lakes"]:
+        lake_mask = Image.new("L", size, 0)
+        draw_shape(
+            lake_mask,
+            lake["shape"],
+            lake["coords"],
+            size,
+            255,
+            key=f"lake-area:{lake['key']}",
+        )
+        lake_pixel_areas[lake["key"]] = int(
+            (np.asarray(lake_mask) > 0).sum()
+        )
+    threshold_pond_keys = {
+        key
+        for key, area in lake_pixel_areas.items()
+        if area <= MATERIAL_POND_MAX_SOURCE_PIXELS
+    }
+    if threshold_pond_keys != MATERIAL_POND_KEYS:
+        raise ValueError(
+            "sub-location pond set changed without review: "
+            f"source={sorted(threshold_pond_keys)} "
+            f"contract={sorted(MATERIAL_POND_KEYS)}"
+        )
+
     land = land_mask(projection, size)
     land_array = np.asarray(land) > 0
     ridges = ridge_mask(projection, size)
@@ -787,10 +825,13 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
     material_pond_mask = (biome == BIOMES["lake"]) & land_array
     material_pond_pixels = int(material_pond_mask.sum())
-    if material_pond_pixels != 43:
+    expected_material_pond_pixels = sum(
+        lake_pixel_areas[key] for key in MATERIAL_POND_KEYS
+    )
+    if material_pond_pixels != expected_material_pond_pixels:
         raise ValueError(
             "sub-location source pond footprint changed without review: "
-            f"{material_pond_pixels} != 43 pixels"
+            f"{material_pond_pixels} != {expected_material_pond_pixels} pixels"
         )
     material_pond_height = [
         int(elevation[material_pond_mask].min()),
@@ -926,6 +967,8 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "lakes": len(projection["lakes"]),
         "engine_water_lakes": len(projection["lakes"]) - len(MATERIAL_POND_KEYS),
         "material_pond_keys": sorted(MATERIAL_POND_KEYS),
+        "material_pond_max_source_pixels": MATERIAL_POND_MAX_SOURCE_PIXELS,
+        "source_lake_pixel_areas": lake_pixel_areas,
         "material_pond_pixels": material_pond_pixels,
         "material_pond_height": material_pond_height,
         "land_fraction": round(float(land_array.mean()), 6),

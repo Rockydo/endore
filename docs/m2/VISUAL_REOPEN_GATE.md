@@ -204,3 +204,24 @@ The gate is green only when all of the following are true:
 - Paired smoke has zero mod-unique lines; fresh non-debug Observer loads and advances with
   zero mod-caused map, terrain, river, locator, or renderer diagnostics.
 - The map receives explicit owner-quality acceptance before M5 gameplay work resumes.
+
+## Current load-safe intermediate — generator v28
+
+Generator v28 retains the source-pinned movement and height model but replaces hard
+material bands with a continuous field following all source ridge axes, branches, and
+named peaks plus smoothed slope, altitude, and deterministic organic variation. Fresh
+Khazad-dum evidence shows a more coherent crest-following massif, although the exposed-
+rock fringe still needs softening and the complete nine-theatre review remains
+outstanding.
+
+The inland-water correction is systematic: all ten source lakes occupying at most 64
+control pixels remain exact wet-material polygons over continuous terrain, while the five
+larger lakes remain engine water. Fresh Mirrormere evidence removes the former deep
+rectangular quarry but still rejects the flat replacement as final scenery.
+
+The current exact game-visible fingerprint is `8ca808d7`. Paired smoke has zero new and
+zero mod-unique lines. Two independent cold full-visual New Games reached country
+selection and HUD-proven live Observer in 115-117 seconds. The corrected state-aware
+monitor resumed exactly once and advanced from 3018.1.1 through 3018.1.15; the subsequent
+Khazad-dum focus continued through 3018.2.1 with no error-log growth. This proves the map
+loads and ticks; it does not green the physical-quality gate.
