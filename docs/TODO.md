@@ -4,18 +4,18 @@
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
    receives explicit owner acceptance. The current source-audited runtime tree loads,
    but the nine-theatre visual gate remains red.
-2. REOPENED M2 MOUNTAINS — retain the live-proven v25
-   foothill-envelope/source-peak/saddle height model and slope-aware materials. The first
-   ridge-feather cache missed the post-cache interactivity bound twice and is rejected;
-   do not relaunch fingerprint `0f65a5e`. Revisit the coarse rock ribbons only through a
-   materially different representation or after an independent runtime cause is found.
-3. REOPENED M2 INLAND WATER — the v27 material-pond representation for the three
-   sub-location Arda Maps pools east of Hobbiton missed the post-cache interactivity
-   bound twice and is rejected. Do not relaunch it. The runtime is restored to v25
-   engine-water semantics while exact source outlines remain binding. The visible
-   cell-shaped quarry is therefore an acknowledged red defect; pursue only a materially
-   different representation, potentially by omitting these sub-location physical water
-   cells while retaining their source record for later scenery support.
+2. REOPENED M2 MOUNTAINS — retain the source-pinned foothill/axis/peak/saddle height
+   model and the v26 neutral renderer template for all 600 separately impassable mountain
+   cells. Fresh close evidence proves that this removes the giant location-shaped
+   `mountain_wasteland` slabs without opening the ranges. Next replace the remaining
+   coarse exposed-rock ribbons/islands with a more organic slope/crest representation and
+   improve regional ridge readability without moving binding axes, peaks, or passes.
+3. REOPENED M2 INLAND WATER — retain the v26 material-pond representation for the three
+   sub-location Arda Maps pools east of Hobbiton on the release-safe 6,004-location tree.
+   All three exact source polygons remain in the atlas and wet material cache, but no
+   longer classify their host cells as engine water; fresh Hobbiton evidence proves the
+   deep rectangular quarries are gone. Improve their subtle close-zoom water/scenery read
+   later without restoring engine-water cells or changing the source outlines.
 4. REOPENED M2 BELFALAS — preserve the hash-pinned Arda Maps mainland ring: the apparent
    inlet is backed by 2,043 raw Belfalas-window source vertices and the committed
    simplification deviates by at most roughly three location-raster pixels. Treat the
@@ -40,9 +40,9 @@
    Gondor/Belfalas, Mordor, Rhûn, and Harad after each accepted physical batch. Run fresh
    Observer and paired smoke with zero mod-caused diagnostics. Do not reduce q64 or any
    source geometry to improve runtime. Fresh New Game is green on fingerprint
-   `f0cff53e`: the 6,004-location / 2.04M-object tree reached country selection and live
-   Observer in 135 seconds, then advanced through 3018.1.7 at about 8.6 GB private
-   memory. Preserve this release-safe runtime budget, all canonical-forest detail floors,
+   `e9d3a5f0`: the 6,004-location / 2.04M-object v26 tree reached country selection and
+   live Observer in 115 seconds, then advanced through 3018.1.10. Preserve this
+   release-safe runtime budget, all canonical-forest detail floors,
    and the independent full-resolution physical controls while capturing the nine
    required terrain theatres. Do not restore the quarantined July navmesh or relaunch
    the superseded 12,104-location fingerprints.

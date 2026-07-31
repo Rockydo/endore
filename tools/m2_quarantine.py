@@ -689,7 +689,11 @@ def write() -> None:
                 # Preserve authored mod files; the sweep only owns generated overlays.
                 continue
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(text, encoding="utf-8-sig")
+        # The installed mirrors are declared ``-text`` in .gitattributes so
+        # Git will not normalize them for us. Force deterministic LF bytes on
+        # Windows; otherwise each topology-triggered rewrite churns hundreds
+        # of semantically identical overlays into CRLF form.
+        path.write_text(text, encoding="utf-8-sig", newline="\n")
     MANIFEST.write_text(
         json.dumps(sorted(payloads), indent=2) + "\n",
         encoding="utf-8",

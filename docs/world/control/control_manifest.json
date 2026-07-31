@@ -15,7 +15,18 @@
   "passes": 10,
   "rivers": 24,
   "lakes": 15,
-  "land_fraction": 0.46457,
+  "engine_water_lakes": 12,
+  "material_pond_keys": [
+    "minor_lake_10",
+    "minor_lake_11",
+    "minor_lake_12"
+  ],
+  "material_pond_pixels": 43,
+  "material_pond_height": [
+    12422,
+    12445
+  ],
+  "land_fraction": 0.464575,
   "land_bbox_pixels": [
     582,
     0,

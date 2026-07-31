@@ -65,6 +65,14 @@ RIVER_INCISION_SAMPLE = 1450.0
 # counterpart. Reserve it for genuinely high crest islands; regional audit
 # showed that 0.56 still painted broad white slabs through the White Mountains.
 MOUNTAIN_BIOME_THRESHOLD = 0.68
+# These exact Arda Maps pools east of Hobbiton are substantially smaller than
+# one runtime location. Engine-water classification turns each host cell into
+# a deep quarry regardless of its authored shoreline. Preserve the source
+# polygons as wet material controls while keeping the heightfield and location
+# topology continuous beneath them.
+MATERIAL_POND_KEYS = frozenset(
+    {"minor_lake_10", "minor_lake_11", "minor_lake_12"}
+)
 
 
 @dataclass(frozen=True)
@@ -102,6 +110,10 @@ def validate_geometry_contract(projection: dict) -> None:
             )
         if len(lake["coords"]) < 4:
             raise ValueError(f"lake {lake['key']} lacks shoreline detail")
+    lake_keys = {lake["key"] for lake in projection["lakes"]}
+    if not MATERIAL_POND_KEYS <= lake_keys:
+        missing = sorted(MATERIAL_POND_KEYS - lake_keys)
+        raise ValueError(f"material source ponds are missing: {missing}")
     for zone in projection["biome_zones"]:
         if zone["biome"] not in {"forest", "dense_forest"}:
             continue
@@ -391,6 +403,8 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             key=f"island:{key}",
         )
     for lake in projection["lakes"]:
+        if lake["key"] in MATERIAL_POND_KEYS:
+            continue
         draw_shape(
             image,
             lake["shape"],
@@ -771,6 +785,19 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     )
     elevation += np.where(land_array, doom_relief, 0.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
+    material_pond_mask = (biome == BIOMES["lake"]) & land_array
+    material_pond_pixels = int(material_pond_mask.sum())
+    if material_pond_pixels != 43:
+        raise ValueError(
+            "sub-location source pond footprint changed without review: "
+            f"{material_pond_pixels} != 43 pixels"
+        )
+    material_pond_height = [
+        int(elevation[material_pond_mask].min()),
+        int(elevation[material_pond_mask].max()),
+    ]
+    if material_pond_height[0] <= ENGINE_WATER_LEVEL_SAMPLE:
+        raise ValueError("material pond terrain fell below the engine water plane")
     minimum_land_height = int(elevation[land_array].min())
     maximum_water_height = int(elevation[~land_array].max())
     if minimum_land_height <= ENGINE_WATER_LEVEL_SAMPLE:
@@ -897,6 +924,10 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "passes": len(projection["passes"]),
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),
+        "engine_water_lakes": len(projection["lakes"]) - len(MATERIAL_POND_KEYS),
+        "material_pond_keys": sorted(MATERIAL_POND_KEYS),
+        "material_pond_pixels": material_pond_pixels,
+        "material_pond_height": material_pond_height,
         "land_fraction": round(float(land_array.mean()), 6),
         "land_bbox_pixels": land_bbox,
         "land_bbox_occupancy": land_bbox_occupancy,

@@ -113,6 +113,20 @@ both permitted fresh New Games missed the post-cache interactivity bound without
 diagnostic. Generator v27 is rejected and restored to the v25 engine-water baseline; do
 not relaunch it. The source outlines remain binding, while the visible tiny-water quarry
 remains an explicit red defect requiring a genuinely different representation.
+
+The later runtime investigation proved that those v27 misses were evaluations on the
+unreliable 12,104-location memory cliff, not renderer verdicts. The same representation
+was therefore reintroduced as generator v26 only after reducing runtime topology to the
+fresh-load-proven 6,004-location budget. On fingerprint `e9d3a5f0`, paired smoke passed
+and a fresh non-debug full-visual New Game reached country selection and live Observer in
+115 seconds, then advanced through 3018.1.10. Fresh Hobbiton captures show continuous
+ground with no rectangular water quarry. Separately, neutral surface templates for all
+600 map-config-impassable mountain cells remove the giant grey/white location slabs in
+the Khazad-dûm theatre while retaining the continuous source relief.
+
+This is a retained intermediate correction, not gate acceptance. The new Khazad-dûm
+regional capture still rejects patchy/geometric exposed-rock masks, several ranges need
+stronger 3D readability, and the complete nine-theatre evidence set remains outstanding.
 M2 remains blocking.
 
 ## Binding defects

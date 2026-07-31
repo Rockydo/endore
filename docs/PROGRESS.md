@@ -627,3 +627,19 @@
   private memory; an in-game speed-control test advanced from 3018.1.1 to 3018.1.7.
   Evidence: `docs/screens/20260731_runtime_budget_6004/`. Fresh start-game loading is
   green again; M2 remains red only for the required physical-map visual acceptance.
+- The first refinement on the release-safe 6,004-location tree separates movement
+  topology from renderer presentation. All 600 mountain cells remain listed under
+  `impassable_mountains`, but now use the same neutral surface template as ordinary land;
+  continuous q64 height and material controls alone paint the ranges. The three exact
+  Arda Maps pools east of Hobbiton remain 43 source-control pixels at height
+  12,422–12,445, but use wet material over physical land instead of converting whole
+  runtime cells into engine water. The other 12 source lakes retain true water.
+- Validation passed with 174,763 Arda-owned cache tiles and zero Earth decals/transforms.
+  Paired smoke passed on fingerprint
+  `e9d3a5f08c529fdede1e9f2d0a6bb4f55b0bd90c38da0c011832d0261f13693b` with zero
+  new lines and no mod-unique diagnostics. A fresh non-debug full-visual New Game reached
+  country selection and live Observer in 115 seconds, then advanced through 3018.1.10.
+  Evidence under `docs/screens/20260731_m2_neutral_mountains_ponds/` proves that the giant
+  grey/white mountain-location slabs and Hobbiton water quarries are gone. It also keeps
+  M2 honestly red: exposed rock remains patchy/geometric at regional zoom, several ranges
+  need stronger physical readability, and the full nine-theatre refresh is outstanding.

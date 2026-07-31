@@ -94,14 +94,14 @@ def template_text(model: WorldModel) -> str:
         elif location.kind == "lake":
             fields = ["topography = lakes", f"climate = {location_climate}"]
         elif location.kind == "mountain":
-            # These generated cells are the explicitly impassable range
-            # cores, not ordinary highland locations. Vanilla assigns its
-            # Alpine, Pyrenean, Scandinavian, and similar impassable crests
-            # ``mountain_wasteland`` even under continental forest/sparse
-            # vegetation. Using the passable ``mountains`` topography left a
-            # verified 60k-height crest painted as green rolling country.
-            topography = "mountain_wasteland"
-            vegetation = "desert" if biome_id in (8, 10) else "sparse"
+            # Passability is owned independently by default.map's explicit
+            # ``impassable_mountains`` section. A mountain_wasteland template
+            # repaints each generated crest location as a giant grey/white
+            # polygon, hiding the continuous source relief beneath it. Keep
+            # the renderer neutral here: the q64 heightfield and semantic
+            # material cache still provide rock, snow, and volcanic ground.
+            topography = "flatland"
+            vegetation = "grasslands"
             fields = [
                 f"topography = {topography}",
                 f"vegetation = {vegetation}",
@@ -155,6 +155,17 @@ def check() -> list[str]:
     )
     if expected.count("climate = me_arda_surface") != rendered_land_count:
         failures.append("continuous rendering climate does not cover every land cell")
+    mountain_count = sum(
+        location.kind == "mountain" for location in model.locations
+    )
+    neutral_mountain_template = (
+        "topography = flatland vegetation = grasslands "
+        "climate = me_arda_surface }"
+    )
+    if expected.count(neutral_mountain_template) != mountain_count:
+        failures.append("impassable mountain renderer templates are not neutral")
+    if "mountain_wasteland" in expected:
+        failures.append("cell-shaped mountain_wasteland rendering survives")
     if M4_CULTURES.is_file():
         if expected.count(" culture = me_") != land_count:
             failures.append("M4 culture assignments are incomplete")

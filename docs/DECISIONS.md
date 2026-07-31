@@ -742,3 +742,24 @@ the transition-state parser in canonical validation.
 Fresh Git worktrees must also reproduce generator-authored LF bytes despite this
 machine's global `core.autocrlf=true`. Enforce LF for repository text in `.gitattributes`
 while exempting exact installed event mirrors from text normalization.
+
+## 2026-07-31 — Separate impassability from mountain surface presentation
+
+`default.map` owns mountain movement through its explicit `impassable_mountains` list;
+location topography is not required to enforce that rule. Keep all 600 generated range
+cells in the impassable list, but give them the neutral `flatland` / `grasslands` /
+`me_arda_surface` renderer template used by continuous land. The q64 heightfield and
+semantic material cache remain the sole visual owners of rock, snow, slope, and volcanic
+ground. Fresh Khazad-dûm evidence proves this removes giant cell-shaped
+`mountain_wasteland` slabs without changing the source relief or opening the range.
+
+## 2026-07-31 — Keep sub-location Shire pools out of engine-water topology
+
+The exact Arda Maps polygons `minor_lake_10`, `minor_lake_11`, and `minor_lake_12` occupy
+only 43 pixels in the 4096×2048 control atlas and are substantially smaller than a runtime
+location. Engine-water classification therefore replaces an entire host cell with a deep
+rectangular quarry. Preserve the three polygons as lake-biome wet material at their
+source coordinates over continuous dry topology; retain the other 12 source lakes as
+true engine water. This representation is now admissible because the independent
+6,004-location runtime fix proved a fresh full-visual load, unlike the earlier v27 test on
+the unreliable 12,104-location memory cliff.
