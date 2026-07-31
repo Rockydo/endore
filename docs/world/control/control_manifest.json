@@ -16,6 +16,22 @@
   "rivers": 24,
   "lakes": 15,
   "land_fraction": 0.46457,
+  "land_bbox_pixels": [
+    582,
+    0,
+    3460,
+    2047
+  ],
+  "land_bbox_occupancy": [
+    0.702881,
+    1.0
+  ],
+  "land_edge_contact": {
+    "west": 0,
+    "east": 0,
+    "north": 1846,
+    "south": 1672
+  },
   "engine_water_level_sample": 5466,
   "minimum_land_height": 10463,
   "maximum_water_height": 420,
@@ -32,5 +48,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "4ed8adea3ce6825cdad4ee78a75205b0e9fdf4a109929acacb6bb8125f4791a4"
+  "source_sha256": "ba488c85c415f2191bfe044cd3f1f96dcfaced4cef23895765866961a07d3a63"
 }

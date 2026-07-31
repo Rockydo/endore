@@ -518,3 +518,55 @@
   with zero new error lines and zero mod-unique diagnostics. This greens the component
   batch's integration contract only; close-zoom material feathering, the other physical
   defects, the nine-theatre audit, and explicit owner acceptance keep M2 red.
+- A source-ridge feathered material candidate was statically valid but missed the
+  600-second post-cache interactivity bound twice on identical fingerprint `0f65a5e5`,
+  including a repeat begun with 23 GB free RAM. It emitted no map/material diagnostic,
+  was logged in `BLOCKERS.md`, and was fully reverted. The working runtime is byte-exact
+  to the pushed/smoked v25 cache.
+- The scale audit measures a 70.29%-wide by 100%-high land bounding box with land already
+  touching both vertical crop edges. Uniform enlargement would clip binding north/south
+  geography, so the equal-scale projection is retained. Belfalas likewise remains on
+  its hash-pinned source ring: 2,043 raw vertices cover the audited window and the
+  committed simplification is already sub-location-pixel precise.
+- The first alternate small-water representation generated coherently but failed its
+  runtime gate. The three exact Arda Maps pools east of Hobbiton were tested as
+  lake-biome polygons over continuous dry terrain with wet pond and transition material.
+  Both permitted fresh New Games completed setup/cache work and then missed the
+  600-second post-cache interactivity bound without a diagnostic. Generator v27 is
+  rejected and removed; the runtime returns to the v25 engine-water baseline.
+- Cartographic validation now hash-pins the complete reviewed projection geometry in
+  addition to its feature counts and landmark tolerances. Any future movement of a coast,
+  island, lake, mountain, summit, pass, woodland, river, or density envelope must be an
+  explicit source-review event rather than an unnoticed generator drift.
+- A fresh in-memory rebuild against the quarantined, hash-verified Arda Maps payload
+  reproduced the committed projection exactly: 1,251 mainland vertices, 15 lakes, 43
+  mountain footprints, 18 named peaks, all 15 named forests, and 24 rivers with 816
+  retained vertices. This verifies source reproducibility without copying the raw map
+  payload into the repository.
+- The final cached v27 decorative-pond repeat independently completed menu and
+  setup/cache transition but remained nonresponsive for 600 seconds and shut down
+  cleanly. Together with the first actual attempt this exhausts the route's two-strike
+  allowance. The intervening Antiquitas lock deferrals never launched EU5 and remain
+  correctly excluded from the strike count. No renderer verdict exists for v27.
+- The Harnen no longer uses an eight-point manual diagonal. An unnamed 216-vertex Arda
+  Maps channel in the exact Harnen corridor now supplies 49 retained bends, followed by
+  only two reconciled points to its source-coast mouth. The obsolete farther-west mouth
+  was rejected after the native river gate proved that it crossed sea and re-entered
+  land. The formerly four-point Morgulduin now follows the matching unnamed 40-vertex
+  source channel as well. The coherent 12,104-location world rebuilt with 816 total river
+  vertices, 79,924 unique height tiles, 63,583 material tiles, and a parser-green indexed
+  river raster.
+- After v27's second runtime strike, the complete world was regenerated with v25
+  engine-water and material semantics while retaining the source-pinned projection,
+  Harnen, Morgulduin, equal-scale safeguards, and all 24 source-derived river axes. The
+  clean restoration produced the same 12,104-location topology, 79,924 unique height
+  tiles, 63,583 unique material tiles, and zero Earth-authored map objects or decals.
+- The first validation after restoration correctly caught pond-era generated controls
+  that `m2_world --write` consumes but does not author. No mixed tree was accepted:
+  `m2_controls.py --write` regenerated the binding water masks first, then a second full
+  world build regenerated every downstream asset. Repository-wide validation passed on
+  that consistent tree. Paired vanilla/mod smoke then passed on exact game-visible
+  fingerprint `b838a130d24989fdf86d77212f3b5cf4e21fc66fa2553091eb55b84572e4a64d`
+  with zero new error lines and zero mod-unique diagnostics. This greens the source-river
+  integration and v25 restoration batch only; M2 remains red pending physical-map visual
+  acceptance.

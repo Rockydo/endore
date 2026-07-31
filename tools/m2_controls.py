@@ -849,6 +849,35 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     source_hash = hashlib.sha256(
         PROJECTION.read_bytes() + b"\0" + SETTLEMENTS.read_bytes()
     ).hexdigest()
+    land_y, land_x = np.where(land_array)
+    land_bbox = [
+        int(land_x.min()),
+        int(land_y.min()),
+        int(land_x.max()),
+        int(land_y.max()),
+    ]
+    land_bbox_occupancy = [
+        round((land_bbox[2] - land_bbox[0] + 1) / size[0], 6),
+        round((land_bbox[3] - land_bbox[1] + 1) / size[1], 6),
+    ]
+    land_edge_contact = {
+        "west": int(land_array[:, 0].sum()),
+        "east": int(land_array[:, -1].sum()),
+        "north": int(land_array[0, :].sum()),
+        "south": int(land_array[-1, :].sum()),
+    }
+    # The equal-scale projection deliberately fills the north/south extent
+    # while retaining honest western ocean and eastern margin. Stretching or
+    # recentering it to make the playable land appear larger would either clip
+    # Forochel/Far Harad or falsify physical distances.
+    if land_bbox_occupancy[1] != 1.0:
+        raise ValueError("equal-scale source no longer fills the vertical extent")
+    if not 0.69 <= land_bbox_occupancy[0] <= 0.72:
+        raise ValueError("equal-scale source width occupancy changed without review")
+    if land_edge_contact["north"] < 1_500 or land_edge_contact["south"] < 1_400:
+        raise ValueError("binding north/south source extent was clipped")
+    if land_edge_contact["west"] or land_edge_contact["east"]:
+        raise ValueError("binding western ocean/eastern margin was lost")
     images = {
         "coastline.png": land,
         "elevation.png": elevation_image,
@@ -869,6 +898,9 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),
         "land_fraction": round(float(land_array.mean()), 6),
+        "land_bbox_pixels": land_bbox,
+        "land_bbox_occupancy": land_bbox_occupancy,
+        "land_edge_contact": land_edge_contact,
         "engine_water_level_sample": ENGINE_WATER_LEVEL_SAMPLE,
         "minimum_land_height": minimum_land_height,
         "maximum_water_height": maximum_water_height,

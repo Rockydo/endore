@@ -105,6 +105,14 @@ Khazad-dûm/Dunharrow/Goblin-town/Orodruin prove physical slopes, crests, and th
 Mount Doom. Slope-aware material selection removes the former whole-polygon grey plates,
 but the same close views reject coarse exposed-rock ribbons/islands and the still-crude
 political-cell scale. This is a retained component improvement, not gate acceptance.
+The first source-ridge material-feather attempt then exhausted two post-cache fresh-load
+attempts without renderer evidence and was reverted to the smoke-green v25 baseline.
+The first materially different Shire-pool candidate kept all three source outlines as
+wet material over continuous land rather than engine water. It passed static checks but
+both permitted fresh New Games missed the post-cache interactivity bound without a
+diagnostic. Generator v27 is rejected and restored to the v25 engine-water baseline; do
+not relaunch it. The source outlines remain binding, while the visible tiny-water quarry
+remains an explicit red defect requiring a genuinely different representation.
 M2 remains blocking.
 
 ## Binding defects

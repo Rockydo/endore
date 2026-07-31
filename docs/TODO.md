@@ -4,29 +4,37 @@
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
    receives explicit owner acceptance. The current source-audited runtime tree loads,
    but the nine-theatre visual gate remains red.
-2. REOPENED M2 MOUNTAINS — retain the live-proven foothill-envelope/source-peak/saddle
-   height model and slope-aware material pass. Physical ridges now render at Khazad-dûm,
-   Dunharrow, and Goblin-town without the former whole-polygon grey plates, but exposed
-   rock still breaks into coarse ribbons and islands at close zoom. Replace hard local
-   slope thresholds with source-ridge-aligned feathering, preserve all 18 exact named
-   peaks and 10 passes, and repeat the same exact-location comparison. M2 remains red.
-3. REOPENED M2 INLAND WATER — do not repeat the two rejected engine-lake experiments.
-   Keep all 15 audited source outlines. Prototype a non-engine-water scenery or
-   topology-aware representation for source pools smaller than one runtime location,
-   starting east of Hobbiton; it must read as shallow natural water, never a quarry.
-4. REOPENED M2 BELFALAS — reauthor the rounded internal inlet near Dol Amroth from the
-   source coastline at full native resolution, then verify its headlands, estuary,
-   shoreline shelf, and material band at regional and maximum-close zoom.
+2. REOPENED M2 MOUNTAINS — retain the live-proven v25
+   foothill-envelope/source-peak/saddle height model and slope-aware materials. The first
+   ridge-feather cache missed the post-cache interactivity bound twice and is rejected;
+   do not relaunch fingerprint `0f65a5e`. Revisit the coarse rock ribbons only through a
+   materially different representation or after an independent runtime cause is found.
+3. REOPENED M2 INLAND WATER — the v27 material-pond representation for the three
+   sub-location Arda Maps pools east of Hobbiton missed the post-cache interactivity
+   bound twice and is rejected. Do not relaunch it. The runtime is restored to v25
+   engine-water semantics while exact source outlines remain binding. The visible
+   cell-shaped quarry is therefore an acknowledged red defect; pursue only a materially
+   different representation, potentially by omitting these sub-location physical water
+   cells while retaining their source record for later scenery support.
+4. REOPENED M2 BELFALAS — preserve the hash-pinned Arda Maps mainland ring: the apparent
+   inlet is backed by 2,043 raw Belfalas-window source vertices and the committed
+   simplification deviates by at most roughly three location-raster pixels. Treat the
+   remaining defect as shoreline/material/location presentation, not permission to
+   invent a different bay. Verify regional and maximum-close zoom after the pond probe.
 5. REOPENED M2 RIVERS/FORESTS — verify readable Anduin, Baranduin, Greyflood, Isen,
    Celduin, Carnen, Poros, and Harnen channels plus Fangorn, Old Forest, Lórien, and
    Ithilien canopy. Preserve source axes, downstream width grammar, porous margins,
-   river clearances, and zero Earth transforms/decals.
-6. REOPENED M2 SCALE/GRANULARITY — measure the equal-scale landmass occupancy and the
-   visible kilometres-per-material-pixel/location in the current projection. If
-   recentering/enlarging the source frame materially improves coast, ridge, river, and
-   location precision without clipping the planned extent, perform that controlled
-   reprojection before further political tessellation polish. Up to roughly 50% fewer
-   locations than vanilla is acceptable; cartographic geometry and lore anchors are not.
+   river clearances, and zero Earth transforms/decals. Harnen now uses the matching
+   unnamed Arda Maps source channel plus only a two-point coast continuation; do not
+   restore the rejected straight diagonal or farther-west mouth. Morgulduin likewise
+   uses its matching unnamed source line. All 24 production river axes are now
+   source-derived.
+6. REOPENED M2 SCALE/GRANULARITY — the measured source frame already occupies 100% of
+   canvas height and 70.3% of width, with substantial land contact at both north and
+   south crop edges. Do not enlarge uniformly: it would clip Forochel or Far Harad.
+   Preserve equal physical scale and improve close precision through physical controls
+   and later tessellation. Up to roughly 50% fewer locations than vanilla is acceptable;
+   source geometry and lore anchors are not.
 7. REOPENED M2 NINE-THEATRE GATE — refresh full/regional/close evidence for Shire/Old
    Forest, Forochel, Misty Mountains/Anduin, Mirkwood, Rohan/White Mountains,
    Gondor/Belfalas, Mordor, Rhûn, and Harad after each accepted physical batch. Run fresh

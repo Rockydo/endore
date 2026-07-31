@@ -323,3 +323,42 @@ preserving Mount Doom's crater. Do not return to the two exhausted routes. The r
 defect is a new material-feathering task: hard slope thresholds form coarse rock ribbons
 and islands at close zoom. Evidence:
 `docs/screens/20260731_m2_slope_material_probe/`. M2 remains red.
+
+## 2026-07-31 — Ridge-feather material v26 fresh-load envelope
+
+Status: two-strike runtime blocker; candidate rejected and baseline restoration required.
+
+Generator v26 replaced hard slope-only rock thresholds with a feathered field around the
+nine audited ridge axes, their branches, and 18 exact named peaks. Its q64 height payload
+was unchanged and its material cache remained approximately 28.1 MB with 63,596 unique
+tiles. Two fresh debug visual New Games on identical runtime fingerprint
+`0f65a5e5bcdbbb695b9366bbc88b54f673a7cb8183470ffbe070115c61e9e2b4` reached healthy
+menus, accepted New Game, completed setup/cache work, and then remained nonresponsive
+for the full 600-second post-cache bound. The second began with 23 GB free RAM. Neither
+attempt emitted a map, material, cache, river, or locator diagnostic.
+
+Do not launch this exact v26 cache a third time. It has no renderer evidence and is not
+eligible to replace the smoke-green v25 slope-aware baseline. Restore v25, then revisit
+ridge feathering only through a materially different cache representation or after an
+independent runtime cause is identified. Evidence:
+`docs/screens/20260731_m2_ridge_feather_probe/` and
+`docs/screens/20260731_m2_ridge_feather_probe_repeat/`.
+
+## 2026-07-31 — Decorative Shire-pond material v27 fresh-load envelope
+
+Status: two-strike runtime blocker; candidate rejected and v25 restoration required.
+
+Generator v27 kept `minor_lake_10`, `minor_lake_11`, and `minor_lake_12` as exact
+lake-biome footprints over continuous dry terrain and selected wet river/transition
+material instead of engine water. Two actual fresh visual New Games completed the menu,
+accepted New Game, and completed setup/cache work, then remained nonresponsive for the
+full 600-second post-cache interactivity bound without a rendered country-selection
+window. Neither emitted a map, material, terrain-cache, river, or locator diagnostic.
+Several intervening attempts deferred before launch because Antiquitas owned the shared
+EU5 lease and do not count as runtime strikes.
+
+Do not launch this exact v27 representation again. It has no renderer evidence and may
+not replace the live- and smoke-proven v25 engine-water baseline. Preserve the
+hash-pinned source pool outlines, but pursue only a materially different runtime route.
+Evidence: `docs/screens/20260731_m2_decorative_pond_probe_live/` and
+`docs/screens/20260731_m2_source_rivers_pond_final/`.
