@@ -32,17 +32,16 @@ BIOME_W, BIOME_H = HEIGHT_W - 1, HEIGHT_H - 1
 SEED = 3018
 
 # The installed native 16384x8192 map registers 28,490 locations. Both the
-# exact-count tree and a 14,245-cell source-frame tree exhausted the target
-# machine's bounded fresh-game renderer transition. The last reliably live
-# ENDÓRË topology contained 12,104 cells with only 520 impassable mountains.
-# Preserve that proven aggregate and the full-resolution physical source, but
-# use 1,200 mountain cells—over twice the live baseline—rather than 2,700.
-# The 2,700-cell variant still exhausted the renderer after both total-count
-# and vegetation reductions. Cartographic precision lives in the authored
-# coast/height/river/biome controls and is not rescaled by this runtime budget.
+# exact-count tree and progressively smaller 14,245- and 12,104-cell trees
+# reached the target machine's fresh-game renderer memory cliff. The latter
+# loaded twice, but later byte-exact repeats exhausted 32.4 GB of private
+# memory after cached-data completion and never rendered country selection.
+# Keep a release-safe margin with roughly half that political tessellation.
+# Cartographic precision lives in the independent authored coast, height,
+# river, forest, biome, and q64 terrain controls; none is rescaled here.
 TARGETS = {
-    "land": 10_700,
-    "mountain": 1_200,
+    "land": 5_200,
+    "mountain": 600,
     "lake": 60,
     "sea": 144,
 }

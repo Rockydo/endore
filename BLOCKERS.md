@@ -403,3 +403,64 @@ map-transition input or isolate the country-selection renderer workload without 
 the binding source geometry or q64 physical precision. Evidence:
 `docs/screens/20260731_m2_city_material_contract/` and
 `docs/screens/20260731_m2_city_material_contract_repeat/`.
+
+## 2026-07-31 — Live-proven-v25 byte A/B at country selection
+
+Status: two-strike diagnostic blocker; source-river payload exonerated.
+
+An isolated G:-only worktree combined the last live-proven v25 terrain/cache/river/
+flatmap/vegetation bytes from `789d2d1` with only the retained BOM-correct city-material
+registry. After one foreground-lock run was discarded before transition, two
+PID-verified attempts on fingerprint
+`86972304735a2d53ed3eebcd003dbe5f0e5ec25867a73ae2b8d8343e65abeace`
+both started MainMenu-to-Game, completed setup/cache detection, and then remained
+nonresponsive for the full 600-second post-cache bound.
+
+Do not launch this diagnostic fingerprint again. Because the failure reproduces before
+the source-derived Harnen/Morgulduin river raster, local incision/material tiles,
+flatmap, and 12 altered woods bins are present, none of those changes is the
+discriminating cause. Preserve the source-backed rivers. Treat the current issue as a
+broader country-selection/runtime-environment blocker and change an independent load
+input before further deep testing. Evidence:
+`docs/screens/20260731_diag_baseline_v25_city_focus/` and
+`docs/screens/20260731_diag_baseline_v25_city_focus_repeat/`.
+
+## 2026-07-31 — Fresh user-cache country-selection route
+
+Status: two-strike runtime blocker; stale cache removed but fresh New Game still blocked.
+
+The ENDÓRË user directory contained a 2.4 GB shader cache dated 28 July and a 479 MB
+generated `gfx` tree whose 350 MB `navmesh2.cache` dated from 29 July, before the current
+Arda map. Both derived directories were moved recoverably to
+`G:\endore_runtime\quarantine\20260731_pre_fresh_map_cache`; saves, logs, settings, and
+playsets were untouched. The first cold run rebuilt 333 MB of shaders and a fresh 128 MB
+Arda flatmap, reached MainMenu-to-Game state 2 in 127 seconds, but did not complete state
+4 within the 600-second transition bound. A warm repeat completed setup/cache detection
+but remained nonresponsive for the complete 600-second post-cache bound. No stale
+navmesh was regenerated or inherited.
+
+Do not repeat this exact fresh-cache New Game route. Keep the new Arda-derived cache and
+the quarantined old copy; do not restore the July navmesh. Switch to the compatible
+live-proven Observer save route for renderer evidence while investigating fresh country
+selection separately. Evidence: `docs/screens/20260731_m2_fresh_user_cache/` and
+`docs/screens/20260731_m2_fresh_user_cache_repeat/`.
+
+## 2026-07-31 — Fresh country-selection renderer memory envelope
+
+Status: resolved by a geometry-preserving runtime budget.
+
+A corrected one-click/state-aware 900-second run on the 12,104-location,
+4,077,285-object fingerprint completed MainMenu-to-Game state 4 and every cached-data
+recalculation, then remained nonresponsive without a country-selection frame. EU5 held
+32.42 GB private memory and continuously paged. Earlier exact-byte worktree repeats prove
+that later source rivers and relief are not the discriminating cause: the formerly
+successful tree was operating at an unreliable memory cliff.
+
+The replacement keeps every binding physical source and the 174,763-entry q64 cache, but
+uses 6,004 runtime locations and 2,038,645 derived vegetation transforms. Full validation
+and paired smoke passed. Fresh New Game reached a calibrated country-selection frame,
+entered live Observer in 135 seconds at about 8.62 GB private memory, and advanced through
+3018.1.7. Fresh start-game loading is no longer blocked. Do not restore the quarantined
+July navmesh or relaunch the superseded 12,104-location fingerprints. Evidence:
+`docs/screens/20260731_current_joined_transition_fix/` and
+`docs/screens/20260731_runtime_budget_6004/`.

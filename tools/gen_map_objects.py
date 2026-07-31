@@ -34,7 +34,7 @@ from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 8
+GENERATOR_VERSION = 9
 
 
 @dataclass(frozen=True)
@@ -58,7 +58,7 @@ FAMILIES = (
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (480_674, 239_593, 238_572),
+        (240_337, 119_797, 119_286),
         (0.72, 0.92),
     ),
     Family(
@@ -71,7 +71,7 @@ FAMILIES = (
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (177_807, 89_635, 94_908),
+        (88_904, 44_818, 47_454),
         (0.68, 0.88),
     ),
     Family(
@@ -84,18 +84,18 @@ FAMILIES = (
             "vegetation_diorama_arctic_tree3_mesh",
             "vegetation_diorama_arctic_tree4_mesh",
         ),
-        (1_382_487, 690_990, 682_619),
+        (691_244, 345_495, 341_310),
         (0.70, 0.86),
     ),
 )
 LODS = ("high", "medium", "low")
-# Forty percent of the installed per-family/LOD population remains ten times
-# denser than the rejected 420k proof and preserves every retail ratio. The
-# exact installed 10.2m set expanded fresh New Game residency to ~23.5 GB and
-# exhausted both normal and debug checkpoint routes on the 32 GB target host.
-# This changes only derived 3D object density; the biome/forest controls and
-# gameplay vegetation assignments remain full resolution.
-EXPECTED_RECORDS = 4_077_285
+# Twenty percent of the installed per-family/LOD population remains nearly
+# five times denser than the rejected 420k proof and preserves every retail
+# ratio. The 4.08m set contributed to a 32.4 GB fresh-game private allocation
+# when combined with the 12,104-cell political tree. This changes only derived
+# 3D object density; biome/forest controls and gameplay vegetation assignments
+# remain full resolution, with canonical-forest high-detail floors retained.
+EXPECTED_RECORDS = 2_038_645
 FOREST_ZONE_MINIMUM_HIGH_DETAIL = {
     "fangorn": 50_000,
     # Source-area-scaled floors: Old Forest is compact, while Ithilien is a
@@ -108,9 +108,9 @@ FOREST_ZONE_HIGH_DETAIL_BOOST = {
     # Reallocate a small fraction of the fixed high-LOD budget into the
     # canonical forest theatres. Global downscaling without this stratification
     # passed total-density checks while starving compact/narrow source zones.
-    "fangorn": 3.0,
-    "old_forest": 3.0,
-    "lothlorien": 2.5,
+    "fangorn": 5.0,
+    "old_forest": 5.0,
+    "lothlorien": 4.0,
     "ithilien": 6.0,
 }
 

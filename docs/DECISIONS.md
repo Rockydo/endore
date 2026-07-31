@@ -693,3 +693,52 @@ the map transition. Add the same key under `gfx/city_materials` and inherit the 
 `default_biome` road/decal stack. This is an installed-contract repair, not bespoke art:
 it introduces no texture and preserves the vanilla style/format until the physical map
 gate is accepted.
+
+## 2026-07-31 — Preserve source-backed southern rivers after the v25 byte A/B
+
+Do not revert Harnen or Morgulduin to diagnose the current country-selection timeout.
+An isolated candidate using the complete last live-proven v25 derived map payload,
+before either source-river integration, reproduced the same post-cache timeout twice.
+The only additional runtime file was the independently required city-material registry.
+Therefore the new river raster, local incision/material tiles, flatmap pixels, and woods
+clearances are not the distinguishing cause. Preserve the more accurate source geometry
+and investigate a broader runtime-environment or country-selection input instead.
+
+## 2026-07-31 — Never restore pre-Arda generated user map caches
+
+The user directory's July `gfx` and shader caches predate the current source-pinned map.
+They are derived engine state, not authored content, and include a 350 MB navmesh that
+cannot be valid for the current coastline or topology. Keep them in the recoverable
+`G:\endore_runtime\quarantine\20260731_pre_fresh_map_cache` quarantine and let EU5
+regenerate only from the active ENDÓRË tree. A fresh 128 MB flatmap has already replaced
+the old copy. Clearing these caches did not by itself fix country selection, but restoring
+the stale navmesh would reintroduce an independent correctness risk.
+
+## 2026-07-31 — Separate geographic precision from the fresh-game runtime budget
+
+The 12,104-location / 4,077,285-object topology was not release-reliable. It loaded twice
+while close to the target machine's memory limit, but later exact-byte repeats completed
+setup and cached-data recalculation before allocating 32.42 GB private memory and paging
+indefinitely without a country-selection frame. Reverting later rivers, relief details,
+or user caches did not distinguish the failure.
+
+Retain the full 4096x2048 source controls, 8192x4096 heightfield, 174,763-entry q64 terrain
+cache, source coast, 43 mountain footprints, 24 rivers, 15 forests, 18 peaks, and 10 passes.
+Reduce only runtime political tessellation to 5,200 land, 600 mountain, 60 lake, and 144
+sea cells (6,004 total), and derived 3D vegetation to 2,038,645 transforms. Reallocate the
+fixed high-LOD population so Fangorn, Old Forest, Lothlórien, and Ithilien keep their
+explicit detail floors. This tree reached fresh country selection and live Observer in
+135 seconds at roughly 8.62 GB private memory and advanced through 3018.1.7.
+
+## 2026-07-31 — Make fresh New Game evidence state-aware and visually specific
+
+EU5 build 24187685 can begin MainMenu-to-Game while its visible menu is still settling;
+a valid New Game click then joins that active transaction. The driver must issue one
+click, accept the already-active transaction, require state 4 plus completed cache
+recalculation, and then require the calibrated country-selection top bar for five stable
+seconds. A responsive non-black loading or menu frame is not sufficient. Regression-test
+the transition-state parser in canonical validation.
+
+Fresh Git worktrees must also reproduce generator-authored LF bytes despite this
+machine's global `core.autocrlf=true`. Enforce LF for repository text in `.gitattributes`
+while exempting exact installed event mirrors from text normalization.

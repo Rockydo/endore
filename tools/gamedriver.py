@@ -462,6 +462,32 @@ def is_hung_window(window) -> bool:
     return bool(ctypes.windll.user32.IsHungAppWindow(window._hWnd))
 
 
+def mainmenu_game_transition_state(debug: Path) -> str:
+    """Return the state of EU5's most recent MainMenu->Game transaction.
+
+    Build 24187685 starts one of these transactions automatically while the
+    main menu is still becoming interactive.  The resource-loading overlay can
+    disappear, the window can respond, and debug.log can become quiet while
+    that transaction remains in state 1.  New Game can join that active
+    transaction, so callers must distinguish an existing state-1 load from a
+    genuinely ignored click.  State 4 remains the binding completion signal.
+    """
+    try:
+        lines = debug.read_text(encoding="utf-8", errors="replace").splitlines()
+    except FileNotFoundError:
+        return "not-started"
+    state = "not-started"
+    for line in lines:
+        if "Transition MainMenu->Game started" in line:
+            state = "active"
+        elif (
+            "Running OnTransitionStateChanged callback for state 4" in line
+            and "transition: MainMenu->Game" in line
+        ):
+            state = "complete"
+    return state
+
+
 def wait_ready(args: argparse.Namespace) -> int:
     process = process_from_state()
     value = state()
@@ -497,6 +523,7 @@ def wait_ready(args: argparse.Namespace) -> int:
             if window and responsive and rendered
             else (False, 0.0)
         )
+        game_init = mainmenu_game_transition_state(debug)
         size = debug.stat().st_size if debug.exists() else 0
         if size != last_size:
             last_size = size
@@ -512,7 +539,7 @@ def wait_ready(args: argparse.Namespace) -> int:
             f"wait {elapsed:5.0f}s window={bool(window)} responsive={responsive} rendered={rendered} "
             f"nonblack={non_black:.1%} resources={resource_loading} "
             f"resource_brown={resource_brown:.1%} debug={size} quiet={quiet:.0f}s "
-            f"cpu={cpu:.1f}%",
+            f"game_init={game_init} cpu={cpu:.1f}%",
             flush=True,
         )
         if (
@@ -882,6 +909,41 @@ def wait_for_transition_log(
     return False
 
 
+def country_selection_frame_present(window) -> tuple[bool, float, float, float]:
+    """Detect the fixed country-selection top bar in build 24187685.
+
+    A merely responsive window is insufficient: both the main menu and the
+    98% loading screen render non-black frames.  The country lobby has a
+    locally stable dark-blue date bar across the top centre.  Its saturation,
+    value, and value variance are calibrated against 35 successful lobby
+    captures and 61 menu/loading captures in ``docs/screens``.
+    """
+    import colorsys
+    import pyautogui
+
+    left = window.left + round(window.width * 0.35)
+    top = window.top + round(window.height * 0.035)
+    width = max(1, round(window.width * 0.35))
+    height = max(1, round(window.height * 0.03))
+    image = pyautogui.screenshot(region=(left, top, width, height)).convert("RGB")
+    image = image.resize((200, 16))
+    pixels = list(
+        image.get_flattened_data()
+        if hasattr(image, "get_flattened_data")
+        else image.getdata()
+    )
+    hsv = [colorsys.rgb_to_hsv(r / 255, g / 255, b / 255) for r, g, b in pixels]
+    saturation = sum(item[1] for item in hsv) / len(hsv)
+    value = sum(item[2] for item in hsv) / len(hsv)
+    variance = sum((item[2] - value) ** 2 for item in hsv) / len(hsv)
+    present = (
+        0.25 <= saturation <= 0.62
+        and 0.15 <= value <= 0.30
+        and 0.004 <= variance <= 0.03
+    )
+    return present, saturation, value, variance
+
+
 def wait_for_interactive_game_window(
     timeout: int,
     stable_seconds: float = 5,
@@ -922,14 +984,21 @@ def wait_for_interactive_game_window(
             if window is not None and responsive
             else (False, 0.0)
         )
+        country_frame, bar_saturation, bar_value, bar_variance = (
+            country_selection_frame_present(window)
+            if window is not None and responsive and rendered
+            else (False, 0.0, 0.0, 0.0)
+        )
         now_monotonic = time.monotonic()
-        if responsive and rendered:
+        if responsive and rendered and country_frame:
             stable_since = stable_since or now_monotonic
             stable = now_monotonic - stable_since
             if stable >= stable_seconds:
                 print(
                     "gamedriver: post-cache window interactive "
-                    f"(stable={stable:.1f}s nonblack={non_black:.1%})"
+                    f"(stable={stable:.1f}s nonblack={non_black:.1%} "
+                    f"bar_s={bar_saturation:.3f} bar_v={bar_value:.3f} "
+                    f"bar_var={bar_variance:.4f})"
                 )
                 return True
         else:
@@ -939,7 +1008,9 @@ def wait_for_interactive_game_window(
             print(
                 "gamedriver: waiting past post-cache loading "
                 f"window={bool(window)} responsive={responsive} "
-                f"rendered={rendered} stable={stable:.1f}s",
+                f"rendered={rendered} country={country_frame} stable={stable:.1f}s "
+                f"bar_s={bar_saturation:.3f} bar_v={bar_value:.3f} "
+                f"bar_var={bar_variance:.4f}",
                 flush=True,
             )
             last_report = now_monotonic
@@ -949,7 +1020,11 @@ def wait_for_interactive_game_window(
 
 
 def wait_for_transition_start(
-    user_dir: Path, start_offset: int, timeout: int
+    user_dir: Path,
+    start_offset: int,
+    timeout: int,
+    *,
+    active_before_click: bool = False,
 ) -> bool:
     """Confirm that a main-menu click actually began MainMenu->Game.
 
@@ -959,6 +1034,18 @@ def wait_for_transition_start(
     into a bounded retry instead of a ten-minute false map failure.
     """
     debug = user_dir / "logs" / "debug.log"
+    if active_before_click:
+        # The installed build commonly begins MainMenu->Game while its visible
+        # menu is still settling.  New Game joins that existing transaction;
+        # requiring a second state-1 marker causes three destructive retries
+        # and stops an otherwise valid load.  The later state-4 + cache gate
+        # and country-frame detector still prove that the click took effect.
+        current = mainmenu_game_transition_state(debug)
+        if current in {"active", "complete"}:
+            print(
+                "gamedriver: New Game joined the active MainMenu->Game transaction"
+            )
+            return True
     deadline = time.monotonic() + timeout
     scan_offset = start_offset
     while time.monotonic() < deadline:
@@ -1191,6 +1278,7 @@ def new_observer(args: argparse.Namespace) -> int:
     save_window_capture(target_dir / "fresh_menu.png")
     debug = user_dir / "logs" / "debug.log"
     debug_offset = debug.stat().st_size if debug.exists() else 0
+    transition_state_before_click = mainmenu_game_transition_state(debug)
     # The locally captured window places New Game around x=0.14, y=0.42.
     # Confirm that the engine actually begins MainMenu->Game before entering
     # its long load wait: EU5 can intermittently discard an otherwise valid
@@ -1205,10 +1293,17 @@ def new_observer(args: argparse.Namespace) -> int:
             save_window_capture(target_dir / "fresh_new_game_clicked.png")
         evidence["steps"].append(f"new-game-clicked:attempt{click_attempt}")
         if wait_for_transition_start(
-            user_dir, debug_offset, args.transition_start_timeout
+            user_dir,
+            debug_offset,
+            args.transition_start_timeout,
+            active_before_click=transition_state_before_click == "active",
         ):
             evidence["steps"].append(
-                f"new-game-transition-started:attempt{click_attempt}"
+                (
+                    f"new-game-joined-active-transition:attempt{click_attempt}"
+                    if transition_state_before_click == "active"
+                    else f"new-game-transition-started:attempt{click_attempt}"
+                )
             )
             transition_started = True
             break

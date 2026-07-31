@@ -1,5 +1,10 @@
+# Generated EU5 text is authored with deterministic LF bytes.  The machine
+# global Git configuration enables CRLF checkout conversion, which otherwise
+# makes a fresh worktree differ from the runtime tree that passed smoke.
+* text=auto eol=lf
+
 # Exact installed-event mirrors deliberately retain the source whitespace.
-in_game/events/** -whitespace
+in_game/events/** -text -whitespace
 
 # The q64 derived height cache still exceeds GitHub's ordinary blob limit.
 in_game/gfx/terrain2/terrain_cache/heightmap.bin filter=lfs diff=lfs merge=lfs -text

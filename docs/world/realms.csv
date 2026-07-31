@@ -19,7 +19,7 @@ WDM,Woodmen of Mirkwood,Woodman,woodmen_hall,0.562000,0.300000,me_anduin_vale_re
 DOR,Dorwinion,Dorwinrim,dorwinion,0.684658,0.351235,me_rhun_region|me_brown_lands_region,dalish,126 62 100,ce_tree_fruit_simple.dds,90,"The Hobbit, Ch. 9; ENDORE plan 8.1"
 FAN,Fangorn,Onodrim,wellinghall,0.486310,0.455926,me_rohan_region|me_anduin_vale_region|me_brown_lands_region,entish,44 88 48,ce_tree_oak.dds,45,"LOTR, Book III, Ch. 4; ENDORE plan 8.1"
 DRU,Drúadan Forest,Drúedain,ghans_glade,0.564274,0.589602,me_anorien_region|me_south_gondor_region,westron,86 104 58,ce_stag_head_antlers_embowed.dds,22,"LOTR, Book V, Ch. 5; † seat invented because canon gives no capital"
-LOS,Lossoth of Forochel,Lossoth,forochel_camp,0.340000,0.035000,me_forochel_region|me_northern_wastes_region,lossoth,86 132 148,ce_fish_naiant.dds,85,"LOTR, Appendix A; ENDORE plan 8.1"
+LOS,Lossoth of Forochel,Lossoth,forochel_camp,0.341880,0.065462,me_forochel_region|me_northern_wastes_region,lossoth,86 132 148,ce_fish_naiant.dds,85,"LOTR, Appendix A; ENDORE plan 8.1"
 RHO,Rhosgobel,Rhosgobel,rhosgobel,0.568634,0.282489,me_anduin_vale_region|me_mirkwood_region,westron,96 126 70,ce_andean_small_bird.dds,1,LOTR map; † one-location polity per ENDORE plan 8.1
 MOR,Mordor,Mordor,barad_dur,0.644052,0.573511,me_mordor_region|me_ithilien_region,orkish,72 22 22,ce_blackfoot_eye.dds,0,"LOTR, Book II, Ch. 2; ENDORE plan 8.1"
 DOL,Dol Guldur,Dol Guldur,dol_guldur,0.556113,0.351780,me_mirkwood_region|me_brown_lands_region,orkish,64 40 54,ce_tower_wall.dds,65,"LOTR, Appendix B; ENDORE plan 8.1"

@@ -585,3 +585,45 @@
   with roughly 24 GB free RAM, so that fingerprint is blocked after two strikes. Retain
   the clean registry fix, but do not claim that it resolved the independent deep-load
   failure or greens M2.
+- A controlled worktree A/B then combined commit `789d2d1`'s last live-proven v25
+  terrain/cache/river/flatmap/vegetation bytes with only the corrected city-material
+  registry. One Chrome foreground-lock run never entered the transition and was
+  discarded. Two subsequent PID-verified runs both completed setup/cache and timed out
+  at country selection on fingerprint `86972304`. This disproves the current
+  source-backed Harnen/Morgulduin raster, its local height/material changes, flatmap, or
+  12 cleared woods bins as the distinguishing cause. The source river integration stays;
+  the temporary worktree was removed after its evidence was copied into `docs/screens`.
+- The shared ENDÓRË user directory still held 2.88 GB of derived July renderer state,
+  including a 350 MB navmesh created before the current Arda map. `gfx` and
+  `shadercache` were moved recoverably to
+  `G:\endore_runtime\quarantine\20260731_pre_fresh_map_cache`. A cold run regenerated
+  333 MB of shaders and a fresh 128 MB Arda flatmap but did not finish transition state 4
+  within 600 seconds; a warm repeat completed setup/cache and then missed the post-cache
+  bound. The stale navmesh was neither restored nor regenerated. This fresh-cache route
+  is exhausted after two strikes; renderer evidence moves to the compatible saved
+  Observer route while fresh country selection stays red.
+- Corrected automation proved that build 24187685 starts MainMenu-to-Game during menu
+  initialization and a single New Game click can join that active transaction. The
+  driver now parses the latest transition state, requires state 4 plus cache completion,
+  and distinguishes the actual country-selection top bar from responsive menu/loading
+  frames. Its regression test is part of `make validate`. Repository text is also pinned
+  to LF so fresh worktrees cannot silently differ under global `core.autocrlf=true`.
+- A final controlled run on the 12,104-location tree issued exactly one valid click,
+  completed setup and all cache recalculations, then remained nonresponsive for the full
+  900-second country-frame bound at 32.42 GB private memory. Together with the exact-byte
+  A/B, this identifies an unreliable renderer memory envelope rather than a river,
+  terrain-cache, city-material, or launcher regression.
+- The runtime-only topology was reduced to 6,004 cells (5,200 land, 600 mountain, 60
+  lake, 144 sea) and 2,038,645 vegetation transforms. The full source projection,
+  coastlines, 8192x4096 heightfield, q64 cache, 43 mountain footprints, 24 rivers, 15
+  forests, 18 peaks, and 10 passes did not change. All 38 realms, 5,179 populated
+  locations, 283 ports, and canonical-forest density floors remain coherent. Forochel
+  Camp, an invented seasonal seat, was moved from an offshore judgment point to the
+  nearest unchanged source coastline.
+- Full validation passed in 286.8 seconds. Paired vanilla/mod smoke passed on fingerprint
+  `f0cff53ee8fafc337e0fa4b6c634a8447e2dbfc135490e1ccafaa6f183fafc8e` with zero new
+  lines and zero mod-unique diagnostics. A fresh full-visual New Game then reached an
+  actual country-selection frame and live Observer in 135 seconds at roughly 8.62 GB
+  private memory; an in-game speed-control test advanced from 3018.1.1 to 3018.1.7.
+  Evidence: `docs/screens/20260731_runtime_budget_6004/`. Fresh start-game loading is
+  green again; M2 remains red only for the required physical-map visual acceptance.

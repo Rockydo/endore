@@ -131,6 +131,10 @@ about Middle-earth.
 - † The Harlond below Minas Tirith is an operational Gondorian port on
   TA 3018.1.1. It remains owned even while most nearby Ithilien locations are
   deliberately wilderness; the wilderness mask cannot override its port rank.
+- † Forochel Camp is an invented seasonal Lossoth seat, not a canonical capital. Its
+  earlier x=0.340000/y=0.035000 control lay offshore and became unstable when political
+  tessellation was reduced. The retained x=0.341880/y=0.065462 point is the nearest
+  playable shore on the unchanged source-pinned Forochel coastline.
 - † Arda Maps supplies named source polylines for 22 of the 24 production
   river controls. Its unnamed `line_river` geometry 8 is the only substantial
   channel in the Harnen corridor and is used for that river's detailed upper
