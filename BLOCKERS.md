@@ -362,3 +362,44 @@ not replace the live- and smoke-proven v25 engine-water baseline. Preserve the
 hash-pinned source pool outlines, but pursue only a materially different runtime route.
 Evidence: `docs/screens/20260731_m2_decorative_pond_probe_live/` and
 `docs/screens/20260731_m2_source_rivers_pond_final/`.
+
+## 2026-07-31 — Restored-v25 source-river deep-load envelope
+
+Status: two-strike runtime blocker; exact fingerprint must not be relaunched.
+
+After source-backed Harnen/Morgulduin integration and full v25 lake/material restoration,
+two fresh debug visual New Games on fingerprint
+`b838a130d24989fdf86d77212f3b5cf4e21fc66fa2553091eb55b84572e4a64d`
+reached responsive menus and began the MainMenu-to-Game transition but did not reach an
+interactive country-selection or Observer window within the 600-second bound. The first
+completed setup/cache detection; the second timed out during the same transition and the
+configured process had stopped by cleanup. The paired vanilla/mod menu smoke on these
+exact bytes remained green with zero mod-unique lines.
+
+Do not launch this fingerprint a third time. The first attempt exposed one actionable
+map-transition diagnostic—missing `gfx/city_materials` data for
+`endore_dynamic_land_biome`—which was not covered by menu smoke. Repair and statically
+validate that independent renderer registry before a materially different fresh load.
+Evidence: `docs/screens/20260731_m2_v25_source_river_theatres/` and
+`docs/screens/20260731_m2_v25_source_river_theatres_repeat/`.
+
+## 2026-07-31 — City-material-corrected deep-load envelope
+
+Status: two-strike runtime blocker; component fix retained, deep-load route exhausted.
+
+The materially different fingerprint
+`be6864eb31619101a62eb7fcdefb5f5bdb0070ca685a7d742a57c880d077c24c`
+added a BOM-correct `gfx/city_materials` entry for `endore_dynamic_land_biome`. Full
+validation and paired vanilla/mod smoke passed, and the earlier missing-city-material
+diagnostic disappeared. Two fresh debug visual New Games nevertheless completed
+setup/cache detection and remained nonresponsive for the entire 600-second post-cache
+interactivity bound. Both started with roughly 24 GB free physical memory and emitted no
+map, terrain, material, cache, river, or locator diagnostic.
+
+Do not launch this exact fingerprint a third time. Retain the city-material registry
+repair because it closes a proven renderer contract and has clean smoke evidence, but do
+not describe it as resolving fresh Observer. The next route must change an independent
+map-transition input or isolate the country-selection renderer workload without reducing
+the binding source geometry or q64 physical precision. Evidence:
+`docs/screens/20260731_m2_city_material_contract/` and
+`docs/screens/20260731_m2_city_material_contract_repeat/`.

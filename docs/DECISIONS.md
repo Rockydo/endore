@@ -683,3 +683,13 @@ Its 40 raw vertices occupy the exact Morgul Vale-to-Anduin corridor and retain s
 meaningful bends after bounded simplification. The source endpoints match the prior
 canonical reconciliation, but the intervening course now comes from the same
 hash-verified payload as every other production river.
+
+## 2026-07-31 — Register the dynamic terrain biome in EU5's city-material database
+
+EU5 resolves terrain surface materials and city-ground road/decal materials through
+separate registries. Defining `endore_dynamic_land_biome` only in
+`gfx/terrain2/materials.txt` therefore leaves the renderer with no city material during
+the map transition. Add the same key under `gfx/city_materials` and inherit the installed
+`default_biome` road/decal stack. This is an installed-contract repair, not bespoke art:
+it introduces no texture and preserves the vanilla style/format until the physical map
+gate is accepted.

@@ -39,7 +39,12 @@
    Forest, Forochel, Misty Mountains/Anduin, Mirkwood, Rohan/White Mountains,
    Gondor/Belfalas, Mordor, Rhûn, and Harad after each accepted physical batch. Run fresh
    Observer and paired smoke with zero mod-caused diagnostics. Do not reduce q64 or any
-   source geometry to improve runtime.
+   source geometry to improve runtime. The restored-v25 source-river fingerprint
+   `b838a130` missed the deep-load bound twice and must not be relaunched. Its missing
+   `gfx/city_materials` mapping was repaired and smoke-green, but the corrected
+   `be6864eb` fingerprint also missed the deep-load bound twice. Do not relaunch either.
+   Retain the registry repair and isolate a different country-selection renderer input
+   offline without reducing source geometry or q64 precision.
 8. PAUSED M5 renderer: isolate or replace the inherited `boat_with_oars_unit` path that
    emitted a missing `waves_vfx` / `foam_stop` pair on 3018.2.17. The attempted direct
    vanilla control was inconclusive because it still loaded the active ENDÓRË map.

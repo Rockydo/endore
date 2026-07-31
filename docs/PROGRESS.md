@@ -570,3 +570,18 @@
   with zero new error lines and zero mod-unique diagnostics. This greens the source-river
   integration and v25 restoration batch only; M2 remains red pending physical-map visual
   acceptance.
+- Two subsequent deep Observer attempts on that exact restored fingerprint still missed
+  the 600-second map-transition bound, so `b838a130` is now a two-strike blocker and may
+  not be launched again. The first attempt exposed an actionable contract gap absent from
+  menu smoke: `endore_dynamic_land_biome` had no entry in EU5's independent
+  `gfx/city_materials` registry. The material generator now authors a separate
+  `99_endore.txt` entry inheriting the installed `default_biome` road/decal stack, and its
+  checker requires the exact mapping before another materially different runtime test.
+- The first generated city-material file used plain UTF-8; paired smoke correctly
+  rejected EU5's BOM warning. The generator now emits and verifies UTF-8 BOM. Full
+  validation and paired smoke passed on corrected fingerprint `be6864eb` with zero new
+  or mod-unique diagnostics, and the former missing-city-material line no longer appears
+  during map transition. Two fresh Observer attempts still timed out after setup/cache
+  with roughly 24 GB free RAM, so that fingerprint is blocked after two strikes. Retain
+  the clean registry fix, but do not claim that it resolved the independent deep-load
+  failure or greens M2.
