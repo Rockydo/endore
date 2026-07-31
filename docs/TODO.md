@@ -10,12 +10,13 @@
    1,251-vertex mainland coast, 43 mountain footprints, 24 river/valley controls, 15
    lakes, 10 passes, and 21 biome zones. Raw references remain quarantined outside the
    repository.
-3. REOPENED M2 STATIC/SMOKE GREEN — the 12,104-location source-frame tree now uses 10,700
+3. REOPENED M2 RUNTIME GREEN — the 12,104-location source-frame tree now uses 10,700
    land, 1,200 mountain, 60 lake, and 144 sea cells plus 4,077,285 stratified vegetation
    transforms. Full validation and paired smoke are green on fingerprint `66f1cd73`.
-   The first checkpoint attempt correctly deferred because Antiquitas owns the shared
-   lease; retry the debug checkpoint/cold non-debug visual resume at the next natural
-   free-slot checkpoint.
+   A fresh debug New Game reached live Observer and advanced through 3018.2.04; a cold
+   non-debug `--visual-map` New Game then independently reached live Observer on the same
+   bytes. Continue directly with deterministic physical-map selection and the nine-theatre
+   full/regional/close capture set. Do not reduce q64 or source geometry.
 4. REOPENED M2 — renderer verification: inspect the strengthened organic river-material
    paths, vegetation clearances, and all 24 valley controls in the stable non-debug 3D
    route. The exact tree now proves a ground-level organic wet corridor and parser-safe

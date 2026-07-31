@@ -38,6 +38,13 @@ fingerprint `66f1cd73`. Its first checkpoint attempt deferred because Antiquitas
 shared EU5 lease; no process launched. Rhûn and Harad still continue through the east/south
 borders instead of being enclosed by a false ocean ring. M2 remains red until the current
 tree passes the same real-renderer and multi-theatre gates.
+The next free-slot attempt resolved the pending runtime question: a fresh debug New Game
+entered live Observer and advanced through 3018.2.04, and a separate cold non-debug
+`--visual-map` New Game also entered live Observer. The first run exposed only a
+gamedriver pause-banner false negative, now fixed by recognizing the stable Observer HUD.
+The full-map tactical overlay confirms the Arda-derived footprint is active and vanilla
+Earth is absent, but it is not physical terrain evidence. Nine-theatre full/regional/close
+captures and explicit owner acceptance remain outstanding; M2 stays blocking.
 Real-game non-debug review proves that ridge systems produce physical 3D relief. A new
 Arda-native material cache also proves continuous ground variation, mountain snow/rock
 material, and shoreline transition bands instead of the former shared zero tile and

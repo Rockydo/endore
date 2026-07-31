@@ -14,7 +14,6 @@ import hashlib
 import json
 import os
 import shutil
-import subprocess
 import sys
 import time
 import uuid
@@ -341,54 +340,28 @@ def release_token(root: Path, token: str) -> bool:
 
 
 def game_visible_fingerprint(root: Path) -> str:
-    """Hash HEAD plus every dirty/untracked game-visible file."""
+    """Hash the bytes EU5 can actually read, independent of Git state.
 
-    def git(*args: str) -> bytes:
-        result = subprocess.run(
-            ["git", *args],
-            cwd=root,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            check=False,
-        )
-        if result.returncode:
-            raise RuntimeError(
-                f"git {' '.join(args)} failed: "
-                + result.stderr.decode("utf-8", errors="replace")
-            )
-        return result.stdout
+    The v1 shortcut mixed ``HEAD`` with only dirty paths. A valid pre-commit
+    smoke therefore became stale immediately after committing identical bytes,
+    and Git LFS made the mismatch worse because the index stores a pointer while
+    EU5 reads the smudged binary. Hash the complete working tree instead. This
+    costs a few seconds on the current conversion, far less than one redundant
+    paired game launch, and remains stable across stage/commit/push transitions.
+    """
 
     digest = hashlib.sha256()
-    digest.update(b"eu5-game-tree-v1\0")
-    digest.update(git("rev-parse", "HEAD").strip())
-    pathspec = ("--", *GAME_VISIBLE_ROOTS)
-    tracked = git(
-        "diff",
-        "--name-only",
-        "-z",
-        "--diff-filter=ACDMRTUXB",
-        "HEAD",
-        *pathspec,
+    digest.update(b"eu5-game-tree-v2\0")
+    paths = sorted(
+        path
+        for visible_root in GAME_VISIBLE_ROOTS
+        for path in (root / visible_root).rglob("*")
+        if path.is_file()
     )
-    untracked = git(
-        "ls-files",
-        "--others",
-        "--exclude-standard",
-        "-z",
-        *pathspec,
-    )
-    paths = {
-        item.decode("utf-8", errors="surrogateescape")
-        for item in (tracked + untracked).split(b"\0")
-        if item
-    }
-    for relative in sorted(paths):
+    for path in paths:
+        relative = path.relative_to(root).as_posix()
         digest.update(b"\0path\0")
         digest.update(relative.encode("utf-8", errors="surrogateescape"))
-        path = root / relative
-        if not path.is_file():
-            digest.update(b"\0deleted")
-            continue
         digest.update(b"\0file\0")
         with path.open("rb") as handle:
             while block := handle.read(1024 * 1024):

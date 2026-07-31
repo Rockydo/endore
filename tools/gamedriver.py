@@ -793,7 +793,14 @@ def autosave_fingerprint(user_dir: Path) -> list[dict[str, object]]:
 
 
 def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
-    """Wait for the live Observer HUD's red pause banner after a menu transition."""
+    """Wait for either stable signal that the live Observer HUD has loaded.
+
+    Debug-mode fresh games do not always render the centered red pause banner.
+    They do render the fixed top-left ``You are currently in Observer Mode``
+    panel once the country-selection lobby has actually transitioned.  Accept
+    that panel as the equivalent success signal so a slow loading overlay
+    cannot turn a successful start into a second blind click.
+    """
     import pyautogui
 
     deadline = time.monotonic() + timeout
@@ -808,6 +815,13 @@ def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
         paused, ratio = observer_pause_banner(image)
         if paused:
             print(f"gamedriver: live Observer pause banner detected (red={ratio:.3f})")
+            return True
+        observer_hud, dark_ratio, light_ratio = observer_hud_banner(image)
+        if observer_hud:
+            print(
+                "gamedriver: live Observer HUD detected "
+                f"(dark={dark_ratio:.3f} light={light_ratio:.3f})"
+            )
             return True
         time.sleep(poll_interval)
     return False
@@ -1536,6 +1550,34 @@ def observer_pause_banner(image) -> tuple[bool, float]:
     # transient "Game is Paused" banner and toggles Space every polling pass.
     # Live calibration: banner 0.436, banner-free political map 0.192.
     return ratio >= 0.30, ratio
+
+
+def observer_hud_banner(image) -> tuple[bool, float, float]:
+    """Detect the fixed top-left live-Observer status panel.
+
+    The panel occupies a stable release-layout rectangle and is nearly black,
+    with a small amount of bright eye/text paint.  The country-selection lobby
+    shows the political map in this region, while the intervening loading
+    veil is nearly all white.  Requiring both dark background and light glyphs
+    keeps either state from becoming a false positive.
+    """
+    width, height = image.size
+    region = image.crop(
+        (
+            int(width * 0.005),
+            int(height * 0.070),
+            int(width * 0.325),
+            int(height * 0.155),
+        )
+    ).convert("RGB")
+    pixels = list(
+        region.get_flattened_data()
+        if hasattr(region, "get_flattened_data")
+        else region.getdata()
+    )
+    dark_ratio = sum(1 for red, green, blue in pixels if max(red, green, blue) < 70) / len(pixels)
+    light_ratio = sum(1 for red, green, blue in pixels if min(red, green, blue) > 150) / len(pixels)
+    return dark_ratio >= 0.70 and light_ratio >= 0.005, dark_ratio, light_ratio
 
 
 def observer_run(args: argparse.Namespace) -> int:

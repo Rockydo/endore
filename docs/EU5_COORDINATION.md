@@ -40,8 +40,11 @@ means DEFERRED, not FAIL:
 - retry at the next natural checkpoint.
 
 `make validate` does not acquire the slot. `make smoke` does. A successful smoke records
-the current game-visible tree fingerprint in `last_smoke.json`; before a game-visible
-commit, run:
+the current game-visible tree fingerprint in `last_smoke.json`. The fingerprint hashes
+the actual bytes under `.metadata/`, `in_game/`, `main_menu/`, and `loading_screen/`;
+it does not depend on `HEAD`, staging state, or Git LFS pointers. A smoke therefore stays
+valid when identical game-visible bytes move from dirty to staged to committed state,
+while any actual byte change still invalidates it. Before a game-visible commit, run:
 
 ```powershell
 .\.venv\Scripts\python.exe tools\eu5_slot.py assert-smoked

@@ -18,6 +18,7 @@ from eu5_slot import (
     ROOT_ENV,
     SlotBusy,
     acquire,
+    game_visible_fingerprint,
     inspect_owner,
     release_token,
     shared_root,
@@ -41,6 +42,16 @@ def require(condition: bool, message: str) -> None:
         raise AssertionError(message)
 
 
+def git(root: Path, *args: str) -> None:
+    subprocess.run(
+        ["git", *args],
+        cwd=root,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        check=True,
+    )
+
+
 def main() -> int:
     peer = peer_root()
     require((peer / "config/local_paths.json").is_file(), f"peer repo missing: {peer}")
@@ -56,6 +67,26 @@ def main() -> int:
     child: subprocess.Popen[bytes] | None = None
     lease = None
     try:
+        fingerprint_root = test_root / "fingerprint-repo"
+        (fingerprint_root / "in_game").mkdir(parents=True)
+        git(fingerprint_root, "init")
+        git(fingerprint_root, "config", "user.name", "ENDORE test")
+        git(fingerprint_root, "config", "user.email", "endore-test@invalid")
+        visible = fingerprint_root / "in_game" / "payload.bin"
+        visible.write_bytes(b"first")
+        git(fingerprint_root, "add", "-A")
+        git(fingerprint_root, "commit", "-m", "first")
+        first = game_visible_fingerprint(fingerprint_root)
+        visible.write_bytes(b"second")
+        dirty = game_visible_fingerprint(fingerprint_root)
+        require(first != dirty, "working-byte change did not alter fingerprint")
+        git(fingerprint_root, "add", "-A")
+        staged = game_visible_fingerprint(fingerprint_root)
+        require(dirty == staged, "staging identical bytes altered fingerprint")
+        git(fingerprint_root, "commit", "-m", "second")
+        committed = game_visible_fingerprint(fingerprint_root)
+        require(dirty == committed, "committing identical bytes altered fingerprint")
+
         lease = acquire(
             ROOT,
             "unit-test-owner",

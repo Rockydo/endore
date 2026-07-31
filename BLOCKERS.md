@@ -264,3 +264,11 @@ dominant blocker. The remaining structural delta from the last live 12,104 tree 
 impassable split: 2,700 mountain locations now versus 520 then. Keep the total count,
 4.08-million transform candidate, and all physical relief controls; test a 1,200-mountain
 / 10,700-land allocation before sacrificing q64 height precision.
+
+Resolution: the 10,700-land / 1,200-mountain candidate completed a fresh debug New Game,
+entered live Observer, and advanced through 3018.2.04. A second cold non-debug
+`--visual-map` New Game independently entered live Observer on the same bytes. The first
+debug attempt was already live but exposed a pause-banner detector false negative; the
+driver now also recognizes the fixed Observer HUD, and both repeats passed. Retain q64
+and close this resource-envelope blocker. The separate nine-theatre physical-quality gate
+remains red.

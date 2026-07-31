@@ -531,3 +531,43 @@ mountain topography thresholds, and physical massif relief. A 1,200-cell mountai
 is still over twice the live baseline and averages substantial granularity across every
 source range. Test it before moving the derived height cache from q64 toward a visibly
 coarser quantum.
+
+## 2026-07-31 — Smoke fingerprints hash runtime bytes, not Git state
+
+Replace the v1 `HEAD + dirty paths` shortcut with a complete hash of the bytes EU5 can
+actually read under the four game-visible roots. A successful smoke must remain valid
+when identical bytes are staged, committed, and pushed; those operations do not change
+the game. Conversely, any tracked, untracked, ignored, or LFS-smudged runtime byte under
+those roots must affect the fingerprint.
+
+The current tree hashes in about 1.7 seconds, far cheaper than a redundant paired game
+launch. The permanent slot test creates a temporary G:-resident repository and proves
+that a byte edit changes the fingerprint while staging and committing the identical
+edited bytes do not.
+
+## 2026-07-31 — Keep q64 after the 1,200-mountain runtime breakthrough
+
+The 12,104-location, 10,700-land / 1,200-mountain topology reached fresh live Observer
+under both the debug checkpoint profile and a cold non-debug full visual-map profile.
+It also advanced through 3018.2.04 without a mod-caused diagnostic. The fresh-load
+constraint was therefore structural enough to resolve through impassable political-cell
+rebalancing; it does not justify degrading the physical height cache.
+
+Keep the full-resolution authored source and q64 runtime height cache. Do not test q128,
+q256, or q512 unless a future, materially different renderer failure proves q64 itself is
+the limiting payload. Continue with physical terrain-mode selection and the nine-theatre
+review. Runtime success does not green M2; only visible physical quality and explicit
+owner acceptance can do that.
+
+## 2026-07-31 — Recognize the live Observer HUD as a start transition
+
+The fresh-game driver previously recognized only the centered red `Game is Paused`
+banner. On the current debug path, the first Start click completed successfully and
+rendered the fixed `You are currently in Observer Mode` HUD, but no red banner appeared
+within the bounded wait. The driver then clicked a live game again and reported a false
+failure.
+
+Accept the stable top-left Observer HUD as an equivalent success signal, requiring both
+its near-black panel field and its bright eye/text glyphs. The country-selection map and
+white transition veil satisfy neither condition. A repeat debug checkpoint and a cold
+non-debug visual-map launch both proved this route.

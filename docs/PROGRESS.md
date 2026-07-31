@@ -450,3 +450,24 @@
   acquired the shared EU5 lease for its own paired smoke. No ENDÓRË process launched and
   no blocker was counted. The static/smoke-green candidate awaits the next free lease;
   reopened M2 and the nine-theatre visual gate remain red.
+- The post-push audit exposed a false stale-smoke result: fingerprint v1 mixed `HEAD` with
+  dirty paths, so committing identical bytes changed the fingerprint, and the q64 LFS
+  pointer amplified the mismatch. Fingerprint v2 hashes the actual game-visible working
+  bytes independent of dirty/staged/committed state. Its synthetic repository test proves
+  byte changes invalidate the hash while stage+commit do not; the full current tree hashes
+  deterministically in about 1.7 seconds.
+- The 10,700-land / 1,200-mountain candidate resolved the fresh-game envelope. A debug
+  New Game completed both cache stages, reached interactive country selection, enabled
+  Observer, entered the live HUD, and advanced without interruption through 3018.2.04.
+  The only apparent failure was a gamedriver false negative: this debug path omitted the
+  centered red pause banner even though the fixed top-left Observer HUD was present.
+- The driver now accepts that release-layout Observer HUD as an independent bounded
+  transition signal. An immediate repeat passed, and a cold non-debug `--visual-map`
+  New Game then independently reached live Observer on fingerprint `c39cae70` (the v2
+  byte-stable hash). Neither run added a map, terrain, river, locator, setup, or renderer
+  diagnostic.
+- The non-debug full-map tactical view confirms that the active world is the Arda-derived
+  coastline, water, ridge, and river footprint rather than vanilla Earth. It is still a
+  flat diagnostic overlay, not physical-map acceptance evidence. Deterministic selection
+  of the unoverlaid terrain view and all nine full/regional/close theatre captures remain
+  blocking; reopened M2 stays red.
