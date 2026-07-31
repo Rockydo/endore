@@ -792,3 +792,31 @@ slope, altitude, and deterministic organic noise. Hard altitude/slope thresholds
 continuous ranges into coarse grey ribbons and islands. The v28 field improves regional
 continuity without changing relief, passes, impassability, or location topology; it is an
 intermediate renderer correction, not M2 acceptance.
+
+## 2026-07-31 — Promote Arda Maps highlands and moors to binding physical controls
+
+Import every renderable in-view `poly_highland` footprint and all eight `poly_moor`
+footprints from the existing hash-pinned Arda Maps payload. Treat highlands as low,
+feathered rolling relief and restrained earth-biased material, never as new mountain
+cells or impassability. Treat moors as exact wet-ground biome controls. Broad climate
+paint renders first, moors second, and named source forests last so proof-era climate
+envelopes cannot erase canonical woods. Pin exact counts, vertex floors, geometry type,
+provenance, and the resulting projection hash in validation.
+
+## 2026-07-31 — Replace Mordor's ash oval with source-range proximity
+
+Reject the fifteen-point organic polygon that painted Mordor as one smooth oval. Derive
+the volcanic envelope from Arda Maps mountain footprints 8-11, the source-aligned Ered
+Lithui, Ephel Dúath, and Mountains of Shadow axes, and the exact Mount Doom point. Those
+three axes own the north/west/south limits; the open eastern landward edge fades
+exponentially rather than receiving a straight clip. Keep Núrnen as engine water and
+leave the southern Nurn lands outside the strongest ash field. This is an audited
+cartographic reconciliation, not a claim that canon supplies a surveyed climate border.
+
+## 2026-07-31 — Preserve Ithilien's canopy inside the fixed object budget
+
+Rendering exact forests after macro climates changed the eligible-cell distribution and
+starved Ithilien's seventeen narrow woodland strips of high-LOD trees. Increase only
+Ithilien's sampling weight while retaining exactly 2,038,645 total vegetation transforms
+and all other named-forest floors. Validation must continue to count the resulting
+transforms inside the exact source polygons; no extra global renderer load is permitted.

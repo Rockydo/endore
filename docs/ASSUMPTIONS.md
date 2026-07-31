@@ -149,3 +149,16 @@ about Middle-earth.
   Their exact source shapes are represented as wet surface material rather than
   navigable engine water; this is a scale conversion, not a claim that they are dry
   in-world. Long Lake, Lake Evendim, Nen Hithoel, Nurnen, and Rhun remain true water.
+- † Arda Maps `poly_highland` footprints are interpreted as rolling upland and foothill
+  envelopes, not as surveyed elevation contours or permission to create additional
+  impassable mountain cells. Their exact horizontal shapes bind the v29 low-relief field;
+  their 4,800-sample maximum lift is a renderer calibration.
+- † Arda Maps `poly_moor` footprints are interpreted as wet or moorland surface controls.
+  Geometry 0 binds the Dead Marshes and geometry 6 covers the broad Nindalf/Anduin-mouth
+  wet ground; the remaining small footprints retain source keys until individual lore
+  labels are established. This does not claim that every moor polygon is navigable water.
+- † Canon and the two binding community maps define Mordor through its enclosing ranges
+  and named internal features, not a surveyed ash-soil boundary. The v29 Gorgoroth field
+  therefore interpolates inward from Arda Maps mountain polygons 8-11, the three enclosing
+  ridge axes, and Mount Doom, then fades toward the open east. It is a renderer
+  reconciliation and must not be reused as a political frontier.

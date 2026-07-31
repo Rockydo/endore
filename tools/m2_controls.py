@@ -115,6 +115,33 @@ def validate_geometry_contract(projection: dict) -> None:
             raise ValueError(f"sea cutout {key} lacks bay/headland detail")
     if len(projection.get("mountain_zones", [])) < 30:
         raise ValueError("mountain atlas lacks source-audited range footprints")
+    highlands = projection.get("highland_zones", [])
+    if len(highlands) != 190:
+        raise ValueError(
+            "Arda Maps highland coverage changed without cartographic review"
+        )
+    moors = projection.get("moor_zones", [])
+    if len(moors) != 8:
+        raise ValueError(
+            "Arda Maps moor coverage changed without cartographic review"
+        )
+    for collection_name, zones, source_name in (
+        ("highland", highlands, "Arda Maps poly_highland"),
+        ("moor", moors, "Arda Maps poly_moor"),
+    ):
+        for zone in zones:
+            if zone.get("shape") != "source_polygon":
+                raise ValueError(
+                    f"{collection_name} {zone.get('key')} lost source geometry"
+                )
+            if len(zone.get("coords", [])) < 4:
+                raise ValueError(
+                    f"{collection_name} {zone.get('key')} lacks terrain detail"
+                )
+            if zone.get("source") != source_name:
+                raise ValueError(
+                    f"{collection_name} {zone.get('key')} lost source provenance"
+                )
     for lake in projection["lakes"]:
         if lake["shape"] not in {"organic_polygon", "source_polygon"}:
             raise ValueError(
@@ -137,6 +164,33 @@ def validate_geometry_contract(projection: dict) -> None:
             raise ValueError(
                 f"forest {zone['key']} regressed to primitive geometry"
             )
+    dead_marshes = next(
+        zone for zone in projection["biome_zones"]
+        if zone["key"] == "dead_marshes"
+    )
+    if (
+        dead_marshes["shape"] != "source_polygon"
+        or dead_marshes.get("source") != "Arda Maps poly_moor 0"
+    ):
+        raise ValueError("Dead Marshes regressed to a hand-authored blob")
+    mordor = next(
+        zone for zone in projection["biome_zones"]
+        if zone["key"] == "mordor"
+    )
+    if (
+        mordor.get("shape") != "source_proximity_field"
+        or mordor.get("source_zone_keys")
+        != ["low_08", "low_09", "low_10", "low_11"]
+        or mordor.get("inside_ridges")
+        != {
+            "north": "ered_lithui",
+            "west": "ephel_duath",
+            "south": "mountains_of_shadow_south",
+        }
+        or mordor.get("source")
+        != "Arda Maps poly_mountainlow 8-11 and point_mount MountDoom"
+    ):
+        raise ValueError("Mordor regressed to a hand-authored oval")
 
 
 def load_settlements() -> list[Settlement]:
@@ -375,6 +429,140 @@ def relief_modulation(size: tuple[int, int]) -> np.ndarray:
         + np.asarray(medium, dtype=np.float32) * 0.38
     ) / 255.0
     return 0.66 + values * 0.58
+
+
+def source_zone_mask(
+    projection: dict,
+    collection: str,
+    size: tuple[int, int],
+) -> Image.Image:
+    """Rasterize one audited source-polygon collection without wobble."""
+
+    image = Image.new("L", size, 0)
+    for zone in projection.get(collection, []):
+        draw_shape(
+            image,
+            zone["shape"],
+            zone["coords"],
+            size,
+            255,
+            key=f"{collection}:{zone['key']}",
+        )
+    return image
+
+
+def highland_relief_field(
+    projection: dict,
+    size: tuple[int, int],
+) -> np.ndarray:
+    """Return low, continuously feathered relief from Arda Maps highlands.
+
+    These shapes describe rolling upland rather than mountain summits.  Two
+    overlapping soft envelopes preserve their intricate source outlines while
+    avoiding a flat raised plate at the polygon edge; deterministic rock-mass
+    modulation supplies the smaller folds visible at close zoom.
+    """
+
+    source = source_zone_mask(projection, "highland_zones", size)
+    inner = np.asarray(
+        source.filter(ImageFilter.GaussianBlur(radius=max(1, size[1] // 1365))),
+        dtype=np.float32,
+    ) / 255.0
+    shoulder = np.asarray(
+        source.filter(ImageFilter.GaussianBlur(radius=max(3, size[1] // 256))),
+        dtype=np.float32,
+    ) / 255.0
+    envelope = inner * 0.76 + shoulder * 0.24
+    modulation = relief_modulation(size)
+    return np.clip(envelope * (0.72 + modulation * 0.26), 0.0, 1.0)
+
+
+def source_proximity_field(
+    projection: dict,
+    zone: dict,
+    size: tuple[int, int],
+) -> np.ndarray:
+    """Derive a soft region from exact source ranges and a source anchor.
+
+    Mordor's old fifteen-point ash oval ignored the detailed Ered Lithui,
+    Ephel Duath, and Mountains of Shadow footprints already present in the
+    audited atlas.  This field grows inward from those footprints, closes at
+    the exact Mount Doom point, and uses only a soft production-view window to
+    prevent the influence leaking into Gondor, Harad, or Rhun.
+    """
+
+    by_key = {
+        item["key"]: item
+        for item in projection.get("mountain_zones", [])
+    }
+    boundary = Image.new("L", size, 0)
+    for key in zone["source_zone_keys"]:
+        source_zone = by_key[key]
+        draw_shape(
+            boundary,
+            source_zone["shape"],
+            source_zone["coords"],
+            size,
+            255,
+            key=f"source-field:{zone['key']}:{key}",
+        )
+    radius = max(3.0, float(zone["blur_radius"]) * size[1])
+    proximity = np.asarray(
+        boundary.filter(ImageFilter.GaussianBlur(radius=radius)),
+        dtype=np.float32,
+    ) / 255.0
+    proximity = np.sqrt(np.clip(proximity, 0.0, 1.0))
+
+    _x0, _y0, _x1, _y1 = (float(value) for value in zone["bounds"])
+    feather = 0.018
+    xx = np.linspace(0.0, 1.0, size[0], dtype=np.float32)[None, :]
+    yy = np.linspace(0.0, 1.0, size[1], dtype=np.float32)[:, None]
+
+    def smoothstep(values: np.ndarray) -> np.ndarray:
+        values = np.clip(values, 0.0, 1.0)
+        return values * values * (3.0 - 2.0 * values)
+
+    ridge_by_key = {
+        item["key"]: item for item in projection["ridges"]
+    }
+    north = ridge_by_key[zone["inside_ridges"]["north"]]["points"]
+    north = sorted((float(x), float(y)) for x, y in north)
+    north_y = np.interp(
+        xx[0],
+        [item[0] for item in north],
+        [item[1] for item in north],
+    )[None, :]
+    west = ridge_by_key[zone["inside_ridges"]["west"]]["points"]
+    west = sorted((float(y), float(x)) for x, y in west)
+    west_x = np.interp(
+        yy[:, 0],
+        [item[0] for item in west],
+        [item[1] for item in west],
+    )[:, None]
+    south = ridge_by_key[zone["inside_ridges"]["south"]]["points"]
+    south = sorted((float(x), float(y)) for x, y in south)
+    south_y = np.interp(
+        xx[0],
+        [item[0] for item in south],
+        [item[1] for item in south],
+    )[None, :]
+    # The three source-aligned ridge axes define Mordor's north, west, and
+    # south sides. Its open eastern landward transition receives an
+    # exponential fade rather than a fourth straight clipping edge.
+    east_decay = np.exp(-np.clip(xx - 0.700, 0.0, None) / 0.055)
+    window = (
+        smoothstep((yy - north_y) / feather)
+        * smoothstep((xx - west_x) / feather)
+        * smoothstep((south_y - yy) / feather)
+        * east_decay
+    )
+    anchor_x, anchor_y = (float(value) for value in zone["anchor"])
+    anchor_distance = np.hypot(
+        (xx - anchor_x) * 2.0,
+        yy - anchor_y,
+    )
+    anchor = np.exp(-np.square(anchor_distance / 0.048) * 0.5) * 0.72
+    return np.clip(np.maximum(proximity, anchor) * window, 0.0, 1.0)
 
 
 def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
@@ -736,7 +924,38 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     biome_image = Image.new("L", size, BIOMES["ocean"])
     biome = np.asarray(biome_image).copy()
     biome[land_array] = BIOMES["temperate"]
-    for zone in projection["biome_zones"]:
+    # Broad climate envelopes go down first. Exact source moors and named
+    # forests then retain their identity instead of being overwritten by the
+    # old Rhun/Harad/Mordor proof-map paint.
+    climate_zones = [
+        zone
+        for zone in projection["biome_zones"]
+        if zone["biome"] not in {"forest", "dense_forest"}
+    ]
+    forest_zones = [
+        zone
+        for zone in projection["biome_zones"]
+        if zone["biome"] in {"forest", "dense_forest"}
+    ]
+    for zone in climate_zones:
+        if zone["shape"] == "source_proximity_field":
+            field = source_proximity_field(projection, zone, size)
+            active = (field >= float(zone["threshold"])) & land_array
+        else:
+            mask = Image.new("L", size, 0)
+            draw_shape(
+                mask,
+                zone["shape"],
+                zone["coords"],
+                size,
+                255,
+                key=f"biome:{zone['key']}",
+            )
+            active = (np.asarray(mask) > 0) & land_array
+        biome[active] = BIOMES[zone["biome"]]
+    moor_mask = source_zone_mask(projection, "moor_zones", size)
+    biome[(np.asarray(moor_mask) > 0) & land_array] = BIOMES["marsh"]
+    for zone in forest_zones:
         mask = Image.new("L", size, 0)
         draw_shape(
             mask,
@@ -746,8 +965,7 @@ def render() -> tuple[dict[str, Image.Image], dict]:
             255,
             key=f"biome:{zone['key']}",
         )
-        if zone["biome"] in {"forest", "dense_forest"}:
-            mask = naturalize_forest_mask(mask, key=zone["key"])
+        mask = naturalize_forest_mask(mask, key=zone["key"])
         active = (np.asarray(mask) > 0) & land_array
         biome[active] = BIOMES[zone["biome"]]
     biome[
@@ -765,12 +983,16 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         )
         biome[np.asarray(mask) > 0] = BIOMES["lake"]
     biome_image = Image.fromarray(biome.astype(np.uint8), "L")
+    material_pond_mask = (biome == BIOMES["lake"]) & land_array
+
+    highland_relief = highland_relief_field(projection, size)
 
     yy = np.linspace(0.0, 1.0, size[1], dtype=np.float32)[:, None]
     base_land = LOWLAND_SOUTH_SAMPLE + (
         1.0 - yy
     ) * (LOWLAND_NORTH_SAMPLE - LOWLAND_SOUTH_SAMPLE)
     elevation = np.where(land_array, base_land, WATER_FLOOR_SAMPLE)
+    elevation += np.where(land_array, highland_relief * 4_800.0, 0.0)
     elevation += np.where(land_array, ridge_array * 36000.0, 0.0)
     river_blur = np.asarray(
         rivers.filter(ImageFilter.GaussianBlur(radius=max(1, size[1] // 240))),
@@ -780,6 +1002,20 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         land_array,
         elevation - river_blur * RIVER_INCISION_SAMPLE,
         elevation,
+    )
+    # Sub-location source lakes remain above the engine water plane, but they
+    # still need physical bowls. A shallow feathered depression plus a deeper
+    # exact centre prevents their wet material from reading as a flat decal.
+    pond_basin = np.asarray(
+        Image.fromarray(material_pond_mask.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.GaussianBlur(radius=max(1, size[1] // 1024))
+        ),
+        dtype=np.float32,
+    ) / 255.0
+    elevation -= np.where(
+        land_array,
+        pond_basin * 900.0 + material_pond_mask * 450.0,
+        0.0,
     )
     # Orodruin is an isolated stratovolcano, not another blurred mountain
     # envelope. The former soft ellipse left only a shallow rise in the close
@@ -823,7 +1059,6 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     )
     elevation += np.where(land_array, doom_relief, 0.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
-    material_pond_mask = (biome == BIOMES["lake"]) & land_array
     material_pond_pixels = int(material_pond_mask.sum())
     expected_material_pond_pixels = sum(
         lake_pixel_areas[key] for key in MATERIAL_POND_KEYS
@@ -887,6 +1122,16 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     preview_array = np.zeros((size[1], size[0], 3), dtype=np.uint8)
     for biome_id, color in PREVIEW_COLORS.items():
         preview_array[biome == biome_id] = color
+    upland_alpha = np.clip(highland_relief * 0.24, 0.0, 0.24)[..., None]
+    upland_tint = np.asarray((116, 105, 78), dtype=np.float32)
+    preview_array = np.where(
+        land_array[..., None],
+        np.round(
+            preview_array.astype(np.float32) * (1.0 - upland_alpha)
+            + upland_tint * upland_alpha
+        ).astype(np.uint8),
+        preview_array,
+    )
     preview = Image.fromarray(preview_array, "RGB")
     preview_draw = ImageDraw.Draw(preview)
     for river in projection["rivers"]:
@@ -961,6 +1206,10 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "settlements": len(settlements),
         "ridges": len(projection["ridges"]),
         "mountain_zones": len(projection.get("mountain_zones", [])),
+        "highland_zones": len(projection.get("highland_zones", [])),
+        "moor_zones": len(projection.get("moor_zones", [])),
+        "highland_source_pixels": int((highland_relief > 0.08).sum()),
+        "moor_source_pixels": int((np.asarray(moor_mask) > 0).sum()),
         "named_peaks": len(projection.get("named_peaks", [])),
         "passes": len(projection["passes"]),
         "rivers": len(projection["rivers"]),

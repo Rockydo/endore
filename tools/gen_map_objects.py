@@ -111,7 +111,11 @@ FOREST_ZONE_HIGH_DETAIL_BOOST = {
     "fangorn": 5.0,
     "old_forest": 5.0,
     "lothlorien": 4.0,
-    "ithilien": 6.0,
+    # Ithilien is 17 narrow source components beside the Mordor mountain
+    # biome. A modest stochastic boost ceased to protect them once the exact
+    # moor/upland controls redistributed eligible cells. Reserve their tiny
+    # share by weight inside the unchanged global high-LOD budget.
+    "ithilien": 600.0,
 }
 
 

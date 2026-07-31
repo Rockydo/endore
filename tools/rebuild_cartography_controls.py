@@ -232,6 +232,41 @@ def source_multi_polygon(
     ]
 
 
+def source_polygon_collection(
+    topology: Topology,
+    collection: str,
+    *,
+    key_prefix: str,
+    epsilon: float,
+) -> list[dict]:
+    """Return every production-view source polygon with stable provenance.
+
+    Arda Maps' highland and moor layers contain the fine, irregular terrain
+    envelopes that the original proof map omitted.  Keep the source indexes
+    in their keys so a future payload audit can identify an altered footprint
+    without relying on its position in a generated list.
+    """
+
+    result: list[dict] = []
+    geometries = topology.data["objects"][collection]["geometries"]
+    for index, geometry in enumerate(geometries):
+        ring = max(topology.polygon_rings(geometry), key=len)
+        if not in_view(ring) or len(ring) < 4:
+            continue
+        coords = simplify_ring(ring, epsilon)
+        if len(coords) < 4:
+            continue
+        result.append(
+            {
+                "key": f"{key_prefix}_{index:03d}",
+                "shape": "source_polygon",
+                "coords": coords,
+                "source": f"Arda Maps {collection}",
+            }
+        )
+    return result
+
+
 def river_geometry(topology: Topology, event_name: str) -> list[list[float]]:
     matches = [
         geometry
@@ -414,6 +449,24 @@ def build(reference_root: Path) -> dict:
                     "strength": strength,
                 }
             )
+
+    # These two audited layers were absent from the proof map even though the
+    # hash-pinned source contains them.  Highlands provide 190 renderable
+    # upland/foothill envelopes in the production view; moors provide eight
+    # exact wet-ground footprints, including the Dead Marshes and Nindalf.
+    # They remain separate from gameplay topography and political locations.
+    highland_zones = source_polygon_collection(
+        topology,
+        "poly_highland",
+        key_prefix="highland",
+        epsilon=0.00008,
+    )
+    moor_zones = source_polygon_collection(
+        topology,
+        "poly_moor",
+        key_prefix="moor",
+        epsilon=0.00010,
+    )
 
     # Named summits are exact Arda Maps point controls, not generic scenery.
     # The polygon layers bind each range footprint and the axes below bind its
@@ -705,24 +758,32 @@ def build(reference_root: Path) -> dict:
             {
                 "key": "dead_marshes",
                 "biome": "marsh",
-                "shape": "organic_polygon",
-                "coords": [
-                    [0.590, 0.510], [0.605, 0.500], [0.620, 0.508],
-                    [0.625, 0.532], [0.614, 0.552], [0.596, 0.550],
-                    [0.586, 0.532],
-                ],
+                "shape": "source_polygon",
+                "coords": source_polygon(
+                    topology, "poly_moor", 0, epsilon=0.00010
+                ),
+                "source": "Arda Maps poly_moor 0",
             },
             {
                 "key": "mordor",
                 "biome": "ash",
-                "shape": "organic_polygon",
-                "coords": [
-                    [0.612, 0.530], [0.640, 0.514], [0.675, 0.511],
-                    [0.709, 0.525], [0.736, 0.553], [0.744, 0.589],
-                    [0.730, 0.625], [0.704, 0.660], [0.681, 0.701],
-                    [0.648, 0.720], [0.615, 0.714], [0.598, 0.686],
-                    [0.604, 0.650], [0.607, 0.610], [0.604, 0.570],
+                "shape": "source_proximity_field",
+                "source_zone_keys": [
+                    "low_08", "low_09", "low_10", "low_11"
                 ],
+                "inside_ridges": {
+                    "north": "ered_lithui",
+                    "west": "ephel_duath",
+                    "south": "mountains_of_shadow_south",
+                },
+                "anchor": named_source_point("point_mount", "MountDoom"),
+                "bounds": [0.592, 0.495, 0.758, 0.710],
+                "blur_radius": 0.035,
+                "threshold": 0.120,
+                "source": (
+                    "Arda Maps poly_mountainlow 8-11 and "
+                    "point_mount MountDoom"
+                ),
             },
             {
                 "key": "brown_lands",
@@ -863,6 +924,8 @@ def build(reference_root: Path) -> dict:
         "sea_cutouts": {},
         "lakes": lakes,
         "mountain_zones": mountain_zones,
+        "highland_zones": highland_zones,
+        "moor_zones": moor_zones,
         "named_peaks": named_peaks,
         "ridges": ridges,
         "passes": passes,
@@ -890,6 +953,8 @@ def main() -> int:
         "rebuild_cartography_controls: wrote "
         f"{len(projection['land_polygons']['mainland'])} mainland vertices, "
         f"{len(projection['mountain_zones'])} mountain zones, "
+        f"{len(projection['highland_zones'])} highland zones, "
+        f"{len(projection['moor_zones'])} moor zones, "
         f"{len(projection['biome_zones'])} biome zones, "
         f"{len(projection['rivers'])} rivers"
     )

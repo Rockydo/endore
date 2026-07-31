@@ -28,7 +28,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "937928b45c1ac34cf77fc560367f0fb941112feae86df37d09fbc611e303e21e"
+    "5b585889790c4601c10baa75d07ad0075fa4ff56fa55e053e0499f7e668a4903"
 )
 EXPECTED_FOREST_KEYS = {
     "lothlorien",
@@ -91,12 +91,22 @@ def render_report() -> dict:
         "offshore_islands": len(projection["land_polygons"]) - 1,
         "lakes": len(projection["lakes"]),
         "mountain_footprints": len(projection["mountain_zones"]),
+        "highland_footprints": len(projection.get("highland_zones", [])),
+        "moor_footprints": len(projection.get("moor_zones", [])),
         "named_peaks": len(projection.get("named_peaks", [])),
         "ridge_axes": len(projection["ridges"]),
         "passes": len(projection["passes"]),
         "river_valley_controls": len(projection["rivers"]),
         "biome_zones": len(projection["biome_zones"]),
     }
+    feature_counts["highland_source_vertices"] = sum(
+        len(item["coords"])
+        for item in projection.get("highland_zones", [])
+    )
+    feature_counts["moor_source_vertices"] = sum(
+        len(item["coords"])
+        for item in projection.get("moor_zones", [])
+    )
     forest_zones = [
         item
         for item in projection["biome_zones"]
@@ -116,6 +126,10 @@ def render_report() -> dict:
         "offshore_islands": 8,
         "lakes": 15,
         "mountain_footprints": 40,
+        "highland_footprints": 190,
+        "moor_footprints": 8,
+        "highland_source_vertices": 10_000,
+        "moor_source_vertices": 200,
         "named_peaks": 18,
         "ridge_axes": 9,
         "passes": 10,
@@ -143,6 +157,47 @@ def render_report() -> dict:
         raise ValueError("one or more named forests lost source-polygon geometry")
     if {item["key"] for item in forest_zones} != EXPECTED_FOREST_KEYS:
         raise ValueError("named forest coverage changed without cartographic review")
+    highland_zones = projection.get("highland_zones", [])
+    moor_zones = projection.get("moor_zones", [])
+    if len(highland_zones) != 190 or len(moor_zones) != 8:
+        raise ValueError(
+            "Arda Maps upland coverage changed without cartographic review"
+        )
+    for collection, zones, provenance in (
+        ("highland", highland_zones, "Arda Maps poly_highland"),
+        ("moor", moor_zones, "Arda Maps poly_moor"),
+    ):
+        if any(item.get("shape") != "source_polygon" for item in zones):
+            raise ValueError(f"one or more {collection}s lost source geometry")
+        if any(item.get("source") != provenance for item in zones):
+            raise ValueError(f"one or more {collection}s lost source provenance")
+    dead_marshes = next(
+        item for item in projection["biome_zones"]
+        if item["key"] == "dead_marshes"
+    )
+    if (
+        dead_marshes.get("shape") != "source_polygon"
+        or dead_marshes.get("source") != "Arda Maps poly_moor 0"
+    ):
+        raise ValueError("Dead Marshes regressed to hand-authored geometry")
+    mordor = next(
+        item for item in projection["biome_zones"]
+        if item["key"] == "mordor"
+    )
+    if (
+        mordor.get("shape") != "source_proximity_field"
+        or mordor.get("source_zone_keys")
+        != ["low_08", "low_09", "low_10", "low_11"]
+        or mordor.get("inside_ridges")
+        != {
+            "north": "ered_lithui",
+            "west": "ephel_duath",
+            "south": "mountains_of_shadow_south",
+        }
+        or mordor.get("source")
+        != "Arda Maps poly_mountainlow 8-11 and point_mount MountDoom"
+    ):
+        raise ValueError("Mordor regressed to a hand-authored oval")
     expected_river_keys = {
         "upper_anduin",
         "anduin",
@@ -205,6 +260,8 @@ def render_report() -> dict:
         "passes",
         "rivers",
         "biome_zones",
+        "highland_zones",
+        "moor_zones",
     ):
         keys = [item["key"] for item in projection[collection]]
         if len(keys) != len(set(keys)):

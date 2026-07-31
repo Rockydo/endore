@@ -38,7 +38,7 @@ from PIL import Image, ImageDraw, ImageFilter
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from gen_rivers import river_control_points
-from m2_controls import land_mask, natural_path
+from m2_controls import land_mask, natural_path, source_zone_mask
 from worldgen import CONTROL, DERIVED, TERRAIN_OUT
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,9 +61,9 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 28
+GENERATOR_VERSION = 29
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28}
+    {17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29}
 )
 
 # Installed materials.txt establishes the native mask-channel meanings.  The
@@ -645,6 +645,39 @@ def render_material_source() -> np.ndarray:
     material[ash_dark] = MATERIAL_DARK_ROCK
     material[ash_rock] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
 
+    # Arda Maps supplies 190 renderable upland footprints independently of its
+    # mountain atlas. Give those rolling hills a restrained earth bias while
+    # preserving forests, wetlands, deserts, and Mordor's volcanic paint.
+    # This removes the proof map's visually flat lowlands without promoting
+    # every source highland to an impassable or snow-covered range.
+    highland_image = source_zone_mask(
+        projection, "highland_zones", (MATERIAL_W, MATERIAL_H)
+    ).filter(ImageFilter.GaussianBlur(radius=3.0))
+    highland_weight = np.asarray(highland_image, dtype=np.uint8)
+    upland_active = (
+        (highland_weight >= 14)
+        & land
+        & ~cool_ground
+        & (arid_weight < 0.45)
+        & (ash_weight < 0.45)
+    )
+    upland_score = (
+        selector
+        + highland_weight.astype(np.float32) * 0.30
+        + np.clip(
+            (height.astype(np.float32) - 13_000.0) / 120.0,
+            0.0,
+            64.0,
+        )
+    )
+    upland_blend = upland_active & (
+        (upland_score >= 132.0) & (upland_score < 188.0)
+    )
+    upland_earth = upland_active & (upland_score >= 188.0)
+    material[upland_blend] = MATERIAL_GRASS | MATERIAL_EARTH
+    material[upland_earth] = MATERIAL_EARTH
+    del highland_image, highland_weight, upland_score
+
     # Mordor's high volcanic surfaces must remain basaltic. Everywhere else,
     # blend altitude, a locally smoothed physical slope, the source-aligned
     # crest field, and broad organic noise. The former hard height/slope cuts
@@ -675,17 +708,17 @@ def render_material_source() -> np.ndarray:
         + slope_weight * 0.34
         + organic_weight * 0.10
     )
-    highland = land & (height >= 28_000) & (ash_weight < 0.62)
-    highland_grass_earth = highland & (height < 35_000)
-    highland_earth = highland & (height >= 35_000)
+    highland = land & (height >= 30_000) & (ash_weight < 0.62)
+    highland_grass_earth = highland & (height < 38_000)
+    highland_earth = highland & (height >= 38_000)
     highland_dark = (
-        highland & (height >= 38_000) & (exposure >= 0.58)
+        highland & (height >= 43_000) & (exposure >= 0.66)
     )
     highland_blend = (
-        highland & (height >= 44_000) & (exposure >= 0.72)
+        highland & (height >= 49_000) & (exposure >= 0.78)
     )
     highland_rock = (
-        highland & (height >= 50_000) & (exposure >= 0.83)
+        highland & (height >= 54_000) & (exposure >= 0.88)
     )
     material[highland_grass_earth] = MATERIAL_GRASS | MATERIAL_EARTH
     material[highland_earth] = MATERIAL_EARTH
@@ -697,9 +730,9 @@ def render_material_source() -> np.ndarray:
     # exposure plus actual altitude rather than a mountain-class footprint.
     crest = land & (ash_weight < 0.62)
     rock_snow = crest & (
-        (height >= 57_000) & (exposure >= 0.78)
+        (height >= 58_000) & (exposure >= 0.84)
     )
-    snow = crest & (height >= 61_500) & (exposure >= 0.86)
+    snow = crest & (height >= 62_000) & (exposure >= 0.91)
     material[rock_snow] = MATERIAL_ROCK | MATERIAL_SNOW
     material[snow] = MATERIAL_SNOW
 
@@ -739,8 +772,16 @@ def render_material_source() -> np.ndarray:
         | MATERIAL_WATER_TRANSITION
     )
     material[lake_coast] |= MATERIAL_WATER_TRANSITION
-    material[material_pond_margin] |= MATERIAL_WATER_TRANSITION
-    material[material_pond] |= MATERIAL_RIVER
+    material[material_pond_margin] |= (
+        MATERIAL_WETLAND_COAST | MATERIAL_WATER_TRANSITION
+    )
+    material[material_pond] = (
+        MATERIAL_GRASS
+        | MATERIAL_EARTH
+        | MATERIAL_WETLAND_COAST
+        | MATERIAL_WATER_TRANSITION
+        | MATERIAL_RIVER
+    )
     material[outer_coast] |= MATERIAL_WATER_TRANSITION
 
     # Every playable dry cell uses one ENDÓRË renderer biome. Engine

@@ -11,6 +11,10 @@
   "settlements": 42,
   "ridges": 9,
   "mountain_zones": 43,
+  "highland_zones": 190,
+  "moor_zones": 8,
+  "highland_source_pixels": 309673,
+  "moor_source_pixels": 11387,
   "named_peaks": 18,
   "passes": 10,
   "rivers": 24,
@@ -48,8 +52,8 @@
   },
   "material_pond_pixels": 189,
   "material_pond_height": [
-    11136,
-    43908
+    10750,
+    47715
   ],
   "land_fraction": 0.464592,
   "land_bbox_pixels": [
@@ -84,5 +88,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "ba488c85c415f2191bfe044cd3f1f96dcfaced4cef23895765866961a07d3a63"
+  "source_sha256": "2319a92de30ae8ca66d22732f05138dccc29b6f58b5e6fdc454e3b0e335ebb9c"
 }

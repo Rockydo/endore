@@ -671,3 +671,23 @@
   location-focus evidence continued to 3018.2.1 without error-log growth. Evidence:
   `docs/m2/LOAD_PROOF_20260731.md` and
   `docs/screens/20260731_m2_loadproof_v28_tick/`.
+
+- Source-terrain v29 imports 190 renderable Arda Maps highland footprints (10,805
+  simplified vertices) and all eight moor footprints (369 vertices). The new highlands
+  provide low continuous relief; the Dead Marshes now use their exact 111-vertex source
+  shape; all named forests render above broad climate paint. Mordor's proof-era
+  fifteen-point ash oval is replaced by a continuous field bound to source mountain
+  footprints 8-11, the Ered Lithui/Ephel Dúath/Mountains of Shadow axes, and Mount Doom.
+  Sub-location ponds gain shallow physical bowls, while crest material thresholds and
+  Ithilien's fixed-budget high-detail allocation were tightened.
+- The complete world remains at 6,004 locations and 2,038,645 Arda-native vegetation
+  transforms. Full validation passed in 281.9 seconds. Paired smoke passed in 200.8
+  seconds on fingerprint
+  `e453742c7d20aaaf3b68567ffb6c98855df41b8b40695bd5899b9100c60e25d4`
+  with zero new and zero mod-unique lines. A fresh full-visual world loaded to responsive
+  country selection, continued into HUD-proven Observer, resumed exactly once, and
+  visibly ticked for 45 seconds. One non-repeating coat-of-arms tooltip line appeared
+  before playback and is carried explicitly to the final gate; the error log stayed fixed
+  during playback. Evidence: `docs/m2/SOURCE_TERRAIN_PROOF_20260731.md` and
+  `docs/screens/20260731_m2_source_terrain_v29/`. M2 remains red for macro-biome cleanup
+  and the full nine-theatre physical review.
