@@ -691,3 +691,24 @@
   during playback. Evidence: `docs/m2/SOURCE_TERRAIN_PROOF_20260731.md` and
   `docs/screens/20260731_m2_source_terrain_v29/`. M2 remains red for macro-biome cleanup
   and the full nine-theatre physical review.
+- The v29 fresh-world command's apparent 600-second load failure was isolated to the
+  driver, not the generated world: its first transition stage waited exclusively for two
+  debug-log suffix markers even after the responsive country-selection screen existed.
+  The transition gate now accepts five stable seconds of the calibrated country-selection
+  bar when those markers are unavailable, then reconfirms the same interactive state in
+  the existing second gate before sending input. Pure regression coverage rejects state
+  4 alone, cache completion without its quiet period, incomplete visual stability, and
+  generic quiet logs while accepting both complete-log and stable-country-selection
+  proofs.
+- A repeat exposed two further automation-only ambiguities without changing the v29 game
+  tree: the first Observer click could be consumed foregrounding EU5 and then cascade into
+  a map-country selection, while another topmost application could occlude EU5 from a
+  desktop-pixel probe. Evidence capture and transition probes now foreground the exact
+  tokenized EU5 PID, process exit terminates the wait immediately, and Observer automation
+  requires the warning-dialog and start-button signatures before clicking onward.
+- Owner visual review accepts the greatly improved coasts provisionally and keeps M2 red
+  for inland fidelity: relief must become taller, narrower, and jagged rather than broad
+  plateaus; Mordor and northern ranges require exact source review; Erebor must be a lone
+  peak; and the river system needs wider trunks plus many more source-derived tributaries.
+  A complete Arda Maps/Ardacraft audit follows those fixes, with political assignment and
+  blocky Dunland repair deliberately after final physical terrain.

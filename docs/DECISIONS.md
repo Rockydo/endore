@@ -784,6 +784,37 @@ land. Keep the explicit ten-key set and validate it against the threshold on eve
 retain the five larger lakes as engine water. This generalizes the proven Shire fix to
 Mirrormere and the other sub-location pools without subjective one-off exceptions.
 
+## 2026-07-31 — Accept stable country selection when transition logs are incomplete
+
+Do not classify a fresh world as unloadable merely because `debug.log` omits or rotates
+away one of the `MainMenu->Game` state-4/cache-completion markers. The current v29 world
+was responsive at country selection after the outer command exhausted its 600-second log
+wait, and the same owned process subsequently entered HUD-proven Observer and advanced
+simulation. Extend the transition wait with the already calibrated country-selection top
+bar: an owned, Windows-responsive EU5 window must render that signature continuously for
+five seconds. This is an authoritative fallback only, not a generic non-black-frame
+heuristic. The following interactive-window stage independently reconfirms the same bar
+for another five seconds before any input, while complete logs retain their existing
+state-4 plus cache-finish plus quiet-period route.
+
+Desktop pixels are admissible only after foreground ownership is tied to the tokenized EU5
+PID. A merely topmost window can still be occluded by another topmost application, which
+previously made the fallback sample Codex instead of EU5. Foreground the owned game for
+transition probes and evidence captures, abort promptly if that process exits, and require
+visual confirmation of both the Observer warning dialog and the gold start control before
+allowing their coordinate clicks. A missed first click must never cascade into selecting a
+map country and falsely reporting an Observer or load failure.
+
+## 2026-08-01 — Freeze the coast and deepen inland fidelity before political repair
+
+Treat the current source-derived coastline as provisionally accepted by the owner and do
+not reopen it without a specific cartographic mismatch. The remaining physical priority is
+taller, narrower, jagged mountain structure—especially exact Mordor and northern ranges
+plus an unmistakably isolated Erebor—followed by wider major rivers and a substantially
+denser source-traced tributary network. Complete a theatre-by-theatre fidelity audit against
+Arda Maps and Ardacraft before reassigning political locations. Political cleanup, including
+Dunland's blocky footprint, must follow terrain so boundaries cannot distort geography.
+
 ## 2026-07-31 — Paint mountain exposure from source crests, not hard bands
 
 Retain the source-pinned heightfield as physical authority, but derive rock/snow exposure

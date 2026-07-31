@@ -70,5 +70,12 @@ selection -> live Observer, and records each transition under `docs/screens/<nam
 If the slot is occupied it returns the protocol's deferred status without launching or
 touching the other project's process.
 
+Fresh-game completion is dual-proven. Normally the driver observes state 4, cache
+recalculation completion, and a quiet debug log. If build 24187685 omits or rotates those
+markers, five continuous seconds of the calibrated country-selection top bar on the
+responsive owned EU5 window release the log wait; the next stage independently requires
+the same interactive signature for another five seconds. A menu, loading bar, merely
+non-black frame, or window owned by the other project cannot satisfy this fallback.
+
 No vanilla-control cache or background job queue is used. An automatically queued test
 could otherwise run against a worktree that changed after submission.

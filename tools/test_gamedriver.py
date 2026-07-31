@@ -14,8 +14,11 @@ sys.path.insert(0, str(TOOLS))
 
 from gamedriver import (
     mainmenu_game_transition_state,
+    observer_confirmation_dialog_state,
     observer_frame_state,
     observer_pause_banner,
+    observer_start_button_state,
+    transition_completion_signal,
 )
 
 
@@ -66,6 +69,53 @@ def main() -> int:
             mainmenu_game_transition_state(debug) == "active",
             "a later transaction must supersede an earlier completion",
         )
+
+        require(
+            transition_completion_signal(False, False, 60, 15, 0) is None,
+            "quiet logs without completion markers must not pass",
+        )
+        require(
+            transition_completion_signal(True, False, 60, 15, 0) is None,
+            "state 4 alone must not pass the logged completion route",
+        )
+        require(
+            transition_completion_signal(True, True, 14.9, 15, 0) is None,
+            "cache completion must remain quiet for the configured settle time",
+        )
+        require(
+            transition_completion_signal(True, True, 15, 15, 0) == "log",
+            "state 4, cache completion, and log quiet must pass",
+        )
+        require(
+            transition_completion_signal(False, False, 0, 15, 4.9) is None,
+            "an unstable country-selection frame must not pass",
+        )
+        require(
+            transition_completion_signal(False, False, 0, 15, 5)
+            == "country-selection",
+            "a stable country-selection frame must recover missed log markers",
+        )
+
+        neutral_ui = Image.new("RGB", (1000, 600), (110, 120, 95))
+        confirmation, *_ = observer_confirmation_dialog_state(neutral_ui)
+        require(not confirmation, "plain political-map paint must not mimic a dialog")
+        start_visible, *_ = observer_start_button_state(neutral_ui)
+        require(not start_visible, "plain political-map paint must not mimic Start")
+
+        confirmation_ui = neutral_ui.copy()
+        confirmation_draw = ImageDraw.Draw(confirmation_ui)
+        confirmation_draw.rectangle((320, 324, 680, 372), fill=(35, 35, 35))
+        confirmation_draw.rectangle((340, 333, 500, 350), fill=(52, 76, 112))
+        confirmation, *_ = observer_confirmation_dialog_state(confirmation_ui)
+        require(confirmation, "the Observer confirmation button row must be detected")
+
+        start_ui = neutral_ui.copy()
+        start_draw = ImageDraw.Draw(start_ui)
+        start_draw.rectangle((400, 480, 600, 546), fill=(45, 40, 30))
+        start_draw.rectangle((410, 490, 590, 536), fill=(145, 105, 45))
+        start_draw.rectangle((420, 498, 580, 528), fill=(55, 45, 30))
+        start_visible, *_ = observer_start_button_state(start_ui)
+        require(start_visible, "the gold Observer start control must be detected")
 
         # A red political-map patch can cover the centered pause-banner crop
         # while country selection is still active. It must never prove that a

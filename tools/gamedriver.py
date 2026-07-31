@@ -726,7 +726,7 @@ def screenshot(args: argparse.Namespace) -> int:
     session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
     target = ROOT / "docs/screens" / session / f"{args.name}.png"
     target.parent.mkdir(parents=True, exist_ok=True)
-    window = activate_window(require_foreground=False)
+    window = activate_window(require_foreground=True)
     image = pyautogui.screenshot(
         region=(window.left, window.top, window.width, window.height)
     )
@@ -748,7 +748,7 @@ def click(args: argparse.Namespace) -> int:
         # the settle period.  Re-activate and refresh the geometry before the
         # evidence capture so a post-input screenshot never documents an
         # unrelated window as if it were EU5 state.
-        window = activate_window(require_foreground=False)
+        window = activate_window(require_foreground=True)
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -790,7 +790,7 @@ def save_window_capture(target: Path) -> object:
     """Capture the PID-verified topmost EU5 rectangle, never the wider desktop."""
     import pyautogui
 
-    window = activate_window(require_foreground=False)
+    window = activate_window(require_foreground=True)
     image = pyautogui.screenshot(
         region=(window.left, window.top, window.width, window.height)
     )
@@ -838,7 +838,7 @@ def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
     deadline = time.monotonic() + timeout
     while time.monotonic() < deadline:
         try:
-            window = activate_window(require_foreground=False)
+            window = activate_window(require_foreground=True)
         except RuntimeError:
             return False
         image = pyautogui.screenshot(
@@ -858,25 +858,66 @@ def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
     return False
 
 
+def transition_completion_signal(
+    saw_state_four: bool,
+    saw_cache_finish: bool,
+    log_quiet_seconds: float,
+    cache_settle: float,
+    country_stable_seconds: float,
+    country_required_seconds: float = 5.0,
+) -> str | None:
+    """Classify independently proven completion of MainMenu-to-Game.
+
+    The log route remains preferred when build 24187685 emits both expected
+    markers. A continuously rendered and responsive country-selection bar is
+    an equally direct engine-state proof when either marker falls outside the
+    sampled log suffix.
+    """
+    if country_stable_seconds >= country_required_seconds:
+        return "country-selection"
+    if saw_state_four and saw_cache_finish and log_quiet_seconds >= cache_settle:
+        return "log"
+    return None
+
+
 def wait_for_transition_log(
     user_dir: Path, start_offset: int, timeout: int, cache_settle: int
 ) -> bool:
-    """Wait for EU5's own MainMenu->Game marker after Continue or New Game.
+    """Wait for a proven MainMenu->Game completion after Continue or New Game.
 
     Either route can display an almost-full loading bar for several minutes;
     a fixed sleep is therefore unsafe.  The installed build writes state 4 only
     after committing the MainMenu->Game transaction.  The same local log then
     records cached-data rebuilds; waiting for it to go quiet after their
-    completion prevents clicks landing on the 98%-complete loading screen.
+    completion prevents clicks landing on the 98%-complete loading screen. If
+    those markers are omitted or missed after a log rotation, five continuous
+    seconds of the calibrated country-selection frame provide an independent
+    authoritative completion signal. The subsequent interactive-window gate
+    reconfirms the same visual state before any input is sent.
     """
     debug = user_dir / "logs" / "debug.log"
+    try:
+        process = process_from_state()
+    except (RuntimeError, psutil.NoSuchProcess):
+        return False
     deadline = time.monotonic() + timeout
     scan_offset = start_offset
     saw_state_four = False
     saw_cache_finish = False
     last_change = time.monotonic()
     last_size = start_offset
+    country_stable_since: float | None = None
     while time.monotonic() < deadline:
+        try:
+            alive = process.is_running() and process.status() != psutil.STATUS_ZOMBIE
+        except psutil.NoSuchProcess:
+            alive = False
+        if not alive:
+            print(
+                "gamedriver: process exited before MainMenu->Game completion",
+                file=sys.stderr,
+            )
+            return False
         if debug.exists():
             size = debug.stat().st_size
             # A fresh engine transition can rotate or truncate debug.log.
@@ -897,12 +938,53 @@ def wait_for_transition_log(
                 saw_cache_finish = saw_cache_finish or (
                     "Finished ClearAndRecalculateCachedData" in suffix
                 )
-        if (
-            saw_state_four
-            and saw_cache_finish
-            and time.monotonic() - last_change >= cache_settle
-        ):
+        now_monotonic = time.monotonic()
+        try:
+            # Desktop screenshots sample visible pixels. A topmost window can
+            # still be covered by another topmost application, so foreground
+            # the exact leased EU5 PID before treating pixels as engine state.
+            window = activate_window(require_foreground=True)
+        except (RuntimeError, psutil.NoSuchProcess):
+            window = None
+        responsive = bool(window) and not is_hung_window(window)
+        rendered, _ = (
+            rendered_frame_state(window)
+            if window is not None and responsive
+            else (False, 0.0)
+        )
+        try:
+            country_frame, *_ = (
+                country_selection_frame_present(window)
+                if window is not None and responsive and rendered
+                else (False, 0.0, 0.0, 0.0)
+            )
+        except OSError:
+            country_frame = False
+        if country_frame:
+            country_stable_since = country_stable_since or now_monotonic
+        else:
+            country_stable_since = None
+        country_stable_seconds = (
+            now_monotonic - country_stable_since
+            if country_stable_since is not None
+            else 0.0
+        )
+        signal = transition_completion_signal(
+            saw_state_four,
+            saw_cache_finish,
+            now_monotonic - last_change,
+            cache_settle,
+            country_stable_seconds,
+        )
+        if signal == "log":
             print("gamedriver: MainMenu->Game and cached-data completion detected")
+            return True
+        if signal == "country-selection":
+            print(
+                "gamedriver: country-selection frame proved MainMenu->Game "
+                f"completion after {country_stable_seconds:.1f}s "
+                "(logged completion markers unavailable)"
+            )
             return True
         time.sleep(2)
     return False
@@ -943,6 +1025,58 @@ def country_selection_frame_present(window) -> tuple[bool, float, float, float]:
     return present, saturation, value, variance
 
 
+def observer_confirmation_dialog_state(image) -> tuple[bool, float, float]:
+    """Detect the Observer game-rule confirmation dialog's button row."""
+    width, height = image.size
+    crop = image.crop(
+        (
+            round(width * 0.32),
+            round(height * 0.54),
+            round(width * 0.68),
+            round(height * 0.62),
+        )
+    ).convert("RGB").resize((100, 24))
+    pixels = list(
+        crop.get_flattened_data()
+        if hasattr(crop, "get_flattened_data")
+        else crop.getdata()
+    )
+    dark_ratio = sum(max(pixel) < 95 for pixel in pixels) / len(pixels)
+    blue_ratio = sum(
+        blue > red * 1.05
+        and blue > green * 1.02
+        and max(red, green, blue) > 50
+        for red, green, blue in pixels
+    ) / len(pixels)
+    return dark_ratio >= 0.65 and blue_ratio >= 0.12, dark_ratio, blue_ratio
+
+
+def observer_start_button_state(image) -> tuple[bool, float, float]:
+    """Detect the bottom-centre gold Observer start control."""
+    width, height = image.size
+    crop = image.crop(
+        (
+            round(width * 0.40),
+            round(height * 0.80),
+            round(width * 0.60),
+            round(height * 0.91),
+        )
+    ).convert("RGB").resize((100, 30))
+    pixels = list(
+        crop.get_flattened_data()
+        if hasattr(crop, "get_flattened_data")
+        else crop.getdata()
+    )
+    dark_ratio = sum(max(pixel) < 95 for pixel in pixels) / len(pixels)
+    gold_ratio = sum(
+        red > green * 1.08
+        and green > blue * 1.25
+        and red > 90
+        for red, green, blue in pixels
+    ) / len(pixels)
+    return dark_ratio >= 0.62 and gold_ratio >= 0.08, dark_ratio, gold_ratio
+
+
 def wait_for_interactive_game_window(
     timeout: int,
     stable_seconds: float = 5,
@@ -974,7 +1108,7 @@ def wait_for_interactive_game_window(
             )
             return False
         try:
-            window = find_window()
+            window = activate_window(require_foreground=True)
         except (RuntimeError, psutil.NoSuchProcess):
             window = None
         responsive = bool(window) and not is_hung_window(window)
@@ -1071,16 +1205,55 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
     # screenshots from the local recovery probe showed that clicking earlier
     # merely opened the map's Country tooltip and did not toggle Observer.
     time.sleep(args.country_selection_settle)
-    click_normalized(0.23, 0.047)
-    time.sleep(args.ui_settle)
-    save_window_capture(target_dir / f"{prefix}_observer_enabled.png")
-    # With country changes prohibited by the active game rule, toggling
-    # Observer opens a confirmation dialog. The locally verified OK button is
-    # stable in normalized window coordinates; accepting it immediately
-    # enables Observer and exposes the bottom-center start button.
-    click_normalized(0.60, 0.606)
-    time.sleep(args.ui_settle)
-    save_window_capture(target_dir / f"{prefix}_observer_rule_accepted.png")
+    observer_ready = False
+    for observer_attempt in range(1, 3):
+        # A topmost game window can still lose Windows keyboard focus to the
+        # shell that launched this command. Explicitly foreground the verified
+        # leased PID so the first UI click is not consumed merely activating it.
+        activate_window(require_foreground=True)
+        click_normalized(0.23, 0.047)
+        time.sleep(args.ui_settle)
+        enabled_image = save_window_capture(
+            target_dir / f"{prefix}_observer_enabled_attempt{observer_attempt}.png"
+        )
+        if observer_attempt == 1:
+            enabled_image.save(target_dir / f"{prefix}_observer_enabled.png")
+        confirmation, confirmation_dark, confirmation_blue = (
+            observer_confirmation_dialog_state(enabled_image)
+        )
+        start_visible, start_dark, start_gold = observer_start_button_state(enabled_image)
+        if confirmation:
+            # With country changes prohibited by the active game rule, toggling
+            # Observer opens a confirmation dialog. Accept only after its
+            # button-row signature is visible; a missed Observe click must not
+            # turn this coordinate into an unrelated map selection.
+            activate_window(require_foreground=True)
+            click_normalized(0.60, 0.606)
+            time.sleep(args.ui_settle)
+            accepted_image = save_window_capture(
+                target_dir
+                / f"{prefix}_observer_rule_accepted_attempt{observer_attempt}.png"
+            )
+            accepted_image.save(target_dir / f"{prefix}_observer_rule_accepted.png")
+            start_visible, start_dark, start_gold = observer_start_button_state(
+                accepted_image
+            )
+        if start_visible:
+            print(
+                "gamedriver: Observer start control detected "
+                f"(attempt={observer_attempt} dark={start_dark:.3f} "
+                f"gold={start_gold:.3f})"
+            )
+            observer_ready = True
+            break
+        print(
+            "gamedriver: Observer toggle did not reach a confirmed UI state "
+            f"(attempt={observer_attempt} dialog_dark={confirmation_dark:.3f} "
+            f"dialog_blue={confirmation_blue:.3f} start_dark={start_dark:.3f} "
+            f"start_gold={start_gold:.3f}); retrying"
+        )
+    if not observer_ready:
+        return False
     # The map is visible as soon as cached data finishes, but the observer
     # start button is not reliably interactive until its following UI frame.
     # This value was calibrated against the local save-load sequence.
@@ -1089,6 +1262,7 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
         # The country information panel can overlap the right half of this
         # button after Observer is enabled. Click the stable exposed left
         # segment at the release UI scale.
+        activate_window(require_foreground=True)
         click_normalized(0.42, 0.86)
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_start_attempt{start_attempt}.png")

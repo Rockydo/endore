@@ -4,14 +4,14 @@
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
    receives explicit owner acceptance. The current source-audited runtime tree loads,
    but the nine-theatre visual gate remains red.
-2. REOPENED M2 MOUNTAINS — retain the source-pinned foothill/axis/peak/saddle height
-   model, neutral renderer template for all 600 separately impassable mountain cells, and
-   v29 continuous source-crest material weight. The 190 newly imported source-highland
-   footprints add rolling relief without changing impassability. Fresh Khazad-dum evidence
-   proves that this route removes giant location-shaped slabs and joins the former
-   exposed-rock islands into a more coherent massif without opening the ranges; v29 makes
-   rock/snow thresholds more selective. Next verify the remaining fringe and all named
-   passes in the live 3D renderer without moving binding axes, peaks, or saddles.
+2. REOPENED M2 MOUNTAINS — current relief remains too broad, low, rounded, and plateaued.
+   Retain source-pinned axes/peaks/saddles and separate impassability, but rebuild the
+   cross-range profile for substantially taller, narrower, jagged crests with secondary
+   ridges and irregular peak chains rather than flat-topped high hills. Audit Mordor's
+   Ered Lithui/Ephel Dúath/Mountains of Shadow structure and every northern range directly
+   against `arda-maps.org/ages/third` and Ardacraft before accepting a vertex or axis.
+   Erebor must read unmistakably as one isolated Lonely Mountain, not part of a broad
+   upland or range. Verify all named passes at close 3D zoom without opening them.
 3. REOPENED M2 INLAND WATER — retain the scale-enforced material-pond representation for
    all ten source lakes occupying at most 64 pixels in the 4096x2048 control atlas
    (189 pixels total). Mirrormere and minor lakes 04-07/10-14 remain exact lake-biome
@@ -29,14 +29,14 @@
    by a source-range/axis/Mount Doom field. Replace the remaining Brown Lands blob and
    broad Rhûn/Harad proof-era envelopes with audited source-native or explicitly logged
    continuous controls; never reintroduce an oval or straight clipped climate edge.
-6. REOPENED M2 RIVERS/FORESTS — verify readable Anduin, Baranduin, Greyflood, Isen,
-   Celduin, Carnen, Poros, and Harnen channels plus Fangorn, Old Forest, Lórien, and
-   Ithilien canopy. Preserve source axes, downstream width grammar, porous margins,
-   river clearances, and zero Earth transforms/decals. Harnen now uses the matching
-   unnamed Arda Maps source channel plus only a two-point coast continuation; do not
-   restore the rejected straight diagonal or farther-west mouth. Morgulduin likewise
-   uses its matching unnamed source line. All 24 production river axes are now
-   source-derived.
+6. REOPENED M2 RIVERS/FORESTS — the primary rivers remain too narrow and the network too
+   sparse for EU5 close zoom. Re-audit every visible watercourse against both owner-supplied
+   online maps; widen the Anduin, Baranduin, Greyflood, Isen, Celduin, Carnen, Poros,
+   Harnen, and other major trunks while importing or source-tracing a materially denser
+   hierarchy of tributaries and headwaters. Preserve natural downstream width growth,
+   irregular banks, confluences, clearances, and zero Earth transforms/decals. Retain the
+   source-matching Harnen and Morgulduin routes; do not restore rejected straight lines.
+   Then verify Fangorn, Old Forest, Lórien, and Ithilien canopy at close zoom.
 7. REOPENED M2 SCALE/GRANULARITY — the measured source frame already occupies 100% of
    canvas height and 70.3% of width, with substantial land contact at both north and
    south crop edges. Do not enlarge uniformly: it would clip Forochel or Far Harad.
@@ -57,15 +57,25 @@
    and the independent full-resolution physical controls while capturing the nine
    required terrain theatres. Do not restore the quarantined July navmesh or relaunch
    the superseded 12,104-location fingerprints.
-9. PAUSED M5 renderer: isolate or replace the inherited `boat_with_oars_unit` path that
+9. REOPENED M2 FIDELITY AUDIT — after relief, rivers, water, forests, and macro materials
+   converge, compare the entire physical atlas theatre-by-theatre and feature-by-feature
+   against `http://arda-maps.org/ages/third` and
+   `https://www.ardacraft.me/map/middle-earth-interactive-map`. Treat the substantially
+   improved coast as accepted unless a specific source mismatch is demonstrated; spend
+   the next physical passes on inland fidelity rather than reopening it generically.
+10. REOPENED M2 POLITICAL ASSIGNMENT — only after the physical terrain is final, re-audit
+   every realm/location assignment and border against the same sources. Correct blocky or
+   displaced regions, explicitly including Dunland, without moving physical geography to
+   accommodate political paint.
+11. PAUSED M5 renderer: isolate or replace the inherited `boat_with_oars_unit` path that
    emitted a missing `waves_vfx` / `foam_stop` pair on 3018.2.17. The attempted direct
    vanilla control was inconclusive because it still loaded the active ENDÓRË map.
-10. PAUSED M5 evidence: run a fresh non-debug five-year Observer economy session and
+12. PAUSED M5 evidence: run a fresh non-debug five-year Observer economy session and
    capture population, market, settlement, raw-material, and development map modes.
-11. PAUSED M5 roads: pursue a materially different Arda-native `spline_network.splnet` route
+13. PAUSED M5 roads: pursue a materially different Arda-native `spline_network.splnet` route
    (binary-format writer or editor-safe source overlay); do not repeat the two exhausted
    retail map-editor launches.
-12. PAUSED M5 gate: install the validated 302-edge route graph only with matching native splines,
+14. PAUSED M5 gate: install the validated 302-edge route graph only with matching native splines,
    then repeat paired smoke and the five-year economy evidence run.
-13. Later map tooling: revisit Himling/Tolfalas adjacency candidates only through a bounded
+15. Later map tooling: revisit Himling/Tolfalas adjacency candidates only through a bounded
    editor-backed experiment; the zero-byte fallback remains the proven safe contract.
