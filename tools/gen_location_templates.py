@@ -39,13 +39,13 @@ def mean_elevations(model: WorldModel) -> np.ndarray:
     return sums / model.areas
 
 
-def climate(x: float, y: float, biome_id: int) -> str:
+def climate(x: float, y: float, biome_id: int, kind: str) -> str:
     # EU5 resolves terrain biomes from location-scoped climate, topography,
     # and vegetation. Varying any of those values across 12,104 generated
     # locations repaints the continuous terrain cache as visible cell islands.
     # Seasonal/latitudinal appearance is authored in the Arda-native material
     # cache instead, so every playable land cell uses one neutral climate.
-    return "continental"
+    return "me_arda_surface" if kind in {"land", "mountain"} else "continental"
 
 
 def land_terrain(biome_id: int, elevation: float) -> tuple[str, str]:
@@ -84,7 +84,7 @@ def template_text(model: WorldModel) -> str:
     for location in model.locations:
         biome_id = int(dominant[location.index])
         nx, ny = location.normalized
-        location_climate = climate(nx, ny, biome_id)
+        location_climate = climate(nx, ny, biome_id, location.kind)
         fields: list[str]
         if location.kind == "sea":
             # Shore materials and bathymetry are continuous in the authored
@@ -150,6 +150,11 @@ def check() -> list[str]:
     if expected.count(" = { ") != len(model.locations):
         failures.append("template count is not bijective with location model")
     land_count = sum(location.kind == "land" for location in model.locations)
+    rendered_land_count = sum(
+        location.kind in {"land", "mountain"} for location in model.locations
+    )
+    if expected.count("climate = me_arda_surface") != rendered_land_count:
+        failures.append("continuous rendering climate does not cover every land cell")
     if M4_CULTURES.is_file():
         if expected.count(" culture = me_") != land_count:
             failures.append("M4 culture assignments are incomplete")

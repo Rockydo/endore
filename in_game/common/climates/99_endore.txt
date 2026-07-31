@@ -1,0 +1,16 @@
+﻿# ENDÓRË rendering adapter. Gameplay matches installed continental climate;
+# its unique key selects the continuous all-land material palette.
+me_arda_surface = {
+	winter = normal
+	color = rgb { 92 146 120 }
+
+	location_modifier = {
+		local_population_capacity_modifier = 0.50
+		free_capacity_attracts_pops = yes
+	}
+
+	audio_tags = {
+		masDataClimateZone = 0.2
+	}
+	debug_color = rgb { 92 146 120 }
+}

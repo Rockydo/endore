@@ -11,6 +11,7 @@
   "settlements": 42,
   "ridges": 9,
   "mountain_zones": 43,
+  "named_peaks": 18,
   "passes": 10,
   "rivers": 24,
   "lakes": 15,
@@ -31,5 +32,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "ffc2bfdff8670531336bff79c2588d69d95ecf8349486ba08823cf36bcb8c6a5"
+  "source_sha256": "4ed8adea3ce6825cdad4ee78a75205b0e9fdf4a109929acacb6bb8125f4791a4"
 }

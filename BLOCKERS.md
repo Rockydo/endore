@@ -272,3 +272,54 @@ debug attempt was already live but exposed a pause-banner detector false negativ
 driver now also recognizes the fixed Observer HUD, and both repeats passed. Retain q64
 and close this resource-envelope blocker. The separate nine-theatre physical-quality gate
 remains red.
+
+## 2026-07-31 — Sub-location inland-water bowl renderer
+
+Status: two-strike visual blocker; exact source outline retained, alternate
+representation required.
+
+The small source pool east of Hobbiton renders as a deep, cell-shaped quarry despite the
+correct bottom-up terrain-cache orientation and a physically dry shoreline shelf. Two
+fresh no-debug experiments on the same source geometry exhausted the direct engine-water
+route:
+
+1. Assigning the lake cells `flatland` plus the continuous ENDÓRË surface climate did not
+   alter the bowl.
+2. Raising the lake bed to 5,146, immediately below the measured local dry datum, removed
+   the blue water surface but left the same dry bowl.
+
+Both experiments were rejected and fully reverted. Do not repeat them. Keep the audited
+lake outline in the binding cartographic controls; pursue either a non-engine-water
+scenery representation or topology-aware handling for source waters smaller than one
+runtime location after the broader theatre audit. Evidence:
+`docs/screens/20260731_m2_lake_adapter_probe/`,
+`docs/screens/20260731_m2_lake_floor_probe/`, and
+`docs/screens/20260731_m2_height_material_probe/hobbiton_restored.png`.
+
+## 2026-07-31 — Location-template and compact-ellipse mountain repairs
+
+Status: two-strike visual route exhausted; physical height-envelope route in progress.
+
+The correctly targeted Khazad-dûm, Dunharrow, and Goblin-town views showed broad grey
+plateaus with hard pass cuts. Two materially different renderer-facing repairs failed:
+
+1. Narrower, higher-amplitude off-axis peak ellipses changed source statistics but did
+   not make the live ranges read as peaks.
+2. A fresh New Game with every impassable cell rendered as neutral `flatland` instead of
+   `mountain_wasteland` produced the same grey shapes.
+
+Both experiments were rejected and reverted. Do not repeat template substitution or
+compact-ellipse tuning against the old polygon lift. The neutral-template result proves
+that the defect lives in the physical height/material source, not in political
+impassability. The next route keeps every audited polygon border but treats it as a low
+foothill envelope, with source ridge axes carrying the summit relief. Evidence:
+`docs/screens/20260731_m2_compact_peaks_probe/` and
+`docs/screens/20260731_m2_neutral_mountain_probe/`.
+
+Resolution update: the physical height-envelope route is viable. Eighteen exact named
+source peaks, narrow high saddles, low polygon foothills, and slope-aware exposed
+materials produced visible 3D massifs in fresh Observer at all three target ranges while
+preserving Mount Doom's crater. Do not return to the two exhausted routes. The remaining
+defect is a new material-feathering task: hard slope thresholds form coarse rock ribbons
+and islands at close zoom. Evidence:
+`docs/screens/20260731_m2_slope_material_probe/`. M2 remains red.

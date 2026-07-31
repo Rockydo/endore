@@ -439,9 +439,10 @@
   1,200 retains more than twice that strategic granularity without weakening any ridge,
   height, massif, or pass geometry. M2 remains red.
 - The rebalanced source-frame tree regenerated coherently: 10,700 land, 1,200 mountain,
-  60 lake, and 144 sea locations; 463 ports; 38 realms; 10,679 populated locations; 341
-  authored route edges; and 12,104 final terrain templates. All 42 anchors and the full
-  source projection remain unchanged.
+  60 lake, and 144 sea locations; after the source-peak control refresh it resolves to
+  456 ports, 38 realms, 10,679 populated locations, 361 authored route edges, and 12,104
+  final terrain templates. All 42 anchors and the full source projection remain
+  unchanged.
 - Full validation passed in 313.9 seconds, including every cartography, connectivity,
   cache, river, border, vegetation, locator, quarantine, realm, people, census, template,
   and lint stage. Paired vanilla/mod smoke then passed with zero mod-unique lines on
@@ -471,3 +472,49 @@
   flat diagnostic overlay, not physical-map acceptance evidence. Deterministic selection
   of the unoverlaid terrain view and all nine full/regional/close theatre captures remain
   blocking; reopened M2 stays red.
+- Deterministic named-location targeting now centers exact ASCII keys through the live
+  location finder, replacing error-prone free-camera theatre selection. The first
+  correctly targeted nine-theatre audit proves that continuous Arda vegetation and
+  materials render, but keeps M2 red: the Shire's smallest pool is a cell-shaped bowl,
+  Belfalas still has an over-rounded internal inlet, and Misty/White Mountain cores read
+  as broad grey plateaus rather than peak systems.
+- Every dry location now resolves through the unique `me_arda_surface` rendering adapter
+  and one 16-channel ENDÓRË material array. Fresh no-debug close views prove continuous
+  Harad sand, Mordor ash/rock, Mirkwood canopy, and Rhûn/Dorwinion ground variation
+  without the previous climate/vegetation Voronoi islands. Mount Doom is now an
+  asymmetric physical cone with a crater. These are accepted component improvements,
+  not acceptance of the full theatre.
+- Two bounded small-lake repairs were rejected and reverted: neutral flatland rendering
+  did not change the Hobbiton bowl, and a bed raised to 5,146 removed its water but left
+  the bowl. The exact source outline remains in the control atlas; `BLOCKERS.md` records
+  the alternate-representation requirement.
+- The mountain diagnosis rejected both narrow high-amplitude peak ellipses and neutral
+  topography substitution because neither changed the live grey plateaus. The underlying
+  cause was the height model lifting nearly every Arda Maps mountain-polygon interior to
+  crest altitude. A new deterministic candidate preserves all 43 source footprints as
+  low foothill envelopes, makes the nine audited ridge axes carry the high relief, and
+  turns all 10 passes into saddles. Its 174,763-entry q64 cache passes targeted static
+  checks with 80,219 unique height tiles, 64,067 unique material tiles, 220.1 MB total,
+  and zero Earth decals. Fresh no-debug mountain evidence is next when the shared EU5
+  lease clears; M2 remains red.
+- The retained mountain route now pins 18 named Arda Maps summits and all 10 source or
+  reconciled passes in the projection audit. Fresh exact-tree Observer views prove that
+  Khazad-dûm, Dunharrow, and Goblin-town have physical sloped massifs and that Orodruin
+  retains its asymmetric cratered cone. A slope-aware material rebuild reduced exposed
+  rock from 153,379 altitude-selected pixels to 62,684 steep highland pixels and reduced
+  snow from 33,893 to a 3,970-pixel steep-crest core. It removes the former continuous
+  grey polygon plates, but close views still reject coarse rock ribbons/islands and the
+  current political-cell scale. This is a retained component improvement only; the
+  nine-theatre gate and M2 remain red.
+- The first paired smoke on the coherent source-peak tree reached healthy vanilla and
+  mod menus, then correctly rejected five integration lines: missing UTF-8 BOMs on the
+  new climate/biome files, missing renderer-climate localization, one generated Khand
+  province localization hash collision, and a duplicate continental climate color.
+  The source files/generator now own all four repairs: verified BOM encoding, bespoke
+  climate text, unique color, and deterministic Khand area-stem remapping. Revalidation
+  and paired smoke remain mandatory before commit.
+- Post-fix full validation passed in 330.4 seconds. Paired vanilla/mod smoke then passed
+  on exact runtime-byte fingerprint `07682616689a4d271b2cd3c08de4de4af3020a92b7f484a520225ec0bdcbd763`
+  with zero new error lines and zero mod-unique diagnostics. This greens the component
+  batch's integration contract only; close-zoom material feathering, the other physical
+  defects, the nine-theatre audit, and explicit owner acceptance keep M2 red.

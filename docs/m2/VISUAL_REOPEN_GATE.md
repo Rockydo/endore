@@ -91,6 +91,20 @@ density rebuild: lumber on neutral templates, an unowned Henneth Annûn town set
 discriminated Black Númenórean nobles in Umbar. All three are generator-fixed and covered
 by validation; they must be confirmed absent in the next interactive source-frame
 session.
+
+The current source-frame audit uses exact named-location targeting and a unique
+all-land renderer biome. Fresh no-debug evidence accepts continuous Mirkwood canopy,
+Harad sand, Mordor ash, Rhûn/Dorwinion ground, and Mount Doom's physical cratered cone.
+It rejects the tiny source pool east of Hobbiton, the over-rounded Belfalas inlet, and
+the former mountain model's broad grey plateaus. Two lake-template/bed experiments and
+two mountain-template/compact-peak experiments were rejected and reverted. The current
+mountain route instead interprets all 43 audited source polygons as low foothill
+envelopes, makes the nine source-aligned axes and 18 exact named peaks carry high relief,
+and makes the 10 passes high saddles. Fresh Observer views at
+Khazad-dûm/Dunharrow/Goblin-town/Orodruin prove physical slopes, crests, and the cratered
+Mount Doom. Slope-aware material selection removes the former whole-polygon grey plates,
+but the same close views reject coarse exposed-rock ribbons/islands and the still-crude
+political-cell scale. This is a retained component improvement, not gate acceptance.
 M2 remains blocking.
 
 ## Binding defects

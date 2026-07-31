@@ -430,10 +430,12 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             dtype=np.float32,
         )
 
-    # Arda Maps mountain polygons bind the range footprint and prevent the
-    # old line-only generator from producing uniform tubes. Low and high
-    # zones provide irregular mass and crest islands; authored axes below add
-    # directional folds and named passes.
+    # Arda Maps mountain polygons bind the full range footprint, but they are
+    # foothill envelopes rather than flat summit plates. Earlier versions
+    # lifted almost every polygon interior to 44-100% of the relief range;
+    # the real renderer consequently showed broad grey mesas with circular
+    # green pass holes. Keep the source footprint as low irregular mass and
+    # let the source-aligned axes below carry the high ridges and summits.
     modulation = relief_modulation(size)
     for zone in projection.get("mountain_zones", []):
         mask = Image.new("L", size, 0)
@@ -455,7 +457,7 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             softened
             * strength
             * 255.0
-            * (0.44 + 0.56 * modulation)
+            * (0.10 + 0.22 * modulation)
         )
         layers = smooth_union(layers, np.clip(zone_field, 0.0, 255.0))
 
@@ -474,27 +476,30 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
         # ``maximum``. Their transition shoulders became visible as parallel,
         # terraced contour bands in EU5's close renderer. Three overlapping
         # Gaussian envelopes instead form one continuously sloped massif:
-        # broad foothills, folded mountain body, and an irregular central
-        # spine, with no discrete change in construction method at any radius.
+        # low foothills, a steep folded body, and an irregular central spine,
+        # with no discrete change in construction method at any radius. Live
+        # theatre evidence rejected the former 5.4-width broad envelope: even
+        # after polygon plateaus were removed it still read as a flat exposed-
+        # rock field. Concentrate height into a visibly steep chain.
         broad = blurred_path(
             path,
-            width=round(width * 5.4),
-            blur=round(width * 1.35),
+            width=round(width * 3.2),
+            blur=round(width * 0.95),
         )
         body = blurred_path(
             path,
-            width=round(width * 2.4),
-            blur=round(width * 0.72),
+            width=round(width * 1.6),
+            blur=round(width * 0.45),
         )
         spine = blurred_path(
             path,
-            width=round(width * 0.72),
-            blur=round(width * 0.32),
+            width=round(width * 0.45),
+            blur=round(width * 0.18),
         )
         massif = value * (
-            0.24 * (broad / 255.0)
-            + 0.48 * (body / 255.0)
-            + 0.28 * (spine / 255.0)
+            0.18 * (broad / 255.0)
+            + 0.40 * (body / 255.0)
+            + 0.42 * (spine / 255.0)
         )
         # A mountain chain is a field of overlapping massifs, not a uniform
         # wall. Scatter low-amplitude off-axis shoulders along the authored
@@ -514,8 +519,8 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             normal = np.array([-tangent[1], tangent[0]]) / tangent_length
             center = np.array(path[path_index], dtype=np.float64)
             center += normal * rng.uniform(-1.15, 1.15) * width
-            radius_x = rng.uniform(0.72, 1.45) * width
-            radius_y = rng.uniform(0.62, 1.30) * width
+            radius_x = rng.uniform(0.30, 0.66) * width
+            radius_y = rng.uniform(0.26, 0.60) * width
             peak_draw.ellipse(
                 (
                     round(center[0] - radius_x),
@@ -526,10 +531,10 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
                 fill=round(rng.uniform(150.0, 235.0)),
             )
         peaks = peaks.filter(
-            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.68)))
+            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.18)))
         )
         peak_values = np.asarray(peaks, dtype=np.float32) / 255.0
-        massif += value * peak_values * 0.22
+        massif += value * peak_values * 0.72
         layers = smooth_union(layers, np.clip(massif, 0.0, 255.0))
         for branch_index, branch in enumerate(ridge.get("branches", [])):
             branch_path = natural_path(
@@ -542,19 +547,72 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             )
             branch_body = blurred_path(
                 branch_path,
-                width=round(width * 1.75),
-                blur=round(width * 0.72),
+                width=round(width * 1.30),
+                blur=round(width * 0.42),
             )
             branch_spine = blurred_path(
                 branch_path,
-                width=round(width * 0.58),
-                blur=round(width * 0.34),
+                width=round(width * 0.42),
+                blur=round(width * 0.18),
             )
             branch_field = value * 0.58 * (
                 0.68 * (branch_body / 255.0)
                 + 0.32 * (branch_spine / 255.0)
             )
             layers = smooth_union(layers, branch_field)
+
+    # Place lore-sensitive summits at their hash-pinned Arda Maps point
+    # coordinates. Each field is a weighted blend of lumpy outer shoulders,
+    # an offset body, and a compact source-centered core. This keeps the
+    # canonical coordinate as the local maximum without stamping circular
+    # cones or concentric rings into isolated hills.
+    for peak in projection.get("named_peaks", []):
+        x, y = point(peak["center"], size)
+        radius = max(3, round(float(peak["radius"]) * size[1]))
+        strength = float(peak["strength"])
+        rng = np.random.default_rng(stable_seed(f"named-peak:{peak['key']}"))
+        peak_field = np.zeros_like(layers)
+        for scale, lobe_count, blur, weight, offset in (
+            (1.65, 6, 0.72, 0.22, 0.65),
+            (0.95, 5, 0.38, 0.38, 0.34),
+            (0.42, 3, 0.18, 0.62, 0.10),
+        ):
+            lobe_image = Image.new("L", size, 0)
+            lobe_draw = ImageDraw.Draw(lobe_image)
+            for lobe_index in range(lobe_count):
+                # The first core lobe is exactly source-centered. Other
+                # shoulders wander locally but cannot move the summit anchor.
+                if scale <= 0.42 and lobe_index == 0:
+                    center_x, center_y = x, y
+                else:
+                    angle = rng.uniform(0.0, math.tau)
+                    distance = rng.uniform(0.0, offset) * radius
+                    center_x = x + math.cos(angle) * distance
+                    center_y = y + math.sin(angle) * distance
+                radius_x = radius * scale * rng.uniform(0.62, 1.18)
+                radius_y = radius * scale * rng.uniform(0.62, 1.18)
+                lobe_draw.ellipse(
+                    (
+                        round(center_x - radius_x),
+                        round(center_y - radius_y),
+                        round(center_x + radius_x),
+                        round(center_y + radius_y),
+                    ),
+                    fill=255,
+                )
+            lobe_image = lobe_image.filter(
+                ImageFilter.GaussianBlur(
+                    radius=max(1, round(radius * blur))
+                )
+            )
+            peak_field += (
+                np.asarray(lobe_image, dtype=np.float32)
+                * weight
+                * strength
+            )
+        peak_field = np.clip(peak_field, 0.0, 255.0)
+        layers = smooth_union(layers, peak_field)
+
     image = Image.fromarray(np.clip(layers, 0, 255).astype(np.uint8), "L")
     for pass_data in projection["passes"]:
         valley = Image.new("L", size, 0)
@@ -568,7 +626,10 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             valley.filter(ImageFilter.GaussianBlur(radius=max(2, radius // 2))),
             dtype=np.float32,
         ) / 255.0
-        layers = np.asarray(image, dtype=np.float32) * (1.0 - valley_array * 0.92)
+        # A pass is a high saddle through a range, not a circular lowland
+        # crater. Retain enough relief to keep the mountain mass continuous
+        # while making the authored crossing visibly lower than its crests.
+        layers = np.asarray(image, dtype=np.float32) * (1.0 - valley_array * 0.58)
         image = Image.fromarray(np.clip(layers, 0, 255).astype(np.uint8), "L")
     return image
 
@@ -668,19 +729,47 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         elevation - river_blur * RIVER_INCISION_SAMPLE,
         elevation,
     )
+    # Orodruin is an isolated stratovolcano, not another blurred mountain
+    # envelope. The former soft ellipse left only a shallow rise in the close
+    # renderer. Build an asymmetric apron, a steep cone, and a summit crater
+    # enclosed by a broken rim without moving the source-audited anchor.
     mount_doom = next(item for item in settlements if item.key == "mount_doom")
-    peak = Image.new("L", size, 0)
     px, py = point((mount_doom.x, mount_doom.y), size)
-    radius = max(3, size[1] // 90)
-    ImageDraw.Draw(peak).ellipse(
-        (px - radius, py - radius, px + radius, py + radius),
-        fill=255,
+    doom_y, doom_x = np.ogrid[: size[1], : size[0]]
+    doom_dx = doom_x.astype(np.float32) - float(px)
+    doom_dy = doom_y.astype(np.float32) - float(py)
+    doom_angle = np.arctan2(doom_dy, doom_dx)
+    doom_distance = np.hypot(doom_dx, doom_dy)
+    irregular_distance = doom_distance * (
+        1.0
+        + 0.075 * np.sin(doom_angle * 5.0 + 0.8)
+        + 0.040 * np.sin(doom_angle * 11.0 - 0.35)
     )
-    peak_array = np.asarray(
-        peak.filter(ImageFilter.GaussianBlur(radius=max(2, radius // 2))),
-        dtype=np.float32,
-    ) / 255.0
-    elevation += np.where(land_array, peak_array * 22000.0, 0.0)
+    apron_radius = max(18.0, size[1] / 105.0)
+    cone_radius = max(6.0, size[1] / 300.0)
+    apron = np.power(
+        np.clip(1.0 - irregular_distance / apron_radius, 0.0, 1.0),
+        2.15,
+    )
+    cone = np.power(
+        np.clip(1.0 - irregular_distance / cone_radius, 0.0, 1.0),
+        1.32,
+    )
+    rim_radius = cone_radius * 0.31
+    rim_width = max(0.75, cone_radius * 0.11)
+    rim = np.exp(
+        -np.square((doom_distance - rim_radius) / rim_width) * 0.5
+    )
+    crater = np.exp(
+        -np.square(doom_distance / max(0.85, rim_radius * 0.58)) * 0.5
+    )
+    doom_relief = (
+        apron * 7_500.0
+        + cone * 40_000.0
+        + rim * 6_000.0
+        - crater * 14_000.0
+    )
+    elevation += np.where(land_array, doom_relief, 0.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
     minimum_land_height = int(elevation[land_array].min())
     maximum_water_height = int(elevation[~land_array].max())
@@ -775,6 +864,7 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "settlements": len(settlements),
         "ridges": len(projection["ridges"]),
         "mountain_zones": len(projection.get("mountain_zones", [])),
+        "named_peaks": len(projection.get("named_peaks", [])),
         "passes": len(projection["passes"]),
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),

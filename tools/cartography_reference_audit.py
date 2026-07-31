@@ -63,6 +63,7 @@ def render_report() -> dict:
         "offshore_islands": len(projection["land_polygons"]) - 1,
         "lakes": len(projection["lakes"]),
         "mountain_footprints": len(projection["mountain_zones"]),
+        "named_peaks": len(projection.get("named_peaks", [])),
         "ridge_axes": len(projection["ridges"]),
         "passes": len(projection["passes"]),
         "river_valley_controls": len(projection["rivers"]),
@@ -73,6 +74,7 @@ def render_report() -> dict:
         "offshore_islands": 8,
         "lakes": 15,
         "mountain_footprints": 40,
+        "named_peaks": 18,
         "ridge_axes": 9,
         "passes": 10,
         "river_valley_controls": 24,
@@ -84,10 +86,67 @@ def render_report() -> dict:
                 f"cartographic feature coverage regressed: {key} "
                 f"{feature_counts[key]} < {minimum}"
             )
-    for collection in ("lakes", "mountain_zones", "ridges", "passes", "rivers", "biome_zones"):
+    for collection in (
+        "lakes",
+        "mountain_zones",
+        "named_peaks",
+        "ridges",
+        "passes",
+        "rivers",
+        "biome_zones",
+    ):
         keys = [item["key"] for item in projection[collection]]
         if len(keys) != len(set(keys)):
             raise ValueError(f"projection repeats a {collection} key")
+    expected_peak_keys = {
+        "weathertop",
+        "methedras",
+        "celebdil",
+        "fanuidhol",
+        "caradhras",
+        "mindolluin",
+        "erech_hill",
+        "thrihyrne",
+        "dol_baran",
+        "irensaga",
+        "dwimorberg",
+        "starkhorn",
+        "ras_morthil",
+        "carrock_height",
+        "mount_gundabad",
+        "erebor_peak",
+        "ravenhill",
+        "amon_hen",
+    }
+    actual_peak_keys = {item["key"] for item in projection["named_peaks"]}
+    if actual_peak_keys != expected_peak_keys:
+        raise ValueError("named source-peak coverage changed without cartographic review")
+    for peak in projection["named_peaks"]:
+        if peak.get("source") != "Arda Maps point_mount":
+            raise ValueError(f"{peak['key']} lost its Arda Maps point provenance")
+        x, y = peak["center"]
+        if not (0.0 <= x <= 1.0 and 0.0 <= y <= 1.0):
+            raise ValueError(f"{peak['key']} lies outside the production canvas")
+    expected_pass_keys = {
+        "lindon_road",
+        "gundabad_gate",
+        "high_pass",
+        "imladris_valley",
+        "redhorn_gate",
+        "gap_of_rohan",
+        "paths_of_the_dead",
+        "mindolluin_road",
+        "morannon",
+        "cirith_ungol",
+    }
+    actual_pass_keys = {item["key"] for item in projection["passes"]}
+    if actual_pass_keys != expected_pass_keys:
+        raise ValueError("named pass coverage changed without cartographic review")
+    for pass_control in projection["passes"]:
+        if not pass_control.get("source"):
+            raise ValueError(f"{pass_control['key']} lacks cartographic provenance")
+        if not (0.0025 <= float(pass_control["radius"]) <= 0.0060):
+            raise ValueError(f"{pass_control['key']} has a non-saddle-scale radius")
 
     entries: list[dict] = []
     failures: list[str] = []

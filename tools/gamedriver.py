@@ -225,6 +225,11 @@ binding={
 \tinput_action="mapmode_slot_1"
 \tscancode=69
 }
+
+binding={
+\tinput_action="find_province"
+\tscancode=68
+}
 """,
         encoding="utf-8",
     )
@@ -1336,7 +1341,17 @@ def drag(args: argparse.Namespace) -> int:
         window.top + round(window.height * args.end_y),
     )
     pyautogui.moveTo(*start)
-    pyautogui.dragTo(*end, duration=args.duration, button=args.button)
+    pyautogui.mouseDown(button=args.button)
+    try:
+        # EU5 distinguishes a middle-map click from camera rotation through
+        # Jomini's MIDDLE_MOUSE_LOCK_TIME (installed value: 0.25 seconds).
+        # Holding before motion makes the diagnostic camera gesture
+        # deterministic while retaining ordinary zero-hold pan drags.
+        if args.hold:
+            time.sleep(args.hold)
+        pyautogui.moveTo(*end, duration=args.duration)
+    finally:
+        pyautogui.mouseUp(button=args.button)
     time.sleep(args.settle)
     print(
         f"dragged {args.button} normalized ({args.start_x:.3f}, {args.start_y:.3f}) "
@@ -1518,6 +1533,49 @@ def key(args: argparse.Namespace) -> int:
         press_console_key(int(args.code, 0))
     time.sleep(args.settle)
     print(f"key sent: {'scan' if args.scan else 'vk'} {args.code}")
+    return 0
+
+
+def focus_location(args: argparse.Namespace) -> int:
+    """Center the live non-debug camera through EU5's native location finder."""
+    import pyautogui
+
+    query = args.query.strip()
+    if not query:
+        print("gamedriver: location query is empty", file=sys.stderr)
+        return 1
+    if not query.isascii():
+        print(
+            "gamedriver: use a distinctive ASCII prefix for location finder "
+            "automation",
+            file=sys.stderr,
+        )
+        return 1
+    activate_window()
+    # SDL scancode 68 is F11; Windows delivers it as scan code 0x57.
+    press_scan_code(0x57)
+    time.sleep(args.open_settle)
+    pyautogui.write(query, interval=0.04)
+    time.sleep(args.search_settle)
+    press_scan_code(0x1C)
+    time.sleep(args.settle)
+    # Enter centers the first result but intentionally leaves Finder open.
+    # Its focused edit box owns Escape as FindLocationView.OnClose.
+    press_scan_code(0x01)
+    time.sleep(1)
+    # Keep hover popups out of the evidence frame after the camera transition.
+    window = activate_window()
+    pyautogui.moveTo(
+        window.left + round(window.width * 0.98),
+        window.top + round(window.height * 0.04),
+        duration=0.1,
+    )
+    time.sleep(1)
+    print(f"gamedriver: focused first location matching {query!r}")
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        save_window_capture(target)
     return 0
 
 
@@ -1773,6 +1831,12 @@ def build_parser() -> argparse.ArgumentParser:
     drag_parser.add_argument("end_x", type=float, help="ending horizontal normalized position")
     drag_parser.add_argument("end_y", type=float, help="ending vertical normalized position")
     drag_parser.add_argument("--button", choices=("left", "middle", "right"), default="right")
+    drag_parser.add_argument(
+        "--hold",
+        type=float,
+        default=0.0,
+        help="seconds to hold before motion; use >=0.3 for EU5 middle-camera rotation",
+    )
     drag_parser.add_argument("--duration", type=float, default=1)
     drag_parser.add_argument("--settle", type=float, default=2)
     drag_parser.add_argument("--capture", help="capture this name after the drag")
@@ -1822,6 +1886,17 @@ def build_parser() -> argparse.ArgumentParser:
     key_parser.add_argument("--char", action="store_true")
     key_parser.add_argument("--settle", type=float, default=1)
     key_parser.set_defaults(func=key)
+    focus_parser = sub.add_parser("focus-location")
+    focus_parser.add_argument(
+        "query",
+        help="ASCII location name or distinctive prefix; first result is centered",
+    )
+    focus_parser.add_argument("--open-settle", type=float, default=1)
+    focus_parser.add_argument("--search-settle", type=float, default=2)
+    focus_parser.add_argument("--settle", type=float, default=4)
+    focus_parser.add_argument("--capture", help="capture after centering")
+    focus_parser.add_argument("--session")
+    focus_parser.set_defaults(func=focus_location)
     observer_parser = sub.add_parser("observer")
     observer_parser.add_argument(
         "--seconds", type=float, default=45, help="bounded playback interval"

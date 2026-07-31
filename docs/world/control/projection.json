@@ -42924,6 +42924,206 @@
       "strength": 1.0
     }
   ],
+  "named_peaks": [
+    {
+      "key": "weathertop",
+      "label": "Weathertop",
+      "center": [
+        0.423441,
+        0.219685
+      ],
+      "radius": 0.0047,
+      "strength": 0.55,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "methedras",
+      "label": "Methedras",
+      "center": [
+        0.464945,
+        0.440583
+      ],
+      "radius": 0.0059,
+      "strength": 0.99,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "celebdil",
+      "label": "Celebdil",
+      "center": [
+        0.490224,
+        0.3268
+      ],
+      "radius": 0.0059,
+      "strength": 0.99,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "fanuidhol",
+      "label": "Fanuidhol",
+      "center": [
+        0.501807,
+        0.315817
+      ],
+      "radius": 0.0047,
+      "strength": 0.81,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "caradhras",
+      "label": "Caradhras",
+      "center": [
+        0.494549,
+        0.312438
+      ],
+      "radius": 0.0071,
+      "strength": 1.0,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "mindolluin",
+      "label": "Mindolluin",
+      "center": [
+        0.585423,
+        0.607818
+      ],
+      "radius": 0.0059,
+      "strength": 0.99,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "erech_hill",
+      "label": "Erech",
+      "center": [
+        0.499958,
+        0.568615
+      ],
+      "radius": 0.0047,
+      "strength": 0.55,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "thrihyrne",
+      "label": "Thrihyrne",
+      "center": [
+        0.468165,
+        0.507581
+      ],
+      "radius": 0.0047,
+      "strength": 0.81,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "dol_baran",
+      "label": "DolBaran",
+      "center": [
+        0.466451,
+        0.487359
+      ],
+      "radius": 0.0047,
+      "strength": 0.55,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "irensaga",
+      "label": "Irensaga",
+      "center": [
+        0.502831,
+        0.535253
+      ],
+      "radius": 0.0047,
+      "strength": 0.81,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "dwimorberg",
+      "label": "Dwimorberg",
+      "center": [
+        0.500845,
+        0.547265
+      ],
+      "radius": 0.0059,
+      "strength": 0.99,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "starkhorn",
+      "label": "Starkhorn",
+      "center": [
+        0.497545,
+        0.541502
+      ],
+      "radius": 0.0059,
+      "strength": 0.99,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "ras_morthil",
+      "label": "RasMorthil",
+      "center": [
+        0.370767,
+        0.664296
+      ],
+      "radius": 0.0047,
+      "strength": 0.6,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "carrock_height",
+      "label": "Carrock",
+      "center": [
+        0.532411,
+        0.199315
+      ],
+      "radius": 0.0059,
+      "strength": 0.48,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "mount_gundabad",
+      "label": "Gundabad",
+      "center": [
+        0.502345,
+        0.102487
+      ],
+      "radius": 0.0071,
+      "strength": 1.0,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "erebor_peak",
+      "label": "LonelyMountain",
+      "center": [
+        0.603783,
+        0.145042
+      ],
+      "radius": 0.0071,
+      "strength": 1.0,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "ravenhill",
+      "label": "Ravenhill",
+      "center": [
+        0.602239,
+        0.151826
+      ],
+      "radius": 0.0047,
+      "strength": 0.58,
+      "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "amon_hen",
+      "label": "AmonHen",
+      "center": [
+        0.552888,
+        0.524393
+      ],
+      "radius": 0.0047,
+      "strength": 0.45,
+      "source": "Arda Maps point_mount"
+    }
+  ],
   "ridges": [
     {
       "key": "misty_mountains",
@@ -43237,39 +43437,44 @@
         0.309,
         0.225
       ],
-      "radius": 0.01
+      "radius": 0.0055,
+      "source": "Arda Maps/ArdaCraft reconciled"
     },
     {
       "key": "gundabad_gate",
       "center": [
-        0.502,
-        0.103
+        0.502345,
+        0.102487
       ],
-      "radius": 0.012
+      "radius": 0.005,
+      "source": "Arda Maps point_mount"
     },
     {
       "key": "high_pass",
       "center": [
-        0.51,
-        0.205
+        0.516664,
+        0.193963
       ],
-      "radius": 0.015
+      "radius": 0.0055,
+      "source": "Arda Maps point_place"
     },
     {
       "key": "imladris_valley",
       "center": [
-        0.494,
-        0.223
+        0.485267,
+        0.226229
       ],
-      "radius": 0.012
+      "radius": 0.0045,
+      "source": "Arda Maps point_ford"
     },
     {
       "key": "redhorn_gate",
       "center": [
-        0.494,
-        0.319
+        0.491913,
+        0.321854
       ],
-      "radius": 0.014
+      "radius": 0.004,
+      "source": "Arda Maps point_place"
     },
     {
       "key": "gap_of_rohan",
@@ -43277,39 +43482,44 @@
         0.466,
         0.462
       ],
-      "radius": 0.014
+      "radius": 0.006,
+      "source": "Arda Maps/ArdaCraft reconciled"
     },
     {
-      "key": "edoras_foothill_road",
+      "key": "paths_of_the_dead",
       "center": [
-        0.499,
-        0.538
+        0.50204,
+        0.542636
       ],
-      "radius": 0.007
+      "radius": 0.004,
+      "source": "Arda Maps point_place"
     },
     {
-      "key": "pelennor_anduin_road",
+      "key": "mindolluin_road",
       "center": [
         0.582,
         0.61
       ],
-      "radius": 0.006
+      "radius": 0.003,
+      "source": "Arda Maps/ArdaCraft reconciled"
     },
     {
       "key": "morannon",
       "center": [
-        0.61,
-        0.529
+        0.602667,
+        0.533643
       ],
-      "radius": 0.015
+      "radius": 0.0055,
+      "source": "Arda Maps point_place"
     },
     {
       "key": "cirith_ungol",
       "center": [
-        0.609,
-        0.582
+        0.604317,
+        0.593614
       ],
-      "radius": 0.008
+      "radius": 0.0035,
+      "source": "Arda Maps point_place"
     }
   ],
   "biome_zones": [
@@ -53397,8 +53607,52 @@
           0.73
         ],
         [
+          0.425,
+          0.708
+        ],
+        [
+          0.468,
+          0.724
+        ],
+        [
+          0.512,
+          0.699
+        ],
+        [
+          0.558,
+          0.729
+        ],
+        [
+          0.606,
+          0.702
+        ],
+        [
+          0.654,
+          0.727
+        ],
+        [
+          0.704,
+          0.694
+        ],
+        [
+          0.756,
+          0.716
+        ],
+        [
+          0.81,
+          0.688
+        ],
+        [
+          0.868,
+          0.711
+        ],
+        [
+          0.928,
+          0.684
+        ],
+        [
           1.0,
-          0.73
+          0.7
         ],
         [
           1.0,

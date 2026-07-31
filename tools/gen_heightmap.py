@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -158,6 +158,25 @@ def render_height() -> np.ndarray:
     elevation += positive_peaks * (
         4_500.0 * np.power(mountain_strength, 0.82)
     )
+
+    # Ease dry ground down toward EU5's water plane before zeroing submerged
+    # terrain. A hard 10.5k-to-zero discontinuity made every tiny source lake
+    # look like a quarry at close zoom even though its shoreline was precise.
+    shore_field = np.asarray(
+        Image.fromarray(water.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.GaussianBlur(radius=6.0)
+        ),
+        dtype=np.float32,
+    ) / 255.0
+    shore_blend = np.clip((shore_field - 0.015) / 0.43, 0.0, 1.0)
+    shore_target = 6_250.0
+    elevation = np.where(
+        ~water,
+        elevation * (1.0 - shore_blend)
+        + np.minimum(elevation, shore_target) * shore_blend,
+        elevation,
+    )
+    elevation[~water] = np.maximum(elevation[~water], shore_target)
     elevation[water] = 0.0
     return np.clip(elevation, 0, 65535).astype(np.uint16)
 
@@ -245,10 +264,30 @@ def check() -> list[str]:
     if int(expected_height.max()) < 45000:
         failures.append("heightmap lacks authored high mountain masses")
     dry_height = expected_height[expected_height > 0]
-    if int(np.percentile(dry_height, 99.0)) < 50000:
+    # The old 50k/250k floors rewarded the rejected model for lifting broad
+    # source polygons into plateaus. Keep a strong theatre-scale relief floor,
+    # then verify every major source-point summit directly.
+    if int(np.percentile(dry_height, 99.0)) < 49_000:
         failures.append("heightmap upper massif shoulders are too low")
-    if np.count_nonzero(dry_height >= 45000) < 250_000:
+    if np.count_nonzero(dry_height >= 45000) < 225_000:
         failures.append("heightmap high-relief coverage is too sparse")
+    projection = json.loads(
+        (CONTROL / "projection.json").read_text(encoding="utf-8")
+    )
+    for peak in projection.get("named_peaks", []):
+        if float(peak["strength"]) < 0.8:
+            continue
+        x = round(float(peak["center"][0]) * (HEIGHT_W - 1))
+        y = round(float(peak["center"][1]) * (HEIGHT_H - 1))
+        radius = max(2, round(float(peak["radius"]) * HEIGHT_H * 1.4))
+        window = expected_height[
+            max(0, y - radius) : min(HEIGHT_H, y + radius + 1),
+            max(0, x - radius) : min(HEIGHT_W, x + radius + 1),
+        ]
+        if window.size == 0 or int(window.max()) < 50_000:
+            failures.append(
+                f"named source peak {peak['key']} lacks high local relief"
+            )
     return failures
 
 

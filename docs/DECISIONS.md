@@ -571,3 +571,49 @@ Accept the stable top-left Observer HUD as an equivalent success signal, requiri
 its near-black panel field and its bright eye/text glyphs. The country-selection map and
 white transition veil satisfy neither condition. A repeat debug checkpoint and a cold
 non-debug visual-map launch both proved this route.
+
+## 2026-07-31 — One continuous renderer biome across dry Middle-earth
+
+Use a unique `me_arda_surface` climate solely as the highest-priority biome-selection
+adapter for every land and impassable-mountain location. Its gameplay modifiers and
+seasonality match the retained continental contract, while
+`endore_dynamic_land_biome` assigns cache channels 10–15 to grass, earth, volcanic rock,
+exposed rock, snow, and sand. Paint those channels from continuous height, moisture,
+source-biome, coastline, river, and landmark fields. Do not use location-scoped climate,
+vegetation, or topography transition bits for physical colour: fresh renderer evidence
+shows that they expose generated Voronoi cells as ochre, green, or pale islands.
+
+Keep Mordor, Rhûn, and Harad as broad source-aligned environmental envelopes, but feather
+their weights with organic deterministic fields. Their macro borders follow the audited
+cartographic sources; the renderer transition must never be a ruler-straight mask or a
+hard gameplay-location boundary.
+
+## 2026-07-31 — Mountain polygons are foothill envelopes, not summit plates
+
+Interpret all 43 Arda Maps mountain polygons as the outer physical footprint of their
+ranges. They contribute low, irregular foothill mass. The nine source-aligned axes,
+branches, deterministic folds, and landmark relief carry the high crests. Authored pass
+coordinates lower those crests into high saddles rather than cutting circular lowland
+holes.
+
+This supersedes the nearly full-strength polygon lift that made the retail renderer show
+flat grey mesas. It changes only vertical interpretation: source polygon borders, ridge
+axes, named passes, political impassability, and the equal-scale projection remain
+unchanged. The candidate must still pass fresh non-debug close views at Khazad-dûm,
+Dunharrow, Goblin-town, and Orodruin before M2 can advance.
+
+## 2026-07-31 — Pin named summits and make exposed material slope-aware
+
+Retain 18 exact hash-pinned Arda Maps `point_mount` controls as named relief constraints:
+Weathertop, Methedras, Celebdil, Fanuidhol, Caradhras, Mindolluin, Erech, Thrihyrne,
+Dol Baran, Irensaga, Dwimorberg, Starkhorn, Ras Morthil, Carrock, Gundabad, the Lonely
+Mountain, Ravenhill, and Amon Hen. Mount Doom remains its separate cratered landmark.
+Retain all 10 passes as narrow source or reconciled saddles rather than broad circular
+cuts.
+
+Paint generic highland earth by altitude, but require measured local physical slope for
+dark rock, exposed rock, and snow. The old height-only material bands visually expanded
+high shoulders into flat grey and white slabs even after the height polygons became low
+foothill envelopes. Fresh Observer evidence proves the new route exposes the actual
+ridge geometry. It does not accept the current hard threshold edges: source-ridge-aligned
+feathering remains required before M2 can pass.

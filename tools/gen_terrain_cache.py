@@ -48,6 +48,7 @@ BIOME_CONTROL = CONTROL / "biomes.png"
 PROJECTION_CONTROL = CONTROL / "projection.json"
 MATERIAL_PREVIEW_OUT = DERIVED / "terrain_material_preview.png"
 MANIFEST_OUT = CACHE_OUT / "endore_terrain_cache_manifest.json"
+MATERIAL_DEFINITIONS = TERRAIN_OUT / "materials.txt"
 
 SOURCE_W = 65_536
 SOURCE_H = 32_768
@@ -60,14 +61,16 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 19
-HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({17, 18, 19})
+GENERATOR_VERSION = 25
+HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
+    {17, 18, 19, 20, 21, 22, 23, 24, 25}
+)
 
 # Installed materials.txt establishes the native mask-channel meanings.  The
 # cache stores a bitset rather than a material index: several bits may be set
-# where the renderer should blend a transition.  Channels 10-12 are present in
-# every gameplay biome and provide safe interior variation; higher variation
-# channels are omitted by a few installed biome definitions.
+# where the renderer should blend a transition. ENDÓRË's unique all-land
+# rendering biome gives channels 10-15 stable semantic meanings while
+# location-scoped gameplay topography remains independent.
 MATERIAL_FLAT_COAST = np.uint16(1 << 0)
 MATERIAL_HILL_COAST = np.uint16(1 << 1)
 MATERIAL_PLATEAU_COAST = np.uint16(1 << 2)
@@ -78,8 +81,21 @@ MATERIAL_RIVER = np.uint16(1 << 6)
 MATERIAL_WATER_TRANSITION = np.uint16(1 << 7)
 MATERIAL_VEGETATION_TRANSITION = np.uint16(1 << 8)
 MATERIAL_CLIMATE_TRANSITION = np.uint16(1 << 9)
+MATERIAL_GRASS = np.uint16(1 << 10)
+MATERIAL_EARTH = np.uint16(1 << 11)
+MATERIAL_DARK_ROCK = np.uint16(1 << 12)
+MATERIAL_ROCK = np.uint16(1 << 13)
+MATERIAL_SNOW = np.uint16(1 << 14)
+MATERIAL_SAND = np.uint16(1 << 15)
 MATERIAL_VARIATIONS = np.asarray(
-    [1 << 10, 1 << 11, 1 << 12],
+    [
+        MATERIAL_GRASS,
+        MATERIAL_EARTH,
+        MATERIAL_DARK_ROCK,
+        MATERIAL_ROCK,
+        MATERIAL_SNOW,
+        MATERIAL_SAND,
+    ],
     dtype=np.uint16,
 )
 
@@ -121,6 +137,7 @@ def material_source_hashes() -> dict[str, str]:
             HEIGHT_SOURCE,
             BIOME_CONTROL,
             PROJECTION_CONTROL,
+            MATERIAL_DEFINITIONS,
         )
     }
 
@@ -309,43 +326,36 @@ def resized_mask(
     )
 
 
-def expanded_control_mask(values: np.ndarray, radius: int) -> np.ndarray:
-    size = radius * 2 + 1
+def rounded_expansion(
+    values: np.ndarray,
+    *,
+    radius: float,
+    threshold: int = 18,
+) -> np.ndarray:
+    """Expand a binary mask without the square footprint of MaxFilter."""
     return np.asarray(
         Image.fromarray(values.astype(np.uint8) * 255, "L").filter(
-            ImageFilter.MaxFilter(size)
+            ImageFilter.GaussianBlur(radius=radius)
         ),
         dtype=np.uint8,
-    ) > 0
+    ) >= threshold
 
 
-def transition_edges(
+def smoothed_biome_weight(
     biomes: np.ndarray,
+    biome_ids: tuple[int, ...],
     *,
-    climate_only: bool,
+    radius: float,
 ) -> np.ndarray:
-    land = ~np.isin(biomes, (0, 7))
-    climate_ids = np.isin(biomes, (5, 8, 10))
-    edges = np.zeros(biomes.shape, dtype=bool)
-
-    horizontal = (
-        (biomes[:, 1:] != biomes[:, :-1])
-        & land[:, 1:]
-        & land[:, :-1]
+    """Return a continuous material weight around an authored biome envelope."""
+    mask = np.isin(biomes, biome_ids).astype(np.uint8) * 255
+    image = Image.fromarray(mask, "L").resize(
+        (MATERIAL_W, MATERIAL_H),
+        Image.Resampling.BILINEAR,
     )
-    vertical = (
-        (biomes[1:, :] != biomes[:-1, :])
-        & land[1:, :]
-        & land[:-1, :]
-    )
-    if climate_only:
-        horizontal &= climate_ids[:, 1:] | climate_ids[:, :-1]
-        vertical &= climate_ids[1:, :] | climate_ids[:-1, :]
-    edges[:, 1:] |= horizontal
-    edges[:, :-1] |= horizontal
-    edges[1:, :] |= vertical
-    edges[:-1, :] |= vertical
-    return edges
+    if radius > 0.0:
+        image = image.filter(ImageFilter.GaussianBlur(radius=radius))
+    return np.asarray(image, dtype=np.float32) / 255.0
 
 
 def material_noise() -> np.ndarray:
@@ -362,6 +372,45 @@ def material_noise() -> np.ndarray:
     broad_values = np.asarray(broad, dtype=np.uint16)
     medium_values = np.asarray(medium, dtype=np.uint16)
     return ((broad_values * 3 + medium_values * 2) // 5).astype(np.uint8)
+
+
+def physical_slope(height: np.ndarray) -> np.ndarray:
+    """Return the strongest centred one-pixel rise around every source pixel.
+
+    Material paint must describe the rendered relief rather than merely repeat
+    broad altitude bands.  A two-pixel centred difference suppresses single
+    noisy pixels while preserving the authored flanks of ridges and summits.
+    Work in row chunks so deriving the 8192x4096 field does not require two
+    full-size signed copies of the 16-bit height source.
+    """
+    slope = np.zeros(height.shape, dtype=np.uint16)
+    chunk_rows = 256
+
+    for start in range(0, height.shape[0], chunk_rows):
+        stop = min(height.shape[0], start + chunk_rows)
+        delta = np.abs(
+            height[start:stop, 2:].astype(np.int32)
+            - height[start:stop, :-2].astype(np.int32)
+        )
+        delta //= 2
+        slope[start:stop, 1:-1] = np.maximum(
+            slope[start:stop, 1:-1],
+            delta.astype(np.uint16),
+        )
+
+    for start in range(1, height.shape[0] - 1, chunk_rows):
+        stop = min(height.shape[0] - 1, start + chunk_rows)
+        delta = np.abs(
+            height[start + 1 : stop + 1].astype(np.int32)
+            - height[start - 1 : stop - 1].astype(np.int32)
+        )
+        delta //= 2
+        slope[start:stop] = np.maximum(
+            slope[start:stop],
+            delta.astype(np.uint16),
+        )
+
+    return slope
 
 
 def river_material_mask(projection: dict) -> np.ndarray:
@@ -434,67 +483,119 @@ def render_material_source() -> np.ndarray:
     # organic noise, but bias it continuously by altitude and authored biome
     # so high ranges expose rockier variation while woods and wetlands retain
     # a cooler, greener base.  This changes no gameplay terrain template.
-    altitude = np.clip(
-        (height.astype(np.float32) - 11_000.0) / 36_000.0,
-        0.0,
-        1.0,
-    )
-    selector = noise.astype(np.int16)
-    selector += np.round(altitude * 72.0).astype(np.int16)
-    selector[np.isin(biomes, (2, 3, 6))] -= 22
-    selector[np.isin(biomes, (4, 8, 10))] += 18
-    np.clip(selector, 0, 255, out=selector)
+    selector = noise.astype(np.float32)
     material = np.zeros(noise.shape, dtype=np.uint16)
-    first = selector < 105
-    first_blend = (selector >= 105) & (selector < 122)
-    second = (selector >= 122) & (selector < 151)
-    second_blend = (selector >= 151) & (selector < 169)
-    third = selector >= 169
-    material[land & first] = MATERIAL_VARIATIONS[0]
-    material[land & first_blend] = (
-        MATERIAL_VARIATIONS[0] | MATERIAL_VARIATIONS[1]
-    )
-    material[land & second] = MATERIAL_VARIATIONS[1]
-    material[land & second_blend] = (
-        MATERIAL_VARIATIONS[1] | MATERIAL_VARIATIONS[2]
-    )
-    material[land & third] = MATERIAL_VARIATIONS[2]
 
-    # Installed oceanic/continental mountain-wasteland + sparse definitions
-    # do not order their three safe variations from low to high altitude:
-    # bit 10 is snow, bit 11 is rock, and bit 12 is dark dirt. The generic
-    # selector above therefore painted the highest ENDÓRË crests with the
-    # dirt/rubble slot and produced large brown slabs. Repaint authored
-    # mountain cores from physical height, with organic local displacement:
-    # dirt on the lowest shoulders, rock through the massif, snow only on
-    # genuine upper crests. Overlap bits through broad transition bands so
-    # the renderer blends instead of drawing hard material contours.
-    mountain = (biomes == 4) & land
-    mountain_score = height.astype(np.float32)
-    mountain_score += (noise.astype(np.float32) - 127.5) * 28.0
-    mountain_dirt = mountain & (mountain_score < 37_000.0)
-    mountain_dirt_rock = mountain & (
-        (mountain_score >= 37_000.0) & (mountain_score < 40_500.0)
-    )
-    mountain_rock = mountain & (
-        (mountain_score >= 40_500.0) & (mountain_score < 54_000.0)
-    )
-    mountain_rock_snow = mountain & (
-        (mountain_score >= 54_000.0) & (mountain_score < 60_000.0)
-    )
-    mountain_snow = mountain & (mountain_score >= 60_000.0)
-    material[mountain_dirt] = MATERIAL_VARIATIONS[2]
-    material[mountain_dirt_rock] = (
-        MATERIAL_VARIATIONS[2] | MATERIAL_VARIATIONS[1]
-    )
-    material[mountain_rock] = MATERIAL_VARIATIONS[1]
-    material[mountain_rock_snow] = (
-        MATERIAL_VARIATIONS[1] | MATERIAL_VARIATIONS[0]
-    )
-    material[mountain_snow] = MATERIAL_VARIATIONS[0]
+    earth = land & (selector >= 142.0)
+    earth_blend = land & (selector >= 116.0) & (selector < 142.0)
+    material[land & ~earth & ~earth_blend] = MATERIAL_GRASS
+    material[earth_blend] = MATERIAL_GRASS | MATERIAL_EARTH
+    material[earth] = MATERIAL_EARTH
 
-    coast = expanded_control_mask(water, 8) & land
-    outer_coast = expanded_control_mask(land, 4) & water
+    cool_ground = np.isin(biomes, (2, 3, 6)) & land
+    cool_earth = cool_ground & (selector >= 188.0)
+    cool_blend = cool_ground & (selector >= 160.0) & (selector < 188.0)
+    material[cool_ground & ~cool_earth & ~cool_blend] = MATERIAL_GRASS
+    material[cool_blend] = MATERIAL_GRASS | MATERIAL_EARTH
+    material[cool_earth] = MATERIAL_EARTH
+
+    # Climate envelopes are continuous material weights. Painting their
+    # integer control IDs directly produced ruler-straight Harad boundaries
+    # and hard green islands in Mordor. Broad feathering preserves the
+    # source-aligned macro envelope while noise breaks the transition into
+    # natural tongues instead of location-sized patches.
+    steppe_weight = smoothed_biome_weight(
+        control_biomes, (9,), radius=44.0
+    )
+    steppe_score = selector + steppe_weight * 82.0
+    steppe_active = (steppe_weight > 0.025) & land
+    steppe_blend = steppe_active & (
+        (steppe_score >= 142.0) & (steppe_score < 174.0)
+    )
+    steppe_earth = steppe_active & (steppe_score >= 174.0)
+    material[steppe_blend] = MATERIAL_GRASS | MATERIAL_EARTH
+    material[steppe_earth] = MATERIAL_EARTH
+
+    arid_weight = smoothed_biome_weight(
+        control_biomes, (10,), radius=72.0
+    )
+    arid_score = arid_weight * 255.0 + (selector - 127.5) * 0.34
+    arid_active = (arid_weight > 0.025) & land
+    arid_earth = arid_active & (arid_score < 108.0)
+    arid_blend = arid_active & (
+        (arid_score >= 108.0) & (arid_score < 174.0)
+    )
+    arid_sand = arid_active & (arid_score >= 174.0)
+    material[arid_earth] = MATERIAL_EARTH
+    material[arid_blend] = MATERIAL_EARTH | MATERIAL_SAND
+    material[arid_sand] = MATERIAL_SAND
+
+    ash_weight = smoothed_biome_weight(
+        control_biomes, (8,), radius=42.0
+    )
+    ash_score = ash_weight * 255.0 + (selector - 127.5) * 0.30
+    ash_active = (ash_weight > 0.025) & land
+    ash_earth = ash_active & (ash_score < 112.0)
+    ash_dark = ash_active & (
+        (ash_score >= 112.0) & (ash_score < 205.0)
+    )
+    ash_rock = ash_active & (ash_score >= 205.0)
+    material[ash_earth] = MATERIAL_EARTH | MATERIAL_DARK_ROCK
+    material[ash_dark] = MATERIAL_DARK_ROCK
+    material[ash_rock] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
+
+    # Mordor's high volcanic surfaces must remain basaltic. Everywhere else,
+    # altitude establishes highland ground while measured physical slope
+    # decides where exposed rock belongs. Altitude-only bands painted broad
+    # source-polygon shoulders as flat grey slabs even after their geometry
+    # had been reduced to foothill envelopes.
+    slope = physical_slope(height)
+    highland = land & (height >= 28_000) & (ash_weight < 0.62)
+    highland_grass_earth = highland & (height < 35_000)
+    highland_earth = highland & (height >= 35_000)
+    highland_dark = (
+        highland & (height >= 40_000) & (slope >= 450)
+    )
+    highland_blend = (
+        highland & (height >= 47_000) & (slope >= 625)
+    )
+    highland_rock = (
+        highland & (height >= 52_000) & (slope >= 700)
+    )
+    material[highland_grass_earth] = MATERIAL_GRASS | MATERIAL_EARTH
+    material[highland_earth] = MATERIAL_EARTH
+    material[highland_dark] = MATERIAL_EARTH | MATERIAL_DARK_ROCK
+    material[highland_blend] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
+    material[highland_rock] = MATERIAL_ROCK
+
+    # Snow follows both altitude and steep physical relief, never the broad
+    # mountain-class footprint. This keeps caps on source-pinned summits while
+    # leaving gentle high shoulders as earth instead of rectangular snowfields.
+    crest = land & (ash_weight < 0.62)
+    rock_snow = crest & (
+        (height >= 57_000) & (slope >= 750)
+    )
+    snow = crest & (height >= 61_500) & (slope >= 900)
+    material[rock_snow] = MATERIAL_ROCK | MATERIAL_SNOW
+    material[snow] = MATERIAL_SNOW
+
+    volcanic_highland = (
+        land & (height >= 30_000) & (ash_weight >= 0.62)
+    )
+    material[volcanic_highland] = MATERIAL_DARK_ROCK
+
+    # Major coasts receive EU5's complete shore channel stack. Tiny inland
+    # lakes do not: applying beach/coast channels around a three-pixel source
+    # pool turned it into a bright rectangular quarry beside Hobbiton.
+    lake_water = (biomes == 7) & water
+    ocean_water = water & ~lake_water
+    coast = rounded_expansion(
+        ocean_water, radius=1.35, threshold=60
+    ) & land
+    lake_coast = rounded_expansion(
+        lake_water, radius=1.15, threshold=70
+    ) & land
+    outer_coast = rounded_expansion(land, radius=2.0) & water
 
     coast_kind = np.full(height.shape, MATERIAL_FLAT_COAST, dtype=np.uint16)
     coast_kind[(height >= 16_000) & (height < 27_000)] = MATERIAL_HILL_COAST
@@ -507,30 +608,13 @@ def render_material_source() -> np.ndarray:
         | MATERIAL_COAST_TRANSITION
         | MATERIAL_WATER_TRANSITION
     )
+    material[lake_coast] |= MATERIAL_WATER_TRANSITION
     material[outer_coast] |= MATERIAL_WATER_TRANSITION
 
-    vegetation_transition = resized_mask(
-        expanded_control_mask(
-            transition_edges(control_biomes, climate_only=False),
-            3,
-        )
-    ) > 0
-    mountain_edges = transition_edges(
-        np.where(control_biomes == 4, 4, 1).astype(np.uint8),
-        climate_only=False,
-    )
-    mountain_transition = resized_mask(
-        expanded_control_mask(mountain_edges, 10)
-    ) > 0
-    vegetation_transition |= mountain_transition
-    climate_transition = resized_mask(
-        expanded_control_mask(
-            transition_edges(control_biomes, climate_only=True),
-            4,
-        )
-    ) > 0
-    material[vegetation_transition & land] |= MATERIAL_VEGETATION_TRANSITION
-    material[climate_transition & land] |= MATERIAL_CLIMATE_TRANSITION
+    # Every playable dry cell uses one ENDÓRË renderer biome. Engine
+    # vegetation/climate transition bits are therefore neither necessary nor
+    # safe: live evidence showed that they override semantic surface bits with
+    # ochre and green islands. Continuous weights above own all dry blends.
 
     rivers = river_material_mask(projection) & land
     material[rivers] |= MATERIAL_RIVER
@@ -569,9 +653,12 @@ def material_preview(values: np.ndarray) -> Image.Image:
     rgb = np.zeros((512, 1_024, 3), dtype=np.uint8)
     rgb[:] = (26, 47, 58)
     colors = (
-        (MATERIAL_VARIATIONS[0], (87, 111, 74)),
-        (MATERIAL_VARIATIONS[1], (106, 118, 75)),
-        (MATERIAL_VARIATIONS[2], (116, 101, 68)),
+        (MATERIAL_GRASS, (86, 119, 65)),
+        (MATERIAL_EARTH, (122, 91, 58)),
+        (MATERIAL_DARK_ROCK, (55, 51, 49)),
+        (MATERIAL_ROCK, (112, 108, 101)),
+        (MATERIAL_SNOW, (224, 229, 225)),
+        (MATERIAL_SAND, (174, 143, 83)),
     )
     for bit, color in colors:
         rgb[(reduced & bit) != 0] = color

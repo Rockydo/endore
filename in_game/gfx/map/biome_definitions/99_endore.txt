@@ -1,0 +1,7 @@
+﻿# Climate has the highest installed biome-selection priority. Every land
+# topography can therefore keep its gameplay identity while sharing one
+# seamless renderer palette driven by ENDÓRË's continuous cache masks.
+9000 = {
+	climate = me_arda_surface
+	biome = endore_dynamic_land_biome
+}

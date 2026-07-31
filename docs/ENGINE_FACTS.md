@@ -291,3 +291,37 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   contributor rather than a sufficient explanation. The source-frame tree's 2,700
   impassable mountain locations remain the largest structural difference from the last
   live 12,104 topology, which used 520.
+- A priority-9000 biome definition keyed only to the custom `me_arda_surface` climate
+  selects one appended 16-channel material array across ordinary and impassable land
+  without a parser diagnostic. Fresh no-debug evidence shows that cache variation bits
+  then render continuous sand in Harad, ash/rock in Mordor, dense green Mirkwood, and
+  mixed Rhûn/Dorwinion ground without the earlier location-shaped transition islands.
+- Changing the 1,200 impassable locations from `mountain_wasteland` to neutral `flatland`
+  in a fresh New Game did not alter the grey massif shapes. The shapes therefore came
+  from the physical height/material source, not from the renderer-facing location
+  template. Passability remains independently controlled by `default.map`'s
+  `impassable_mountains` section, but template substitution is not a useful repair for
+  this visual defect.
+- Small engine-water locations can render a cell-shaped terrain bowl even when their
+  shoreline material is reduced to the water-transition channel. Neither neutral
+  flatland climate nor a lake bed raised immediately below the local dry datum changed
+  that bowl; the latter merely removed the visible water surface.
+- Build 24187685 renders source-pinned summit relief from the custom q64 height cache:
+  fresh close views at Khazad-dûm, Dunharrow, and Goblin-town show physical slopes and
+  crests after mountain polygons are reduced to foothill envelopes. The remaining broad
+  grey/white failure was materially reduced by requiring local height gradient for
+  exposed rock and snow, proving that it was material selection over valid relief rather
+  than an inability to mod EU5's physical terrain.
+- A centred two-pixel height difference is stable enough to select steep highland
+  surfaces at the 8192×4096 material-source resolution without changing the height
+  payload. Hard slope thresholds still render as coarse rock ribbons at close zoom;
+  acceptance requires feathered ridge-aligned selection rather than a return to
+  altitude-only or location-polygon paint.
+- Build 24187685 requires appended files under `common/climates` and
+  `gfx/map/biome_definitions` to carry a physical UTF-8 BOM even when it can otherwise
+  parse them. A custom climate also needs a color distinct from every installed climate
+  and both `<key>` and `<key>_desc` localization entries.
+- `me_khand_area_33_36_province_02` collides with installed
+  `name_milano.serbo_croatian_language` at localization hash 2602704833. Remapping the
+  deterministic area stem to `me_khand_area_33_36_arda` removes the generated province
+  collision without changing any location key, coordinate, or hierarchy membership.

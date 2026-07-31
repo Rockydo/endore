@@ -60,6 +60,7 @@ DISPLAY_NAMES = {
 # facts: the source keys are otherwise valid and do not collide textually.
 AREA_KEY_OVERRIDES = {
     "me_belfalas_sea_area_30_21": "me_belfalas_sea_area_30_21_arda",
+    "me_khand_area_33_36": "me_khand_area_33_36_arda",
 }
 
 
@@ -154,6 +155,8 @@ def localization_text(model: WorldModel) -> str:
     lines = [
         "\ufeffl_english:",
         ' middle_earth: "Middle-earth"',
+        ' me_arda_surface: "Lands of Middle-earth"',
+        ' me_arda_surface_desc: "The varied physical lands of Middle-earth."',
     ]
     for key in CONTINENT_ORDER:
         lines.append(f' {key}: "{escape_localization(DISPLAY_NAMES[key])}"')

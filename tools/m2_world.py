@@ -11,6 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import gen_adjacencies
+import gen_arda_materials
 import gen_border_style
 import gen_definitions
 import gen_flatmap
@@ -32,6 +33,7 @@ STAGES = (
     ("locations", gen_locations),
     ("definitions", gen_definitions),
     ("heightmap", gen_heightmap),
+    ("materials", gen_arda_materials),
     ("terrain_cache", gen_terrain_cache),
     ("rivers", gen_rivers),
     ("adjacencies", gen_adjacencies),

@@ -163,6 +163,15 @@ class Topology:
             return [self.line(part) for part in geometry["arcs"]]
         raise ValueError(f"unsupported line geometry {geometry['type']}")
 
+    def point(self, geometry: dict) -> list[float]:
+        if geometry["type"] != "Point":
+            raise ValueError(f"unsupported point geometry {geometry['type']}")
+        x, y = geometry["coordinates"]
+        return endore_from_arda_maps(
+            x * self.scale_x + self.translate_x,
+            y * self.scale_y + self.translate_y,
+        )
+
     def largest_ring(self, collection: str, index: int) -> list[list[float]]:
         geometry = self.data["objects"][collection]["geometries"][index]
         rings = self.polygon_rings(geometry)
@@ -354,6 +363,67 @@ def build(reference_root: Path) -> dict:
                 }
             )
 
+    # Named summits are exact Arda Maps point controls, not generic scenery.
+    # The polygon layers bind each range footprint and the axes below bind its
+    # overall direction; these points ensure that the most lore-sensitive
+    # local maxima fall at the source positions within those ranges.
+    named_peak_keys = {
+        "Weathertop": "weathertop",
+        "Methedras": "methedras",
+        "Celebdil": "celebdil",
+        "Fanuidhol": "fanuidhol",
+        "Caradhras": "caradhras",
+        "Mindolluin": "mindolluin",
+        "Erech": "erech_hill",
+        "Thrihyrne": "thrihyrne",
+        "DolBaran": "dol_baran",
+        "Irensaga": "irensaga",
+        "Dwimorberg": "dwimorberg",
+        "Starkhorn": "starkhorn",
+        "RasMorthil": "ras_morthil",
+        "Carrock": "carrock_height",
+        "Gundabad": "mount_gundabad",
+        "LonelyMountain": "erebor_peak",
+        "Ravenhill": "ravenhill",
+        "AmonHen": "amon_hen",
+    }
+    subdued_peaks = {
+        "Weathertop": 0.55,
+        "Erech": 0.55,
+        "DolBaran": 0.55,
+        "RasMorthil": 0.60,
+        "Carrock": 0.48,
+        "Ravenhill": 0.58,
+        "AmonHen": 0.45,
+    }
+    named_peaks = []
+    for geometry in source["objects"]["point_mount"]["geometries"]:
+        properties = geometry.get("properties") or {}
+        source_name = properties.get("eventname")
+        key = named_peak_keys.get(source_name)
+        if key is None:
+            # Mount Doom has its own asymmetric cratered relief control.
+            if source_name == "MountDoom":
+                continue
+            raise ValueError(f"unreviewed Arda Maps mountain point {source_name!r}")
+        size_class = int(properties.get("size", 1))
+        named_peaks.append(
+            {
+                "key": key,
+                "label": source_name,
+                "center": topology.point(geometry),
+                "radius": round(0.0035 + 0.0012 * size_class, 6),
+                "strength": round(
+                    subdued_peaks.get(
+                        source_name,
+                        min(1.0, 0.63 + 0.18 * size_class),
+                    ),
+                    3,
+                ),
+                "source": "Arda Maps point_mount",
+            }
+        )
+
     ridges = [
         {
             "key": "misty_mountains",
@@ -453,17 +523,83 @@ def build(reference_root: Path) -> dict:
         },
     ]
 
+    def named_source_point(collection: str, event_name: str) -> list[float]:
+        matches = [
+            geometry
+            for geometry in source["objects"][collection]["geometries"]
+            if (geometry.get("properties") or {}).get("eventname") == event_name
+        ]
+        if len(matches) != 1:
+            raise ValueError(
+                f"expected one {collection} point named {event_name}, got {len(matches)}"
+            )
+        return topology.point(matches[0])
+
+    # Pass masks are intentionally narrow. The previous 0.012-0.015 radii
+    # carved round lowland holes through whole source massifs and even erased
+    # Caradhras. Named controls use exact Arda Maps points where available;
+    # the remaining three are hand-reconciled corridor centres.
     passes = [
-        {"key": "lindon_road", "center": [0.309, 0.225], "radius": 0.010},
-        {"key": "gundabad_gate", "center": [0.502, 0.103], "radius": 0.012},
-        {"key": "high_pass", "center": [0.510, 0.205], "radius": 0.015},
-        {"key": "imladris_valley", "center": [0.494, 0.223], "radius": 0.012},
-        {"key": "redhorn_gate", "center": [0.494, 0.319], "radius": 0.014},
-        {"key": "gap_of_rohan", "center": [0.466, 0.462], "radius": 0.014},
-        {"key": "edoras_foothill_road", "center": [0.499, 0.538], "radius": 0.007},
-        {"key": "pelennor_anduin_road", "center": [0.582, 0.610], "radius": 0.006},
-        {"key": "morannon", "center": [0.610, 0.529], "radius": 0.015},
-        {"key": "cirith_ungol", "center": [0.609, 0.582], "radius": 0.008},
+        {
+            "key": "lindon_road",
+            "center": [0.309, 0.225],
+            "radius": 0.0055,
+            "source": "Arda Maps/ArdaCraft reconciled",
+        },
+        {
+            "key": "gundabad_gate",
+            "center": named_source_point("point_mount", "Gundabad"),
+            "radius": 0.0050,
+            "source": "Arda Maps point_mount",
+        },
+        {
+            "key": "high_pass",
+            "center": named_source_point("point_place", "GoblinGate"),
+            "radius": 0.0055,
+            "source": "Arda Maps point_place",
+        },
+        {
+            "key": "imladris_valley",
+            "center": named_source_point("point_ford", "FordOfBruinen"),
+            "radius": 0.0045,
+            "source": "Arda Maps point_ford",
+        },
+        {
+            "key": "redhorn_gate",
+            "center": named_source_point("point_place", "RedhornGate"),
+            "radius": 0.0040,
+            "source": "Arda Maps point_place",
+        },
+        {
+            "key": "gap_of_rohan",
+            "center": [0.466, 0.462],
+            "radius": 0.0060,
+            "source": "Arda Maps/ArdaCraft reconciled",
+        },
+        {
+            "key": "paths_of_the_dead",
+            "center": named_source_point("point_place", "PathsOfTheDead"),
+            "radius": 0.0040,
+            "source": "Arda Maps point_place",
+        },
+        {
+            "key": "mindolluin_road",
+            "center": [0.582, 0.610],
+            "radius": 0.0030,
+            "source": "Arda Maps/ArdaCraft reconciled",
+        },
+        {
+            "key": "morannon",
+            "center": named_source_point("point_place", "CirithGorgor"),
+            "radius": 0.0055,
+            "source": "Arda Maps point_place",
+        },
+        {
+            "key": "cirith_ungol",
+            "center": named_source_point("point_place", "ShelobsLair"),
+            "radius": 0.0035,
+            "source": "Arda Maps point_place",
+        },
     ]
 
     forests = {
@@ -561,8 +697,12 @@ def build(reference_root: Path) -> dict:
                 "biome": "arid",
                 "shape": "organic_polygon",
                 "coords": [
-                    [0.385, 0.730], [1.000, 0.730], [1.000, 1.000],
-                    [0.220, 1.000], [0.250, 0.900], [0.310, 0.820],
+                    [0.385, 0.730], [0.425, 0.708], [0.468, 0.724],
+                    [0.512, 0.699], [0.558, 0.729], [0.606, 0.702],
+                    [0.654, 0.727], [0.704, 0.694], [0.756, 0.716],
+                    [0.810, 0.688], [0.868, 0.711], [0.928, 0.684],
+                    [1.000, 0.700], [1.000, 1.000], [0.220, 1.000],
+                    [0.250, 0.900], [0.310, 0.820],
                 ],
             },
         ]
@@ -677,6 +817,7 @@ def build(reference_root: Path) -> dict:
         "sea_cutouts": {},
         "lakes": lakes,
         "mountain_zones": mountain_zones,
+        "named_peaks": named_peaks,
         "ridges": ridges,
         "passes": passes,
         "biome_zones": biome_zones,
