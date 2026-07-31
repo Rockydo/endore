@@ -1,5 +1,5 @@
 {
-  "schema": 2,
+  "schema": 3,
   "projection": {
     "source": "ardacraft_equal_scale_grid",
     "x_center": 10651.5,
@@ -8,6 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
+  "projection_sha256": "04696d43a3d14a6c0774bf339194cf119281f5639b1c48a3b31a2ed44f1399fe",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -17,7 +18,10 @@
     "ridge_axes": 9,
     "passes": 10,
     "river_valley_controls": 24,
-    "biome_zones": 21
+    "biome_zones": 21,
+    "forest_source_zones": 15,
+    "forest_source_components": 57,
+    "river_control_vertices": 814
   },
   "anchor_count": 42,
   "landmark_count": 62,

@@ -617,3 +617,58 @@ high shoulders into flat grey and white slabs even after the height polygons bec
 foothill envelopes. Fresh Observer evidence proves the new route exposes the actual
 ridge geometry. It does not accept the current hard threshold edges: source-ridge-aligned
 feathering remains required before M2 can pass.
+
+## 2026-07-31 — Preserve equal scale; the vertical extent forbids enlargement
+
+Keep the ArdaCraft equal-scale projection unchanged. At 4096×2048 control resolution,
+physical land occupies 46.46% of the canvas; its bounding box spans 70.29% of canvas
+width and exactly 100% of canvas height. The source land has 1,846 pixels touching the
+north edge and 1,672 touching the south edge. A uniform enlargement cannot improve
+close scale without clipping the owner-required Forochel-to-Far-Harad extent, while an
+x-only stretch would falsify relative distances and shapes.
+
+Do not trade cartographic fidelity for canvas occupancy. Keep the honest western ocean
+and eastern margin. Improve close detail through source geometry, height/material
+precision, and later political tessellation within the runtime envelope.
+
+## 2026-07-31 — Sub-location Shire pools are material ponds, not engine water
+
+Retain the exact Arda Maps polygons for `minor_lake_10`, `minor_lake_11`, and
+`minor_lake_12`, but exclude only those three from the physical-water land cut. They
+cover 11, 6, and 26 control pixels and are substantially smaller than one runtime
+location. Their lake-biome masks now sit on the surrounding dry datum and select wet
+pond plus feathered water-transition material. Every larger lake, including Long Lake,
+Mirrormere, Lake Evendim, Nen Hithoel, Núrnen, and the Sea of Rhûn, remains real engine
+water.
+
+This is the materially different route required after template substitution and a
+near-water bed both left the cell-shaped quarry. It preserves source existence, outline,
+and placement while refusing an engine topology that cannot represent the feature at
+the current political scale.
+
+## 2026-07-31 — Belfalas source geometry outranks an unaudited visual redraw
+
+Do not redraw the apparent inlet near Dol Amroth from visual intuition. The production
+coast is the hash-pinned Arda Maps mainland ring; its Belfalas window contains 2,043 raw
+source vertices, and the committed simplification tolerance is 0.00018 normalized units
+(about three pixels on the 16384-wide location raster). Dol Amroth itself remains pinned
+to the ArdaCraft equal-scale anchor.
+
+The close-view defect is therefore shoreline/material/location presentation unless a
+second binding source demonstrates a specific geometric contradiction. Preserve the
+source coast and repair the renderer layer rather than making the map less faithful.
+
+## 2026-07-31 — Recover the unnamed Arda Maps Harnen channel
+
+Replace the former eight-point manual Harnen diagonal with the hash-pinned Arda Maps
+`line_river` geometry 8. It is the only substantial unnamed channel in the Harnen
+corridor and provides 216 raw source vertices from the Harad-facing uplands toward the
+canonical western drainage. Retain 49 meaningful bends after the same bounded
+simplification used by named rivers, then add only two reconciled points to enter the
+source coastline.
+
+The earlier manually chosen mouth at x=0.445/y=0.880 is rejected: native land/water
+analysis proves that continuing there crosses the sea and can re-enter land. The
+corrected x=0.516/y=0.858 mouth stays on land until its final eight parser pixels enter
+open water. The strict river writer accepts the resulting 51-point control with no
+self-touch, land re-entry, or palette error.

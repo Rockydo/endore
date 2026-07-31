@@ -61,9 +61,9 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 25
+GENERATOR_VERSION = 27
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {17, 18, 19, 20, 21, 22, 23, 24, 25}
+    {17, 18, 19, 20, 21, 22, 23, 24, 25, 27}
 )
 
 # Installed materials.txt establishes the native mask-channel meanings.  The
@@ -585,15 +585,20 @@ def render_material_source() -> np.ndarray:
     material[volcanic_highland] = MATERIAL_DARK_ROCK
 
     # Major coasts receive EU5's complete shore channel stack. Tiny inland
-    # lakes do not: applying beach/coast channels around a three-pixel source
-    # pool turned it into a bright rectangular quarry beside Hobbiton.
+    # pools east of Hobbiton stay physical land and use wet pond material:
+    # engine-water classification turned each host cell into a deep quarry
+    # even when its bed was raised immediately below the local dry datum.
     lake_water = (biomes == 7) & water
+    decorative_lake = (biomes == 7) & land
     ocean_water = water & ~lake_water
     coast = rounded_expansion(
         ocean_water, radius=1.35, threshold=60
     ) & land
     lake_coast = rounded_expansion(
         lake_water, radius=1.15, threshold=70
+    ) & land
+    decorative_margin = rounded_expansion(
+        decorative_lake, radius=1.45, threshold=52
     ) & land
     outer_coast = rounded_expansion(land, radius=2.0) & water
 
@@ -609,6 +614,8 @@ def render_material_source() -> np.ndarray:
         | MATERIAL_WATER_TRANSITION
     )
     material[lake_coast] |= MATERIAL_WATER_TRANSITION
+    material[decorative_margin] |= MATERIAL_WATER_TRANSITION
+    material[decorative_lake] |= MATERIAL_RIVER
     material[outer_coast] |= MATERIAL_WATER_TRANSITION
 
     # Every playable dry cell uses one ENDÓRË renderer biome. Engine

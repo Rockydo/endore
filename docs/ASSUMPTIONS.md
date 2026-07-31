@@ -131,3 +131,10 @@ about Middle-earth.
 - † The Harlond below Minas Tirith is an operational Gondorian port on
   TA 3018.1.1. It remains owned even while most nearby Ithilien locations are
   deliberately wilderness; the wilderness mask cannot override its port rank.
+- † Arda Maps supplies named source polylines for 22 of the 24 production
+  river controls. Its unnamed `line_river` geometry 8 is the only substantial
+  channel in the Harnen corridor and is used for that river's detailed upper
+  and middle course; only its short final reach to the coast is reconciled
+  against the owner-approved macro map. The payload exposes no equivalent
+  Morgulduin line, so that short axis remains a restrained reconciliation from
+  its canonical endpoints rather than being presented as surveyed data.

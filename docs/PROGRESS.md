@@ -518,3 +518,39 @@
   with zero new error lines and zero mod-unique diagnostics. This greens the component
   batch's integration contract only; close-zoom material feathering, the other physical
   defects, the nine-theatre audit, and explicit owner acceptance keep M2 red.
+- A source-ridge feathered material candidate was statically valid but missed the
+  600-second post-cache interactivity bound twice on identical fingerprint `0f65a5e5`,
+  including a repeat begun with 23 GB free RAM. It emitted no map/material diagnostic,
+  was logged in `BLOCKERS.md`, and was fully reverted. The working runtime is byte-exact
+  to the pushed/smoked v25 cache.
+- The scale audit measures a 70.29%-wide by 100%-high land bounding box with land already
+  touching both vertical crop edges. Uniform enlargement would clip binding north/south
+  geography, so the equal-scale projection is retained. Belfalas likewise remains on
+  its hash-pinned source ring: 2,043 raw vertices cover the audited window and the
+  committed simplification is already sub-location-pixel precise.
+- The first alternate small-water representation is now generated coherently. The three
+  exact Arda Maps pools east of Hobbiton remain lake-biome polygons but no longer cut
+  engine water or depress their host terrain; wet pond and feathered transition material
+  carry their visible identity. The full 12,104-location world and generator-v27 cache
+  rebuilt successfully, and targeted control/cache/reference checks pass. Its live
+  Hobbiton close probe deferred without launch because Antiquitas owned the shared slot.
+- Cartographic validation now hash-pins the complete reviewed projection geometry in
+  addition to its feature counts and landmark tolerances. Any future movement of a coast,
+  island, lake, mountain, summit, pass, woodland, river, or density envelope must be an
+  explicit source-review event rather than an unnoticed generator drift.
+- A fresh in-memory rebuild against the quarantined, hash-verified Arda Maps payload
+  reproduced the committed projection exactly: 1,251 mainland vertices, 15 lakes, 43
+  mountain footprints, 18 named peaks, all 15 named forests, and 24 rivers with 814
+  retained vertices. This verifies source reproducibility without copying the raw map
+  payload into the repository.
+- The first actual v27 decorative-pond New Game completed setup/cache work but remained
+  noninteractive through the 600-second country-selection bound, with no map, cache,
+  material, river, or locator diagnostic. This is one runtime strike, not a visual
+  rejection. Two later attempts correctly deferred before launching when Antiquitas
+  reacquired the shared EU5 slot; neither consumes the one remaining cached repeat.
+- The Harnen no longer uses an eight-point manual diagonal. An unnamed 216-vertex Arda
+  Maps channel in the exact Harnen corridor now supplies 49 retained bends, followed by
+  only two reconciled points to its source-coast mouth. The obsolete farther-west mouth
+  was rejected after the native river gate proved that it crossed sea and re-entered
+  land. The coherent 12,104-location world rebuilt with 814 total river vertices, 79,924
+  unique height tiles, 63,584 material tiles, and a parser-green indexed river raster.

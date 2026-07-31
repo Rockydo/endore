@@ -105,6 +105,13 @@ Khazad-dûm/Dunharrow/Goblin-town/Orodruin prove physical slopes, crests, and th
 Mount Doom. Slope-aware material selection removes the former whole-polygon grey plates,
 but the same close views reject coarse exposed-rock ribbons/islands and the still-crude
 political-cell scale. This is a retained component improvement, not gate acceptance.
+The first source-ridge material-feather attempt then exhausted two post-cache fresh-load
+attempts without renderer evidence and was reverted to the smoke-green v25 baseline.
+The current next candidate keeps the three sub-location Shire pool outlines as wet
+material over continuous land rather than engine water; targeted static checks are green
+but its first actual fresh load missed the post-cache interactivity bound without a
+diagnostic. One cached repeat remains pending the shared lease; lock deferrals are not
+runtime strikes.
 M2 remains blocking.
 
 ## Binding defects

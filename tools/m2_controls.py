@@ -65,6 +65,14 @@ RIVER_INCISION_SAMPLE = 1450.0
 # counterpart. Reserve it for genuinely high crest islands; regional audit
 # showed that 0.56 still painted broad white slabs through the White Mountains.
 MOUNTAIN_BIOME_THRESHOLD = 0.68
+# These exact Arda Maps pools east of Hobbiton are substantially smaller than
+# one runtime location. Engine-water classification turns that host cell into
+# a deep quarry regardless of template or near-water bed height. Retain their
+# source polygons as lake-biome material controls while keeping physical land
+# and political topology continuous beneath them.
+DECORATIVE_LAKE_KEYS = frozenset(
+    {"minor_lake_10", "minor_lake_11", "minor_lake_12"}
+)
 
 
 @dataclass(frozen=True)
@@ -102,6 +110,10 @@ def validate_geometry_contract(projection: dict) -> None:
             )
         if len(lake["coords"]) < 4:
             raise ValueError(f"lake {lake['key']} lacks shoreline detail")
+    lake_keys = {lake["key"] for lake in projection["lakes"]}
+    if not DECORATIVE_LAKE_KEYS <= lake_keys:
+        missing = sorted(DECORATIVE_LAKE_KEYS - lake_keys)
+        raise ValueError(f"decorative source lakes are missing: {missing}")
     for zone in projection["biome_zones"]:
         if zone["biome"] not in {"forest", "dense_forest"}:
             continue
@@ -391,6 +403,8 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             key=f"island:{key}",
         )
     for lake in projection["lakes"]:
+        if lake["key"] in DECORATIVE_LAKE_KEYS:
+            continue
         draw_shape(
             image,
             lake["shape"],
@@ -771,6 +785,19 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     )
     elevation += np.where(land_array, doom_relief, 0.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
+    decorative_lake_mask = (biome == BIOMES["lake"]) & land_array
+    decorative_lake_pixels = int(decorative_lake_mask.sum())
+    if decorative_lake_pixels != 43:
+        raise ValueError(
+            "sub-location pond footprint changed without review: "
+            f"{decorative_lake_pixels} != 43 pixels"
+        )
+    decorative_lake_height = [
+        int(elevation[decorative_lake_mask].min()),
+        int(elevation[decorative_lake_mask].max()),
+    ]
+    if decorative_lake_height[0] <= ENGINE_WATER_LEVEL_SAMPLE:
+        raise ValueError("decorative pond terrain fell below the engine water plane")
     minimum_land_height = int(elevation[land_array].min())
     maximum_water_height = int(elevation[~land_array].max())
     if minimum_land_height <= ENGINE_WATER_LEVEL_SAMPLE:
@@ -849,6 +876,35 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     source_hash = hashlib.sha256(
         PROJECTION.read_bytes() + b"\0" + SETTLEMENTS.read_bytes()
     ).hexdigest()
+    land_y, land_x = np.where(land_array)
+    land_bbox = [
+        int(land_x.min()),
+        int(land_y.min()),
+        int(land_x.max()),
+        int(land_y.max()),
+    ]
+    land_bbox_occupancy = [
+        round((land_bbox[2] - land_bbox[0] + 1) / size[0], 6),
+        round((land_bbox[3] - land_bbox[1] + 1) / size[1], 6),
+    ]
+    land_edge_contact = {
+        "west": int(land_array[:, 0].sum()),
+        "east": int(land_array[:, -1].sum()),
+        "north": int(land_array[0, :].sum()),
+        "south": int(land_array[-1, :].sum()),
+    }
+    # The equal-scale projection deliberately fills the north/south extent
+    # while retaining honest western ocean and eastern margin. Stretching or
+    # recentering it to make the playable land appear larger would either clip
+    # Forochel/Far Harad or falsify physical distances.
+    if land_bbox_occupancy[1] != 1.0:
+        raise ValueError("equal-scale source no longer fills the vertical extent")
+    if not 0.69 <= land_bbox_occupancy[0] <= 0.72:
+        raise ValueError("equal-scale source width occupancy changed without review")
+    if land_edge_contact["north"] < 1_500 or land_edge_contact["south"] < 1_400:
+        raise ValueError("binding north/south source extent was clipped")
+    if land_edge_contact["west"] or land_edge_contact["east"]:
+        raise ValueError("binding western ocean/eastern margin was lost")
     images = {
         "coastline.png": land,
         "elevation.png": elevation_image,
@@ -868,7 +924,13 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "passes": len(projection["passes"]),
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),
+        "decorative_lake_keys": sorted(DECORATIVE_LAKE_KEYS),
+        "decorative_lake_pixels": decorative_lake_pixels,
+        "decorative_lake_height": decorative_lake_height,
         "land_fraction": round(float(land_array.mean()), 6),
+        "land_bbox_pixels": land_bbox,
+        "land_bbox_occupancy": land_bbox_occupancy,
+        "land_edge_contact": land_edge_contact,
         "engine_water_level_sample": ENGINE_WATER_LEVEL_SAMPLE,
         "minimum_land_height": minimum_land_height,
         "maximum_water_height": maximum_water_height,

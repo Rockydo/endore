@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import math
 from pathlib import Path
@@ -25,6 +26,26 @@ EXPECTED_PROJECTION = {
     "z_max": 32767.0,
     "world_span": 43007.0,
     "canvas_aspect": 2.0,
+}
+EXPECTED_PROJECTION_SHA256 = (
+    "04696d43a3d14a6c0774bf339194cf119281f5639b1c48a3b31a2ed44f1399fe"
+)
+EXPECTED_FOREST_KEYS = {
+    "lothlorien",
+    "rhun_woodlands",
+    "ithilien",
+    "druadan",
+    "blackroot_woods",
+    "fangorn",
+    "minhiriath_woods",
+    "eryn_vorn",
+    "mirkwood",
+    "trollshaws",
+    "chetwood",
+    "old_forest",
+    "shire_woods",
+    "lindon_woods",
+    "lossarnach_woods",
 }
 
 
@@ -51,7 +72,14 @@ def render_report() -> dict:
             f"cartography/settlement key mismatch: missing={missing}, extra={extra}"
         )
 
-    projection = json.loads(PROJECTION.read_text(encoding="utf-8"))
+    projection_bytes = PROJECTION.read_bytes()
+    projection_sha256 = hashlib.sha256(projection_bytes).hexdigest()
+    if projection_sha256 != EXPECTED_PROJECTION_SHA256:
+        raise ValueError(
+            "binding source-derived projection geometry changed without "
+            "cartographic review"
+        )
+    projection = json.loads(projection_bytes)
     actual_projection = projection.get("reference_projection")
     if actual_projection != EXPECTED_PROJECTION:
         raise ValueError(
@@ -69,6 +97,20 @@ def render_report() -> dict:
         "river_valley_controls": len(projection["rivers"]),
         "biome_zones": len(projection["biome_zones"]),
     }
+    forest_zones = [
+        item
+        for item in projection["biome_zones"]
+        if item["biome"] in {"forest", "dense_forest"}
+    ]
+    forest_components = sum(
+        len(item["coords"]) if item["shape"] == "multi_polygon" else 1
+        for item in forest_zones
+    )
+    feature_counts["forest_source_zones"] = len(forest_zones)
+    feature_counts["forest_source_components"] = forest_components
+    feature_counts["river_control_vertices"] = sum(
+        len(item["points"]) for item in projection["rivers"]
+    )
     minimums = {
         "mainland_vertices": 1_200,
         "offshore_islands": 8,
@@ -79,12 +121,79 @@ def render_report() -> dict:
         "passes": 10,
         "river_valley_controls": 24,
         "biome_zones": 21,
+        "forest_source_zones": 15,
+        "forest_source_components": 57,
+        "river_control_vertices": 800,
     }
     for key, minimum in minimums.items():
         if feature_counts[key] < minimum:
             raise ValueError(
                 f"cartographic feature coverage regressed: {key} "
                 f"{feature_counts[key]} < {minimum}"
+            )
+    if len(forest_zones) != 15 or forest_components != 57:
+        raise ValueError(
+            "Arda Maps forest coverage changed without cartographic review: "
+            f"{len(forest_zones)} zones / {forest_components} components"
+        )
+    if any(
+        item["shape"] not in {"source_polygon", "multi_polygon"}
+        for item in forest_zones
+    ):
+        raise ValueError("one or more named forests lost source-polygon geometry")
+    if {item["key"] for item in forest_zones} != EXPECTED_FOREST_KEYS:
+        raise ValueError("named forest coverage changed without cartographic review")
+    expected_river_keys = {
+        "upper_anduin",
+        "anduin",
+        "langwell",
+        "greylin",
+        "gladden",
+        "celebrant",
+        "limlight",
+        "entwash",
+        "snowbourn",
+        "baranduin",
+        "mitheithel",
+        "bruinen",
+        "greyflood",
+        "glanduin",
+        "isen",
+        "morthond",
+        "ringlo",
+        "gilrain",
+        "celduin",
+        "forest_river",
+        "carnen",
+        "poros",
+        "morgulduin",
+        "harnen",
+    }
+    river_by_key = {item["key"]: item for item in projection["rivers"]}
+    if set(river_by_key) != expected_river_keys:
+        raise ValueError("named river coverage changed without cartographic review")
+    if len(river_by_key["harnen"]["points"]) < 50:
+        raise ValueError("source-backed Harnen detail regressed")
+    expected_confluences = {
+        "langwell": "upper_anduin",
+        "greylin": "upper_anduin",
+        "gladden": "upper_anduin",
+        "celebrant": "upper_anduin",
+        "limlight": "upper_anduin",
+        "entwash": "upper_anduin",
+        "snowbourn": "entwash",
+        "mitheithel": "greyflood",
+        "bruinen": "mitheithel",
+        "glanduin": "greyflood",
+        "morthond": "ringlo",
+        "carnen": "celduin",
+        "poros": "anduin",
+        "morgulduin": "anduin",
+    }
+    for tributary, receiving_river in expected_confluences.items():
+        if river_by_key[tributary].get("joins") != receiving_river:
+            raise ValueError(
+                f"{tributary} no longer joins lore receiver {receiving_river}"
             )
     for collection in (
         "lakes",
@@ -210,8 +319,9 @@ def render_report() -> dict:
     if failures:
         raise ValueError("; ".join(failures))
     return {
-        "schema": 2,
+        "schema": 3,
         "projection": EXPECTED_PROJECTION,
+        "projection_sha256": projection_sha256,
         "feature_counts": feature_counts,
         "anchor_count": len(entries),
         "landmark_count": len(landmarks),

@@ -244,6 +244,38 @@ def river_geometry(topology: Topology, event_name: str) -> list[list[float]]:
     return rdp(path, 0.00020)
 
 
+def harnen_geometry(topology: Topology) -> list[list[float]]:
+    """Recover Arda Maps' unnamed Harnen channel and reconcile its mouth.
+
+    The hash-pinned payload's line_river geometry 8 is the only substantial
+    unnamed channel in the Harnen corridor. It ends before reaching the
+    represented coast, so preserve its complete source course and append only
+    the short downstream continuation already reconciled to the macro map.
+    """
+
+    geometry = topology.data["objects"]["line_river"]["geometries"][8]
+    properties = geometry.get("properties") or {}
+    if properties.get("eventname") is not None or geometry["type"] != "LineString":
+        raise ValueError("Arda Maps unnamed Harnen source contract changed")
+    source = topology.line_parts(geometry)[0]
+    if len(source) < 200:
+        raise ValueError("Arda Maps unnamed Harnen source lost detail")
+    # Source storage runs mouthward-to-headward; production rivers flow from
+    # their headwaters toward the sea.
+    path = rdp(list(reversed(source)), 0.00020)
+    if math.dist(path[0], [0.657525, 0.745977]) > 0.001:
+        raise ValueError("Arda Maps unnamed Harnen headwater moved")
+    if math.dist(path[-1], [0.546302, 0.833765]) > 0.001:
+        raise ValueError("Arda Maps unnamed Harnen downstream endpoint moved")
+    path.extend(
+        [
+            [0.535000, 0.846000],
+            [0.516000, 0.858000],
+        ]
+    )
+    return [[round(x, 6), round(y, 6)] for x, y in path]
+
+
 def append_path(
     destination: list[list[float]],
     source: list[list[float]],
@@ -775,8 +807,10 @@ def build(reference_root: Path) -> dict:
                 joins = "upper_anduin"
             item["joins"] = joins
         rivers.append(item)
-    # Arda Maps does not expose these two channels as named river geometries.
-    # Their axes follow its water labels and the owner-approved macro map.
+    # Arda Maps does not name these two channels. The Harnen nevertheless has
+    # a detailed unnamed source line in the correct corridor; only its final
+    # coastward reach is reconciled. The short Morgulduin remains constrained
+    # by its canonical endpoints and the owner-approved macro map.
     rivers.extend(
         [
             {
@@ -793,11 +827,7 @@ def build(reference_root: Path) -> dict:
                 "key": "harnen",
                 "width": 0.0025,
                 "wander": 0.00035,
-                "points": [
-                    [0.690, 0.760], [0.655, 0.775], [0.620, 0.800],
-                    [0.585, 0.825], [0.550, 0.850], [0.515, 0.865],
-                    [0.480, 0.875], [0.445, 0.880],
-                ],
+                "points": harnen_geometry(topology),
             },
         ]
     )

@@ -46,6 +46,10 @@ tuning.
   and hand-reviewed ENDÓRË control geometry. It must identify this projection
   contract and both reference roles.
 - `tools/cartography_reference_audit.py --check` is a permanent static gate.
+- The gate hash-pins the complete reviewed `projection.json`, not only its
+  feature counts. Any coordinate change to a coast, island, lake, mountain,
+  summit, pass, woodland, river, or density envelope therefore requires an
+  explicit cartographic review and audit-hash update.
 - That gate also requires provenance for all 62 secondary landmarks and exact
   coordinate synchronization between every one of the 38 realm seats and its
   settlement/landmark capital control.
