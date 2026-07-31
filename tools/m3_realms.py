@@ -238,9 +238,10 @@ def load_landmarks() -> tuple[Landmark, ...]:
 
 def normalized_distance(location: Location, x: float, y: float) -> float:
     lx, ly = location.normalized
-    # The 2:1 canvas makes horizontal and vertical strategic distances
-    # comparable only after compressing the x term.
-    return ((lx - x) * 0.72) ** 2 + (ly - y) ** 2
+    # Normalized x spans a canvas twice as wide as normalized y. The source
+    # projection preserves equal physical scale, so x must be expanded by two
+    # when comparing strategic distances.
+    return ((lx - x) * 2.0) ** 2 + (ly - y) ** 2
 
 
 def resolve_landmarks(
@@ -282,20 +283,20 @@ def wilderness_reason(location: Location, protected: set[str]) -> str | None:
         return "wild_forodwaith"
     if (
         location.region == "me_enedwaith_region"
-        and x < 0.39
-        and 0.50 < y < 0.65
+        and x < 0.42
+        and 0.36 < y < 0.53
     ):
         return "wild_enedwaith"
     if (
         location.region == "me_brown_lands_region"
         and location.biome_id in {6, 8}
-        and x < 0.70
+        and x < 0.62
     ):
         return "wild_brown_lands"
     if (
         location.region == "me_ithilien_region"
-        and 0.645 < x < 0.690
-        and 0.650 < y < 0.790
+        and 0.585 < x < 0.615
+        and 0.55 < y < 0.70
     ):
         return "wild_ithilien"
     return None
@@ -349,6 +350,26 @@ def assign_ownership(
             tag = "DAM"
         if tag:
             forced_owner[location_key] = tag
+    # These operational landmarks come from the richer M3 landmark table
+    # rather than the projection anchor roster.  Several intentionally sit in
+    # otherwise wild theatres (notably emptied Ithilien), but their forts and
+    # refuges are canonically occupied on TA 3018.1.1.  Pin them before the
+    # wilderness mask so their generated town setup always has a valid owner.
+    operational_landmark_owners = {
+        "derndingle": "FAN",
+        "cair_andros": "GON",
+        "henneth_annun": "GON",
+        "harlond_gondor": "GON",
+        "cirith_ungol": "MOR",
+        "durthang": "MOR",
+        "narchost": "MOR",
+        "carchost": "MOR",
+    }
+    for ref, tag in operational_landmark_owners.items():
+        location_key = ref_to_location.get(ref)
+        if location_key is None:
+            raise ValueError(f"unresolved operational landmark {ref}")
+        forced_owner[location_key] = tag
     for key, tag in forced_owner.items():
         ownership[key] = tag
         counts[tag] += 1
@@ -732,6 +753,15 @@ def start_countries(state: RealmState) -> str:
         lines.append(
             f"\t\t\tcapital = {state.ref_to_location[realm.capital_ref]}"
         )
+        if realm.tag == "UMB":
+            # Vanilla setup ABI: accepted cultures are declared directly in
+            # the country block.  Umbarite remains the realm's primary culture;
+            # the old Black Numenorean houses are accepted so their noble
+            # stratum can participate in the estate rather than initialize as
+            # a discriminated estate culture.
+            lines.append(
+                "\t\t\taccepted_cultures = { me_black_numenorean }"
+            )
         lines.extend(("\t\t}", ""))
     lines.extend(("\t}", "}", ""))
     return "\n".join(lines)

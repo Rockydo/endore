@@ -1520,7 +1520,7 @@ brethren_marsh = {
 		is_port = yes
 		OR = {
 			dominant_culture ?= culture:basque
-			province_definition = province_definition:me_anorien_area_28_31_province_01
+			province_definition = province_definition:me_anorien_area_24_28_province_01
 		}
 	}
 

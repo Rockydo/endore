@@ -8,12 +8,12 @@ jamaica_scripted_country_name = {
 
 	# trigger to check country's capital against, has to pass
 	capital_trigger = {
-		province_definition = province_definition:me_anorien_area_28_31_province_01
+		province_definition = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	# trigger to check all the country locations against, all have to pass
 	location_trigger = {
-		province_definition = province_definition:me_anorien_area_28_31_province_01
+		province_definition = province_definition:me_anorien_area_24_28_province_01
 	}
 }
 
@@ -27,11 +27,11 @@ new_granada_scripted_country_name = {
 				OR = {
 					tag = GRA
 					any_primary_or_accepted_culture = { this ?= culture:andalusi }
-					any_core_location = { area = area:me_anorien_area_28_31 }
+					any_core_location = { area = area:me_anorien_area_24_28 }
 					any_subject_or_below = {
 						tag = GRA
 						any_primary_or_accepted_culture = { this ?= culture:andalusi }
-						any_core_location = { area = area:me_anorien_area_28_31 }
+						any_core_location = { area = area:me_anorien_area_24_28 }
 					}
 				}
 			}
@@ -85,8 +85,8 @@ new_south_wales_scripted_country_name = {
 				OR = {
 					tag = WLS
 					any_primary_or_accepted_culture = { this ?= culture:welsh }
-					any_owned_location = { area = area:me_anorien_area_28_31 }
-					any_core_location = { area = area:me_anorien_area_28_31 }
+					any_owned_location = { area = area:me_anorien_area_24_28 }
+					any_core_location = { area = area:me_anorien_area_24_28 }
 					any_overlord_or_above = {
 						OR = {
 							tag = WLS
@@ -107,8 +107,8 @@ new_south_wales_scripted_country_name = {
 	# trigger to check country's capital against, has to pass
 	capital_trigger = {
 		OR = {
-			area = area:me_anorien_area_28_31
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -159,8 +159,8 @@ new_york_scripted_country_name = {
 	# trigger to check country's capital against, has to pass
 	capital_trigger = {
 		OR = {
-			area = area:me_anorien_area_28_31
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -209,8 +209,8 @@ new_amsterdam_scripted_country_name = {
 	# trigger to check country's capital against, has to pass
 	capital_trigger = {
 		OR = {
-			area = area:me_anorien_area_28_31
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -255,8 +255,8 @@ nova_scotia_scripted_country_name = {
 					AND = {
 						OR = {
 							# if Scotland isn't forming it, limit it to the historical area
-							root.capital.area = area:me_anorien_area_28_31
-							root.capital.area = area:me_anorien_area_28_31
+							root.capital.area = area:me_anorien_area_24_28
+							root.capital.area = area:me_anorien_area_24_28
 						}
 						OR = {
 							any_overlord_or_above = {
@@ -325,8 +325,8 @@ rio_de_la_plata_scripted_country_name = {
 	# trigger to check country's capital against, has to pass
 	capital_trigger = {
 		OR = {
-			province_definition = province_definition:me_anorien_area_28_31_province_01
-			province_definition = province_definition:me_anorien_area_28_31_province_01
+			province_definition = province_definition:me_anorien_area_24_28_province_01
+			province_definition = province_definition:me_anorien_area_24_28_province_01
 		}
 	}
 
@@ -352,7 +352,7 @@ swan_river_colony_scripted_country_name = {
 
 	# trigger to check country's capital against, has to pass
 	capital_trigger = {
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
 	}
 
 	# trigger to check all the country locations against, all have to pass
@@ -374,6 +374,6 @@ wessex_scripted_country_name = {
 
 	# trigger to check the country locations against, all have to pass
 	location_trigger = {
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
 	}
 }

@@ -528,19 +528,19 @@ colonial_charter.10 = {
 
 scripted_trigger is_in_13_colonies = { #root can be location/province/province_definition
 	OR = {
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
 	}
 }
 

@@ -5,7 +5,7 @@
 # example = {
 #	preference_type = exploration / conquest
 #	modifier = 2 (can be below 1 to reduce desire)
-#	area = me_anorien_area_28_31
+#	area = me_anorien_area_24_28
 #	region = me_anorien_region
 #	continent = bla_bla
 #	sub_continent = bla
@@ -30,8 +30,8 @@ aragon_conquer_mediterranean_islands = {
 	preference_type = conquest
 	modifier = 5.5
 
-    area = me_anorien_area_28_31
-    area = me_anorien_area_28_31
+    area = me_anorien_area_24_28
+    area = me_anorien_area_24_28
 }
 
 france_english_holdings = {
@@ -67,32 +67,32 @@ france_no_hre = {
 	region = me_anorien_region
 	region = me_anorien_region
 	region = me_anorien_region
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 france_little_bit_of_hre = {
     preference_type = conquest
     modifier = 4	#we do not want France to charge into the HRE yet
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 france_conquer_northern_italy = {
     preference_type = conquest
     modifier = 3
 
-    area = me_anorien_area_28_31
-    area = me_anorien_area_28_31
-    area = me_anorien_area_28_31
-    area = me_anorien_area_28_31
-    area = me_anorien_area_28_31
-    area = me_anorien_area_28_31
+    area = me_anorien_area_24_28
+    area = me_anorien_area_24_28
+    area = me_anorien_area_24_28
+    area = me_anorien_area_24_28
+    area = me_anorien_area_24_28
+    area = me_anorien_area_24_28
 }
 
 france_revolutionary_conquer_europe = {
@@ -109,35 +109,35 @@ naples_conquer_siciliy = {
 	preference_type = conquest
 	modifier = 10.0
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 siciliy_conquer_naples = {
 	preference_type = conquest
 	modifier = 10.0
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 castile_conquer_spain = {
 	preference_type = conquest
 	modifier = 10.0
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 castile_conquer_new_world = {
@@ -200,46 +200,46 @@ ottoman_expansion_pontic = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 ottoman_expansion_persia = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 ottoman_expansion_arabia = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 ottoman_expansion_hre = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 dutch_conquest = {
@@ -253,42 +253,42 @@ austria_minor_conquest = {
 	preference_type = conquest
 	modifier = 10
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 austria_swiss_intention = {
 	preference_type = conquest
 	modifier = 2
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 austria_bohemia_conquest = {
 	preference_type = conquest
 	modifier = 4
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 austria_northern_italy_conquest = {
 	preference_type = conquest
 	modifier = 8
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 austria_hungary_conquest = {
@@ -302,10 +302,10 @@ austria_empire_conquest = {
 	preference_type = conquest
 	modifier = 6
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 brandenburg_conquest = {
@@ -314,10 +314,10 @@ brandenburg_conquest = {
 
 	formable_country = PRU_f
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 prussia_conquest = {
@@ -326,14 +326,14 @@ prussia_conquest = {
 
 	formable_country = PRU_f
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 german_unification_conquest = {
@@ -344,37 +344,37 @@ german_unification_conquest = {
 
 	formable_country = PRU_f
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 bohemia_core_region = {
 	preference_type = conquest
 	modifier = 5
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 saxony_conquest = {
 	preference_type = conquest
 	modifier = 5
 
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
 }
 
 russia_conquer_region = {
@@ -389,9 +389,9 @@ russia_conquer_scandinavia = {
 	preference_type = conquest
 	modifier = 5
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 russia_conquer_ruthenia_baltic = {
@@ -399,9 +399,9 @@ russia_conquer_ruthenia_baltic = {
 	modifier = 10
 
 	region = me_anorien_region
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 russia_conquer_siberia = {
@@ -411,34 +411,34 @@ russia_conquer_siberia = {
 	region = me_anorien_region
 	region = me_anorien_region
 	region = me_anorien_region
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 lithuania_conquer_livonia = {
 	preference_type = conquest
 	modifier = 10
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
 }
 
 lithuania_conquer_ruthenia = {
 	preference_type = conquest
 	modifier = 5
 	region = me_anorien_region
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
 }
 
 poland_conquer_prussia = {
 	preference_type = conquest
 	modifier = 5
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
 }
 
 poland_conquer_ruthenia = {
 	preference_type = conquest
 	modifier = 2.5
 	region = me_anorien_region
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
 }
 
 england_conquer_britain = {
@@ -463,10 +463,10 @@ england_conquer_france = {
 scotland_conquer_scotland = {
 	preference_type = conquest
 	modifier = 5
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 byzantium_conquer_anatolia = {
@@ -492,12 +492,12 @@ sweden_swedish_empire_conquests = {
 	modifier = 15
 
 	region = me_anorien_region
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 timurids_timur_conquests = {
@@ -514,8 +514,8 @@ timurids_anatolian_conquest = {
 
 	region = me_anorien_region
 	region = me_anorien_region
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }
 
 timurids_indian_conquest = {
@@ -567,9 +567,9 @@ venice_conquest = {
 	preference_type = conquest
 	modifier = 3
 
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
-	area = me_anorien_area_28_31
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
+	area = me_anorien_area_24_28
 }

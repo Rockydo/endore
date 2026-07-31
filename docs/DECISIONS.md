@@ -368,3 +368,166 @@ reach. Extend the Anduin, Ringló, Gilrain, Poros, and Harnen through their coas
 to the current authored coast, just as the proven Baranduin override already does.
 Tributaries remain physical valley/material controls until a genuinely editor-proven
 affluent contract exists.
+
+## 2026-07-30 — Entire covered extent is north of the equator
+
+Place `equator_y` beyond the 8192-pixel southern map edge. The covered north-western
+Middle-earth extent runs from Forochel to northern Far Harad and contains no southern-
+hemisphere land. The previous value 4600 crossed Rohan: Fangorn at canvas y=4984
+consequently received full southern winter on 4 August while Mirkwood remained green.
+Encode this as a generator invariant rather than compensating with weaker climates,
+because `continental = { winter = normal }` is an installed gameplay contract and
+temperate Middle-earth should retain real northern seasons.
+
+## 2026-07-30 — Named woodland coverage is a generated-content invariant
+
+Do not accept the global vanilla-density transform count as sufficient vegetation proof.
+It could remain numerically green while a control change redistributed trees away from a
+binding forest. The map-object validator therefore requires at least 50,000 high-detail
+transforms inside Fangorn, 50,000 inside the Old Forest, 25,000 inside Lórien, and 50,000
+inside Ithilien. The current exact tree is comfortably above every floor; the thresholds
+protect theatre coverage without freezing each forest's precise future boundary.
+
+## 2026-07-30 — Vanilla-count topology and altitude-correct mountain material
+
+Supersede the 12,104-location target with the installed world's exact 28,490-location
+count on the same proven 16384×8192 canvas: 22,000 passable land, 6,000 impassable
+mountain, 90 lake, and 400 sea locations. The rejected close probe occupied 497 control
+pixels; the refined mountain distribution has a 37-pixel median. Count parity is a
+granularity control, not visual acceptance, and M2 remains red until the real renderer
+passes all required theatres.
+
+Keep the complete full-precision (`height_quantum = 1`) Arda cache despite its large
+derived binary, using Git LFS only for `heightmap.bin`. Visible mountain terraces are a
+more serious production defect than repository convenience, and installed-game evidence
+has already proved that the retail renderer consumes this payload.
+
+Treat installed `mountain_wasteland` material-array order as binding: slot 10 snow,
+slot 11 base rock, slot 12 dark dirt transition. Paint by continuous physical height and
+organic noise, reserving dirt for low shoulders, rock for the body, and snow for the
+highest crests. Never infer altitude semantics from generic slot order.
+
+Occupied operational landmarks override broad wilderness masks before realm allocation.
+Henneth Annûn and Cair Andros remain Gondorian; Derndingle belongs to Fangorn; Cirith
+Ungol, Durthang, Narchost, and Carchost belong to Mordor. This prevents canonically active
+forts/refuges from receiving ownerless town setup after topology regeneration.
+
+## 2026-07-30 — q64 runtime height cache after native-density q1 load failure
+
+Supersede only the earlier decision to ship the q1 *derived cache*. Preserve the exact
+28,490-location topology and the complete 65,536×32,768 authored height source, but
+serialize the runtime height tiles at q64. The corrected interactive-window observer
+showed both full-visual and lightweight q1 sessions exiting at the retail 98% load
+boundary after setup/cache completion; repeating the 700 MB payload is therefore an
+exhausted route on the target machine.
+
+q64 is 0.098% of the unsigned 16-bit engine range, eight times finer than the q512 cache
+already proven in the live renderer. Generator v19 yields 120,118 unique height tiles in
+172,161,411 bytes while retaining all 174,763 virtual entries. Continue tracking the
+height payload through Git LFS. This memory-envelope decision does not waive visual
+acceptance: if q64 produces perceptible terraces in the exact target/theatre captures,
+reject it and pursue a different cache mechanism rather than silently accepting them.
+
+## 2026-07-31 — Half-vanilla topology and reference-led cartographic reauthoring
+
+Supersede installed-location-count parity after two independently bounded q64 lightweight
+launches reproduced the same 98% hang and 14–23.5 GB working-set oscillation. The owner
+explicitly authorizes approximately 50% fewer locations because the represented Middle-
+earth extent is smaller than vanilla Earth. Target exactly 14,245 locations—half the
+installed 28,490—while keeping the native engine canvas, the 65,536×32,768 authored
+height source, q64 cache precision, vegetation density, rivers, materials, and physical
+detail. Spend a disproportionate share of cells on narrow mountain systems rather than
+using count parity as a proxy for quality.
+
+Treat the owner-approved Arda Maps Third Age map and ArdaCraft interactive map as primary
+cartographic references alongside Tolkien's published map evidence. Use them heavily for
+relative position, coastline, hydrology, mountain, woodland, lake, road, settlement, and
+regional-boundary checks. Downloaded vectors, tiles, and images are transient development
+references under `G:\endore_runtime` and never enter the repository. Commit only original
+ENDÓRË controls, a provenance/crosswalk ledger, and measured conformance results. This
+amends the earlier no-tracing caution only to the extent necessary for the owner's
+near-perfect positional-fidelity requirement; it does not authorize redistributing a
+source map or its raw data.
+
+## 2026-07-31 — Equal-scale projection and split Anduin engine channels
+
+Preserve the ArdaCraft grid's physical scale with
+`x = 0.5 + (world_x - 10651.5) / 86014` and
+`y = (world_z + 10240) / 43007`. The unused width of EU5's 2:1 canvas is honest ocean
+and eastern margin, not permission to stretch Middle-earth. ArdaCraft point markers take
+precedence for named sites; Arda Maps linework takes precedence for continuous coast,
+river, forest, lake, and mountain geometry. The permanent audit must cover all 42
+settlement anchors, require cartographic provenance on all 62 additional landmarks, and
+keep all 38 realm-seat coordinates identical to their capital controls.
+
+Represent the Anduin as separate upper and lower engine channels divided by Nen Hithoel.
+The physical controls still show one continuous source-aligned river system, but EU5's
+independent-channel parser cannot serialize a river that leaves land for a large internal
+lake and later re-enters land. Select the main source stem rather than every mapped
+distributary, erase only sub-pixel raster backtracks, and retain exact source axes.
+Carnen joins Celduin, Poros joins the lower Anduin, and Morthond joins Ringló; these
+tributaries remain height/material controls until the affluent parser contract is proven.
+
+## 2026-07-31 — Preserve source-coast micro-water and open Gundabad's gate
+
+Do not let generic component cleanup absorb even a one-pixel source-coast sea inlet.
+The initial reduced-topology validation found two Lindon sea pixels assigned to a land
+location at the 420-unit water datum. Sea micro-components now remain water, even when
+they are smaller than a gameplay location; the fixed 180 sea seeds partition them
+without changing the location target.
+
+Gundabad is a playable fortress, not an impassable mountain location. Add a narrow
+authored pass at the canonical stronghold coordinate so its land component reaches the
+Anduin/northern road network. Preserve all 3,200 mountain locations and the surrounding
+source mountain footprint; connectivity is solved by the gate, not by reducing the
+range.
+
+## 2026-07-31 — Return runtime tessellation to the proven 12,104-cell envelope
+
+Supersede only the 14,245-location runtime allocation after paired smoke passed but both
+full-visual and lightweight fresh-game routes remained noninteractive for the complete
+600-second post-cache bound. Use the last live-proven aggregate of 12,104 locations:
+9,200 passable land, 2,700 impassable mountain, 60 lake, and 144 sea. This is still more
+than twice the master plan's original 4,500–6,000 land-location scale and preserves over
+five times the mountain granularity of the rejected 520-cell proof.
+
+Do not change the equal-scale projection, 1,251-vertex source coast, 15 lake outlines,
+43 mountain footprints, 9 ridge axes, 10 pass controls, 24 river/valley controls, 21
+biome zones, full-resolution physical source, 42 settlement anchors, 62 landmarks, or
+38 realm seats for this reduction. Runtime political cells are not a substitute for
+cartographic precision. The 12,104-cell tree must independently pass static validation,
+paired smoke, fresh checkpoint creation, cold full-render resume, nine-theatre review,
+and explicit owner acceptance.
+
+## 2026-07-31 — Ratio-preserving vegetation residency budget
+
+Supersede the decision to ship the installed world's exact 10,193,212 vegetation-transform
+population. That set is valid and rendered densely in an earlier cold-resume proof, but
+on the source-frame tree it makes every fresh-game checkpoint profile peak near 23.5 GB
+and miss the bounded interactive transition. Reducing political locations from 14,245 to
+12,104 did not change that behavior, so further cartographic granularity cuts are not
+justified.
+
+Scale every installed forest/woods/pine high/medium/low count to 40%, preserving all nine
+family/LOD ratios and exact renderer-discovered filenames. The resulting 4,077,285
+Arda-native transforms remain roughly ten times denser than the visibly sparse 420,000
+proof. Preserve Hilbert spatial locality, river clearances, porous authored placement,
+and explicit high-detail coverage floors for Fangorn, the Old Forest, Lórien, and
+Ithilien. This is a bounded renderer candidate, not automatic visual acceptance; only
+the nine-theatre close/regional review can decide whether density remains sufficient.
+
+## 2026-07-31 — Rebalance impassable political cells before height degradation
+
+Keep the 12,104-location aggregate and the 4,077,285-transform stratified vegetation
+candidate, but supersede its 9,200 land / 2,700 mountain split with 10,700 land / 1,200
+mountain. The smaller object set still reached roughly 22 GB and missed the same fresh
+checkpoint bound. The last live 12,104 topology had 520 mountain locations, making the
+2,700 impassable cells—not total location count—the strongest remaining structural
+difference not already isolated.
+
+This decision changes only political tessellation classification. Preserve all 43 source
+mountain footprints, 9 ridge axes, 10 pass cuts, full-resolution height/material sources,
+mountain topography thresholds, and physical massif relief. A 1,200-cell mountain budget
+is still over twice the live baseline and averages substantial granularity across every
+source range. Test it before moving the derived height cache from q64 toward a visibly
+coarser quantum.

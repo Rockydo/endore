@@ -987,9 +987,9 @@ french_appanage_reform = { # Unique Gov Reform for Appanage subjects
 	potential = {
 		OR = {
 			capital.region = region:me_anorien_region
-			capital.area = area:me_anorien_area_28_31
-			capital.area = area:me_anorien_area_28_31
-			capital.area = area:me_anorien_area_28_31
+			capital.area = area:me_anorien_area_24_28
+			capital.area = area:me_anorien_area_24_28
+			capital.area = area:me_anorien_area_24_28
 		}
 		is_subject_type = appanage
 	}

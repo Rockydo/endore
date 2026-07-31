@@ -1046,7 +1046,7 @@ flavor_ara.18 = { #The Alterations of Aragon
 		"estate_power(estate_type:nobles_estate)" > 0.7
 		has_ruler = yes
 		societal_value:centralization_vs_decentralization < 25
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	fire_only_once = yes
@@ -1068,7 +1068,7 @@ flavor_ara.18 = { #The Alterations of Aragon
 			text = flavor_ara.18.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -1160,7 +1160,7 @@ flavor_ara.19 = { #Juan de Lanuza y Urrea
 			text = flavor_ara.19.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -1182,7 +1182,7 @@ flavor_ara.19 = { #Juan de Lanuza y Urrea
 			text = flavor_ara.19.b.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -1276,7 +1276,7 @@ flavor_ara.21 = { #Revolt of the Germanias
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 		estate_satisfaction:burghers_estate < 0.3
 	}
 
@@ -1302,7 +1302,7 @@ flavor_ara.21 = { #Revolt of the Germanias
 			text = flavor_ara.21.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -1334,7 +1334,7 @@ flavor_ara.21 = { #Revolt of the Germanias
 		}
 		every_owned_location = {
 			limit = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 			}
 			every_pop = {
 				limit = {
@@ -2107,7 +2107,7 @@ flavor_ara.111 = { #The Coronation Dilemma
 		}
 		custom_tooltip = flavor_ara.111.c.tt
 		hidden_effect = {
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {

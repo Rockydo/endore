@@ -18,32 +18,17 @@ from worldgen import CONTROL, DERIVED, MAP_OUT, ROOT, WORLD_H, WORLD_W
 
 RIVERS_OUT = MAP_OUT / "rivers.png"
 PREVIEW_OUT = DERIVED / "river_preview.png"
-ENGINE_MOUTHS = {
-    # The revised western coastline lies beyond the original Baranduin control
-    # endpoint. Keep its full valley axis in the physical controls and extend
-    # only the parser-visible channel across the coastal plain to open water.
-    "baranduin": [[0.270, 0.565], [0.240, 0.570], [0.190, 0.570]],
-    # Several southern controls intentionally stopped at their named delta
-    # anchors. Continue their wet corridors through the delta/coastal plain so
-    # every parser-visible channel actually terminates in the current coast.
-    "anduin": [[0.548, 0.806], [0.540, 0.805], [0.536, 0.805]],
-    "ringlo": [[0.508, 0.790]],
-    "gilrain": [[0.536, 0.802], [0.533, 0.802]],
-    "poros": [[0.570, 0.814], [0.560, 0.814], [0.554, 0.814]],
-    "harnen": [
-        [0.500, 0.892],
-        [0.470, 0.890],
-        [0.440, 0.886],
-        [0.405, 0.884],
-        [0.370, 0.886],
-        [0.345, 0.887],
-    ],
+# These sub-control-pixel extensions cross the final source coastline raster
+# cell. They do not alter a valley or delta axis; they make the last land pixel
+# orthogonally touch EU5's palette-index-254 water after 16K quantization.
+ENGINE_MOUTHS: dict[str, list[list[float]]] = {
+    "anduin": [[0.535043, 0.716659]],
+    "baranduin": [[0.329426, 0.349292]],
+    "greyflood": [[0.373138, 0.441622]],
+    "isen": [[0.379976, 0.521739]],
+    "ringlo": [[0.496459, 0.649243]],
 }
-ENGINE_SOURCES = {
-    # The control axis begins inside Lake Evendim; the engine river begins at
-    # its southern outlet so the green source belongs to a land component.
-    "baranduin": [0.325, 0.335],
-}
+ENGINE_SOURCES: dict[str, list[float]] = {}
 
 
 def game_rivers_path():
@@ -90,6 +75,49 @@ def orthogonal_path(points: list[tuple[int, int]]) -> list[tuple[int, int]]:
                 moved_y += 1
             if (x, y) != result[-1]:
                 result.append((x, y))
+    return result
+
+
+def loop_erase_path(path: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    """Remove sub-pixel source backtracks while retaining the mapped channel.
+
+    Detailed source polylines occasionally double back by one raster pixel.
+    EU5 forbids both revisits and non-consecutive orthogonal self-touching, so
+    truncate only the tiny closed branch whenever the advancing path reaches
+    or touches an already emitted pixel.
+    """
+
+    result: list[tuple[int, int]] = []
+    positions: dict[tuple[int, int], int] = {}
+
+    def truncate(index: int) -> None:
+        for removed in result[index + 1 :]:
+            positions.pop(removed, None)
+        del result[index + 1 :]
+
+    for current in path:
+        existing = positions.get(current)
+        if existing is not None:
+            truncate(existing)
+            continue
+        neighbours = [
+            positions[neighbour]
+            for neighbour in (
+                (current[0] - 1, current[1]),
+                (current[0] + 1, current[1]),
+                (current[0], current[1] - 1),
+                (current[0], current[1] + 1),
+            )
+            if neighbour in positions
+        ]
+        if neighbours:
+            non_predecessors = [
+                index for index in neighbours if index != len(result) - 1
+            ]
+            if non_predecessors:
+                truncate(min(non_predecessors))
+        positions[current] = len(result)
+        result.append(current)
     return result
 
 
@@ -157,7 +185,7 @@ def parser_safe_path(
         amplitude=float(river.get("wander", 0.0015)),
         spacing=0.00075,
     )
-    path = orthogonal_path(dense)
+    path = loop_erase_path(orthogonal_path(dense))
     validate_simple_path(river["key"], path)
     expected_start = (
         round(float(controls[0][0]) * (size[0] - 1)),

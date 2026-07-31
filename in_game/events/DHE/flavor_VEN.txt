@@ -1252,7 +1252,7 @@ flavor_ven.25 = { #Fall of Constantinople
 			text = flavor_ven.25.c.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				remove_core = root
 				add_core = c:LAT
@@ -1336,7 +1336,7 @@ flavor_ven.26 = { #Liberation of Jerusalem
 			text = flavor_ven.26.c.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				remove_core = root
 				add_core = c:KOJ
@@ -1527,7 +1527,7 @@ flavor_ven.30 = { #Mediterranean Naval Superpower
 				}
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			NOT = {
 				any_country_with_capital_in_geography = {
 					navy_size > root.navy_size
@@ -2049,14 +2049,14 @@ flavor_ven.41 = { #Devotion of Verona to Venice
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
-		is_integrating = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
+		is_integrating = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	option = {
 		name = flavor_ven.41.a
 		add_prestige = prestige_mild_bonus
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner = root
@@ -2415,7 +2415,7 @@ flavor_ven.49 = { #Revolt of Saint Titus
 		c:CRT = {
 			is_subject_of = ROOT
 			stability < 10
-			own_entire_province = province_definition:me_anorien_area_28_31_province_01
+			own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		}
 	}
 
@@ -2485,7 +2485,7 @@ flavor_ven.50 = { #Rebellion of the Callergis
 		country_exists = c:CRT
 		c:CRT = {
 			is_subject_of = ROOT
-			own_entire_province = province_definition:me_anorien_area_28_31_province_01
+			own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		}
 	}
 
@@ -2514,7 +2514,7 @@ flavor_ven.50 = { #Rebellion of the Callergis
 			c:CRT = {
 				every_owned_location = {
 					limit = {
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
 					}
 					every_pop = {
 						limit = {
@@ -3265,9 +3265,9 @@ flavor_ven.64 = { #Voyage of the Zeno Brothers
 	image = "gfx/interface/illustrations/situation/treaty_of_tordesillas.dds"
 
 	trigger = {
-		NOT = { has_discovered_area = area:me_anorien_area_28_31 }
-		NOT = { has_discovered_area = area:me_anorien_area_28_31 }
-		NOT = { has_discovered_area = area:me_anorien_area_28_31 }
+		NOT = { has_discovered_area = area:me_anorien_area_24_28 }
+		NOT = { has_discovered_area = area:me_anorien_area_24_28 }
+		NOT = { has_discovered_area = area:me_anorien_area_24_28 }
 	}
 
 	option = {
@@ -3277,17 +3277,17 @@ flavor_ven.64 = { #Voyage of the Zeno Brothers
 			25 = {
 				custom_tooltip = flavor_ven.64.a.tt
 				hidden_effect = {
-					area:me_anorien_area_28_31 = {
+					area:me_anorien_area_24_28 = {
 						every_location_in_area = {
 							discover_location = root
 						}
 					}
-					area:me_anorien_area_28_31 = {
+					area:me_anorien_area_24_28 = {
 						every_location_in_area = {
 							discover_location = root
 						}
 					}
-					area:me_anorien_area_28_31 = {
+					area:me_anorien_area_24_28 = {
 						every_location_in_area = {
 							discover_location = root
 						}
@@ -4057,7 +4057,7 @@ flavor_ven.77 = { #Expanding Domini di Terraferma
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -4068,7 +4068,7 @@ flavor_ven.77 = { #Expanding Domini di Terraferma
 
 	option = {
 		name = flavor_ven.77.b
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				change_control = control_mild_bonus
 			}
@@ -4158,7 +4158,7 @@ flavor_ven.79 = { #A Foothold in Cyprus
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	illustration_tags = {
@@ -4202,7 +4202,7 @@ flavor_ven.79 = { #A Foothold in Cyprus
 
 	option = {
 		name = flavor_ven.79.d
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				change_control = control_mild_bonus
 			}
@@ -5242,7 +5242,7 @@ flavor_ven.95 = { #An Expedition to Dalmatia
 
 	trigger = {
 		"culture_percentage_in_country(culture:croatian)" > 0
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = {
 				has_owner = yes
 				owner = ROOT
@@ -5266,7 +5266,7 @@ flavor_ven.95 = { #An Expedition to Dalmatia
 			mil = { 20 40 }
 			create_in_limbo = yes
 		}
-		province:me_anorien_area_28_31_province_01 = {
+		province:me_anorien_area_24_28_province_01 = {
 			random_location_in_province = {
 				ordered_pop = {
 					max = 1

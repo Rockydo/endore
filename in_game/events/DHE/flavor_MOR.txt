@@ -98,7 +98,7 @@ flavor_mor.2 = {
 
 		add_migration = {
 			owner = root
-			from = province_definition:me_anorien_area_28_31_province_01
+			from = province_definition:me_anorien_area_24_28_province_01
 			to = scope:target_location1.province_definition
 			religion = root.religion
 			amount = 0.150
@@ -113,7 +113,7 @@ flavor_mor.2 = {
 
 		add_migration = {
 			owner = root
-			from = province_definition:me_anorien_area_28_31_province_01
+			from = province_definition:me_anorien_area_24_28_province_01
 			to = scope:target_location2.province_definition
 			religion = root.religion
 			amount = 0.150
@@ -1025,9 +1025,9 @@ flavor_mor.18 = {
 	}
 
 	trigger = {
-		has_presence_in = area:me_anorien_area_28_31
-		has_presence_in = area:me_anorien_area_28_31
-		has_presence_in = area:me_anorien_area_28_31
+		has_presence_in = area:me_anorien_area_24_28
+		has_presence_in = area:me_anorien_area_24_28
+		has_presence_in = area:me_anorien_area_24_28
 		has_ruler = yes
 		ruler = {
 			dynasty = { dynasty_name = wattasid_dynasty  }
@@ -1773,12 +1773,12 @@ flavor_mor.28 = {
 	trigger = {
 		at_war = yes
 		or = {
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_ownable_location_in_province_definition = {
 					top_owner = root
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_ownable_location_in_province_definition = {
 					top_owner = root
 				}
@@ -1830,7 +1830,7 @@ flavor_mor.28 = {
 						rebel != scope:abu_inan_faris_rebels_scope
 					}
 				}
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 			}
 			every_pop = {
 				limit = {

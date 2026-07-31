@@ -497,7 +497,7 @@ flavor_ach.7 = { # Secession in Epirus
         }
         c:EPI ?= {
             save_scope_as = epirus_country
-            area:me_anorien_area_28_31 = {
+            area:me_anorien_area_24_28 = {
                 every_province_in_area = {
                     limit = {
                         owner = c:EPI
@@ -789,7 +789,7 @@ flavor_ach.10 = { # Reconquest of the Peloponnese # Territory lost to Byzantium 
             modifier = antagonism_pushed_towards_belligerent
             value = 0.5
         }
-        area:me_anorien_area_28_31 = {
+        area:me_anorien_area_24_28 = {
             every_location_in_area = {
                 limit = {
                     top_owner ?= c:BYZ

@@ -1292,7 +1292,7 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 				c:SLV = { is_subject_of = root }
 			}
 			annex_country = { country = c:SLV }
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					add_location_modifier = { modifier = royal_dowry_modifier years = 10 mode = add }
@@ -1317,7 +1317,7 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 				country_exists = c:SLV
 			}
 			annex_country = { country = c:SLV }
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner = root }
 					change_control = control_extreme_bonus
@@ -1676,7 +1676,7 @@ flavor_dan.24 = { #The Translation of the New Testament
 		trigger = { religion = religion:lutheran }
 		custom_tooltip = {
 			text = flavor_dan.24.a.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -1698,7 +1698,7 @@ flavor_dan.24 = { #The Translation of the New Testament
 		add_religious_influence = religious_influence_mild_penalty
 		custom_tooltip = {
 			text = flavor_dan.24.b.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -1720,7 +1720,7 @@ flavor_dan.24 = { #The Translation of the New Testament
 		add_religious_influence = religious_influence_mild_bonus
 		custom_tooltip = {
 			text = flavor_dan.24.c.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -1782,7 +1782,7 @@ flavor_dan.25 = { #Storming of the Church of Our Lady
 			is_religion_enabled = yes
 		}
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			province ?= {
 				religion_percentage = {
 					religion = religion:lutheran
@@ -1839,7 +1839,7 @@ flavor_dan.26 = { #Chronica Jutensis
 	historical_info = flavor_dan.26.historical_info
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	immediate = {
@@ -1912,14 +1912,14 @@ flavor_dan.27 = { #Resettling Greenland
 		event_illustration_poptype_effect = { foreground = pop_type:peasants background = pop_type:burghers }
 		random_province = {
 			limit = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 			}
 			save_scope_as = target_province
 		}
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -2527,7 +2527,7 @@ flavor_dan.40 = { #Reconquest of Scania
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	immediate = {
@@ -2547,7 +2547,7 @@ flavor_dan.40 = { #Reconquest of Scania
 		name = flavor_dan.40.b
 		custom_tooltip = {
 			text = flavor_dan.40.b.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					add_location_modifier = {
 						modifier = dan_integrating_scania
@@ -3548,7 +3548,7 @@ flavor_dan.60 = { #Sinking of the Treasure Fleet
 
 	trigger = {
 		NOT = {
-			capital = { province_definition = province_definition:me_anorien_area_28_31_province_01 }
+			capital = { province_definition = province_definition:me_anorien_area_24_28_province_01 }
 		}
 	}
 
@@ -3706,13 +3706,13 @@ flavor_dan.64 = { #Amazigh Raid on Iceland #DEVASTATION
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
 		name = flavor_dan.64.a
 		change_gold_effect = { scale = -6 }
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					is_coastal = yes
@@ -3729,7 +3729,7 @@ flavor_dan.64 = { #Amazigh Raid on Iceland #DEVASTATION
 
 	option = {
 		name = flavor_dan.64.b
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					is_coastal = yes
@@ -3903,7 +3903,7 @@ flavor_dan.68 = { #Dominium Maris Baltici
 	trigger = {
 		navy_size >= 50
 		navy_tradition >= 60
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			is_area_coastal_sea = yes
 			any_adjacent_ports_to_area = {
 				OR = {
@@ -3988,17 +3988,17 @@ flavor_dan.1000 = { #Danish-Indian Charter
 			trigger_event_silently = { id = flavor_dan.1001 }
 		}
 
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
-		discover_area = area:me_anorien_area_28_31
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
+		discover_area = area:me_anorien_area_24_28
 
 	}
 	option = {

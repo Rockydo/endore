@@ -90,7 +90,7 @@ war_of_the_roses.1 = {
 
 		custom_tooltip = {
 			text = york_rebels_joining
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -100,7 +100,7 @@ war_of_the_roses.1 = {
 					}
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -165,7 +165,7 @@ war_of_the_roses.1 = {
 
 		custom_tooltip = {
 			text = lancaster_rebels_joining
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {
@@ -175,7 +175,7 @@ war_of_the_roses.1 = {
 					}
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
 					every_pop = {

@@ -200,7 +200,7 @@ def set_fixed_settings(user_dir: Path, *, visual_map: bool = False) -> None:
 
 
 def set_fixed_bindings(user_dir: Path) -> None:
-    """Install deterministic camera keys for autonomous close-terrain inspection."""
+    """Install deterministic map/camera keys for autonomous terrain inspection."""
     path = user_dir / "user_bindings" / "user.bindings"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
@@ -219,6 +219,11 @@ binding={
 binding={
 \tinput_action="camera_zoom_out"
 \tscancode=78
+}
+
+binding={
+\tinput_action="mapmode_slot_1"
+\tscancode=69
 }
 """,
         encoding="utf-8",
@@ -364,6 +369,15 @@ def _window_process_id(window) -> int:
     return int(process_id.value)
 
 
+def _hwnd_process_id(hwnd: int) -> int:
+    process_id = ctypes.c_ulong()
+    ctypes.windll.user32.GetWindowThreadProcessId(
+        hwnd,
+        ctypes.byref(process_id),
+    )
+    return int(process_id.value)
+
+
 def find_window():
     import pygetwindow
 
@@ -404,6 +418,40 @@ def rendered_frame_state(window) -> tuple[bool, float]:
     return share >= 0.05, share
 
 
+def resource_loading_overlay_present(window) -> tuple[bool, float]:
+    """Detect the main-menu resource-loading modal that blocks button input.
+
+    EU5 can stop writing to debug.log while its asynchronous game resources
+    are still loading.  The menu is fully painted in that state, but New Game
+    clicks are discarded behind a fixed dark-brown modal at top centre.  Its
+    fill is stable across the local vanilla and total-conversion menu art,
+    unlike the background beneath it.
+    """
+    import pyautogui
+
+    left = window.left + round(window.width * 0.38)
+    top = window.top + round(window.height * 0.035)
+    width = max(1, round(window.width * 0.25))
+    height = max(1, round(window.height * 0.095))
+    image = pyautogui.screenshot(region=(left, top, width, height)).convert("RGB")
+    image = image.resize((80, 30))
+    pixels = list(
+        image.get_flattened_data()
+        if hasattr(image, "get_flattened_data")
+        else image.getdata()
+    )
+    brown = sum(
+        1
+        for value_r, value_g, value_b in pixels
+        if value_r > value_b * 1.15
+        and value_r > value_g * 1.03
+        and (value_r + value_g + value_b) / 3 < 120
+    )
+    ratio = brown / len(pixels)
+    # Local calibration: blocked resource modal 0.809; ready menu art 0.000.
+    return ratio >= 0.45, ratio
+
+
 def is_hung_window(window) -> bool:
     """Use Windows' own hung-window check; a visible black window is not ready."""
     return bool(ctypes.windll.user32.IsHungAppWindow(window._hWnd))
@@ -439,6 +487,11 @@ def wait_ready(args: argparse.Namespace) -> int:
         saw_window = saw_window or window is not None
         responsive = bool(window) and not is_hung_window(window)
         rendered, non_black = rendered_frame_state(window) if window and responsive else (False, 0.0)
+        resource_loading, resource_brown = (
+            resource_loading_overlay_present(window)
+            if window and responsive and rendered
+            else (False, 0.0)
+        )
         size = debug.stat().st_size if debug.exists() else 0
         if size != last_size:
             last_size = size
@@ -452,13 +505,16 @@ def wait_ready(args: argparse.Namespace) -> int:
         elapsed = time.monotonic() - (deadline - args.timeout)
         print(
             f"wait {elapsed:5.0f}s window={bool(window)} responsive={responsive} rendered={rendered} "
-            f"nonblack={non_black:.1%} debug={size} quiet={quiet:.0f}s cpu={cpu:.1f}%",
+            f"nonblack={non_black:.1%} resources={resource_loading} "
+            f"resource_brown={resource_brown:.1%} debug={size} quiet={quiet:.0f}s "
+            f"cpu={cpu:.1f}%",
             flush=True,
         )
         if (
             saw_window
             and responsive
             and rendered
+            and not resource_loading
             and elapsed >= args.minimum
             and quiet >= args.quiet_seconds
             and cpu < args.max_cpu
@@ -477,7 +533,7 @@ def wait_ready(args: argparse.Namespace) -> int:
     return 2
 
 
-def activate_window():
+def activate_window(*, require_foreground: bool = True):
     window = find_window()
     if not window:
         raise RuntimeError("EU5 window not found")
@@ -507,11 +563,26 @@ def activate_window():
     window = find_window()
     if not window:
         raise RuntimeError("EU5 window disappeared after fixed-window positioning")
+    if not require_foreground:
+        # Captures and physical pointer input need a visible, topmost,
+        # PID-verified rectangle, not Windows keyboard focus. Avoid invoking
+        # the foreground-lock dance during EU5's volatile transition window;
+        # a physical click on this topmost rectangle grants focus naturally.
+        return window
     # A foreground EU5 window is already safe to capture.  Re-running the
     # cross-thread focus dance in that state can make Windows revoke focus from
     # a topmost window between the safety check and the input, despite the game
     # never leaving the foreground.
-    if user32.GetForegroundWindow() == window._hWnd:
+    target_pid = process_from_state().pid
+
+    def foreground_belongs_to_game() -> bool:
+        foreground_hwnd = user32.GetForegroundWindow()
+        return bool(foreground_hwnd) and _hwnd_process_id(foreground_hwnd) == target_pid
+
+    # EU5 may temporarily foreground an engine-owned child surface during the
+    # MainMenu-to-Game transition. It is just as safe as the top-level window:
+    # both handles are proven to belong to the tokenized game PID.
+    if foreground_belongs_to_game():
         return window
     try:
         window.activate()
@@ -539,19 +610,76 @@ def activate_window():
             user32.AttachThreadInput(game_thread, current_thread, False)
         if attached_foreground:
             user32.AttachThreadInput(foreground_thread, current_thread, False)
-    for _ in range(4):
+    for attempt in range(12):
+        # EU5 can destroy and recreate its top-level DirectX window during the
+        # MainMenu-to-Game transition while keeping the same leased process.
+        # Re-resolve the handle by PID before every attempt; a stale HWND makes
+        # all focus APIs fail even though the game itself is healthy.
+        refreshed = find_window()
+        if refreshed is not None:
+            window = refreshed
+        # Windows sometimes refuses an ordinary SetForegroundWindow call after
+        # EU5 destroys and recreates its DirectX child surface. Escalate through
+        # two bounded, process-safe Win32 focus routes before giving up; never
+        # target a handle that has not been tied to the leased EU5 PID.
+        if attempt == 4:
+            user32.ShowWindowAsync(window._hWnd, 9)  # SW_RESTORE
+            user32.SwitchToThisWindow(window._hWnd, True)
+        elif attempt == 8:
+            # A synthetic ALT release is the documented foreground-lock escape
+            # used by desktop automation when the caller cannot inherit the
+            # foreground queue. It changes no game input state after release.
+            user32.keybd_event(0x12, 0, 0, 0)
+            user32.keybd_event(0x12, 0, 0x0002, 0)
         user32.BringWindowToTop(window._hWnd)
         user32.SetForegroundWindow(window._hWnd)
         time.sleep(0.4)
-        if user32.GetForegroundWindow() == window._hWnd:
+        if foreground_belongs_to_game():
             return window
+    # The caller can itself be a background automation process while an IDE
+    # owns Windows' foreground lock. Because SetWindowPos above made the
+    # tokenized EU5 top-level window visible and topmost at a verified fixed
+    # rectangle, one physical click in the middle of its OS title bar is a
+    # bounded final focus route: it cannot hit game UI or another process.
+    for _ in range(3):
+        refreshed = find_window()
+        if refreshed is None:
+            time.sleep(0.4)
+            continue
+        window = refreshed
+        user32.SetWindowPos(
+            window._hWnd,
+            hwnd_topmost,
+            0,
+            0,
+            WINDOW_WIDTH,
+            WINDOW_HEIGHT,
+            swp_showwindow | swp_noownerzorder,
+        )
+        try:
+            title_x = window.left + window.width // 2
+            title_y = window.top + min(10, max(1, window.height // 100))
+        except Exception:
+            # The handle changed again between enumeration and rect lookup.
+            time.sleep(0.4)
+            continue
+        user32.SetCursorPos(title_x, title_y)
+        user32.mouse_event(0x0002, 0, 0, 0, 0)  # MOUSEEVENTF_LEFTDOWN
+        time.sleep(0.08)
+        user32.mouse_event(0x0004, 0, 0, 0, 0)  # MOUSEEVENTF_LEFTUP
+        for _ in range(6):
+            time.sleep(0.4)
+            if foreground_belongs_to_game():
+                return window
+            user32.BringWindowToTop(window._hWnd)
+            user32.SetForegroundWindow(window._hWnd)
     raise RuntimeError("EU5 could not be foregrounded; refusing desktop-pixel capture")
 
 
 def focus_game():
     import pyautogui
 
-    window = activate_window()
+    window = activate_window(require_foreground=False)
     pyautogui.click(
         window.left + int(window.width * 0.75),
         window.top + int(window.height * 0.45),
@@ -566,7 +694,7 @@ def screenshot(args: argparse.Namespace) -> int:
     session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
     target = ROOT / "docs/screens" / session / f"{args.name}.png"
     target.parent.mkdir(parents=True, exist_ok=True)
-    window = activate_window()
+    window = activate_window(require_foreground=False)
     image = pyautogui.screenshot(
         region=(window.left, window.top, window.width, window.height)
     )
@@ -588,7 +716,7 @@ def click(args: argparse.Namespace) -> int:
         # the settle period.  Re-activate and refresh the geometry before the
         # evidence capture so a post-input screenshot never documents an
         # unrelated window as if it were EU5 state.
-        window = activate_window()
+        window = activate_window(require_foreground=False)
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -612,7 +740,7 @@ def click_normalized(x_fraction: float, y_fraction: float, *, button: str = "lef
 
     if not (0 <= x_fraction <= 1 and 0 <= y_fraction <= 1):
         raise ValueError("click coordinates must be normalized fractions from 0 through 1")
-    window = activate_window()
+    window = activate_window(require_foreground=False)
     x = window.left + round(window.width * x_fraction)
     y = window.top + round(window.height * y_fraction)
     # Clausewitz/Jomini widgets can acknowledge hover yet drop pyautogui's
@@ -627,10 +755,10 @@ def click_normalized(x_fraction: float, y_fraction: float, *, button: str = "lef
 
 
 def save_window_capture(target: Path) -> object:
-    """Capture the foreground EU5 window, never the surrounding desktop."""
+    """Capture the PID-verified topmost EU5 rectangle, never the wider desktop."""
     import pyautogui
 
-    window = activate_window()
+    window = activate_window(require_foreground=False)
     image = pyautogui.screenshot(
         region=(window.left, window.top, window.width, window.height)
     )
@@ -671,7 +799,7 @@ def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
     deadline = time.monotonic() + timeout
     while time.monotonic() < deadline:
         try:
-            window = activate_window()
+            window = activate_window(require_foreground=False)
         except RuntimeError:
             return False
         image = pyautogui.screenshot(
@@ -688,12 +816,12 @@ def wait_for_observer_pause(timeout: int, poll_interval: float = 1.0) -> bool:
 def wait_for_transition_log(
     user_dir: Path, start_offset: int, timeout: int, cache_settle: int
 ) -> bool:
-    """Wait for EU5's own MainMenu->Game completion marker after Continue.
+    """Wait for EU5's own MainMenu->Game marker after Continue or New Game.
 
-    A loaded save can display an almost-full loading bar for several minutes;
-    a fixed sleep was therefore unsafe.  The installed build writes state 4
-    only after committing the MainMenu->Game transaction.  The same local log
-    then records cached-data rebuilds; waiting for it to go quiet after their
+    Either route can display an almost-full loading bar for several minutes;
+    a fixed sleep is therefore unsafe.  The installed build writes state 4 only
+    after committing the MainMenu->Game transaction.  The same local log then
+    records cached-data rebuilds; waiting for it to go quiet after their
     completion prevents clicks landing on the 98%-complete loading screen.
     """
     debug = user_dir / "logs" / "debug.log"
@@ -732,6 +860,102 @@ def wait_for_transition_log(
             print("gamedriver: MainMenu->Game and cached-data completion detected")
             return True
         time.sleep(2)
+    return False
+
+
+def wait_for_interactive_game_window(
+    timeout: int,
+    stable_seconds: float = 5,
+) -> bool:
+    """Wait past the post-cache 98% loading screen.
+
+    Build 24187685 can commit MainMenu->Game and finish every logged cached-data
+    rebuild while its top-level window remains hung on "Loading Savegame -
+    98%". Native-density maps make that interval materially longer. Require a
+    rendered, Windows-responsive EU5 window continuously before any evidence
+    capture or country-selection input.
+    """
+    try:
+        process = process_from_state()
+    except (RuntimeError, psutil.NoSuchProcess):
+        return False
+    deadline = time.monotonic() + timeout
+    stable_since: float | None = None
+    last_report = 0.0
+    while time.monotonic() < deadline:
+        try:
+            alive = process.is_running() and process.status() != psutil.STATUS_ZOMBIE
+        except psutil.NoSuchProcess:
+            alive = False
+        if not alive:
+            print(
+                "gamedriver: process exited before country selection became interactive",
+                file=sys.stderr,
+            )
+            return False
+        try:
+            window = find_window()
+        except (RuntimeError, psutil.NoSuchProcess):
+            window = None
+        responsive = bool(window) and not is_hung_window(window)
+        rendered, non_black = (
+            rendered_frame_state(window)
+            if window is not None and responsive
+            else (False, 0.0)
+        )
+        now_monotonic = time.monotonic()
+        if responsive and rendered:
+            stable_since = stable_since or now_monotonic
+            stable = now_monotonic - stable_since
+            if stable >= stable_seconds:
+                print(
+                    "gamedriver: post-cache window interactive "
+                    f"(stable={stable:.1f}s nonblack={non_black:.1%})"
+                )
+                return True
+        else:
+            stable_since = None
+            stable = 0.0
+        if now_monotonic - last_report >= 5:
+            print(
+                "gamedriver: waiting past post-cache loading "
+                f"window={bool(window)} responsive={responsive} "
+                f"rendered={rendered} stable={stable:.1f}s",
+                flush=True,
+            )
+            last_report = now_monotonic
+        time.sleep(2)
+    print("gamedriver: post-cache interactive-window timeout", file=sys.stderr)
+    return False
+
+
+def wait_for_transition_start(
+    user_dir: Path, start_offset: int, timeout: int
+) -> bool:
+    """Confirm that a main-menu click actually began MainMenu->Game.
+
+    A fully painted and foregrounded EU5 main menu can still discard one click
+    while its final UI frame is settling.  Detecting the engine's transition
+    marker before entering the long load wait turns that intermittent miss
+    into a bounded retry instead of a ten-minute false map failure.
+    """
+    debug = user_dir / "logs" / "debug.log"
+    deadline = time.monotonic() + timeout
+    scan_offset = start_offset
+    while time.monotonic() < deadline:
+        if debug.exists():
+            size = debug.stat().st_size
+            if size < scan_offset:
+                scan_offset = 0
+            if size > scan_offset:
+                with debug.open("rb") as stream:
+                    stream.seek(scan_offset)
+                    suffix = stream.read().decode("utf-8", errors="replace")
+                scan_offset = size
+                if "MainMenu->Game" in suffix:
+                    print("gamedriver: MainMenu->Game transition started")
+                    return True
+        time.sleep(1)
     return False
 
 
@@ -860,6 +1084,11 @@ def resume_observer_from_autosave(args: argparse.Namespace, cycle: int) -> bool:
             record_recovery_evidence(session, evidence)
             stop(argparse.Namespace(timeout=10))
             continue
+        if not wait_for_interactive_game_window(args.load_timeout):
+            evidence["steps"].append("country-selection-interactive-timeout")
+            record_recovery_evidence(session, evidence)
+            stop(argparse.Namespace(timeout=10))
+            continue
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_country_select_attempt{ui_attempt}.png")
 
@@ -886,6 +1115,131 @@ def resume_observer(args: argparse.Namespace) -> int:
         return 0
     print("gamedriver: could not resume latest autosave into live Observer", file=sys.stderr)
     return 1
+
+
+def new_observer(args: argparse.Namespace) -> int:
+    """Generate a new game and enter its live Observer HUD.
+
+    This is the evidence-safe alternative to ``resume-observer`` when a map
+    change can be serialized into an existing save.  It deliberately drives
+    Main Menu -> New Game -> country selection -> Observer and records every
+    transition beside the resulting visual evidence.
+    """
+    session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+    target_dir = ROOT / "docs/screens" / session
+    cfg = config()
+    user_dir = Path(str(cfg["user_dir"]))
+    evidence_path = target_dir / "new_observer.json"
+    evidence: dict[str, object] = {
+        "started_at": now(),
+        "steps": [],
+    }
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    launched = launch(
+        argparse.Namespace(
+            mode="mod",
+            leavepops=False,
+            debug_mode=getattr(args, "debug_mode", False),
+            hidden=False,
+            visual_map=getattr(args, "visual_map", False),
+            extra=[],
+        )
+    )
+    if launched:
+        evidence["steps"].append(f"launch-deferred-or-failed:{launched}")
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+        )
+        return launched
+
+    ready = wait_ready(
+        argparse.Namespace(
+            timeout=args.menu_timeout,
+            minimum=args.menu_minimum,
+            quiet_seconds=args.menu_quiet_seconds,
+            max_cpu=args.menu_max_cpu,
+        )
+    )
+    if ready:
+        evidence["steps"].append("menu-ready-failed")
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+        )
+        stop(argparse.Namespace(timeout=10))
+        return 1
+
+    save_window_capture(target_dir / "fresh_menu.png")
+    debug = user_dir / "logs" / "debug.log"
+    debug_offset = debug.stat().st_size if debug.exists() else 0
+    # The locally captured window places New Game around x=0.14, y=0.42.
+    # Confirm that the engine actually begins MainMenu->Game before entering
+    # its long load wait: EU5 can intermittently discard an otherwise valid
+    # foreground click during the menu's final composited frame.
+    transition_started = False
+    for click_attempt in range(1, args.new_game_attempts + 1):
+        click_normalized(0.14, 0.42)
+        time.sleep(args.ui_settle)
+        click_capture = target_dir / f"fresh_new_game_clicked_attempt{click_attempt}.png"
+        save_window_capture(click_capture)
+        if click_attempt == 1:
+            save_window_capture(target_dir / "fresh_new_game_clicked.png")
+        evidence["steps"].append(f"new-game-clicked:attempt{click_attempt}")
+        if wait_for_transition_start(
+            user_dir, debug_offset, args.transition_start_timeout
+        ):
+            evidence["steps"].append(
+                f"new-game-transition-started:attempt{click_attempt}"
+            )
+            transition_started = True
+            break
+        evidence["steps"].append(
+            f"new-game-click-ignored:attempt{click_attempt}"
+        )
+
+    if not transition_started:
+        evidence["steps"].append("mainmenu-to-game-transition-never-started")
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+        )
+        stop(argparse.Namespace(timeout=10))
+        return 1
+
+    if not wait_for_transition_log(
+        user_dir, debug_offset, args.load_timeout, args.cache_settle
+    ):
+        evidence["steps"].append("mainmenu-to-game-transition-timeout")
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+        )
+        stop(argparse.Namespace(timeout=10))
+        return 1
+    if not wait_for_interactive_game_window(args.load_timeout):
+        evidence["steps"].append("country-selection-interactive-timeout")
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+        )
+        stop(argparse.Namespace(timeout=10))
+        return 1
+
+    time.sleep(args.ui_settle)
+    save_window_capture(target_dir / "fresh_country_select.png")
+    evidence["steps"].append("fresh-country-selection-ready")
+    if not enter_live_observer(args, target_dir, "fresh"):
+        evidence["steps"].append("live-observer-banner-timeout")
+        evidence_path.write_text(
+            json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+        )
+        stop(argparse.Namespace(timeout=10))
+        return 1
+
+    evidence["steps"].append("live-observer-ready")
+    evidence["completed_at"] = now()
+    evidence_path.write_text(
+        json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+    )
+    print("gamedriver: fresh new game entered live Observer")
+    return 0
 
 
 def start_observer(args: argparse.Namespace) -> int:
@@ -977,12 +1331,9 @@ def drag(args: argparse.Namespace) -> int:
     if args.capture:
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"
-        target.parent.mkdir(parents=True, exist_ok=True)
-        image = pyautogui.screenshot(
-            region=(window.left, window.top, window.width, window.height)
-        )
-        image.save(target)
-        print(target)
+        # The requested drag settle can outlive Windows' foreground grant.
+        # Reassert EU5 immediately before reading desktop pixels.
+        save_window_capture(target)
     return 0
 
 
@@ -1001,12 +1352,9 @@ def move(args: argparse.Namespace) -> int:
     if args.capture:
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"
-        target.parent.mkdir(parents=True, exist_ok=True)
-        image = pyautogui.screenshot(
-            region=(window.left, window.top, window.width, window.height)
-        )
-        image.save(target)
-        print(target)
+        # Another topmost window may appear during the requested hover settle.
+        # Reassert EU5 immediately before reading desktop pixels.
+        save_window_capture(target)
     return 0
 
 
@@ -1064,12 +1412,9 @@ def scroll(args: argparse.Namespace) -> int:
     if args.capture:
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"
-        target.parent.mkdir(parents=True, exist_ok=True)
-        image = pyautogui.screenshot(
-            region=(window.left, window.top, window.width, window.height)
-        )
-        image.save(target)
-        print(target)
+        # Wheel interpolation and settle can outlive Windows' foreground
+        # grant. Reassert EU5 immediately before reading desktop pixels.
+        save_window_capture(target)
     return 0
 
 
@@ -1504,6 +1849,51 @@ def build_parser() -> argparse.ArgumentParser:
         help="seconds for a cache-complete country-selection map to accept input",
     )
     resume_parser.set_defaults(func=resume_observer)
+    new_observer_parser = sub.add_parser("new-observer")
+    new_observer_parser.add_argument("--session", help="evidence session directory")
+    new_observer_parser.add_argument(
+        "--visual-map",
+        action="store_true",
+        help="enable player-facing 3D terrain quality for fresh-map evidence",
+    )
+    new_observer_parser.add_argument(
+        "--debug-mode",
+        action="store_true",
+        help="enable the console for bounded navigation probes; never use for gate evidence",
+    )
+    new_observer_parser.add_argument("--menu-timeout", type=int, default=240)
+    new_observer_parser.add_argument("--menu-minimum", type=int, default=25)
+    new_observer_parser.add_argument("--menu-quiet-seconds", type=int, default=15)
+    new_observer_parser.add_argument("--menu-max-cpu", type=float, default=1000)
+    new_observer_parser.add_argument(
+        "--load-timeout",
+        type=int,
+        default=600,
+        help="maximum seconds for EU5's logged New Game transition",
+    )
+    new_observer_parser.add_argument(
+        "--transition-start-timeout",
+        type=int,
+        default=20,
+        help="seconds to confirm each New Game click began MainMenu-to-Game",
+    )
+    new_observer_parser.add_argument(
+        "--new-game-attempts",
+        type=int,
+        default=3,
+        help="bounded New Game click attempts before declaring the UI route failed",
+    )
+    new_observer_parser.add_argument(
+        "--cache-settle",
+        type=int,
+        default=15,
+        help="quiet seconds after the logged cached-data rebuild",
+    )
+    new_observer_parser.add_argument("--live-timeout", type=int, default=60)
+    new_observer_parser.add_argument("--ui-settle", type=float, default=2)
+    new_observer_parser.add_argument("--observer-enable-settle", type=float, default=10)
+    new_observer_parser.add_argument("--country-selection-settle", type=float, default=15)
+    new_observer_parser.set_defaults(func=new_observer)
     start_observer_parser = sub.add_parser("start-observer")
     start_observer_parser.add_argument("--session", help="evidence session directory")
     start_observer_parser.add_argument("--live-timeout", type=int, default=60)

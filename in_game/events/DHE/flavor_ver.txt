@@ -216,7 +216,7 @@ flavor_ver.3 = {
 		save_scope_as = from_country
 		c:VER = {
 			save_scope_as = target_country
-			province:me_anorien_area_28_31_province_01 = {
+			province:me_anorien_area_24_28_province_01 = {
 				save_scope_as = target_province
 			}
 		}

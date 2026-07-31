@@ -412,7 +412,7 @@ flavor_iro.30 = { # Shikellamy and Pennsylvania
 
 	trigger = {
 		has_ruler = yes
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				OR = {
 					owner ?= { is_subject_of = root }
@@ -456,7 +456,7 @@ flavor_iro.30 = { # Shikellamy and Pennsylvania
 		scope:target_character = {
 			move_country = ROOT
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= root
@@ -502,7 +502,7 @@ flavor_iro.31 = { # Shikellamy and the Walking Purchase
 			is_alive = yes
 			owner = ROOT
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				OR = {
 					owner ?= { is_subject_of = root }
@@ -518,7 +518,7 @@ flavor_iro.31 = { # Shikellamy and the Walking Purchase
 			}
 		}
 		NOT = {
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_location_in_province_definition = {
 					owner ?= ROOT
 				}
@@ -557,7 +557,7 @@ flavor_iro.31 = { # Shikellamy and the Walking Purchase
 			value = scope:colonial_nation_target.monthly_income_trade_and_tax
 			multiply = 4
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					NOT = { owner ?= scope:colonial_nation_target }
@@ -605,7 +605,7 @@ flavor_iro.32 = { # Arrival of the Moravian Missionaries
 			has_colonial_charters = yes
 			religion.group = religion_group:christian
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				OR = {
 					owner ?= { is_subject_of = root }
@@ -630,7 +630,7 @@ flavor_iro.32 = { # Arrival of the Moravian Missionaries
 		character:shikellamy_overseer ?= {
 			save_scope_as = target_character
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					owner ?= root
@@ -1569,7 +1569,7 @@ flavor_iro.63 = { # Destruction of Wendake
 
 	trigger = {
 		has_ruler = yes
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		at_war = no
 	}
 
@@ -1589,7 +1589,7 @@ flavor_iro.63 = { # Destruction of Wendake
 		name = flavor_iro.63.a
 		add_prestige = prestige_extreme_bonus
 		add_tribal_cohesion = tribal_cohesion_mild_bonus
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner ?= root
@@ -1602,7 +1602,7 @@ flavor_iro.63 = { # Destruction of Wendake
 	option = { # Our enemies our now our brothers, we put past hostilities aside
 		name = flavor_iro.63.b
 		add_prestige = prestige_weak_bonus
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner ?= root
@@ -1638,7 +1638,7 @@ flavor_iro.64 = { # Growth of Villages Along Lake Ontario
 
 	trigger = {
 		has_ruler = yes
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 		at_war = no
 	}
 
@@ -1656,7 +1656,7 @@ flavor_iro.64 = { # Growth of Villages Along Lake Ontario
 
 	option = { # Found the new villages!
 		name = flavor_iro.64.a
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= root

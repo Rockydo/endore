@@ -263,7 +263,7 @@ innovativeness_events.11 = {
 		num_of_advances_researched >= tech_level_to_advances_23
 		capital = { continent = continent:me_gondor }
 
-		NOT = { has_discovered_area = area:me_anorien_area_28_31 }
+		NOT = { has_discovered_area = area:me_anorien_area_24_28 }
 	}
 
 	option = {

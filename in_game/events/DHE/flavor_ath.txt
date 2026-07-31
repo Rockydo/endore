@@ -774,7 +774,7 @@ flavor_ath.9 = { # Byzantium Internal Strife
         }
         reverse_add_opinion = { target = c:BYZ modifier = ath_byz_raided_our_greek_holdings }
         c:BYZ ?= {
-            area:me_anorien_area_28_31 = {
+            area:me_anorien_area_24_28 = {
                 every_province_in_area = {
                     limit = {
                         owner = c:BYZ

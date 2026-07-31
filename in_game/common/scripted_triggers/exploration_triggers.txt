@@ -31,18 +31,18 @@ country_can_start_exploration_trigger = {
 
 discovered_any_in_americas_trigger = {
 	OR = {
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
 	}
 }
 
@@ -60,15 +60,15 @@ capital_in_old_world_trigger = {
 
 discovered_route_to_india = {
 	OR = {
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
-		has_discovered_area = area:me_anorien_area_28_31
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
+		has_discovered_area = area:me_anorien_area_24_28
 	}
-	has_discovered_area = area:me_anorien_area_28_31
-	has_discovered_area = area:me_anorien_area_28_31
+	has_discovered_area = area:me_anorien_area_24_28
+	has_discovered_area = area:me_anorien_area_24_28
 }
 
 
 discovered_any_in_moluccas_trigger = {
-	has_discovered_area = area:me_anorien_area_28_31
+	has_discovered_area = area:me_anorien_area_24_28
 }

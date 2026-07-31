@@ -52,7 +52,7 @@ is_endemic_typhus_location = {
 		region = region:me_anorien_region
 		region = region:me_anorien_region
 		region = region:me_anorien_region
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
 		region = region:me_anorien_region
 		region = region:me_anorien_region
 		region = region:me_anorien_region
@@ -218,8 +218,8 @@ is_capital_mesoamerica = {
 	capital ?= {
 		OR = {
 			region = region:me_anorien_region
-			area = area:me_anorien_area_28_31
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
+			area = area:me_anorien_area_24_28
 			region = region:me_anorien_region
 		}
 	}

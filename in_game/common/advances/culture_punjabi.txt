@@ -12,7 +12,7 @@
 ############################
 pun_breadbasket_of_india = {
     age = age_3_discovery
-    potential = { culture.language = language:punjabi_language capital = { area = area:me_anorien_area_28_31 } }
+    potential = { culture.language = language:punjabi_language capital = { area = area:me_anorien_area_24_28 } }
     requires = rgo_logistics_discovery
     global_monthly_food_modifier = 0.2
 }

@@ -637,7 +637,7 @@ scripted_effect if_possible_make_tributary = {
 
 scripted_trigger exceptional_gift_cloves_trigger = {
 	capital ?= {
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
 	}
 }
 

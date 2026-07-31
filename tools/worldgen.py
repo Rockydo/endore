@@ -31,11 +31,20 @@ HEIGHT_W, HEIGHT_H = 8192, 4096
 BIOME_W, BIOME_H = HEIGHT_W - 1, HEIGHT_H - 1
 SEED = 3018
 
+# The installed native 16384x8192 map registers 28,490 locations. Both the
+# exact-count tree and a 14,245-cell source-frame tree exhausted the target
+# machine's bounded fresh-game renderer transition. The last reliably live
+# ENDÓRË topology contained 12,104 cells with only 520 impassable mountains.
+# Preserve that proven aggregate and the full-resolution physical source, but
+# use 1,200 mountain cells—over twice the live baseline—rather than 2,700.
+# The 2,700-cell variant still exhausted the renderer after both total-count
+# and vegetation reductions. Cartographic precision lives in the authored
+# coast/height/river/biome controls and is not rescaled by this runtime budget.
 TARGETS = {
-    "land": 11320,
-    "mountain": 520,
-    "lake": 64,
-    "sea": 200,
+    "land": 10_700,
+    "mountain": 1_200,
+    "lake": 60,
+    "sea": 144,
 }
 
 KIND_ORDER = ("land", "mountain", "lake", "sea")
@@ -44,6 +53,7 @@ LOCALIZATION_COLLISION_RENAMES = {
     # Live EU5 localization-table evidence from the first M2 smoke.
     "me_land_2436": "me_land_2436_endore",
     "me_land_5457": "me_land_5457_endore",
+    "me_land_16368": "me_land_16368_endore",
     "me_sea_0241": "me_sea_0241_endore",
 }
 CONTROL_BIOMES = {
@@ -59,6 +69,7 @@ CONTROL_BIOMES = {
     9: "steppe",
     10: "arid",
 }
+FOREST_TEMPLATE_MIN_FRACTION = 0.72
 
 
 @dataclass(frozen=True)
@@ -104,6 +115,40 @@ class WorldModel:
     @property
     def by_key(self) -> dict[str, Location]:
         return {location.key: location for location in self.locations}
+
+
+def location_biome_counts(model: WorldModel) -> np.ndarray:
+    """Count authored control-biome cells owned by every generated location."""
+    return np.bincount(
+        (model.labels.ravel() * 11 + model.biomes.ravel()).astype(np.int64),
+        minlength=len(model.locations) * 11,
+    ).reshape((len(model.locations), 11))
+
+
+def effective_template_biomes(
+    model: WorldModel,
+    counts: np.ndarray | None = None,
+) -> np.ndarray:
+    """Return the biome actually exposed by location-scoped terrain templates.
+
+    Continuous object transforms render porous woodland margins.  A location-wide
+    woods/forest template is therefore reserved for cells whose authored woodland
+    coverage is unambiguous; fringe cells fall back to temperate terrain.  Consumers
+    such as raw-material generation must use this same classification because engine
+    potentials evaluate the final template, not the raw control-layer majority.
+    """
+    if counts is None:
+        counts = location_biome_counts(model)
+    effective = np.argmax(counts, axis=1)
+    forest_fraction = (counts[:, 2] + counts[:, 3]) / model.areas
+    land = np.fromiter(
+        (location.kind == "land" for location in model.locations),
+        dtype=np.bool_,
+        count=len(model.locations),
+    )
+    forest = np.isin(effective, (2, 3))
+    effective[land & forest & (forest_fraction < FOREST_TEMPLATE_MIN_FRACTION)] = 1
+    return effective
 
 
 def load_anchors() -> list[Anchor]:
@@ -185,59 +230,74 @@ def location_colors(count: int) -> list[tuple[int, int, int]]:
 
 
 def spatial_group(x: float, y: float) -> tuple[str, str]:
-    """Assign the logged M2 strategic hierarchy from normalized position."""
-    if y < 0.235:
-        if x < 0.38:
+    """Assign strategic regions in the equal-scale ArdaCraft projection.
+
+    These boundaries follow the source-audited physical frame.  They are
+    deliberately resolved from the most geographically constrained realms
+    outward so the broad wilderness bins cannot swallow narrow countries.
+    """
+    if y < 0.12:
+        if x < 0.40:
             return "me_forodwaith", "me_forochel_region"
-        if x < 0.53:
+        if x < 0.49:
             return "me_forodwaith", "me_angmar_region"
         return "me_forodwaith", "me_northern_wastes_region"
-    if y > 0.83:
-        if x < 0.53:
+
+    # Harad and Khand use the actual southern/eastern extents rather than the
+    # old vertically stretched sketch.
+    if y > 0.76:
+        if x < 0.56 and y > 0.86:
             return "me_harad", "me_umbar_region"
-        if y < 0.94:
+        if x > 0.69 and y < 0.88:
+            return "me_mordor_and_rhun", "me_khand_region"
+        if y < 0.91:
             return "me_harad", "me_near_harad_region"
         return "me_harad", "me_far_harad_region"
-    if x > 0.665:
-        if y < 0.57:
+
+    # Rhûn lies east of Rhovanion and north/east of Mordor; the diagonal keeps
+    # Dorwinion west of the Sea of Rhûn in its intended frontier region.
+    if x > max(0.62, 0.645 + (y - 0.30) * 0.10):
+        if y < 0.52:
             return "me_mordor_and_rhun", "me_rhun_region"
-        if y < 0.82:
+        if y < 0.72:
             return "me_mordor_and_rhun", "me_mordor_region"
         return "me_mordor_and_rhun", "me_khand_region"
-    # The Mark lies north of the White Mountains and must be resolved before
-    # the broad southern Gondor bins. The M3 ownership audit caught the first
-    # coarse M2 boundary putting Edoras and Helm's Deep in Lebennin.
-    if 0.46 <= x < 0.615 and 0.59 <= y < 0.75:
+
+    # Calenardhon is the strip between Fangorn/Anduin and the White Mountains.
+    if 0.455 <= x < 0.565 and 0.43 <= y < 0.57:
         return "me_rhovanion", "me_rohan_region"
-    if y > 0.655:
-        if x < 0.535:
+
+    # Gondor follows the White Mountains, Anduin, and Ephel Dúath.
+    if y >= 0.56:
+        if x < 0.525:
             return "me_gondor", "me_belfalas_region"
-        if x < 0.605 and y > 0.735:
+        if x < 0.575 and y > 0.63:
             return "me_gondor", "me_lebennin_region"
-        if x > 0.642 and y < 0.79:
+        if x >= 0.585 and y < 0.70:
             return "me_gondor", "me_ithilien_region"
-        if y < 0.755:
+        if y < 0.635:
             return "me_gondor", "me_anorien_region"
         return "me_gondor", "me_south_gondor_region"
-    if 0.455 <= x < 0.505 and 0.49 <= y < 0.57:
-        return "me_rhovanion", "me_anduin_vale_region"
-    if x >= 0.50:
-        if y < 0.27:
+
+    # Rhovanion is split around the Anduin and the source forest footprints.
+    if x >= 0.485:
+        if y < 0.15:
             return "me_rhovanion", "me_grey_mountains_region"
-        if x > 0.60 and y < 0.43:
+        if x > 0.585 and y < 0.22:
             return "me_rhovanion", "me_dale_region"
-        if x > 0.54 and y < 0.56:
+        if x > 0.545 and y < 0.38:
             return "me_rhovanion", "me_mirkwood_region"
-        if y > 0.59:
-            return "me_rhovanion", "me_rohan_region"
-        if x < 0.58:
+        if x < 0.55 and y < 0.43:
             return "me_rhovanion", "me_anduin_vale_region"
         return "me_rhovanion", "me_brown_lands_region"
-    if x < 0.29:
+
+    # Eriador: Lindon is west of Ered Luin, the Shire/Bree belt sits around
+    # the East Road, and Enedwaith begins south of the Glanduin/Gwathló system.
+    if x < 0.315:
         return "me_eriador", "me_lindon_region"
-    if y < 0.35:
+    if y < 0.205 or (x >= 0.405 and y < 0.30):
         return "me_eriador", "me_north_arnor_region"
-    if 0.29 <= x < 0.49 and 0.35 <= y < 0.49:
+    if x < 0.415 and y < 0.295:
         return "me_eriador", "me_shire_breeland_region"
     return "me_eriador", "me_enedwaith_region"
 
@@ -346,7 +406,11 @@ def clean_small_components(
                 and neighbours[KIND_CODE["sea"]] == 0
                 and not protected
             )
-            if (len(cells) < minimum or enclosed_land) and neighbours:
+            # Never absorb a source-coast water inlet merely because it is
+            # sub-location-sized. Doing so creates passable political pixels
+            # at the 420-unit water datum and visibly blunts the audited coast.
+            too_small = len(cells) < minimum and class_id != KIND_CODE["sea"]
+            if (too_small or enclosed_land) and neighbours:
                 replacement = neighbours.most_common(1)[0][0]
                 for y, x in cells:
                     kind_map[y, x] = replacement
@@ -448,8 +512,60 @@ def grow_labels(
     seeds_by_kind: dict[str, list[tuple[int, int]]],
     offsets: dict[str, int],
 ) -> np.ndarray:
+    """Grow connected, organic location cells inside each authored map class.
+
+    A four-neighbour flood produces a Manhattan-distance Voronoi diagram.  At
+    ENDÓRË's density those diamond wavefronts become long parallel bands when
+    EU5 renders location borders.  Cardinal edges remain universally available
+    for connectivity, while a deterministic half of the diagonal graph is
+    opened and the visit order rotates spatially.  The result retains the
+    linear-time flood and connected seed ownership, but breaks the axis-aligned
+    wavefronts into compact, irregular cells.
+    """
     labels = np.full(kind_map.shape, -1, dtype=np.int32)
     queue: deque[tuple[int, int]] = deque()
+    neighbour_orders = (
+        (
+            (-1, 0),
+            (-1, -1),
+            (0, -1),
+            (1, -1),
+            (1, 0),
+            (1, 1),
+            (0, 1),
+            (-1, 1),
+        ),
+        (
+            (0, -1),
+            (1, -1),
+            (1, 0),
+            (1, 1),
+            (0, 1),
+            (-1, 1),
+            (-1, 0),
+            (-1, -1),
+        ),
+        (
+            (1, 0),
+            (1, 1),
+            (0, 1),
+            (-1, 1),
+            (-1, 0),
+            (-1, -1),
+            (0, -1),
+            (1, -1),
+        ),
+        (
+            (0, 1),
+            (-1, 1),
+            (-1, 0),
+            (-1, -1),
+            (0, -1),
+            (1, -1),
+            (1, 0),
+            (1, 1),
+        ),
+    )
     for kind in KIND_ORDER:
         expected = KIND_CODE[kind]
         for local_index, (y, x) in enumerate(seeds_by_kind[kind]):
@@ -461,7 +577,18 @@ def grow_labels(
         y, x = queue.popleft()
         label = labels[y, x]
         expected = kind_map[y, x]
-        for ny, nx in ((y - 1, x), (y, x - 1), (y, x + 1), (y + 1, x)):
+        phase = ((x * 73) ^ (y * 151) ^ SEED) & 3
+        for dy, dx in neighbour_orders[phase]:
+            ny, nx = y + dy, x + dx
+            if dy and dx:
+                edge_y, edge_x = min(y, ny), min(x, nx)
+                edge_hash = (
+                    (edge_x * 73_856_093)
+                    ^ (edge_y * 19_349_663)
+                    ^ SEED
+                )
+                if (edge_hash & 3) >= 2:
+                    continue
             if (
                 0 <= ny < CONTROL_H
                 and 0 <= nx < CONTROL_W

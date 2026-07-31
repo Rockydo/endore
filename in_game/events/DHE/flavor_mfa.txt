@@ -19,7 +19,7 @@ flavor_mfa.1 = {
 	major = yes
 	major_trigger = {
 		capital ?= {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -295,7 +295,7 @@ flavor_mfa.3 = {
 	major = yes
 	major_trigger = {
 		capital ?= {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -304,17 +304,17 @@ flavor_mfa.3 = {
 		ruler = {
 			save_scope_as = target_character
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				add_to_list = affected_locations
 			}
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				add_to_list = affected_locations
 			}
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				add_to_list = affected_locations
 			}
@@ -488,7 +488,7 @@ flavor_mfa.6 = {
 	major = yes
 	major_trigger = {
 		capital ?= {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -662,10 +662,10 @@ flavor_mfa.8 = {
 						target = scope:from_country
 						type = subject_type:fiefdom
 					}
-					ROOT.province:me_anorien_area_28_31_province_01 = {
+					ROOT.province:me_anorien_area_24_28_province_01 = {
 						change_province_owner = PREV
 					}
-					ROOT.province:me_anorien_area_28_31_province_01 = {
+					ROOT.province:me_anorien_area_24_28_province_01 = {
 						change_province_owner = PREV
 					}
 				}
@@ -994,9 +994,9 @@ flavor_mfa.1005 = {
 					order_by = population
 					limit = {
 						OR = {
-							province_definition = province_definition:me_anorien_area_28_31_province_01
-							province_definition = province_definition:me_anorien_area_28_31_province_01
-							province_definition = province_definition:me_anorien_area_28_31_province_01
+							province_definition = province_definition:me_anorien_area_24_28_province_01
+							province_definition = province_definition:me_anorien_area_24_28_province_01
+							province_definition = province_definition:me_anorien_area_24_28_province_01
 						}
 					}
 					max = 1
@@ -1035,10 +1035,10 @@ flavor_mfa.1005 = {
 							target = scope:from_country
 							type = subject_type:fiefdom
 						}
-						scope:target_country.province:me_anorien_area_28_31_province_01 = {
+						scope:target_country.province:me_anorien_area_24_28_province_01 = {
 							change_province_owner = PREV
 						}
-						scope:target_country.province:me_anorien_area_28_31_province_01 = {
+						scope:target_country.province:me_anorien_area_24_28_province_01 = {
 							change_province_owner = PREV
 						}
 					}

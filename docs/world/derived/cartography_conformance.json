@@ -1,0 +1,660 @@
+{
+  "schema": 2,
+  "projection": {
+    "source": "ardacraft_equal_scale_grid",
+    "x_center": 10651.5,
+    "z_min": -10240.0,
+    "z_max": 32767.0,
+    "world_span": 43007.0,
+    "canvas_aspect": 2.0
+  },
+  "feature_counts": {
+    "mainland_vertices": 1251,
+    "offshore_islands": 9,
+    "lakes": 15,
+    "mountain_footprints": 43,
+    "ridge_axes": 9,
+    "passes": 10,
+    "river_valley_controls": 24,
+    "biome_zones": 21
+  },
+  "anchor_count": 42,
+  "landmark_count": 62,
+  "manual_or_reconciled_landmarks": 12,
+  "synchronized_realm_seats": 38,
+  "maximum_deviation": 0.00209318,
+  "mean_deviation": 7.429e-05,
+  "all_within_tolerance": true,
+  "entries": [
+    {
+      "key": "aldberg",
+      "target": [
+        0.508074,
+        0.547446
+      ],
+      "actual": [
+        0.508074,
+        0.547446
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "amon_sul",
+      "target": [
+        0.427064,
+        0.227172
+      ],
+      "actual": [
+        0.427064,
+        0.227172
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "annuminas",
+      "target": [
+        0.35997,
+        0.178855
+      ],
+      "actual": [
+        0.35997,
+        0.178855
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "barad_dur",
+      "target": [
+        0.644052,
+        0.573511
+      ],
+      "actual": [
+        0.644052,
+        0.573511
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "bree",
+      "target": [
+        0.402638,
+        0.231985
+      ],
+      "actual": [
+        0.402638,
+        0.231985
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "bucklebury",
+      "target": [
+        0.376724,
+        0.23252
+      ],
+      "actual": [
+        0.376724,
+        0.23252
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.004,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "calembel",
+      "target": [
+        0.519664,
+        0.617469
+      ],
+      "actual": [
+        0.519664,
+        0.617469
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.01,
+      "passed": true,
+      "primary_reference": "Arda Maps"
+    },
+    {
+      "key": "caras_galadhon",
+      "target": [
+        0.519375,
+        0.356221
+      ],
+      "actual": [
+        0.519375,
+        0.356221
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "carn_dum",
+      "target": [
+        0.448944,
+        0.063711
+      ],
+      "actual": [
+        0.448944,
+        0.063711
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "carrock",
+      "target": [
+        0.531512,
+        0.192434
+      ],
+      "actual": [
+        0.531512,
+        0.192434
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "dale",
+      "target": [
+        0.601803,
+        0.148883
+      ],
+      "actual": [
+        0.601803,
+        0.148883
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.004,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "dol_amroth",
+      "target": [
+        0.489089,
+        0.672867
+      ],
+      "actual": [
+        0.489089,
+        0.672867
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "dol_guldur",
+      "target": [
+        0.556113,
+        0.35178
+      ],
+      "actual": [
+        0.556113,
+        0.35178
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "dorwinion",
+      "target": [
+        0.684658,
+        0.351235
+      ],
+      "actual": [
+        0.684658,
+        0.351235
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.012,
+      "passed": true,
+      "primary_reference": "Arda Maps"
+    },
+    {
+      "key": "dunharrow",
+      "target": [
+        0.496751,
+        0.553026
+      ],
+      "actual": [
+        0.496751,
+        0.553026
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "edoras",
+      "target": [
+        0.498657,
+        0.538308
+      ],
+      "actual": [
+        0.498657,
+        0.538308
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "erebor",
+      "target": [
+        0.599699,
+        0.137606
+      ],
+      "actual": [
+        0.599699,
+        0.137606
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "erech",
+      "target": [
+        0.499958,
+        0.568615
+      ],
+      "actual": [
+        0.499958,
+        0.568615
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.01,
+      "passed": true,
+      "primary_reference": "Arda Maps"
+    },
+    {
+      "key": "esgaroth",
+      "target": [
+        0.599873,
+        0.162764
+      ],
+      "actual": [
+        0.599873,
+        0.162764
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.004,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "forlond",
+      "target": [
+        0.265044,
+        0.222313
+      ],
+      "actual": [
+        0.26569,
+        0.220322
+      ],
+      "deviation": 0.00209318,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "fornost",
+      "target": [
+        0.392837,
+        0.175902
+      ],
+      "actual": [
+        0.392837,
+        0.175902
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "goblin_town",
+      "target": [
+        0.509865,
+        0.191597
+      ],
+      "actual": [
+        0.509865,
+        0.191597
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "gundabad",
+      "target": [
+        0.502345,
+        0.102487
+      ],
+      "actual": [
+        0.502345,
+        0.102487
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.008,
+      "passed": true,
+      "primary_reference": "Arda Maps"
+    },
+    {
+      "key": "harlond_lindon",
+      "target": [
+        0.283099,
+        0.268538
+      ],
+      "actual": [
+        0.283099,
+        0.268538
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "helms_deep",
+      "target": [
+        0.475475,
+        0.513986
+      ],
+      "actual": [
+        0.475475,
+        0.513986
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "hobbiton",
+      "target": [
+        0.359145,
+        0.221964
+      ],
+      "actual": [
+        0.359145,
+        0.221964
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.004,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "isengard",
+      "target": [
+        0.466546,
+        0.462111
+      ],
+      "actual": [
+        0.466546,
+        0.462111
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "linhir",
+      "target": [
+        0.533407,
+        0.681331
+      ],
+      "actual": [
+        0.533407,
+        0.681331
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "michel_delving",
+      "target": [
+        0.34624,
+        0.229195
+      ],
+      "actual": [
+        0.34624,
+        0.229195
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.004,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "minas_morgul",
+      "target": [
+        0.607256,
+        0.595531
+      ],
+      "actual": [
+        0.607256,
+        0.595531
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "minas_tirith",
+      "target": [
+        0.578168,
+        0.611296
+      ],
+      "actual": [
+        0.578168,
+        0.611296
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "mithlond",
+      "target": [
+        0.3087,
+        0.225266
+      ],
+      "actual": [
+        0.309158,
+        0.226185
+      ],
+      "deviation": 0.0010268,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "morannon",
+      "target": [
+        0.609732,
+        0.529449
+      ],
+      "actual": [
+        0.609732,
+        0.529449
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "moria",
+      "target": [
+        0.49,
+        0.3355
+      ],
+      "actual": [
+        0.49,
+        0.3355
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.01,
+      "passed": true,
+      "primary_reference": "Reconciled"
+    },
+    {
+      "key": "mount_doom",
+      "target": [
+        0.628659,
+        0.577115
+      ],
+      "actual": [
+        0.628659,
+        0.577115
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.005,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "nurn_fields",
+      "target": [
+        0.6382,
+        0.669338
+      ],
+      "actual": [
+        0.6382,
+        0.669338
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.015,
+      "passed": true,
+      "primary_reference": "Arda Maps"
+    },
+    {
+      "key": "osgiliath",
+      "target": [
+        0.592456,
+        0.603809
+      ],
+      "actual": [
+        0.592456,
+        0.603809
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.004,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "pelargir",
+      "target": [
+        0.572006,
+        0.686028
+      ],
+      "actual": [
+        0.572006,
+        0.686028
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "pelennor",
+      "target": [
+        0.582,
+        0.61
+      ],
+      "actual": [
+        0.582,
+        0.61
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.008,
+      "passed": true,
+      "primary_reference": "Reconciled"
+    },
+    {
+      "key": "rivendell",
+      "target": [
+        0.49353,
+        0.222638
+      ],
+      "actual": [
+        0.49353,
+        0.222638
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.004,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "thranduil_halls",
+      "target": [
+        0.582295,
+        0.158091
+      ],
+      "actual": [
+        0.582295,
+        0.158091
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.006,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    },
+    {
+      "key": "umbar",
+      "target": [
+        0.509644,
+        0.935662
+      ],
+      "actual": [
+        0.509644,
+        0.935662
+      ],
+      "deviation": 0.0,
+      "tolerance": 0.008,
+      "passed": true,
+      "primary_reference": "ArdaCraft"
+    }
+  ]
+}

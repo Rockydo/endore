@@ -1,63 +1,63 @@
-ref,name,x,y,rank,source
-the_angle,The Angle,0.442,0.415,refuge,"† ENDORE plan 8.1; seat of the Rangers inferred from their Angle settlement"
-blue_halls,Halls of Ered Luin,0.275,0.465,hold,"† ENDORE plan 8.1; composite of surviving Blue Mountain dwarf-halls"
-iron_hills,Iron Hills,0.720,0.285,hold,"The Hobbit, Ch. 17"
-woodmen_hall,Woodmen's Hall,0.550,0.445,town,"† ENDORE plan 8.1; political seat invented for the Woodmen"
-wellinghall,Wellinghall,0.500,0.610,refuge,"LOTR, Book III, Ch. 4"
-ghans_glade,Ghân's Glade,0.585,0.735,refuge,"† seat invented because canon gives the Drúedain no capital"
-forochel_camp,Forochel Camp,0.285,0.180,camp,"† seasonal seat invented for the Lossoth polity"
-rhosgobel,Rhosgobel,0.565,0.405,refuge,"LOTR map"
-harnenhold,Harnenhold,0.585,0.865,city,"† seat invented from the River Harnen border"
-qarsad,Qarsad,0.675,0.900,city,"† Haradrim city-king's seat invented for southern political texture"
-mumak_gate,Mûmak Gate,0.570,0.965,city,"† seat invented for the on-map Far Harad fringe"
-khazan,Khazân,0.750,0.875,city,"† Variag seat invented from the canon seed Khand"
-burh_gath,Burh Gath,0.860,0.410,city,"† Rhûnic seat invented from Balchoth and Wainrider registers"
-wainhold,Wainhold,0.875,0.500,city,"† seat invented for a wain-kingdom"
-eastern_march,Eastern March,0.910,0.350,city,"† seat invented for the Sagath confederation"
-dunland_moot,Dunland Moot,0.425,0.630,town,"† political seat invented because canon gives Dunland no capital"
-mount_gram,Mount Gram,0.405,0.315,hold,"LOTR, Book I, Ch. 1"
-tharbad,Tharbad,0.405,0.520,ruin,"LOTR, Appendix A"
-ost_in_edhil,Ost-in-Edhil,0.448,0.495,ruin,"LOTR, Appendix B; The Silmarillion, Of the Rings of Power"
-lond_daer,Lond Daer,0.350,0.650,ruin,"Unfinished Tales, The History of Galadriel and Celeborn"
-methedras,Methedras,0.478,0.595,landmark,"LOTR, Book III, Ch. 9"
-derndingle,Derndingle,0.505,0.625,refuge,"LOTR, Book III, Ch. 4"
-celebrant,Field of Celebrant,0.545,0.585,landmark,"LOTR, Appendix A"
-rauros,Rauros,0.575,0.610,landmark,"LOTR, Book II, Ch. 9"
-amon_hen,Amon Hen,0.565,0.600,ruin,"LOTR, Book II, Ch. 10"
-amon_lhaw,Amon Lhaw,0.585,0.600,ruin,"LOTR, Book II, Ch. 9"
-argonauth,The Argonath,0.570,0.585,ruin,"LOTR, Book II, Ch. 9"
-cair_andros,Cair Andros,0.620,0.680,fortress,"LOTR, Book V, Ch. 4"
-henneth_annun,Henneth Annûn,0.665,0.690,refuge,"LOTR, Book IV, Ch. 5"
-emyn_arnen,Emyn Arnen,0.650,0.755,landmark,"LOTR, Book V, Ch. 8"
-cross_roads,The Cross-roads,0.670,0.720,ruin,"LOTR, Book IV, Ch. 7"
-cirith_ungol,Cirith Ungol,0.700,0.680,fortress,"LOTR, Book IV, Ch. 8"
-shelobs_lair,Shelob's Lair,0.707,0.687,ruin,"LOTR, Book IV, Ch. 9"
-durthang,Durthang,0.720,0.640,fortress,"LOTR map"
-narchost,Narchost,0.677,0.615,fortress,"LOTR, Book V, Ch. 10"
-carchost,Carchost,0.690,0.615,fortress,"LOTR, Book V, Ch. 10"
-udun,Udûn,0.720,0.635,landmark,"LOTR map"
-gorgoroth,Gorgoroth,0.760,0.710,landmark,"LOTR map"
-nurn,Nurn,0.770,0.790,landmark,"LOTR map"
-lithlad,Lithlad,0.835,0.735,landmark,"LOTR map"
-dead_marshes,Dead Marshes,0.650,0.600,ruin,"LOTR, Book IV, Ch. 2"
-dagorlad,Dagorlad,0.675,0.570,ruin,"LOTR, Book IV, Ch. 2"
-tolfalas,Tolfalas,0.560,0.855,landmark,"LOTR map"
-edhellond,Edhellond,0.525,0.790,ruin,"Unfinished Tales, The History of Galadriel and Celeborn"
-pinnath_gelin,Pinnath Gelin,0.465,0.775,landmark,"LOTR, Book V, Ch. 1"
-lamedon,Lamedon,0.520,0.755,landmark,"LOTR, Book V, Ch. 1"
-lossarnach,Lossarnach,0.600,0.755,landmark,"LOTR, Book V, Ch. 1"
-harlond_gondor,Harlond of Gondor,0.620,0.735,port,"LOTR, Book V, Ch. 6"
-rammas_echor,Rammas Echor,0.620,0.710,ruin,"LOTR, Book V, Ch. 4"
-stonewain_valley,Stonewain Valley,0.600,0.725,landmark,"LOTR, Book V, Ch. 5"
-paths_of_dead,Paths of the Dead,0.525,0.735,ruin,"LOTR, Book V, Ch. 2"
-halifirien,Halifirien,0.580,0.675,landmark,"LOTR, Book V, Ch. 1"
-fords_of_isen,Fords of Isen,0.465,0.665,landmark,"LOTR, Book III, Ch. 7"
-firien_wood,Firien Wood,0.585,0.685,landmark,"LOTR, Appendix A"
-gladden_fields,Gladden Fields,0.525,0.465,ruin,"LOTR, Book I, Ch. 2"
-old_forest,The Old Forest,0.375,0.455,landmark,"LOTR, Book I, Ch. 6"
-barrow_downs,Barrow-downs,0.390,0.440,ruin,"LOTR, Book I, Ch. 7"
-sarn_ford,Sarn Ford,0.335,0.485,landmark,"LOTR, Book I, Ch. 2"
-brandywine_bridge,Brandywine Bridge,0.375,0.405,landmark,"LOTR, Book I, Ch. 4"
-mountains_of_mirkwood,Mountains of Mirkwood,0.590,0.420,landmark,"LOTR map"
-withered_heath,Withered Heath,0.700,0.235,ruin,"The Hobbit, Ch. 1; LOTR map"
-grey_mountain_holds,Grey Mountain Ruins,0.610,0.220,ruin,"LOTR, Appendix A"
+ref,name,x,y,rank,source,cartography_reference
+the_angle,The Angle,0.475000,0.270000,refuge,† ENDORE plan 8.1; seat of the Rangers inferred from their Angle settlement,Reconciled: Angle between Mitheithel and Bruinen
+blue_halls,Halls of Ered Luin,0.291610,0.177552,hold,† ENDORE plan 8.1; composite of surviving Blue Mountain dwarf-halls,ArdaCraft: Thorin's Hall proxy for surviving Ered Luin halls
+iron_hills,Iron Hills,0.674452,0.157541,hold,"The Hobbit, Ch. 17",Arda Maps: Iron Mountains / Iron Hills label
+woodmen_hall,Woodmen's Hall,0.562000,0.300000,town,† ENDORE plan 8.1; political seat invented for the Woodmen,Judgment: western Mirkwood Woodmen seat
+wellinghall,Wellinghall,0.486310,0.455926,refuge,"LOTR, Book III, Ch. 4",ArdaCraft: Derndingle
+ghans_glade,Ghân's Glade,0.564274,0.589602,refuge,† seat invented because canon gives the Drúedain no capital,ArdaCraft: Drúadan Forest
+forochel_camp,Forochel Camp,0.340000,0.035000,camp,† seasonal seat invented for the Lossoth polity,Judgment: playable Icebay shore within source Forochel
+rhosgobel,Rhosgobel,0.568634,0.282489,refuge,LOTR map,ArdaCraft: Rhosgobel
+harnenhold,Harnenhold,0.638867,0.793325,city,† seat invented from the River Harnen border,Arda Maps: River Harnen
+qarsad,Qarsad,0.675000,0.870000,city,† Haradrim city-king's seat invented for southern political texture,Judgment: unnamed inland Harad seat
+mumak_gate,Mûmak Gate,0.585000,0.955000,city,† seat invented for the on-map Far Harad fringe,Judgment: on-map Far Harad fringe
+khazan,Khazân,0.755180,0.738426,city,† Variag seat invented from the canon seed Khand,Arda Maps: Khand label
+burh_gath,Burh Gath,0.770000,0.250000,city,† Rhûnic seat invented from Balchoth and Wainrider registers,Judgment: western Rhûn at the source Rhûn label
+wainhold,Wainhold,0.800000,0.350000,city,† seat invented for a wain-kingdom,Judgment: southeastern Rhûn beyond the Sea of Rhûn
+eastern_march,Eastern March,0.820000,0.200000,city,† seat invented for the Sagath confederation,Judgment: eastern edge of represented Rhûn
+dunland_moot,Dunland Moot,0.431851,0.465747,town,† political seat invented because canon gives Dunland no capital,Arda Maps: Dunland label
+mount_gram,Mount Gram,0.448000,0.145000,hold,"LOTR, Book I, Ch. 1",Judgment: Mount Gram within northern Eriador
+tharbad,Tharbad,0.422821,0.340107,ruin,"LOTR, Appendix A",ArdaCraft: Tharbad
+ost_in_edhil,Ost-in-Edhil,0.464116,0.340665,ruin,"LOTR, Appendix B; The Silmarillion, Of the Rings of Power",ArdaCraft: Ost-in-Edhil
+lond_daer,Lond Daer,0.380258,0.426279,ruin,"Unfinished Tales, The History of Galadriel and Celeborn",ArdaCraft: Lond Daer
+methedras,Methedras,0.464945,0.440583,landmark,"LOTR, Book III, Ch. 9",Arda Maps: Methedras
+derndingle,Derndingle,0.486310,0.455926,refuge,"LOTR, Book III, Ch. 4",ArdaCraft: Derndingle
+celebrant,Field of Celebrant,0.539941,0.413770,landmark,"LOTR, Appendix A",ArdaCraft: Parth Celebrant
+rauros,Rauros,0.559345,0.525589,landmark,"LOTR, Book II, Ch. 9",ArdaCraft: Falls of Rauros
+amon_hen,Amon Hen,0.558624,0.526333,ruin,"LOTR, Book II, Ch. 10",ArdaCraft: Amon Hen
+amon_lhaw,Amon Lhaw,0.560159,0.524287,ruin,"LOTR, Book II, Ch. 9",ArdaCraft: Amon Lhaw
+argonauth,The Argonath,0.555962,0.507708,ruin,"LOTR, Book II, Ch. 9",ArdaCraft: Argonath
+cair_andros,Cair Andros,0.589875,0.579766,fortress,"LOTR, Book V, Ch. 4",ArdaCraft: Cair Andros
+henneth_annun,Henneth Annûn,0.596165,0.571233,refuge,"LOTR, Book IV, Ch. 5",ArdaCraft: Henneth Annûn
+emyn_arnen,Emyn Arnen,0.596503,0.619098,landmark,"LOTR, Book V, Ch. 8",Arda Maps: Emyn Arnen label
+cross_roads,The Cross-roads,0.600000,0.605000,ruin,"LOTR, Book IV, Ch. 7",Reconciled: Osgiliath–Minas Morgul road junction
+cirith_ungol,Cirith Ungol,0.611674,0.581510,fortress,"LOTR, Book IV, Ch. 8",ArdaCraft: Cirith Ungol
+shelobs_lair,Shelob's Lair,0.604317,0.593614,ruin,"LOTR, Book IV, Ch. 9",Arda Maps: Shelob's Lair
+durthang,Durthang,0.596538,0.553874,fortress,LOTR map,Arda Maps: Durthang
+narchost,Narchost,0.606500,0.529500,fortress,"LOTR, Book V, Ch. 10",Reconciled: western Tower of the Teeth at Morannon
+carchost,Carchost,0.613000,0.529500,fortress,"LOTR, Book V, Ch. 10",Reconciled: eastern Tower of the Teeth at Morannon
+udun,Udûn,0.612371,0.540703,landmark,LOTR map,ArdaCraft: Udûn
+gorgoroth,Gorgoroth,0.641369,0.600289,landmark,LOTR map,Arda Maps: Plateau of Gorgoroth
+nurn,Nurn,0.638200,0.669338,landmark,LOTR map,Arda Maps: Nurn label
+lithlad,Lithlad,0.666268,0.674357,landmark,LOTR map,Arda Maps: Lithlad label
+dead_marshes,Dead Marshes,0.579978,0.508101,ruin,"LOTR, Book IV, Ch. 2",Arda Maps: Dead Marshes
+dagorlad,Dagorlad,0.591800,0.524737,ruin,"LOTR, Book IV, Ch. 2",Arda Maps: Dagorlad
+tolfalas,Tolfalas,0.518613,0.737963,landmark,LOTR map,Arda Maps: Tolfalas
+edhellond,Edhellond,0.496599,0.648795,ruin,"Unfinished Tales, The History of Galadriel and Celeborn",Arda Maps: Edhellond
+pinnath_gelin,Pinnath Gelin,0.448172,0.626472,landmark,"LOTR, Book V, Ch. 1",Arda Maps: Pinnath Gelin
+lamedon,Lamedon,0.520414,0.600572,landmark,"LOTR, Book V, Ch. 1",Arda Maps: Lamedon
+lossarnach,Lossarnach,0.574017,0.620550,landmark,"LOTR, Book V, Ch. 1",ArdaCraft: Imloth Melui in Lossarnach
+harlond_gondor,Harlond of Gondor,0.583260,0.616086,port,"LOTR, Book V, Ch. 6",ArdaCraft: Harlond of Gondor
+rammas_echor,Rammas Echor,0.587329,0.605204,ruin,"LOTR, Book V, Ch. 4",ArdaCraft: Rammas Echor
+stonewain_valley,Stonewain Valley,0.561961,0.588974,landmark,"LOTR, Book V, Ch. 5",ArdaCraft: Stonewain Road
+paths_of_dead,Paths of the Dead,0.502040,0.542636,ruin,"LOTR, Book V, Ch. 2",Arda Maps: Paths of the Dead
+halifirien,Halifirien,0.542766,0.584533,landmark,"LOTR, Book V, Ch. 1",ArdaCraft: Halifirien
+fords_of_isen,Fords of Isen,0.467651,0.492385,landmark,"LOTR, Book III, Ch. 7",ArdaCraft: Fords of Isen
+firien_wood,Firien Wood,0.535048,0.572415,landmark,"LOTR, Appendix A",Arda Maps: Firienholt
+gladden_fields,Gladden Fields,0.533019,0.277954,ruin,"LOTR, Book I, Ch. 2",Arda Maps: Gladden Fields
+old_forest,The Old Forest,0.387750,0.240760,landmark,"LOTR, Book I, Ch. 6",Arda Maps: Old Forest
+barrow_downs,Barrow-downs,0.391520,0.232470,ruin,"LOTR, Book I, Ch. 7",Arda Maps: Barrow-downs
+sarn_ford,Sarn Ford,0.385815,0.282187,landmark,"LOTR, Book I, Ch. 2",ArdaCraft: Sarn Ford
+brandywine_bridge,Brandywine Bridge,0.380827,0.228088,landmark,"LOTR, Book I, Ch. 4",Arda Maps: Brandywine Bridge
+mountains_of_mirkwood,Mountains of Mirkwood,0.579943,0.196641,landmark,LOTR map,Arda Maps: Mountains of Mirkwood
+withered_heath,Withered Heath,0.584872,0.094944,ruin,"The Hobbit, Ch. 1; LOTR map",Arda Maps: Withered Heath
+grey_mountain_holds,Grey Mountain Ruins,0.519322,0.095153,ruin,"LOTR, Appendix A",Arda Maps: Grey Mountains

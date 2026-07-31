@@ -1198,7 +1198,7 @@ flavor_maj.18 = {
 			save_scope_as = target_location
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					NOT = {
@@ -1666,7 +1666,7 @@ flavor_maj.25 = {
 					can_be_targetted_by_gajah_mada = yes
 				}
 			}
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				any_present_country = {
 					count >= 1
 					can_be_targetted_by_gajah_mada = yes
@@ -1693,7 +1693,7 @@ flavor_maj.25 = {
 			}
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_present_country = {
 				limit = {
 					can_be_targetted_by_gajah_mada = yes
@@ -1857,8 +1857,8 @@ flavor_maj.26 = {
 				exists = capital
 				capital = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 			}
@@ -1890,7 +1890,7 @@ flavor_maj.27 = {
 			this = scope:from
 			capital ?= {
 				OR = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 					region = region:me_anorien_region
 				}
 			}

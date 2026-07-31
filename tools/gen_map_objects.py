@@ -15,6 +15,7 @@ import math
 import struct
 import sys
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
@@ -22,12 +23,18 @@ from PIL import Image, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from m2_controls import (
+    draw_shape,
+    land_mask,
+    load_projection,
+    naturalize_forest_mask,
+)
 from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 6
+GENERATOR_VERSION = 8
 
 
 @dataclass(frozen=True)
@@ -51,7 +58,7 @@ FAMILIES = (
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (1_201_686, 598_983, 596_430),
+        (480_674, 239_593, 238_572),
         (0.72, 0.92),
     ),
     Family(
@@ -64,7 +71,7 @@ FAMILIES = (
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (444_518, 224_087, 237_269),
+        (177_807, 89_635, 94_908),
         (0.68, 0.88),
     ),
     Family(
@@ -77,12 +84,35 @@ FAMILIES = (
             "vegetation_diorama_arctic_tree3_mesh",
             "vegetation_diorama_arctic_tree4_mesh",
         ),
-        (3_456_217, 1_727_474, 1_706_548),
+        (1_382_487, 690_990, 682_619),
         (0.70, 0.86),
     ),
 )
 LODS = ("high", "medium", "low")
-EXPECTED_RECORDS = 10_193_212
+# Forty percent of the installed per-family/LOD population remains ten times
+# denser than the rejected 420k proof and preserves every retail ratio. The
+# exact installed 10.2m set expanded fresh New Game residency to ~23.5 GB and
+# exhausted both normal and debug checkpoint routes on the 32 GB target host.
+# This changes only derived 3D object density; the biome/forest controls and
+# gameplay vegetation assignments remain full resolution.
+EXPECTED_RECORDS = 4_077_285
+FOREST_ZONE_MINIMUM_HIGH_DETAIL = {
+    "fangorn": 50_000,
+    # Source-area-scaled floors: Old Forest is compact, while Ithilien is a
+    # collection of narrow woodland strips rather than one broad polygon.
+    "old_forest": 2_000,
+    "lothlorien": 15_000,
+    "ithilien": 100,
+}
+FOREST_ZONE_HIGH_DETAIL_BOOST = {
+    # Reallocate a small fraction of the fixed high-LOD budget into the
+    # canonical forest theatres. Global downscaling without this stratification
+    # passed total-density checks while starving compact/narrow source zones.
+    "fangorn": 3.0,
+    "old_forest": 3.0,
+    "lothlorien": 2.5,
+    "ithilien": 6.0,
+}
 
 
 def seed(*parts: str) -> int:
@@ -163,6 +193,36 @@ def eligible_cells(
     return cells, suitability
 
 
+@lru_cache(maxsize=1)
+def high_detail_boost_field() -> np.ndarray:
+    """Return named-source-zone weights for the fixed high-LOD budget."""
+
+    projection = load_projection()
+    land = np.asarray(
+        land_mask(projection, (CONTROL_W, CONTROL_H)),
+        dtype=np.uint8,
+    ) > 0
+    result = np.ones((CONTROL_H, CONTROL_W), dtype=np.float32)
+    for zone in projection["biome_zones"]:
+        key = str(zone["key"])
+        boost = FOREST_ZONE_HIGH_DETAIL_BOOST.get(key)
+        if boost is None:
+            continue
+        mask = Image.new("L", (CONTROL_W, CONTROL_H), 0)
+        draw_shape(
+            mask,
+            str(zone["shape"]),
+            zone["coords"],
+            (CONTROL_W, CONTROL_H),
+            255,
+            key=f"biome:{key}",
+        )
+        mask = naturalize_forest_mask(mask, key=key)
+        active = (np.asarray(mask, dtype=np.uint8) > 0) & land
+        result[active] = np.maximum(result[active], boost)
+    return result
+
+
 def hilbert_order(x: np.ndarray, z: np.ndarray) -> np.ndarray:
     """Return a locality-preserving order for 2D generated instances.
 
@@ -214,6 +274,9 @@ def transforms(
         0.35,
         1.0,
     )
+    if lod == "high":
+        boost = high_detail_boost_field()
+        weights *= boost[cells[:, 0], cells[:, 1]]
     choices = rng.choice(len(cells), size=count, replace=True, p=weights / weights.sum())
     selected = cells[choices]
     # Random position inside its authored control cell; source Y is inverted
@@ -253,6 +316,54 @@ def locality_metrics(data: bytes) -> tuple[float, float]:
     groups = points[: complete * chunk].reshape(complete, chunk, 2)
     spans = np.linalg.norm(groups.max(axis=1) - groups.min(axis=1), axis=1)
     return float(np.median(consecutive)), float(np.median(spans))
+
+
+def high_detail_zone_counts(expected: dict[Path, bytes]) -> dict[str, int]:
+    """Count high-detail trees inside named authored woodland envelopes."""
+
+    points: list[np.ndarray] = []
+    for path, data in expected.items():
+        if path.suffix != ".bin" or "_high_" not in path.name:
+            continue
+        records = np.frombuffer(data, dtype="<f4").reshape(-1, 10)
+        points.append(records[:, (0, 2)])
+    if not points:
+        return {}
+    world_points = np.concatenate(points)
+    control_x = np.clip(
+        (world_points[:, 0] / WORLD_W * CONTROL_W).astype(np.int32),
+        0,
+        CONTROL_W - 1,
+    )
+    control_y = np.clip(
+        ((WORLD_H - world_points[:, 1]) / WORLD_H * CONTROL_H).astype(np.int32),
+        0,
+        CONTROL_H - 1,
+    )
+
+    projection = load_projection()
+    land = np.asarray(
+        land_mask(projection, (CONTROL_W, CONTROL_H)),
+        dtype=np.uint8,
+    ) > 0
+    result: dict[str, int] = {}
+    for zone in projection["biome_zones"]:
+        key = str(zone["key"])
+        if key not in FOREST_ZONE_MINIMUM_HIGH_DETAIL:
+            continue
+        mask = Image.new("L", (CONTROL_W, CONTROL_H), 0)
+        draw_shape(
+            mask,
+            str(zone["shape"]),
+            zone["coords"],
+            (CONTROL_W, CONTROL_H),
+            255,
+            key=f"biome:{key}",
+        )
+        mask = naturalize_forest_mask(mask, key=key)
+        active = (np.asarray(mask, dtype=np.uint8) > 0) & land
+        result[key] = int(active[control_y, control_x].sum())
+    return result
 
 
 def definition_text(family: Family, lod: str) -> str:
@@ -364,6 +475,14 @@ def check() -> list[str]:
         failures.append(
             f"vegetation density regressed ({records:,} != {EXPECTED_RECORDS:,})"
         )
+    zone_counts = high_detail_zone_counts(expected)
+    for key, minimum in FOREST_ZONE_MINIMUM_HIGH_DETAIL.items():
+        count = zone_counts.get(key, 0)
+        if count < minimum:
+            failures.append(
+                f"{key} high-detail vegetation regressed "
+                f"({count:,} < {minimum:,})"
+            )
     for path, data in expected.items():
         if path.suffix != ".bin":
             continue

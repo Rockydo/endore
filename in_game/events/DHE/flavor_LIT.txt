@@ -274,7 +274,7 @@ flavor_lit.3 = {
 
 		custom_tooltip = {
 			text = smolensk_owned_by_muscovy_tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						top_owner = scope:target_root_country

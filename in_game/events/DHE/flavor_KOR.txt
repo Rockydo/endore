@@ -648,7 +648,7 @@ flavor_kor.10 = {
 		monthly_chance = 0
 	}
 	trigger = {
-		NOT = { own_entire_province = province_definition:me_anorien_area_28_31_province_01 }
+		NOT = { own_entire_province = province_definition:me_anorien_area_24_28_province_01 }
 		country_exists = c:SSG
 		c:SSG = {
 			owns = location:hwaju
@@ -724,7 +724,7 @@ flavor_kor.11 = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:peasants }
 	}
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		NOT = { country_exists = c:SSG }
 	}
 	option = {

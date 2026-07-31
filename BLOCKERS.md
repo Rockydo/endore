@@ -177,3 +177,90 @@ avoiding the resource-heavy new-game renderer during country selection. The curr
 reached live 3D Map in 122 seconds at about 5.6 GB working memory. Use this two-stage
 route for all remaining M2 captures; do not return to the exhausted direct visual-map
 country-selection path.
+
+## 2026-07-30 — Windows foreground lock during native-density country selection
+
+Status: bounded automation blocker; map transition completes, alternate capture contract
+implemented.
+
+Four exact-tree no-debug attempts completed `MainMenu->Game`, cached-data recalculation,
+and setup serialization, then failed when the screenshot helper tried to force the
+country-selection window into the foreground. Windows retained VS Code as foreground.
+The engine also recreates its DirectX top-level HWND during this transition, invalidating
+one handle between enumeration and rectangle lookup. PID-aware child-window acceptance,
+ALT/`SwitchToThisWindow`, a verified title-bar click, and per-attempt HWND refresh did not
+make foreground ownership reliable. The resulting forced session termination produced
+identical abnormal-shutdown crash packs; no map parser crash preceded it.
+
+Bounded fallback: capture only the fixed, topmost 1920×1080 rectangle whose HWND is tied
+to the tokenized EU5 PID, without requiring keyboard foreground. Physical clicks on that
+topmost rectangle acquire focus naturally; keyboard-only actions retain the stricter
+foreground proof. Evidence screenshots remain subject to visual inspection. Do not
+repeat the exhausted foreground-lock variants.
+
+## 2026-07-30 — q1 cache exceeds the native-density first-load envelope
+
+Status: q1 and q64 exact-count routes exhausted; half-vanilla topology authorized.
+
+After the foreground-independent capture path exposed the actual screen, the alleged
+country-selection success was still `Loading Savegame — 98%` with an unresponsive EU5
+window. A PID-aware post-cache stability wait then observed the process exit before
+becoming interactive. Repeating the launch with the lightweight debug profile and 3D
+terrain disabled failed at the same boundary, so the failure is not specific to the
+visual settings. Both attempts used the exact 28,490-location tree and the
+699,999,471-byte q1 height cache.
+
+Do not repeat q1 first-load attempts on this machine. Preserve the full-precision source
+and test the verified generator-v19 q64 derived cache through the established lightweight-
+checkpoint/cold-visual-resume route.
+
+Resolution update: two q64 lightweight-checkpoint attempts reached healthy menus, accepted
+New Game, completed setup/cache work, and then remained nonresponsive at 98% for the full
+600-second post-cache bound. Both oscillated between roughly 14 and 23.5 GB working set;
+the second drove free physical memory below 0.5 GB. Neither added a mod-unique error line.
+The driver stopped only its tokenized process and released the shared lease after each
+bound. The owner explicitly authorized approximately 50% fewer locations because Middle-
+earth covers a smaller world, while making cartographic precision and lore accuracy
+non-negotiable. Do not repeat exact-28,490 launches; proceed with 14,245 locations, retain
+the full-resolution physical source, and spend topology preferentially on mountain chains.
+
+## 2026-07-31 — Source-frame 14,245-location first-load envelope
+
+Status: two-strike runtime blocker; static scale reduction in progress.
+
+Paired vanilla/mod smoke passed on fingerprint `dbd52c52` with zero mod-unique error
+lines. Two fresh, no-debug New Game routes then exercised that identical game-visible
+tree. The full visual profile completed setup serialization and both cached-data
+recalculations, but stayed Windows-unresponsive for the complete 600-second post-cache
+interactivity bound. Working memory rose to about 23.5 GB before falling while CPU time
+continued to advance. The lightweight checkpoint profile repeated the same measured
+failure, cycling from roughly 12.9 to 23.2 GB and back down. Neither attempt emitted a
+map, terrain, river, locator, setup, or renderer diagnostic; both were stopped through
+their tokenized ENDÓRË lease. Evidence is in
+`docs/screens/20260731_m2_sourceframe/` and
+`docs/screens/20260731_m2_sourceframe_light/`.
+
+Do not repeat the 14,245-cell fresh-game route unchanged. Preserve the equal-scale
+ArdaCraft projection, all source-derived coast/height/river/forest geometry, all 42
+anchors, and all 38 realm seats. Reduce only the runtime political tessellation to the
+last proven 12,104-location aggregate, preferentially retaining 2,700 mountain cells.
+If that materially different tree still misses the same bound twice, profile and reduce
+derived renderer payloads independently of the binding cartographic controls.
+
+Resolution update: the 12,104-cell tree passed full static validation in 315.3 seconds
+and paired smoke on fingerprint `152d7798`, but both a no-debug lightweight checkpoint
+and the historically proven debug-checkpoint profile repeated the same 600-second
+post-cache timeout. The no-debug route peaked at 23.57 GB; the debug route started near
+13.3 GB, remained CPU-active, and never produced a responsive rendered frame. Neither
+added a map diagnostic. Location count is therefore not the dominant fresh-render
+constraint. Keep the 12,104-cell source-frame topology and reduce the 407.7 MB,
+10,193,212-transform vegetation set independently before another launch.
+
+Resolution update: a 4,077,285-transform candidate reduced the object payload from
+407.7 MB to 163.1 MB while retaining every named-forest floor, passed full validation
+and paired smoke on fingerprint `8b088c92`, but its debug checkpoint still missed the
+same bound and reached about 22 GB. Vegetation contributes to residency but is not the
+dominant blocker. The remaining structural delta from the last live 12,104 tree is the
+impassable split: 2,700 mountain locations now versus 520 then. Keep the total count,
+4.08-million transform candidate, and all physical relief controls; test a 1,200-mountain
+/ 10,700-land allocation before sacrificing q64 height precision.

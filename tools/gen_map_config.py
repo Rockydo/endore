@@ -9,9 +9,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from worldgen import MAP_OUT, build_model
+from worldgen import MAP_OUT, WORLD_H, build_model
 
 OUT = MAP_OUT / "default.map"
+EQUATOR_Y = 9000
 
 
 def wrapped_section(name: str, keys: list[str], width: int = 8) -> list[str]:
@@ -39,7 +40,7 @@ def config_text() -> str:
         'location_templates = "location_templates.txt"',
         "",
         "# The physical equator lies south of this north-western Middle-earth extent.",
-        "equator_y = 4600",
+        f"equator_y = {EQUATOR_Y}",
         "wrap_x = no",
         "",
         "sound_toll = {",
@@ -81,6 +82,8 @@ def check() -> list[str]:
         failures.append("default.map differs from deterministic classifications")
     if "wrap_x = no" not in expected:
         failures.append("default.map does not disable horizontal wrapping")
+    if EQUATOR_Y <= WORLD_H:
+        failures.append("equator_y does not place all of Middle-earth in the northern hemisphere")
     return failures
 
 

@@ -12,12 +12,12 @@ mlo_restore_kingdom_lombardy = {
 		any_province = {
 			area = {
 				OR = {
-					this = area:me_anorien_area_28_31
-					this = area:me_anorien_area_28_31
-					this = area:me_anorien_area_28_31
-					this = area:me_anorien_area_28_31
-					this = area:me_anorien_area_28_31
-					this = area:me_anorien_area_28_31
+					this = area:me_anorien_area_24_28
+					this = area:me_anorien_area_24_28
+					this = area:me_anorien_area_24_28
+					this = area:me_anorien_area_24_28
+					this = area:me_anorien_area_24_28
+					this = area:me_anorien_area_24_28
 				}
 			}
 			any_location_in_province = {

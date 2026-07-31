@@ -386,7 +386,7 @@ flavor_chi_dai.6 = {
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				percent >= 0.5
 				owner ?= ROOT
@@ -418,7 +418,7 @@ flavor_chi_dai.6 = {
 		}
 
 		set_variable = has_province_of_jiaozhi
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner = ROOT
@@ -438,7 +438,7 @@ flavor_chi_dai.6 = {
 			factor = 0.2
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner = ROOT
@@ -488,7 +488,7 @@ flavor_chi_dai.7 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		remove_variable = has_province_of_jiaozhi
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_province_definition_in_area = {
 				limit = {
 					any_province_in_province_definition = {
@@ -507,7 +507,7 @@ flavor_chi_dai.7 = {
 			factor = 0.66
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			ordered_province_in_area = {
 				limit = {
 					owner ?= ROOT
@@ -565,7 +565,7 @@ flavor_chi_dai.8 = {
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				percent >= 0.25
 				owner ?= ROOT
@@ -581,7 +581,7 @@ flavor_chi_dai.8 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner = ROOT
@@ -669,7 +669,7 @@ flavor_chi_dai.9 = {
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_province_in_area = {
 				owner ?= ROOT
 			}
@@ -690,7 +690,7 @@ flavor_chi_dai.9 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:nobles_estate }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner ?= ROOT
@@ -757,7 +757,7 @@ flavor_chi_dai.10 = {
 			exists = "war_with_country(scope:china_side)"
 		}
 		is_neighbor_of = scope:target_country
-		exists = scope:target_country.province:me_anorien_area_28_31_province_01
+		exists = scope:target_country.province:me_anorien_area_24_28_province_01
 	}
 
 	immediate = {
@@ -812,7 +812,7 @@ flavor_chi_dai.11 = {
 
 	trigger = {
 		any_work_of_art_in_country = {
-			location.area = area:me_anorien_area_28_31
+			location.area = area:me_anorien_area_24_28
 			count >= 5
 		}
 		exists = ruler_or_regent
@@ -849,7 +849,7 @@ flavor_chi_dai.11 = {
 
 		ordered_work_of_art_in_country = {
 			limit = {
-				location.area = area:me_anorien_area_28_31
+				location.area = area:me_anorien_area_24_28
 			}
 			order_by = art_quality
 			max = 5

@@ -60,7 +60,11 @@ RIVER_INCISION_SAMPLE = 1450.0
 # Keep physical foothills broad while reserving the snow/rock mountain
 # topography template for isolated massif cores. The earlier 0.29 and 0.45
 # thresholds both left continuous pale ridge segments at regional zoom.
-MOUNTAIN_BIOME_THRESHOLD = 0.56
+# Physical relief extends across the whole authored massif, but the installed
+# snow/rock mountain template is visually much louder than its vanilla-Europe
+# counterpart. Reserve it for genuinely high crest islands; regional audit
+# showed that 0.56 still painted broad white slabs through the White Mountains.
+MOUNTAIN_BIOME_THRESHOLD = 0.68
 
 
 @dataclass(frozen=True)
@@ -82,20 +86,30 @@ def load_projection() -> dict:
 def validate_geometry_contract(projection: dict) -> None:
     """Reject a return to primitive proof-map lakes, forests, or coasts."""
 
-    if len(projection["land_polygons"]["mainland"]) < 48:
-        raise ValueError("mainland coastline lacks hand-authored macro detail")
+    if projection.get("schema") != 3:
+        raise ValueError("projection controls must use cartography schema 3")
+    if len(projection["land_polygons"]["mainland"]) < 500:
+        raise ValueError("mainland coastline lacks source-audited multi-scale detail")
     for key, coords in projection["sea_cutouts"].items():
         if len(coords) < 12:
             raise ValueError(f"sea cutout {key} lacks bay/headland detail")
+    if len(projection.get("mountain_zones", [])) < 30:
+        raise ValueError("mountain atlas lacks source-audited range footprints")
     for lake in projection["lakes"]:
-        if lake["shape"] != "organic_polygon" or len(lake["coords"]) < 14:
+        if lake["shape"] not in {"organic_polygon", "source_polygon"}:
             raise ValueError(
                 f"lake {lake['key']} regressed to primitive geometry"
             )
+        if len(lake["coords"]) < 4:
+            raise ValueError(f"lake {lake['key']} lacks shoreline detail")
     for zone in projection["biome_zones"]:
         if zone["biome"] not in {"forest", "dense_forest"}:
             continue
-        if zone["shape"] != "organic_polygon" or len(zone["coords"]) < 8:
+        if zone["shape"] not in {
+            "organic_polygon",
+            "source_polygon",
+            "multi_polygon",
+        }:
             raise ValueError(
                 f"forest {zone['key']} regressed to primitive geometry"
             )
@@ -249,6 +263,11 @@ def draw_shape(
         draw.ellipse(box(coords, size), fill=fill)
     elif shape == "polygon":
         draw.polygon([point(item, size) for item in coords], fill=fill)
+    elif shape == "source_polygon":
+        draw.polygon([point(item, size) for item in coords], fill=fill)
+    elif shape == "multi_polygon":
+        for polygon in coords:
+            draw.polygon([point(item, size) for item in polygon], fill=fill)
     elif shape == "organic_polygon":
         amplitude = (
             0.0110
@@ -300,6 +319,17 @@ def naturalize_forest_mask(
     ).resize(size, Image.Resampling.BICUBIC)
     broad_values = np.asarray(broad, dtype=np.float32) / 255.0
     active = softened + (broad_values - 0.5) * 0.48 > 0.50
+    source = np.asarray(image, dtype=np.uint8) > 0
+    # Source forests include narrow Ithilien woods and compact Chetwood/Old
+    # Forest polygons. A broad feather alone can erase these legitimate small
+    # features. Preserve their interiors and most source-covered cells while
+    # leaving the procedural field responsible for porous outer margins.
+    interior = np.asarray(
+        image.filter(ImageFilter.MinFilter(5)),
+        dtype=np.uint8,
+    ) > 0
+    active |= interior
+    active |= source & (broad_values > 0.18)
 
     return Image.fromarray(active.astype(np.uint8) * 255, "L")
 
@@ -326,13 +356,16 @@ def relief_modulation(size: tuple[int, int]) -> np.ndarray:
 def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
     image = Image.new("L", size, 0)
     polygons = projection["land_polygons"]
-    draw_organic_polygon(
+    # Schema-3 coastline vertices are already a detailed, source-audited
+    # original control. Do not add the former large procedural wobble: it
+    # displaced capes, estuaries, and the Gulf of Lune by tens of kilometres.
+    draw_shape(
         image,
+        "source_polygon",
         polygons["mainland"],
         size,
+        255,
         key="coast:mainland",
-        fill=255,
-        amplitude=0.0065,
     )
     for key, polygon in projection["sea_cutouts"].items():
         draw_organic_polygon(
@@ -341,7 +374,7 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             size,
             key=f"coast:{key}",
             fill=0,
-            amplitude=0.0050,
+            amplitude=0.0070,
         )
     # Offshore islands are independent landmasses and must be restored after
     # bays/gulfs carve the mainland; both Himling and Tolfalas sit inside the
@@ -349,13 +382,13 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
     for key, polygon in polygons.items():
         if key == "mainland":
             continue
-        draw_organic_polygon(
+        draw_shape(
             image,
+            "source_polygon",
             polygon,
             size,
+            255,
             key=f"island:{key}",
-            fill=255,
-            amplitude=0.002,
         )
     for lake in projection["lakes"]:
         draw_shape(
@@ -370,10 +403,65 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
 
 
 def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
-    layers = np.zeros((size[1], size[0]), dtype=np.uint8)
+    layers = np.zeros((size[1], size[0]), dtype=np.float32)
+
+    def smooth_union(current: np.ndarray, addition: np.ndarray) -> np.ndarray:
+        """Composite height envelopes without discrete max-band terraces."""
+
+        current_unit = np.clip(current / 255.0, 0.0, 1.0)
+        addition_unit = np.clip(addition / 255.0, 0.0, 1.0)
+        return (1.0 - (1.0 - current_unit) * (1.0 - addition_unit)) * 255.0
+
+    def blurred_path(
+        path: list[tuple[int, int]],
+        *,
+        width: int,
+        blur: int,
+    ) -> np.ndarray:
+        band = Image.new("L", size, 0)
+        ImageDraw.Draw(band).line(
+            path,
+            fill=255,
+            width=max(2, width),
+            joint="curve",
+        )
+        return np.asarray(
+            band.filter(ImageFilter.GaussianBlur(radius=max(1, blur))),
+            dtype=np.float32,
+        )
+
+    # Arda Maps mountain polygons bind the range footprint and prevent the
+    # old line-only generator from producing uniform tubes. Low and high
+    # zones provide irregular mass and crest islands; authored axes below add
+    # directional folds and named passes.
+    modulation = relief_modulation(size)
+    for zone in projection.get("mountain_zones", []):
+        mask = Image.new("L", size, 0)
+        draw_shape(
+            mask,
+            zone["shape"],
+            zone["coords"],
+            size,
+            255,
+            key=f"mountain:{zone['key']}",
+        )
+        strength = float(zone["strength"])
+        radius = max(2, round(size[1] * (0.0025 if strength > 0.8 else 0.0045)))
+        softened = np.asarray(
+            mask.filter(ImageFilter.GaussianBlur(radius=radius)),
+            dtype=np.float32,
+        ) / 255.0
+        zone_field = (
+            softened
+            * strength
+            * 255.0
+            * (0.44 + 0.56 * modulation)
+        )
+        layers = smooth_union(layers, np.clip(zone_field, 0.0, 255.0))
+
     for ridge in projection["ridges"]:
         width = max(3, round(float(ridge["width"]) * size[1]))
-        value = round(float(ridge["height"]) * 255)
+        value = float(ridge["height"]) * 255.0
         path = natural_path(
             ridge["points"],
             size,
@@ -382,24 +470,36 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             amplitude=float(ridge.get("wander", 0.003)),
             spacing=0.003,
         )
-        for width_scale, value_scale, blur_scale in (
-            (4.8, 0.14, 1.10),
-            (3.1, 0.24, 0.68),
-            (1.9, 0.37, 0.36),
-            (0.85, 0.48, 0.18),
-        ):
-            band = Image.new("L", size, 0)
-            ImageDraw.Draw(band).line(
-                path,
-                fill=round(value * value_scale),
-                width=max(2, round(width * width_scale)),
-                joint="curve",
-            )
-            radius = max(1, round(width * blur_scale))
-            band = band.filter(ImageFilter.GaussianBlur(radius=radius))
-            layers = np.maximum(layers, np.asarray(band, dtype=np.uint8))
+        # Earlier versions stacked four independently blurred paths with
+        # ``maximum``. Their transition shoulders became visible as parallel,
+        # terraced contour bands in EU5's close renderer. Three overlapping
+        # Gaussian envelopes instead form one continuously sloped massif:
+        # broad foothills, folded mountain body, and an irregular central
+        # spine, with no discrete change in construction method at any radius.
+        broad = blurred_path(
+            path,
+            width=round(width * 5.4),
+            blur=round(width * 1.35),
+        )
+        body = blurred_path(
+            path,
+            width=round(width * 2.4),
+            blur=round(width * 0.72),
+        )
+        spine = blurred_path(
+            path,
+            width=round(width * 0.72),
+            blur=round(width * 0.32),
+        )
+        massif = value * (
+            0.24 * (broad / 255.0)
+            + 0.48 * (body / 255.0)
+            + 0.28 * (spine / 255.0)
+        )
         # A mountain chain is a field of overlapping massifs, not a uniform
-        # wall. Scatter deterministic off-axis peaks along the authored spine.
+        # wall. Scatter low-amplitude off-axis shoulders along the authored
+        # spine. Smooth-union composition prevents their blurred ellipses from
+        # cutting visible rings into the main envelope.
         rng = np.random.default_rng(stable_seed(f"peaks:{ridge['key']}"))
         peaks = Image.new("L", size, 0)
         peak_draw = ImageDraw.Draw(peaks)
@@ -423,12 +523,14 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
                     round(center[0] + radius_x),
                     round(center[1] + radius_y),
                 ),
-                fill=round(value * rng.uniform(0.58, 0.90)),
+                fill=round(rng.uniform(150.0, 235.0)),
             )
         peaks = peaks.filter(
-            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.42)))
+            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.68)))
         )
-        layers = np.maximum(layers, np.asarray(peaks, dtype=np.uint8))
+        peak_values = np.asarray(peaks, dtype=np.float32) / 255.0
+        massif += value * peak_values * 0.22
+        layers = smooth_union(layers, np.clip(massif, 0.0, 255.0))
         for branch_index, branch in enumerate(ridge.get("branches", [])):
             branch_path = natural_path(
                 branch,
@@ -438,16 +540,22 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
                 amplitude=float(ridge.get("wander", 0.0035)),
                 spacing=0.003,
             )
-            band = Image.new("L", size, 0)
-            ImageDraw.Draw(band).line(
+            branch_body = blurred_path(
                 branch_path,
-                fill=round(value * 0.62),
-                width=max(2, round(width * 1.25)),
-                joint="curve",
+                width=round(width * 1.75),
+                blur=round(width * 0.72),
             )
-            band = band.filter(ImageFilter.GaussianBlur(radius=max(1, width // 2)))
-            layers = np.maximum(layers, np.asarray(band, dtype=np.uint8))
-    image = Image.fromarray(layers, "L")
+            branch_spine = blurred_path(
+                branch_path,
+                width=round(width * 0.58),
+                blur=round(width * 0.34),
+            )
+            branch_field = value * 0.58 * (
+                0.68 * (branch_body / 255.0)
+                + 0.32 * (branch_spine / 255.0)
+            )
+            layers = smooth_union(layers, branch_field)
+    image = Image.fromarray(np.clip(layers, 0, 255).astype(np.uint8), "L")
     for pass_data in projection["passes"]:
         valley = Image.new("L", size, 0)
         x, y = point(pass_data["center"], size)
@@ -666,6 +774,7 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "control_resolution": list(size),
         "settlements": len(settlements),
         "ridges": len(projection["ridges"]),
+        "mountain_zones": len(projection.get("mountain_zones", [])),
         "passes": len(projection["passes"]),
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),

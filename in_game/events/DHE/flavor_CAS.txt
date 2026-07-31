@@ -910,15 +910,15 @@ flavor_cas.14 = { #Prince of Asturias
 	trigger = {
 		has_ruler = yes
 		has_heir = yes
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	option = {
 		name = flavor_cas.14.a
 		historical_option = yes
 
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner = root
@@ -926,7 +926,7 @@ flavor_cas.14 = { #Prince of Asturias
 				change_control = control_mild_bonus
 			}
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner = root
@@ -1747,7 +1747,7 @@ flavor_cas.29 = { #Magellan Killed #GRAVEYARD
 		character:por_magellan = { is_alive = yes }
 		any_exploration_from_country = {
 			leader = character:por_magellan
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -1785,7 +1785,7 @@ flavor_cas.29 = { #Magellan Killed #GRAVEYARD
 			scope:target_elcano = {
 				move_country = root
 			}
-			change_explorer = { area = area:me_anorien_area_28_31 character = scope:target_elcano }
+			change_explorer = { area = area:me_anorien_area_24_28 character = scope:target_elcano }
 		}
 	}
 
@@ -2222,7 +2222,7 @@ flavor_cas.36 = { #Hernán Cortés
 			}
 		}
 		start_conquistador = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			location = location:tenochtitlan
 			character = scope:target_character
 			price = price:recruit_conquistador
@@ -6409,7 +6409,7 @@ flavor_cas.102 = { #The Nueva Planta Decrees
 		change_societal_value = { type = absolutism_vs_liberalism value = societal_value_large_move_to_left }
 		custom_tooltip = {
 			text = flavor_cas.102.a.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -6417,7 +6417,7 @@ flavor_cas.102 = { #The Nueva Planta Decrees
 					add_location_modifier = { modifier = spa_implemented_nueva_planta years = 20 mode = add }
 				}
 			}
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -6425,7 +6425,7 @@ flavor_cas.102 = { #The Nueva Planta Decrees
 					add_location_modifier = { modifier = spa_implemented_nueva_planta years = 20 mode = add }
 				}
 			}
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -8987,8 +8987,8 @@ flavor_cas.1001 = { #Alhambra Decree
 			text = variable_tt_spa_holy_inquisition
 			has_variable = spa_holy_inquisition
 		}
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -9169,8 +9169,8 @@ flavor_cas.1002 = { #Conversion of the Moriscos
 			text = variable_tt_spa_holy_inquisition
 			has_variable = spa_holy_inquisition
 		}
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -9274,8 +9274,8 @@ flavor_cas.1003 = { #First Rebellion of the Alpujarras
 
 	trigger = {
 		religion = religion:catholic
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -9287,8 +9287,8 @@ flavor_cas.1003 = { #First Rebellion of the Alpujarras
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				every_pop = {
@@ -9350,8 +9350,8 @@ flavor_cas.1004 = { #War of the Alpujarras
 
 	trigger = {
 		religion = religion:catholic
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
 		custom_tooltip = {
 			text = variable_tt_converted_moriscos
 			has_variable = converted_moriscos
@@ -9367,8 +9367,8 @@ flavor_cas.1004 = { #War of the Alpujarras
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				every_pop = {
@@ -9465,8 +9465,8 @@ flavor_cas.1005 = { #Expulsion of the Moriscos
 			text = variable_tt_spa_holy_inquisition
 			has_variable = spa_holy_inquisition
 		}
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -10741,8 +10741,8 @@ flavor_cas.1600 = {
 		NOT = {
 			owns = location:oran
 		}
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -10957,9 +10957,9 @@ flavor_cas.1800 = { #The Comuneros Parliament is unhappy
 			every_owned_non_rural_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				change_control = control_severe_penalty
@@ -11825,7 +11825,7 @@ flavor_cas.2300 = { #The Irmandiño Revolt
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				any_pop = {
 					pop_type = pop_type:peasants
@@ -11833,7 +11833,7 @@ flavor_cas.2300 = { #The Irmandiño Revolt
 			}
 		}
 		estate_satisfaction:peasants_estate < 0.5
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	illustration_tags = {
@@ -11881,7 +11881,7 @@ flavor_cas.2300 = { #The Irmandiño Revolt
 			text = flavor_cas.2300.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -11967,7 +11967,7 @@ flavor_cas.2301 = { #The Irmandiño Revolt Suppressed
 			text = flavor_cas.2301.b.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -12091,7 +12091,7 @@ flavor_cas.2303 = { #The Great Irmandiño Revolt
 
 	trigger = {
 		stability < 10
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				any_pop = {
 					pop_type = pop_type:peasants
@@ -12104,7 +12104,7 @@ flavor_cas.2303 = { #The Great Irmandiño Revolt
 			}
 		}
 		estate_satisfaction:peasants_estate < 0.3
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 		custom_tooltip = {
 			text = variable_tt_cas_had_first_irmandino_revolt
 			has_variable = cas_had_first_irmandino_revolt
@@ -12139,7 +12139,7 @@ flavor_cas.2303 = { #The Great Irmandiño Revolt
 			text = flavor_cas.2303.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -12162,7 +12162,7 @@ flavor_cas.2303 = { #The Great Irmandiño Revolt
 		add_legitimacy = legitimacy_severe_penalty
 		custom_tooltip = flavor_cas.2303.b.tt
 		hidden_effect = {
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					change_control = control_ultimate_penalty
 				}
@@ -12214,7 +12214,7 @@ flavor_cas.2304 = { #The Aftermath of the Revolt
 				rebel_name_key = great_irmandino_revolt
 			}
 		}
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -12223,7 +12223,7 @@ flavor_cas.2304 = { #The Aftermath of the Revolt
 		add_prestige = prestige_mild_bonus
 		custom_tooltip = {
 			text = flavor_cas.2304.a.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = { owner ?= root }
 					change_control = control_severe_bonus
@@ -12244,7 +12244,7 @@ flavor_cas.2304 = { #The Aftermath of the Revolt
 		add_prestige = prestige_mild_bonus
 		custom_tooltip = {
 			text = flavor_cas.2304.b.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = { owner ?= root }
 					change_control = control_severe_penalty
@@ -12284,7 +12284,7 @@ flavor_cas.2400 = { #The War of the Bands
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				count > 2
 				owner ?= root
@@ -12304,7 +12304,7 @@ flavor_cas.2400 = { #The War of the Bands
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		#event_illustration_estate_background_effect = { background = type:army }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					owner ?= root
@@ -12315,7 +12315,7 @@ flavor_cas.2400 = { #The War of the Bands
 				save_scope_as = target_location_1
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					owner ?= root
@@ -12446,7 +12446,7 @@ flavor_cas.2401 = { #The Royal Intervention
 		}
 		custom_tooltip = {
 			text = flavor_cas.2401.a.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -12470,7 +12470,7 @@ flavor_cas.2401 = { #The Royal Intervention
 		add_estate_satisfaction = { type = estate_type:nobles_estate
 			value = estate_satisfaction_severe_bonus
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			custom_tooltip = {
 				text = flavor_cas.2401.b.tt
 				every_location_in_area = {
@@ -12534,7 +12534,7 @@ flavor_cas.2402 = { #The Nobles Rise Against the Crown
 			text = flavor_cas.2402.a.tt
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -12551,7 +12551,7 @@ flavor_cas.2402 = { #The Nobles Rise Against the Crown
 
 	option = {
 		name = flavor_cas.2402.b
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= root
@@ -12567,7 +12567,7 @@ flavor_cas.2402 = { #The Nobles Rise Against the Crown
 		}
 		custom_tooltip = {
 			text = flavor_cas.2402.b.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					change_control = control_ultimate_penalty
 				}
@@ -12632,7 +12632,7 @@ flavor_cas.2403 = { #De Bandos Pacified
 			every_owned_location = {
 				if = {
 					limit = {
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
 					}
 					change_prosperity = prosperity_weak_penalty
 				}
@@ -12651,13 +12651,13 @@ flavor_cas.2403 = { #De Bandos Pacified
 			every_owned_location = {
 				if = {
 					limit = {
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
 					}
 					change_prosperity = prosperity_weak_bonus
 				}
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= root
@@ -12673,7 +12673,7 @@ flavor_cas.2403 = { #De Bandos Pacified
 		}
 		custom_tooltip = {
 			text = flavor_cas.2402.b.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					change_control = control_ultimate_penalty
 				}

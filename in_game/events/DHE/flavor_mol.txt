@@ -19,22 +19,22 @@ flavor_mol.1000 = {
 
 	trigger = {
 		has_ruler = yes
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		country_exists = c:GLH
 		c:GLH = {
 			stability < 0
 			any_subject = {
 				OR = {
-					capital.area = area:me_anorien_area_28_31
-					has_presence_in = area:me_anorien_area_28_31
+					capital.area = area:me_anorien_area_24_28
+					has_presence_in = area:me_anorien_area_24_28
 				}
 				culture = culture:moldovan
 			}
 			NOT = {
 				any_subject = {
 					OR = {
-						capital.area = area:me_anorien_area_28_31
-						has_presence_in = area:me_anorien_area_28_31
+						capital.area = area:me_anorien_area_24_28
+						has_presence_in = area:me_anorien_area_24_28
 					}
 					culture = culture:moldovan
 					is_human = yes
@@ -54,7 +54,7 @@ flavor_mol.1000 = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
 		save_scope_as = root_country
 		c:GLH = { save_scope_as = target_country }
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			ordered_location_in_province_definition = {
 				limit = {
 					has_owner = yes
@@ -66,7 +66,7 @@ flavor_mol.1000 = {
 				save_scope_as = target_location
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			save_scope_as = target_area
 		}
 		create_character = {

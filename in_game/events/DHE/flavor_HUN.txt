@@ -544,7 +544,7 @@ flavor_hun.190 = {
 		at_war = no
 
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 
 	}
@@ -566,7 +566,7 @@ flavor_hun.190 = {
 		}
 		ordered_owned_location = {
 			limit = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 				modifier:fort_level <= 0
 			}
 			order_by = population
@@ -615,7 +615,7 @@ flavor_hun.190 = {
 
 		custom_tooltip = {
 			text = every_location_slovakia_loses_prosperity_tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = { change_prosperity = prosperity_extreme_penalty }
 			}
 		}
@@ -934,8 +934,8 @@ flavor_hun.250 = {
 		NOT = {	is_allied_with = { target = c:TUR } }
 		c:TUR = {
 			OR = {
-				own_entire_area = area:me_anorien_area_28_31
-				own_entire_area = area:me_anorien_area_28_31
+				own_entire_area = area:me_anorien_area_24_28
+				own_entire_area = area:me_anorien_area_24_28
 			}
 		}
 
@@ -953,8 +953,8 @@ flavor_hun.250 = {
 				limit = {
 					dominant_religion.group = religion_group:christian
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				order_by = population
@@ -1223,14 +1223,14 @@ flavor_hun.300 = {
 	}
 
 	trigger = {
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 	}
 
 	option = {
 		name = flavor_hun.300.a
 		every_owned_location = {
 			limit = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 				OR = {
 					raw_material = goods:goods_gold
 					raw_material = goods:iron
@@ -1244,7 +1244,7 @@ flavor_hun.300 = {
 		name = flavor_hun.300.b
 		every_owned_location = {
 			limit = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 				OR = {
 					raw_material = goods:goods_gold
 					raw_material = goods:iron
@@ -2569,7 +2569,7 @@ flavor_hun.470 = { #Privilegium Pro Slavis
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 				local_cultural_unity < 1
@@ -2578,7 +2578,7 @@ flavor_hun.470 = { #Privilegium Pro Slavis
 				}
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 				local_cultural_unity < 1
@@ -2604,7 +2604,7 @@ flavor_hun.470 = { #Privilegium Pro Slavis
 		culture:german_carpathian = { add_cultural_influence = cultural_influence_severe_penalty }
 		custom_tooltip = {
 			text = support_slovak_side
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						OR = {
@@ -2629,7 +2629,7 @@ flavor_hun.470 = { #Privilegium Pro Slavis
 		culture:slovak = { add_cultural_influence = cultural_influence_severe_penalty }
 		custom_tooltip = {
 			text = support_german_carpathian_side
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						OR = {
@@ -2678,7 +2678,7 @@ flavor_hun.480 = { #Austrian Noble Revolt
 
 	trigger = {
 		NOT = { country_exists = c:HAB }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 			}
@@ -2983,7 +2983,7 @@ flavor_hun.530 = { #Slovak National Awakening
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 				local_cultural_unity < 1
@@ -3081,7 +3081,7 @@ flavor_hun.540 = { #Transylvanian Germans Convert to Protestantism
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 				local_cultural_unity < 1
@@ -3100,7 +3100,7 @@ flavor_hun.540 = { #Transylvanian Germans Convert to Protestantism
 		name = flavor_hun.540.a
 		custom_tooltip = {
 			text = hungary_transylvanian_germans_convert
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -3257,7 +3257,7 @@ flavor_hun.570 = { #Adam František Kollár
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 				local_cultural_unity < 1
@@ -3383,7 +3383,7 @@ flavor_hun.590 = { #The Origin of the Hussars
 			is_neighbor_of = c:HUN
 		}
 		has_advance = hun_composite_light_cavalry
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 				local_cultural_unity < 1

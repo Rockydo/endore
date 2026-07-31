@@ -28285,7 +28285,7 @@ passavant = { # Lords of Passavant
 	}
 }
 
-me_anorien_area_28_31_province_01 = { # Château-Gontier
+me_anorien_area_24_28_province_01 = { # Château-Gontier
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "red"
@@ -28297,7 +28297,7 @@ me_anorien_area_28_31_province_01 = { # Château-Gontier
 	}
 }
 
-me_anorien_area_28_31_province_01 = {
+me_anorien_area_24_28_province_01 = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	color2 = "blue"

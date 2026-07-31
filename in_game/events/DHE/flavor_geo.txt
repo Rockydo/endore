@@ -18,7 +18,7 @@ flavor_geo.1 = {
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	illustration_tags = {
@@ -273,7 +273,7 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 			at_war = no
 			is_during_bankruptcy = no
 			any_owned_location = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 				any_pop = {
 					religion.group = religion_group:christian
 				}
@@ -306,7 +306,7 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 					any_pop = {
 						religion.group = religion_group:christian
 					}
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				random_pop = {
 					weight = {
@@ -491,7 +491,7 @@ flavor_geo.7 = { #Campaign Against the [target_country2.GetLongNameWithNoTooltip
 	trigger = {
 		at_war = no
 		is_during_bankruptcy = no
-		c:SRV = { own_entire_province = province_definition:me_anorien_area_28_31_province_01 }
+		c:SRV = { own_entire_province = province_definition:me_anorien_area_24_28_province_01 }
 		NOT = {
 			has_casus_belli_of_type_on = { type = casus_belli:cb_conquer_province target = c:SRV }
 		}
@@ -870,7 +870,7 @@ flavor_geo.13 = { #Order Across [ShowProvinceDefinitionNameWithNoTooltip('kutais
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	illustration_tags = {

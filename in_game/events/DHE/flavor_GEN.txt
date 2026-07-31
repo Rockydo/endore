@@ -3,8 +3,8 @@ namespace = flavor_gen
 
 scripted_trigger is_corsica = {
 	OR = {
-		province_definition = province_definition:me_anorien_area_28_31_province_01
-		province_definition = province_definition:me_anorien_area_28_31_province_01
+		province_definition = province_definition:me_anorien_area_24_28_province_01
+		province_definition = province_definition:me_anorien_area_24_28_province_01
 	}
 }
 
@@ -137,7 +137,7 @@ flavor_gen.2 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					has_owner = yes
@@ -161,7 +161,7 @@ flavor_gen.2 = {
 			}
 		}
 		add_yearly_gold = -0.5
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			custom_tooltip = {
 				text = flavor_gen.2.a.tt
 				every_location_in_area = {
@@ -220,11 +220,11 @@ flavor_gen.3 = {
 		}
 
 		any_market_with_merchants = {
-			location.area = area:me_anorien_area_28_31
+			location.area = area:me_anorien_area_24_28
 		}
 
 		NOT = {
-			capital.area = area:me_anorien_area_28_31
+			capital.area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -258,7 +258,7 @@ flavor_gen.4 = {
 		c:GEN = {
 			random_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				save_scope_as = target_location
 			}
@@ -368,7 +368,7 @@ flavor_gen.7 = {
 		name = flavor_gen.7.a
 		historical_option = yes
 		change_gold_effect = { scale = -5 }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= ROOT
@@ -742,7 +742,7 @@ flavor_gen.14 = {
 			value = 1
 			target = scope:target_country
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= ROOT
@@ -779,7 +779,7 @@ flavor_gen.14 = {
 	option = {
 		name = flavor_gen.14.b
 		add_government_power = government_power_mild_bonus
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= root
@@ -954,7 +954,7 @@ flavor_gen.17 = {
 	option = {
 		name = flavor_gen.17.a
 		historical_option = yes
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner ?= root
@@ -970,7 +970,7 @@ flavor_gen.17 = {
 				}
 			}
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner ?= root
@@ -1039,12 +1039,12 @@ flavor_gen.18 = {
 	trigger = {
 		owns_corsica = yes
 		OR = {
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_location_in_province_definition = {
 					location_gen_18_trigger = yes
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_location_in_province_definition = {
 					location_gen_18_trigger = yes
 				}
@@ -1080,8 +1080,8 @@ flavor_gen.18 = {
 		random_owned_location = {
 			limit = {
 				OR = {
-					province_definition = province_definition:me_anorien_area_28_31_province_01
-					province_definition = province_definition:me_anorien_area_28_31_province_01
+					province_definition = province_definition:me_anorien_area_24_28_province_01
+					province_definition = province_definition:me_anorien_area_24_28_province_01
 				}
 				location_gen_18_trigger = yes
 			}

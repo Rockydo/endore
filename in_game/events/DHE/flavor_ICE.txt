@@ -83,7 +83,7 @@ flavor_ice.10 = {
 
 
 scripted_trigger location_ice_11_trigger = {
-	area = area:me_anorien_area_28_31
+	area = area:me_anorien_area_24_28
 	dominant_culture = culture:icelandic
 	NOT = { has_building = building_type:parish_church }
 	OR = {

@@ -12,19 +12,20 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from worldgen import CONTROL, MAP_OUT, ROOT, WorldModel, build_model, coastal_edges
+from worldgen import (
+    CONTROL,
+    MAP_OUT,
+    ROOT,
+    WorldModel,
+    build_model,
+    coastal_edges,
+    effective_template_biomes,
+    location_biome_counts,
+)
 
 OUT = MAP_OUT / "location_templates.txt"
 M4_CULTURES = ROOT / "docs/world/peoples/cultures.csv"
 M5_CENSUS = ROOT / "docs/world/economy/realm_census.csv"
-
-
-def dominant_biomes(model: WorldModel) -> np.ndarray:
-    counts = np.bincount(
-        (model.labels.ravel() * 11 + model.biomes.ravel()).astype(np.int64),
-        minlength=len(model.locations) * 11,
-    ).reshape((len(model.locations), 11))
-    return np.argmax(counts, axis=1)
 
 
 def mean_elevations(model: WorldModel) -> np.ndarray:
@@ -39,54 +40,27 @@ def mean_elevations(model: WorldModel) -> np.ndarray:
 
 
 def climate(x: float, y: float, biome_id: int) -> str:
-    if biome_id == 5 or y < 0.24:
-        return "arctic"
-    if biome_id == 10:
-        return "arid" if y > 0.88 else "cold_arid"
-    if y > 0.78:
-        return "subtropical"
-    if y > 0.64:
-        return "mediterranean"
-    if x < 0.43:
-        return "oceanic"
+    # EU5 resolves terrain biomes from location-scoped climate, topography,
+    # and vegetation. Varying any of those values across 12,104 generated
+    # locations repaints the continuous terrain cache as visible cell islands.
+    # Seasonal/latitudinal appearance is authored in the Arda-native material
+    # cache instead, so every playable land cell uses one neutral climate.
     return "continental"
 
 
 def land_terrain(biome_id: int, elevation: float) -> tuple[str, str]:
-    if biome_id == 6:
-        return "wetlands", "woods"
-    if biome_id == 8:
-        return (
-            "hills_wasteland" if elevation > 9000 else "flatland_wasteland",
-            "desert",
-        )
-    if biome_id == 10:
-        return (
-            "dune_wasteland" if elevation < 9000 else "hills_wasteland",
-            "desert",
-        )
-    if biome_id == 9:
-        return ("plateau" if elevation > 11000 else "flatland"), "sparse"
-    if biome_id == 5:
-        return ("hills" if elevation > 12000 else "flatland"), "sparse"
-    if biome_id == 3:
-        return ("hills" if elevation > 15000 else "flatland"), "forest"
-    if biome_id == 2:
-        return ("hills" if elevation > 15000 else "flatland"), "woods"
-    if biome_id == 4:
-        return "hills", "sparse"
-    return ("hills" if elevation > 16000 else "flatland"), "grasslands"
+    # Height, terrain-cache materials, rivers, and object transforms are all
+    # continuous authored rasters. Keep the renderer's location template
+    # neutral so forest, desert, marsh, tundra, and foothill transitions follow
+    # those rasters instead of exposing generated cell boundaries.
+    return "flatland", "grasslands"
 
 
 def template_text(model: WorldModel) -> str:
-    dominant = dominant_biomes(model)
+    counts = location_biome_counts(model)
+    dominant = effective_template_biomes(model, counts)
     elevations = mean_elevations(model)
     coast = coastal_edges(model)
-    coastal_water = {
-        water
-        for waters in coast.values()
-        for water in waters
-    }
     people = None
     goods = None
     if M4_CULTURES.is_file():
@@ -113,16 +87,20 @@ def template_text(model: WorldModel) -> str:
         location_climate = climate(nx, ny, biome_id)
         fields: list[str]
         if location.kind == "sea":
-            topography = "coastal_ocean" if location.index in coastal_water else "deep_ocean"
-            fields = [f"topography = {topography}", f"climate = {location_climate}"]
+            # Shore materials and bathymetry are continuous in the authored
+            # cache. A coastal/deep switch per sea cell otherwise exposes the
+            # sparse sea tessellation as large polygons.
+            fields = ["topography = deep_ocean", f"climate = {location_climate}"]
         elif location.kind == "lake":
             fields = ["topography = lakes", f"climate = {location_climate}"]
         elif location.kind == "mountain":
-            topography = (
-                "mountain_wasteland"
-                if biome_id in (8, 10)
-                else "mountains"
-            )
+            # These generated cells are the explicitly impassable range
+            # cores, not ordinary highland locations. Vanilla assigns its
+            # Alpine, Pyrenean, Scandinavian, and similar impassable crests
+            # ``mountain_wasteland`` even under continental forest/sparse
+            # vegetation. Using the passable ``mountains`` topography left a
+            # verified 60k-height crest painted as green rolling country.
+            topography = "mountain_wasteland"
             vegetation = "desert" if biome_id in (8, 10) else "sparse"
             fields = [
                 f"topography = {topography}",

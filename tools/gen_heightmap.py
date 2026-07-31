@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -22,10 +23,36 @@ from worldgen import (
     SEED,
     TERRAIN_OUT,
 )
+from m2_controls import land_mask
 
 HEIGHT_OUT = TERRAIN_OUT / "heightmap.png"
 BIOME_OUT = TERRAIN_OUT / "biomes.png"
 PREVIEW_OUT = DERIVED / "height_preview.png"
+
+
+def steepen_authored_relief(
+    elevation: np.ndarray,
+    lowland_reference: np.ndarray,
+) -> np.ndarray:
+    """Turn broad authored range envelopes into steep, readable massifs.
+
+    The control layer already puts every range and pass in the correct place,
+    but a nearly linear interpolation from plain to crest spreads that height
+    over too much ground. EU5 then reads the result as low rolling ridges even
+    though the peak samples are high. This curve leaves the lowland datum
+    untouched, slightly compresses foothills, and increasingly lifts the
+    upper shoulders and crests. It therefore strengthens physical relief
+    without moving a coast, valley, river, pass, or settlement.
+    """
+
+    relief = np.maximum(elevation - lowland_reference, 0.0)
+    normalized = np.sqrt(np.clip(relief / 40_000.0, 0.0, 1.0))
+    factor = 0.72 + 0.72 * normalized
+    return np.where(
+        relief > 0.0,
+        lowland_reference + relief * factor,
+        elevation,
+    )
 
 
 def resize_array(
@@ -53,29 +80,36 @@ def render_height() -> np.ndarray:
     lowland_reference = 10_500.0 + (
         1.0 - latitude
     ) * (13_000.0 - 10_500.0)
+    elevation = steepen_authored_relief(elevation, lowland_reference)
     mountain_strength = np.clip(
         (elevation - lowland_reference) / 22_000.0,
         0.0,
         1.0,
     )
-    water = np.isin(
-        resize_array(
-            control_biomes,
-            (HEIGHT_W, HEIGHT_H),
-            Image.Resampling.NEAREST,
-        ).astype(np.uint8),
-        (0, 7),
+    # Render the shoreline at the heightmap's native resolution. Nearest
+    # enlargement of the 4096x2048 control made every source pixel a visible
+    # two-pixel stair in the real renderer. The normalized authored geometry
+    # remains the single source of truth.
+    projection = json.loads(
+        (CONTROL / "projection.json").read_text(encoding="utf-8")
     )
+    water = np.asarray(
+        land_mask(projection, (HEIGHT_W, HEIGHT_H)),
+        dtype=np.uint8,
+    ) == 0
 
-    # Deterministic fractal detail keeps the authored ridges dominant while
-    # preventing the terrain surface from reading as a blurred control raster.
+    # Keep lowlands gently varied without injecting high-frequency entropy
+    # across the whole continent. Coarse cache quantization turned the former
+    # ~1,000-unit noise stack into visible topographic contour bands; broad,
+    # low-amplitude undulation preserves natural ground while compressing far
+    # better at full height precision.
     rng = np.random.default_rng(SEED + 41)
     noise = np.zeros((HEIGHT_H, HEIGHT_W), dtype=np.float32)
     for width, height, amplitude in (
-        (128, 64, 520.0),
-        (256, 128, 280.0),
-        (512, 256, 145.0),
-        (1024, 512, 70.0),
+        (96, 48, 110.0),
+        (192, 96, 60.0),
+        (384, 192, 28.0),
+        (768, 384, 12.0),
     ):
         octave = rng.normal(0.0, 1.0, (height, width)).astype(np.float32)
         octave -= float(octave.mean())
@@ -89,12 +123,17 @@ def render_height() -> np.ndarray:
     # Mountain surfaces need substantially more local relief than lowlands.
     # Modulate several tighter octaves by the authored massif envelope so
     # broad ranges retain coherent shoulders but break into slopes and peaks.
+    # Do not use an absolute-value "ridged" transform here: at EU5's close
+    # camera its high-amplitude zero-crossing crests read as repeated contour
+    # terraces. A bounded signed multifractal instead yields asymmetric peaks,
+    # gullies, and folded shoulders without moving any authored range, pass,
+    # coast, river, or settlement.
     rugged = np.zeros((HEIGHT_H, HEIGHT_W), dtype=np.float32)
     for width, height, amplitude in (
-        (256, 128, 1.00),
-        (512, 256, 0.68),
-        (1024, 512, 0.42),
-        (2048, 1024, 0.24),
+        (128, 64, 1.00),
+        (256, 128, 0.62),
+        (512, 256, 0.32),
+        (1024, 512, 0.14),
     ):
         octave = rng.normal(0.0, 1.0, (height, width)).astype(np.float32)
         octave -= float(octave.mean())
@@ -103,7 +142,22 @@ def render_height() -> np.ndarray:
             (HEIGHT_W, HEIGHT_H),
             Image.Resampling.BICUBIC,
         ) * amplitude
-    elevation += rugged * (4_600.0 * np.sqrt(mountain_strength))
+    rugged_scale = max(float(rugged.std()), 1.0e-6)
+    rugged_unit = rugged / rugged_scale
+    folded = np.tanh(rugged_unit * 0.78)
+    positive_peaks = np.power(
+        np.clip((rugged_unit - 0.18) / 2.35, 0.0, 1.0),
+        1.55,
+    )
+    # Centre the peak contribution so it changes local form, not the authored
+    # theatre-scale range altitude.
+    positive_peaks -= float(positive_peaks.mean())
+    elevation += folded * (
+        4_600.0 * np.sqrt(mountain_strength)
+    )
+    elevation += positive_peaks * (
+        4_500.0 * np.power(mountain_strength, 0.82)
+    )
     elevation[water] = 0.0
     return np.clip(elevation, 0, 65535).astype(np.uint16)
 
@@ -190,6 +244,11 @@ def check() -> list[str]:
         failures.append("heightmap water coverage is implausibly small")
     if int(expected_height.max()) < 45000:
         failures.append("heightmap lacks authored high mountain masses")
+    dry_height = expected_height[expected_height > 0]
+    if int(np.percentile(dry_height, 99.0)) < 50000:
+        failures.append("heightmap upper massif shoulders are too low")
+    if np.count_nonzero(dry_height >= 45000) < 250_000:
+        failures.append("heightmap high-relief coverage is too sparse")
     return failures
 
 

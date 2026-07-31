@@ -31,7 +31,7 @@ flavor_teu.1 = {
 		num_of_non_rural >= 5
 
 		any_owned_non_rural_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 		government_type = government_type:theocracy
 
@@ -62,7 +62,7 @@ flavor_teu.1 = {
 
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -146,7 +146,7 @@ flavor_teu.3 = {
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 	}
 	option = {
 		name = flavor_teu.3.a
@@ -200,7 +200,7 @@ flavor_teu.4 = {
 			c:TEU = { is_subject_of = ROOT }
 		}
 		at_war = no
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				OR = {
 					owner ?= ROOT
@@ -1042,7 +1042,7 @@ flavor_teu.16 = {
 	}
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner ?= ROOT
 				OR = {
@@ -1062,7 +1062,7 @@ flavor_teu.16 = {
 			name = exploitation_benefit
 			value = 0
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			ordered_location_in_area = {
 				limit = {
 					owner ?= ROOT

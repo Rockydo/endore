@@ -55,5 +55,17 @@ Useful inspection commands:
 .\.venv\Scripts\python.exe tools\test_eu5_slot.py
 ```
 
+For renderer evidence that must not inherit map-derived state from an old save, use the
+bounded fresh-game route:
+
+```powershell
+.\.venv\Scripts\python.exe tools\gamedriver.py new-observer --visual-map --session <name>
+```
+
+It acquires the same shared session lease, drives Main Menu -> New Game -> country
+selection -> live Observer, and records each transition under `docs/screens/<name>/`.
+If the slot is occupied it returns the protocol's deferred status without launching or
+touching the other project's process.
+
 No vanilla-control cache or background job queue is used. An automatically queued test
 could otherwise run against a worktree that changed after submission.

@@ -11,6 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import gen_adjacencies
+import gen_border_style
 import gen_definitions
 import gen_flatmap
 import gen_heightmap
@@ -36,6 +37,7 @@ STAGES = (
     ("adjacencies", gen_adjacencies),
     ("map_config", gen_map_config),
     ("flatmap", gen_flatmap),
+    ("border_style", gen_border_style),
     ("map_objects", gen_map_objects),
     ("locators", gen_locators),
     ("runtime", m2_runtime),

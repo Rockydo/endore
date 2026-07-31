@@ -3616,9 +3616,9 @@ flavor_pol.50 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				every_pop = {
@@ -3642,9 +3642,9 @@ flavor_pol.50 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
 				}
 			}
 			change_control = control_severe_penalty

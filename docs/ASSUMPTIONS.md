@@ -89,3 +89,45 @@ about Middle-earth.
   from depending on an unstable generated location key.
 - â€  Coast, lake, forest, ridge, valley, and tributary micro-geometry is deterministic
   cartographic interpretation beneath the cited macro ordering, not survey accuracy.
+- â€  Umbarite remains Umbar's broad primary culture, while the surviving Black
+  Númenórean houses are an accepted culture represented disproportionately among its
+  nobles. This is a gameplay interpretation of Umbar's Númenórean lineage and later
+  mixed population, not a canonical demographic statistic.
+
+## Reopened M2 source-audited cartography
+
+- † The old statement that all physical coordinates were broad gameplay
+  extrapolations is superseded. Large- and medium-scale positions now follow
+  the equal-scale ArdaCraft grid and Arda Maps continuous linework under
+  `docs/world/CARTOGRAPHY_REFERENCE_LEDGER.md`.
+- † Where the two community references differ locally, a point marker uses
+  ArdaCraft while coast, river, forest, lake, and mountain linework uses Arda
+  Maps. Tolkien's published evidence remains superior to either
+  interpretation.
+- † Khazad-dûm is placed between the source controls for the Doors of Durin
+  and Dimrill Dale. Fields of Nurn uses the centre of the mapped Nurn area,
+  Dorwinion uses its mapped area-label centre, and Pelennor lies immediately
+  east of Minas Tirith; these are strategic anchor choices rather than claims
+  of surveyed city coordinates.
+- † The 2:1 EU5 canvas does not horizontally stretch the approximately
+  1.1:1 represented source extent. Extra width is honest ocean and eastern
+  margin, preserving relative distances and the recognizable proportions of
+  Middle-earth.
+- † Twelve of the 62 secondary landmark controls remain reconciled or
+  gameplay judgments because binding canon does not provide surveyed points:
+  the Angle, the composite surviving Blue Mountain halls, the Woodmen's seat,
+  the Lossoth camp, three invented Harad seats, three invented Rhûnic seats,
+  the Dunland moot, Mount Gram, and the paired Towers of the Teeth. Their
+  exact coordinates and cartographic rationale are recorded row-by-row in
+  `m3_landmarks.csv`; the Arda Maps/ArdaCraft references constrain the
+  surrounding geography.
+- † The three invented Rhûnic seats use the represented land around the source
+  Rhûn and Sea of Rhûn labels, at x=0.77/0.80/0.82. The previous x=0.875
+  Eastern March point was outside the source mainland and is rejected.
+- † The Mount Gundabad location represents its usable gate/approach as well as
+  the underground stronghold. A narrow pass centred on the canonical marker is
+  therefore necessary for gameplay connectivity and does not imply a broad
+  break in the surrounding mountains.
+- † The Harlond below Minas Tirith is an operational Gondorian port on
+  TA 3018.1.1. It remains owned even while most nearby Ithilien locations are
+  deliberately wilderness; the wilderness mask cannot override its port rank.

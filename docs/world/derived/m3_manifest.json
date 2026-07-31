@@ -1,567 +1,567 @@
 {
   "schema": 1,
   "milestone": "M3",
-  "model_sha256": "950847e19aa19a2c554431e322b098d16f6fe7e8ce4220c3e3d64cda7a69777c",
+  "model_sha256": "37c1dd7e99de815f8f93af55afdc92e671f4edde5c635bbbc539e8cc59a4c969",
   "realm_count": 38,
-  "owned_land": 8299,
-  "wild_land": 3021,
+  "owned_land": 7984,
+  "wild_land": 2716,
   "ruins": 21,
   "minas_morgul_decision": "Minas Morgul is a Mordor fortress-location, not a separate country.",
   "physical_alignment": {
     "engine_water_level_sample": 5466,
-    "owned_control_pixels": 4102501,
+    "owned_control_pixels": 2750431,
     "wet_owned_control_pixels": 0,
-    "maximum_capital_snap_distance": 0.01285,
+    "maximum_capital_snap_distance": 0.016073,
     "capitals": {
       "GON": {
         "location": "minas_tirith",
         "kind": "land",
         "normalized": [
-          0.624908,
-          0.720078
+          0.578266,
+          0.611138
         ],
         "authored": [
-          0.625,
-          0.72
+          0.578168,
+          0.611296
         ],
-        "snap_distance": 0.000102,
-        "raw_height": 12490
+        "snap_distance": 0.000252,
+        "raw_height": 30903
       },
       "DAM": {
         "location": "dol_amroth",
         "kind": "land",
         "normalized": [
-          0.505983,
-          0.766976
+          0.489133,
+          0.672692
         ],
         "authored": [
-          0.506,
-          0.767
+          0.489089,
+          0.672867
         ],
-        "snap_distance": 2.7e-05,
-        "raw_height": 14102
+        "snap_distance": 0.000196,
+        "raw_height": 11318
       },
       "ROH": {
         "location": "edoras",
         "kind": "land",
         "normalized": [
-          0.535043,
-          0.68979
+          0.498657,
+          0.538349
         ],
         "authored": [
-          0.535,
-          0.69
+          0.498657,
+          0.538308
         ],
-        "snap_distance": 0.000212,
-        "raw_height": 13330
+        "snap_distance": 4.1e-05,
+        "raw_height": 17472
       },
       "SHI": {
         "location": "michel_delving",
         "kind": "land",
         "normalized": [
-          0.315018,
-          0.425012
+          0.346276,
+          0.229116
         ],
         "authored": [
-          0.315,
-          0.425
+          0.34624,
+          0.229195
         ],
-        "snap_distance": 1.8e-05,
-        "raw_height": 12201
+        "snap_distance": 0.000107,
+        "raw_height": 12427
       },
       "BRE": {
         "location": "me_bree",
         "kind": "land",
         "normalized": [
-          0.395116,
-          0.400098
+          0.402686,
+          0.232047
         ],
         "authored": [
-          0.395,
-          0.4
+          0.402638,
+          0.231985
         ],
-        "snap_distance": 0.000129,
-        "raw_height": 11999
+        "snap_distance": 0.000115,
+        "raw_height": 12419
       },
       "RAN": {
-        "location": "me_land_0734",
+        "location": "me_land_8758",
         "kind": "land",
         "normalized": [
-          0.439805,
-          0.416219
+          0.474969,
+          0.27064
         ],
         "authored": [
-          0.43,
-          0.42
+          0.475,
+          0.27
         ],
-        "snap_distance": 0.008008,
-        "raw_height": 13410
+        "snap_distance": 0.000643,
+        "raw_height": 13189
       },
       "RIV": {
         "location": "rivendell",
         "kind": "land",
         "normalized": [
-          0.474969,
-          0.404983
+          0.493529,
+          0.222765
         ],
         "authored": [
-          0.475,
-          0.405
+          0.49353,
+          0.222638
         ],
-        "snap_distance": 2.8e-05,
-        "raw_height": 15911
+        "snap_distance": 0.000127,
+        "raw_height": 13696
       },
       "LIN": {
         "location": "mithlond",
         "kind": "land",
         "normalized": [
-          0.26105,
-          0.34001
+          0.309158,
+          0.226185
         ],
         "authored": [
-          0.261,
-          0.34
+          0.309158,
+          0.226185
         ],
-        "snap_distance": 3.7e-05,
-        "raw_height": 12149
+        "snap_distance": 1e-06,
+        "raw_height": 18419
       },
       "BLU": {
-        "location": "me_land_0171",
+        "location": "me_land_8211",
         "kind": "land",
         "normalized": [
-          0.27033,
-          0.462628
+          0.291819,
+          0.176356
         ],
         "authored": [
-          0.275,
-          0.465
+          0.29161,
+          0.177552
         ],
-        "snap_distance": 0.004115,
-        "raw_height": 11843
+        "snap_distance": 0.001267,
+        "raw_height": 14617
       },
       "LOR": {
         "location": "caras_galadhon",
         "kind": "land",
         "normalized": [
-          0.525031,
-          0.525159
+          0.519414,
+          0.356131
         ],
         "authored": [
-          0.525,
-          0.525
+          0.519375,
+          0.356221
         ],
-        "snap_distance": 0.00016,
-        "raw_height": 11687
+        "snap_distance": 0.000119,
+        "raw_height": 12216
       },
       "WOO": {
         "location": "thranduil_halls",
         "kind": "land",
         "normalized": [
-          0.614896,
-          0.330239
+          0.582173,
+          0.15828
         ],
         "authored": [
-          0.615,
-          0.33
+          0.582295,
+          0.158091
         ],
-        "snap_distance": 0.000251,
-        "raw_height": 12134
+        "snap_distance": 0.000308,
+        "raw_height": 12393
       },
       "ERE": {
         "location": "erebor",
         "kind": "land",
         "normalized": [
-          0.660073,
-          0.304836
+          0.599756,
+          0.137763
         ],
         "authored": [
-          0.66,
-          0.305
+          0.599699,
+          0.137606
         ],
-        "snap_distance": 0.000172,
-        "raw_height": 13364
+        "snap_distance": 0.000193,
+        "raw_height": 12655
       },
       "IRO": {
-        "location": "me_land_6717",
+        "location": "me_land_5999",
         "kind": "land",
         "normalized": [
-          0.716484,
-          0.287738
+          0.67326,
+          0.159257
         ],
         "authored": [
-          0.72,
-          0.285
+          0.674452,
+          0.157541
         ],
-        "snap_distance": 0.003729,
-        "raw_height": 16500
+        "snap_distance": 0.002938,
+        "raw_height": 22639
       },
       "DAL": {
         "location": "dale",
         "kind": "land",
         "normalized": [
-          0.660073,
-          0.335125
+          0.601709,
+          0.148999
         ],
         "authored": [
-          0.66,
-          0.335
+          0.601803,
+          0.148883
         ],
-        "snap_distance": 0.000135,
-        "raw_height": 12316
+        "snap_distance": 0.00022,
+        "raw_height": 12627
       },
       "ESG": {
         "location": "esgaroth",
         "kind": "land",
         "normalized": [
-          0.644933,
-          0.369809
+          0.599756,
+          0.162677
         ],
         "authored": [
-          0.645,
-          0.37
+          0.599873,
+          0.162764
         ],
-        "snap_distance": 0.000197,
-        "raw_height": 12075
+        "snap_distance": 0.00025,
+        "raw_height": 12331
       },
       "BEO": {
         "location": "carrock",
         "kind": "land",
         "normalized": [
-          0.535043,
-          0.395213
+          0.531624,
+          0.192477
         ],
         "authored": [
-          0.535,
-          0.395
+          0.531512,
+          0.192434
         ],
-        "snap_distance": 0.000215,
-        "raw_height": 11733
+        "snap_distance": 0.000228,
+        "raw_height": 13628
       },
       "WDM": {
-        "location": "me_land_4053",
+        "location": "me_land_0942",
         "kind": "land",
         "normalized": [
-          0.549451,
-          0.446996
+          0.562393,
+          0.297997
         ],
         "authored": [
-          0.55,
-          0.445
+          0.562,
+          0.3
         ],
-        "snap_distance": 0.002034,
-        "raw_height": 11882
+        "snap_distance": 0.002152,
+        "raw_height": 19870
       },
       "DOR": {
         "location": "dorwinion",
         "kind": "land",
         "normalized": [
-          0.727961,
-          0.469956
+          0.684737,
+          0.351246
         ],
         "authored": [
-          0.728,
-          0.47
+          0.684658,
+          0.351235
         ],
-        "snap_distance": 5.2e-05,
-        "raw_height": 11825
+        "snap_distance": 0.000159,
+        "raw_height": 12121
       },
       "FAN": {
-        "location": "me_land_0520",
+        "location": "me_land_7818",
         "kind": "land",
         "normalized": [
-          0.507937,
-          0.611627
+          0.487179,
+          0.45872
         ],
         "authored": [
-          0.5,
-          0.61
+          0.48631,
+          0.455926
         ],
-        "snap_distance": 0.005941,
-        "raw_height": 15697
+        "snap_distance": 0.003291,
+        "raw_height": 14627
       },
       "DRU": {
-        "location": "me_land_9254",
+        "location": "me_land_3134",
         "kind": "land",
         "normalized": [
-          0.592918,
-          0.730337
+          0.564103,
+          0.589643
         ],
         "authored": [
-          0.585,
-          0.735
+          0.564274,
+          0.589602
         ],
-        "snap_distance": 0.007365,
-        "raw_height": 30346
+        "snap_distance": 0.000345,
+        "raw_height": 34507
       },
       "LOS": {
-        "location": "me_land_10003",
+        "location": "me_land_9145",
         "kind": "land",
         "normalized": [
-          0.296947,
-          0.189546
+          0.344811,
+          0.047875
         ],
         "authored": [
-          0.285,
-          0.18
+          0.34,
+          0.035
         ],
-        "snap_distance": 0.01285,
-        "raw_height": 13869
+        "snap_distance": 0.016073,
+        "raw_height": 12880
       },
       "RHO": {
-        "location": "me_land_7262",
+        "location": "me_land_4035",
         "kind": "land",
         "normalized": [
-          0.560684,
-          0.408891
+          0.570208,
+          0.285296
         ],
         "authored": [
-          0.565,
-          0.405
+          0.568634,
+          0.282489
         ],
-        "snap_distance": 0.00498,
-        "raw_height": 11977
+        "snap_distance": 0.004217,
+        "raw_height": 14595
       },
       "MOR": {
         "location": "barad_dur",
         "kind": "land",
         "normalized": [
-          0.755067,
-          0.684905
+          0.643956,
+          0.573522
         ],
         "authored": [
-          0.755,
-          0.685
+          0.644052,
+          0.573511
         ],
-        "snap_distance": 0.000107,
-        "raw_height": 11903
+        "snap_distance": 0.000192,
+        "raw_height": 15764
       },
       "DOL": {
         "location": "dol_guldur",
         "kind": "land",
         "normalized": [
-          0.604884,
-          0.505129
+          0.556044,
+          0.351734
         ],
         "authored": [
-          0.605,
-          0.505
+          0.556113,
+          0.35178
         ],
-        "snap_distance": 0.000154,
-        "raw_height": 11737
+        "snap_distance": 0.000145,
+        "raw_height": 12120
       },
       "ISE": {
         "location": "isengard",
         "kind": "land",
         "normalized": [
-          0.474969,
-          0.635076
+          0.466667,
+          0.46214
         ],
         "authored": [
-          0.475,
-          0.635
+          0.466546,
+          0.462111
         ],
-        "snap_distance": 7.9e-05,
-        "raw_height": 11542
+        "snap_distance": 0.000243,
+        "raw_height": 19564
       },
       "MOA": {
         "location": "moria",
         "kind": "land",
         "normalized": [
-          0.474969,
-          0.5149
+          0.49011,
+          0.335613
         ],
         "authored": [
-          0.475,
-          0.515
+          0.49,
+          0.3355
         ],
-        "snap_distance": 0.000103,
-        "raw_height": 17820
+        "snap_distance": 0.000247,
+        "raw_height": 36466
       },
       "GUN": {
         "location": "gundabad",
         "kind": "land",
         "normalized": [
-          0.49011,
-          0.225208
+          0.50232,
+          0.102589
         ],
         "authored": [
-          0.49,
-          0.225
+          0.502345,
+          0.102487
         ],
-        "snap_distance": 0.000222,
-        "raw_height": 14084
+        "snap_distance": 0.000114,
+        "raw_height": 21694
       },
       "GOB": {
         "location": "goblin_town",
         "kind": "land",
         "normalized": [
-          0.474969,
-          0.344895
+          0.50989,
+          0.1915
         ],
         "authored": [
-          0.475,
-          0.345
+          0.509865,
+          0.191597
         ],
-        "snap_distance": 0.000107,
-        "raw_height": 19727
+        "snap_distance": 0.000109,
+        "raw_height": 30774
       },
       "UMB": {
         "location": "umbar",
         "kind": "land",
         "normalized": [
-          0.440049,
-          0.899853
+          0.509646,
+          0.935515
         ],
         "authored": [
-          0.44,
-          0.9
+          0.509644,
+          0.935662
         ],
-        "snap_distance": 0.000151,
-        "raw_height": 10750
+        "snap_distance": 0.000147,
+        "raw_height": 10661
       },
       "HNE": {
-        "location": "me_land_2739",
+        "location": "me_land_5393",
         "kind": "land",
         "normalized": [
-          0.594383,
-          0.868588
+          0.637118,
+          0.800195
         ],
         "authored": [
-          0.585,
-          0.865
+          0.638867,
+          0.793325
         ],
-        "snap_distance": 0.00765,
-        "raw_height": 10589
+        "snap_distance": 0.007709,
+        "raw_height": 10999
       },
       "HRA": {
-        "location": "me_land_9985",
+        "location": "me_land_4194",
         "kind": "land",
         "normalized": [
-          0.672039,
-          0.900342
+          0.673993,
+          0.871031
         ],
         "authored": [
           0.675,
-          0.9
+          0.87
         ],
-        "snap_distance": 0.002159,
-        "raw_height": 10749
+        "snap_distance": 0.002263,
+        "raw_height": 10822
       },
       "HFA": {
-        "location": "me_land_3949",
+        "location": "me_land_5133",
         "kind": "land",
         "normalized": [
-          0.570208,
-          0.968246
+          0.582662,
+          0.955545
         ],
         "authored": [
-          0.57,
-          0.965
+          0.585,
+          0.955
         ],
-        "snap_distance": 0.00325,
-        "raw_height": 10579
+        "snap_distance": 0.004708,
+        "raw_height": 10611
       },
       "KHA": {
-        "location": "me_land_3062",
+        "location": "me_land_8155",
         "kind": "land",
         "normalized": [
-          0.750183,
-          0.87445
+          0.757021,
+          0.740107
         ],
         "authored": [
-          0.75,
-          0.875
+          0.75518,
+          0.738426
         ],
-        "snap_distance": 0.000565,
-        "raw_height": 11539
+        "snap_distance": 0.004047,
+        "raw_height": 11149
       },
       "RHU": {
-        "location": "me_land_5805",
+        "location": "me_land_3858",
         "kind": "land",
         "normalized": [
-          0.866178,
-          0.411334
+          0.769719,
+          0.245725
         ],
         "authored": [
-          0.86,
-          0.41
+          0.77,
+          0.25
         ],
-        "snap_distance": 0.004644,
-        "raw_height": 11971
+        "snap_distance": 0.004311,
+        "raw_height": 12385
       },
       "RH2": {
-        "location": "me_land_2704",
+        "location": "me_land_0897",
         "kind": "land",
         "normalized": [
-          0.876923,
-          0.502687
+          0.79707,
+          0.352711
         ],
         "authored": [
-          0.875,
-          0.5
-        ],
-        "snap_distance": 0.003023,
-        "raw_height": 11743
-      },
-      "RH3": {
-        "location": "me_land_1749",
-        "kind": "land",
-        "normalized": [
-          0.909402,
-          0.353688
-        ],
-        "authored": [
-          0.91,
+          0.8,
           0.35
         ],
-        "snap_distance": 0.003713,
-        "raw_height": 12115
+        "snap_distance": 0.006458,
+        "raw_height": 12118
+      },
+      "RH3": {
+        "location": "me_land_0516",
+        "kind": "land",
+        "normalized": [
+          0.821245,
+          0.197362
+        ],
+        "authored": [
+          0.82,
+          0.2
+        ],
+        "snap_distance": 0.003628,
+        "raw_height": 12506
       },
       "DUN": {
-        "location": "me_land_5591",
+        "location": "me_land_8552",
         "kind": "land",
         "normalized": [
-          0.427839,
-          0.631656
+          0.432479,
+          0.460674
         ],
         "authored": [
-          0.425,
-          0.63
+          0.431851,
+          0.465747
         ],
-        "snap_distance": 0.002631,
-        "raw_height": 12152
+        "snap_distance": 0.005226,
+        "raw_height": 12000
       },
       "ANG": {
-        "location": "me_land_0750",
+        "location": "me_land_5481",
         "kind": "land",
         "normalized": [
-          0.40757,
-          0.315584
+          0.449817,
+          0.148021
         ],
         "authored": [
-          0.405,
-          0.315
+          0.448,
+          0.145
         ],
-        "snap_distance": 0.00194,
-        "raw_height": 12211
+        "snap_distance": 0.004726,
+        "raw_height": 12629
       }
     }
   },
   "realm_location_counts": {
-    "GON": 496,
+    "GON": 761,
     "DAM": 70,
-    "ROH": 471,
+    "ROH": 304,
     "SHI": 70,
     "BRE": 24,
     "RAN": 45,
     "RIV": 16,
-    "LIN": 461,
+    "LIN": 323,
     "BLU": 40,
     "LOR": 55,
-    "WOO": 346,
+    "WOO": 353,
     "ERE": 55,
-    "IRO": 45,
-    "DAL": 52,
+    "IRO": 35,
+    "DAL": 46,
     "ESG": 25,
     "BEO": 65,
     "WDM": 95,
@@ -570,22 +570,22 @@
     "DRU": 22,
     "LOS": 85,
     "RHO": 1,
-    "MOR": 1301,
+    "MOR": 1005,
     "DOL": 65,
     "ISE": 38,
     "MOA": 26,
     "GUN": 75,
     "GOB": 32,
-    "UMB": 393,
-    "HNE": 191,
+    "UMB": 396,
+    "HNE": 375,
     "HRA": 90,
-    "HFA": 155,
-    "KHA": 814,
-    "RHU": 382,
-    "RH2": 530,
-    "RH3": 1205,
-    "DUN": 273,
+    "HFA": 215,
+    "KHA": 766,
+    "RHU": 822,
+    "RH2": 676,
+    "RH3": 195,
+    "DUN": 528,
     "ANG": 55
   },
-  "source_sha256": "517c47d7f5bf16868765302f748e19f7f85862b61d687ff384623a6fa1b38a25"
+  "source_sha256": "5fdab373ca5e1cb8816578527d6567abfde42cbe3a409ab4e7400937f6fd08c0"
 }

@@ -23,7 +23,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from m3_realms import WILD, build_state
 from m4_peoples import assignments, cultures, faiths
-from worldgen import ROOT, WorldModel, build_model, coastal_edges, game_map
+from worldgen import (
+    ROOT,
+    WorldModel,
+    build_model,
+    coastal_edges,
+    effective_template_biomes,
+    game_map,
+)
 
 DATA = ROOT / "docs/world/economy"
 PROFILES_CSV = DATA / "population_profiles.csv"
@@ -84,7 +91,11 @@ POP_TYPES = (
 # Eight entries are accepted in live M4/M5 setup evidence. Compatibility-only
 # culture ABI pops are placed only in robust, custom-dominant locations below.
 MAX_SETUP_POP_ENTRIES = 8
-MIN_ABI_HOST_UNITS = 1_000
+# The reduced 12,104-location topology still distributes the canon census over
+# enough inhabited cells that compatibility hosts need a bounded floor. A
+# 750-person floor keeps every engine-required installed-culture shim
+# subordinate to a robust custom majority without inflating demographics.
+MIN_ABI_HOST_UNITS = 750
 RAW_GOODS = frozenset(
     {
         "wheat",
@@ -421,18 +432,9 @@ def _cap_type_split(
     return result
 
 
-def _dominant_biomes(model: WorldModel) -> np.ndarray:
-    """Return the biome that owns most control cells in each location."""
-    counts = np.bincount(
-        (model.labels.ravel() * 11 + model.biomes.ravel()).astype(np.int64),
-        minlength=len(model.locations) * 11,
-    ).reshape((len(model.locations), 11))
-    return np.argmax(counts, axis=1)
-
-
 def _base_raw_materials(model: WorldModel) -> dict[str, str]:
     coast = set(coastal_edges(model))
-    dominant_biomes = _dominant_biomes(model)
+    dominant_biomes = effective_template_biomes(model)
     result: dict[str, str] = {}
     for location in model.locations:
         if location.kind != "land":
@@ -444,8 +446,15 @@ def _base_raw_materials(model: WorldModel) -> dict[str, str]:
         biome_id = int(dominant_biomes[location.index])
         biome_choices = {
             1: ("wheat", "livestock", "clay", "wool"),
-            2: ("lumber", "wild_game", "wool", "medicaments"),
-            3: ("lumber", "wild_game", "medicaments"),
+            # Forests are continuous material/object fields rather than
+            # location-template terrain.  The playable templates deliberately
+            # remain grasslands so their borders cannot appear as Voronoi
+            # patches in the close renderer; lumber's installed
+            # location_potential therefore rejects these otherwise wooded
+            # cells.  Keep only goods whose potential accepts the neutral
+            # template until a seamless forest terrain contract is proven.
+            2: ("wild_game", "wool", "medicaments"),
+            3: ("wild_game", "medicaments", "wool"),
             4: ("stone", "iron", "copper", "gems"),
             5: ("fur", "wild_game", "fish"),
             6: ("medicaments", "fish", "clay"),
@@ -647,13 +656,27 @@ def build_m5_state() -> M5State:
             key: _location_weight(political.model, key, political.rank[key])
             for key in realm_keys
         }
-        minima = {key: 5 for key in realm_keys}
+        realm_majority_units = target.total_units - target.minority_units
+        # A fixed five-unit floor can exceed a small realm's canonical target
+        # even on the reduced 12,104-location world. Keep every non-ruin
+        # location inhabited, scale the floor to local cell density, and
+        # reserve at least half the census for geographic/rank weighting.
+        minimum_per_location = min(
+            5,
+            max(
+                1,
+                realm_majority_units // max(1, len(realm_keys) * 2),
+            ),
+        )
+        minima = {
+            key: minimum_per_location
+            for key in realm_keys
+        }
         if tag == WILD:
             preferred = max(realm_keys, key=lambda key: weights[key])
         else:
             realm = political.by_tag[tag]
             preferred = political.ref_to_location[realm.capital_ref]
-        realm_majority_units = target.total_units - target.minority_units
         allocation = _allocate_units(
             realm_majority_units,
             realm_keys,
@@ -1283,16 +1306,14 @@ def check() -> list[str]:
     invalid_goods = set(state.raw_materials.values()) - RAW_GOODS
     if invalid_goods:
         failures.append("invalid M5 raw goods: " + ", ".join(sorted(invalid_goods)))
-    dominant_biomes = _dominant_biomes(political.model)
     invalid_lumber = [
         location.key
         for location in political.model.locations
         if state.raw_materials.get(location.key) == "lumber"
-        and int(dominant_biomes[location.index]) not in (2, 3)
     ]
     if invalid_lumber:
         failures.append(
-            "lumber assigned outside dominant woods/forest vegetation: "
+            "lumber assigned while all playable location templates are neutral: "
             + ", ".join(invalid_lumber[:20])
         )
 
@@ -1301,6 +1322,16 @@ def check() -> list[str]:
         failures.append("duplicate market location")
     if not market_keys <= set(state.settlements):
         failures.append("one or more market hubs lacks an urban settlement")
+    wild_settlements = sorted(
+        key
+        for key in state.settlements
+        if political.ownership.get(key, WILD) == WILD
+    )
+    if wild_settlements:
+        failures.append(
+            "urban setup assigned to deliberately wild land: "
+            + ", ".join(wild_settlements[:20])
+        )
 
     graph = _land_graph()
     by_key = political.model.by_key

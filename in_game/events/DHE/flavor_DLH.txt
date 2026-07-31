@@ -86,11 +86,11 @@ flavor_dlh.2 = {
 				OR = {
 					this = location:sindkedh.province
 					this = location:bijapur.province
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
 				}
-				NOT = { area = area:me_anorien_area_28_31 }
+				NOT = { area = area:me_anorien_area_24_28 }
 			}
 			count > 4
 		}
@@ -117,9 +117,9 @@ flavor_dlh.2 = {
 						province = location:sindkedh.province
 						province = location:bijapur.province
 						province = location:gulbarga.province
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				order_by = population
@@ -134,9 +134,9 @@ flavor_dlh.2 = {
 					province = location:sindkedh.province
 					province = location:bijapur.province
 					province = scope:target_location.province
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
 				}
 			}
 			add_to_temporary_list = give_me_to_the_bahmanis
@@ -306,7 +306,7 @@ flavor_dlh.3 = {
 		is_situation_active = situation:fall_of_delhi
 		any_province = {
 			OR = {
-				area = { this = area:me_anorien_area_28_31 }
+				area = { this = area:me_anorien_area_24_28 }
 				this = location:sabalgarh.province
 				this = location:bhojpur.province
 				this = location:deogarh.province
@@ -336,7 +336,7 @@ flavor_dlh.3 = {
 			ordered_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
 						province = location:sabalgarh.province
 						province = location:bhojpur.province
 						province = location:deogarh.province
@@ -391,7 +391,7 @@ flavor_dlh.3 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 					province = location:sabalgarh.province
 					province = location:bhojpur.province
 					province = location:deogarh.province
@@ -513,7 +513,7 @@ flavor_dlh.4 = {
 
 	trigger = {
 		any_province = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			count > 2
 		}
 		owns = location:khambat
@@ -534,7 +534,7 @@ flavor_dlh.4 = {
 		}
 		else = {
 			ordered_owned_location = {
-				limit = { area = area:me_anorien_area_28_31 }
+				limit = { area = area:me_anorien_area_24_28 }
 				order_by = population
 				check_range_bounds = no
 				max = 1
@@ -581,7 +581,7 @@ flavor_dlh.4 = {
 		}
 		every_owned_location = {
 			limit = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 			}
 			change_location_owner = scope:target_gujarat_revolter_scope
 			add_core = scope:target_gujarat_revolter_scope
@@ -696,9 +696,9 @@ flavor_dlh.5 = {
 	trigger = {
 		any_province = {
 			OR = {
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
 				this = location:asni.province
 				this = location:kalpi.province
 			}
@@ -727,9 +727,9 @@ flavor_dlh.5 = {
 			ordered_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 						province = location:asni.province
 						province = location:kalpi.province
 					}
@@ -781,9 +781,9 @@ flavor_dlh.5 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
 					province = location:asni.province
 					province = location:kalpi.province
 				}
@@ -906,27 +906,27 @@ flavor_dlh.6 = {
 
 	trigger = {
 		any_subject = {
-			capital.area = area:me_anorien_area_28_31
+			capital.area = area:me_anorien_area_24_28
 			liberty_desire >= 50
 		}
 		any_province = {
 			OR = {
 				this = location:chai.province
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 			}
 		}
-		any_owned_location = {							#We have a land connection to me_anorien_area_28_31 and chai.province to avoid bordergore
+		any_owned_location = {							#We have a land connection to me_anorien_area_24_28 and chai.province to avoid bordergore
 			province = {
 				NOR = {
 					this = location:chai.province
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 			}
 			any_neighbor_location = {
 				owner ?= c:DLH
 				OR = {
 					this.province = location:chai.province
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 			}
 		}
@@ -937,7 +937,7 @@ flavor_dlh.6 = {
 		ordered_subject = {
 			limit = {
 				liberty_desire >= 50
-				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_24_28
 			}
 			order_by = total_population
 			save_scope_as = target_subject
@@ -966,7 +966,7 @@ flavor_dlh.6 = {
 				limit = {
 					OR = {
 						province = location:chai.province
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
 					}
 				}
 				change_location_owner = scope:target_subject
@@ -1003,7 +1003,7 @@ flavor_dlh.6 = {
 		change_gold_effect = { scale = -12 }
 		every_subject = {
 			limit = {
-				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_24_28
 				liberty_desire >= 50
 			}
 			set_variable = { name = delhi_gave_money value = yes }
@@ -1039,7 +1039,7 @@ flavor_dlh.6 = {
 		}
 		every_subject = {
 			limit = {
-				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_24_28
 			}
 			add_liberty_desire = liberty_desire_extreme_plus
 			add_opinion = {
@@ -1063,7 +1063,7 @@ flavor_dlh.6 = {
 	after = {
 		every_subject = {
 			limit = {
-				capital.area = area:me_anorien_area_28_31
+				capital.area = area:me_anorien_area_24_28
 				liberty_desire >= 50
 			}
 			trigger_event_non_silently = flavor_dlh.7
@@ -1128,7 +1128,7 @@ flavor_dlh.7 = {
 			overlord = {
 				every_subject = {
 					limit = {
-						capital.area = area:me_anorien_area_28_31
+						capital.area = area:me_anorien_area_24_28
 					}
 					add_liberty_desire = liberty_desire_extreme_plus
 					add_opinion = {
@@ -2275,7 +2275,7 @@ flavor_dlh.22 = {
 	}
 }
 
-#Lahdjat Sikandar Shahi wa-me_anorien_area_28_31_province_01'if-i la-mutanahi
+#Lahdjat Sikandar Shahi wa-me_anorien_area_24_28_province_01'if-i la-mutanahi
 flavor_dlh.23 = {
 	type = country_event
 	title = flavor_dlh.23.title
@@ -2981,7 +2981,7 @@ flavor_dlh.34 = {
 	fire_only_once = yes
 
 	trigger = {
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				percent = 1
 				OR = {
@@ -3008,7 +3008,7 @@ flavor_dlh.34 = {
 			save_scope_as = target_character
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			ordered_location_in_area = {
 				order_by = population
 				limit = {
@@ -4802,7 +4802,7 @@ flavor_dlh.59 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			save_scope_as = target_area
 		}
 		ruler = {
@@ -4892,7 +4892,7 @@ flavor_dlh.60 = {
 			has_variable = dlh_qarachil_expedition_second_timer
 		}
 		is_situation_active = situation:fall_of_delhi
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				count >= 18
 				owner ?= ROOT
@@ -5311,8 +5311,8 @@ flavor_dlh.66 = {
 	trigger = {
 		any_province = {
 			OR = {
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
 			}
 		}
 	}
@@ -5336,8 +5336,8 @@ flavor_dlh.66 = {
 		random_province = {
 			limit = {
 				OR = {
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
 				}
 			}
 			weight = {

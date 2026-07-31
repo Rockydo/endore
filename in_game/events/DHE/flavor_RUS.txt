@@ -228,9 +228,9 @@ flavor_rus.3 = {
 			controller = root
 		}
 
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
+		own_entire_area = area:me_anorien_area_24_28
 
 		any_known_country = {
 			capital.region = region:me_anorien_region
@@ -333,9 +333,9 @@ flavor_rus.4 = {
 			owner = root
 			controller = root
 		}
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 
-		NOT = { own_entire_area = area:me_anorien_area_28_31 }
+		NOT = { own_entire_area = area:me_anorien_area_24_28 }
 		country_exists = c:PLC
 		c:PLC = {
 			is_neighbor_of = root
@@ -356,7 +356,7 @@ flavor_rus.4 = {
 
 		root = { save_scope_as = target_root_country }
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -376,7 +376,7 @@ flavor_rus.4 = {
 		name = flavor_rus.4.a
 		historical_option = yes
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -434,7 +434,7 @@ flavor_rus.4 = {
 			}
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -485,15 +485,15 @@ flavor_rus.5 = {
 			controller = root
 		}
 
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 
-		NOT = { own_entire_area = area:me_anorien_area_28_31 }
+		NOT = { own_entire_area = area:me_anorien_area_24_28 }
 	}
 
 	illustration_tags = {
@@ -511,7 +511,7 @@ flavor_rus.5 = {
 	option = {
 		name = flavor_rus.5.a
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					owner != root
@@ -1171,7 +1171,7 @@ flavor_rus.14 = {
 			}
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = {
 					is_member_of_international_organization_of_type = {
@@ -1718,7 +1718,7 @@ flavor_rus.19 = {
 	trigger = {
 
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			dominant_culture = {
 				this != root.culture
 				has_culture_group = culture_group:russian_group
@@ -2782,7 +2782,7 @@ flavor_rus.31 = {
 
 		c:SWE = {
 			government_type = government_type:monarchy
-			own_entire_area = area:me_anorien_area_28_31
+			own_entire_area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -2846,7 +2846,7 @@ flavor_rus.31 = {
 
 		custom_tooltip = {
 			text = flavor_rus.31.a.custom
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -6855,7 +6855,7 @@ flavor_rus.64 = {
 			}
 		}
 
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 
 		NOT = {
 			has_policy = figurehead_position_policy
@@ -6872,7 +6872,7 @@ flavor_rus.64 = {
 
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = von_biron_origin
 			}

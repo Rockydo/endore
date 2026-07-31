@@ -1253,7 +1253,7 @@ flavor_tur.22 = {
 	trigger = {
 		"culture_percentage_in_country(culture:tunisian)" > 0
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			dominant_culture = culture:tunisian
 		}
 
@@ -1272,7 +1272,7 @@ flavor_tur.22 = {
 			text = tunisian_uprising
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -1316,7 +1316,7 @@ flavor_tur.23 = {
 	trigger = {
 		"culture_percentage_in_country(culture:libyan_arabic_culture)" > 0
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			dominant_culture = culture:libyan_arabic_culture
 		}
 
@@ -1377,7 +1377,7 @@ flavor_tur.23 = {
 			text = tripolitan_uprising
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -1565,7 +1565,7 @@ flavor_tur.25 = {
 	trigger = {
 		"culture_percentage_in_country(culture:algerian)" > 0
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			dominant_culture = culture:algerian
 		}
 	}
@@ -1576,7 +1576,7 @@ flavor_tur.25 = {
 			text = algiers_uprising
 			every_owned_location = {
 				limit = {
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 				every_pop = {
 					limit = {
@@ -2650,9 +2650,9 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 		OR = {
 			c:AHI = {
 				is_subject_of = ROOT
-				own_entire_province = province_definition:me_anorien_area_28_31_province_01
+				own_entire_province = province_definition:me_anorien_area_24_28_province_01
 			}
-			own_entire_province = province_definition:me_anorien_area_28_31_province_01
+			own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		}
 	}
 
@@ -4965,98 +4965,98 @@ flavor_tur.73 = { #The Maps of Piri Reis, triggered by flavor_tur.72
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 		if = {
 			limit = {
 				NOT = {
-					area:me_anorien_area_28_31  = {
+					area:me_anorien_area_24_28  = {
 						any_location_in_area = {
 							is_discovered_by = root
 						}
 					}
 				}
 			}
-			discover_area = area:me_anorien_area_28_31
+			discover_area = area:me_anorien_area_24_28
 		}
 	}
 }
@@ -5089,7 +5089,7 @@ flavor_tur.74 = { #the Aegean Issue
 			}
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = { is_rival_of = root }
 			}
@@ -5098,7 +5098,7 @@ flavor_tur.74 = { #the Aegean Issue
 
 	immediate = {
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					owner = { is_rival_of = root }
@@ -6202,7 +6202,7 @@ flavor_tur.89 = { #Intervention in Crimea
 			is_suitable_rival_for_crimea = yes
 		}
 
-		area:me_anorien_area_28_31 = { #checking that we don't already have a presence in Crimea
+		area:me_anorien_area_24_28 = { #checking that we don't already have a presence in Crimea
 			any_location_in_area = {
 				NOT = {
 					owner = c:TUR
@@ -6210,7 +6210,7 @@ flavor_tur.89 = { #Intervention in Crimea
 			}
 		}
 
-		area:me_anorien_area_28_31 = { #checking for a suitable adversary in Crimea
+		area:me_anorien_area_24_28 = { #checking for a suitable adversary in Crimea
 			any_location_in_area = {
 				has_owner = yes
 				OR = {
@@ -6230,7 +6230,7 @@ flavor_tur.89 = { #Intervention in Crimea
 		}
 
 
-		area:me_anorien_area_28_31 = { #checking that the Crimean tatars still exists
+		area:me_anorien_area_24_28 = { #checking that the Crimean tatars still exists
 			any_location_in_area = {
 				dominant_culture ?= { has_culture_group = culture_group:tatar_group }
 			}
@@ -6239,7 +6239,7 @@ flavor_tur.89 = { #Intervention in Crimea
 
 	immediate = {
 
-		area:me_anorien_area_28_31 = { #saving the adversary for the Crimeans
+		area:me_anorien_area_24_28 = { #saving the adversary for the Crimeans
 			random_location_in_area = {
 				limit = {
 					has_owner = yes
@@ -6324,7 +6324,7 @@ scripted_trigger is_crimean_khanate = {
 	capital ?= { region = region:me_anorien_region }
 	total_population < root.total_population
 	any_owned_location = {
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
 	}
 	any_owned_location = {
 		count <= 25
@@ -6342,7 +6342,7 @@ scripted_trigger is_almost_crimean_khanate = {
 	total_population < root.total_population
 	any_owned_location = {
 		dominant_culture ?= { has_culture_group = culture_group:tatar_group }
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
 	}
 	any_owned_location = {
 		count <= 25
@@ -6374,7 +6374,7 @@ flavor_tur.90 = { #Securing the Slave Trade
 	trigger = {
 		country_exists = c:TUR
 		has_slavery = yes #the conflict for Crimea doesn't make sense otherwise
-		area:me_anorien_area_28_31 = { #checking that we have a presence in Crimea
+		area:me_anorien_area_24_28 = { #checking that we have a presence in Crimea
 			any_location_in_area = {
 				owner ?= c:TUR
 			}
@@ -13738,7 +13738,7 @@ flavor_tur.165 = { #The Flooding of the Euphrates
 	trigger = {
 		"culture_percentage_in_country(culture:iraqi_culture)" > 0
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			NOT = {
 				this = location:baghdad
 			}
@@ -13760,7 +13760,7 @@ flavor_tur.165 = { #The Flooding of the Euphrates
 		custom_tooltip = {
 			text = euphrates_flooding.a.tt
 			every_owned_location = {
-				limit = { area = area:me_anorien_area_28_31 }
+				limit = { area = area:me_anorien_area_24_28 }
 				major_flooding_damage = yes
 			}
 		}
@@ -13772,7 +13772,7 @@ flavor_tur.165 = { #The Flooding of the Euphrates
 		custom_tooltip = {
 			text = euphrates_flooding.b.tt
 			every_owned_location = {
-				limit = { area = area:me_anorien_area_28_31 }
+				limit = { area = area:me_anorien_area_24_28 }
 				lesser_flooding_damage = yes
 			}
 		}
@@ -13805,7 +13805,7 @@ flavor_tur.166 = { #The Governor of Baghdad, triggered by flavor_tur.165
 	trigger = {
 		"culture_percentage_in_country(culture:iraqi_culture)" > 0
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			NOT = {
 				this = location:baghdad
 			}
@@ -13865,7 +13865,7 @@ flavor_tur.166 = { #The Governor of Baghdad, triggered by flavor_tur.165
 		custom_tooltip = {
 			text = competent_governance.a.tt
 			every_owned_location = {
-				limit = { area = area:me_anorien_area_28_31 }
+				limit = { area = area:me_anorien_area_24_28 }
 				competent_governance = yes
 			}
 		}
@@ -14121,7 +14121,7 @@ flavor_tur.169 = { #The Constantinople Massacre of 1821
 		any_owned_location = {
 			OR = {
 				region = region:me_anorien_region
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 			}
 			dominant_culture = culture:turkish_culture
 			any_pop = {
@@ -14153,7 +14153,7 @@ flavor_tur.169 = { #The Constantinople Massacre of 1821
 				limit = {
 					OR = {
 						region = region:me_anorien_region
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
 					}
 					dominant_culture = culture:turkish_culture
 					any_pop = {
@@ -14244,7 +14244,7 @@ flavor_tur.170 = { #The Judge of the Grasslands
 		"culture_percentage_in_country(culture:iraqi_culture)" > 0
 
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			count >= 3
 			NOT = { this = location:baghdad}
 		}
@@ -14270,7 +14270,7 @@ flavor_tur.170 = { #The Judge of the Grasslands
 
 		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_tiny_move_to_right }
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			ordered_location_in_area = {
 				limit = {
 					owner ?= root
@@ -14307,7 +14307,7 @@ flavor_tur.170 = { #The Judge of the Grasslands
 
 		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_tiny_move_to_right }
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			ordered_location_in_area = {
 				limit = {
 					owner ?= root
@@ -15069,7 +15069,7 @@ flavor_tur.180 = { #The Edirne Incident
 		any_owned_location = {
 			OR = {
 				region = region:me_anorien_region
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 			}
 			NOT = {
 				this = location:constantinople
@@ -15093,7 +15093,7 @@ flavor_tur.180 = { #The Edirne Incident
 				limit = {
 					OR = {
 					region = region:me_anorien_region
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 				}
 					NOT = {
 						this = location:constantinople
@@ -15579,7 +15579,7 @@ flavor_tur.185 = {
 		name = flavor_tur.185.b
 
 		trigger = {
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				any_location_in_area = {
 					percent > 0.5
 					OR = {
@@ -15591,7 +15591,7 @@ flavor_tur.185 = {
 			}
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			ordered_location_in_area = {
 				order_by = population
 				limit = {
@@ -15953,7 +15953,7 @@ flavor_tur.191 = {
 
 	trigger = {
 		NOT = { country_exists = c:BYZ }
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	option = {
@@ -15962,7 +15962,7 @@ flavor_tur.191 = {
 
 		custom_tooltip = {
 			text = tur_all_messenian_locations_lose_control_and_gain_estate_building
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -15982,7 +15982,7 @@ flavor_tur.191 = {
 
 		custom_tooltip = {
 			text = tur_all_messenian_location_pops_lose_satisfaction
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -16093,7 +16093,7 @@ flavor_tur.193 = {
 	fire_only_once = yes
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 	}
 
 	immediate = {
@@ -16235,9 +16235,9 @@ flavor_tur.195 = {
 	fire_only_once = yes
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		religion != religion:orthodox
-		province:me_anorien_area_28_31_province_01 = {
+		province:me_anorien_area_24_28_province_01 = {
 			"religion_percentage(religion:orthodox)" > 0.5
 		}
 	}
@@ -16260,7 +16260,7 @@ flavor_tur.195 = {
 
 		custom_tooltip = {
 			text = tur_all_of_thessaly_will_join_revolt
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -16277,7 +16277,7 @@ flavor_tur.195 = {
 	option = {
 		name = flavor_tur.195.b
 
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				change_control = control_ultimate_penalty
 			}
@@ -16605,7 +16605,7 @@ flavor_tur.201 = {
 	trigger = {
 		"culture_percentage_in_country(culture:bulgarian)" > 0.05
 		"culture_percentage_in_country(culture:greek_culture)" > 0.05
-		own_entire_area = area:me_anorien_area_28_31
+		own_entire_area = area:me_anorien_area_24_28
 		culture:bulgarian.cultural_tradition < culture:greek_culture.cultural_tradition
 	}
 
@@ -16688,9 +16688,9 @@ flavor_tur.202 = {
 	fire_only_once = yes
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
 		religion != religion:orthodox
-		province:me_anorien_area_28_31_province_01 = {
+		province:me_anorien_area_24_28_province_01 = {
 			"religion_percentage(religion:orthodox)" > 0.5
 		}
 	}
@@ -16713,7 +16713,7 @@ flavor_tur.202 = {
 
 		custom_tooltip = {
 			text = tur_all_of_vidin_will_join_revolt
-			province:me_anorien_area_28_31_province_01 = {
+			province:me_anorien_area_24_28_province_01 = {
 				every_location_in_province = {
 					every_pop = {
 						add_pop_satisfaction = pop_satisfaction_ultimate_penalty
@@ -16727,7 +16727,7 @@ flavor_tur.202 = {
 	option = {
 		name = flavor_tur.202.b
 
-		province:me_anorien_area_28_31_province_01 = {
+		province:me_anorien_area_24_28_province_01 = {
 			every_location_in_province = {
 				change_control = control_ultimate_penalty
 			}
@@ -16757,8 +16757,8 @@ flavor_tur.203 = {
 	trigger = {
 		culture.cultural_tradition > culture:bulgarian.cultural_tradition
 		religion.group = religion_group:muslim
-		own_entire_area = area:me_anorien_area_28_31
-		area:me_anorien_area_28_31 = {
+		own_entire_area = area:me_anorien_area_24_28
+		area:me_anorien_area_24_28 = {
 			any_province_in_area = {
 				culture_percentage = { culture = culture:bulgarian value >= 0.2 }
 				religion_percentage = { religion = religion:orthodox value >= 0.2 }
@@ -16777,7 +16777,7 @@ flavor_tur.203 = {
 
 		custom_tooltip = {
 			text = tur_convert_bulgarian_pops_to_islam_tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -17629,16 +17629,16 @@ flavor_tur.217 = {
 
 	trigger = {
 		religion.group = religion_group:muslim
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
-		province:me_anorien_area_28_31_province_01 = {
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
+		province:me_anorien_area_24_28_province_01 = {
 			"religion_percentage(religion:orthodox)" > 0.25
 		}
-		province:me_anorien_area_28_31_province_01 = {
+		province:me_anorien_area_24_28_province_01 = {
 			"religion_percentage(religion:orthodox)" > 0.25
 		}
-		province:me_anorien_area_28_31_province_01 = {
+		province:me_anorien_area_24_28_province_01 = {
 			"religion_percentage(religion:orthodox)" > 0.25
 		}
 	}
@@ -17661,7 +17661,7 @@ flavor_tur.217 = {
 
 		custom_tooltip = {
 			text = tur_all_of_specified_locations_join_rebellion_tt
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -17675,7 +17675,7 @@ flavor_tur.217 = {
 					}
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -17689,7 +17689,7 @@ flavor_tur.217 = {
 					}
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -17711,7 +17711,7 @@ flavor_tur.217 = {
 
 		custom_tooltip = {
 			text = tur_all_specified_locations_lose_control
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -17719,7 +17719,7 @@ flavor_tur.217 = {
 					change_control = control_ultimate_penalty
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -17727,7 +17727,7 @@ flavor_tur.217 = {
 					change_control = control_ultimate_penalty
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner ?= root
@@ -18256,7 +18256,7 @@ flavor_tur.1003 = {
 			age_in_years >= 25
 			owner ?= root
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = {
 				percent >= 0.05
 				OR = {
@@ -18277,7 +18277,7 @@ flavor_tur.1003 = {
 			save_scope_as = target_character2
 		}
 
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			ordered_location_in_province_definition = {
 				order_by = population
 				limit = {

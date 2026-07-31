@@ -809,7 +809,7 @@ buddhism_events.15 = {
 
 	trigger = {
 		NOT = { religion = religion:theravada }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner = root
 				dominant_religion = religion:theravada
@@ -838,7 +838,7 @@ buddhism_events.15 = {
 		change_gold_effect = { scale = 3.00 }
 		custom_tooltip = {
 			text = buddhism_events.15.b.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = { owner = root }
 					every_pop = {
@@ -861,7 +861,7 @@ buddhism_events.15 = {
 		name = buddhism_events.15.c
 		custom_tooltip = {
 			text = buddhism_events.15.c.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = { owner = root }
 					every_pop = {
@@ -1489,7 +1489,7 @@ buddhism_events.1201 = {
 	immediate = {
 		event_illustration_government_estate_effect = yes
 		ruler = { save_scope_as = target_ruler }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				save_scope_as = target_location
 			}
@@ -1713,7 +1713,7 @@ buddhism_events.1300 = {
 		NOT = { has_variable = sent_embassy_to_ceylon }
 		NOT = {	ruler = { has_character_modifier = supporting_local_monastic_traditions } }
 		NOT = {	culture = culture:sinhalese	}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			NOT = {
 				any_location_in_area = { owner = root }
 			}
@@ -1737,7 +1737,7 @@ buddhism_events.1300 = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
 		ruler = { save_scope_as = target_ruler }
 		set_variable = { name = sent_embassy_to_ceylon value = 1 }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					owner = {

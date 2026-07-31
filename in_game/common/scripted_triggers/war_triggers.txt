@@ -33,7 +33,7 @@ scaligeri_peace_treaty_demand_allow_MLO = {
 		limit = {
 			var:MLO_demands = flag:brescia_demand
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = {
 				owner ?= {
 					scope:war = {
@@ -44,7 +44,7 @@ scaligeri_peace_treaty_demand_allow_MLO = {
 		}
 	}
 	trigger_else = {
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = {
 				owner ?= {
 					scope:war = {
@@ -70,7 +70,7 @@ scaligeri_peace_treaty_demand_allow_FLO = {
 		}
 	}
 	trigger_else = {
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = {
 				owner ?= {
 					scope:war = {
@@ -96,7 +96,7 @@ scaligeri_peace_treaty_demand_allow_VEN = {
 		}
 	}
 	trigger_else = {
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = {
 				owner ?= {
 					scope:war = {

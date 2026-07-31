@@ -1163,12 +1163,12 @@ frankokratia_vassal_state_can_declare_wars_trigger = {
 					is_neighbor_of = scope:attacker
 					any_owned_location = {
 						OR = {
-							area = area:me_anorien_area_28_31
-							area = area:me_anorien_area_28_31
-							area = area:me_anorien_area_28_31
-							area = area:me_anorien_area_28_31
-							area = area:me_anorien_area_28_31
-							area = area:me_anorien_area_28_31
+							area = area:me_anorien_area_24_28
+							area = area:me_anorien_area_24_28
+							area = area:me_anorien_area_24_28
+							area = area:me_anorien_area_24_28
+							area = area:me_anorien_area_24_28
+							area = area:me_anorien_area_24_28
 						}
 					}
 				}

@@ -298,3 +298,155 @@
   tiles, all 12 naturalized major channels, all 10,193,212 vegetation transforms, and
   every downstream world subsystem. Paired vanilla/mod smoke then passed with zero
   mod-unique error lines on exact game-visible fingerprint `09192b66`.
+- The v14 exact-tree close audit confirmed that the new ridged height detail and
+  altitude-aware material selection coexist with dense green Mirkwood canopy. Fangorn,
+  however, rendered fully snow-white on 4 August. Its location center is y=4984 on the
+  8192-pixel map, while the generated equator was incorrectly at y=4600; the engine
+  therefore treated Rohan and every southern theatre as southern-hemisphere winter.
+  `gen_map_config.py` now places the equator beyond the southern edge and fails if it can
+  intersect the canvas. Live proof awaits the next shared EU5 lease; M2 remains red.
+- Named-forest transform QA confirms roughly 138,000 high-detail trees in Fangorn,
+  113,000 in the Old Forest, 67,000 in Lórien, and 115,000 in Ithilien. These four
+  theatres now have explicit minimum-coverage checks in `gen_map_objects.py`, preventing
+  a future global-count pass from concealing a regional vegetation regression.
+- The location topology now matches the installed vanilla world exactly at 28,490
+  locations: 22,000 passable land, 6,000 mountain, 90 lake, and 400 sea cells on the
+  unchanged native 16384×8192 canvas. Median mountain area is 37 control pixels instead
+  of the rejected 497-pixel close probe, giving crest systems roughly thirteen times
+  finer political/topography granularity.
+- Full-precision height cache output is restored (`height_quantum = 1`) and tracked
+  through Git LFS; its 174,763-entry payload retains 123,963 unique height tiles and zero
+  Earth decal layers. Terrain-cache generator v18 reuses that verified height source but
+  corrects the installed `mountain_wasteland` material order: high crests are snow
+  (slot 10), middle elevations rock (slot 11), and only low shoulders use dark dirt
+  (slot 12), with continuous altitude/noise blending rather than location boundaries.
+- A first native-density no-debug load reached the country-selection transition but lost
+  automation foreground before evidence capture. Its live initialization honestly
+  exposed lumber potential errors, an unowned Henneth Annûn town setup, and discriminated
+  Black Númenórean nobles in Umbar. The generators now exclude lumber while templates
+  remain neutral, pin occupied Ithilien/Shadow landmarks before the wilderness mask, and
+  declare Black Númenórean accepted in Umbar. Permanent validation rejects wild urban
+  setups and any remaining lumber assignment.
+- The complete repaired 28,490-location tree passed `gmake validate` in 436.7 seconds:
+  all map, cache, river, border, vegetation, locator, quarantine, realm, people, census,
+  template, slot-protocol, and lint stages are green. Fresh no-debug evidence and paired
+  smoke remain pending the shared EU5 slot; reopened M2 remains red.
+- The driver no longer treats logged cache completion as proof of an interactive country-
+  selection window. A PID-verified stability wait now rejects the engine's still-hung
+  `Loading Savegame — 98%` frame, and topmost PID-bound capture no longer depends on
+  Windows granting foreground ownership.
+- Those corrected observations showed that both full visual and lightweight q1 launches
+  exited at the 98% boundary after setup/cache completion. The authored 65,536×32,768
+  source and exact 28,490-location topology remain unchanged; only the derived runtime
+  height cache moved to q64. Generator v19 produced 120,118 unique height tiles in
+  172,161,411 bytes (0.098% vertical quantum, eight times finer than live-proven q512)
+  plus 124,205 unique material tiles in 71,508,004 bytes. Independent cache verification
+  passed all 174,763 virtual entries and confirmed zero Earth decal layers. Fresh retail
+  proof remains pending the shared EU5 lease; reopened M2 remains red.
+- The complete q64 tree then passed `gmake validate` in 419.3 seconds. Every control,
+  location, definition, height/cache, river, adjacency, map-config, flatmap, border,
+  vegetation, locator, runtime, quarantine, realm, people, census, template, coordination,
+  and lint check is green. The only stderr was Pillow's expected native-raster size
+  warning.
+- Two q64 lightweight-checkpoint launches then proved that cache-size reduction alone is
+  insufficient at 28,490 locations. Both reached healthy menus, accepted New Game, and
+  completed logged setup/cache work, but never left the nonresponsive 98% frame during
+  the full 600-second post-cache bound. Working set oscillated from roughly 14 to
+  23.5 GB and the second run briefly left under 0.5 GB free physical memory. Both were
+  stopped through their tokenized driver session and added no mod-unique diagnostic.
+- The owner authorized approximately half vanilla's location count while making map
+  precision and lore accuracy non-negotiable. Arda Maps' Third Age TopoJSON and
+  ArdaCraft's biome/path layers were fetched only into
+  `G:\endore_runtime\cartography_references` for analysis. The first 35-landmark cross-
+  check confirms that the current atlas requires systemic reprojection—not isolated
+  nudges—especially its north/south spacing. The next production target is 14,245
+  locations on the unchanged full-resolution physical terrain.
+- The systemic source-frame rewrite is now complete statically. ENDÓRË preserves the
+  ArdaCraft equal-scale world grid on the 2:1 EU5 canvas rather than stretching
+  Middle-earth horizontally. Arda Maps contributes a 1,251-vertex mainland coast, 15
+  lake outlines, 43 mountain footprints, 24 river/valley controls, and source forest
+  geometry. The committed conformance report covers 42 anchors and 62 additional
+  landmarks; all 38 realm seats are mechanically synchronized to those controls.
+- The old 28,490-location runtime tree has been replaced with exactly 14,245 locations:
+  10,800 passable land, 3,200 mountain, 65 lake, and 180 sea. All 42 anchors survive,
+  median control area is 294 pixels, and the model fingerprint is `632c9cf5ab6b`.
+- The complete downstream tree now matches that topology: 24 regions, 38 realms, 33
+  cultures, 10 languages, 10 faiths, 10,779 populated locations, 12 markets, 14,245
+  terrain templates, 470 ports, and 50 locator/quarantine outputs. The corrected Rhûn
+  seats now resolve within 0.0161 physical normalized distance at worst, and its three
+  eastern realms own 826, 682, and 196 locations instead of leaving the eastern seat in
+  the ocean.
+- A fresh 65,536×32,768 q64 virtual cache was baked from the new Arda relief/material
+  sources: 174,763 indexed tiles, 80,225 unique height tiles, 83,142 unique material
+  tiles, 246.5 MB total, and zero inherited Earth decal layers. The corresponding
+  8,192×4,096 height source, flatmap, parser-safe major rivers, borders, and 10,193,212
+  Arda-native vegetation transforms are regenerated. Static validation and fresh
+  lightweight/full-renderer evidence remain pending; reopened M2 stays red.
+- The first full validation correctly rejected two sub-pixel water cells absorbed into a
+  Lindon land location, Gundabad's isolated massif cell, stale old-projection forest
+  coverage floors, a mixed-Python height render, and stale localization ordering. The
+  corrected generator preserves every source-coast water pocket, adds an authored
+  Gundabad gate, distinguishes Chetwood from the Old Forest, preserves narrow forest
+  interiors during edge feathering, and runs every write under the validation
+  environment. Targeted height, vegetation, realm connectivity, and definition checks
+  are now green; full validation still must be repeated.
+- The next full gate cleared every physical, cache, vegetation, connectivity, realm,
+  people, and template stage, then found one downstream setup invariant: Harlond of
+  Gondor retained its canon port rank while broad emptied-Ithilien logic left it wild.
+  Harlond is now pinned to Gondor with Cair Andros and Henneth Annûn; the full
+  realm/people/census/localization/template chain is regenerated. Full validation remains
+  pending and M2 remains red.
+- The corrected source-frame tree then passed the complete static gate in 327.3 seconds,
+  including cartographic conformance, all 14,245 definitions, the 174,763-tile q64 cache,
+  10,193,212 Arda-native vegetation transforms, all realm/people/census/template stages,
+  and lint. Paired vanilla/mod smoke subsequently passed with zero mod-unique error lines
+  on exact game-visible fingerprint `dbd52c52`.
+- Real-game proof did not pass. A no-debug full-visual New Game and a separate lightweight
+  checkpoint New Game both completed setup serialization and cached-data recalculation,
+  then remained noninteractive for the full 600-second post-cache bound. Both peaked near
+  23.5 GB without emitting a map, terrain, river, locator, setup, or renderer diagnostic.
+  Their evidence is under the two `20260731_m2_sourceframe*` screenshot sessions, and the
+  bounded failure is recorded in `BLOCKERS.md`.
+- The runtime tessellation is therefore being reduced to the last live-proven 12,104-cell
+  aggregate: 9,200 land, 2,700 mountain, 60 lake, and 144 sea locations. The equal-scale
+  projection, source-derived coast/lakes/ridges/rivers/forests, full-resolution physical
+  source, 42 anchors, 62 landmarks, and 38 realm seats remain unchanged. This is a
+  renderer-capacity adjustment, not a cartographic simplification; reopened M2 stays red.
+- The 12,104-cell replacement regenerated coherently with 415 ports, 9,179 populated
+  locations, 311 authored route edges, 38 realms, and 12,104 terrain templates. Full
+  validation passed in 315.3 seconds and paired smoke passed with zero mod-unique lines
+  on fingerprint `152d7798`.
+- Fresh-game interactivity still failed under both no-debug lightweight and debug
+  checkpoint profiles. Each completed setup/cache work, remained nonresponsive for the
+  full 600-second post-cache bound, and peaked near 23.5 GB without a map diagnostic.
+  Location reduction is therefore not the dominant constraint and will not continue.
+- The next renderer candidate keeps all 12,104 locations and full source geography while
+  scaling each installed vegetation family/LOD count to 40%: 4,077,285 transforms, still
+  about ten times the rejected 420,000 proof. Named-forest high-detail floors and Hilbert
+  locality remain mandatory. Reopened M2 stays red pending real-game proof.
+- A naive global 40% placement failed the permanent regional floors; the generator now
+  reallocates a small fixed share of high-LOD samples into the source-defined Fangorn,
+  Old Forest, Lórien, and Ithilien masks without increasing the 4,077,285 total. The
+  stratified set passes all density, theatre, river-clearance, filename, and locality
+  checks and occupies 163.1 MB instead of 407.7 MB.
+- Full validation passed in 351 seconds and paired smoke passed with zero mod-unique lines
+  on fingerprint `8b088c92`, but the materially smaller object payload still missed the
+  debug checkpoint's 600-second interactivity bound and reached roughly 22 GB. Object
+  density contributes but is not the dominant constraint.
+- The next static candidate keeps the exact 12,104 total and every physical control, but
+  rebalances the unproven 2,700 impassable mountain locations to 1,200 while raising land
+  cells from 9,200 to 10,700. The last live source tree used only 520 mountain cells;
+  1,200 retains more than twice that strategic granularity without weakening any ridge,
+  height, massif, or pass geometry. M2 remains red.
+- The rebalanced source-frame tree regenerated coherently: 10,700 land, 1,200 mountain,
+  60 lake, and 144 sea locations; 463 ports; 38 realms; 10,679 populated locations; 341
+  authored route edges; and 12,104 final terrain templates. All 42 anchors and the full
+  source projection remain unchanged.
+- Full validation passed in 313.9 seconds, including every cartography, connectivity,
+  cache, river, border, vegetation, locator, quarantine, realm, people, census, template,
+  and lint stage. Paired vanilla/mod smoke then passed with zero mod-unique lines on
+  fingerprint `66f1cd73`.
+- The next debug-checkpoint attempt deferred immediately and safely because Antiquitas
+  acquired the shared EU5 lease for its own paired smoke. No ENDÓRË process launched and
+  no blocker was counted. The static/smoke-green candidate awaits the next free lease;
+  reopened M2 and the nine-theatre visual gate remain red.

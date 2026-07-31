@@ -105,11 +105,11 @@ flavor_usa.3 = {
 		exists = capital
 		capital.region = region:me_anorien_region
 
-		has_presence_in = area:me_anorien_area_28_31
-		has_presence_in = area:me_anorien_area_28_31
-		has_presence_in = area:me_anorien_area_28_31
-		has_presence_in = area:me_anorien_area_28_31
-		has_presence_in = area:me_anorien_area_28_31
+		has_presence_in = area:me_anorien_area_24_28
+		has_presence_in = area:me_anorien_area_24_28
+		has_presence_in = area:me_anorien_area_24_28
+		has_presence_in = area:me_anorien_area_24_28
+		has_presence_in = area:me_anorien_area_24_28
 	}
 
 	option = {
@@ -120,11 +120,11 @@ flavor_usa.3 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				change_development = development_weak_bonus
@@ -140,11 +140,11 @@ flavor_usa.3 = {
 			every_owned_location = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 				change_development = development_weak_penalty

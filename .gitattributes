@@ -1,2 +1,5 @@
 # Exact installed-event mirrors deliberately retain the source whitespace.
 in_game/events/** -whitespace
+
+# The q64 derived height cache still exceeds GitHub's ordinary blob limit.
+in_game/gfx/terrain2/terrain_cache/heightmap.bin filter=lfs diff=lfs merge=lfs -text

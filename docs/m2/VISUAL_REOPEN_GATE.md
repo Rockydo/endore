@@ -7,17 +7,44 @@ canvas size, retains no Earth terrain decals, and supports custom locations, rea
 Observer play. It is not yet a release-quality physical map. Political readability does
 not substitute for geographic quality.
 
-Current iteration: the authored control lattice is 4096×2048 and generates 12,104
-locations on the proven 16384×8192 engine canvas: 11,320 passable land, 520 mountains,
-64 lakes, and 200 seas. Rhûn and Harad now continue through the east/south borders instead
-of being enclosed by a false ocean ring. Static validation is green, including all
-anchors, realm connectivity, ports, rivers, locators, and terrain-cache quarantine.
+Current iteration: the authored control lattice is 4096×2048 on the proven 16384×8192
+engine canvas, backed by a full-resolution 65,536×32,768 physical source and q64 derived
+runtime cache. The equal-scale ArdaCraft projection preserves the source aspect rather
+than stretching Middle-earth, while Arda Maps Third Age supplies the audited 1,251-vertex
+mainland coast, 15 lakes, 43 mountain footprints, 24 river/valley controls, and forest
+geometry. The permanent conformance layer covers 42 settlement anchors, 62 additional
+landmarks, and all 38 realm seats. Downloaded reference data remains transient and
+unshipped.
+
+The source-frame production tree initially contained exactly 14,245 locations: 10,800
+passable land, 3,200 mountains, 65 lakes, and 180 seas. Static validation passed every
+map, cache, vegetation, connectivity, realm, people, census, template, quarantine, and
+lint stage. Paired vanilla/mod smoke then passed with zero mod-unique lines on fingerprint
+`dbd52c52`. A full-visual fresh New Game and a materially different lightweight
+checkpoint attempt both completed setup/cache work but remained noninteractive for the
+entire 600-second post-cache bound, peaking around 23.5 GB. The two-strike evidence is
+recorded in `BLOCKERS.md`; the 14,245-cell route must not be repeated unchanged.
+
+The current runtime tessellation keeps the last proven 12,104-location aggregate:
+10,700 passable land, 1,200 mountains, 60 lakes, and 144 seas. The 1,200 mountain cells
+remain more than twice the last live source tree's impassable granularity, while the exact
+physical mountain footprints, ridge axes, passes, and full-resolution height source remain
+unchanged. The stratified renderer candidate uses 4,077,285 Arda-native vegetation
+transforms and preserves explicit high-detail floors in Fangorn, the Old Forest, Lórien,
+and Ithilien.
+
+This tree passes the complete static gate and paired smoke with zero mod-unique lines on
+fingerprint `66f1cd73`. Its first checkpoint attempt deferred because Antiquitas held the
+shared EU5 lease; no process launched. Rhûn and Harad still continue through the east/south
+borders instead of being enclosed by a false ocean ring. M2 remains red until the current
+tree passes the same real-renderer and multi-theatre gates.
 Real-game non-debug review proves that ridge systems produce physical 3D relief. A new
 Arda-native material cache also proves continuous ground variation, mountain snow/rock
 material, and shoreline transition bands instead of the former shared zero tile and
-coarse location-shaped patches. A two-stage checkpoint route now reaches the current
-tree in stable non-debug 3D Observer, resolving the earlier resource-bound capture
-bootstrap. A later exact-state session proves that Hilbert-ordered Arda transforms render
+coarse location-shaped patches. A two-stage checkpoint route reached the then-current
+12,104-location tree in stable non-debug 3D Observer, resolving that iteration's
+resource-bound capture bootstrap. A later exact-state session proves that Hilbert-ordered
+Arda transforms render
 real tree objects and dense canopy in Mirkwood; native `WM_MOUSEWHEEL` delivery also
 provides deterministic close zoom. That same close evidence still shows hard woodland
 walls and too-continuous snow/rock ridges. The current physical batch therefore adds
@@ -29,11 +56,35 @@ vegetation iteration removes that route and matches vanilla's roughly 10.2 milli
 installed per-family/LOD transforms with wholly Arda-generated positions. This gate
 now has live maximum-close proof of continuous physical Mirkwood canopy at that density.
 The final batch adds authored river clearances so the canopy cannot obscure the wet
-channels. Ground-level evidence now proves those clearances and a parser-safe naturalized
-major-channel raster with installed downstream width progression. The exact current tree
-entered no-debug Observer without a river or map diagnostic, and paired smoke is green
-with zero mod-unique lines. Multi-theatre evidence and explicit owner acceptance remain
-outstanding; this gate remains red.
+channels. Ground-level evidence on the 12,104-location baseline proves those clearances
+and a parser-safe naturalized major-channel raster with installed downstream width
+progression. That baseline entered no-debug Observer without a river or map diagnostic,
+and its paired smoke was green with zero mod-unique lines. The source-frame replacement
+must independently repeat both proofs. Multi-theatre evidence and explicit owner
+acceptance remain outstanding; this gate remains red.
+
+The first correctly targeted nine-theatre audit is captured under
+`docs/screens/20260730_m2_theatres/`. It confirms that physical trees, relief, and custom
+waters render, but rejects the regional presentation: location-scoped climate and
+topography changes read as rectangular/Voronoi material patches, mountain-template paint
+still forms oversized pale slabs, river-bank material reads as broad artificial
+corridors, and the height shoreline exposes the 2x enlargement of the control lattice.
+The next slice renders shoreline geometry at native height resolution, narrows secondary
+river material, confines snow/rock paint to high crests, and makes woodland margins
+depend on the continuous transform field rather than marginal whole-location templates.
+The subsequent v14 close pass proved green, dense, porous Mirkwood canopy, but rejected
+Fangorn because it rendered entirely snow-white on 4 August. This was not a material-cache
+failure: the generated equator crossed Rohan at canvas y=4600, placing Fangorn's y=4984
+south of it and therefore in southern-hemisphere winter. The map generator now places the
+equator beyond the 8192-pixel southern edge and statically rejects any equator inside the
+covered Middle-earth extent. Fresh exact-tree renderer proof is pending. The first
+native-density retail load reached the country-selection transition but its automation
+capture lost foreground. That run also exposed three setup regressions caused by the
+density rebuild: lumber on neutral templates, an unowned Henneth Annûn town setup, and
+discriminated Black Númenórean nobles in Umbar. All three are generator-fixed and covered
+by validation; they must be confirmed absent in the next interactive source-frame
+session.
+M2 remains blocking.
 
 ## Binding defects
 
@@ -45,8 +96,10 @@ outstanding; this gate remains red.
 4. Forests, ground materials, and other terrain character are not visibly comparable to
    vanilla at close zoom.
 5. Rivers are weak or invisible and do not read as a coherent drainage system.
-6. The world needs substantially more geographic detail and, after the physical controls
-   stabilize, finer location granularity.
+6. The world needs substantially more geographic detail. Source geometry stays at full
+   authored resolution while runtime political granularity is reduced only enough to
+   enter the renderer; the renderer—not a headline count—must prove that refinement
+   reads naturally at close zoom.
 
 ## Work order
 

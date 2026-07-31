@@ -1292,7 +1292,7 @@ flavor_eng_diplomacy.1300 = {
 
 		custom_tooltip = {
 			text = flavor_eng_diplomacy.1300.a.custom
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -1311,7 +1311,7 @@ flavor_eng_diplomacy.1300 = {
 				}
 			}
 
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -1485,7 +1485,7 @@ flavor_eng_diplomacy.1400 = {
 		country_exists = c:NED
 		c:NED = {
 			capital = { is_market_center = yes }
-			own_entire_area = area:me_anorien_area_28_31
+			own_entire_area = area:me_anorien_area_24_28
 			is_great_power = no
 		}
 

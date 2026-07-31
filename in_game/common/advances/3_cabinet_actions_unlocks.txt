@@ -110,7 +110,7 @@ settle_the_frontier_advance = {
 					#North American Natives
 					region = region:me_anorien_region
 					region = region:me_anorien_region
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
 					continent = continent:me_gondor
 				}
 			}

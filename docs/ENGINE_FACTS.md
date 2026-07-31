@@ -246,3 +246,48 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   generated hierarchy keys. `me_belfalas_sea_area_30_21` collides with installed
   `indian_southcurrent23`; the deterministic `_arda` suffix is accepted with zero new
   smoke diagnostics.
+- The installed vanilla location raster contains exactly 28,490 locations on the same
+  16384×8192 canvas used by ENDÓRË. Matching that count is engine-safe under static
+  validation; the current split is 22,000 passable land, 6,000 mountain, 90 lake, and
+  400 sea locations.
+- Full-precision terrain-cache height tiles (`height_quantum = 1`) produce a
+  699,999,471-byte `heightmap.bin` with 123,963 unique height tiles. Generator v18 can
+  reuse the verified v17 height payload while independently rebuilding material tiles;
+  the cache still has 174,763 indexed entries and empty Earth decal payloads.
+- Installed `mountain_wasteland sparse` material slots are ordered snow at bit 10,
+  `base_rock_03` at bit 11, and `dirt_dark_transition_01` at bit 12. A generic
+  increasing-slot altitude selector therefore inverted high crests into dark rubble;
+  explicit physical-height selection is required.
+- Vanilla country setup accepts `accepted_cultures = { key }` directly inside a country
+  block in `main_menu/setup/start/10_countries.txt`. ENDÓRË uses this ABI for Umbar's
+  Black Númenórean noble stratum while retaining Umbarite as the primary culture.
+- Logged `MainMenu->Game` state 4 and `ClearAndRecalculateCachedData` completion can
+  precede an unresponsive `Loading Savegame — 98%` frame. They are not sufficient
+  evidence that country selection is interactive; build 24187685 must keep a responsive,
+  rendered game window stable for a bounded interval after those log markers.
+- On the exact 28,490-location tree, the 699,999,471-byte q1 height cache exited at that
+  98% boundary under both the full visual and lightweight profiles. Retaining the same
+  full-precision 65,536×32,768 source while quantizing only the derived cache to q64
+  produces 120,118 unique height tiles in 172,161,411 bytes. q64 is 0.098% of the 16-bit
+  range and eight times finer than the already live-proven q512 cache. Generator v19
+  statically validates all 174,763 indexed entries, 124,205 material tiles, and empty
+  Earth decal payloads; retail acceptance remains a separate evidence requirement.
+- On source-frame fingerprint `dbd52c52`, a 14,245-location q64 tree passed paired smoke
+  with zero mod-unique lines but did not cross the post-cache renderer boundary under
+  either the full-visual or lightweight fresh-game profile. Both attempts completed
+  setup serialization and `ClearAndRecalculateCachedData`, stayed nonresponsive for the
+  full 600-second interactivity bound, and peaked near 23.5 GB working memory without a
+  map/terrain/river/locator diagnostic. Build 24187685 therefore requires a lower
+  fresh-game runtime envelope even when the map's physical controls are valid.
+- Reducing the same source-frame map to 12,104 locations does not materially lower the
+  fresh-game renderer peak: no-debug lightweight and debug checkpoint profiles both
+  completed setup/cache work, approached 23.5 GB, and missed the same 600-second
+  interactivity bound. Location count is not the dominant residency driver for this
+  tree; derived map-object population must be tested independently before any further
+  political-granularity cut.
+- Scaling the exact retail vegetation population from 10,193,212 to 4,077,285 transforms
+  lowers the observed debug-checkpoint peak only modestly, to roughly 22 GB, and does not
+  produce an interactive post-cache frame within 600 seconds. The object payload is a
+  contributor rather than a sufficient explanation. The source-frame tree's 2,700
+  impassable mountain locations remain the largest structural difference from the last
+  live 12,104 topology, which used 520.

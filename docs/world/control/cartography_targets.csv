@@ -1,0 +1,43 @@
+key,name,target_x,target_y,primary_reference,arda_maps_feature,ardacraft_marker,tolerance,judgement
+mithlond,Grey Havens,0.308700,0.225266,ArdaCraft,GreyHavens,Mithlond (The Grey Havens),0.006000,ArdaCraft point; Arda Maps independent check
+forlond,Forlond,0.265044,0.222313,ArdaCraft,Forlond,Forlond,0.006000,ArdaCraft point; local shoreline decides final port locator
+harlond_lindon,Harlond,0.283099,0.268538,ArdaCraft,HarlondLindon,Harlond,0.006000,ArdaCraft point
+annuminas,Annúminas,0.359970,0.178855,ArdaCraft,,Annúminas,0.006000,ArdaCraft point beside Lake Evendim
+fornost,Fornost,0.392837,0.175902,ArdaCraft,FornostErain,Fornost,0.006000,ArdaCraft point
+carn_dum,Carn Dûm,0.448944,0.063711,ArdaCraft,CarnDum,Carn Dûm,0.006000,ArdaCraft point
+hobbiton,Hobbiton,0.359145,0.221964,ArdaCraft,Hobbiton,Hobbiton,0.004000,Shared Shire control
+michel_delving,Michel Delving,0.346240,0.229195,ArdaCraft,MichelDelving,Michel Delving,0.004000,Shared Shire control
+bucklebury,Bucklebury,0.376724,0.232520,ArdaCraft,Bucklebury,Bucklebury,0.004000,Shared Shire control
+bree,Bree,0.402638,0.231985,ArdaCraft,Bree,Bree,0.005000,Shared Bree-land control
+amon_sul,Amon Sûl,0.427064,0.227172,ArdaCraft,Weathertop,Weathertop,0.005000,Shared landmark
+rivendell,Rivendell,0.493530,0.222638,ArdaCraft,Rivendell,Rivendell,0.004000,Shared landmark
+goblin_town,Goblin-town,0.509865,0.191597,ArdaCraft,GoblinTown,Goblin Town,0.006000,Shared landmark
+gundabad,Gundabad,0.502345,0.102487,Arda Maps,Gundabad,,0.008000,Arda Maps point on northern Misty Mountains
+moria,Khazad-dûm,0.490000,0.335500,Reconciled,DoorsOfDurin,Dimrill Dale,0.010000,Placed between the west gate and Dimrill Dale controls
+carrock,The Carrock,0.531512,0.192434,ArdaCraft,Carrock,The Carrock,0.005000,Shared landmark
+caras_galadhon,Caras Galadhon,0.519375,0.356221,ArdaCraft,CarasGaladhon,Caras Galadhon,0.005000,Shared landmark
+dol_guldur,Dol Guldur,0.556113,0.351780,ArdaCraft,DolGuldur,Dol Guldur,0.005000,Shared landmark
+thranduil_halls,Thranduil's Halls,0.582295,0.158091,ArdaCraft,ElvenkingsHalls,Thranduil’s Halls,0.006000,Shared landmark
+esgaroth,Esgaroth,0.599873,0.162764,ArdaCraft,LakeTown,Esgaroth (Lake-town),0.004000,Shared Long Lake control
+dale,Dale,0.601803,0.148883,ArdaCraft,Dale,Dale,0.004000,Shared landmark
+erebor,Erebor,0.599699,0.137606,ArdaCraft,LonelyMountain,Erebor,0.005000,Shared landmark
+dorwinion,Dorwinion,0.684658,0.351235,Arda Maps,Dorwinion,,0.012000,Area-label centroid used as strategic settlement seed
+isengard,Isengard,0.466546,0.462111,ArdaCraft,Isengard,Isengard,0.005000,Shared landmark
+helms_deep,Helm's Deep,0.475475,0.513986,ArdaCraft,HelmsDeep,Helm’s Deep,0.005000,Shared landmark
+edoras,Edoras,0.498657,0.538308,ArdaCraft,Edoras,Edoras,0.005000,Shared landmark
+aldberg,Aldburg,0.508074,0.547446,ArdaCraft,,Aldburg,0.006000,ArdaCraft point
+dunharrow,Dunharrow,0.496751,0.553026,ArdaCraft,Dunharrow,Dunharrow,0.005000,Shared landmark
+minas_tirith,Minas Tirith,0.578168,0.611296,ArdaCraft,MinasTirith,Minas Tirith,0.005000,Shared landmark
+osgiliath,Osgiliath,0.592456,0.603809,ArdaCraft,Osgiliath,Osgiliath,0.004000,Shared Anduin crossing
+minas_morgul,Minas Morgul,0.607256,0.595531,ArdaCraft,MinasMorgul,Minas Morgul,0.005000,Shared landmark
+morannon,The Morannon,0.609732,0.529449,ArdaCraft,CirithGorgor,Morannon,0.005000,Shared pass and fortress
+barad_dur,Barad-dûr,0.644052,0.573511,ArdaCraft,BaradDur,Barad-dûr,0.005000,Shared landmark
+mount_doom,Orodruin,0.628659,0.577115,ArdaCraft,MountDoom,Orodruin (Mount Doom),0.005000,Shared landmark
+nurn_fields,Fields of Nurn,0.638200,0.669338,Arda Maps,NURN,,0.015000,Gameplay anchor at the Nurn area-label centroid
+pelargir,Pelargir,0.572006,0.686028,ArdaCraft,Pelargir,Pelargir,0.006000,Shared landmark
+dol_amroth,Dol Amroth,0.489089,0.672867,ArdaCraft,DolAmroth,Dol Amroth,0.006000,Shared landmark
+linhir,Linhir,0.533407,0.681331,ArdaCraft,Linhir,Linhir,0.006000,Shared landmark
+calembel,Calembel,0.519664,0.617469,Arda Maps,Calembel,,0.010000,Arda Maps point
+erech,Erech,0.499958,0.568615,Arda Maps,Erech,,0.010000,Arda Maps point
+umbar,Umbar,0.509644,0.935662,ArdaCraft,Umbar,Umbar,0.008000,Shared southern scale anchor
+pelennor,Pelennor,0.582000,0.610000,Reconciled,MinasTirith,Minas Tirith,0.008000,Fields immediately east of Minas Tirith and west of Osgiliath

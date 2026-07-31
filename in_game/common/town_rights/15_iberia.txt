@@ -54,10 +54,10 @@ fuero_juzgo_town_rights = {
 	allow = {
 		scope:target = {
 			OR = {
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
 				dominant_culture = culture:leonese
 			}
 			NOR = {
@@ -167,7 +167,7 @@ fuero_de_aragon_town_rights = {
 	allow = {
 		scope:target = {
 			OR = {
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
 				dominant_culture = culture:aragonese
 			}
 			NOR = {
@@ -204,8 +204,8 @@ usatges_de_barcelona_town_rights = {
 	allow = {
 		scope:target = {
 			OR = {
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
 			}
 			NOR = {
 				has_town_rights = town_rights_type:foros_extensos_town_rights
@@ -241,7 +241,7 @@ furs_de_valencia_town_rights = {
 
 	allow = {
 		scope:target = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			NOR = {
 				has_town_rights = town_rights_type:foros_extensos_town_rights
 				has_town_rights = town_rights_type:fuero_juzgo_town_rights

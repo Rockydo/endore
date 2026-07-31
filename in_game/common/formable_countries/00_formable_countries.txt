@@ -23,7 +23,7 @@ SCA_f = {
 		me_anorien_region
 	}
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -50,10 +50,10 @@ sweden_f = {
 
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -80,8 +80,8 @@ denmark_f = {
 	color = map_danish
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -124,9 +124,9 @@ DRD_f = {
 	}
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -241,13 +241,13 @@ ENG_f = {
 	color = map_ENG
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -276,7 +276,7 @@ WLS_f = {
 	color = map_WLS
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -302,9 +302,9 @@ SCO_f = {
 	color = map_SCO
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -330,8 +330,8 @@ NOL_f = {
 	color = map_NOL
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -505,8 +505,8 @@ MTH_f = {
 	color = map_MTH
 
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 		if = {
@@ -535,7 +535,7 @@ MCM_f = {
 	color = map_MCM
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		if = {
@@ -564,11 +564,11 @@ NED_f = {
 	color = map_NED
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -597,9 +597,9 @@ SWI_f = {
 	color = map_SWI
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		set_country_rank_effect = { rank = country_rank:rank_duchy }
@@ -778,8 +778,8 @@ KOA_f = {
 	color = map_crusader_africa
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -823,22 +823,22 @@ LAT_f = {
 	color = map_LAT
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 		if = {
@@ -919,22 +919,22 @@ LAT_REDUCED_REQUIREMENTS_f = {
 	color = map_LAT
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 		if = {
@@ -1013,12 +1013,12 @@ THE_f = {
 	color = map_THE
 
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 		if = {
@@ -1065,12 +1065,12 @@ THE_REDUCED_REQUIREMENTS_f = {
 	color = map_THE
 
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 		if = {
@@ -1102,7 +1102,7 @@ SAR_f = {
 	color = map_sardinian
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		if = {
@@ -1136,8 +1136,8 @@ SAR_piedmont_f = {
 	color = map_sardinia
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		if = {
@@ -1169,8 +1169,8 @@ MSI_f = {
 	color = map_mossi
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1267,7 +1267,7 @@ BAV_f = {
 	color = map_BAV
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	locations = {
 		braunau
@@ -1301,13 +1301,13 @@ HAB_f = {
 	color = map_austrian
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	locations = {
@@ -1339,8 +1339,8 @@ BOH_f = {
 	color = map_BOH
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1375,10 +1375,10 @@ SAX_f = { # Saxony
 	color = map_SAX
 
 	areas = {
-		me_anorien_area_28_31 me_anorien_area_28_31
+		me_anorien_area_24_28 me_anorien_area_24_28
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 	}
@@ -1426,7 +1426,7 @@ MKL_f = {
 	color = map_MKL
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1450,7 +1450,7 @@ POM_f = {
 	color = map_POM
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1486,7 +1486,7 @@ PRU_f = { #Prussia
 
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		if = {
@@ -1525,7 +1525,7 @@ LIV_f = {
 	color = map_livonian_order
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1551,11 +1551,11 @@ LVA_f = { # Baltic
 	color = map_LVA
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -1635,7 +1635,7 @@ MOL_f = {
 	color = map_MOL
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1659,7 +1659,7 @@ MAZ_f = { # Mazovia
 	color = map_MAZ
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1686,7 +1686,7 @@ SIL_f = {
 	color = map_SIL
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1712,10 +1712,10 @@ POL_f = {
 	color = map_POL
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1783,17 +1783,17 @@ PLC_f = {
 	color = map_PLC
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -1950,7 +1950,7 @@ ROM_BYZ_f = {
 				to = location:rome
 			}
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_ownable_location_in_province_definition = {
 				limit = { owner = root }
 				change_integration_level = integrated
@@ -1983,10 +1983,10 @@ CTH_f = {
 	color = map_CTH
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		if = {
@@ -2070,14 +2070,14 @@ CEL_f = {
 		me_anorien_region
 	}
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 	}
@@ -2158,7 +2158,7 @@ ULS_f = {
 	color = map_ULS
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2186,7 +2186,7 @@ CNN_f = {
 	color = map_CNN
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2282,16 +2282,16 @@ LOT_f = {
 	tag = LOT
 	color = map_LOT
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2324,12 +2324,12 @@ BGP_f = {
 	tag = BGP
 	color = map_arpitan
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2385,11 +2385,11 @@ TWS_f = {
 	color = map_TWS
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2450,11 +2450,11 @@ GRE_f = {
 	color = map_GRE
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2578,8 +2578,8 @@ HEN_f = {
 	color = map_HEN
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2701,7 +2701,7 @@ BNG_f = {
 	tag = BNG
 	color = map_bengal
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2761,7 +2761,7 @@ NPL_f = {
 	tag = NPL
 	color = map_nepal
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2910,7 +2910,7 @@ PUN_f = {
 	color = map_PUN
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2935,7 +2935,7 @@ RJP_f = {
 	color = map_RJP
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2961,8 +2961,8 @@ GUJ_f = {
 	color = map_GUJ
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -2987,7 +2987,7 @@ SHA_f = {
 	color = map_SHA
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3013,7 +3013,7 @@ MSA_f = {
 	color = map_MSA
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3038,8 +3038,8 @@ SIA_f = {
 	color = map_SIA
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3065,10 +3065,10 @@ BAN_f = {
 	color = map_BAN
 
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 	}
@@ -3142,8 +3142,8 @@ SKO_f = {
 	color = map_SKO
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3168,8 +3168,8 @@ HAU_f = {
 	color = map_HAU
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3194,8 +3194,8 @@ KON_f = {
 	color = map_KON
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3246,7 +3246,7 @@ AIR_f = {
 	color = map_AIR
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3272,7 +3272,7 @@ NAV_f = {
 	color = map_NAV
 
 	provinces = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	locations = {
@@ -3310,7 +3310,7 @@ KOJ_f = {
 	color = map_KOJ
 
 	provinces = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	form_effect = {
@@ -3349,8 +3349,8 @@ INC_f = {
 	color = map_INC
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		if = {
@@ -3415,7 +3415,7 @@ SER_f = {
 	tag = SER
 	color = map_serbian
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3437,12 +3437,12 @@ MCH_f = {
 	tag = MCH
 	color = map_MCH
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		trigger_event_non_silently = flavor_mch.5
@@ -3479,7 +3479,7 @@ SHL_f = {
 	tag = SHL
 	color = map_SHL
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3649,14 +3649,14 @@ ILK_f = {
 		me_anorien_region
 	}
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 		destroy_international_organization = { target = international_organization:ilkhanate }
@@ -3684,7 +3684,7 @@ GEO_f = {
 	color = map_GEO
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3710,11 +3710,11 @@ ARM_f = {
 	color = map_ARM
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 	}
@@ -3765,9 +3765,9 @@ ALB_f = {
 	color = map_albanian
 
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	form_effect = {
 	}
@@ -3871,12 +3871,12 @@ MAY_f = {
 	color = map_MAY
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	form_effect = {
 	}
@@ -3902,7 +3902,7 @@ KRY_f = {
 	color = map_KRY
 
 	provinces = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 	locations = {
 		bandar_e_anzali
@@ -3988,11 +3988,11 @@ IRO_f = { # Haudenosaunee / Iroquois Confederacy
 	color = map_haudenosaunee
 
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	form_effect = {
@@ -4068,9 +4068,9 @@ RMN_f = {
 	color = map_RMN
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4097,7 +4097,7 @@ SWA_f = {
 	color = map_SWA
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4132,7 +4132,7 @@ WES_f = {
 	color = map_WES
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4163,9 +4163,9 @@ BEL_f = {
 	color = map_BEL
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4192,7 +4192,7 @@ FKN_f = {
 	color = map_FKN
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4219,7 +4219,7 @@ HAN_f = {
 	color = map_HAN
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4246,7 +4246,7 @@ TUS_f = {
 	color = map_TUS
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4272,7 +4272,7 @@ BUL_f = {
 	color = map_bulgarian
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4302,7 +4302,7 @@ DAL_f = {
 	color = map_DAL
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4329,9 +4329,9 @@ HUN_f = {
 	color = map_hungarian
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4358,22 +4358,22 @@ KRS_f = {
 	color = map_KRS
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	form_effect = {
@@ -4426,8 +4426,8 @@ CRO_f = {
 	color = map_croatian
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4458,7 +4458,7 @@ TRA_f = {
 	color = map_transylvanian
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4484,8 +4484,8 @@ MAL_f = {
 	color = map_mali
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4512,8 +4512,8 @@ NUB_f = {
 	color = map_NUB
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4539,7 +4539,7 @@ FIN_f = {
 	color = map_finnish
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4565,7 +4565,7 @@ ICE_f = {
 	color = map_icelandic
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4591,8 +4591,8 @@ KAZ_f = {
 	color = map_KAZ
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4644,8 +4644,8 @@ MOR_f = {
 	color = map_morocco
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4702,7 +4702,7 @@ SLO_f = {
 	color = map_slovak
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4727,8 +4727,8 @@ BNO_f = { # Borneo
 	color = map_BNO
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4754,7 +4754,7 @@ CIR_f = { # Circassia
 	color = map_CIR
 
 	areas = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 
 	form_effect = {
@@ -4825,18 +4825,18 @@ PON_f = {
 
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	form_effect = {
@@ -5015,25 +5015,25 @@ OCC_f = { #Occitania
 	color = map_OCC
 
 	areas = {
-		me_anorien_area_28_31
-		me_anorien_area_28_31
+		me_anorien_area_24_28
+		me_anorien_area_24_28
 	}
 	provinces = {
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
+		me_anorien_area_24_28_province_01
 	}
 	locations = {
 		briancon gap

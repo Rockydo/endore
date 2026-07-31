@@ -427,7 +427,7 @@ flavor_sco.7 = {
 	trigger = {
 		has_advance = modern_road_advance
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -446,7 +446,7 @@ flavor_sco.7 = {
 		change_gold_effect = { scale = -6 }
 		custom_tooltip = {
 			text = flavor_sco.7.tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					change_development = development_mild_bonus
 					add_road_to = {
@@ -1426,7 +1426,7 @@ flavor_sco.20 = { # Wild Haggis
 
 	trigger = {
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -3421,10 +3421,10 @@ flavor_sco.1000 = {
 			NOT = { is_subject_of = root }
 			is_neighbor_of = root
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = { owner ?= c:SCO }
 		}
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			any_location_in_province_definition = { owner ?= c:SCO }
 		}
 		at_war = no
@@ -3448,9 +3448,9 @@ flavor_sco.1000 = {
 			}
 		}
 
-		province_definition:me_anorien_area_28_31_province_01 = { save_scope_as = lothian }
+		province_definition:me_anorien_area_24_28_province_01 = { save_scope_as = lothian }
 
-		province_definition:me_anorien_area_28_31_province_01 = { save_scope_as = teviotdale }
+		province_definition:me_anorien_area_24_28_province_01 = { save_scope_as = teviotdale }
 
 		location:edinburgh = { save_scope_as = target_location }
 
@@ -3522,14 +3522,14 @@ flavor_sco.1001 = {
 			save_scope_as = england
 		}
 
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = lothian_cb_location
 			}
 		save_scope_as = lothian
 		}
 
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			random_location_in_province_definition = {
 				save_scope_as = teviotdale_cb_location
 			}
@@ -3551,8 +3551,8 @@ flavor_sco.1001 = {
 		every_owned_location = {
 			limit = {
 				OR = {
-				province_definition = province_definition:me_anorien_area_28_31_province_01
-				province_definition = province_definition:me_anorien_area_28_31_province_01
+				province_definition = province_definition:me_anorien_area_24_28_province_01
+				province_definition = province_definition:me_anorien_area_24_28_province_01
 				}
 			}
 			change_location_owner = c:ENG

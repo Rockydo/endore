@@ -73,7 +73,7 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 			}
 			AND = {
 				has_reform = government_reform:dynastic_signoria_reform
-				own_entire_area = area:me_anorien_area_28_31
+				own_entire_area = area:me_anorien_area_24_28
 			}
 		}
 

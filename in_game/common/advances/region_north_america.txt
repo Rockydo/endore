@@ -26,8 +26,8 @@ moundbuilding_advance = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 			culture = { has_culture_group = culture_group:haudenosaunee_group }
 		}
 	}
@@ -52,8 +52,8 @@ medicinal_infusions = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 	global_disease_resistance = 0.05
@@ -93,8 +93,8 @@ seasonal_economy = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 	global_monthly_food_modifier = 0.10
@@ -181,8 +181,8 @@ north_american_warrior_societies = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 
@@ -201,8 +201,8 @@ bison_hunters = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 	global_wild_game_output_modifier = 0.1
@@ -223,8 +223,8 @@ federal_constitution = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 	nobles_estate_agenda_impact = 0.05
@@ -248,8 +248,8 @@ shared_knowledge = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 	global_institution_growth_modifier = 0.2
@@ -270,8 +270,8 @@ slash_and_burn = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 	global_monthly_food_modifier = 0.1
@@ -292,8 +292,8 @@ council_of_elders = {
 			original_capital.region = region:me_anorien_region
 		}
 		NOR = {
-			original_capital.area = area:me_anorien_area_28_31
-			original_capital.area = area:me_anorien_area_28_31
+			original_capital.area = area:me_anorien_area_24_28
+			original_capital.area = area:me_anorien_area_24_28
 		}
 	}
 	global_estate_target_satisfaction = small_permanent_target_satisfaction

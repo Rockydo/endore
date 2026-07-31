@@ -133,9 +133,9 @@ bubonic_plague = {
 						AND = {
 							has_game_rule = black_death_origin_historical
 							OR = {
-								area = area:me_anorien_area_28_31
-								area = area:me_anorien_area_28_31
-								area = area:me_anorien_area_28_31
+								area = area:me_anorien_area_24_28
+								area = area:me_anorien_area_24_28
+								area = area:me_anorien_area_24_28
 							}
 						}
 						AND = {

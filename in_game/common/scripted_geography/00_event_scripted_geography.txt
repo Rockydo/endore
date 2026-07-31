@@ -8,7 +8,7 @@ chinese_canal_geography = {
 # For flavor_teu.4
 ducal_prussia_geography = {
 	province_definition = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	location = {
@@ -18,7 +18,7 @@ ducal_prussia_geography = {
 
 royal_prussia_geography = {
 	province_definition = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 
 	location = {
@@ -28,33 +28,33 @@ royal_prussia_geography = {
 
 albanian_migration_source_geography = {
 	area = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 }
 
 albanian_migration_destination_geography = {
 	area = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 }
 frankokratia_geography = {
 	area = {
-		me_anorien_area_28_31
+		me_anorien_area_24_28
 	}
 	province_definition = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 }
 
 claims_of_thessalonica_geography = {
 	province_definition = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 }
 
 scaligeri_conquests_geography = {
 	province_definition = {
-		me_anorien_area_28_31_province_01
+		me_anorien_area_24_28_province_01
 	}
 	location = {
 		minas_tirith

@@ -716,7 +716,7 @@ flavor_chk.20 = { # Repopulation of Outer Cahokia
 
 	option = { # Encourage the resettling into outer Cahokia
 		name = flavor_chk.20.a
-		province_definition:me_anorien_area_28_31_province_01 = {
+		province_definition:me_anorien_area_24_28_province_01 = {
 			every_location_in_province_definition = {
 				limit = {
 					owner ?= root
@@ -814,7 +814,7 @@ flavor_chk.22 = { # A Center of Varying Cultures
 			text = variable_tt_chk_enable_strengthening_events
 			has_variable = chk_enable_strengthening_events
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				is_discovered_by = root
 				owner != root
@@ -838,7 +838,7 @@ flavor_chk.22 = { # A Center of Varying Cultures
 		location:cahokia = {
 			save_scope_as = target_location
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					is_discovered_by = root
@@ -1036,7 +1036,7 @@ flavor_chk.30 = { # Fortifying the Cahokian Center
 		has_ruler = yes
 		at_war = no
         owns = location:cahokia
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_present_country = {
 				is_valid_cahokia_raider_country = yes
 			}
@@ -1048,7 +1048,7 @@ flavor_chk.30 = { # Fortifying the Cahokian Center
 		ruler ?= {
             save_scope_as = our_ruler
         }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_present_country = {
 				limit = {
 					is_valid_cahokia_raider_country = yes
@@ -1170,28 +1170,28 @@ flavor_chk.32 = { # Plight of Cahokia
 			current_age = age_1_traditions
 			current_age = age_2_renaissance
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				has_owner = no
 				is_discovered_by = root
 				count > 2
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				has_owner = no
 				is_discovered_by = root
 				count > 2
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				has_owner = no
 				is_discovered_by = root
 				count > 2
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				has_owner = no
 				is_discovered_by = root
@@ -1213,7 +1213,7 @@ flavor_chk.32 = { # Plight of Cahokia
 		}
 		random_list = {
 			25 = {
-				area:me_anorien_area_28_31 = {
+				area:me_anorien_area_24_28 = {
 					random_location_in_area = {
 						limit = {
 							has_owner = no
@@ -1224,7 +1224,7 @@ flavor_chk.32 = { # Plight of Cahokia
 				}
 			}
 			25 = {
-				area:me_anorien_area_28_31 = {
+				area:me_anorien_area_24_28 = {
 					random_location_in_area = {
 						limit = {
 							has_owner = no
@@ -1235,7 +1235,7 @@ flavor_chk.32 = { # Plight of Cahokia
 				}
 			}
 			25 = {
-				area:me_anorien_area_28_31 = {
+				area:me_anorien_area_24_28 = {
 					random_location_in_area = {
 						limit = {
 							has_owner = no
@@ -1246,7 +1246,7 @@ flavor_chk.32 = { # Plight of Cahokia
 				}
 			}
 			25 = {
-				area:me_anorien_area_28_31 = {
+				area:me_anorien_area_24_28 = {
 					random_location_in_area = {
 						limit = {
 							has_owner = no

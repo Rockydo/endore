@@ -1553,13 +1553,13 @@ exploration_monthly.39 = { #Hellish Insects
 		exploration_progress > 0.05
 		location = {
 			OR = {
-				province_definition = province_definition:me_anorien_area_28_31_province_01
-				province_definition = province_definition:me_anorien_area_28_31_province_01
-				province_definition = province_definition:me_anorien_area_28_31_province_01
-				province_definition = province_definition:me_anorien_area_28_31_province_01
-				province_definition = province_definition:me_anorien_area_28_31_province_01
-				area = area:me_anorien_area_28_31
-				area = area:me_anorien_area_28_31
+				province_definition = province_definition:me_anorien_area_24_28_province_01
+				province_definition = province_definition:me_anorien_area_24_28_province_01
+				province_definition = province_definition:me_anorien_area_24_28_province_01
+				province_definition = province_definition:me_anorien_area_24_28_province_01
+				province_definition = province_definition:me_anorien_area_24_28_province_01
+				area = area:me_anorien_area_24_28
+				area = area:me_anorien_area_24_28
 			}
 		}
 		OR = {

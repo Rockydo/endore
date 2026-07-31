@@ -247,11 +247,11 @@ guelphs_and_ghibellines.6 = {
 				every_country_with_capital_in_geography = {
 					limit = {
 						capital = {
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
 						}
 						can_join_international_organization = international_organization:hre
 					}
@@ -261,11 +261,11 @@ guelphs_and_ghibellines.6 = {
 					every_owned_location = {
 						limit = {
 							region = region:me_anorien_region
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
-							NOT = { area = area:me_anorien_area_28_31 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
+							NOT = { area = area:me_anorien_area_24_28 }
 						}
 						international_organization:hre = {
 							add_location_to_international_organization = prev

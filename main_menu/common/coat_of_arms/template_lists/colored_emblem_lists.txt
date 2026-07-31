@@ -1291,8 +1291,8 @@ colored_emblem_texture_lists = {
 					scope:actor ?= {
 						capital ?= {
 							OR = {
-								area = area:me_anorien_area_28_31 # TODO
-								area = area:me_anorien_area_28_31 # TODO
+								area = area:me_anorien_area_24_28 # TODO
+								area = area:me_anorien_area_24_28 # TODO
 							}
 						}
 					}
@@ -6043,9 +6043,9 @@ colored_emblem_texture_lists = {
 				scope:actor ?= {
 					capital ?= {
 						OR = {
-							area = area:me_anorien_area_28_31
-							area = area:me_anorien_area_28_31
-							area = area:me_anorien_area_28_31
+							area = area:me_anorien_area_24_28
+							area = area:me_anorien_area_24_28
+							area = area:me_anorien_area_24_28
 						}
 					}
 				}

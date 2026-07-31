@@ -5453,10 +5453,10 @@ flavor_chi.79 = {
 
 scripted_trigger in_amur_expedition_area = {
 	OR = {
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
 	}
 }
 
@@ -5520,10 +5520,10 @@ flavor_chi.80 = {
 			has_trait_category = general
 		}
 		OR = {
-			area:me_anorien_area_28_31 = { has_valid_expedition_target = yes }
-			area:me_anorien_area_28_31 = { has_valid_expedition_target = yes }
-			area:me_anorien_area_28_31 = { has_valid_expedition_target = yes }
-			area:me_anorien_area_28_31 = { has_valid_expedition_target = yes }
+			area:me_anorien_area_24_28 = { has_valid_expedition_target = yes }
+			area:me_anorien_area_24_28 = { has_valid_expedition_target = yes }
+			area:me_anorien_area_24_28 = { has_valid_expedition_target = yes }
+			area:me_anorien_area_24_28 = { has_valid_expedition_target = yes }
 		}
 	}
 
@@ -5536,7 +5536,7 @@ flavor_chi.80 = {
 			save_scope_as = target_character
 		}
 		save_scope_as = expedition_country
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				every_nomad_countries_in_location = {
 					add_to_list = list_of_jurchens
@@ -5546,7 +5546,7 @@ flavor_chi.80 = {
 				}
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				every_nomad_countries_in_location = {
 					add_to_list = list_of_jurchens
@@ -5556,7 +5556,7 @@ flavor_chi.80 = {
 				}
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				every_nomad_countries_in_location = {
 					add_to_list = list_of_jurchens
@@ -5566,7 +5566,7 @@ flavor_chi.80 = {
 				}
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				every_nomad_countries_in_location = {
 					add_to_list = list_of_jurchens
@@ -8188,7 +8188,7 @@ flavor_chi.113 = {
 		any_character = {
 			is_general = yes
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				has_owner = no
 				is_coastal = yes
@@ -8210,7 +8210,7 @@ flavor_chi.113 = {
 			save_scope_as = target_character
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					has_owner = no
@@ -8500,7 +8500,7 @@ flavor_chi.117 = {
 			value = scope:target_rebels
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			save_scope_as = target_area
 		}
 
@@ -9174,7 +9174,7 @@ flavor_chi.1000 = {
 
 	trigger = {
 		at_war = no
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner ?= root
 				is_port = yes
@@ -9216,7 +9216,7 @@ flavor_chi.1000 = {
 				save_scope_as = target_foreign_country
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					owner ?= root

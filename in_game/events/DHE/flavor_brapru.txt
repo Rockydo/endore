@@ -1668,7 +1668,7 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 	trigger = {
 		is_protestant = yes
 		societal_value:spiritualist_vs_humanist >= 75
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				owner ?= ROOT
 				percent >= 0.9
@@ -1678,7 +1678,7 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 			any_sub_continent_in_continent = {
 				any_region_in_continent = {
 					any_area_in_region = {
-						NOT = { this = area:me_anorien_area_28_31 }
+						NOT = { this = area:me_anorien_area_24_28 }
 						any_province_definition_in_area = {
 							any_province_in_province_definition = {
 								religion_percentage = {
@@ -1703,7 +1703,7 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 				every_region_in_continent = {
 					every_area_in_region = {
 						limit = {
-							NOT = { this = area:me_anorien_area_28_31 }
+							NOT = { this = area:me_anorien_area_24_28 }
 						}
 						every_province_definition_in_area = {
 							every_province_in_province_definition = {
@@ -1743,7 +1743,7 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 				min = 1
 			}
 			save_scope_as = currently_scoped_target
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				random_province_definition_in_area = {
 					limit = {
 						NOT = { this = scope:currently_scoped_target.province_definition }
@@ -1761,7 +1761,7 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 			}
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner = ROOT
@@ -1780,7 +1780,7 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 
 		custom_tooltip = {
 			text = BRA_move_away_from_prosperity_silesia_tt
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner = ROOT
@@ -1814,28 +1814,28 @@ flavor_brapru.28 = {
 	}
 
 	trigger = {
-		own_entire_province = province_definition:me_anorien_area_28_31_province_01
-		area:me_anorien_area_28_31 = {
+		own_entire_province = province_definition:me_anorien_area_24_28_province_01
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				percent >= 0.7
 				owner = ROOT
 			}
 		}
 		OR = {
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_location_in_province_definition = {
 					percent >= 0.25
 					owner = ROOT
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_location_in_province_definition = {
 					percent >= 0.25
 					owner = ROOT
 				}
 			}
 		}
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_province_in_area = {
 				owner = {
 					NOR = {
@@ -1849,7 +1849,7 @@ flavor_brapru.28 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_province_in_area = {
 				limit = {
 					NOT = {

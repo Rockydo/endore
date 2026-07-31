@@ -1110,7 +1110,7 @@ flavor_hol.22 = {
 		"culture_percentage_in_country(culture:frisian)" > 0
 		army_size > 0
 		any_owned_location = {
-			area = area:me_anorien_area_28_31
+			area = area:me_anorien_area_24_28
 			any_unit_in_location = {
 				count >= 1
 				owner = root

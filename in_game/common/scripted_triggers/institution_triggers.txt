@@ -7,12 +7,12 @@
 renaissance_plausible_location = {
 	has_owner = yes
 	OR = {
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
-		area = area:me_anorien_area_28_31
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
+		area = area:me_anorien_area_24_28
 	}
 	OR = {
 		location_rank = location_rank:city
@@ -72,9 +72,9 @@ new_world_plausible_location = {
 	}
 	owner = {
 		OR = {
-			has_discovered_area = area:me_anorien_area_28_31
-			has_discovered_area = area:me_anorien_area_28_31
-			has_discovered_area = area:me_anorien_area_28_31
+			has_discovered_area = area:me_anorien_area_24_28
+			has_discovered_area = area:me_anorien_area_24_28
+			has_discovered_area = area:me_anorien_area_24_28
 		}
 	}
 }

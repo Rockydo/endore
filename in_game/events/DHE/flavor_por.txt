@@ -171,7 +171,7 @@ flavor_por.3 = { #Missionaries in the Spice Islands
 
 	option = {
 		name = flavor_por.3.a
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			ordered_location_in_area = {
 				limit = {
 					NOT = { has_building = building_type:missionary_building }
@@ -435,8 +435,8 @@ flavor_por.9 = { #Spice Trade in Indian Ocean
 			location = {
 				OR = {
 					region = region:me_anorien_region
-					area = area:me_anorien_area_28_31
-					area = area:me_anorien_area_28_31
+					area = area:me_anorien_area_24_28
+					area = area:me_anorien_area_24_28
 				}
 			}
 		}
@@ -454,8 +454,8 @@ flavor_por.9 = { #Spice Trade in Indian Ocean
 				location = {
 					OR = {
 						region = region:me_anorien_region
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 				}
 			}
@@ -570,7 +570,7 @@ flavor_por.11 = { #Crusade in Morocco
 	trigger = {
 		is_subject = no
 		religion = religion:catholic
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			any_location_in_area = {
 				exists = dominant_religion
 				dominant_religion.group = religion_group:muslim
@@ -586,7 +586,7 @@ flavor_por.11 = { #Crusade in Morocco
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			random_location_in_area = {
 				limit = {
 					exists = dominant_religion
@@ -840,7 +840,7 @@ flavor_por.17 = {
 
 		custom_tooltip = {
 			text = flavor_por.17.a.custom
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -859,7 +859,7 @@ flavor_por.17 = {
 					}
 				}
 			}
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					limit = {
 						owner ?= root
@@ -1054,7 +1054,7 @@ flavor_por.19 = {
 			change_character_allegiance = scope:braganca_supporters
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= root
@@ -1070,7 +1070,7 @@ flavor_por.19 = {
 			}
 		}
 
-		area:me_anorien_area_28_31 = {
+		area:me_anorien_area_24_28 = {
 			every_location_in_area = {
 				limit = {
 					owner ?= root
@@ -1813,7 +1813,7 @@ flavor_por.29 = { #The Epistola de Victoria Contra Infideles
 		historical_option = yes
 		custom_tooltip = flavor_por.29.tt1
 		hidden_effect = {
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -1826,7 +1826,7 @@ flavor_por.29 = { #The Epistola de Victoria Contra Infideles
 					}
 				}
 			}
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -1842,8 +1842,8 @@ flavor_por.29 = { #The Epistola de Victoria Contra Infideles
 			every_province = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 					religion_percentage = {
 						religion = religion:judaism
@@ -1922,7 +1922,7 @@ flavor_por.29 = { #The Epistola de Victoria Contra Infideles
 		name = flavor_por.29.b
 		custom_tooltip = flavor_por.29.tt2
 		hidden_effect = {
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -1933,7 +1933,7 @@ flavor_por.29 = { #The Epistola de Victoria Contra Infideles
 					}
 				}
 			}
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -2275,8 +2275,8 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 			every_province = {
 				limit = {
 					OR = {
-						area = area:me_anorien_area_28_31
-						area = area:me_anorien_area_28_31
+						area = area:me_anorien_area_24_28
+						area = area:me_anorien_area_24_28
 					}
 					religion_percentage = {
 						religion = religion:sunni
@@ -2301,7 +2301,7 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 		hidden_effect = {
 			random_list = {
 				60 = {
-					area:me_anorien_area_28_31 = {
+					area:me_anorien_area_24_28 = {
 						every_location_in_area = {
 							every_pop = {
 								limit = {
@@ -2314,7 +2314,7 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 							}
 						}
 					}
-					area:me_anorien_area_28_31 = {
+					area:me_anorien_area_24_28 = {
 						every_location_in_area = {
 							every_pop = {
 								limit = {
@@ -2330,8 +2330,8 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 					every_province = {
 						limit = {
 							OR = {
-								area = area:me_anorien_area_28_31
-								area = area:me_anorien_area_28_31
+								area = area:me_anorien_area_24_28
+								area = area:me_anorien_area_24_28
 							}
 							religion_percentage = {
 								religion = religion:sunni
@@ -2405,7 +2405,7 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 					}
 				}
 				40 = {
-					area:me_anorien_area_28_31 = {
+					area:me_anorien_area_24_28 = {
 						every_location_in_area = {
 							every_pop = {
 								limit = {
@@ -2418,7 +2418,7 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 							}
 						}
 					}
-					area:me_anorien_area_28_31 = {
+					area:me_anorien_area_24_28 = {
 						every_location_in_area = {
 							every_pop = {
 								limit = {
@@ -2440,8 +2440,8 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 					every_owned_location = {
 						limit = {
 							OR = {
-								area = area:me_anorien_area_28_31
-								area = area:me_anorien_area_28_31
+								area = area:me_anorien_area_24_28
+								area = area:me_anorien_area_24_28
 							}
 						}
 						every_pop = {
@@ -2456,8 +2456,8 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 					every_province = {
 						limit = {
 							OR = {
-								area = area:me_anorien_area_28_31
-								area = area:me_anorien_area_28_31
+								area = area:me_anorien_area_24_28
+								area = area:me_anorien_area_24_28
 							}
 							religion_percentage = {
 								religion = religion:sunni
@@ -2546,7 +2546,7 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 		name = flavor_por.31.c
 		custom_tooltip = flavor_por.31.tt3
 		hidden_effect = {
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {
@@ -2557,7 +2557,7 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 					}
 				}
 			}
-			area:me_anorien_area_28_31 = {
+			area:me_anorien_area_24_28 = {
 				every_location_in_area = {
 					every_pop = {
 						limit = {

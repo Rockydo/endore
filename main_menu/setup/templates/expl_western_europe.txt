@@ -22,70 +22,70 @@ discovered_regions = {
 
 discovered_areas = {
 	#me_anorien_region
-	me_anorien_area_28_31
-	me_anorien_area_28_31
+	me_anorien_area_24_28
+	me_anorien_area_24_28
 	#Maghreb
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
 	#Egypt
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
-	me_anorien_area_28_31
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
+	me_anorien_area_24_28
 	#me_anorien_region
-	me_anorien_area_28_31
-	me_anorien_area_28_31
+	me_anorien_area_24_28
+	me_anorien_area_24_28
 }
 discovered_provinces = {
 	#me_anorien_region
-	#me_anorien_area_28_31
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	#me_anorien_area_28_31
-	me_anorien_area_28_31_province_01
+	#me_anorien_area_24_28
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	#me_anorien_area_24_28
+	me_anorien_area_24_28_province_01
 	#me_anorien_region
-	#me_anorien_area_28_31
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
+	#me_anorien_area_24_28
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
 	#me_anorien_region
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	#me_anorien_area_28_31
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	#me_anorien_area_28_31
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
-	me_anorien_area_28_31_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	#me_anorien_area_24_28
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	#me_anorien_area_24_28
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
+	me_anorien_area_24_28_province_01
 }

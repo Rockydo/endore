@@ -6,12 +6,12 @@ sell_corsica = {
 	show_message_to_target = no
 	potential = {
 		OR = {
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_location_in_province_definition = {
 					owner = scope:actor
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				any_location_in_province_definition = {
 					owner = scope:actor
 				}
@@ -52,7 +52,7 @@ sell_corsica = {
 	effect = {
 		custom_tooltip = {
 			text = sell_corsica_tt
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner = scope:actor
@@ -68,7 +68,7 @@ sell_corsica = {
 					change_location_owner = scope:recipient
 				}
 			}
-			province_definition:me_anorien_area_28_31_province_01 = {
+			province_definition:me_anorien_area_24_28_province_01 = {
 				every_location_in_province_definition = {
 					limit = {
 						owner = scope:actor

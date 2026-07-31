@@ -38,7 +38,7 @@ from PIL import Image, ImageDraw, ImageFilter
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from gen_rivers import river_control_points
-from m2_controls import natural_path
+from m2_controls import land_mask, natural_path
 from worldgen import CONTROL, DERIVED, TERRAIN_OUT
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,8 +56,12 @@ MATERIAL_H = 4_096
 TILE_SIZE = 128
 BORDER_SIZE = 2
 STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
-HEIGHT_QUANTUM = 512
-GENERATOR_VERSION = 12
+# q64 retains 0.098% of the 16-bit range per step—eight times finer than the
+# live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
+# vanilla-count world past this machine's reliable 98%-load memory envelope.
+HEIGHT_QUANTUM = 64
+GENERATOR_VERSION = 19
+HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({17, 18, 19})
 
 # Installed materials.txt establishes the native mask-channel meanings.  The
 # cache stores a bitset rather than a material index: several bits may be set
@@ -280,9 +284,11 @@ def transformed_height_tile(
     values = np.clip(np.asarray(tile, dtype=np.float32), 0, 65_535).astype(
         np.uint16
     )
-    # 512 height units are 0.78% of the engine range. The full-precision
-    # authored source remains committed separately; cache quantization keeps
-    # the derived virtual texture below GitHub's 100 MiB ordinary-file limit.
+    # Preserve the full-precision authored source, but package its derived
+    # runtime tiles at the bounded HEIGHT_QUANTUM. q512 and q256 created
+    # unmistakable parallel terraces; q1 pushed the native-density world past
+    # this machine's reliable 98%-load envelope. q64 is the current retail
+    # candidate and still requires like-for-like close-renderer acceptance.
     values = (
         (values.astype(np.uint32) // HEIGHT_QUANTUM) * HEIGHT_QUANTUM
     ).astype(np.uint16)
@@ -374,12 +380,10 @@ def river_material_mask(projection: dict) -> np.ndarray:
         )
         if len(points) < 2:
             continue
-        # The material channel is the player-facing wet corridor, not the
-        # one-pixel parser graph. Give major rivers a readable bank-to-bank
-        # footprint while preserving their authored hierarchy, organic path,
-        # mouth, and downstream taper.  The previous 0.90 multiplier vanished
-        # at regional zoom even for the Anduin.
-        nominal = max(5.0, float(river["width"]) * MATERIAL_H * 1.45)
+        # The indexed parser graph supplies the actual water. Material paint
+        # only darkens the banks around it. Theatre review showed the former
+        # 1.45x mask as broad transport-like corridors at regional zoom.
+        nominal = max(2.0, float(river["width"]) * MATERIAL_H * 0.62)
         segments = len(points) - 1
         for index, (start, end) in enumerate(zip(points, points[1:])):
             progress = (index + 0.5) / segments
@@ -406,7 +410,13 @@ def render_material_source() -> np.ndarray:
             f"{(MATERIAL_W // 2, MATERIAL_H // 2)}"
         )
     biomes = resized_mask(control_biomes)
-    land = ~np.isin(biomes, (0, 7))
+    projection = json.loads(PROJECTION_CONTROL.read_text(encoding="utf-8"))
+    # Match the native-resolution shoreline used by the height source rather
+    # than re-enlarging the control biome edge.
+    land = np.asarray(
+        land_mask(projection, (MATERIAL_W, MATERIAL_H)),
+        dtype=np.uint8,
+    ) > 0
     water = ~land
 
     with Image.open(HEIGHT_SOURCE) as opened:
@@ -418,12 +428,28 @@ def render_material_source() -> np.ndarray:
         )
 
     noise = material_noise()
+    # Terrain variation must follow geography at theatre scale.  The former
+    # equal random mix put the same brown-green stipple on plains, forests,
+    # and crests, flattening the otherwise valid 3D height field.  Keep the
+    # organic noise, but bias it continuously by altitude and authored biome
+    # so high ranges expose rockier variation while woods and wetlands retain
+    # a cooler, greener base.  This changes no gameplay terrain template.
+    altitude = np.clip(
+        (height.astype(np.float32) - 11_000.0) / 36_000.0,
+        0.0,
+        1.0,
+    )
+    selector = noise.astype(np.int16)
+    selector += np.round(altitude * 72.0).astype(np.int16)
+    selector[np.isin(biomes, (2, 3, 6))] -= 22
+    selector[np.isin(biomes, (4, 8, 10))] += 18
+    np.clip(selector, 0, 255, out=selector)
     material = np.zeros(noise.shape, dtype=np.uint16)
-    first = noise < 105
-    first_blend = (noise >= 105) & (noise < 122)
-    second = (noise >= 122) & (noise < 151)
-    second_blend = (noise >= 151) & (noise < 169)
-    third = noise >= 169
+    first = selector < 105
+    first_blend = (selector >= 105) & (selector < 122)
+    second = (selector >= 122) & (selector < 151)
+    second_blend = (selector >= 151) & (selector < 169)
+    third = selector >= 169
     material[land & first] = MATERIAL_VARIATIONS[0]
     material[land & first_blend] = (
         MATERIAL_VARIATIONS[0] | MATERIAL_VARIATIONS[1]
@@ -434,11 +460,41 @@ def render_material_source() -> np.ndarray:
     )
     material[land & third] = MATERIAL_VARIATIONS[2]
 
-    control_water = np.isin(control_biomes, (0, 7))
-    coast_control = expanded_control_mask(control_water, 4) & ~control_water
-    coast = resized_mask(coast_control) > 0
-    outer_coast_control = expanded_control_mask(~control_water, 2) & control_water
-    outer_coast = resized_mask(outer_coast_control) > 0
+    # Installed oceanic/continental mountain-wasteland + sparse definitions
+    # do not order their three safe variations from low to high altitude:
+    # bit 10 is snow, bit 11 is rock, and bit 12 is dark dirt. The generic
+    # selector above therefore painted the highest ENDÓRË crests with the
+    # dirt/rubble slot and produced large brown slabs. Repaint authored
+    # mountain cores from physical height, with organic local displacement:
+    # dirt on the lowest shoulders, rock through the massif, snow only on
+    # genuine upper crests. Overlap bits through broad transition bands so
+    # the renderer blends instead of drawing hard material contours.
+    mountain = (biomes == 4) & land
+    mountain_score = height.astype(np.float32)
+    mountain_score += (noise.astype(np.float32) - 127.5) * 28.0
+    mountain_dirt = mountain & (mountain_score < 37_000.0)
+    mountain_dirt_rock = mountain & (
+        (mountain_score >= 37_000.0) & (mountain_score < 40_500.0)
+    )
+    mountain_rock = mountain & (
+        (mountain_score >= 40_500.0) & (mountain_score < 54_000.0)
+    )
+    mountain_rock_snow = mountain & (
+        (mountain_score >= 54_000.0) & (mountain_score < 60_000.0)
+    )
+    mountain_snow = mountain & (mountain_score >= 60_000.0)
+    material[mountain_dirt] = MATERIAL_VARIATIONS[2]
+    material[mountain_dirt_rock] = (
+        MATERIAL_VARIATIONS[2] | MATERIAL_VARIATIONS[1]
+    )
+    material[mountain_rock] = MATERIAL_VARIATIONS[1]
+    material[mountain_rock_snow] = (
+        MATERIAL_VARIATIONS[1] | MATERIAL_VARIATIONS[0]
+    )
+    material[mountain_snow] = MATERIAL_VARIATIONS[0]
+
+    coast = expanded_control_mask(water, 8) & land
+    outer_coast = expanded_control_mask(land, 4) & water
 
     coast_kind = np.full(height.shape, MATERIAL_FLAT_COAST, dtype=np.uint16)
     coast_kind[(height >= 16_000) & (height < 27_000)] = MATERIAL_HILL_COAST
@@ -459,6 +515,14 @@ def render_material_source() -> np.ndarray:
             3,
         )
     ) > 0
+    mountain_edges = transition_edges(
+        np.where(control_biomes == 4, 4, 1).astype(np.uint8),
+        climate_only=False,
+    )
+    mountain_transition = resized_mask(
+        expanded_control_mask(mountain_edges, 10)
+    ) > 0
+    vegetation_transition |= mountain_transition
     climate_transition = resized_mask(
         expanded_control_mask(
             transition_edges(control_biomes, climate_only=True),
@@ -468,7 +532,6 @@ def render_material_source() -> np.ndarray:
     material[vegetation_transition & land] |= MATERIAL_VEGETATION_TRANSITION
     material[climate_transition & land] |= MATERIAL_CLIMATE_TRANSITION
 
-    projection = json.loads(PROJECTION_CONTROL.read_text(encoding="utf-8"))
     rivers = river_material_mask(projection) & land
     material[rivers] |= MATERIAL_RIVER
 
@@ -634,9 +697,11 @@ def reusable_height_stats(height_source_hash: str) -> dict[str, int] | None:
     except (OSError, json.JSONDecodeError):
         return None
     if (
-        manifest.get("source_sha256") != height_source_hash
+        manifest.get("generator_version") not in HEIGHT_FORMAT_COMPATIBLE_VERSIONS
+        or manifest.get("source_sha256") != height_source_hash
         or manifest.get("tile_order")
         != "fine_to_coarse_row_major_y_inverted"
+        or manifest.get("height_quantum") != HEIGHT_QUANTUM
     ):
         return None
     info_path = CACHE_OUT / "heightmap.info"
@@ -925,6 +990,8 @@ def check(*, quiet: bool = False) -> list[str]:
         return [f"invalid terrain cache manifest: {error}"]
     if manifest.get("generator_version") != GENERATOR_VERSION:
         failures.append("terrain cache generator version is stale")
+    if manifest.get("height_quantum") != HEIGHT_QUANTUM:
+        failures.append("terrain cache height quantum is stale")
     if manifest.get("tile_order") != "fine_to_coarse_row_major_y_inverted":
         failures.append("terrain cache manifest has the wrong tile order")
     if manifest.get("source_sha256") != sha256(HEIGHT_SOURCE):

@@ -25,7 +25,7 @@ sca_sound_toll = {
 
 	potential = { has_or_had_tag = SCA }
 
-	allow = { own_entire_province = province_definition:me_anorien_area_28_31_province_01 }
+	allow = { own_entire_province = province_definition:me_anorien_area_24_28_province_01 }
 
 	requires = merchant_power_from_maritime_discovery_advance
 
