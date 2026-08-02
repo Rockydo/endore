@@ -1455,3 +1455,14 @@ Forest source polygon at every LOD and preserve all unrelated random streams wit
 placement seed version. Do not enlarge the forest mask, change nearby ownership, or infer
 that Bucklebury's fields and roadward edge should be continuous canopy. Acceptance depends
 on both the complete named-mask census and source-core live evidence.
+
+## 2026-08-02 - Strengthen physical drainage without reopening the rejected parser graph
+
+Keep all 102 non-duplicated Arda Maps courses and the installed-safe 12 independent water
+channels. Do not promote the 14 joined named tributaries or 76 other physical courses by
+repeating the custom affluent graph already rejected by build 24187685. Instead, make
+terrain-only drainage hierarchy-aware in the material cache: named courses receive a
+0.82/four-pixel calibration and unnamed courses 0.72/three pixels, while actual engine
+rivers retain 0.62/two pixels. This preserves exact source geometry and load safety while
+improving regional legibility. Treat rocky physical incision as an interim honest renderer
+distinction, not as completion of the river system or permission to close M2.

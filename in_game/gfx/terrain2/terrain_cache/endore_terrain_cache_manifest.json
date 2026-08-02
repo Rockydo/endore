@@ -1,6 +1,6 @@
 {
   "generator": "gen_terrain_cache.py",
-  "generator_version": 46,
+  "generator_version": 47,
   "source": "in_game/gfx/terrain2/heightmap.png",
   "source_sha256": "090fde98f5f94faad693939e5a04fc17ea676936aca4c77a9ef66ac8f213e683",
   "source_resolution": [
@@ -75,13 +75,13 @@
   ],
   "tile_count": 174763,
   "height_unique_tiles": 25247,
-  "material_unique_tiles": 45169,
+  "material_unique_tiles": 45183,
   "material_nonzero_fraction": 0.46650564670562744,
   "earth_decal_layers": 0,
   "material_preview": {
     "path": "docs/world/derived/terrain_material_preview.png",
-    "bytes": 52128,
-    "sha256": "6864e5b433d836805dadebc033ab3d40a85376958866ad615c7452ddc1fffb5f"
+    "bytes": 52148,
+    "sha256": "3ea69f0e55a854e60443795d4d729c0280304f2123882d811e130d76157ec6c9"
   },
   "outputs": {
     "heightmap.bin": {
@@ -109,12 +109,12 @@
       "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
     },
     "materials.bin": {
-      "bytes": 23534697,
-      "sha256": "f805d9805e2f0b25c0af1868029b3c04cdc7bff81d51773c6a55823b961d4fc0"
+      "bytes": 23539125,
+      "sha256": "7ce8916e148671e3882f210705e3f1fbc71f697376e89c81bc8097fc4cf42984"
     },
     "materials.info": {
-      "bytes": 5189114,
-      "sha256": "9ceefea16d12d224fc8cf1cb3d149947082e3f8be6f4d82f6c0d2ddb91de85cf"
+      "bytes": 5189130,
+      "sha256": "58f61c103a547b70e096489a72bf40462523533a58855e077eace2e9f827769a"
     },
     "quadtree_nodes.bin": {
       "bytes": 67108880,

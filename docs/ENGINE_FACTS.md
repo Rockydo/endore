@@ -376,3 +376,14 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   `vegetation_grass_test_mesh` renders as repeated green shrub-like rosettes at normal
   camera scales, and removing its transforms removes those clumps in a fresh-game A/B.
   Palm/grass exact definitions therefore remain quarantined and their bins absent.
+- Build 24187685 safely loads the accepted 12 independent ENDÓRË river channels while 90
+  additional source-backed courses remain physical height/material drainage. Increasing
+  only those terrain-only masks from 0.62/two pixels to class-aware 0.82/four pixels for
+  named drainage and 0.72/three pixels for unnamed drainage does not require a change to
+  `rivers.png`. Fresh +12/+14 Observer views show the Brandywine, Celebrant/Anduin,
+  lower-Anduin tributaries, and upper Lhûn without broad material corridors.
+- At close zoom, independently serialized courses render as blue engine water, whereas
+  joined physical courses render as incised rocky/material drainage. This is a useful and
+  load-safe visibility distinction, not proof that build 24187685 supports arbitrary
+  affluent water graphs; the earlier exact red degree-two endpoint candidate remains
+  rejected.

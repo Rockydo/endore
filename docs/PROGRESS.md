@@ -1455,3 +1455,28 @@
   source endpoints, red/yellow degree-two junction markers, and 4/5/11/15 width channels,
   but earlier exact red-endpoint tests still failed in build 24187685. This isolates the
   next physical-map task without contaminating the accepted v82 candidate.
+
+## 2026-08-02 - v83 hierarchy-aware physical drainage visibility
+
+- Generator v47 reused the verified Arda height payload and regenerated only the terrain
+  material cache. It leaves the accepted 12-channel engine river raster and every source
+  course untouched, while increasing named terrain-only drainage presentation by roughly
+  32% and unnamed physical feeders by roughly 16%. Class validation rejects any physical
+  course lacking one of the six authored hydrology classes. The complete 174,763-tile
+  cache check passes and still reports zero Earth decal layers.
+- A genuinely fresh player-facing New Game entered HUD-proven Observer in 162.4 seconds on
+  exact candidate fingerprint
+  `b299dedc65704ba3b3c8c408274fb8dd7b20d088776a7e7cbb96313546d1eeed`.
+  Evidence under `docs/screens/20260802_v83_river_visibility/` includes independently
+  reset Brandywine Bridge, Field of Celebrant, Pelargir, and Hills of Evendim views at
+  calibrated +12/+14 zoom. The indexed Brandywine and Anduin-family channels remain blue
+  water; parser-unsafe tributaries read as wider incised drainage following their exact
+  Arda Maps courses. No broad road-like material corridor appeared.
+- Maximum-speed Observer playback ran 45 seconds with zero pause recovery and retained
+  the accepted 1,486-byte error-log baseline. Paired vanilla/ENDÓRË smoke passed in 226.4
+  seconds with zero new lines and no mod-unique diagnostics; `eu5_slot.py assert-smoked`
+  binds that pass to exact fingerprint
+  `b299dedc65704ba3b3c8c408274fb8dd7b20d088776a7e7cbb96313546d1eeed`. Full validation
+  passed in 415.2 seconds, including all cartography controls, 174,763 cache tiles,
+  downstream world outputs, and lint. This accepts only the narrow visibility mechanism;
+  the complete river presentation and M2 nine-theatre gate remain red.

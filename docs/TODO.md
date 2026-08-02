@@ -407,3 +407,30 @@
   an exact retail junction-marker grammar in a bounded experiment or strengthen only the
   source-backed physical feeder presentation while retaining the parser-safe 12-channel
   graph.
+
+## Current v83 drainage-visibility checkpoint
+
+- ACCEPTED NARROW MECHANISM: retain the parser-safe 12-channel `rivers.png` byte-for-byte
+  and strengthen only the terrain material around the 90 source-backed physical courses.
+  Named terrain-only trunks/branches/tributaries use a 0.82 visibility scale with a
+  four-pixel floor; unnamed trunks/branches/feeders use 0.72 with a three-pixel floor.
+  Independently serialized engine rivers retain the accepted 0.62/two-pixel calibration.
+  Exact paths, height incision, vegetation clearance, coast, relief, ownership, and the
+  102-course control atlas remain unchanged.
+- LIVE RESULT: a genuinely fresh visual New Game reached HUD-proven Observer on exact
+  candidate fingerprint `b299dedc65704ba3b3c8c408274fb8dd7b20d088776a7e7cbb96313546d1eeed`.
+  Standardized +12/+14 evidence under
+  `docs/screens/20260802_v83_river_visibility/` proves readable Brandywine,
+  Celebrant/Anduin, lower-Anduin tributary, and upper-Lhun drainage without broad
+  transport-like bands. Indexed courses remain blue water; build-unsafe affluent courses
+  remain visibly incised physical drainage rather than being misrepresented as parser
+  water. Maximum-speed Observer playback ran 45 seconds with zero recovery and retained
+  the accepted 1,486-byte error-log baseline. Paired vanilla/ENDÓRË smoke passed in 226.4
+  seconds with zero new or mod-unique diagnostics, and exact-fingerprint assertion binds
+  it to the candidate tree. Full validation passed in 415.2 seconds across the complete
+  generated world and lint surface.
+- GATE STATUS: this is a regional-visibility improvement, not completion of the river
+  system or M2. The full physical gate remains red. Continue source-edge review and seek a
+  materially different, retail-proven affluent mechanism only if it can preserve load
+  safety; do not repeat the already rejected red-endpoint custom graph or inflate these
+  channels into decorative corridors.

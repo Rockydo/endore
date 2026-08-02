@@ -67,7 +67,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 46
+GENERATOR_VERSION = 47
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -79,7 +79,7 @@ GENERATOR_VERSION = 46
 # changes river-material semantics only. The rejected v44/v45 climate probes
 # never survived in source. v46 changes the custom palette and material mask
 # only, so it may reuse a verified v42/v43 height payload.
-HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42, 43, 46})
+HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42, 43, 46, 47})
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
 # virtual-texture cache contains a separately sculpted 65536x32768 surface:
@@ -138,6 +138,20 @@ MATERIAL_DARK_ROCK = np.uint16(1 << 12)
 MATERIAL_ROCK = np.uint16(1 << 13)
 MATERIAL_SNOW = np.uint16(1 << 14)
 MATERIAL_SAND = np.uint16(1 << 15)
+
+# Physical tributaries cannot enter build 24187685's rejected custom affluent
+# graph, but their exact Arda Maps courses still need to read as drainage in
+# the native terrain material. Keep independently serialized engine rivers at
+# the accepted narrow-bank calibration; widen only source-classed physical
+# feeders, well below the rejected former 1.45x blanket.
+TERRAIN_ONLY_RIVER_VISIBILITY = {
+    "named_trunk": (0.82, 4),
+    "named_branch": (0.82, 4),
+    "named_tributary": (0.82, 4),
+    "unnamed_trunk": (0.72, 3),
+    "unnamed_branch": (0.72, 3),
+    "unnamed_feeder": (0.72, 3),
+}
 MATERIAL_VARIATIONS = np.asarray(
     [
         MATERIAL_GRASS,
@@ -982,11 +996,23 @@ def river_material_mask(projection: dict) -> np.ndarray:
         # The indexed parser graph supplies the actual water. Material paint
         # only darkens the banks around it. Theatre review showed the former
         # 1.45x mask as broad transport-like corridors at regional zoom.
+        if river.get("terrain_only"):
+            hydrology_class = str(river.get("hydrology_class", ""))
+            if hydrology_class not in TERRAIN_ONLY_RIVER_VISIBILITY:
+                raise ValueError(
+                    f"river {river['key']} has unsupported physical-drainage class "
+                    f"{hydrology_class!r}"
+                )
+            visibility_scale, minimum_width = TERRAIN_ONLY_RIVER_VISIBILITY[
+                hydrology_class
+            ]
+        else:
+            visibility_scale, minimum_width = 0.62, 2
         nominal = max(
-            2.0,
+            float(minimum_width),
             float(river["width"])
             * MATERIAL_H
-            * 0.62
+            * visibility_scale
             * float(river.get("material_scale", 1.0)),
         )
         growth = float(river.get("material_growth", 0.58))
