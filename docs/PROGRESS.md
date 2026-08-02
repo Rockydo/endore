@@ -1591,3 +1591,24 @@
   vanilla/ENDÓRË smoke passed in 201.3 seconds with zero new mod lines, and
   `eu5_slot.py assert-smoked` binds it to the exact v52 fingerprint. This is an accepted
   focused hydrology mechanism, not M2 completion; the nine-theatre owner gate remains red.
+
+## 2026-08-03 - v88 source-bound full-atlas evidence
+
+- The first technically clean v88 full-atlas run was rejected on inspection: stale raw
+  `Land ####` queries could silently land around Moria or Mordor after localization. Its
+  full-map and genuinely named frames remain mechanically useful, but no affected raw-
+  query frame is accepted as evidence.
+- The capture manifest now parses the committed localization and requires one localized
+  result, a matching strategic region, and a normalized source-coordinate distance no
+  greater than 0.012 for all thirteen theatre and hydrology targets.
+- Corrected v88b completed in 809.5 seconds on exact fingerprint
+  `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`, from fresh New
+  Game to Observer, followed by 45 seconds of maximum-speed playback with zero recovery
+  and the unchanged 1,486-byte error log. Every finder target resolved to its intended
+  source-bound location.
+- The corrected atlas supports only the focused mechanisms it visibly proves: dense
+  source-shaped forests, source-derived climates, a dominant upper/lower Anduin, and
+  visible narrower Celebrant and Entwash courses. It does not close M2. Full feature-level
+  source comparison, political review after physical acceptance, and explicit owner
+  acceptance remain open. Mordor camera framing was improved for the next atlas; terrain
+  was not changed merely because a close camera looked into the canonical Morannon saddle.

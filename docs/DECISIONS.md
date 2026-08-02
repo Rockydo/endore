@@ -1523,3 +1523,16 @@ valley remains dry physical terrain, which keeps both banks readable.
 These additional physical water cores are terrain presentation only. They do not claim
 navigability or engine river-graph simulation for the joined courses, distributaries,
 and tributaries that the safe twelve-channel raster cannot serialize.
+
+## 2026-08-03 - Bind evidence cameras to localized source anchors
+
+Never use raw generator placeholders such as `Land 4390` as finder evidence after
+localization. Resolve every camera query against the actual committed map localization,
+then bind the resolved location key to its expected normalized source coordinate and
+strategic region. A finder success alone is not evidence: build 24187685 can silently
+center an unrelated first result for a stale query.
+
+Keep the full-map hard reset after establishing finder context. Frame Mordor with
+Morannon as the regional anchor and Barad-dur as the close anchor so the next atlas shows
+both the northern gate theatre and the ash interior without treating camera direction as
+terrain geometry.

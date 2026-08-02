@@ -243,15 +243,17 @@
    and the independent full-resolution physical controls while capturing the nine
    required terrain theatres. Do not restore the quarantined July navmesh or relaunch
    the superseded 12,104-location fingerprints.
-   CURRENT v85 EVIDENCE AUTOMATION — `tools/capture_m2_theatres.py` captures a centred
-   full-map silhouette, hard-resets, and captures deterministic regional/close pairs for all nine binding theatres, then runs
-   bounded maximum-speed playback and releases EU5. Every finder query is statically
-   required to resolve to exactly one generated display name. Belfalas now targets the
-   unique `Dol Amroth` land cell at calibrated shore-visible zoom instead of the prior
-   ambiguous ocean-only/inland searches. Full validation passed in 472.8 seconds,
-   including all 174,763 terrain tiles and the unique-camera contract. The complete
-   fresh audit is DEFERRED, not failed, while an unmanaged EU5 PID owns the
-   shared machine; do not poll or commit the tool without its resulting evidence.
+   CURRENT v88 EVIDENCE AUTOMATION — `tools/capture_m2_theatres.py` captures a centred
+   full-map silhouette, hard-resets, and captures deterministic regional/close pairs for
+   all nine binding theatres plus four hydrology views, then runs bounded maximum-speed
+   playback and releases EU5. The first full run was mechanically clean but its raw
+   `Land ####` queries were rejected because localized EU5 silently centred unrelated
+   first results. Every camera query now resolves against committed localization and is
+   bound to its intended normalized source coordinate and strategic region. Corrected
+   v88b completed in 809.5 seconds on exact fingerprint
+   `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`, followed by
+   45 seconds of maximum-speed playback with zero recovery and the unchanged 1,486-byte
+   error log. The screenshots inspect focused mechanisms only; M2 remains red.
 9. REOPENED M2 FIDELITY AUDIT — after relief, rivers, water, forests, and macro materials
    converge, compare the entire physical atlas theatre-by-theatre and feature-by-feature
    against `http://arda-maps.org/ages/third` and
@@ -484,11 +486,11 @@
   settings payload; manual testing can run `gamedriver.py profile visual` or a direct
   `launch --visual-map --no-debug-mode`. Never interpret a terrain-disabled manual frame
   as evidence about the generated physical map.
-- LIVE STATUS: the hierarchy candidate loaded in a fresh New Game and the deterministic
-  theatre audit completed with clean bounded playback. The first full-map frame exposed a
-  capture-order bug rather than a map defect; the driver now resets to the full map only
-  after establishing its finder context. A corrected complete atlas remains part of the
-  still-red M2 owner gate.
+- LIVE STATUS: the hierarchy candidate loaded in a fresh New Game and the corrected
+  source-bound v88b atlas completed with clean bounded playback. The earlier capture-order
+  bug and later stale raw-query bug are both fixed; affected v88 frames are rejected, while
+  v88b uses localized coordinate/region contracts. This remains evidence inside the
+  still-red M2 owner gate, not gate completion.
 - COMMIT GATES: repository-wide validation passed in 421.8 seconds; paired smoke passed
   in 201.3 seconds with zero new mod lines; `eu5_slot.py assert-smoked` covers exact
   fingerprint `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`.
@@ -504,8 +506,9 @@
   `docs/screens/20260802_v87e_hydrology/` shows both Anduin reaches plus Celebrant and
   Entwash. The exact-fingerprint session completed 45 seconds of maximum-speed playback
   with zero recovery and the baseline-only 1,486-byte error log.
-- REMAINING M2 WORK: run the corrected full nine-theatre atlas, continue feature-level
-  comparison with the accepted online maps, and refine any demonstrable course, bank,
-  or confluence mismatch. Jagged material edges may be softened only if both banks stay
-  readable and the inland-sea failure does not return. M2 remains red pending explicit
-  owner acceptance.
+- REMAINING M2 WORK: the corrected full atlas is captured; continue feature-level source
+  comparison and refine any demonstrable course, bank, or confluence mismatch. The next
+  atlas uses regional Morannon and close Barad-dur anchors for more useful gate/interior
+  framing. Jagged material edges may be softened only if both banks stay readable and the
+  inland-sea failure does not return. Political review follows physical acceptance. M2
+  remains red pending explicit owner acceptance.

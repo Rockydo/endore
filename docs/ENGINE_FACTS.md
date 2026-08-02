@@ -402,3 +402,8 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
 - The build loads 102 source-aligned material-water cores while `rivers.png` retains only
   twelve independent parser-safe channels. The other joined and terrain-only cores are
   visual terrain and must not be documented as navigable engine river graph edges.
+- Build 24187685's F11 finder can accept a query absent from localized location names,
+  center an unrelated first result, and leave automation with no error. Generated
+  `Land ####` display names are therefore not finder-safe once localization overrides
+  their keys. Evidence tooling must validate the actual localized text together with the
+  intended source coordinate and strategic region before launching the game.
