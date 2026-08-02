@@ -324,13 +324,13 @@ REVIEWED_COMPONENT_REPAIRS: dict[
     "me_land_2353": (
         "GON",
         "south of the White Mountains on Gondor's side",
-        "me_rohan_region",
+        "me_belfalas_region",
         (0.460, 0.480, 0.550, 0.580),
     ),
     "me_land_2909": (
         "GON",
         "south of the White Mountains on Gondor's side",
-        "me_rohan_region",
+        "me_belfalas_region",
         (0.460, 0.480, 0.550, 0.580),
     ),
     "me_land_1346": (
@@ -374,6 +374,12 @@ REVIEWED_COMPONENT_REPAIRS: dict[
         "Anduin-vale side of the High Pass frontier, contiguous with the Beornings",
         "me_anduin_vale_region",
         (0.510, 0.530, 0.210, 0.230),
+    ),
+    "me_land_0973": (
+        WILD,
+        "east-of-crest highland beyond the compact Goblin-town holding",
+        "me_anduin_vale_region",
+        (0.495, 0.505, 0.220, 0.240),
     ),
     "me_land_3898": (
         WILD,

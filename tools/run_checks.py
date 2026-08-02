@@ -24,6 +24,7 @@ class Command:
 VALIDATE_COMMANDS = (
     Command("tools/test_eu5_slot.py"),
     Command("tools/test_gamedriver.py"),
+    Command("tools/capture_m2_theatres.py", ("--check",)),
     Command("tools/cartography_reference_audit.py", ("--check",)),
     Command("tools/m2_controls.py", ("--check",)),
     Command("tools/m2_world.py", ("--check",)),

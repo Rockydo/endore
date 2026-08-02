@@ -82,6 +82,21 @@ def runtime_link_needs_repair(config: dict[str, object]) -> bool:
     return configured_user_dir != relocated_user_dir
 
 
+def settings_snapshot(path: Path) -> tuple[bool, bytes]:
+    """Capture player settings so the low-cost smoke profile cannot leak."""
+
+    return path.exists(), path.read_bytes() if path.exists() else b""
+
+
+def restore_settings(path: Path, snapshot: tuple[bool, bytes]) -> None:
+    existed, payload = snapshot
+    if existed:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(payload)
+    else:
+        path.unlink(missing_ok=True)
+
+
 def launch_and_capture(
     mode: str,
     *,
@@ -166,6 +181,8 @@ def main() -> int:
     fingerprint = game_visible_fingerprint(ROOT)
     lease = None
     environment = None
+    player_settings_path: Path | None = None
+    player_settings_snapshot: tuple[bool, bytes] | None = None
     if not args.resume:
         slot_deadline = time.monotonic() + args.slot_wait_seconds
         announced_wait = False
@@ -197,6 +214,9 @@ def main() -> int:
                     announced_wait = True
                 time.sleep(min(0.5, remaining))
         environment = lease.child_environment()
+        config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
+        player_settings_path = Path(str(config["user_dir"])) / "pdx_settings.json"
+        player_settings_snapshot = settings_snapshot(player_settings_path)
     try:
         if not args.resume:
             if not baseline_only:
@@ -255,6 +275,8 @@ def main() -> int:
             actual = normalize(actual_path)
             vanilla_actual = set()
     finally:
+        if player_settings_path is not None and player_settings_snapshot is not None:
+            restore_settings(player_settings_path, player_settings_snapshot)
         if lease is not None:
             lease.release()
     reference = normalize(baseline if baseline_only else accepted)

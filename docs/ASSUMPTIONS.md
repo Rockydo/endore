@@ -416,3 +416,33 @@ about Middle-earth.
   beside sparser Buckland fringe is therefore the intended reading. Transform density is
   a presentation proxy for ancient canopy, not evidence of settlements, political extent,
   or a larger woodland boundary.
+
+## v86 strategic-region reconciliation
+
+- The source maps establish Mordor's mountain enclosure but not an EU5 cadastral region
+  ring. The nine-vertex normalized ring is a gameplay hierarchy interpretation of the
+  Ered Lithui/Ephel Duath walls: it intentionally excludes the Morgul Vale and the
+  Cross-roads while including the interior plateaux and Nurn.
+- Rivendell is treated as west of the Misty crest in Eriador; Moria remains an Anduin-vale
+  hinge because its doors span both sides. Erebor and Dale share the compact Dale theatre,
+  while the Grey Mountains remain outside Erebor's political claim. These are strategic
+  UI classifications, not assertions that the named frontiers were surveyed borders.
+- The one generated highland cell at x=0.5001/y=0.2286 is deliberately wild. No distinct
+  TA 3018 controller is attested there, and assigning it to Goblin-town produced a detached
+  one-cell color island beyond that polity's compact High Pass holding.
+
+## v87 drainage hierarchy and rendered width
+
+- The accepted maps establish river courses, confluences, and their relative hierarchy,
+  but not a literal EU5 material width. The two-to-six-pixel source-atlas calibration is
+  therefore a renderer-scale interpretation rather than a claim about measured miles.
+- Anduin is deliberately the dominant visible watercourse: its upper and lower cores
+  grow from roughly two pixels to five or six, while ordinary named and unnamed roots,
+  branches, tributaries, and feeders remain around two or three. This preserves a massive
+  Great River without presenting every affluent as equal.
+- No watercourse was invented to make the network look busier. All 102 rendered courses
+  remain source-backed, including the Celebrant and Entwash evidence anchors and the
+  eleven Ethir Anduin distributaries.
+- A blue terrain-material core does not imply that the corresponding course is navigable
+  or participates in EU5's engine river graph. Only the twelve parser-safe independent
+  channels carry that stronger engine representation.

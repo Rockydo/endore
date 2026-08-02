@@ -63,6 +63,23 @@ AREA_KEY_OVERRIDES = {
     "me_khand_area_33_36": "me_khand_area_33_36_arda",
 }
 
+# Canon anchors bind the strategic hierarchy to the same source-audited frame
+# used by relief and ownership. These contracts catch a broad classifier that
+# still looks plausible at world scale while placing a famous site on the wrong
+# side of a range or frontier.
+ANCHOR_REGION_CONTRACTS = {
+    "rivendell": "me_north_arnor_region",
+    "moria": "me_anduin_vale_region",
+    "dale": "me_dale_region",
+    "erebor": "me_dale_region",
+    "erech": "me_belfalas_region",
+    "morannon": "me_brown_lands_region",
+    "minas_morgul": "me_ithilien_region",
+    "barad_dur": "me_mordor_region",
+    "mount_doom": "me_mordor_region",
+    "nurn_fields": "me_mordor_region",
+}
+
 
 def area_key(location: Location) -> str:
     stem = location.region.removesuffix("_region")
@@ -221,6 +238,15 @@ def check() -> list[str]:
         failures.append("hierarchy repeats one or more locations")
     if set(flattened) != {location.key for location in model.locations}:
         failures.append("hierarchy is not bijective with the location model")
+    for key, expected_region in ANCHOR_REGION_CONTRACTS.items():
+        location = model.by_key.get(key)
+        if location is None:
+            failures.append(f"hierarchy lost canonical anchor {key}")
+        elif location.region != expected_region:
+            failures.append(
+                f"canonical anchor {key} is in {location.region}, "
+                f"expected {expected_region}"
+            )
     for continent in hierarchy(model).values():
         for areas in continent.values():
             for area, provinces in areas.items():

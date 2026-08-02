@@ -1518,3 +1518,76 @@
   lines on final exact fingerprint
   `9fff7077743c1f78248aa48ab5a3342d5ae3917c328803878698b6b43973ed4e`.
   Commit remains conditioned on repository-wide static green; M2 remains red regardless.
+
+## 2026-08-02 - v85 deterministic nine-theatre evidence candidate
+
+- Re-audited the invalid Belfalas evidence path. The v81 result centred a sea location
+  and showed only open water; the later Edhellond finder result centred an inland cell and
+  showed only grass. Neither is shoreline evidence, and neither justifies redrawing the
+  hash-pinned 2,043-vertex Belfalas source window.
+- Added a single autonomous nine-theatre capture driver. It starts one fresh visual-map
+  Observer, captures a centred full-map silhouette, hard-resets zoom before every theatre view, uses unique generated-location queries,
+  captures regional and close pairs for all nine binding theatres, runs 45 seconds of
+  maximum-speed playback, and releases the lease. Belfalas uses `Dol Amroth` at calibrated
+  zoom; source-interior targets replace fuzzy labels in Old Forest, Forochel, Mirkwood,
+  Rhûn, and Harad. Its static target-resolution and compile checks pass.
+- Full validation passed in 472.8 seconds, including the new unique-camera contract and
+  complete 174,763-tile map pipeline. Repeated invocations correctly deferred before
+  launch because unmanaged EU5 PID 29448
+  owns the shared machine. Per the cross-project protocol this is neither a failure nor a
+  blocker and is not polled. The tool remains an uncommitted candidate until the fresh
+  evidence exists and can drive a source-backed physical correction or an honest no-change
+  verdict. M2 remains red.
+
+## 2026-08-02 - v86 physical-frontier hierarchy and player-profile correction
+
+- A named-anchor audit found that the realm repair layer had hidden wrong strategic
+  hierarchy: Barad-dur, Orodruin, and Nurn reported as Ithilien; Dale and Erebor as Grey
+  Mountains; Rivendell as Anduin Vale; and Erech as Rohan. Mordor now follows an
+  irregular source-aligned mountain enclosure, the Misty boundary bends around
+  Rivendell, the Dale theatre resolves before the Grey Mountains, and Rohan stops north
+  of Erech. Ten named anchor-region contracts make these distinctions permanent.
+- Rebuilt only hierarchy-dependent outputs. Terrain geometry, coasts, height, rivers,
+  vegetation transforms, and terrain cache remain unchanged. The 38-realm audit now has
+  3,198 owned and 2,002 deliberately wild land locations, zero claim violations, and no
+  undispositioned component. Mordor owns its full enclosed interior; Rivendell is compact
+  in Eriador; Erebor is a compact 13-location Lonely Mountain realm and no longer claims
+  the Grey Mountains; a detached one-cell Goblin-town island is deliberately wild.
+- Confirmed the owner's flat manual view was configuration leakage, not missing map data:
+  the shared `pdx_settings.json` retained smoke's `3d_terrain_disable=true`. Added a
+  player visual-profile command and made smoke snapshot/restore the complete prior
+  settings payload. Unit and isolated round-trip checks pass, and the visual profile was
+  restored after the owner's EU5 process closed.
+- The full nine-theatre audit is still pending and M2 remains red. Repository-wide
+  validation, exact smoke, fresh physical/political evidence, and owner acceptance remain
+  mandatory before this candidate can be committed or the gate can advance.
+- Repository-wide `gmake validate` passed in 569.8 seconds on the regenerated candidate:
+  all seven top-level commands, the 174,763-tile Arda-only cache, 38-realm graph,
+  downstream setup, capture manifest, and lint are green. Exact smoke remains pending
+  behind the owner's responsive manual visual session.
+
+## 2026-08-02 - v87 complete drainage-water hierarchy
+
+- Reworked the visible river system around all 102 non-duplicated source courses without
+  changing their lore-pinned geometry or the installed-safe twelve-channel parser graph.
+  Upper and lower Anduin now reach the installed maximum river width earlier. Every
+  affluent also receives a class-aware nested terrain-water core, while exact valleys,
+  tributary hierarchy, distributaries, and confluences remain source-controlled.
+- Rejected three genuinely fresh live calibrations. v49 and v50 painted the full broad
+  bank mask and produced inland-sea bands; v51 proved that OR-blending a narrow core with
+  an outer material band still renders the entire band as water. Generator v52 paints
+  only the nested core: ordinary drainage is roughly two to three source pixels and the
+  Great River grows to roughly five or six, leaving readable dry banks.
+- Fresh New Game evidence on exact fingerprint
+  `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`
+  is under `docs/screens/20260802_v87d_hydrology/` and
+  `docs/screens/20260802_v87e_hydrology/`. Upper Anduin at Caras Galadhon and lower Anduin
+  at Osgiliath read as the dominant watercourse; Celebrant and Entwash remain continuous,
+  visibly narrower source-aligned branches. Maximum-speed playback ran 45 seconds with
+  zero pause recovery and retained the exact 1,486-byte error-log baseline.
+- Extended the deterministic evidence driver with upper/lower Anduin plus Celebrant and
+  Entwash regional/close captures and fixed full-map ordering so Caras focus cannot leak
+  into the silhouette frame. Repository-wide validation passed in 421.8 seconds. Paired
+  vanilla/ENDÓRË smoke passed in 201.3 seconds with zero new mod lines, and
+  `eu5_slot.py assert-smoked` binds it to the exact v52 fingerprint. This is an accepted
+  focused hydrology mechanism, not M2 completion; the nine-theatre owner gate remains red.

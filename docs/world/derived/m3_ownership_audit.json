@@ -2,8 +2,8 @@
   "schema": 3,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3044,
-  "wild_locations": 2156,
+  "owned_locations": 3198,
+  "wild_locations": 2002,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -223,30 +223,30 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 15,
+      "locations": 20,
       "forced_anchors": 1,
       "final_bbox": [
         0.5931624,
         0.6351648,
-        0.1489985,
+        0.1382511,
         0.2169028
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 15,
+        "largest_component": 20,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 15,
+            "size": 20,
             "forced_anchors": 1,
             "sample": [
               "dale",
               "me_land_0159",
-              "me_land_0678",
-              "me_land_0734",
-              "me_land_0971"
+              "me_land_0373",
+              "me_land_0572",
+              "me_land_0678"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -539,30 +539,30 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 27,
+      "locations": 13,
       "forced_anchors": 1,
       "final_bbox": [
-        0.570696,
+        0.5885226,
         0.6273504,
         0.1201759,
-        0.1489985
+        0.1392281
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 27,
+        "largest_component": 13,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 27,
+            "size": 13,
             "forced_anchors": 1,
             "sample": [
               "erebor",
               "me_land_0126",
               "me_land_0296",
-              "me_land_0373",
-              "me_land_0471"
+              "me_land_0471",
+              "me_land_0707"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -668,30 +668,30 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 28,
+      "locations": 22,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4903541,
+        0.4905983,
         0.5181929,
         0.1504641,
-        0.2344895
+        0.2310699
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 28,
+        "largest_component": 22,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 28,
+            "size": 22,
             "forced_anchors": 1,
             "sample": [
               "goblin_town",
               "me_land_0128",
-              "me_land_0349",
               "me_land_0449",
-              "me_land_0717"
+              "me_land_0717",
+              "me_land_1455"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -714,7 +714,7 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 416,
+      "locations": 411,
       "forced_anchors": 9,
       "final_bbox": [
         0.354823,
@@ -725,19 +725,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 2,
-        "largest_component": 414,
-        "largest_component_fraction": 0.995192,
+        "largest_component": 409,
+        "largest_component_fraction": 0.995134,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 414,
+            "size": 409,
             "forced_anchors": 9,
             "sample": [
               "calembel",
               "erech",
               "linhir",
               "me_land_0011",
-              "me_land_0020"
+              "me_land_0014"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -770,19 +770,19 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 27,
+      "locations": 23,
       "forced_anchors": 1,
       "final_bbox": [
         0.4708181,
         0.5431013,
         0.0683928,
-        0.1470445
+        0.1446019
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 5,
+        "components": 4,
         "largest_component": 16,
-        "largest_component_fraction": 0.592593,
+        "largest_component_fraction": 0.695652,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
@@ -814,23 +814,6 @@
               "me_land_2708",
               "me_land_4604",
               "me_land_4785"
-            ],
-            "disposition": "northern goblin fastnesses divided by impassable mountain locations"
-          },
-          {
-            "size": 4,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0908",
-              "me_land_3360",
-              "me_land_4787",
-              "me_land_5022"
-            ],
-            "locations": [
-              "me_land_0908",
-              "me_land_3360",
-              "me_land_4787",
-              "me_land_5022"
             ],
             "disposition": "northern goblin fastnesses divided by impassable mountain locations"
           },
@@ -1578,48 +1561,33 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 238,
+      "locations": 419,
       "forced_anchors": 9,
       "final_bbox": [
         0.6,
         0.769475,
-        0.5202736,
-        0.7195896
+        0.5173425,
+        0.7205667
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 7,
-        "largest_component": 229,
-        "largest_component_fraction": 0.962185,
+        "components": 3,
+        "largest_component": 416,
+        "largest_component_fraction": 0.99284,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 229,
-            "forced_anchors": 0,
+            "size": 416,
+            "forced_anchors": 6,
             "sample": [
+              "barad_dur",
               "me_land_0005",
               "me_land_0009",
               "me_land_0017",
-              "me_land_0021",
-              "me_land_0029"
+              "me_land_0021"
             ],
             "locations": [],
             "disposition": "primary_component"
-          },
-          {
-            "size": 3,
-            "forced_anchors": 3,
-            "sample": [
-              "me_land_1647",
-              "me_land_1848",
-              "morannon"
-            ],
-            "locations": [
-              "me_land_1647",
-              "me_land_1848",
-              "morannon"
-            ],
-            "disposition": "accepted_forced_anchor_barrier_split"
           },
           {
             "size": 2,
@@ -1638,43 +1606,10 @@
             "size": 1,
             "forced_anchors": 1,
             "sample": [
-              "barad_dur"
-            ],
-            "locations": [
-              "barad_dur"
-            ],
-            "disposition": "accepted_forced_anchor_barrier_split"
-          },
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
               "me_land_0431"
             ],
             "locations": [
               "me_land_0431"
-            ],
-            "disposition": "accepted_forced_anchor_barrier_split"
-          },
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
-              "mount_doom"
-            ],
-            "locations": [
-              "mount_doom"
-            ],
-            "disposition": "accepted_forced_anchor_barrier_split"
-          },
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
-              "nurn_fields"
-            ],
-            "locations": [
-              "nurn_fields"
             ],
             "disposition": "accepted_forced_anchor_barrier_split"
           }
@@ -1696,10 +1631,10 @@
       "locations": 45,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4449328,
-        0.4827839,
+        0.44884,
+        0.4942613,
         0.2374206,
-        0.3321935
+        0.3199805
       ],
       "contract_violations": 0,
       "connectivity": {
@@ -1713,10 +1648,10 @@
             "forced_anchors": 1,
             "sample": [
               "me_land_0032",
+              "me_land_0062",
               "me_land_0290",
               "me_land_0371",
-              "me_land_0391",
-              "me_land_0414"
+              "me_land_0391"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1980,44 +1915,33 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 9,
+      "locations": 16,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4761905,
-        0.4935287,
-        0.196385,
+        0.4786325,
+        0.4974359,
+        0.1968735,
         0.2408403
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 2,
-        "largest_component": 8,
-        "largest_component_fraction": 0.888889,
+        "components": 1,
+        "largest_component": 16,
+        "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 8,
-            "forced_anchors": 0,
+            "size": 16,
+            "forced_anchors": 1,
             "sample": [
+              "me_land_0169",
+              "me_land_0349",
               "me_land_0514",
               "me_land_0626",
-              "me_land_0997",
-              "me_land_2925",
-              "me_land_3137"
+              "me_land_1042"
             ],
             "locations": [],
             "disposition": "primary_component"
-          },
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
-              "rivendell"
-            ],
-            "locations": [
-              "rivendell"
-            ],
-            "disposition": "accepted_forced_anchor_barrier_split"
           }
         ]
       },
@@ -2034,23 +1958,23 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 192,
+      "locations": 177,
       "forced_anchors": 4,
       "final_bbox": [
         0.4556777,
         0.5648352,
         0.4347826,
-        0.5696141
+        0.5593552
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 2,
-        "largest_component": 178,
-        "largest_component_fraction": 0.927083,
+        "largest_component": 163,
+        "largest_component_fraction": 0.920904,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 178,
+            "size": 163,
             "forced_anchors": 4,
             "sample": [
               "aldberg",
@@ -2310,23 +2234,23 @@
           0.221
         ]
       ],
-      "locations": 57,
+      "locations": 62,
       "forced_anchors": 1,
       "final_bbox": [
         0.5550672,
         0.6080586,
-        0.1514411,
+        0.1333659,
         0.2936004
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 57,
+        "largest_component": 62,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 57,
+            "size": 62,
             "forced_anchors": 1,
             "sample": [
               "me_land_0033",
@@ -2350,19 +2274,19 @@
   "all_realm_connectivity": {
     "GON": {
       "components": 2,
-      "largest_component": 414,
-      "largest_component_fraction": 0.995192,
+      "largest_component": 409,
+      "largest_component_fraction": 0.995134,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 414,
+          "size": 409,
           "forced_anchors": 9,
           "sample": [
             "calembel",
             "erech",
             "linhir",
             "me_land_0011",
-            "me_land_0020"
+            "me_land_0014"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2405,12 +2329,12 @@
     },
     "ROH": {
       "components": 2,
-      "largest_component": 178,
-      "largest_component_fraction": 0.927083,
+      "largest_component": 163,
+      "largest_component_fraction": 0.920904,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 178,
+          "size": 163,
           "forced_anchors": 4,
           "sample": [
             "aldberg",
@@ -2516,10 +2440,10 @@
           "forced_anchors": 1,
           "sample": [
             "me_land_0032",
+            "me_land_0062",
             "me_land_0290",
             "me_land_0371",
-            "me_land_0391",
-            "me_land_0414"
+            "me_land_0391"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2527,34 +2451,23 @@
       ]
     },
     "RIV": {
-      "components": 2,
-      "largest_component": 8,
-      "largest_component_fraction": 0.888889,
+      "components": 1,
+      "largest_component": 16,
+      "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 8,
-          "forced_anchors": 0,
+          "size": 16,
+          "forced_anchors": 1,
           "sample": [
+            "me_land_0169",
+            "me_land_0349",
             "me_land_0514",
             "me_land_0626",
-            "me_land_0997",
-            "me_land_2925",
-            "me_land_3137"
+            "me_land_1042"
           ],
           "locations": [],
           "disposition": "primary_component"
-        },
-        {
-          "size": 1,
-          "forced_anchors": 1,
-          "sample": [
-            "rivendell"
-          ],
-          "locations": [
-            "rivendell"
-          ],
-          "disposition": "accepted_forced_anchor_barrier_split"
         }
       ]
     },
@@ -2709,12 +2622,12 @@
     },
     "WOO": {
       "components": 1,
-      "largest_component": 57,
+      "largest_component": 62,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 57,
+          "size": 62,
           "forced_anchors": 1,
           "sample": [
             "me_land_0033",
@@ -2730,19 +2643,19 @@
     },
     "ERE": {
       "components": 1,
-      "largest_component": 27,
+      "largest_component": 13,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 27,
+          "size": 13,
           "forced_anchors": 1,
           "sample": [
             "erebor",
             "me_land_0126",
             "me_land_0296",
-            "me_land_0373",
-            "me_land_0471"
+            "me_land_0471",
+            "me_land_0707"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2772,19 +2685,19 @@
     },
     "DAL": {
       "components": 1,
-      "largest_component": 15,
+      "largest_component": 20,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 15,
+          "size": 20,
           "forced_anchors": 1,
           "sample": [
             "dale",
             "me_land_0159",
-            "me_land_0678",
-            "me_land_0734",
-            "me_land_0971"
+            "me_land_0373",
+            "me_land_0572",
+            "me_land_0678"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3013,38 +2926,23 @@
       ]
     },
     "MOR": {
-      "components": 7,
-      "largest_component": 229,
-      "largest_component_fraction": 0.962185,
+      "components": 3,
+      "largest_component": 416,
+      "largest_component_fraction": 0.99284,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 229,
-          "forced_anchors": 0,
+          "size": 416,
+          "forced_anchors": 6,
           "sample": [
+            "barad_dur",
             "me_land_0005",
             "me_land_0009",
             "me_land_0017",
-            "me_land_0021",
-            "me_land_0029"
+            "me_land_0021"
           ],
           "locations": [],
           "disposition": "primary_component"
-        },
-        {
-          "size": 3,
-          "forced_anchors": 3,
-          "sample": [
-            "me_land_1647",
-            "me_land_1848",
-            "morannon"
-          ],
-          "locations": [
-            "me_land_1647",
-            "me_land_1848",
-            "morannon"
-          ],
-          "disposition": "accepted_forced_anchor_barrier_split"
         },
         {
           "size": 2,
@@ -3063,43 +2961,10 @@
           "size": 1,
           "forced_anchors": 1,
           "sample": [
-            "barad_dur"
-          ],
-          "locations": [
-            "barad_dur"
-          ],
-          "disposition": "accepted_forced_anchor_barrier_split"
-        },
-        {
-          "size": 1,
-          "forced_anchors": 1,
-          "sample": [
             "me_land_0431"
           ],
           "locations": [
             "me_land_0431"
-          ],
-          "disposition": "accepted_forced_anchor_barrier_split"
-        },
-        {
-          "size": 1,
-          "forced_anchors": 1,
-          "sample": [
-            "mount_doom"
-          ],
-          "locations": [
-            "mount_doom"
-          ],
-          "disposition": "accepted_forced_anchor_barrier_split"
-        },
-        {
-          "size": 1,
-          "forced_anchors": 1,
-          "sample": [
-            "nurn_fields"
-          ],
-          "locations": [
-            "nurn_fields"
           ],
           "disposition": "accepted_forced_anchor_barrier_split"
         }
@@ -3169,9 +3034,9 @@
       ]
     },
     "GUN": {
-      "components": 5,
+      "components": 4,
       "largest_component": 16,
-      "largest_component_fraction": 0.592593,
+      "largest_component_fraction": 0.695652,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
@@ -3207,23 +3072,6 @@
           "disposition": "northern goblin fastnesses divided by impassable mountain locations"
         },
         {
-          "size": 4,
-          "forced_anchors": 0,
-          "sample": [
-            "me_land_0908",
-            "me_land_3360",
-            "me_land_4787",
-            "me_land_5022"
-          ],
-          "locations": [
-            "me_land_0908",
-            "me_land_3360",
-            "me_land_4787",
-            "me_land_5022"
-          ],
-          "disposition": "northern goblin fastnesses divided by impassable mountain locations"
-        },
-        {
           "size": 1,
           "forced_anchors": 1,
           "sample": [
@@ -3249,19 +3097,19 @@
     },
     "GOB": {
       "components": 1,
-      "largest_component": 28,
+      "largest_component": 22,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 28,
+          "size": 22,
           "forced_anchors": 1,
           "sample": [
             "goblin_town",
             "me_land_0128",
-            "me_land_0349",
             "me_land_0449",
-            "me_land_0717"
+            "me_land_0717",
+            "me_land_1455"
           ],
           "locations": [],
           "disposition": "primary_component"

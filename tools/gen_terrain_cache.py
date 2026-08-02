@@ -67,7 +67,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 48
+GENERATOR_VERSION = 52
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -78,8 +78,16 @@ GENERATOR_VERSION = 48
 # walls, so no older height payload is compatible with this generator. v43
 # changes river-material semantics only. The rejected v44/v45 climate probes
 # never survived in source. v46 changes the custom palette and material mask
-# only, so it may reuse a verified v42/v43 height payload.
-HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42, 43, 46, 47, 48})
+# only, so it may reuse a verified v42/v43 height payload. v49 changes only
+# material widths and the channel-6 material identity, so the verified height
+# payload remains byte-compatible. v50 is the live-calibrated narrower form of
+# that same material-only hydrology pass. v51 splits its river surface into a
+# narrow water core and wider blended wet bank, again without touching height.
+# Live v51 evidence proved channel presence is dominant rather than blended,
+# so v52 leaves that wider envelope to the heightfield and paints only the core.
+HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
+    {42, 43, 46, 47, 48, 49, 50, 51, 52}
+)
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
 # virtual-texture cache contains a separately sculpted 65536x32768 surface:
@@ -140,18 +148,48 @@ MATERIAL_SNOW = np.uint16(1 << 14)
 MATERIAL_SAND = np.uint16(1 << 15)
 
 # Physical tributaries cannot enter build 24187685's rejected custom affluent
-# graph, but their exact Arda Maps courses still need to read as drainage in
-# the native terrain material. Keep independently serialized engine rivers at
-# the accepted narrow-bank calibration; widen only source-classed physical
-# feeders, well below the rejected former 1.45x blanket.
+# graph, but their exact Arda Maps courses still need to read as water-bearing
+# drainage in the native terrain material. These class-specific scales expose
+# the complete source network without turning every feeder into an Anduin-sized
+# band. Joined named rivers receive a stronger centre channel separately below.
 TERRAIN_ONLY_RIVER_VISIBILITY = {
-    "named_trunk": (0.82, 4),
-    "named_branch": (0.82, 4),
-    "named_tributary": (0.82, 4),
-    "unnamed_trunk": (0.72, 3),
-    "unnamed_branch": (0.72, 3),
+    "named_trunk": (0.92, 5),
+    "named_branch": (0.88, 4),
+    "named_tributary": (0.84, 4),
+    "unnamed_trunk": (0.80, 4),
+    "unnamed_branch": (0.76, 3),
     "unnamed_feeder": (0.72, 3),
 }
+
+# The Great River must dominate the physical map. Its two parser-safe reaches
+# are split only by Nen Hithoel; both use the same source axis and a much wider
+# terrain-water surface than ordinary rivers. Values are material-resolution
+# scales, not changes to lore geometry or river graph topology.
+ENGINE_RIVER_VISIBILITY = {
+    "upper_anduin": (0.92, 4, 0.58),
+    "anduin": (1.05, 5, 0.62),
+}
+DEFAULT_ENGINE_RIVER_VISIBILITY = (0.68, 2, 0.58)
+JOINED_RIVER_VISIBILITY = (0.78, 3, 0.50)
+
+# A dedicated water-only core is intentionally much narrower than the wet-bank
+# mask above. At close zoom, even one material pixel spans a meaningful world
+# width; the Anduin remains dominant at roughly five to six core pixels while
+# ordinary rivers and feeders remain two to three.
+TERRAIN_ONLY_RIVER_CORE_VISIBILITY = {
+    "named_trunk": (0.28, 3),
+    "named_branch": (0.25, 2),
+    "named_tributary": (0.24, 2),
+    "unnamed_trunk": (0.23, 2),
+    "unnamed_branch": (0.22, 2),
+    "unnamed_feeder": (0.20, 2),
+}
+ENGINE_RIVER_CORE_VISIBILITY = {
+    "upper_anduin": (0.22, 3, 0.58),
+    "anduin": (0.22, 3, 0.62),
+}
+DEFAULT_ENGINE_RIVER_CORE_VISIBILITY = (0.18, 2, 0.58)
+JOINED_RIVER_CORE_VISIBILITY = (0.22, 2, 0.50)
 MATERIAL_VARIATIONS = np.asarray(
     [
         MATERIAL_GRASS,
@@ -977,7 +1015,7 @@ def ridge_material_weight(
     )
 
 
-def river_material_mask(projection: dict) -> np.ndarray:
+def river_material_mask(projection: dict, *, core: bool = False) -> np.ndarray:
     image = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
     draw = ImageDraw.Draw(image)
 
@@ -993,9 +1031,11 @@ def river_material_mask(projection: dict) -> np.ndarray:
         )
         if len(points) < 2:
             continue
-        # The indexed parser graph supplies the actual water. Material paint
-        # only darkens the banks around it. Theatre review showed the former
-        # 1.45x mask as broad transport-like corridors at regional zoom.
+        # The indexed parser graph supplies actual engine water for twelve
+        # independent channels. All other source courses receive a visually
+        # water-bearing terrain centreline over their already-authored valley.
+        # This avoids fabricating the affluent junction graph rejected by the
+        # retail parser while making the complete drainage legible in game.
         if river.get("terrain_only"):
             hydrology_class = str(river.get("hydrology_class", ""))
             if hydrology_class not in TERRAIN_ONLY_RIVER_VISIBILITY:
@@ -1003,11 +1043,31 @@ def river_material_mask(projection: dict) -> np.ndarray:
                     f"river {river['key']} has unsupported physical-drainage class "
                     f"{hydrology_class!r}"
                 )
-            visibility_scale, minimum_width = TERRAIN_ONLY_RIVER_VISIBILITY[
-                hydrology_class
-            ]
+            visibility_contract = (
+                TERRAIN_ONLY_RIVER_CORE_VISIBILITY
+                if core
+                else TERRAIN_ONLY_RIVER_VISIBILITY
+            )
+            visibility_scale, minimum_width = visibility_contract[hydrology_class]
+            growth = float(river.get("material_growth", 0.20))
+        elif river.get("joins"):
+            visibility_scale, minimum_width, growth = (
+                JOINED_RIVER_CORE_VISIBILITY if core else JOINED_RIVER_VISIBILITY
+            )
         else:
-            visibility_scale, minimum_width = 0.62, 2
+            visibility_contract = (
+                ENGINE_RIVER_CORE_VISIBILITY
+                if core
+                else ENGINE_RIVER_VISIBILITY
+            )
+            default_contract = (
+                DEFAULT_ENGINE_RIVER_CORE_VISIBILITY
+                if core
+                else DEFAULT_ENGINE_RIVER_VISIBILITY
+            )
+            visibility_scale, minimum_width, growth = visibility_contract.get(
+                river["key"], default_contract
+            )
         nominal = max(
             float(minimum_width),
             float(river["width"])
@@ -1015,7 +1075,6 @@ def river_material_mask(projection: dict) -> np.ndarray:
             * visibility_scale
             * float(river.get("material_scale", 1.0)),
         )
-        growth = float(river.get("material_growth", 0.58))
         if not 0.0 <= growth <= 0.75:
             raise ValueError(f"river {river['key']} has invalid material growth")
         segments = len(points) - 1
@@ -1364,8 +1423,14 @@ def render_material_source() -> np.ndarray:
     # channels 8/9 above are terrain variations in that custom palette, not
     # engine vegetation/climate transitions or per-location templates.
 
-    rivers = river_material_mask(projection) & land
-    material[rivers] |= MATERIAL_RIVER
+    river_banks = river_material_mask(projection) & land
+    river_cores = river_material_mask(projection, core=True) & land
+    if np.any(river_cores & ~river_banks):
+        raise AssertionError("river water core extends outside its wet bank")
+    # EU5's terrain-material renderer treats the river channel as dominant,
+    # not as a soft blend. Paint only the nested source-aligned water core;
+    # the wider authored incision already supplies valley and bank geometry.
+    material[river_cores] = MATERIAL_RIVER
     # River painting is intentionally later than the general terrain stack,
     # but 115 high-resolution samples cross a lake-biome shore/core. Restore
     # pond precedence so no dirt-river blend can puncture the still-water read.
@@ -1378,10 +1443,29 @@ def render_material_source() -> np.ndarray:
     if np.any(material[water & ~outer_coast] != 0):
         raise AssertionError("material paint leaks into open water")
 
+    # Climate coverage is a dry-surface invariant. Dedicated river and pond
+    # surfaces deliberately supersede their underlying macro climate and must
+    # not make a denser hydrology network look like climate loss.
+    dry_climate_surface = land & ~river_cores & ~material_pond
     climate_contracts = (
-        ("tundra", (biomes == 5) & land & (height < 27_000), MATERIAL_TUNDRA, 0.96),
-        ("steppe", (biomes == 9) & land & (height < 27_000), MATERIAL_STEPPE, 0.90),
-        ("arid", (biomes == 10) & land & (height < 27_000), MATERIAL_SAND, 0.90),
+        (
+            "tundra",
+            (biomes == 5) & dry_climate_surface & (height < 27_000),
+            MATERIAL_TUNDRA,
+            0.96,
+        ),
+        (
+            "steppe",
+            (biomes == 9) & dry_climate_surface & (height < 27_000),
+            MATERIAL_STEPPE,
+            0.90,
+        ),
+        (
+            "arid",
+            (biomes == 10) & dry_climate_surface & (height < 27_000),
+            MATERIAL_SAND,
+            0.90,
+        ),
     )
     for key, active, channel, minimum in climate_contracts:
         if not np.any(active):

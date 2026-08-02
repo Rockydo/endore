@@ -59,7 +59,7 @@ BIOME_BLOCK = r"""
 			base_rock_dark			# 3 mountain coast
 			endore_still_water		# 4 wetland coast / source ponds
 			sand_transition			# 5 coast transition
-			dirt_ponds_01			# 6 rivers/lakes
+			endore_still_water		# 6 source-pinned river surfaces
 			dirt_transition_02		# 7 water transition
 			sediment_dark_01			# 8 cold tundra
 			sediment_orange_01		# 9 dry steppe

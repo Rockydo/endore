@@ -228,6 +228,47 @@ def location_colors(count: int) -> list[tuple[int, int, int]]:
     return result
 
 
+MORDOR_REGION_POLYGON = (
+    # The Cirith Gorgor hinge and the two mountain walls are taken from the
+    # hash-pinned Arda Maps/Ardacraft control frame.  This deliberately leaves
+    # Minas Morgul, Henneth Annun, and the Cross-roads west of Ephel Duath in
+    # Ithilien while keeping Gorgoroth, Lithlad, and Nurn inside Mordor.
+    (0.609, 0.515),
+    (0.675, 0.505),
+    (0.715, 0.535),
+    (0.715, 0.690),
+    (0.675, 0.730),
+    (0.635, 0.720),
+    (0.621, 0.670),
+    (0.617, 0.605),
+    (0.620, 0.555),
+)
+
+
+def point_in_polygon(
+    x: float,
+    y: float,
+    polygon: tuple[tuple[float, float], ...],
+) -> bool:
+    """Return whether an equal-scale point lies inside a reviewed simple ring."""
+
+    inside = False
+    previous_x, previous_y = polygon[-1]
+    for current_x, current_y in polygon:
+        crosses = (current_y > y) != (previous_y > y)
+        if crosses:
+            boundary_x = (
+                (previous_x - current_x)
+                * (y - current_y)
+                / (previous_y - current_y)
+                + current_x
+            )
+            if x < boundary_x:
+                inside = not inside
+        previous_x, previous_y = current_x, current_y
+    return inside
+
+
 def spatial_group(x: float, y: float) -> tuple[str, str]:
     """Assign strategic regions in the equal-scale ArdaCraft projection.
 
@@ -253,6 +294,14 @@ def spatial_group(x: float, y: float) -> tuple[str, str]:
             return "me_harad", "me_near_harad_region"
         return "me_harad", "me_far_harad_region"
 
+    # Mordor is an irregular mountain enclosure, not the eastern half of a
+    # diagonal rectangle.  Resolve it before Rhun and Gondor so Barad-dur,
+    # Orodruin, Gorgoroth, Lithlad, and Nurn cannot leak into Ithilien or the
+    # Brown Lands while the occupied Morgul Vale remains geographically west
+    # of the wall.
+    if point_in_polygon(x, y, MORDOR_REGION_POLYGON):
+        return "me_mordor_and_rhun", "me_mordor_region"
+
     # Rhûn lies east of Rhovanion and north/east of Mordor; the diagonal keeps
     # Dorwinion west of the Sea of Rhûn in its intended frontier region.
     if x > max(0.62, 0.645 + (y - 0.30) * 0.10):
@@ -263,7 +312,7 @@ def spatial_group(x: float, y: float) -> tuple[str, str]:
         return "me_mordor_and_rhun", "me_khand_region"
 
     # Calenardhon is the strip between Fangorn/Anduin and the White Mountains.
-    if 0.455 <= x < 0.565 and 0.43 <= y < 0.57:
+    if 0.455 <= x < 0.565 and 0.43 <= y < 0.56:
         return "me_rhovanion", "me_rohan_region"
 
     # Gondor follows the White Mountains, Anduin, and Ephel Dúath.
@@ -279,11 +328,19 @@ def spatial_group(x: float, y: float) -> tuple[str, str]:
         return "me_gondor", "me_south_gondor_region"
 
     # Rhovanion is split around the Anduin and the source forest footprints.
-    if x >= 0.485:
+    # The Misty crest bends west between Rivendell and the Angle, then turns
+    # south toward Moria. A three-step source-aligned boundary keeps
+    # Rivendell in Eriador without painting east-of-crest highland fragments as
+    # detached Ranger territory.
+    misty_boundary = 0.500 if y < 0.24 else 0.495 if y < 0.30 else 0.485
+    if x >= misty_boundary:
+        # Dale, Esgaroth, and the isolated Erebor massif lie south of the Grey
+        # Mountains.  Resolve this compact theatre first so the old y<0.15
+        # strip cannot swallow Dale and the Lonely Mountain.
+        if x > 0.575 and 0.120 <= y < 0.22:
+            return "me_rhovanion", "me_dale_region"
         if y < 0.15:
             return "me_rhovanion", "me_grey_mountains_region"
-        if x > 0.585 and y < 0.22:
-            return "me_rhovanion", "me_dale_region"
         if x > 0.545 and y < 0.38:
             return "me_rhovanion", "me_mirkwood_region"
         if x < 0.55 and y < 0.43:

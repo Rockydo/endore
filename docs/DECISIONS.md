@@ -1479,3 +1479,47 @@ after river composition, and retain the feathered bank. Reject the first muddy l
 calibration and keep the cooler second calibration proven by the irregular Nindalf island
 cluster. This is a supported 2D terrain-material treatment, not a new mesh or a claim that
 tiny ponds have gained engine-water simulation.
+
+## 2026-08-02 - Bind strategic regions to physical frontiers
+
+Replace the remaining broad coordinate strips at four proven seams. Mordor follows a
+reviewed irregular ring inside the source-pinned Ered Lithui/Ephel Duath enclosure;
+Minas Morgul remains geographically in Ithilien and Morannon on the Brown Lands hinge,
+while Barad-dur, Orodruin, Gorgoroth, Lithlad, and Nurn belong to Mordor. The Misty crest
+bends between Rivendell and the Angle instead of using one vertical cut. Dale, Esgaroth,
+and the isolated Erebor theatre resolve before the Grey Mountains. Rohan ends north of
+the White Mountains, placing Erech on Gondor's side. Bind these distinctions to named
+anchor assertions and fail on every undispositioned political component.
+
+Erebor no longer claims the Grey Mountains merely because its capital previously fell
+into that technical strip. One east-of-crest cell beyond compact Goblin-town is
+deliberately wild rather than retained as a one-cell political island. Keep the 38-realm
+roster unchanged absent distinct TA 3018 control evidence.
+
+## 2026-08-02 - Isolate smoke graphics from the player profile
+
+The smoke harness may continue using its fast terrain-disabled profile, but it must
+snapshot and restore the player's `pdx_settings.json` around the complete leased smoke
+transaction. Provide a separate `gamedriver.py profile visual` command that restores
+3D terrain and visual-map quality without overwriting personal audio, display-mode, or UI
+choices. A running EU5 process normally blocks profile mutation because the game can
+overwrite the file on exit.
+
+## 2026-08-02 - Render the complete source drainage as nested water cores
+
+Keep the installed-safe river graph at twelve independent channels; build 24187685 has
+already rejected the custom affluent endpoint grammar. Advance upper and lower Anduin
+through palette widths 4, 5, 11, and the installed maximum 15 earlier in their courses,
+but retain every other source-backed affluent outside that parser graph.
+
+All 102 non-duplicated Arda Maps courses retain their exact incised height paths. Render
+each course with a narrow nested `endore_still_water` core derived from pinned vanilla
+terrain assets: roughly two to three source pixels for ordinary trunks, branches, and
+feeders, growing to five or six for the Great River. Reject v49/v50 whole-band water and
+v51's attempted outer blend because live A/B tests prove that any river-material bit is
+rendered as dominant full water rather than a soft wet bank. The surrounding source
+valley remains dry physical terrain, which keeps both banks readable.
+
+These additional physical water cores are terrain presentation only. They do not claim
+navigability or engine river-graph simulation for the joined courses, distributaries,
+and tributaries that the safe twelve-channel raster cannot serialize.

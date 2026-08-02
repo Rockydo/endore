@@ -509,6 +509,9 @@ me_eriador = {
 			me_north_arnor_area_04_23 = {
 				me_north_arnor_area_04_23_province_01 = { me_mountain_0458 }
 			}
+			me_north_arnor_area_04_24 = {
+				me_north_arnor_area_04_24_province_01 = { me_mountain_0528 me_mountain_0211 me_mountain_0383 }
+			}
 			me_north_arnor_area_05_15 = {
 				me_north_arnor_area_05_15_province_01 = { me_land_0970 me_land_2998 }
 			}
@@ -537,7 +540,8 @@ me_eriador = {
 				me_north_arnor_area_05_23_province_01 = { me_land_4836 me_mountain_0304 me_land_3100 me_land_2592 me_land_2069 me_land_3102 me_land_2572 }
 			}
 			me_north_arnor_area_05_24 = {
-				me_north_arnor_area_05_24_province_01 = { me_mountain_0571 me_mountain_0301 me_land_1153 }
+				me_north_arnor_area_05_24_province_01 = { me_mountain_0571 me_mountain_0436 me_land_3360 me_mountain_0492 me_mountain_0583 me_mountain_0301 me_land_4787 me_land_0908 me_mountain_0503 me_mountain_0384 }
+				me_north_arnor_area_05_24_province_02 = { me_land_1153 me_land_5022 me_mountain_0111 me_land_2114 }
 			}
 			me_north_arnor_area_06_15 = {
 				me_north_arnor_area_06_15_province_01 = { me_land_1620 me_land_0619 }
@@ -570,7 +574,7 @@ me_eriador = {
 				me_north_arnor_area_06_23_province_02 = { me_land_1370 me_land_5059 me_land_2127 }
 			}
 			me_north_arnor_area_06_24 = {
-				me_north_arnor_area_06_24_province_01 = { me_land_3625 }
+				me_north_arnor_area_06_24_province_01 = { me_land_1495 me_land_3707 me_land_4221 me_land_4401 me_land_5003 me_land_2083 me_land_3625 me_land_1455 }
 			}
 			me_north_arnor_area_07_15 = {
 				me_north_arnor_area_07_15_province_01 = { me_land_4201 me_land_2635 }
@@ -600,7 +604,7 @@ me_eriador = {
 				me_north_arnor_area_07_23_province_01 = { me_land_5124 me_land_0559 me_land_1465 me_land_4136 me_land_1051 me_land_3461 me_land_2181 }
 			}
 			me_north_arnor_area_07_24 = {
-				me_north_arnor_area_07_24_province_01 = { me_land_4491 }
+				me_north_arnor_area_07_24_province_01 = { me_land_1676 me_land_4110 me_land_1579 me_land_0281 me_land_5023 me_land_4491 me_land_3021 me_mountain_0381 }
 			}
 			me_north_arnor_area_08_16 = {
 				me_north_arnor_area_08_16_province_01 = { me_land_2924 }
@@ -626,7 +630,7 @@ me_eriador = {
 				me_north_arnor_area_08_23_province_02 = { me_land_3830 }
 			}
 			me_north_arnor_area_08_24 = {
-				me_north_arnor_area_08_24_province_01 = { me_land_3542 me_land_0626 }
+				me_north_arnor_area_08_24_province_01 = { me_land_4259 me_land_3542 me_land_1042 me_land_2542 me_land_0626 me_land_0349 me_land_2942 rivendell }
 			}
 			me_north_arnor_area_09_20 = {
 				me_north_arnor_area_09_20_province_01 = { me_land_2798 me_land_1898 me_land_0878 me_land_4828 me_land_0541 me_land_2554 me_land_1046 }
@@ -641,7 +645,7 @@ me_eriador = {
 				me_north_arnor_area_09_23_province_01 = { me_land_5102 me_land_0997 me_land_2507 me_land_0371 me_land_1988 me_land_2802 me_land_2550 me_land_3299 }
 			}
 			me_north_arnor_area_09_24 = {
-				me_north_arnor_area_09_24_province_01 = { me_land_4929 me_land_3017 }
+				me_north_arnor_area_09_24_province_01 = { me_land_0169 me_land_4693 me_land_2506 me_land_2087 me_land_2699 me_land_4929 me_land_3017 me_land_2363 me_land_4299 }
 			}
 			me_north_arnor_area_10_20 = {
 				me_north_arnor_area_10_20_province_01 = { me_land_1340 me_land_1381 me_land_2200 me_land_2011 me_land_4439 }
@@ -656,7 +660,7 @@ me_eriador = {
 				me_north_arnor_area_10_23_province_01 = { me_land_0421 me_land_3821 me_land_5111 me_land_0391 me_land_4077 me_land_1749 me_land_4042 me_land_4388 me_land_4726 }
 			}
 			me_north_arnor_area_10_24 = {
-				me_north_arnor_area_10_24_province_01 = { me_land_4290 }
+				me_north_arnor_area_10_24_province_01 = { me_land_2789 me_mountain_0253 me_land_4064 me_land_4290 me_land_4864 me_mountain_0316 me_land_4925 }
 			}
 			me_north_arnor_area_11_20 = {
 				me_north_arnor_area_11_20_province_01 = { me_land_4192 me_land_3921 me_land_3598 me_land_3987 me_land_3033 me_land_0602 }
@@ -671,7 +675,7 @@ me_eriador = {
 				me_north_arnor_area_11_23_province_01 = { me_land_0547 me_land_1857 me_land_1751 me_land_2963 me_land_0414 me_land_0922 me_land_4232 me_land_3097 }
 			}
 			me_north_arnor_area_11_24 = {
-				me_north_arnor_area_11_24_province_01 = { me_mountain_0022 me_mountain_0133 }
+				me_north_arnor_area_11_24_province_01 = { me_mountain_0022 me_mountain_0584 me_land_0062 me_mountain_0400 me_mountain_0385 me_mountain_0133 me_mountain_0491 me_land_5148 me_mountain_0246 }
 			}
 			me_north_arnor_sea_area_06_16 = {
 				me_north_arnor_sea_area_06_16_province_01 = { me_sea_0003 }
@@ -1244,17 +1248,11 @@ me_forodwaith = {
 me_rhovanion = {
 	me_rhovanion_subcontinent = {
 		me_anduin_vale_region = {
-			me_anduin_vale_area_05_24 = {
-				me_anduin_vale_area_05_24_province_01 = { me_land_2114 }
-			}
 			me_anduin_vale_area_05_25 = {
 				me_anduin_vale_area_05_25_province_01 = { me_land_2853 me_mountain_0356 }
 			}
 			me_anduin_vale_area_05_26 = {
 				me_anduin_vale_area_05_26_province_01 = { me_land_2413 }
-			}
-			me_anduin_vale_area_06_24 = {
-				me_anduin_vale_area_06_24_province_01 = { me_land_1495 me_land_3707 me_land_4221 me_land_4401 me_land_5003 me_land_2083 me_land_1455 }
 			}
 			me_anduin_vale_area_06_25 = {
 				me_anduin_vale_area_06_25_province_01 = { me_mountain_0557 me_mountain_0271 me_mountain_0342 me_mountain_0579 me_land_3238 me_mountain_0255 me_mountain_0222 me_land_4021 me_mountain_0012 me_land_4555 }
@@ -1266,9 +1264,6 @@ me_rhovanion = {
 			me_anduin_vale_area_06_27 = {
 				me_anduin_vale_area_06_27_province_01 = { me_land_2886 me_land_2417 me_land_3147 }
 			}
-			me_anduin_vale_area_07_24 = {
-				me_anduin_vale_area_07_24_province_01 = { me_land_1676 me_land_4110 me_land_1579 me_land_0281 me_land_5023 me_land_3021 me_mountain_0381 }
-			}
 			me_anduin_vale_area_07_25 = {
 				me_anduin_vale_area_07_25_province_01 = { me_land_5062 me_mountain_0405 me_mountain_0560 me_mountain_0311 me_mountain_0266 goblin_town me_land_0449 me_mountain_0015 me_mountain_0016 me_mountain_0017 }
 				me_anduin_vale_area_07_25_province_02 = { me_mountain_0386 me_land_1636 }
@@ -1278,9 +1273,6 @@ me_rhovanion = {
 			}
 			me_anduin_vale_area_07_27 = {
 				me_anduin_vale_area_07_27_province_01 = { me_land_0311 }
-			}
-			me_anduin_vale_area_08_24 = {
-				me_anduin_vale_area_08_24_province_01 = { me_land_4259 me_land_1042 me_land_2542 me_land_0349 me_land_2942 rivendell }
 			}
 			me_anduin_vale_area_08_25 = {
 				me_anduin_vale_area_08_25_province_01 = { me_mountain_0341 me_land_0717 me_land_0128 me_mountain_0216 me_mountain_0019 me_land_3320 me_mountain_0122 me_land_2836 me_mountain_0107 me_land_1707 }
@@ -1293,7 +1285,7 @@ me_rhovanion = {
 				me_anduin_vale_area_08_27_province_01 = { me_land_4170 }
 			}
 			me_anduin_vale_area_09_24 = {
-				me_anduin_vale_area_09_24_province_01 = { me_land_0973 me_land_0169 me_land_4693 me_land_2506 me_land_2087 me_land_2699 me_mountain_0170 me_mountain_0296 me_land_2363 me_land_4299 }
+				me_anduin_vale_area_09_24_province_01 = { me_land_0973 me_mountain_0170 me_mountain_0296 }
 			}
 			me_anduin_vale_area_09_25 = {
 				me_anduin_vale_area_09_25_province_01 = { me_land_2941 me_mountain_0249 me_mountain_0536 me_land_0637 me_land_2685 me_mountain_0277 me_mountain_0531 me_mountain_0392 me_mountain_0586 me_mountain_0228 }
@@ -1306,8 +1298,7 @@ me_rhovanion = {
 				me_anduin_vale_area_09_27_province_01 = { me_land_1937 me_land_1609 }
 			}
 			me_anduin_vale_area_10_24 = {
-				me_anduin_vale_area_10_24_province_01 = { me_land_2789 me_mountain_0253 me_mountain_0490 me_land_4064 me_land_4864 me_mountain_0316 me_land_3590 me_land_4925 me_mountain_0506 me_land_0024 }
-				me_anduin_vale_area_10_24_province_02 = { me_mountain_0120 }
+				me_anduin_vale_area_10_24_province_01 = { me_mountain_0490 me_land_3590 me_mountain_0506 me_land_0024 me_mountain_0120 }
 			}
 			me_anduin_vale_area_10_25 = {
 				me_anduin_vale_area_10_25_province_01 = { me_mountain_0308 me_mountain_0139 me_land_0258 me_land_2700 me_mountain_0487 me_land_4328 me_mountain_0591 me_mountain_0284 me_land_0682 me_mountain_0413 }
@@ -1320,8 +1311,7 @@ me_rhovanion = {
 				me_anduin_vale_area_10_27_province_01 = { me_land_4120 me_land_0411 }
 			}
 			me_anduin_vale_area_11_24 = {
-				me_anduin_vale_area_11_24_province_01 = { me_mountain_0584 me_land_0062 me_mountain_0400 me_mountain_0385 me_mountain_0115 me_land_1438 me_mountain_0491 me_land_5148 me_mountain_0246 me_land_2959 }
-				me_anduin_vale_area_11_24_province_02 = { me_mountain_0236 }
+				me_anduin_vale_area_11_24_province_01 = { me_mountain_0115 me_land_1438 me_land_2959 me_mountain_0236 }
 			}
 			me_anduin_vale_area_11_25 = {
 				me_anduin_vale_area_11_25_province_01 = { me_mountain_0370 me_land_1061 me_land_1995 me_land_4712 me_mountain_0023 me_mountain_0599 me_mountain_0024 me_land_0456 me_land_0982 }
@@ -1487,16 +1477,10 @@ me_rhovanion = {
 				me_brown_lands_area_20_29_province_01 = { me_lake_0008 me_lake_0012 me_land_2454 me_land_3567 me_land_2080 me_land_0432 me_land_3562 me_land_2702 }
 			}
 			me_brown_lands_area_20_30 = {
-				me_brown_lands_area_20_30_province_01 = { me_land_1752 me_land_3157 me_land_3902 me_land_0369 me_land_1277 me_land_3924 me_land_1647 morannon me_land_0590 me_mountain_0051 }
+				me_brown_lands_area_20_30_province_01 = { me_land_1752 me_land_3157 me_land_3902 me_land_1277 morannon }
 			}
 			me_brown_lands_area_20_31 = {
-				me_brown_lands_area_20_31_province_01 = { me_land_0880 me_land_1108 me_land_2868 me_land_1499 me_land_3264 me_land_0730 me_land_0112 }
-			}
-			me_brown_lands_area_20_32 = {
-				me_brown_lands_area_20_32_province_01 = { me_land_3691 me_land_3795 me_land_1006 me_land_4468 me_land_1584 me_land_3517 me_land_0381 me_land_3660 me_land_2091 me_land_3725 }
-			}
-			me_brown_lands_area_20_33 = {
-				me_brown_lands_area_20_33_province_01 = { me_land_5087 me_land_3922 me_land_0539 }
+				me_brown_lands_area_20_31_province_01 = { me_land_0880 }
 			}
 			me_brown_lands_area_21_28 = {
 				me_brown_lands_area_21_28_province_01 = { me_land_0013 me_land_3049 me_land_0967 me_land_0687 me_land_0752 }
@@ -1505,28 +1489,36 @@ me_rhovanion = {
 				me_brown_lands_area_21_29_province_01 = { me_land_5050 me_land_2927 me_land_3187 me_land_2835 me_land_2689 me_land_0431 me_land_2923 }
 			}
 			me_brown_lands_area_21_30 = {
-				me_brown_lands_area_21_30_province_01 = { me_land_1848 me_land_1054 me_land_0082 me_mountain_0060 me_land_3171 me_land_4529 me_land_1557 me_land_0899 me_land_2468 }
-			}
-			me_brown_lands_area_21_31 = {
-				me_brown_lands_area_21_31_province_01 = { me_land_0530 me_land_4338 me_land_1327 me_land_1227 me_land_3440 me_land_5019 me_land_1770 me_land_3196 me_land_2661 }
-			}
-			me_brown_lands_area_21_32 = {
-				me_brown_lands_area_21_32_province_01 = { me_land_3658 me_land_4161 me_land_2628 me_land_1036 me_mountain_0055 me_mountain_0056 me_mountain_0058 me_land_4495 me_land_0838 me_land_2054 }
-				me_brown_lands_area_21_32_province_02 = { me_land_3988 me_land_3184 }
-			}
-			me_brown_lands_area_21_33 = {
-				me_brown_lands_area_21_33_province_01 = { me_land_0741 me_mountain_0057 me_land_3951 me_land_3249 }
+				me_brown_lands_area_21_30_province_01 = { me_land_1848 me_land_1054 me_mountain_0060 me_land_3171 me_land_4529 me_land_1557 me_land_0899 me_land_2468 }
 			}
 			me_brown_lands_area_22_28 = {
 				me_brown_lands_area_22_28_province_01 = { me_land_0791 }
 			}
 		}
 		me_dale_region = {
+			me_dale_area_04_29 = {
+				me_dale_area_04_29_province_01 = { me_land_0471 }
+			}
+			me_dale_area_04_30 = {
+				me_dale_area_04_30_province_01 = { me_land_4950 me_land_4241 me_land_0870 me_land_0906 me_land_1935 }
+			}
+			me_dale_area_05_28 = {
+				me_dale_area_05_28_province_01 = { me_land_2015 me_land_3173 }
+			}
 			me_dale_area_05_29 = {
-				me_dale_area_05_29_province_01 = { me_land_3742 me_land_0720 me_land_4658 }
+				me_dale_area_05_29_province_01 = { me_land_0126 me_land_1290 erebor me_land_3746 me_land_5131 me_land_2465 me_land_3742 me_land_0720 me_land_4658 }
+			}
+			me_dale_area_05_30 = {
+				me_dale_area_05_30_province_01 = { me_land_3067 me_land_0707 me_land_0296 me_land_0572 me_land_2580 me_land_0740 dale me_land_2401 }
+			}
+			me_dale_area_05_31 = {
+				me_dale_area_05_31_province_01 = { me_land_4163 me_land_0373 }
+			}
+			me_dale_area_06_28 = {
+				me_dale_area_06_28_province_01 = { me_land_2499 me_land_4206 me_land_0660 me_land_3126 }
 			}
 			me_dale_area_06_29 = {
-				me_dale_area_06_29_province_01 = { me_land_1839 me_land_0533 me_land_1493 esgaroth me_land_1016 me_land_0243 me_land_3555 }
+				me_dale_area_06_29_province_01 = { thranduil_halls me_land_1839 me_land_0533 me_land_1493 esgaroth me_land_5077 me_land_1016 me_land_0243 me_land_3555 }
 			}
 			me_dale_area_06_30 = {
 				me_dale_area_06_30_province_01 = { me_land_0971 me_land_0734 me_land_2794 me_land_2304 me_lake_0002 me_land_4366 me_land_2223 me_land_2032 me_land_2620 me_land_4090 }
@@ -1534,14 +1526,20 @@ me_rhovanion = {
 			me_dale_area_06_31 = {
 				me_dale_area_06_31_province_01 = { me_land_1005 me_land_0075 }
 			}
+			me_dale_area_07_28 = {
+				me_dale_area_07_28_province_01 = { me_land_0960 me_land_1625 }
+			}
 			me_dale_area_07_29 = {
-				me_dale_area_07_29_province_01 = { me_land_1949 me_land_3058 me_land_1947 me_land_1993 me_land_3763 me_land_4933 }
+				me_dale_area_07_29_province_01 = { me_land_1949 me_land_3058 me_land_1947 me_land_1993 me_land_3763 me_land_4933 me_land_4679 }
 			}
 			me_dale_area_07_30 = {
 				me_dale_area_07_30_province_01 = { me_land_4575 me_land_3322 me_land_0482 me_land_4532 me_land_4115 }
 			}
 			me_dale_area_07_31 = {
 				me_dale_area_07_31_province_01 = { me_land_0994 me_land_1791 me_land_1855 me_land_2516 }
+			}
+			me_dale_area_08_28 = {
+				me_dale_area_08_28_province_01 = { me_land_3697 }
 			}
 			me_dale_area_08_29 = {
 				me_dale_area_08_29_province_01 = { me_land_4254 me_land_2074 me_land_3323 }
@@ -1554,9 +1552,6 @@ me_rhovanion = {
 			}
 		}
 		me_grey_mountains_region = {
-			me_grey_mountains_area_04_24 = {
-				me_grey_mountains_area_04_24_province_01 = { me_mountain_0528 me_mountain_0211 me_mountain_0383 }
-			}
 			me_grey_mountains_area_04_25 = {
 				me_grey_mountains_area_04_25_province_01 = { me_land_1849 me_land_1264 me_mountain_0281 }
 			}
@@ -1569,15 +1564,8 @@ me_rhovanion = {
 			me_grey_mountains_area_04_28 = {
 				me_grey_mountains_area_04_28_province_01 = { me_land_2576 me_land_0036 }
 			}
-			me_grey_mountains_area_04_29 = {
-				me_grey_mountains_area_04_29_province_01 = { me_land_0471 }
-			}
-			me_grey_mountains_area_04_30 = {
-				me_grey_mountains_area_04_30_province_01 = { me_land_4950 me_land_4241 me_land_0870 me_land_0906 me_land_1935 }
-			}
 			me_grey_mountains_area_05_24 = {
-				me_grey_mountains_area_05_24_province_01 = { me_mountain_0436 me_land_3360 me_mountain_0492 me_mountain_0583 me_mountain_0408 me_land_4787 me_land_0908 me_mountain_0503 me_mountain_0384 me_land_5022 }
-				me_grey_mountains_area_05_24_province_02 = { me_mountain_0111 }
+				me_grey_mountains_area_05_24_province_01 = { me_mountain_0408 }
 			}
 			me_grey_mountains_area_05_25 = {
 				me_grey_mountains_area_05_25_province_01 = { me_land_1571 me_mountain_0199 me_mountain_0551 me_mountain_0364 me_mountain_0224 me_mountain_0179 me_mountain_0153 me_land_0727 me_mountain_0235 me_mountain_0409 }
@@ -1590,16 +1578,7 @@ me_rhovanion = {
 				me_grey_mountains_area_05_27_province_01 = { me_land_1180 me_land_2518 me_land_5085 me_land_0427 me_land_2850 me_land_0485 me_land_1115 me_land_2295 }
 			}
 			me_grey_mountains_area_05_28 = {
-				me_grey_mountains_area_05_28_province_01 = { me_land_0183 me_land_5140 me_land_2015 me_land_1113 me_land_3251 me_land_3173 me_land_2737 }
-			}
-			me_grey_mountains_area_05_29 = {
-				me_grey_mountains_area_05_29_province_01 = { me_land_0126 me_land_1290 erebor me_land_3746 me_land_5131 me_land_2465 }
-			}
-			me_grey_mountains_area_05_30 = {
-				me_grey_mountains_area_05_30_province_01 = { me_land_3067 me_land_0707 me_land_0296 me_land_0572 me_land_2580 me_land_0740 dale me_land_2401 }
-			}
-			me_grey_mountains_area_05_31 = {
-				me_grey_mountains_area_05_31_province_01 = { me_land_4163 me_land_0373 }
+				me_grey_mountains_area_05_28_province_01 = { me_land_0183 me_land_5140 me_land_1113 me_land_3251 me_land_2737 }
 			}
 		}
 		me_mirkwood_region = {
@@ -1610,26 +1589,19 @@ me_rhovanion = {
 				me_mirkwood_area_06_27_province_01 = { me_land_0341 me_land_4683 me_land_0151 me_land_4423 me_land_3803 }
 			}
 			me_mirkwood_area_06_28 = {
-				me_mirkwood_area_06_28_province_01 = { me_land_1451 me_land_2499 me_land_3736 me_land_4193 me_land_5014 me_land_1443 me_land_4782 me_land_4206 me_land_0660 me_land_0204 }
-				me_mirkwood_area_06_28_province_02 = { me_land_3835 me_land_3126 }
-			}
-			me_mirkwood_area_06_29 = {
-				me_mirkwood_area_06_29_province_01 = { thranduil_halls me_land_5077 }
+				me_mirkwood_area_06_28_province_01 = { me_land_1451 me_land_3736 me_land_4193 me_land_5014 me_land_1443 me_land_4782 me_land_0204 me_land_3835 }
 			}
 			me_mirkwood_area_07_27 = {
 				me_mirkwood_area_07_27_province_01 = { me_land_0796 me_land_2310 me_land_1588 me_land_0609 me_land_0033 me_land_2248 me_land_0528 }
 			}
 			me_mirkwood_area_07_28 = {
-				me_mirkwood_area_07_28_province_01 = { me_land_3780 me_land_0392 me_land_0960 me_land_1625 me_land_2646 me_land_1671 me_land_4459 }
-			}
-			me_mirkwood_area_07_29 = {
-				me_mirkwood_area_07_29_province_01 = { me_land_4679 }
+				me_mirkwood_area_07_28_province_01 = { me_land_3780 me_land_0392 me_land_2646 me_land_1671 me_land_4459 }
 			}
 			me_mirkwood_area_08_27 = {
 				me_mirkwood_area_08_27_province_01 = { me_land_2107 me_land_1596 me_land_4050 me_land_2497 }
 			}
 			me_mirkwood_area_08_28 = {
-				me_mirkwood_area_08_28_province_01 = { me_land_1135 me_land_3697 me_land_0221 me_land_3441 me_land_0350 me_land_3471 }
+				me_mirkwood_area_08_28_province_01 = { me_land_1135 me_land_0221 me_land_3441 me_land_0350 me_land_3471 }
 			}
 			me_mirkwood_area_08_29 = {
 				me_mirkwood_area_08_29_province_01 = { me_land_4359 me_land_1966 me_land_3525 }
@@ -1860,26 +1832,11 @@ me_rhovanion = {
 			me_rohan_area_21_28 = {
 				me_rohan_area_21_28_province_01 = { me_land_4576 me_land_0762 me_land_4440 }
 			}
-			me_rohan_area_22_22 = {
-				me_rohan_area_22_22_province_01 = { me_mountain_0442 me_mountain_0450 }
-			}
 			me_rohan_area_22_23 = {
-				me_rohan_area_22_23_province_01 = { me_mountain_0334 me_mountain_0459 me_mountain_0330 me_land_2353 me_land_2909 me_mountain_0305 me_mountain_0353 }
-			}
-			me_rohan_area_22_24 = {
-				me_rohan_area_22_24_province_01 = { me_mountain_0553 me_mountain_0069 erech }
+				me_rohan_area_22_23_province_01 = { me_mountain_0334 me_mountain_0459 me_mountain_0330 }
 			}
 			me_rohan_area_22_25 = {
-				me_rohan_area_22_25_province_01 = { me_land_0751 me_land_1270 me_mountain_0068 me_land_0014 me_mountain_0505 }
-			}
-			me_rohan_area_22_26 = {
-				me_rohan_area_22_26_province_01 = { me_land_3823 me_land_3190 me_land_1147 me_land_4116 me_land_5008 me_land_2772 }
-			}
-			me_rohan_area_22_27 = {
-				me_rohan_area_22_27_province_01 = { me_land_0437 me_land_1633 me_land_0765 me_land_3513 me_land_4147 me_land_5042 }
-			}
-			me_rohan_area_22_28 = {
-				me_rohan_area_22_28_province_01 = { me_land_1623 }
+				me_rohan_area_22_25_province_01 = { me_land_0751 }
 			}
 		}
 	}
@@ -1888,13 +1845,14 @@ me_gondor = {
 	me_gondor_subcontinent = {
 		me_anorien_region = {
 			me_anorien_area_22_26 = {
-				me_anorien_area_22_26_province_01 = { me_land_2769 me_land_2367 me_land_0042 me_mountain_0073 }
+				me_anorien_area_22_26_province_01 = { me_land_3823 me_land_3190 me_land_1147 me_land_4116 me_land_2772 me_land_2769 me_land_2367 me_land_0042 me_mountain_0073 }
 			}
 			me_anorien_area_22_27 = {
-				me_anorien_area_22_27_province_01 = { me_land_4974 me_land_2244 me_land_3329 }
+				me_anorien_area_22_27_province_01 = { me_land_0437 me_land_1633 me_land_0765 me_land_3513 me_land_4147 me_land_5042 me_land_4974 me_land_2244 me_land_3329 }
 			}
 			me_anorien_area_22_28 = {
-				me_anorien_area_22_28_province_01 = { me_land_2873 me_land_1677 me_land_3500 me_land_2578 me_land_2803 me_land_2558 me_land_0011 me_land_4346 me_land_4608 me_land_2658 }
+				me_anorien_area_22_28_province_01 = { me_land_2873 me_land_1677 me_land_1623 me_land_3500 me_land_2578 me_land_2803 me_land_2558 me_land_0011 me_land_4346 me_land_4608 }
+				me_anorien_area_22_28_province_02 = { me_land_2658 }
 			}
 			me_anorien_area_23_26 = {
 				me_anorien_area_23_26_province_01 = { me_mountain_0423 me_land_1084 me_mountain_0076 me_mountain_0428 me_land_0041 me_land_1615 me_land_0688 me_mountain_0080 me_mountain_0363 me_mountain_0220 }
@@ -1938,19 +1896,21 @@ me_gondor = {
 				me_belfalas_area_22_21_province_01 = { me_mountain_0328 me_land_2725 me_mountain_0070 me_land_4054 me_land_3618 me_land_3536 me_land_3521 me_land_3244 me_land_2024 }
 			}
 			me_belfalas_area_22_22 = {
-				me_belfalas_area_22_22_province_01 = { me_land_3113 me_land_4473 me_land_1213 me_land_3558 me_mountain_0303 me_land_3156 me_land_3291 me_land_0599 me_land_4470 me_land_2869 }
+				me_belfalas_area_22_22_province_01 = { me_land_3113 me_land_4473 me_mountain_0442 me_land_1213 me_mountain_0450 me_land_3558 me_mountain_0303 me_land_3156 me_land_3291 me_land_0599 }
+				me_belfalas_area_22_22_province_02 = { me_land_4470 me_land_2869 }
 			}
 			me_belfalas_area_22_23 = {
-				me_belfalas_area_22_23_province_01 = { me_land_0659 me_land_4431 me_land_3875 me_land_0489 me_land_1431 }
+				me_belfalas_area_22_23_province_01 = { me_land_2353 me_land_2909 me_mountain_0305 me_mountain_0353 me_land_0659 me_land_4431 me_land_3875 me_land_0489 me_land_1431 }
 			}
 			me_belfalas_area_22_24 = {
-				me_belfalas_area_22_24_province_01 = { me_land_1537 me_land_1312 me_land_1125 me_land_4739 }
+				me_belfalas_area_22_24_province_01 = { me_mountain_0553 me_mountain_0069 erech me_land_1537 me_land_1312 me_land_1125 me_land_4739 }
 			}
 			me_belfalas_area_22_25 = {
-				me_belfalas_area_22_25_province_01 = { me_land_4897 me_mountain_0452 me_land_0689 me_mountain_0071 me_land_0767 me_land_2813 me_land_0642 me_mountain_0315 }
+				me_belfalas_area_22_25_province_01 = { me_land_1270 me_mountain_0068 me_land_0014 me_mountain_0505 me_land_4897 me_mountain_0452 me_land_0689 me_mountain_0071 me_land_0767 me_land_2813 }
+				me_belfalas_area_22_25_province_02 = { me_land_0642 me_mountain_0315 }
 			}
 			me_belfalas_area_22_26 = {
-				me_belfalas_area_22_26_province_01 = { me_land_2385 }
+				me_belfalas_area_22_26_province_01 = { me_land_5008 me_land_2385 }
 			}
 			me_belfalas_area_23_18 = {
 				me_belfalas_area_23_18_province_01 = { me_land_2469 }
@@ -2156,31 +2116,11 @@ me_gondor = {
 			me_ithilien_area_22_30 = {
 				me_ithilien_area_22_30_province_01 = { me_land_3082 me_land_3626 me_land_3909 me_land_0803 me_land_2931 me_land_2713 me_land_1097 me_land_4455 me_land_0679 }
 			}
-			me_ithilien_area_22_31 = {
-				me_ithilien_area_22_31_province_01 = { me_land_1470 me_land_4775 me_land_4915 me_land_3805 me_land_0743 me_land_3290 me_land_3050 mount_doom me_land_0554 me_land_2387 }
-				me_ithilien_area_22_31_province_02 = { me_land_4181 me_land_3781 }
-			}
-			me_ithilien_area_22_32 = {
-				me_ithilien_area_22_32_province_01 = { me_land_3941 me_land_4514 barad_dur me_land_2423 me_land_2885 }
-			}
-			me_ithilien_area_22_33 = {
-				me_ithilien_area_22_33_province_01 = { me_land_0154 me_land_4188 me_land_2655 }
-			}
 			me_ithilien_area_23_29 = {
 				me_ithilien_area_23_29_province_01 = { me_land_1548 me_land_2966 me_land_0114 me_land_4999 me_land_0413 me_land_0737 osgiliath me_land_3584 }
 			}
 			me_ithilien_area_23_30 = {
-				me_ithilien_area_23_30_province_01 = { me_land_4521 me_land_3307 minas_morgul me_land_5027 me_land_4380 me_mountain_0084 me_land_2452 me_land_3390 }
-			}
-			me_ithilien_area_23_31 = {
-				me_ithilien_area_23_31_province_01 = { me_land_3656 me_land_1364 me_land_1088 me_land_4550 me_land_1231 me_land_1597 me_land_1428 me_land_3369 me_land_4696 }
-			}
-			me_ithilien_area_23_32 = {
-				me_ithilien_area_23_32_province_01 = { me_land_0494 me_land_3331 me_land_4280 me_land_1131 me_land_2666 me_land_2901 me_land_2602 me_land_3260 me_land_0266 me_land_1432 }
-				me_ithilien_area_23_32_province_02 = { me_land_1138 }
-			}
-			me_ithilien_area_23_33 = {
-				me_ithilien_area_23_33_province_01 = { me_land_1708 me_land_0904 me_land_2052 me_land_3007 me_land_3882 }
+				me_ithilien_area_23_30_province_01 = { me_land_4521 me_land_3307 minas_morgul me_land_4380 me_mountain_0084 me_land_3390 }
 			}
 			me_ithilien_area_24_29 = {
 				me_ithilien_area_24_29_province_01 = { me_land_1259 me_land_3515 me_land_3638 me_land_5052 me_land_1171 me_land_4774 }
@@ -2188,29 +2128,11 @@ me_gondor = {
 			me_ithilien_area_24_30 = {
 				me_ithilien_area_24_30_province_01 = { me_mountain_0085 me_land_4269 me_land_3359 me_mountain_0577 me_land_3404 me_land_2185 me_mountain_0086 me_land_0543 me_mountain_0600 me_land_2306 }
 			}
-			me_ithilien_area_24_31 = {
-				me_ithilien_area_24_31_province_01 = { me_land_1221 me_land_0233 me_land_1716 me_land_4196 me_land_5005 me_land_2648 me_land_4976 me_land_1779 }
-			}
-			me_ithilien_area_24_32 = {
-				me_ithilien_area_24_32_province_01 = { me_land_5121 me_land_3266 me_land_3474 me_land_0268 me_land_4114 me_land_1194 }
-			}
-			me_ithilien_area_24_33 = {
-				me_ithilien_area_24_33_province_01 = { me_land_3750 me_land_4123 me_land_3129 me_land_4691 me_land_5045 me_land_0945 }
-			}
 			me_ithilien_area_25_29 = {
 				me_ithilien_area_25_29_province_01 = { me_land_0797 me_land_2170 me_land_3905 me_land_1181 me_land_1939 me_land_1288 me_land_0220 }
 			}
 			me_ithilien_area_25_30 = {
 				me_ithilien_area_25_30_province_01 = { me_land_0943 me_land_4392 me_land_4133 me_mountain_0088 me_land_2611 me_land_1777 me_mountain_0597 me_mountain_0089 me_land_0927 me_land_1833 }
-			}
-			me_ithilien_area_25_31 = {
-				me_ithilien_area_25_31_province_01 = { me_land_4331 me_land_3529 me_land_1598 me_land_3859 me_land_0618 me_land_4496 me_land_3712 me_land_2647 me_land_1477 }
-			}
-			me_ithilien_area_25_32 = {
-				me_ithilien_area_25_32_province_01 = { me_land_2386 me_land_1789 me_land_3938 me_land_1137 me_land_4794 me_land_2013 me_land_4602 }
-			}
-			me_ithilien_area_25_33 = {
-				me_ithilien_area_25_33_province_01 = { me_land_1271 me_land_2309 me_land_1715 me_land_5093 me_land_2935 me_land_4709 me_land_0725 }
 			}
 			me_ithilien_area_26_29 = {
 				me_ithilien_area_26_29_province_01 = { me_land_1026 me_land_1274 me_land_4103 me_land_2724 me_land_0769 me_land_0546 me_land_3459 me_land_1642 }
@@ -2219,15 +2141,6 @@ me_gondor = {
 				me_ithilien_area_26_30_province_01 = { me_land_2376 me_mountain_0090 me_land_0111 me_land_3413 me_land_0999 me_land_5071 me_mountain_0425 me_mountain_0500 me_land_0665 me_land_2535 }
 				me_ithilien_area_26_30_province_02 = { me_land_4420 me_land_1872 me_land_1156 }
 			}
-			me_ithilien_area_26_31 = {
-				me_ithilien_area_26_31_province_01 = { me_land_0022 me_land_4623 me_land_2502 me_land_4725 nurn_fields me_land_3118 me_land_4750 me_land_2487 me_land_2962 }
-			}
-			me_ithilien_area_26_32 = {
-				me_ithilien_area_26_32_province_01 = { me_land_1317 me_land_4210 me_land_4168 me_land_2184 me_land_3237 me_land_0347 me_land_2066 me_land_2560 me_land_2315 me_land_2899 }
-			}
-			me_ithilien_area_26_33 = {
-				me_ithilien_area_26_33_province_01 = { me_land_4066 me_land_4826 me_land_0955 me_land_1661 me_land_0675 me_land_3389 me_land_3931 }
-			}
 			me_ithilien_area_27_29 = {
 				me_ithilien_area_27_29_province_01 = { me_land_4135 me_land_2490 me_land_2379 }
 			}
@@ -2235,16 +2148,7 @@ me_gondor = {
 				me_ithilien_area_27_30_province_01 = { me_land_0529 me_mountain_0092 me_mountain_0093 me_land_2303 me_mountain_0474 me_land_3915 }
 			}
 			me_ithilien_area_27_31 = {
-				me_ithilien_area_27_31_province_01 = { me_land_3477 me_land_4493 me_land_1433 }
-			}
-			me_ithilien_area_27_32 = {
-				me_ithilien_area_27_32_province_01 = { me_land_0663 me_land_2934 me_land_4802 me_land_0845 }
-			}
-			me_ithilien_area_27_33 = {
-				me_ithilien_area_27_33_province_01 = { me_lake_0049 me_land_1653 me_lake_0046 me_land_1823 }
-			}
-			me_ithilien_area_27_34 = {
-				me_ithilien_area_27_34_province_01 = { me_lake_0015 }
+				me_ithilien_area_27_31_province_01 = { me_land_1433 }
 			}
 		}
 		me_lebennin_region = {
@@ -2327,16 +2231,7 @@ me_gondor = {
 				me_south_gondor_area_27_30_province_01 = { me_land_4173 me_land_3403 me_land_1169 me_mountain_0095 me_mountain_0096 }
 			}
 			me_south_gondor_area_27_31 = {
-				me_south_gondor_area_27_31_province_01 = { me_land_3087 me_land_0596 me_land_4688 }
-			}
-			me_south_gondor_area_27_32 = {
-				me_south_gondor_area_27_32_province_01 = { me_land_2392 me_land_2994 me_land_1886 me_land_3702 me_land_1112 }
-			}
-			me_south_gondor_area_27_33 = {
-				me_south_gondor_area_27_33_province_01 = { me_lake_0031 me_land_0054 me_land_1573 me_land_1922 }
-			}
-			me_south_gondor_area_27_34 = {
-				me_south_gondor_area_27_34_province_01 = { me_land_4053 me_land_3285 }
+				me_south_gondor_area_27_31_province_01 = { me_land_3087 me_land_0596 }
 			}
 			me_south_gondor_area_28_28 = {
 				me_south_gondor_area_28_28_province_01 = { me_land_4171 me_land_0231 me_land_1177 }
@@ -2348,16 +2243,13 @@ me_gondor = {
 				me_south_gondor_area_28_30_province_01 = { me_land_1701 me_mountain_0098 me_land_1696 me_mountain_0556 me_land_5038 me_mountain_0555 me_mountain_0422 }
 			}
 			me_south_gondor_area_28_31 = {
-				me_south_gondor_area_28_31_province_01 = { me_land_1602 me_land_3930 me_land_0278 me_land_0105 me_land_4245 me_land_2894 me_mountain_0101 }
+				me_south_gondor_area_28_31_province_01 = { me_land_1602 me_land_0278 me_land_0105 me_land_4245 me_land_2894 me_mountain_0101 }
 			}
 			me_south_gondor_area_28_32 = {
-				me_south_gondor_area_28_32_province_01 = { me_land_5039 me_land_0645 me_land_4949 me_land_4993 me_mountain_0100 }
+				me_south_gondor_area_28_32_province_01 = { me_land_4993 me_mountain_0100 }
 			}
 			me_south_gondor_area_28_33 = {
-				me_south_gondor_area_28_33_province_01 = { me_land_0132 me_land_3120 me_land_0187 me_land_3383 me_land_3508 me_mountain_0099 me_mountain_0102 }
-			}
-			me_south_gondor_area_28_34 = {
-				me_south_gondor_area_28_34_province_01 = { me_land_1648 }
+				me_south_gondor_area_28_33_province_01 = { me_land_3508 me_mountain_0099 me_mountain_0102 }
 			}
 			me_south_gondor_area_29_29 = {
 				me_south_gondor_area_29_29_province_01 = { me_land_2187 me_land_5135 me_land_0585 me_land_0226 me_land_1520 }
@@ -2574,11 +2466,23 @@ me_mordor_and_rhun = {
 			}
 		}
 		me_mordor_region = {
+			me_mordor_area_19_33 = {
+				me_mordor_area_19_33_province_01 = { me_land_0006 }
+			}
+			me_mordor_area_20_30 = {
+				me_mordor_area_20_30_province_01 = { me_land_0369 me_land_3924 me_land_1647 me_land_0590 me_mountain_0051 }
+			}
+			me_mordor_area_20_31 = {
+				me_mordor_area_20_31_province_01 = { me_land_1108 me_land_2868 me_land_1499 me_land_3264 me_land_0730 me_land_0112 }
+			}
+			me_mordor_area_20_32 = {
+				me_mordor_area_20_32_province_01 = { me_land_3691 me_land_3795 me_land_1006 me_land_4468 me_land_1584 me_land_3517 me_land_0381 me_land_3660 me_land_2091 me_land_3725 }
+			}
 			me_mordor_area_20_33 = {
-				me_mordor_area_20_33_province_01 = { me_land_2932 me_land_3733 me_land_0285 }
+				me_mordor_area_20_33_province_01 = { me_land_3507 me_land_5087 me_land_2911 me_land_2604 me_land_4814 me_land_2932 me_land_3922 me_land_0539 me_land_3733 me_land_0285 }
 			}
 			me_mordor_area_20_34 = {
-				me_mordor_area_20_34_province_01 = { me_land_2598 me_land_2475 me_land_1743 me_land_0021 me_land_5068 me_land_1348 me_land_0029 }
+				me_mordor_area_20_34_province_01 = { me_land_3704 me_land_2598 me_land_2475 me_land_1743 me_land_0021 me_land_5068 me_land_1348 me_land_0029 }
 			}
 			me_mordor_area_20_35 = {
 				me_mordor_area_20_35_province_01 = { me_land_1728 }
@@ -2601,8 +2505,18 @@ me_mordor_and_rhun = {
 			me_mordor_area_20_41 = {
 				me_mordor_area_20_41_province_01 = { me_land_0422 me_land_2844 me_land_4155 }
 			}
+			me_mordor_area_21_30 = {
+				me_mordor_area_21_30_province_01 = { me_land_0082 }
+			}
+			me_mordor_area_21_31 = {
+				me_mordor_area_21_31_province_01 = { me_land_0530 me_land_4338 me_land_1327 me_land_1227 me_land_3440 me_land_5019 me_land_1770 me_land_3196 me_land_2661 }
+			}
+			me_mordor_area_21_32 = {
+				me_mordor_area_21_32_province_01 = { me_land_3658 me_land_4161 me_land_2628 me_land_1036 me_mountain_0055 me_mountain_0056 me_mountain_0058 me_land_4495 me_land_0838 me_land_2054 }
+				me_mordor_area_21_32_province_02 = { me_land_3988 me_land_3184 }
+			}
 			me_mordor_area_21_33 = {
-				me_mordor_area_21_33_province_01 = { me_land_0196 me_land_1352 me_land_1187 me_mountain_0059 me_mountain_0213 me_land_2762 }
+				me_mordor_area_21_33_province_01 = { me_land_0196 me_land_1352 me_land_0741 me_land_1187 me_mountain_0057 me_mountain_0059 me_land_3951 me_mountain_0213 me_land_2762 me_land_3249 }
 			}
 			me_mordor_area_21_34 = {
 				me_mordor_area_21_34_province_01 = { me_mountain_0052 me_land_2149 me_land_1100 me_mountain_0053 me_land_3071 me_mountain_0485 me_mountain_0461 me_mountain_0371 me_land_4580 me_mountain_0061 }
@@ -2629,8 +2543,15 @@ me_mordor_and_rhun = {
 			me_mordor_area_21_41 = {
 				me_mordor_area_21_41_province_01 = { me_land_4350 me_land_2381 me_land_4741 me_land_2712 me_land_1987 me_land_3888 me_land_2412 }
 			}
+			me_mordor_area_22_31 = {
+				me_mordor_area_22_31_province_01 = { me_land_1470 me_land_4775 me_land_4915 me_land_3805 me_land_0743 me_land_3290 me_land_3050 mount_doom me_land_0554 me_land_2387 }
+				me_mordor_area_22_31_province_02 = { me_land_4181 me_land_3781 }
+			}
+			me_mordor_area_22_32 = {
+				me_mordor_area_22_32_province_01 = { me_land_3941 me_land_4514 barad_dur me_land_2423 me_land_2885 }
+			}
 			me_mordor_area_22_33 = {
-				me_mordor_area_22_33_province_01 = { me_land_1814 me_land_0567 me_land_2206 }
+				me_mordor_area_22_33_province_01 = { me_land_1814 me_land_0154 me_land_0567 me_land_4188 me_land_2206 me_land_2655 }
 			}
 			me_mordor_area_22_34 = {
 				me_mordor_area_22_34_province_01 = { me_land_3396 me_land_2430 me_land_4189 me_land_3419 me_mountain_0072 }
@@ -2656,8 +2577,18 @@ me_mordor_and_rhun = {
 			me_mordor_area_22_41 = {
 				me_mordor_area_22_41_province_01 = { me_land_0401 me_land_3913 me_land_1802 me_land_3143 me_land_1460 }
 			}
+			me_mordor_area_23_30 = {
+				me_mordor_area_23_30_province_01 = { me_land_5027 me_land_2452 }
+			}
+			me_mordor_area_23_31 = {
+				me_mordor_area_23_31_province_01 = { me_land_3656 me_land_1364 me_land_1088 me_land_4550 me_land_1231 me_land_1597 me_land_1428 me_land_3369 me_land_4696 }
+			}
+			me_mordor_area_23_32 = {
+				me_mordor_area_23_32_province_01 = { me_land_0494 me_land_3331 me_land_4280 me_land_1131 me_land_2666 me_land_2901 me_land_2602 me_land_3260 me_land_0266 me_land_1432 }
+				me_mordor_area_23_32_province_02 = { me_land_1138 }
+			}
 			me_mordor_area_23_33 = {
-				me_mordor_area_23_33_province_01 = { me_land_4032 me_mountain_0082 me_land_1236 }
+				me_mordor_area_23_33_province_01 = { me_land_1708 me_land_0904 me_land_4032 me_land_2052 me_mountain_0082 me_land_3007 me_land_3882 me_land_1236 }
 			}
 			me_mordor_area_23_34 = {
 				me_mordor_area_23_34_province_01 = { me_land_1735 me_land_0623 me_mountain_0079 me_land_1011 me_land_5155 me_land_0193 me_land_1105 me_land_1558 me_land_1683 me_land_0920 }
@@ -2683,8 +2614,14 @@ me_mordor_and_rhun = {
 			me_mordor_area_23_41 = {
 				me_mordor_area_23_41_province_01 = { me_land_2929 me_land_0764 me_land_0515 me_land_0723 me_land_2078 }
 			}
+			me_mordor_area_24_31 = {
+				me_mordor_area_24_31_province_01 = { me_land_1221 me_land_0233 me_land_1716 me_land_4196 me_land_5005 me_land_2648 me_land_4976 me_land_1779 }
+			}
+			me_mordor_area_24_32 = {
+				me_mordor_area_24_32_province_01 = { me_land_5121 me_land_3266 me_land_3474 me_land_0268 me_land_4114 me_land_1194 }
+			}
 			me_mordor_area_24_33 = {
-				me_mordor_area_24_33_province_01 = { me_land_4681 }
+				me_mordor_area_24_33_province_01 = { me_land_3750 me_land_4123 me_land_3129 me_land_4691 me_land_5045 me_land_4681 me_land_0945 }
 			}
 			me_mordor_area_24_34 = {
 				me_mordor_area_24_34_province_01 = { me_land_4699 me_land_2878 me_land_3286 me_land_2435 me_land_1532 me_land_2810 me_land_0731 me_land_0802 }
@@ -2710,6 +2647,15 @@ me_mordor_and_rhun = {
 			me_mordor_area_24_41 = {
 				me_mordor_area_24_41_province_01 = { me_land_4330 me_land_1448 me_land_2597 me_land_2743 me_land_0760 me_land_0749 me_land_4770 }
 			}
+			me_mordor_area_25_31 = {
+				me_mordor_area_25_31_province_01 = { me_land_4331 me_land_3529 me_land_1598 me_land_3859 me_land_0618 me_land_4496 me_land_3712 me_land_2647 me_land_1477 }
+			}
+			me_mordor_area_25_32 = {
+				me_mordor_area_25_32_province_01 = { me_land_2386 me_land_1789 me_land_3938 me_land_1137 me_land_4794 me_land_2013 me_land_4602 }
+			}
+			me_mordor_area_25_33 = {
+				me_mordor_area_25_33_province_01 = { me_land_1271 me_land_2309 me_land_1715 me_land_5093 me_land_2935 me_land_4709 me_land_0725 }
+			}
 			me_mordor_area_25_34 = {
 				me_mordor_area_25_34_province_01 = { me_land_3374 me_land_2799 me_land_3308 me_land_0272 me_land_0897 me_land_3889 me_land_1079 me_land_2801 }
 			}
@@ -2734,6 +2680,15 @@ me_mordor_and_rhun = {
 			}
 			me_mordor_area_25_41 = {
 				me_mordor_area_25_41_province_01 = { me_land_1357 me_land_2347 me_land_3287 me_land_2498 me_land_1302 me_land_4551 }
+			}
+			me_mordor_area_26_31 = {
+				me_mordor_area_26_31_province_01 = { me_land_0022 me_land_4623 me_land_2502 me_land_4725 nurn_fields me_land_3118 me_land_4750 me_land_2487 me_land_2962 }
+			}
+			me_mordor_area_26_32 = {
+				me_mordor_area_26_32_province_01 = { me_land_1317 me_land_4210 me_land_4168 me_land_2184 me_land_3237 me_land_0347 me_land_2066 me_land_2560 me_land_2315 me_land_2899 }
+			}
+			me_mordor_area_26_33 = {
+				me_mordor_area_26_33_province_01 = { me_land_4066 me_land_4826 me_land_0955 me_land_1661 me_land_0675 me_land_3389 me_land_3931 }
 			}
 			me_mordor_area_26_34 = {
 				me_mordor_area_26_34_province_01 = { me_land_4720 me_land_4713 me_lake_0034 me_lake_0059 me_lake_0036 }
@@ -2762,8 +2717,17 @@ me_mordor_and_rhun = {
 			me_mordor_area_26_42 = {
 				me_mordor_area_26_42_province_01 = { me_land_3279 me_land_0149 }
 			}
+			me_mordor_area_27_31 = {
+				me_mordor_area_27_31_province_01 = { me_land_3477 me_land_4493 me_land_4688 }
+			}
+			me_mordor_area_27_32 = {
+				me_mordor_area_27_32_province_01 = { me_land_0663 me_land_2934 me_land_4802 me_land_0845 me_land_2392 me_land_2994 me_land_1886 me_land_3702 me_land_1112 }
+			}
+			me_mordor_area_27_33 = {
+				me_mordor_area_27_33_province_01 = { me_lake_0049 me_land_1653 me_lake_0046 me_land_1823 me_lake_0031 me_land_0054 me_land_1573 me_land_1922 }
+			}
 			me_mordor_area_27_34 = {
-				me_mordor_area_27_34_province_01 = { me_lake_0022 me_lake_0038 me_land_3259 me_land_1933 me_land_2467 me_land_1925 me_land_0892 }
+				me_mordor_area_27_34_province_01 = { me_lake_0015 me_lake_0022 me_lake_0038 me_land_3259 me_land_1933 me_land_2467 me_land_4053 me_land_1925 me_land_0892 me_land_3285 }
 			}
 			me_mordor_area_27_35 = {
 				me_mordor_area_27_35_province_01 = { me_land_4703 me_land_4341 me_land_3995 me_land_1308 me_land_0241 }
@@ -2789,8 +2753,17 @@ me_mordor_and_rhun = {
 			me_mordor_area_27_42 = {
 				me_mordor_area_27_42_province_01 = { me_land_3347 }
 			}
+			me_mordor_area_28_31 = {
+				me_mordor_area_28_31_province_01 = { me_land_3930 }
+			}
+			me_mordor_area_28_32 = {
+				me_mordor_area_28_32_province_01 = { me_land_5039 me_land_0645 me_land_4949 }
+			}
+			me_mordor_area_28_33 = {
+				me_mordor_area_28_33_province_01 = { me_land_0132 me_land_3120 me_land_0187 me_land_3383 }
+			}
 			me_mordor_area_28_34 = {
-				me_mordor_area_28_34_province_01 = { me_land_4340 }
+				me_mordor_area_28_34_province_01 = { me_land_4340 me_land_1648 }
 			}
 			me_mordor_area_28_35 = {
 				me_mordor_area_28_35_province_01 = { me_land_0527 }
@@ -3278,7 +3251,7 @@ me_mordor_and_rhun = {
 				me_rhun_area_18_41_province_01 = { me_land_0593 me_land_3822 me_land_4445 me_land_4139 me_land_2855 me_land_2706 }
 			}
 			me_rhun_area_19_33 = {
-				me_rhun_area_19_33_province_01 = { me_land_0690 me_land_4930 me_land_2473 me_land_0006 }
+				me_rhun_area_19_33_province_01 = { me_land_0690 me_land_4930 me_land_2473 }
 			}
 			me_rhun_area_19_34 = {
 				me_rhun_area_19_34_province_01 = { me_land_2047 me_land_0314 me_land_1489 me_land_2001 me_land_2683 me_land_0399 me_land_3800 me_land_4048 me_land_3101 me_land_1895 }
@@ -3304,11 +3277,8 @@ me_mordor_and_rhun = {
 			me_rhun_area_19_41 = {
 				me_rhun_area_19_41_province_01 = { me_land_1685 me_land_4570 me_land_2428 me_land_1765 me_land_0819 me_land_2291 me_land_1784 }
 			}
-			me_rhun_area_20_33 = {
-				me_rhun_area_20_33_province_01 = { me_land_3507 me_land_2911 me_land_2604 me_land_4814 }
-			}
 			me_rhun_area_20_34 = {
-				me_rhun_area_20_34_province_01 = { me_land_3704 me_land_0199 me_land_3061 }
+				me_rhun_area_20_34_province_01 = { me_land_0199 me_land_3061 }
 			}
 			me_rhun_area_20_35 = {
 				me_rhun_area_20_35_province_01 = { me_land_0144 me_land_0640 me_land_4203 me_land_2334 me_land_2613 }

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import tempfile
 import sys
 from pathlib import Path
@@ -21,9 +22,10 @@ from gamedriver import (
     observer_pause_banner,
     observer_start_button_state,
     observer_toggle_ready,
+    set_player_visual_settings,
     transition_completion_signal,
 )
-from smoketest import runtime_link_needs_repair
+from smoketest import restore_settings, runtime_link_needs_repair, settings_snapshot
 
 
 def require(condition: bool, message: str) -> None:
@@ -67,6 +69,41 @@ def main() -> int:
         "an existing mod path and matching relocated user directory must pass",
     )
     with tempfile.TemporaryDirectory(dir="G:\\") as directory:
+        settings = Path(directory) / "pdx_settings.json"
+        original_settings = {
+            "Audio": {"personal_volume": 0.37},
+            "Graphics": {"display_mode": "fullscreen"},
+            "Terrain": {
+                "3d_terrain_disable": True,
+                "triplanar_uv_quality": "disabled",
+            },
+        }
+        settings.write_text(json.dumps(original_settings), encoding="utf-8")
+        snapshot = settings_snapshot(settings)
+        set_player_visual_settings(settings.parent)
+        visual_settings = json.loads(settings.read_text(encoding="utf-8"))
+        require(
+            visual_settings["Terrain"]["3d_terrain_disable"] is False,
+            "the player visual profile must enable physical terrain",
+        )
+        require(
+            visual_settings["Terrain"]["triplanar_uv_quality"] == "medium",
+            "the player visual profile must enable terrain material projection",
+        )
+        require(
+            visual_settings["Audio"] == original_settings["Audio"],
+            "the player visual profile must preserve personal audio settings",
+        )
+        require(
+            visual_settings["Graphics"]["display_mode"] == "fullscreen",
+            "the player visual profile must preserve personal display mode",
+        )
+        restore_settings(settings, snapshot)
+        require(
+            json.loads(settings.read_text(encoding="utf-8")) == original_settings,
+            "smoke settings restoration must reproduce the exact player payload",
+        )
+
         debug = Path(directory) / "debug.log"
         require(
             mainmenu_game_transition_state(debug) == "not-started",

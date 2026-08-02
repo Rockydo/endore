@@ -58,6 +58,21 @@ Useful inspection commands:
 .\.venv\Scripts\python.exe tools\test_eu5_slot.py
 ```
 
+Smoke uses a deliberately cheap graphics profile, but snapshots and restores the prior
+player settings around the complete vanilla/mod transaction. If a legacy or interrupted
+run left manual gameplay without close-zoom terrain, close EU5 and restore only the
+player-facing visual keys with:
+
+```powershell
+.\.venv\Scripts\python.exe tools\gamedriver.py profile visual
+```
+
+For a direct player-quality launch through the leased driver:
+
+```powershell
+.\.venv\Scripts\python.exe tools\gamedriver.py launch --mode mod --visual-map --no-debug-mode
+```
+
 For renderer evidence that must not inherit map-derived state from an old save, use the
 bounded fresh-game route:
 

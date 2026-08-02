@@ -199,6 +199,56 @@ def set_fixed_settings(user_dir: Path, *, visual_map: bool = False) -> None:
     path.write_text(json.dumps(value, indent="\t") + "\n", encoding="utf-8")
 
 
+def set_player_visual_settings(user_dir: Path) -> None:
+    """Restore player-facing terrain without overwriting personal UI/audio choices."""
+
+    path = user_dir / "pdx_settings.json"
+    value = json.loads(path.read_text(encoding="utf-8-sig")) if path.exists() else {}
+    value.setdefault("Graphics", {}).update(
+        {
+            "quality": "medium",
+            "mapobject_quality": "medium",
+            "texture_quality": "high",
+            "anisotropic_filtering": "x8",
+            "low_quality_shaders": False,
+            "render_scale": 1.0,
+        }
+    )
+    value.setdefault("Terrain", {}).update(
+        {
+            "3d_terrain_disable": False,
+            "triplanar_uv_quality": "medium",
+        }
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, indent="\t") + "\n", encoding="utf-8")
+
+
+def profile(args: argparse.Namespace) -> int:
+    """Prepare the shared user directory for a later manual player launch."""
+
+    running = [
+        process
+        for process in psutil.process_iter(["name"])
+        if str(process.info.get("name", "")).casefold() == "eu5.exe"
+    ]
+    if running:
+        print(
+            "gamedriver: close EU5 before changing its persistent profile; "
+            "the running game would overwrite it on exit",
+            file=sys.stderr,
+        )
+        return 1
+    user_dir = Path(str(config()["user_dir"]))
+    if args.name == "visual":
+        set_player_visual_settings(user_dir)
+    else:
+        set_fixed_settings(user_dir, visual_map=False)
+    set_fixed_bindings(user_dir)
+    print(f"gamedriver: configured {args.name} profile at {user_dir}")
+    return 0
+
+
 def set_fixed_bindings(user_dir: Path) -> None:
     """Install deterministic map/camera keys for autonomous terrain inspection."""
     path = user_dir / "user_bindings" / "user.bindings"
@@ -2212,6 +2262,9 @@ def build_parser() -> argparse.ArgumentParser:
     )
     launch_parser.add_argument("extra", nargs="*")
     launch_parser.set_defaults(func=launch)
+    profile_parser = sub.add_parser("profile")
+    profile_parser.add_argument("name", choices=("visual", "smoke"))
+    profile_parser.set_defaults(func=profile)
     wait_parser = sub.add_parser("wait")
     wait_parser.add_argument("--timeout", type=int, default=480)
     wait_parser.add_argument("--minimum", type=int, default=45)

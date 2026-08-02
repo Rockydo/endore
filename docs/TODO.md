@@ -211,6 +211,14 @@
    multiple narrower Gondor/Lindon channels while preserving dense Lothlórien canopy.
    Full validation, nine-day Observer playback, and exact-fingerprint paired smoke with
    zero new lines pass. The complete nine-theatre physical/source-edge review remains open.
+   ACCEPTED FOCUSED v87 HYDROLOGY MECHANISM — preserve all 102 source-backed courses and
+   the parser-safe twelve-channel graph. Build 24187685 renders any broad river-material
+   mask as full water, so rejected v49-v51 must not return. v52 paints only nested water
+   cores: ordinary drainage remains roughly two to three source pixels while upper/lower
+   Anduin grow to roughly five or six and reach installed raster width 15 earlier. Fresh
+   Caras Galadhon, Osgiliath, Celebrant, and Entwash evidence proves a dominant Great River
+   plus narrower continuous affluents with readable banks. Keep this item open for the
+   complete source-edge and nine-theatre review; add no uncited decorative watercourse.
    ACCEPTED FOCUSED v75 FOREST CHECKPOINT remains authoritative after v77 A/B: Mirkwood
    stays a near-continuous all-LOD canopy and Lothlórien stays a dense source-shaped,
    light-trunk-only wood. Removing the rejected generic green scenery does not alter any
@@ -235,6 +243,15 @@
    and the independent full-resolution physical controls while capturing the nine
    required terrain theatres. Do not restore the quarantined July navmesh or relaunch
    the superseded 12,104-location fingerprints.
+   CURRENT v85 EVIDENCE AUTOMATION — `tools/capture_m2_theatres.py` captures a centred
+   full-map silhouette, hard-resets, and captures deterministic regional/close pairs for all nine binding theatres, then runs
+   bounded maximum-speed playback and releases EU5. Every finder query is statically
+   required to resolve to exactly one generated display name. Belfalas now targets the
+   unique `Dol Amroth` land cell at calibrated shore-visible zoom instead of the prior
+   ambiguous ocean-only/inland searches. Full validation passed in 472.8 seconds,
+   including all 174,763 terrain tiles and the unique-camera contract. The complete
+   fresh audit is DEFERRED, not failed, while an unmanaged EU5 PID owns the
+   shared machine; do not poll or commit the tool without its resulting evidence.
 9. REOPENED M2 FIDELITY AUDIT — after relief, rivers, water, forests, and macro materials
    converge, compare the entire physical atlas theatre-by-theatre and feature-by-feature
    against `http://arda-maps.org/ages/third` and
@@ -428,7 +445,7 @@
   source-backed physical feeder presentation while retaining the parser-safe 12-channel
   graph.
 
-## Current v83 drainage-visibility checkpoint
+## Superseded v83 drainage-visibility checkpoint
 
 - ACCEPTED NARROW MECHANISM: retain the parser-safe 12-channel `rivers.png` byte-for-byte
   and strengthen only the terrain material around the 90 source-backed physical courses.
@@ -454,3 +471,41 @@
   materially different, retail-proven affluent mechanism only if it can preserve load
   safety; do not repeat the already rejected red-endpoint custom graph or inflate these
   channels into decorative corridors.
+
+## Current v86 hierarchy/profile candidate
+
+- Keep the source-aligned strategic hierarchy correction: Mordor's interior is no longer
+  classified as Ithilien/eastern Rhun, Rivendell lies west of the Misty crest, Dale and
+  isolated Erebor are distinct from the Grey Mountains, and Erech lies south of Rohan.
+  Ten canonical anchor contracts, all 38 realm contracts, and every component disposition
+  must remain green. Current ledger: 3,198 owned / 2,002 deliberately wild land cells,
+  zero claim violations, no undispositioned political component.
+- Preserve the smoke/player graphics separation. Smoke must restore the exact prior
+  settings payload; manual testing can run `gamedriver.py profile visual` or a direct
+  `launch --visual-map --no-debug-mode`. Never interpret a terrain-disabled manual frame
+  as evidence about the generated physical map.
+- LIVE STATUS: the hierarchy candidate loaded in a fresh New Game and the deterministic
+  theatre audit completed with clean bounded playback. The first full-map frame exposed a
+  capture-order bug rather than a map defect; the driver now resets to the full map only
+  after establishing its finder context. A corrected complete atlas remains part of the
+  still-red M2 owner gate.
+- COMMIT GATES: repository-wide validation passed in 421.8 seconds; paired smoke passed
+  in 201.3 seconds with zero new mod lines; `eu5_slot.py assert-smoked` covers exact
+  fingerprint `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`.
+  M2 remains red regardless; do not resume gameplay content.
+
+## Current v87 hydrology checkpoint
+
+- Preserve generator v52's core-only water mechanism and exact fingerprint
+  `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9` until the final
+  validation/smoke pair. The 193.3 MB terrain cache reuses unchanged height and replaces
+  only the material payload/provenance needed by the river hierarchy.
+- Evidence under `docs/screens/20260802_v87d_hydrology/` and
+  `docs/screens/20260802_v87e_hydrology/` shows both Anduin reaches plus Celebrant and
+  Entwash. The exact-fingerprint session completed 45 seconds of maximum-speed playback
+  with zero recovery and the baseline-only 1,486-byte error log.
+- REMAINING M2 WORK: run the corrected full nine-theatre atlas, continue feature-level
+  comparison with the accepted online maps, and refine any demonstrable course, bank,
+  or confluence mismatch. Jagged material edges may be softened only if both banks stay
+  readable and the inland-sea failure does not return. M2 remains red pending explicit
+  owner acceptance.

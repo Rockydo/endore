@@ -220,6 +220,17 @@ def flow_palette_index(river: dict, progress: float) -> int:
     nominal_width = float(river["width"]) * WORLD_H
     if nominal_width < 18:
         return 4 if progress < 0.78 else 5
+    if river["key"] in {"upper_anduin", "anduin"}:
+        # The Anduin is Middle-earth's Great River, not merely one member of
+        # the broad-river class. Preserve the installed marker vocabulary but
+        # reach its broadest downstream channel substantially earlier.
+        if progress < 0.08:
+            return 4
+        if progress < 0.20:
+            return 5
+        if progress < 0.45:
+            return 11
+        return 15
     if river["key"] in WIDEST_RIVERS:
         if progress < 0.20:
             return 4

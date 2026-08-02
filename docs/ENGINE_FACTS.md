@@ -394,3 +394,11 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   dirt-normal/muted-teal probe read as mottled ground; a darker blue diffuse plus the
   level unmasked normal reads as water in a fresh calibrated Nindalf A/B. It remains
   terrain, not navigable engine water, and cannot inherit water-location simulation.
+- Build 24187685 treats any slot-6 water-material presence as visually dominant rather
+  than softly blending it with neighboring terrain bits. A broad mixed mask therefore
+  becomes a full blue water band. The accepted presentation uses only a narrow nested
+  core; height incision and the surrounding dry terrain provide the wider valley and
+  banks.
+- The build loads 102 source-aligned material-water cores while `rivers.png` retains only
+  twelve independent parser-safe channels. The other joined and terrain-only cores are
+  visual terrain and must not be documented as navigable engine river graph edges.
