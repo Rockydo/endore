@@ -464,3 +464,26 @@ entered live Observer in 135 seconds at about 8.62 GB private memory, and advanc
 July navmesh or relaunch the superseded 12,104-location fingerprints. Evidence:
 `docs/screens/20260731_current_joined_transition_fix/` and
 `docs/screens/20260731_runtime_budget_6004/`.
+
+## 2026-08-02 — External OS quit during v70 fresh-world proof
+
+Status: two-strike external runtime blocker; continue static forest work and retry at the
+next natural game checkpoint.
+
+Two fresh `new-observer` attempts on identical game-visible fingerprint
+`ffb9947c2035d78a0fe96f845380fabef5d12c2ba48580eabb268f2368ab1e17` were terminated by
+an OS-requested quit at different stages. The first reached a fully rendered country
+selection and then exposed an independent Observer-button false positive in the driver;
+the second began `MainMenu->Game` and was closed before transition completion. In both
+cases EU5 logged `Quit: Quit event from OS`, unwound through LoadingScreen/SplashScreen,
+produced no new crash directory, and emitted no fatal map/height/terrain/cache diagnostic.
+Antiquitas had no active test process or current lease, and the shared slot returned clean
+and available after each exit. This is not evidence that v70 map bytes failed to load.
+
+Retain the driver correction that requires the independently observed game-rule dialog
+before accepting the ambiguous gold start control and clicks the true centre of `Start
+Observing the game`. Do not spend a third immediate launch on the same checkpoint. Continue
+the owner-requested static forest-density/species batch and retry fresh Observer plus
+paired smoke after that fingerprint changes. Evidence:
+`docs/screens/20260802_v70_morannon_ramped_hinge/` and
+`docs/screens/20260802_v70b_morannon_ramped_hinge/`.

@@ -1,0 +1,2724 @@
+{
+  "schema": 2,
+  "milestone": "M3 political assignment audit",
+  "audited_land_locations": 5200,
+  "owned_locations": 3537,
+  "wild_locations": 1663,
+  "contract_violations": 0,
+  "contracted_realms": {
+    "GON": {
+      "rationale": "Gondor fiefs from Anfalas to the Anduin",
+      "claim_bounds": [
+        0.35,
+        0.69,
+        0.55,
+        0.77
+      ],
+      "locations": 390,
+      "forced_anchors": 9,
+      "final_bbox": [
+        0.354823,
+        0.6859585,
+        0.5603322,
+        0.7596483
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 3,
+        "largest_component": 387,
+        "largest_component_fraction": 0.992308,
+        "detached_unforced_specks": 2,
+        "component_detail": [
+          {
+            "size": 387,
+            "forced_anchors": 9,
+            "sample": [
+              "calembel",
+              "erech",
+              "linhir",
+              "me_land_0021",
+              "me_land_0024"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0004",
+              "me_land_1958"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2679"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "DAM": {
+      "rationale": "Dol Amroth and Belfalas peninsula",
+      "claim_bounds": [
+        0.46,
+        0.53,
+        0.6,
+        0.73
+      ],
+      "locations": 70,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4681319,
+        0.5216117,
+        0.6082071,
+        0.7244748
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 70,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 70,
+            "forced_anchors": 1,
+            "sample": [
+              "dol_amroth",
+              "me_land_0084",
+              "me_land_0140",
+              "me_land_0262",
+              "me_land_0365"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "ROH": {
+      "rationale": "The Mark between Isen, Anduin, and White Mountains",
+      "claim_bounds": [
+        0.45,
+        0.57,
+        0.42,
+        0.58
+      ],
+      "locations": 178,
+      "forced_anchors": 4,
+      "final_bbox": [
+        0.4556777,
+        0.5648352,
+        0.4318515,
+        0.5696141
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 3,
+        "largest_component": 163,
+        "largest_component_fraction": 0.91573,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 163,
+            "forced_anchors": 4,
+            "sample": [
+              "aldberg",
+              "dunharrow",
+              "edoras",
+              "helms_deep",
+              "me_land_0010"
+            ]
+          },
+          {
+            "size": 13,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0116",
+              "me_land_0411",
+              "me_land_0485",
+              "me_land_0520",
+              "me_land_0538"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2291",
+              "me_land_2844"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "SHI": {
+      "rationale": "Shire bounds west of the Brandywine",
+      "claim_bounds": [
+        0.315,
+        0.39,
+        0.2,
+        0.29
+      ],
+      "locations": 70,
+      "forced_anchors": 3,
+      "final_bbox": [
+        0.3203907,
+        0.3860806,
+        0.2056668,
+        0.2823644
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 4,
+        "largest_component": 67,
+        "largest_component_fraction": 0.957143,
+        "detached_unforced_specks": 2,
+        "component_detail": [
+          {
+            "size": 67,
+            "forced_anchors": 2,
+            "sample": [
+              "hobbiton",
+              "me_land_0393",
+              "me_land_0450",
+              "me_land_0470",
+              "me_land_0509"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "bucklebury"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1322"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2686"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "BRE": {
+      "rationale": "Bree-land's four-village crossroads",
+      "claim_bounds": [
+        0.38,
+        0.415,
+        0.2,
+        0.285
+      ],
+      "locations": 24,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.3811966,
+        0.404884,
+        0.2056668,
+        0.2755252
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 24,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 24,
+            "forced_anchors": 1,
+            "sample": [
+              "me_bree",
+              "me_land_0573",
+              "me_land_0614",
+              "me_land_0882",
+              "me_land_0915"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "RAN": {
+      "rationale": "The Angle and immediate Ranger refuge",
+      "claim_bounds": [
+        0.43,
+        0.5,
+        0.235,
+        0.335
+      ],
+      "locations": 45,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4454212,
+        0.4827839,
+        0.2374206,
+        0.3321935
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 45,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 45,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0032",
+              "me_land_0279",
+              "me_land_0358",
+              "me_land_0379",
+              "me_land_0399"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "LIN": {
+      "rationale": "Lindon west of the Blue Mountains",
+      "claim_bounds": [
+        0.14,
+        0.32,
+        0.11,
+        0.38
+      ],
+      "locations": 139,
+      "forced_anchors": 3,
+      "final_bbox": [
+        0.1445665,
+        0.3147741,
+        0.1211529,
+        0.3761602
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 6,
+        "largest_component": 77,
+        "largest_component_fraction": 0.553957,
+        "detached_unforced_specks": 3,
+        "component_detail": [
+          {
+            "size": 77,
+            "forced_anchors": 2,
+            "sample": [
+              "harlond_lindon",
+              "me_land_0029",
+              "me_land_0289",
+              "me_land_0324",
+              "me_land_0471"
+            ]
+          },
+          {
+            "size": 49,
+            "forced_anchors": 1,
+            "sample": [
+              "forlond",
+              "me_land_0189",
+              "me_land_0388",
+              "me_land_0390",
+              "me_land_0436"
+            ]
+          },
+          {
+            "size": 9,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0208",
+              "me_land_0762",
+              "me_land_2706",
+              "me_land_2874",
+              "me_land_3272"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0469",
+              "me_land_3379"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0003"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_4141"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "BLU": {
+      "rationale": "Surviving Ered Luin halls",
+      "claim_bounds": [
+        0.26,
+        0.32,
+        0.12,
+        0.23
+      ],
+      "locations": 40,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.2661783,
+        0.3147741,
+        0.1255496,
+        0.2242306
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 40,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 40,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0039",
+              "me_land_0383",
+              "me_land_0384",
+              "me_land_0452",
+              "me_land_0594"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "LOR": {
+      "rationale": "Naith between Misty foothills and Anduin",
+      "claim_bounds": [
+        0.498,
+        0.55,
+        0.33,
+        0.395
+      ],
+      "locations": 44,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4989011,
+        0.5492063,
+        0.3302394,
+        0.394724
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 44,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 44,
+            "forced_anchors": 1,
+            "sample": [
+              "caras_galadhon",
+              "me_land_0167",
+              "me_land_0203",
+              "me_land_0221",
+              "me_land_0271"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        16,
+        55
+      ]
+    },
+    "DUN": {
+      "rationale": "Dunland west of Isen and the Gap",
+      "claim_bounds": [
+        0.395,
+        0.47,
+        0.4,
+        0.515
+      ],
+      "locations": 47,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4214896,
+        0.4605617,
+        0.4005862,
+        0.5144113
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 47,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 47,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0162",
+              "me_land_0199",
+              "me_land_0487",
+              "me_land_0605",
+              "me_land_0769"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        218,
+        265
+      ]
+    },
+    "MOA": {
+      "rationale": "Moria and immediate Dimrill/Sirannon approaches",
+      "claim_bounds": [
+        0.47,
+        0.505,
+        0.3,
+        0.37
+      ],
+      "locations": 24,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4708181,
+        0.5025641,
+        0.3038593,
+        0.3678554
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 24,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 24,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0251",
+              "me_land_0340",
+              "me_land_0870",
+              "me_land_0899",
+              "me_land_1110"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        3,
+        26
+      ]
+    },
+    "GOB": {
+      "rationale": "Goblin-town and High Pass under the Misty Mountains",
+      "claim_bounds": [
+        0.49,
+        0.522,
+        0.15,
+        0.235
+      ],
+      "locations": 31,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4903541,
+        0.5201465,
+        0.1504641,
+        0.2344895
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 30,
+        "largest_component_fraction": 0.967742,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 30,
+            "forced_anchors": 1,
+            "sample": [
+              "goblin_town",
+              "me_land_0126",
+              "me_land_0337",
+              "me_land_0433",
+              "me_land_0699"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1671"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        3,
+        32
+      ]
+    },
+    "GUN": {
+      "rationale": "Gundabad and the northern mountain junction",
+      "claim_bounds": [
+        0.47,
+        0.545,
+        0.065,
+        0.15
+      ],
+      "locations": 28,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4708181,
+        0.5431013,
+        0.0683928,
+        0.1470445
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 5,
+        "largest_component": 16,
+        "largest_component_fraction": 0.571429,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 16,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0122",
+              "me_land_0218",
+              "me_land_0437",
+              "me_land_0468",
+              "me_land_0533"
+            ]
+          },
+          {
+            "size": 5,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0891",
+              "me_land_3283",
+              "me_land_4680",
+              "me_land_4903",
+              "me_land_5049"
+            ]
+          },
+          {
+            "size": 5,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1243",
+              "me_land_2217",
+              "me_land_2645",
+              "me_land_4499",
+              "me_land_4678"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "gundabad"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1312"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        34,
+        62
+      ]
+    },
+    "IRO": {
+      "rationale": "Iron Hills source label and adjacent holds",
+      "claim_bounds": [
+        0.645,
+        0.71,
+        0.12,
+        0.19
+      ],
+      "locations": 45,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.645177,
+        0.7064713,
+        0.1216414,
+        0.1890572
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 45,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 45,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0086",
+              "me_land_0224",
+              "me_land_0329",
+              "me_land_0427",
+              "me_land_0539"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        0,
+        1
+      ]
+    },
+    "ERE": {
+      "rationale": "Erebor and its immediate mountain approaches",
+      "claim_bounds": [
+        0.57,
+        0.63,
+        0.11,
+        0.19
+      ],
+      "locations": 28,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.570696,
+        0.6273504,
+        0.1201759,
+        0.1494871
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 28,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 28,
+            "forced_anchors": 1,
+            "sample": [
+              "erebor",
+              "me_land_0124",
+              "me_land_0284",
+              "me_land_0360",
+              "me_land_0453"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "DAL": {
+      "rationale": "Dale and the upper Celduin plain",
+      "claim_bounds": [
+        0.585,
+        0.64,
+        0.13,
+        0.23
+      ],
+      "locations": 17,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5931624,
+        0.6351648,
+        0.1489985,
+        0.2183683
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 16,
+        "largest_component_fraction": 0.941176,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 16,
+            "forced_anchors": 1,
+            "sample": [
+              "dale",
+              "me_land_0157",
+              "me_land_0659",
+              "me_land_0718",
+              "me_land_0954"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_4786"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "ESG": {
+      "rationale": "Lake-town and Long Lake shore",
+      "claim_bounds": [
+        0.585,
+        0.63,
+        0.15,
+        0.23
+      ],
+      "locations": 25,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5894994,
+        0.6229548,
+        0.159746,
+        0.2178798
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 25,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 25,
+            "forced_anchors": 1,
+            "sample": [
+              "esgaroth",
+              "me_land_0072",
+              "me_land_0465",
+              "me_land_0997",
+              "me_land_1399"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "WOO": {
+      "rationale": "Thranduil's northern and eastern Mirkwood",
+      "claim_bounds": [
+        0.55,
+        0.64,
+        0.12,
+        0.305
+      ],
+      "locations": 93,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5550672,
+        0.6393162,
+        0.1514411,
+        0.3048363
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 93,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 93,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0033",
+              "me_land_0149",
+              "me_land_0155",
+              "me_land_0200",
+              "me_land_0215"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        40,
+        119
+      ]
+    },
+    "WDM": {
+      "rationale": "Woodmen settlements in western Mirkwood",
+      "claim_bounds": [
+        0.525,
+        0.595,
+        0.22,
+        0.355
+      ],
+      "locations": 69,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5252747,
+        0.5946276,
+        0.2252076,
+        0.3370787
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 69,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 69,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0107",
+              "me_land_0120",
+              "me_land_0210",
+              "me_land_0397",
+              "me_land_0615"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        30,
+        95
+      ]
+    },
+    "BEO": {
+      "rationale": "Beorning crossings and upper Anduin vales",
+      "claim_bounds": [
+        0.49,
+        0.555,
+        0.15,
+        0.3
+      ],
+      "locations": 65,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4954823,
+        0.5521368,
+        0.1514411,
+        0.2857841
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 3,
+        "largest_component": 57,
+        "largest_component_fraction": 0.876923,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 57,
+            "forced_anchors": 1,
+            "sample": [
+              "carrock",
+              "me_land_0016",
+              "me_land_0150",
+              "me_land_0204",
+              "me_land_0299"
+            ]
+          },
+          {
+            "size": 6,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0246",
+              "me_land_0348",
+              "me_land_0616",
+              "me_land_2623",
+              "me_land_2638"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2037",
+              "me_land_5146"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        10,
+        65
+      ]
+    },
+    "DOL": {
+      "rationale": "Dol Guldur's southern Mirkwood shadow",
+      "claim_bounds": [
+        0.53,
+        0.6,
+        0.31,
+        0.41
+      ],
+      "locations": 46,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5455433,
+        0.5997558,
+        0.3263312,
+        0.4098681
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 46,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 46,
+            "forced_anchors": 1,
+            "sample": [
+              "dol_guldur",
+              "me_land_0035",
+              "me_land_0069",
+              "me_land_0076",
+              "me_land_0105"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        20,
+        65
+      ]
+    },
+    "DOR": {
+      "rationale": "Dorwinion around the northwest Sea of Rhûn",
+      "claim_bounds": [
+        0.64,
+        0.73,
+        0.285,
+        0.44
+      ],
+      "locations": 90,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.6498168,
+        0.7194139,
+        0.2877382,
+        0.431363
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 90,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 90,
+            "forced_anchors": 1,
+            "sample": [
+              "dorwinion",
+              "me_land_0045",
+              "me_land_0057",
+              "me_land_0209",
+              "me_land_0264"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "FAN": {
+      "rationale": "Fangorn source forest and Entwash headwaters",
+      "claim_bounds": [
+        0.45,
+        0.52,
+        0.405,
+        0.505
+      ],
+      "locations": 45,
+      "forced_anchors": 2,
+      "final_bbox": [
+        0.4761905,
+        0.5140415,
+        0.4054714,
+        0.5021983
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 45,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 45,
+            "forced_anchors": 2,
+            "sample": [
+              "me_land_0034",
+              "me_land_0240",
+              "me_land_0247",
+              "me_land_0281",
+              "me_land_0372"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "DRU": {
+      "rationale": "Drúadan Forest and Stonewain approaches",
+      "claim_bounds": [
+        0.535,
+        0.585,
+        0.56,
+        0.625
+      ],
+      "locations": 22,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5477411,
+        0.5763126,
+        0.5622863,
+        0.6233512
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 20,
+        "largest_component_fraction": 0.909091,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 20,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0011",
+              "me_land_0555",
+              "me_land_0780",
+              "me_land_0972",
+              "me_land_1055"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1260",
+              "me_land_5073"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "RIV": {
+      "rationale": "Imladris hidden valley and immediate refuge",
+      "claim_bounds": [
+        0.475,
+        0.51,
+        0.195,
+        0.245
+      ],
+      "locations": 9,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4761905,
+        0.4935287,
+        0.196385,
+        0.2408403
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 8,
+        "largest_component_fraction": 0.888889,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 8,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0497",
+              "me_land_0607",
+              "me_land_0979",
+              "me_land_2861",
+              "me_land_3066"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "rivendell"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "LOS": {
+      "rationale": "Lossoth settlements around the Icebay",
+      "claim_bounds": [
+        0.19,
+        0.41,
+        0.0,
+        0.13
+      ],
+      "locations": 85,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.198779,
+        0.3968254,
+        0.0107474,
+        0.1196873
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 3,
+        "largest_component": 71,
+        "largest_component_fraction": 0.835294,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 71,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0092",
+              "me_land_0235",
+              "me_land_0354",
+              "me_land_0496",
+              "me_land_0617"
+            ]
+          },
+          {
+            "size": 13,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0001",
+              "me_land_0114",
+              "me_land_0274",
+              "me_land_0759",
+              "me_land_1532"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0002"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "MOR": {
+      "rationale": "Mordor within the enclosing mountain walls",
+      "claim_bounds": [
+        0.595,
+        0.77,
+        0.515,
+        0.73
+      ],
+      "locations": 247,
+      "forced_anchors": 9,
+      "final_bbox": [
+        0.6,
+        0.769475,
+        0.5202736,
+        0.7195896
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 7,
+        "largest_component": 238,
+        "largest_component_fraction": 0.963563,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 238,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0005",
+              "me_land_0009",
+              "me_land_0018",
+              "me_land_0022",
+              "me_land_0030"
+            ]
+          },
+          {
+            "size": 3,
+            "forced_anchors": 3,
+            "sample": [
+              "me_land_1615",
+              "me_land_1811",
+              "morannon"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 2,
+            "sample": [
+              "me_land_0660",
+              "minas_morgul"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "barad_dur"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0416"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "mount_doom"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "nurn_fields"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "ISE": {
+      "rationale": "Isengard ring and Nan Curunír approaches",
+      "claim_bounds": [
+        0.445,
+        0.48,
+        0.415,
+        0.515
+      ],
+      "locations": 38,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4503053,
+        0.4774115,
+        0.4176844,
+        0.5085491
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 38,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 38,
+            "forced_anchors": 1,
+            "sample": [
+              "isengard",
+              "me_land_0063",
+              "me_land_0222",
+              "me_land_0278",
+              "me_land_0370"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "UMB": {
+      "rationale": "Umbar coast and corsair hinterland",
+      "claim_bounds": [
+        0.44,
+        0.59,
+        0.77,
+        1.0
+      ],
+      "locations": 210,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4500611,
+        0.580464,
+        0.7777235,
+        1.0
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 210,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 210,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0050",
+              "me_land_0073",
+              "me_land_0083",
+              "me_land_0115",
+              "me_land_0121"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "ANG": {
+      "rationale": "Mount Gram and Angmar remnant fastnesses",
+      "claim_bounds": [
+        0.415,
+        0.48,
+        0.06,
+        0.2
+      ],
+      "locations": 55,
+      "forced_anchors": 2,
+      "final_bbox": [
+        0.4224664,
+        0.4722833,
+        0.0635076,
+        0.1934538
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 54,
+        "largest_component_fraction": 0.981818,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 54,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0159",
+              "me_land_0342",
+              "me_land_0426",
+              "me_land_0540",
+              "me_land_0552"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "carn_dum"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    }
+  },
+  "uncontracted_realms": {
+    "RHO": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 1,
+      "final_bbox": [
+        0.5665446,
+        0.5665446,
+        0.2789448,
+        0.2789448
+      ],
+      "maximum_unforced_capital_distance": 0.0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 1,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_3146"
+            ]
+          }
+        ]
+      }
+    },
+    "HNE": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 107,
+      "final_bbox": [
+        0.5521368,
+        0.7199023,
+        0.7601368,
+        0.9975574
+      ],
+      "maximum_unforced_capital_distance": 0.2510245,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 98,
+        "largest_component_fraction": 0.915888,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 98,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0059",
+              "me_land_0081",
+              "me_land_0094",
+              "me_land_0169",
+              "me_land_0260"
+            ]
+          },
+          {
+            "size": 9,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0770",
+              "me_land_1093",
+              "me_land_1382",
+              "me_land_2294",
+              "me_land_2446"
+            ]
+          }
+        ]
+      }
+    },
+    "HRA": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 90,
+      "final_bbox": [
+        0.6258852,
+        0.7308913,
+        0.8021495,
+        0.9892526
+      ],
+      "maximum_unforced_capital_distance": 0.1192561,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 90,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 90,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0027",
+              "me_land_0171",
+              "me_land_0408",
+              "me_land_0419",
+              "me_land_0424"
+            ]
+          }
+        ]
+      }
+    },
+    "HFA": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 72,
+      "final_bbox": [
+        0.5601954,
+        0.6984127,
+        0.9120664,
+        1.0
+      ],
+      "maximum_unforced_capital_distance": 0.2309654,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 67,
+        "largest_component_fraction": 0.930556,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 67,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0377",
+              "me_land_0488",
+              "me_land_0652",
+              "me_land_0719",
+              "me_land_0799"
+            ]
+          },
+          {
+            "size": 5,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0587",
+              "me_land_1202",
+              "me_land_2685",
+              "me_land_2958",
+              "me_land_4333"
+            ]
+          }
+        ]
+      }
+    },
+    "KHA": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 281,
+      "final_bbox": [
+        0.6903541,
+        0.8432234,
+        0.7220322,
+        1.0
+      ],
+      "maximum_unforced_capital_distance": 0.3009019,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 278,
+        "largest_component_fraction": 0.989324,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 278,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0053",
+              "me_land_0054",
+              "me_land_0085",
+              "me_land_0093",
+              "me_land_0131"
+            ]
+          },
+          {
+            "size": 3,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1840",
+              "me_land_3057",
+              "me_land_3738"
+            ]
+          }
+        ]
+      }
+    },
+    "RHU": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 254,
+      "final_bbox": [
+        0.6346764,
+        0.8058608,
+        0.1250611,
+        0.43234
+      ],
+      "maximum_unforced_capital_distance": 0.290076,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 251,
+        "largest_component_fraction": 0.988189,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 251,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0104",
+              "me_land_0158",
+              "me_land_0243",
+              "me_land_0244",
+              "me_land_0269"
+            ]
+          },
+          {
+            "size": 3,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2985",
+              "me_land_4621",
+              "me_land_4846"
+            ]
+          }
+        ]
+      }
+    },
+    "RH2": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 321,
+      "final_bbox": [
+        0.6637363,
+        0.840293,
+        0.284807,
+        0.5197851
+      ],
+      "maximum_unforced_capital_distance": 0.3071204,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 321,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 321,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0006",
+              "me_land_0012",
+              "me_land_0028",
+              "me_land_0048",
+              "me_land_0049"
+            ]
+          }
+        ]
+      }
+    },
+    "RH3": {
+      "rationale": "lower-confidence region claim; no invented cadastral envelope",
+      "locations": 92,
+      "final_bbox": [
+        0.7787546,
+        0.8373626,
+        0.1235955,
+        0.2882267
+      ],
+      "maximum_unforced_capital_distance": 0.1078666,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 92,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 92,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0071",
+              "me_land_0090",
+              "me_land_0198",
+              "me_land_0212",
+              "me_land_0237"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "all_realm_connectivity": {
+    "GON": {
+      "components": 3,
+      "largest_component": 387,
+      "largest_component_fraction": 0.992308,
+      "detached_unforced_specks": 2,
+      "component_detail": [
+        {
+          "size": 387,
+          "forced_anchors": 9,
+          "sample": [
+            "calembel",
+            "erech",
+            "linhir",
+            "me_land_0021",
+            "me_land_0024"
+          ]
+        },
+        {
+          "size": 2,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0004",
+            "me_land_1958"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_2679"
+          ]
+        }
+      ]
+    },
+    "DAM": {
+      "components": 1,
+      "largest_component": 70,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 70,
+          "forced_anchors": 1,
+          "sample": [
+            "dol_amroth",
+            "me_land_0084",
+            "me_land_0140",
+            "me_land_0262",
+            "me_land_0365"
+          ]
+        }
+      ]
+    },
+    "ROH": {
+      "components": 3,
+      "largest_component": 163,
+      "largest_component_fraction": 0.91573,
+      "detached_unforced_specks": 1,
+      "component_detail": [
+        {
+          "size": 163,
+          "forced_anchors": 4,
+          "sample": [
+            "aldberg",
+            "dunharrow",
+            "edoras",
+            "helms_deep",
+            "me_land_0010"
+          ]
+        },
+        {
+          "size": 13,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0116",
+            "me_land_0411",
+            "me_land_0485",
+            "me_land_0520",
+            "me_land_0538"
+          ]
+        },
+        {
+          "size": 2,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_2291",
+            "me_land_2844"
+          ]
+        }
+      ]
+    },
+    "SHI": {
+      "components": 4,
+      "largest_component": 67,
+      "largest_component_fraction": 0.957143,
+      "detached_unforced_specks": 2,
+      "component_detail": [
+        {
+          "size": 67,
+          "forced_anchors": 2,
+          "sample": [
+            "hobbiton",
+            "me_land_0393",
+            "me_land_0450",
+            "me_land_0470",
+            "me_land_0509"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "bucklebury"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_1322"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_2686"
+          ]
+        }
+      ]
+    },
+    "BRE": {
+      "components": 1,
+      "largest_component": 24,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 24,
+          "forced_anchors": 1,
+          "sample": [
+            "me_bree",
+            "me_land_0573",
+            "me_land_0614",
+            "me_land_0882",
+            "me_land_0915"
+          ]
+        }
+      ]
+    },
+    "RAN": {
+      "components": 1,
+      "largest_component": 45,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 45,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0032",
+            "me_land_0279",
+            "me_land_0358",
+            "me_land_0379",
+            "me_land_0399"
+          ]
+        }
+      ]
+    },
+    "RIV": {
+      "components": 2,
+      "largest_component": 8,
+      "largest_component_fraction": 0.888889,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 8,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0497",
+            "me_land_0607",
+            "me_land_0979",
+            "me_land_2861",
+            "me_land_3066"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "rivendell"
+          ]
+        }
+      ]
+    },
+    "LIN": {
+      "components": 6,
+      "largest_component": 77,
+      "largest_component_fraction": 0.553957,
+      "detached_unforced_specks": 3,
+      "component_detail": [
+        {
+          "size": 77,
+          "forced_anchors": 2,
+          "sample": [
+            "harlond_lindon",
+            "me_land_0029",
+            "me_land_0289",
+            "me_land_0324",
+            "me_land_0471"
+          ]
+        },
+        {
+          "size": 49,
+          "forced_anchors": 1,
+          "sample": [
+            "forlond",
+            "me_land_0189",
+            "me_land_0388",
+            "me_land_0390",
+            "me_land_0436"
+          ]
+        },
+        {
+          "size": 9,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0208",
+            "me_land_0762",
+            "me_land_2706",
+            "me_land_2874",
+            "me_land_3272"
+          ]
+        },
+        {
+          "size": 2,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0469",
+            "me_land_3379"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0003"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_4141"
+          ]
+        }
+      ]
+    },
+    "BLU": {
+      "components": 1,
+      "largest_component": 40,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 40,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0039",
+            "me_land_0383",
+            "me_land_0384",
+            "me_land_0452",
+            "me_land_0594"
+          ]
+        }
+      ]
+    },
+    "LOR": {
+      "components": 1,
+      "largest_component": 44,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 44,
+          "forced_anchors": 1,
+          "sample": [
+            "caras_galadhon",
+            "me_land_0167",
+            "me_land_0203",
+            "me_land_0221",
+            "me_land_0271"
+          ]
+        }
+      ]
+    },
+    "WOO": {
+      "components": 1,
+      "largest_component": 93,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 93,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0033",
+            "me_land_0149",
+            "me_land_0155",
+            "me_land_0200",
+            "me_land_0215"
+          ]
+        }
+      ]
+    },
+    "ERE": {
+      "components": 1,
+      "largest_component": 28,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 28,
+          "forced_anchors": 1,
+          "sample": [
+            "erebor",
+            "me_land_0124",
+            "me_land_0284",
+            "me_land_0360",
+            "me_land_0453"
+          ]
+        }
+      ]
+    },
+    "IRO": {
+      "components": 1,
+      "largest_component": 45,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 45,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0086",
+            "me_land_0224",
+            "me_land_0329",
+            "me_land_0427",
+            "me_land_0539"
+          ]
+        }
+      ]
+    },
+    "DAL": {
+      "components": 2,
+      "largest_component": 16,
+      "largest_component_fraction": 0.941176,
+      "detached_unforced_specks": 1,
+      "component_detail": [
+        {
+          "size": 16,
+          "forced_anchors": 1,
+          "sample": [
+            "dale",
+            "me_land_0157",
+            "me_land_0659",
+            "me_land_0718",
+            "me_land_0954"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_4786"
+          ]
+        }
+      ]
+    },
+    "ESG": {
+      "components": 1,
+      "largest_component": 25,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 25,
+          "forced_anchors": 1,
+          "sample": [
+            "esgaroth",
+            "me_land_0072",
+            "me_land_0465",
+            "me_land_0997",
+            "me_land_1399"
+          ]
+        }
+      ]
+    },
+    "BEO": {
+      "components": 3,
+      "largest_component": 57,
+      "largest_component_fraction": 0.876923,
+      "detached_unforced_specks": 1,
+      "component_detail": [
+        {
+          "size": 57,
+          "forced_anchors": 1,
+          "sample": [
+            "carrock",
+            "me_land_0016",
+            "me_land_0150",
+            "me_land_0204",
+            "me_land_0299"
+          ]
+        },
+        {
+          "size": 6,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0246",
+            "me_land_0348",
+            "me_land_0616",
+            "me_land_2623",
+            "me_land_2638"
+          ]
+        },
+        {
+          "size": 2,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_2037",
+            "me_land_5146"
+          ]
+        }
+      ]
+    },
+    "WDM": {
+      "components": 1,
+      "largest_component": 69,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 69,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0107",
+            "me_land_0120",
+            "me_land_0210",
+            "me_land_0397",
+            "me_land_0615"
+          ]
+        }
+      ]
+    },
+    "DOR": {
+      "components": 1,
+      "largest_component": 90,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 90,
+          "forced_anchors": 1,
+          "sample": [
+            "dorwinion",
+            "me_land_0045",
+            "me_land_0057",
+            "me_land_0209",
+            "me_land_0264"
+          ]
+        }
+      ]
+    },
+    "FAN": {
+      "components": 1,
+      "largest_component": 45,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 45,
+          "forced_anchors": 2,
+          "sample": [
+            "me_land_0034",
+            "me_land_0240",
+            "me_land_0247",
+            "me_land_0281",
+            "me_land_0372"
+          ]
+        }
+      ]
+    },
+    "DRU": {
+      "components": 2,
+      "largest_component": 20,
+      "largest_component_fraction": 0.909091,
+      "detached_unforced_specks": 1,
+      "component_detail": [
+        {
+          "size": 20,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0011",
+            "me_land_0555",
+            "me_land_0780",
+            "me_land_0972",
+            "me_land_1055"
+          ]
+        },
+        {
+          "size": 2,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_1260",
+            "me_land_5073"
+          ]
+        }
+      ]
+    },
+    "LOS": {
+      "components": 3,
+      "largest_component": 71,
+      "largest_component_fraction": 0.835294,
+      "detached_unforced_specks": 1,
+      "component_detail": [
+        {
+          "size": 71,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0092",
+            "me_land_0235",
+            "me_land_0354",
+            "me_land_0496",
+            "me_land_0617"
+          ]
+        },
+        {
+          "size": 13,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0001",
+            "me_land_0114",
+            "me_land_0274",
+            "me_land_0759",
+            "me_land_1532"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0002"
+          ]
+        }
+      ]
+    },
+    "RHO": {
+      "components": 1,
+      "largest_component": 1,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_3146"
+          ]
+        }
+      ]
+    },
+    "MOR": {
+      "components": 7,
+      "largest_component": 238,
+      "largest_component_fraction": 0.963563,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 238,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0005",
+            "me_land_0009",
+            "me_land_0018",
+            "me_land_0022",
+            "me_land_0030"
+          ]
+        },
+        {
+          "size": 3,
+          "forced_anchors": 3,
+          "sample": [
+            "me_land_1615",
+            "me_land_1811",
+            "morannon"
+          ]
+        },
+        {
+          "size": 2,
+          "forced_anchors": 2,
+          "sample": [
+            "me_land_0660",
+            "minas_morgul"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "barad_dur"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0416"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "mount_doom"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "nurn_fields"
+          ]
+        }
+      ]
+    },
+    "DOL": {
+      "components": 1,
+      "largest_component": 46,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 46,
+          "forced_anchors": 1,
+          "sample": [
+            "dol_guldur",
+            "me_land_0035",
+            "me_land_0069",
+            "me_land_0076",
+            "me_land_0105"
+          ]
+        }
+      ]
+    },
+    "ISE": {
+      "components": 1,
+      "largest_component": 38,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 38,
+          "forced_anchors": 1,
+          "sample": [
+            "isengard",
+            "me_land_0063",
+            "me_land_0222",
+            "me_land_0278",
+            "me_land_0370"
+          ]
+        }
+      ]
+    },
+    "MOA": {
+      "components": 1,
+      "largest_component": 24,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 24,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0251",
+            "me_land_0340",
+            "me_land_0870",
+            "me_land_0899",
+            "me_land_1110"
+          ]
+        }
+      ]
+    },
+    "GUN": {
+      "components": 5,
+      "largest_component": 16,
+      "largest_component_fraction": 0.571429,
+      "detached_unforced_specks": 1,
+      "component_detail": [
+        {
+          "size": 16,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0122",
+            "me_land_0218",
+            "me_land_0437",
+            "me_land_0468",
+            "me_land_0533"
+          ]
+        },
+        {
+          "size": 5,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0891",
+            "me_land_3283",
+            "me_land_4680",
+            "me_land_4903",
+            "me_land_5049"
+          ]
+        },
+        {
+          "size": 5,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_1243",
+            "me_land_2217",
+            "me_land_2645",
+            "me_land_4499",
+            "me_land_4678"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "gundabad"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_1312"
+          ]
+        }
+      ]
+    },
+    "GOB": {
+      "components": 2,
+      "largest_component": 30,
+      "largest_component_fraction": 0.967742,
+      "detached_unforced_specks": 1,
+      "component_detail": [
+        {
+          "size": 30,
+          "forced_anchors": 1,
+          "sample": [
+            "goblin_town",
+            "me_land_0126",
+            "me_land_0337",
+            "me_land_0433",
+            "me_land_0699"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_1671"
+          ]
+        }
+      ]
+    },
+    "UMB": {
+      "components": 1,
+      "largest_component": 210,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 210,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0050",
+            "me_land_0073",
+            "me_land_0083",
+            "me_land_0115",
+            "me_land_0121"
+          ]
+        }
+      ]
+    },
+    "HNE": {
+      "components": 2,
+      "largest_component": 98,
+      "largest_component_fraction": 0.915888,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 98,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0059",
+            "me_land_0081",
+            "me_land_0094",
+            "me_land_0169",
+            "me_land_0260"
+          ]
+        },
+        {
+          "size": 9,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0770",
+            "me_land_1093",
+            "me_land_1382",
+            "me_land_2294",
+            "me_land_2446"
+          ]
+        }
+      ]
+    },
+    "HRA": {
+      "components": 1,
+      "largest_component": 90,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 90,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0027",
+            "me_land_0171",
+            "me_land_0408",
+            "me_land_0419",
+            "me_land_0424"
+          ]
+        }
+      ]
+    },
+    "HFA": {
+      "components": 2,
+      "largest_component": 67,
+      "largest_component_fraction": 0.930556,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 67,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0377",
+            "me_land_0488",
+            "me_land_0652",
+            "me_land_0719",
+            "me_land_0799"
+          ]
+        },
+        {
+          "size": 5,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0587",
+            "me_land_1202",
+            "me_land_2685",
+            "me_land_2958",
+            "me_land_4333"
+          ]
+        }
+      ]
+    },
+    "KHA": {
+      "components": 2,
+      "largest_component": 278,
+      "largest_component_fraction": 0.989324,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 278,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0053",
+            "me_land_0054",
+            "me_land_0085",
+            "me_land_0093",
+            "me_land_0131"
+          ]
+        },
+        {
+          "size": 3,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_1840",
+            "me_land_3057",
+            "me_land_3738"
+          ]
+        }
+      ]
+    },
+    "RHU": {
+      "components": 2,
+      "largest_component": 251,
+      "largest_component_fraction": 0.988189,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 251,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0104",
+            "me_land_0158",
+            "me_land_0243",
+            "me_land_0244",
+            "me_land_0269"
+          ]
+        },
+        {
+          "size": 3,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_2985",
+            "me_land_4621",
+            "me_land_4846"
+          ]
+        }
+      ]
+    },
+    "RH2": {
+      "components": 1,
+      "largest_component": 321,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 321,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0006",
+            "me_land_0012",
+            "me_land_0028",
+            "me_land_0048",
+            "me_land_0049"
+          ]
+        }
+      ]
+    },
+    "RH3": {
+      "components": 1,
+      "largest_component": 92,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 92,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0071",
+            "me_land_0090",
+            "me_land_0198",
+            "me_land_0212",
+            "me_land_0237"
+          ]
+        }
+      ]
+    },
+    "DUN": {
+      "components": 1,
+      "largest_component": 47,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 47,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0162",
+            "me_land_0199",
+            "me_land_0487",
+            "me_land_0605",
+            "me_land_0769"
+          ]
+        }
+      ]
+    },
+    "ANG": {
+      "components": 2,
+      "largest_component": 54,
+      "largest_component_fraction": 0.981818,
+      "detached_unforced_specks": 0,
+      "component_detail": [
+        {
+          "size": 54,
+          "forced_anchors": 1,
+          "sample": [
+            "me_land_0159",
+            "me_land_0342",
+            "me_land_0426",
+            "me_land_0540",
+            "me_land_0552"
+          ]
+        },
+        {
+          "size": 1,
+          "forced_anchors": 1,
+          "sample": [
+            "carn_dum"
+          ]
+        }
+      ]
+    }
+  }
+}

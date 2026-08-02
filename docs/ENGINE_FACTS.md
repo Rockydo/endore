@@ -325,3 +325,34 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   `name_milano.serbo_croatian_language` at localization hash 2602704833. Remapping the
   deterministic area stem to `me_khand_area_33_36_arda` removes the generated province
   collision without changing any location key, coordinate, or hierarchy membership.
+- In the fixed 1936×1119 release-layout window, the ENDÓRË main-menu controls are centred
+  near normalized x `0.14`: Continue y `0.362`, New Game y `0.420`, and Load Game y
+  `0.475`. The former y `0.383` target can activate Continue's lower edge and open its
+  incompatible-save confirmation. Pixel classification plus Escape cleanup of a retained
+  menu is required before waiting on `MainMenu->Game`; log preload alone cannot prove the
+  intended click.
+- `pathlib.Path("")` resolves to the current working directory and therefore reports that
+  it exists. Smoke bootstrap must treat an empty `mod_dir` as invalid explicitly and must
+  restore the configured runtime to `G:\endore_user_data` before launching build 24187685.
+- `m2_world.py` must author/check `m2_controls.py` before locations and every downstream
+  raster. Its former stage list began at locations, so changing control-renderer code and
+  invoking a full write could silently reuse committed elevation/biome controls.
+- Build 24187685's vanilla Observer start button uses a brighter skin than ENDÃ“RÃ‹: the
+  live detector measured dark/gold ratios 0.480/0.152 in vanilla. A valid detector floor
+  of dark >=0.38 plus gold >=0.08 accepts both skins. During a fresh transition, logged
+  MainMenu-to-Game evidence must be checked before visually classifying a Load Game panel;
+  blue loading art can otherwise resemble that panel and abort a healthy new game.
+- Equal native-pixel height windows are useful morphology evidence but not literal
+  elevation equivalence. At radius 96, installed Shey has upper-half/quarter fractions
+  0.232/0.075 and p90 gradient 782; v44 Gundabad had 0.357/0.202 and p90 2,971. ENDÃ“RÃ‹
+  therefore did not need a global height escalation. Its renderer defects were broad cap
+  area, low along-range crest frequency, and material placement. Conversely, v45 proves
+  that high-frequency signed detail which passes 3,175/4,226 p75/p90 global bounds can
+  still render as regular terraces in the q64 cache; live spatial-frequency evidence is
+  mandatory.
+- Build 24187685 loads and plays the 6,004-location custom world with 3,057,385 generated
+  vegetation transforms. On fingerprint `06e7c07e`, fresh player-facing New Game reached
+  the live Observer HUD in 171.1 seconds; a 45-second playback advanced nine in-game days,
+  remained responsive, and used approximately 5.8 GB working set. Full-canopy installed
+  `environment_oceanic_wt_tree_01_mesh` and `_02_mesh` references resolve correctly in
+  Lothlórien at close zoom, so they are a viable light-trunk deciduous proxy in this build.

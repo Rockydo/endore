@@ -11,7 +11,7 @@ Current iteration: the authored control lattice is 4096×2048 on the proven 1638
 engine canvas, backed by a full-resolution 65,536×32,768 physical source and q64 derived
 runtime cache. The equal-scale ArdaCraft projection preserves the source aspect rather
 than stretching Middle-earth, while Arda Maps Third Age supplies the audited 1,251-vertex
-mainland coast, 15 lakes, 43 mountain footprints, 24 river/valley controls, and forest
+mainland coast, 15 lakes, 43 mountain footprints, 100 river/valley controls, and forest
 geometry. The permanent conformance layer covers 42 settlement anchors, 62 additional
 landmarks, and all 38 realm seats. Downloaded reference data remains transient and
 unshipped.
@@ -225,3 +225,268 @@ selection and HUD-proven live Observer in 115-117 seconds. The corrected state-a
 monitor resumed exactly once and advanced from 3018.1.1 through 3018.1.15; the subsequent
 Khazad-dum focus continued through 3018.2.1 with no error-log growth. This proves the map
 loads and ticks; it does not green the physical-quality gate.
+
+## Current source-relief candidate — v37
+
+The coast remains provisionally frozen. Ardacraft Heightmap V2 now owns exact crest and
+secondary-branch placement through a hash-pinned 1280×1026 5-bit numeric reduction; Arda
+Maps owns outer mountain footprints, all 18 canonical summit points, and the 100-control
+physical drainage atlas. The nine former hand axes retain only 18% continuity influence.
+Twenty-four reviewed river trunks enter the parser-safe engine raster, while 76 additional
+Arda Maps parts carve terrain/material drainage without creating unsupported affluent
+graphs.
+
+v30 and v31 are explicit rejection evidence. v30 expanded lower source response; v31
+contracted it but still amplified the middle half of each massif. v31 nevertheless passed
+paired smoke and entered fresh HUD-proven Observer, proving the rejection is visual rather
+than a load regression. Orodruin's dedicated cone was accepted as a component; Gundabad,
+Erebor, Morannon, and Dunharrow remained too broad.
+
+v32 contracts the source response at exponent 1.90 and maps final relief through a convex
+1.72-power profile. It also moves the Gundabad saddle off the exact summit and aligns
+Erebor's anchor with exact Arda Maps `point_mount LonelyMountain`. The complete
+6,004-location world regenerated with 174,763 terrain tiles, 2,038,645 Arda-native
+vegetation transforms, and zero clipped height samples. Paired smoke passed with zero
+mod-attributable lines and a fresh game entered live Observer in 116 seconds. The Anduin
+width is visibly improved, but a correctly framed Gundabad view rejected its broad generic
+summit cap. Cumulative close zoom invalidated the later Morannon/Dunharrow framing, so no
+negative placement claim is inferred from those images.
+
+v33 preserves every source range and changes only the redundant Gundabad point overlay to
+a compact 0.0045 chain crown. It passed paired smoke with zero mod-attributable lines and
+entered a fresh HUD-proven Observer in 126.3 seconds. Independent hard-reset regional
+views accept Gundabad, isolated Erebor, and Orodruin as components. They reject the still
+low, green Ered Lithui/Ephel Duath around Morannon and White Mountains near Dunharrow;
+drifted close frames are excluded from that verdict.
+
+v34 responds only to that live failure. It preserves exact source placement while
+replacing the underpowered blanket 18% residual continuity with audited per-range weights
+from 28% to 50%. Its broad/body/spine kernels are narrower and put 56% of their response
+on the fine spine, so long named chains can read as connected rocky ranges without
+becoming broad plateaus. Independent source-conformance floors now bind the northern
+ranges, Erebor, White Mountains, and Mordor rather than allowing a global average to hide
+a broken theatre. The complete 6,004-location, 174,763-tile,
+2,038,645-vegetation-transform world regenerated with 279 ports and zero clipped height
+samples; full validation is green. Exact-fingerprint paired smoke is pending behind
+Antiquitas's shared EU5 session. It subsequently passed with zero new and zero mod-unique
+lines, and a fresh game reached HUD-proven Observer in 126.4 seconds. Hard-reset regional
+and target-relative close pairs accept Gundabad, isolated Erebor, and Orodruin as
+components but reject v34 at Morannon and Dunharrow, whose adjacent source ranges remain
+low and green. Invalid Carachost/Starkhorn overview frames are excluded. The gate remains
+red pending a v35 final-height/material correction and the complete nine-theatre sweep.
+
+v35 implements that downstream correction without moving cartography. Paths of the Dead
+and Morannon use source-oriented anisotropic saddles instead of circular depressions. A
+1.28 gain applies only to the exact Ardacraft crest field; an attempted blanket increase
+to secondary range axes was rejected by the source-support guard. Earlier exposed-rock
+transitions are scoped to the physically high White Mountains and Mordor walls. Static
+contracts now require both a low route floor and dense high/exposed adjacent flanks at
+Dunharrow and Morannon. The accepted Gundabad summit remains unchanged; its gameplay
+access carve now joins a substantial continental land component instead of an enclosed
+green pocket.
+
+The pinned-toolchain production world has model SHA `8d31aa47`, 6,004 locations, 289
+ports, 174,763 terrain tiles, and exact game-visible fingerprint `7b1e0917`. Full
+validation is green. Exact-fingerprint smoke and the same reset five-target live camera
+sequence remain pending behind Antiquitas's shared EU5 session. v35 is therefore a
+technically green candidate, not visual acceptance, and the nine-theatre gate remains red.
+
+v35 later passed exact-fingerprint paired smoke and reached fresh live Observer in 124
+seconds. Its ten independently reset named-location frames are valid, but the visual
+verdict is negative: Morannon and Dunharrow remain broad green uplands with scattered
+high material patches rather than continuous enclosing walls. Erebor and Orodruin remain
+accepted components. v35 is therefore rejection evidence, not the current candidate.
+
+v36 gates stronger continuity through the exact Ardacraft support mask. Added gains apply
+only to the White Mountains, Ephel Duath, Ered Lithui, and southern Mountains of Shadow;
+unsupported portions of a reviewed hand axis receive no gain. Source conformance improves
+to 99.6845% global high-ridge support, 98.7299% in the White Mountains, and 99.5990% in
+Mordor. The 6,004-location production model `e03c16e1` regenerated with 306 ports and full
+validation passed on exact fingerprint `a9de05d5`. Corrected paired smoke passed with zero
+new and zero mod-unique lines, and a fresh world reached HUD-proven Observer in 110.8
+seconds. Five independently reset regional/+3 close pairs are valid. They retain Erebor
+as isolated and Orodruin as discrete, but reject v36: Gundabad's visible crown is offset
+behind a broad green hill, Morannon still reads as a broad uplift with a peripheral slab,
+and Dunharrow still lacks a convincing jagged White Mountains wall. The first attempted
+fresh run is excluded because automation clicked Continue's lower edge and opened the
+incompatible-save/Continue-as-Observer modal; its screenshot proves the UI error, not a
+map-load failure.
+
+v37 is the current offline candidate. It doubles the committed numeric relief to
+1280×1026 and five-bit precision, separates foothill response from upper arêtes, removes
+normalization clipping above 36,000, and concentrates source-supported range axes into
+narrow 86%-spine profiles. Bounded flank/material contracts explicitly fail both sparse
+green bowls and broad caps/slabs. Mordor no longer derives its surface silhouette from a
+Mount Doom-centred ellipse: its ash field fills only the Ered Lithui/Ephel Dúath/southern
+Mountains of Shadow enclosure, keeps the basin dark, and exposes lighter rock only on
+high steep crests. The complete model `14a84668` regenerated in 325.0 seconds; full
+validation passed in 367.2 seconds on fingerprint `97e271fb`. Exact smoke is pending—not
+failed—behind Antiquitas's active shared EU5 lease. No v37 visual claim is accepted until
+fresh Observer repeats the same Gundabad/Erebor/Morannon/Orodruin/Dunharrow reset pairs.
+The gate remains red.
+
+v37 later passed exact paired smoke and entered a corrected, genuinely fresh HUD-proven
+Observer in 201.2 seconds. The five reset pairs reject it: broad synthetic tablelands remain
+at Gundabad and around the southern walls, while Orodruin reads as a mesa. This evidence
+proves loadability but closes v37 as a visual candidate.
+
+v38 is the current offline candidate. Ardacraft's numeric relief owns every source-backed
+range without overlaid hand axes, Gaussian pass flanks, or named summit lobes. Erebor and
+Morannon use their direct Ardacraft markers; only the raster-empty Mindolluin and Irensaga
+receive compact source-gap summits. The cubic 68k upper-arête response reaches 64,493 with
+no clipped sample, Orodruin is a compact 63k cone, and all four theatre-support contracts
+remain above 99.79%. Mordor's ash field now flood-fills the exact U-shaped source mountain
+wall with a bounded irregular eastern transition rather than thresholding a rounded
+proximity blob. Model `fefa695d` regenerated with 6,004 locations, 292 ports, and a
+complete 199.9 MB Arda-only terrain cache. The pre-enclosure candidate passed validation;
+the final tree still requires full validation. Exact smoke deferred cleanly behind
+Antiquitas's active shared lease; paired smoke and fresh live comparison remain mandatory.
+The gate remains red.
+
+v38 later passed final validation in 372.7 seconds, exact paired smoke with zero new or
+mod-unique lines, and a fresh HUD-proven Observer start in 124.3 seconds. Its five reset
+pairs reject it: quantized and saturated relief produces flat-topped mesas. Evidence is
+retained under `docs/screens/20260801_m2_ardacraft_relief_v38/`.
+
+v39 retains the pinned source response at native
+2500x2003/8-bit precision, removes both high-sample saturation paths, and builds named
+summits plus Orodruin only at final terrain resolution. Anti-mesa checks bind 39,672
+samples above 45k and an 8.94% low-gradient cap fraction. Erebor, Gundabad, Dunharrow,
+and Orodruin have compact 60-61k summits; exact Morannon arms reach 50.9k around a 12.7k
+gate. Model `9f022ce3` has 6,004 locations, 298 ports, and a 171.7 MB cache. Full
+validation, exact paired smoke, and a genuinely fresh Observer load pass. Five independent
+reset regional/+3 pairs reject the candidate: Morannon lacks the two source walls at the
+camera-visible hinge; Gundabad and Erebor retain smooth radial crowns; Orodruin reads as
+several lobes; and Dunharrow's White Mountains remain discontinuous cliff blocks. The
+evidence is retained under `docs/screens/20260801_m2_ardacraft_relief_v39/`.
+
+v40 kept the pinned coordinates but replaced raw
+warm-rock shelves with a continuous 4/12/18-pixel source-native body/shoulder
+reconstruction. Its major range gradients now occupy a vanilla-calibrated interval while
+crests remain 52-55k; Erebor and Orodruin reach 61.4k. Source-backed named peaks receive
+only tiny exact-coordinate teeth, Gundabad uses its measured junction, and severe rock
+follows narrow reconstructed crests rather than legacy hand axes. Morannon retains the
+direct gate marker plus two drawing-confirmed short hinge arms to the nearest exact Ered
+Lithui and Ephel Duath samples; its oriented saddle remains low. Model `7f48ab78` has
+6,004 locations, 282 ports, and a complete 180.1 MB cache. Full validation, exact paired
+smoke, and the same fresh five-pair live review remain mandatory. No river or political-
+boundary work may begin until those views pass. Full validation, exact smoke, and two
+fresh Observer starts subsequently passed, but exact-target live frames reject v40:
+Erebor is a broad isolated stump and weak regional hill, Gundabad is a green basin inside
+flat rock carpet, and Morannon is a low grassy V. The initially retained Snowpoint frames
+are excluded because Finder did not own keyboard focus; the driver now explicitly focuses
+and clears its edit box.
+
+v41 is the current offline candidate. It changes no source coordinate, coast, pass floor,
+or political cell. A tighter 3/8/15-pixel Ardacraft reconstruction, one moderate control
+gamma, and a convex 55k response produce 307,474 samples above 45k with
+720/1,270/1,895 median/p75/p90 gradients: between v40 hills and v39 shelves. Erebor is
+narrowed, Gundabad gains a compact exact-point crown, the Morannon hinge spines are taller
+and narrower, and Orodruin's lobing harmonics are reduced. Model `35fc4a7c` has 6,004
+locations, 292 ports, and a 172.3 MB complete cache. Static source/height/material gates
+pass. Full validation, exact-fingerprint smoke, and a fresh correctly targeted five-pair
+review remain mandatory; the gate remains red.
+
+v41 subsequently passed full validation, exact paired smoke, and a fresh HUD-proven
+Observer. Its exact-target frames reject it: Erebor and Orodruin improve, but Gundabad is
+still a green basin within rock carpet, Morannon combines a broad wall with a visibly
+straight synthetic arm, and Dunharrow is two isolated spikes instead of one chain.
+
+v42 is the current offline candidate. Ardacraft's pale neutral summit spine is now decoded
+alongside warm-rock shoulders; the previous reduction had discarded the source raster's
+best jagged height signal. Synthetic Morannon arms and ordinary source-backed point teeth
+are removed, leaving continuous source-native Mordor and White Mountains geometry.
+Static source, height, and material preflights pass. Model `987245ab` regenerated with
+6,004 locations, 293 ports, and a 173.8 MB complete cache. Full validation,
+exact-fingerprint smoke, and fresh live review remain mandatory; the gate remains red.
+
+v42 subsequently passed full validation, exact paired smoke, and a fresh HUD-proven
+Observer load. Its ten exact-target frames reject it: broad exposed-rock mass persists at
+Gundabad, Erebor splits into two oversized neighbouring mounds, Morannon remains a low
+rounded berm, Orodruin is too broad, and Dunharrow's surrounding chain remains smooth.
+Evidence is retained under `docs/screens/20260801_m2_ardacraft_relief_v42/`.
+
+v43 is the current offline candidate. It leaves all audited coordinates fixed and
+compresses the warm shoulder field beneath a >=0.92 true-arête band. Terrain above 45k
+falls to 224,227 samples while retaining 869/1,718/2,641 median/p75/p90 gradients and a
+37.2% low-gradient fraction. Erebor is de-duplicated into one direct-marker summit,
+Gundabad receives a compact exposed crown, Orodruin is narrowed, and only pre-existing
+high source relief is amplified around Morannon. Model `16e5d549` regenerated with 6,004
+locations, 300 ports, and a 168.8 MB complete cache. Offline height/material gates pass;
+full validation, exact smoke, and fresh live comparison remain mandatory. The gate stays
+red.
+
+v43 subsequently passed full validation, exact paired smoke, and a fresh HUD-proven
+Observer. Exact-target views accept one isolated Erebor and the compact pointed Orodruin,
+but reject the long ranges: Gundabad remains visually broad, Morannon's northern/eastern
+wall stays low, and Dunharrow remains surrounded by smooth green ridges. Evidence is
+retained under `docs/screens/20260801_m2_ardacraft_relief_v43/`.
+
+v44 preserved every v43 coordinate and footprint while increasing final-resolution signed
+folds and sparse summits only inside the existing mountain-strength envelope. The complete
+world regenerated with model `16e5d549`, 6,004 locations, 300 ports, 239 route edges,
+2,038,645 vegetation transforms, 25,332 unique height tiles, and 63,900 unique material
+tiles. Full validation passed, exact paired smoke passed on fingerprint `312aa575` with
+zero new and zero mod-unique diagnostics, and a fresh HUD-proven Observer started. The live
+five-target review rejects it: Gundabad gains a few exposed crest patches but remains
+broad, Morannon's northern/eastern wall remains low, and Dunharrow remains a smooth green
+ridge system. Erebor remains one isolated massif and Orodruin remains a compact pointed
+cone. The next pass must begin with matched installed-vanilla mountain captures and derive
+renderer-scale width/height/material ratios before changing v45. The gate stays red.
+
+Matched installed-vanilla close/regional captures at Chur, Shey, and Kathmandu then
+established that v44's raw relief was already steeper than vanilla. The v45 response
+therefore contracted Gundabad's broad upper body and redistributed relief toward finer
+facets rather than raising the ceiling. Its pinned coherent world regenerated in 600.9
+seconds; full validation passed in 381.3 seconds; exact paired smoke passed in 209.9
+seconds on fingerprint `3d769297`; and a genuinely fresh live Observer started in 126.1
+seconds. Static morphology improved Gundabad's radius-96 upper-quarter area from 20.2% to
+8.2% while preserving Erebor and Orodruin.
+
+The live gate nevertheless rejects v45. Evidence under
+`docs/screens/docs/screens/20260801_v45_mountain_review/` shows a theatre-scale pale cap
+at Gundabad, repeated terrace/facet bands and disconnected rock blocks at Dunharrow, and
+an unreadable northern/eastern Morannon enclosure around the correctly low gate. Erebor
+remains one isolated form and Orodruin remains a compact cone. v46 must remove native-
+frequency corrugation and globally widened exposure thresholds, retain the accepted
+source geometry and local forms, and introduce smooth source-aligned arÃªtes plus feathered
+connected material. The terrain gate stays red; rivers and politics remain blocked.
+
+v70 is the retained mountain candidate after source-aligning the Ered Lithui and Ephel
+Dúath axes, removing the broad Morannon junction body, and making the exact gate a low
+hinge whose two arms rise toward the source walls. Owner review accepts the substantial
+mountain improvement as the current direction but has not accepted the complete
+nine-theatre terrain gate. Fresh v70 reached country selection; two externally requested
+OS quits prevented a new live evidence set and are recorded in `BLOCKERS.md` rather than
+misclassified as map crashes.
+
+The following forest checkpoint keeps every woodland boundary fixed and replaces the
+2.04m high-only-biased object distribution with a 3.057m all-LOD distribution. Mirkwood
+must prove near-continuous canopy at regional and close zoom; Lothlórien must prove dense
+light-trunk deciduous coverage with no conifer intrusion. Required evidence is a fresh
+HUD-proven Observer plus reset regional/close pairs at Mirkwood and Caras Galadhon, then
+the complete nine-theatre refresh. Static transform counts or green biome tint alone do
+not pass this gate.
+
+v71 clears the focused forest-density checkpoint. Full validation passed after one
+coherent regeneration on model `6048d0cc`; a fresh New Game reached the live Observer HUD
+on exact fingerprint `06e7c07e`; and the evidence under
+`docs/screens/20260802_v71_dense_forests/` shows closed Lothlórien canopy with light trunks
+at close zoom plus theatre-scale mixed Mirkwood canopy at regional and close zoom. A
+45-second playback advanced nine days while responsive. No source forest polygon changed,
+and no map/terrain/vegetation/mesh diagnostic appeared. This accepts the all-LOD density
+and Lothlórien species mechanism, not the complete nine-theatre gate: source-edge,
+river-clearance, and remaining physical-theatre review stay open, followed by the
+per-location political reassignment audit.
+
+v72 clears the focused political-reassignment checkpoint without claiming the complete
+nine-theatre physical gate. The generated audit covers all 5,200 land locations and
+reports zero source-envelope violations. Lothlórien, Dunland, Iron Hills, Woodland Realm,
+Woodmen, Dol Guldur, Erebor, Fangorn, and Isengard now satisfy hard compact-connectivity
+contracts; lower-confidence East/South region claims are separately distance-bounded.
+Fresh live frames under `docs/screens/20260802_v72_political_boundaries/` prove the 44-cell
+Lothlórien claim east of Moria and the 47-cell Dunland claim west of Isengard in the real
+political renderer. Observer advanced nine days, full validation passed, and paired smoke
+added zero error-log lines. Physical river/source-edge and remaining nine-theatre review
+stay open; future political additions require distinct TA 3018 evidence rather than a
+desire to fill neutral land.

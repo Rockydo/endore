@@ -10,8 +10,8 @@ LIN,Lindon,Lindonrim,mithlond,0.309158,0.226185,me_lindon_region,sindarin,80 112
 BLU,Halls of Ered Luin,Blue-mountain Dwarven,blue_halls,0.291610,0.177552,me_lindon_region|me_enedwaith_region,khuzdul,92 92 106,ce_mountain.dds,40,† ENDORE plan 8.1; the surviving halls are not individually named in binding canon
 LOR,Lothlórien,Galadhrim,caras_galadhon,0.519375,0.356221,me_anduin_vale_region|me_brown_lands_region,sindarin,174 164 82,ce_tree_oak.dds,55,"LOTR, Book II, Ch. 6; ENDORE plan 8.1"
 WOO,The Woodland Realm,Woodland,thranduil_halls,0.582295,0.158091,me_mirkwood_region|me_dale_region,sindarin,52 104 64,ce_stag.dds,0,"The Hobbit, Ch. 9; ENDORE plan 8.1"
-ERE,Erebor,Ereborian,erebor,0.599699,0.137606,me_dale_region|me_grey_mountains_region,khuzdul,112 82 52,ce_mountain.dds,55,"The Hobbit, Ch. 1; ENDORE plan 8.1"
-IRO,Iron Hills,Iron-hills Dwarven,iron_hills,0.674452,0.157541,me_dale_region|me_grey_mountains_region,khuzdul,96 86 72,ce_axes_addorsed_shield.dds,45,"The Hobbit, Ch. 17; ENDORE plan 8.1"
+ERE,Erebor,Ereborian,erebor,0.599699,0.137606,me_dale_region|me_grey_mountains_region,khuzdul,112 82 52,ce_mountain.dds,55,"The Hobbit, Ch. 1; Ardacraft direct Erebor mountain marker; ENDORE plan 8.1"
+IRO,Iron Hills,Iron-hills Dwarven,iron_hills,0.674452,0.157541,me_dale_region|me_grey_mountains_region|me_rhun_region,khuzdul,96 86 72,ce_axes_addorsed_shield.dds,45,"The Hobbit, Ch. 17; Arda Maps Iron Mountains label; ENDORE plan 8.1"
 DAL,Dale,Dalish,dale,0.601803,0.148883,me_dale_region,dalish,122 80 48,ce_tower.dds,70,"The Hobbit, Ch. 14; ENDORE plan 8.1"
 ESG,Esgaroth,Lake-folk,esgaroth,0.599873,0.162764,me_dale_region,dalish,54 108 132,ce_boat_shield.dds,25,"The Hobbit, Ch. 10; ENDORE plan 8.1"
 BEO,The Beornings,Beorning,carrock,0.531512,0.192434,me_anduin_vale_region|me_mirkwood_region,beorning,116 82 48,ce_bear_passant.dds,65,"The Hobbit, Ch. 7; ENDORE plan 8.1"
@@ -35,5 +35,5 @@ KHA,Khand,Variag,khazan,0.755180,0.738426,me_khand_region|me_near_harad_region|m
 RHU,Kingdom of Rhûn,Rhûnic,burh_gath,0.770000,0.250000,me_rhun_region|me_northern_wastes_region,rhunic,132 58 38,ce_horse_head.dds,0,† ENDORE plan 8.1; Balchoth-descended polity invented from canon seeds
 RH2,Wain-kingdom of Karmach,Karmachi,wainhold,0.800000,0.350000,me_rhun_region,rhunic,154 88 36,ce_wheel_02.dds,0,† ENDORE plan 8.1; wain-kingdom invented from Appendix A
 RH3,Sagath of the Eastern March,Sagath,eastern_march,0.820000,0.200000,me_rhun_region|me_northern_wastes_region,rhunic,104 48 34,ce_bow_arrow_pale.dds,0,† ENDORE plan 8.1; third Rhûnic confederation invented for eastern texture
-DUN,Dunland,Dunlending,dunland_moot,0.431851,0.465747,me_enedwaith_region|me_rohan_region,westron,104 76 52,ce_boar_head.dds,0,"LOTR, Appendix A; † seat invented because canon gives no capital"
+DUN,Dunland,Dunlending,dunland_moot,0.431851,0.465747,me_enedwaith_region|me_rohan_region,westron,104 76 52,ce_boar_head.dds,90,"LOTR, Appendix A; Arda Maps Dunland label; † seat invented because canon gives no capital"
 ANG,Mount Gram,Angmar-orc,mount_gram,0.448000,0.145000,me_angmar_region|me_north_arnor_region,orkish,66 48 58,ce_wolf_head.dds,55,"LOTR, Book I, Ch. 1 and Appendix A; † remnant polity per ENDORE plan 8.1"

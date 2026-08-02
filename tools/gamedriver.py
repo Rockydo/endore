@@ -457,6 +457,65 @@ def resource_loading_overlay_present(window) -> tuple[bool, float]:
     return ratio >= 0.45, ratio
 
 
+def main_menu_new_game_button_state(image) -> tuple[bool, float, float]:
+    """Detect the current-build New Game button in a captured main-menu frame.
+
+    This is intentionally a post-click guard, not an input target.  Build
+    24187685 can already have a MainMenu->Game preload transaction in flight,
+    so its log state cannot prove that a click left the visible main menu.
+    """
+    import colorsys
+
+    width, height = image.size
+    crop = image.crop(
+        (
+            round(width * 0.055),
+            round(height * 0.355),
+            round(width * 0.20),
+            round(height * 0.415),
+        )
+    ).convert("RGB").resize((120, 32))
+    pixels = list(
+        crop.get_flattened_data()
+        if hasattr(crop, "get_flattened_data")
+        else crop.getdata()
+    )
+    hsv = [colorsys.rgb_to_hsv(r / 255, g / 255, b / 255) for r, g, b in pixels]
+    saturation = sum(item[1] for item in hsv) / len(hsv)
+    warm_ratio = sum(
+        red > blue * 1.25 and red > 90
+        for red, _green, blue in pixels
+    ) / len(pixels)
+    # Local 1920x1080 calibration: ready menu saturation/warm = 0.724/0.119;
+    # Load Game save-list frame = 0.400/0.097.
+    return saturation >= 0.58 and warm_ratio >= 0.05, saturation, warm_ratio
+
+
+def load_game_panel_state(image) -> tuple[bool, float]:
+    """Detect the save-list page opened by an accidental Load Game click."""
+    width, height = image.size
+    crop = image.crop(
+        (
+            round(width * 0.05),
+            round(height * 0.84),
+            round(width * 0.21),
+            round(height * 0.89),
+        )
+    ).convert("RGB").resize((120, 32))
+    pixels = list(
+        crop.get_flattened_data()
+        if hasattr(crop, "get_flattened_data")
+        else crop.getdata()
+    )
+    blue_ratio = sum(
+        blue > red * 1.12 and blue > green * 1.05 and blue > 64
+        for red, green, blue in pixels
+    ) / len(pixels)
+    # The save-list Back button is a stable blue-edged rectangle. Local
+    # calibration: Load Game 0.218; ready main menu 0.001.
+    return blue_ratio >= 0.12, blue_ratio
+
+
 def is_hung_window(window) -> bool:
     """Use Windows' own hung-window check; a visible black window is not ready."""
     return bool(ctypes.windll.user32.IsHungAppWindow(window._hWnd))
@@ -1052,7 +1111,13 @@ def observer_confirmation_dialog_state(image) -> tuple[bool, float, float]:
 
 
 def observer_start_button_state(image) -> tuple[bool, float, float]:
-    """Detect the bottom-centre gold Observer start control."""
+    """Detect the bottom-centre gold Observer start control.
+
+    ENDÓRË's dark-bronze button fills most of this crop, while the installed
+    vanilla lobby uses a brighter and wider gold frame.  Both are authoritative
+    layouts in build 24187685; require the shared gold signature and accept the
+    measured dark-pixel floor of either skin.
+    """
     width, height = image.size
     crop = image.crop(
         (
@@ -1074,7 +1139,12 @@ def observer_start_button_state(image) -> tuple[bool, float, float]:
         and red > 90
         for red, green, blue in pixels
     ) / len(pixels)
-    return dark_ratio >= 0.62 and gold_ratio >= 0.08, dark_ratio, gold_ratio
+    return dark_ratio >= 0.38 and gold_ratio >= 0.08, dark_ratio, gold_ratio
+
+
+def observer_toggle_ready(confirmation_seen: bool, start_visible: bool) -> bool:
+    """Authorize Observer start only after the independent rule dialog proof."""
+    return confirmation_seen and start_visible
 
 
 def wait_for_interactive_game_window(
@@ -1238,7 +1308,13 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
             start_visible, start_dark, start_gold = observer_start_button_state(
                 accepted_image
             )
-        if start_visible:
+        # In this single-player ruleset a successful Observer toggle always
+        # presents the blocking-country confirmation first. The ordinary
+        # ``Select a Country`` control shares the same dark/gold paint as
+        # ``Start Observing the game`` and used to satisfy the permissive
+        # start-button detector after a missed Observe click. Require the
+        # independently observed confirmation and its accepted post-state.
+        if observer_toggle_ready(confirmation, start_visible):
             print(
                 "gamedriver: Observer start control detected "
                 f"(attempt={observer_attempt} dark={start_dark:.3f} "
@@ -1259,11 +1335,12 @@ def enter_live_observer(args: argparse.Namespace, target_dir: Path, prefix: str)
     # This value was calibrated against the local save-load sequence.
     for start_attempt in range(1, 3):
         time.sleep(args.observer_enable_settle if start_attempt == 1 else args.ui_settle)
-        # The country information panel can overlap the right half of this
-        # button after Observer is enabled. Click the stable exposed left
-        # segment at the release UI scale.
+        # The accepted Observer control spans the bottom centre. Its true
+        # centre remains unobscured by the optional country-information panel;
+        # the former 0.42 target can fall outside the ordinary selection
+        # button after a missed toggle and conceal the state error.
         activate_window(require_foreground=True)
-        click_normalized(0.42, 0.86)
+        click_normalized(0.50, 0.86)
         time.sleep(args.ui_settle)
         save_window_capture(target_dir / f"{prefix}_start_attempt{start_attempt}.png")
         if wait_for_observer_pause(max(15, args.live_timeout // 2)):
@@ -1452,19 +1529,42 @@ def new_observer(args: argparse.Namespace) -> int:
     debug = user_dir / "logs" / "debug.log"
     debug_offset = debug.stat().st_size if debug.exists() else 0
     transition_state_before_click = mainmenu_game_transition_state(debug)
-    # The locally captured window places New Game around x=0.14, y=0.42.
+    # The PID-verified 1936x1119 release-layout capture includes Win32 chrome.
+    # In build 24187685 the menu centres are Continue ~=0.362, New Game
+    # ~=0.420, and Load Game ~=0.475. The former 0.383 target can activate the
+    # lower edge of Continue and expose its incompatible-save confirmation.
     # Confirm that the engine actually begins MainMenu->Game before entering
     # its long load wait: EU5 can intermittently discard an otherwise valid
     # foreground click during the menu's final composited frame.
     transition_started = False
     for click_attempt in range(1, args.new_game_attempts + 1):
-        click_normalized(0.14, 0.42)
+        click_normalized(0.14, 0.420)
         time.sleep(args.ui_settle)
         click_capture = target_dir / f"fresh_new_game_clicked_attempt{click_attempt}.png"
-        save_window_capture(click_capture)
+        post_click_image = save_window_capture(click_capture)
         if click_attempt == 1:
             save_window_capture(target_dir / "fresh_new_game_clicked.png")
         evidence["steps"].append(f"new-game-clicked:attempt{click_attempt}")
+        load_panel, load_panel_blue = load_game_panel_state(post_click_image)
+        still_menu, menu_saturation, menu_warm = main_menu_new_game_button_state(
+            post_click_image
+        )
+        if still_menu:
+            evidence["steps"].append(
+                "new-game-click-visually-ignored:"
+                f"saturation={menu_saturation:.3f}:warm={menu_warm:.3f}:"
+                f"attempt{click_attempt}"
+            )
+            # A retained menu may have a modal above it (notably Continue's
+            # incompatible-save confirmation). Escape restores a known clean
+            # menu before the next bounded attempt; it is harmless when the
+            # click was merely ignored.
+            press_scan_code(0x01)
+            time.sleep(args.ui_settle)
+            evidence["steps"].append(
+                f"retained-menu-dismissed-with-escape:attempt{click_attempt}"
+            )
+            continue
         if wait_for_transition_start(
             user_dir,
             debug_offset,
@@ -1480,6 +1580,26 @@ def new_observer(args: argparse.Namespace) -> int:
             )
             transition_started = True
             break
+        # Loading illustrations can contain the same blue values as the Load
+        # Game panel's Back control.  Only classify the panel after the log has
+        # independently failed to show a MainMenu->Game transition; a real
+        # transition always outranks this deliberately conservative visual
+        # tripwire.
+        if load_panel:
+            evidence["steps"].append(
+                "new-game-target-error:load-game-panel:"
+                f"blue={load_panel_blue:.3f}:attempt{click_attempt}"
+            )
+            evidence_path.write_text(
+                json.dumps(evidence, indent=2) + "\n", encoding="utf-8"
+            )
+            print(
+                "gamedriver: New Game target opened the Load Game panel; "
+                "refusing a false MainMenu->Game proof",
+                file=sys.stderr,
+            )
+            stop(argparse.Namespace(timeout=10))
+            return 1
         evidence["steps"].append(
             f"new-game-click-ignored:attempt{click_attempt}"
         )
@@ -1823,6 +1943,17 @@ def focus_location(args: argparse.Namespace) -> int:
     # SDL scancode 68 is F11; Windows delivers it as scan code 0x57.
     press_scan_code(0x57)
     time.sleep(args.open_settle)
+    # Finder does not consistently transfer keyboard focus to its edit box
+    # when another location panel owned focus.  An unfocused write silently
+    # leaves the old selection active, so Enter can center an unrelated place.
+    # Click the stable search-box interior and replace any retained query.
+    window = activate_window()
+    pyautogui.click(
+        window.left + round(window.width * 0.86),
+        window.top + round(window.height * 0.22),
+    )
+    pyautogui.hotkey("ctrl", "a")
+    pyautogui.press("backspace")
     pyautogui.write(query, interval=0.04)
     time.sleep(args.search_settle)
     press_scan_code(0x1C)

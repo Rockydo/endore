@@ -78,14 +78,14 @@ WOO = { # The Woodland Realm; The Hobbit, Ch. 9; ENDORE plan 8.1
 	religion_definition = me_valar_worship
 }
 
-ERE = { # Erebor; The Hobbit, Ch. 1; ENDORE plan 8.1
+ERE = { # Erebor; The Hobbit, Ch. 1; Ardacraft direct Erebor mountain marker; ENDORE plan 8.1
 	color = rgb { 112 82 52 }
 	color2 = rgb { 143 173 203 }
 	culture_definition = me_longbeard
 	religion_definition = me_mahal_cult
 }
 
-IRO = { # Iron Hills; The Hobbit, Ch. 17; ENDORE plan 8.1
+IRO = { # Iron Hills; The Hobbit, Ch. 17; Arda Maps Iron Mountains label; ENDORE plan 8.1
 	color = rgb { 96 86 72 }
 	color2 = rgb { 159 169 183 }
 	culture_definition = me_longbeard
@@ -253,7 +253,7 @@ RH3 = { # Sagath of the Eastern March; † ENDORE plan 8.1; third Rhûnic confed
 	religion_definition = me_melkorism
 }
 
-DUN = { # Dunland; LOTR, Appendix A; † seat invented because canon gives no capital
+DUN = { # Dunland; LOTR, Appendix A; Arda Maps Dunland label; † seat invented because canon gives no capital
 	color = rgb { 104 76 52 }
 	color2 = rgb { 151 179 203 }
 	culture_definition = me_dunlending

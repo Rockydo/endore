@@ -1,5 +1,5 @@
 {
-  "schema": 3,
+  "schema": 4,
   "projection": {
     "source": "ardacraft_equal_scale_grid",
     "x_center": 10651.5,
@@ -8,7 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
-  "projection_sha256": "5b585889790c4601c10baa75d07ad0075fa4ff56fa55e053e0499f7e668a4903",
+  "projection_sha256": "5fca05e0298e9245f68710056846742800e0d02639e4162854e69f072ce70d0f",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -19,13 +19,71 @@
     "named_peaks": 18,
     "ridge_axes": 9,
     "passes": 10,
-    "river_valley_controls": 24,
+    "river_valley_controls": 100,
     "biome_zones": 21,
     "highland_source_vertices": 10805,
     "moor_source_vertices": 369,
     "forest_source_zones": 15,
     "forest_source_components": 57,
-    "river_control_vertices": 816
+    "river_control_vertices": 1863
+  },
+  "drainage_theatres": {
+    "northern_basins": {
+      "bbox": [
+        0.35,
+        0.0,
+        0.8,
+        0.32
+      ],
+      "controls": 28,
+      "points": 527,
+      "length": 1.569023,
+      "minimum_controls": 25,
+      "minimum_points": 500,
+      "minimum_length": 1.5
+    },
+    "anduin_system": {
+      "bbox": [
+        0.42,
+        0.12,
+        0.68,
+        0.62
+      ],
+      "controls": 63,
+      "points": 903,
+      "length": 2.694059,
+      "minimum_controls": 58,
+      "minimum_points": 850,
+      "minimum_length": 2.55
+    },
+    "white_mountains": {
+      "bbox": [
+        0.25,
+        0.43,
+        0.63,
+        0.68
+      ],
+      "controls": 40,
+      "points": 632,
+      "length": 1.829746,
+      "minimum_controls": 36,
+      "minimum_points": 590,
+      "minimum_length": 1.72
+    },
+    "mordor_gondor": {
+      "bbox": [
+        0.52,
+        0.43,
+        0.8,
+        0.75
+      ],
+      "controls": 49,
+      "points": 636,
+      "length": 1.737885,
+      "minimum_controls": 45,
+      "minimum_points": 590,
+      "minimum_length": 1.63
+    }
   },
   "anchor_count": 42,
   "landmark_count": 62,
@@ -286,9 +344,9 @@
         0.137606
       ],
       "deviation": 0.0,
-      "tolerance": 0.005,
+      "tolerance": 0.002,
       "passed": true,
-      "primary_reference": "ArdaCraft"
+      "primary_reference": "Ardacraft"
     },
     {
       "key": "erech",

@@ -10,18 +10,25 @@ into the repository.
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 import math
+import zlib
 from pathlib import Path
 
 import numpy as np
+from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs/world/control/projection.json"
+RELIEF_OUTPUT = ROOT / "docs/world/control/ardacraft_relief.json"
 DEFAULT_REFERENCE_ROOT = Path(r"G:\endore_runtime\cartography_references")
 ARDA_MAPS_SHA256 = (
     "147a2d0ff3e36e2b675afb40dd4a74f634006bc6350a6a7c31639019fd2bd4ab"
+)
+ARDACRAFT_HEIGHTMAP_SHA256 = (
+    "a1b05874cd447b9868c0d56a4fad523e5fc94053fa239dc5df7e0b31068144be"
 )
 
 # Least-squares calibration from 64 shared named points in Arda Maps to the
@@ -46,9 +53,93 @@ PROJECTION_CONTRACT = {
     "canvas_aspect": 2.0,
 }
 
+# The Ardacraft overlay covers its complete 53,888 x 43,008 equal-scale grid.
+# ENDÓRË deliberately retains the surrounding 2:1 canvas rather than stretching
+# that source horizontally; these are therefore binding normalized bounds.
+ARDACRAFT_IMAGE_BOUNDS = [
+    round(0.5 + (-19584.0 - 10651.5) / 86014.0, 9),
+    0.0,
+    round(0.5 + (34303.0 - 10651.5) / 86014.0, 9),
+    1.0,
+]
+RELIEF_GRID_SIZE = (2500, 2003)
+RELIEF_QUANTIZATION_MAX = 255
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def ardacraft_relief_payload(reference_root: Path) -> dict:
+    """Reduce the Ardacraft terrain overlay to an auditable relief response.
+
+    The quarantined raster is never copied into Git. Its warm-rock response is
+    reduced to an 8-bit native-resolution numeric field. Live v38 evidence
+    proved that the former 1280x1026/5-bit reduction broadened individual
+    source samples into renderer-scale mesa caps. The compressed numeric
+    payload preserves exact branching and jagged crest structure while still
+    discarding colour, water, labels, and political information.
+    """
+
+    source_path = reference_root / "ardacraft_heightmap_v2.webp"
+    if sha256(source_path) != ARDACRAFT_HEIGHTMAP_SHA256:
+        raise ValueError("Ardacraft height overlay changed; re-audit before rebuilding")
+    with Image.open(source_path) as image:
+        rgb = np.asarray(image.convert("RGB"), dtype=np.float32)
+    red, green, blue = rgb[..., 0], rgb[..., 1], rgb[..., 2]
+    warm_rock = np.clip((red - green - 2.0) / 48.0, 0.0, 1.0)
+    minimum = np.minimum(np.minimum(red, green), blue)
+    chroma = np.maximum(np.maximum(red, green), blue) - minimum
+    pale_crest = (
+        np.clip((minimum - 142.0) / 78.0, 0.0, 1.0)
+        * np.clip(1.0 - chroma / 62.0, 0.0, 1.0)
+        * np.clip((red - green + 18.0) / 30.0, 0.0, 1.0)
+        * np.clip((red - 145.0) / 55.0, 0.0, 1.0)
+    )
+    crest_locator = np.maximum(warm_rock, pale_crest)
+    warm_image = Image.fromarray(
+        np.round(crest_locator * 255.0).astype(np.uint8), "L"
+    )
+
+    def blurred(radius: float) -> np.ndarray:
+        return np.asarray(
+            warm_image.filter(ImageFilter.GaussianBlur(radius=radius)),
+            dtype=np.float32,
+        ) / 255.0
+
+    # Raw warm-rock colour is a crest locator, not a height field. Using it as
+    # the dominant value left nearly uniform high interiors with abrupt edges,
+    # which v39 rendered as shelves. Reconstruct a continuous cross-range form
+    # at three source-native scales: retain a restrained exact jagged core, then
+    # derive a dominant tight body and two shoulder bands from the pinned pixels.
+    # No range can move because every term is a convolution of that source.
+    response = (
+        crest_locator * 0.22
+        + blurred(3.0) * 0.50
+        + blurred(8.0) * 0.19
+        + blurred(15.0) * 0.09
+    )
+    quantized = np.rint(
+        np.clip((response - 0.018) / 0.64, 0.0, 1.0)
+        * RELIEF_QUANTIZATION_MAX
+    ).astype(np.uint8)
+    compressed = zlib.compress(quantized.tobytes(), level=9)
+    return {
+        "schema": 2,
+        "source": "Ardacraft Heightmap layer Middle-earth V2",
+        "source_sha256": ARDACRAFT_HEIGHTMAP_SHA256,
+        "derivation": (
+            "warm-rock plus pale-summit response; source-native 3/8/15-pixel continuous "
+            "body and shoulder reconstruction; native-resolution 8-bit numeric reduction"
+        ),
+        "bounds": ARDACRAFT_IMAGE_BOUNDS,
+        "resolution": list(RELIEF_GRID_SIZE),
+        "quantization_max": RELIEF_QUANTIZATION_MAX,
+        "encoding": "zlib_base85_u8",
+        "field_sha256": hashlib.sha256(quantized.tobytes()).hexdigest(),
+        "nonzero_samples": int(np.count_nonzero(quantized)),
+        "data": base64.b85encode(compressed).decode("ascii"),
+    }
 
 
 def endore_from_world(x: float, z: float) -> list[float]:
@@ -386,13 +477,82 @@ def orient(points: list[list[float]], mouth: tuple[float, float]) -> list[list[f
     return [[round(x, 6), round(y, 6)] for x, y in points]
 
 
-def build(reference_root: Path) -> dict:
+def stable_key(value: str) -> str:
+    result = "".join(character.lower() if character.isalnum() else "_" for character in value)
+    while "__" in result:
+        result = result.replace("__", "_")
+    return result.strip("_") or "unnamed"
+
+
+def supplementary_river_controls(topology: Topology) -> list[dict]:
+    """Retain every additional source watercourse as physical terrain detail.
+
+    EU5 build 24187685 rejects custom affluent junction graphs in rivers.png,
+    but the same exact source polylines are safe and valuable as height/material
+    controls.  Keep the explicitly modelled trunks out of this collection to
+    avoid thickening them twice; import every other named channel plus every
+    substantial unnamed source part independently.
+    """
+
+    modelled_names = {
+        "Anduin", "Langwell", "Greylin", "GladdenRiver", "Celebrant",
+        "Limlight", "Entwash", "Snowbourn", "Brandywine", "Hoarwell",
+        "Bruinen", "Gwathlo", "Glanduin", "Isen", "Morthond", "Ringlo",
+        "Gilrain", "RiverRunning", "ForestRiver", "Carnen", "Poros",
+    }
+    broad_named = {
+        "Adorn", "Celos", "Ciril", "Erui", "Lefnui", "Lhun", "Serni",
+        "Sirannon", "Sirith",
+    }
+    controls: list[dict] = []
+    geometries = topology.data["objects"]["line_river"]["geometries"]
+    for geometry_index, geometry in enumerate(geometries):
+        properties = geometry.get("properties") or {}
+        source_name = properties.get("eventname")
+        if source_name in modelled_names:
+            continue
+        for part_index, source_part in enumerate(topology.line_parts(geometry)):
+            if len(source_part) < 2 or not in_view(source_part):
+                continue
+            path = rdp(source_part, 0.00014)
+            path_length = sum(
+                math.dist(start, end)
+                for start, end in zip(path, path[1:], strict=False)
+            )
+            # Discard only genuinely sub-location scratches. Short named
+            # tributaries remain binding because several are lore landmarks.
+            if path_length < (0.0018 if source_name else 0.0035):
+                continue
+            label = stable_key(str(source_name)) if source_name else "unnamed"
+            controls.append(
+                {
+                    "key": (
+                        f"source_{label}_{geometry_index:02d}_{part_index:02d}"
+                    ),
+                    "label": source_name,
+                    "width": 0.0017 if source_name in broad_named else 0.00115,
+                    "wander": 0.0,
+                    "engine_raster": False,
+                    "terrain_only": True,
+                    "points": [
+                        [round(x, 6), round(y, 6)] for x, y in path
+                    ],
+                    "source": (
+                        f"Arda Maps line_river {geometry_index} part {part_index}"
+                    ),
+                }
+            )
+    return controls
+
+
+def build(reference_root: Path) -> tuple[dict, dict]:
     source_path = reference_root / "arda_maps_third_age.json"
     if sha256(source_path) != ARDA_MAPS_SHA256:
         raise ValueError("Arda Maps payload changed; re-audit before rebuilding controls")
     source = json.loads(source_path.read_text(encoding="utf-8"))
     topology = Topology(source)
     previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
+    relief_payload = ardacraft_relief_payload(reference_root)
 
     outline_geometries = source["objects"]["poly_outline"]["geometries"]
     islands: dict[str, list[list[float]]] = {}
@@ -512,12 +672,30 @@ def build(reference_root: Path) -> dict:
                 continue
             raise ValueError(f"unreviewed Arda Maps mountain point {source_name!r}")
         size_class = int(properties.get("size", 1))
+        radius = 0.0035 + 0.0012 * size_class
+        if source_name == "LonelyMountain":
+            # Erebor is a single isolated massif. The old generic size-class
+            # radius spread its shoulders into the surrounding upland and made
+            # it read as part of a range at regional zoom.
+            radius = 0.0042
+        elif source_name == "Gundabad":
+            # Gundabad is a summit at the junction of the Misty and Grey
+            # Mountains, not an isolated massif and not a second range-sized
+            # envelope. The generic size-3 point radius produced a broad cap
+            # over terrain that already carries both source ranges. Reserve
+            # this control for the exact source-pinned crown.
+            radius = 0.0045
+        peak_center = (
+            endore_from_world(19_227.0, -4_322.0)
+            if source_name == "LonelyMountain"
+            else topology.point(geometry)
+        )
         named_peaks.append(
             {
                 "key": key,
                 "label": source_name,
-                "center": topology.point(geometry),
-                "radius": round(0.0035 + 0.0012 * size_class, 6),
+                "center": peak_center,
+                "radius": round(radius, 6),
                 "strength": round(
                     subdued_peaks.get(
                         source_name,
@@ -525,7 +703,20 @@ def build(reference_root: Path) -> dict:
                     ),
                     3,
                 ),
-                "source": "Arda Maps point_mount",
+                **(
+                    {"profile": "isolated_peak"}
+                    if source_name == "LonelyMountain"
+                    else (
+                        {"profile": "chain_peak"}
+                        if source_name == "Gundabad"
+                        else {}
+                    )
+                ),
+                "source": (
+                    "Ardacraft direct Erebor marker"
+                    if source_name == "LonelyMountain"
+                    else "Arda Maps point_mount"
+                ),
             }
         )
 
@@ -574,26 +765,65 @@ def build(reference_root: Path) -> dict:
                 [0.500, 0.566], [0.526, 0.575], [0.552, 0.592],
                 [0.578, 0.610],
             ],
+            # Arda Maps places the Dunharrow peaks on a short northern spur
+            # and Mindolluin just beyond the eastern end of the Ardacraft
+            # numeric crest. Connect those exact audited points to the main
+            # chain as narrow paths; the previous circular source-gap stamps
+            # rendered as isolated mesas in v47.
+            "branches": [
+                [
+                    [0.500, 0.566],
+                    [0.500845, 0.547265],
+                    [0.497545, 0.541502],
+                    [0.502831, 0.535253],
+                ],
+                [
+                    [0.578, 0.610],
+                    [0.585423, 0.607818],
+                ],
+            ],
+            "source_audited_branches": True,
+            # The long Dunharrow spur and very short terminal Mindolluin link
+            # need different gains to reach the same renderer-scale crest
+            # without broadening either path.
+            "source_audited_branch_gains": [0.45, 0.65],
         },
         {
             "key": "ephel_duath",
-            "width": 0.012,
+            "width": 0.0085,
             "height": 1.00,
             "wander": 0.0010,
+            "sharp_cross_section": True,
             "points": [
-                [0.610, 0.526], [0.611, 0.558], [0.607, 0.596],
-                [0.617, 0.632], [0.635, 0.665], [0.657, 0.690],
-                [0.681, 0.703],
+                # Direct hinge endpoint, then local maxima sampled from the
+                # hash-pinned Ardacraft relief at the listed latitudes. The
+                # former hand guide drifted up to 0.067 canvas-width east of
+                # the actual western wall in southern Mordor.
+                [0.605128, 0.549585], [0.610012, 0.558000],
+                [0.611477, 0.578000], [0.614652, 0.596000],
+                [0.612454, 0.615000], [0.613187, 0.632000],
+                [0.610745, 0.650000], [0.615385, 0.665000],
+                [0.619780, 0.680000], [0.616117, 0.690000],
+                [0.613675, 0.703000],
             ],
         },
         {
             "key": "ered_lithui",
-            "width": 0.012,
+            "width": 0.0085,
             "height": 1.00,
             "wander": 0.0010,
+            "sharp_cross_section": True,
             "points": [
-                [0.610, 0.526], [0.637, 0.512], [0.666, 0.510],
-                [0.694, 0.520], [0.719, 0.540], [0.740, 0.565],
+                # Direct hinge endpoint, then local maxima sampled from the
+                # hash-pinned Ardacraft relief at the listed longitudes. The
+                # former guide ran north of the visible Ered Lithui by as much
+                # as 0.034 canvas-height and was therefore support-clipped.
+                [0.621978, 0.531998], [0.625000, 0.544211],
+                [0.637000, 0.545188], [0.650000, 0.543723],
+                [0.666000, 0.544211], [0.680000, 0.545677],
+                [0.694000, 0.544700], [0.707000, 0.542745],
+                [0.719000, 0.533464], [0.730000, 0.530044],
+                [0.740000, 0.529555],
             ],
         },
         {
@@ -627,6 +857,41 @@ def build(reference_root: Path) -> dict:
             ],
         },
     ]
+    # The hash-pinned Ardacraft relief field owns exact crest placement and
+    # branching. Live v33 evidence nevertheless proved that a blanket 18%
+    # residual made the White Mountains and Mordor walls read as green hills.
+    # Retain source-aligned narrow axes as range-specific vertical continuity:
+    # the enclosing Mordor walls and White Mountains need the strongest lift,
+    # while the smaller Iron/Mirkwood chains stay subordinate.
+    relief_weights = {
+        "misty_mountains": 0.40,
+        "grey_mountains": 0.38,
+        "ered_luin": 0.34,
+        "white_mountains": 0.48,
+        "ephel_duath": 0.50,
+        "ered_lithui": 0.50,
+        "mountains_of_shadow_south": 0.46,
+        "iron_hills": 0.32,
+        "mountains_of_mirkwood": 0.28,
+    }
+    if {ridge["key"] for ridge in ridges} != set(relief_weights):
+        raise ValueError("range-specific relief-weight review is incomplete")
+    for ridge in ridges:
+        ridge["relief_weight"] = relief_weights[ridge["key"]]
+    # v35 proved that exact source crests alone still leave renderer-scale gaps
+    # in the two live-rejected walls.  These gains apply only after the axis is
+    # multiplied by a soft dilation of the Ardacraft support field; unlike the
+    # rejected blanket weight increase, they cannot create high terrain away
+    # from the source range footprint.
+    source_supported_gains = {
+        "white_mountains": 1.65,
+        "ephel_duath": 1.75,
+        "ered_lithui": 1.75,
+        "mountains_of_shadow_south": 1.65,
+    }
+    for ridge in ridges:
+        if ridge["key"] in source_supported_gains:
+            ridge["source_supported_gain"] = source_supported_gains[ridge["key"]]
 
     def named_source_point(collection: str, event_name: str) -> list[float]:
         matches = [
@@ -653,9 +918,13 @@ def build(reference_root: Path) -> dict:
         },
         {
             "key": "gundabad_gate",
-            "center": named_source_point("point_mount", "Gundabad"),
-            "radius": 0.0050,
-            "source": "Arda Maps point_mount",
+            # The v31 live audit proved that carving the pass at the exact
+            # point_mount coordinate erased Mount Gundabad itself. This is the
+            # already reviewed main-land approach immediately north-east of
+            # the summit; the peak remains exact and the saddle remains open.
+            "center": [0.506471, 0.097215],
+            "radius": 0.0040,
+            "source": "Arda Maps/ArdaCraft reconciled",
         },
         {
             "key": "high_pass",
@@ -685,6 +954,10 @@ def build(reference_root: Path) -> dict:
             "key": "paths_of_the_dead",
             "center": named_source_point("point_place", "PathsOfTheDead"),
             "radius": 0.0040,
+            # The road crosses the east-west White Mountains.  Keep the
+            # saddle long north-south but very narrow along the range so the
+            # Starkhorn/Dunharrow flanks survive immediately beside it.
+            "range_tangent": [1.0, 0.0],
             "source": "Arda Maps point_place",
         },
         {
@@ -695,9 +968,23 @@ def build(reference_root: Path) -> dict:
         },
         {
             "key": "morannon",
-            "center": named_source_point("point_place", "CirithGorgor"),
+            "center": endore_from_world(20_090.0, 12_530.0),
             "radius": 0.0055,
-            "source": "Arda Maps point_place",
+            # Cirith Gorgor opens north-west/south-east at the corner where
+            # Ered Lithui and Ephel Duath meet.  The perpendicular tangent
+            # preserves both arms of that L-shaped wall instead of erasing a
+            # circular green bowl around the Black Gate.
+            "range_tangent": [1.0, -1.0],
+            # Heightmap V2's colour-derived relief drops the last few pixels
+            # of both walls at the low gate. These endpoints are the nearest
+            # unambiguous Ered Lithui and Ephel Duath crests in that exact
+            # layer; the Ardacraft drawing confirms the two connections.
+            "hinge_arms": [
+                endore_from_world(21_143.315692, 12_639.637986),
+                endore_from_world(19_693.979792, 13_396.002095),
+            ],
+            "hinge_source": "Ardacraft Heightmap V2 + drawing-layer reconciliation",
+            "source": "Ardacraft direct Morannon marker",
         },
         {
             "key": "cirith_ungol",
@@ -771,14 +1058,11 @@ def build(reference_root: Path) -> dict:
                 "source_zone_keys": [
                     "low_08", "low_09", "low_10", "low_11"
                 ],
-                "inside_ridges": {
-                    "north": "ered_lithui",
-                    "west": "ephel_duath",
-                    "south": "mountains_of_shadow_south",
-                },
                 "anchor": named_source_point("point_mount", "MountDoom"),
                 "bounds": [0.592, 0.495, 0.758, 0.710],
-                "blur_radius": 0.035,
+                "seal_radius": 0.003,
+                "edge_feather": 0.004,
+                "east_closure_wander": 0.006,
                 "threshold": 0.120,
                 "source": (
                     "Arda Maps poly_mountainlow 8-11 and "
@@ -840,30 +1124,30 @@ def build(reference_root: Path) -> dict:
         ("limlight", "Limlight", "anduin", 0.0020, (0.545, 0.410)),
         ("entwash", "Entwash", "anduin", 0.0025, (0.565, 0.505)),
         ("snowbourn", "Snowbourn", "entwash", 0.0017, (0.515, 0.535)),
-        ("baranduin", "Brandywine", None, 0.0030, (0.295, 0.390)),
+        ("baranduin", "Brandywine", None, 0.0040, (0.295, 0.390)),
         ("mitheithel", "Hoarwell", "greyflood", 0.0022, (0.385, 0.430)),
         ("bruinen", "Bruinen", "mitheithel", 0.0019, (0.430, 0.290)),
-        ("greyflood", "Gwathlo", None, 0.0031, (0.335, 0.455)),
+        ("greyflood", "Gwathlo", None, 0.0042, (0.335, 0.455)),
         ("glanduin", "Glanduin", "greyflood", 0.0019, (0.410, 0.390)),
-        ("isen", "Isen", None, 0.0028, (0.390, 0.590)),
+        ("isen", "Isen", None, 0.0038, (0.390, 0.590)),
         ("morthond", "Morthond", "ringlo", 0.0020, (0.470, 0.680)),
         ("ringlo", "Ringlo", None, 0.0019, (0.505, 0.690)),
         ("gilrain", "Gilrain", None, 0.0018, (0.545, 0.700)),
-        ("celduin", "RiverRunning", None, 0.0031, (0.715, 0.345)),
+        ("celduin", "RiverRunning", None, 0.0042, (0.715, 0.345)),
         ("forest_river", "ForestRiver", None, 0.0018, (0.600, 0.165)),
-        ("carnen", "Carnen", "celduin", 0.0026, (0.715, 0.345)),
-        ("poros", "Poros", "anduin", 0.0022, (0.620, 0.725)),
+        ("carnen", "Carnen", "celduin", 0.0033, (0.715, 0.345)),
+        ("poros", "Poros", "anduin", 0.0030, (0.620, 0.725)),
     ]
     rivers = [
         {
             "key": "upper_anduin",
-            "width": 0.0040,
+            "width": 0.0056,
             "wander": 0.0,
             "points": orient(upper_anduin, (0.553, 0.509)),
         },
         {
             "key": "anduin",
-            "width": 0.0048,
+            "width": 0.0068,
             "wander": 0.0,
             "points": orient(lower_anduin, (0.535, 0.717)),
         },
@@ -902,18 +1186,28 @@ def build(reference_root: Path) -> dict:
             },
             {
                 "key": "harnen",
-                "width": 0.0025,
+                "width": 0.0032,
                 "wander": 0.00035,
                 "points": harnen_geometry(topology),
             },
         ]
     )
+    rivers.extend(supplementary_river_controls(topology))
 
-    return {
+    projection = {
         "schema": 3,
         "canvas": [16384, 8192],
         "control_resolution": [4096, 2048],
         "reference_projection": PROJECTION_CONTRACT,
+        "source_relief": {
+            "file": RELIEF_OUTPUT.name,
+            "source": relief_payload["source"],
+            "source_sha256": relief_payload["source_sha256"],
+            "field_sha256": relief_payload["field_sha256"],
+            "bounds": relief_payload["bounds"],
+            "resolution": relief_payload["resolution"],
+            "quantization_max": relief_payload["quantization_max"],
+        },
         "extent": previous["extent"],
         "land_polygons": {
             "mainland": source_polygon(
@@ -933,6 +1227,7 @@ def build(reference_root: Path) -> dict:
         "density_zones": density_zones,
         "rivers": rivers,
     }
+    return projection, relief_payload
 
 
 def main() -> int:
@@ -944,9 +1239,13 @@ def main() -> int:
     )
     parser.add_argument("--write", action="store_true", required=True)
     args = parser.parse_args()
-    projection = build(args.reference_root)
+    projection, relief_payload = build(args.reference_root)
     OUTPUT.write_text(
         json.dumps(projection, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    RELIEF_OUTPUT.write_text(
+        json.dumps(relief_payload, separators=(",", ":"), ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     print(

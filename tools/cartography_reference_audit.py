@@ -17,6 +17,7 @@ SETTLEMENTS = CONTROL / "settlements.csv"
 LANDMARKS = CONTROL / "m3_landmarks.csv"
 REALMS = ROOT / "docs/world/realms.csv"
 PROJECTION = CONTROL / "projection.json"
+RELIEF = CONTROL / "ardacraft_relief.json"
 REPORT = ROOT / "docs/world/derived/cartography_conformance.json"
 
 EXPECTED_PROJECTION = {
@@ -28,7 +29,13 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "5b585889790c4601c10baa75d07ad0075fa4ff56fa55e053e0499f7e668a4903"
+    "5fca05e0298e9245f68710056846742800e0d02639e4162854e69f072ce70d0f"
+)
+EXPECTED_RELIEF_FILE_SHA256 = (
+    "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
+)
+EXPECTED_ARDACRAFT_HEIGHTMAP_SHA256 = (
+    "a1b05874cd447b9868c0d56a4fad523e5fc94053fa239dc5df7e0b31068144be"
 )
 EXPECTED_FOREST_KEYS = {
     "lothlorien",
@@ -46,6 +53,32 @@ EXPECTED_FOREST_KEYS = {
     "shire_woods",
     "lindon_woods",
     "lossarnach_woods",
+}
+SOURCE_DRAINAGE_THEATRES = {
+    "northern_basins": {
+        "bbox": (0.35, 0.00, 0.80, 0.32),
+        "minimum_controls": 25,
+        "minimum_points": 500,
+        "minimum_length": 1.50,
+    },
+    "anduin_system": {
+        "bbox": (0.42, 0.12, 0.68, 0.62),
+        "minimum_controls": 58,
+        "minimum_points": 850,
+        "minimum_length": 2.55,
+    },
+    "white_mountains": {
+        "bbox": (0.25, 0.43, 0.63, 0.68),
+        "minimum_controls": 36,
+        "minimum_points": 590,
+        "minimum_length": 1.72,
+    },
+    "mordor_gondor": {
+        "bbox": (0.52, 0.43, 0.80, 0.75),
+        "minimum_controls": 45,
+        "minimum_points": 590,
+        "minimum_length": 1.63,
+    },
 }
 
 
@@ -86,6 +119,25 @@ def render_report() -> dict:
             "projection.json does not declare the binding equal-scale "
             "ArdaCraft projection contract"
         )
+    if not RELIEF.is_file():
+        raise ValueError("committed Ardacraft-derived numeric relief field is missing")
+    relief_bytes = RELIEF.read_bytes()
+    if hashlib.sha256(relief_bytes).hexdigest() != EXPECTED_RELIEF_FILE_SHA256:
+        raise ValueError("binding Ardacraft-derived relief field changed without review")
+    relief = json.loads(relief_bytes)
+    descriptor = projection.get("source_relief")
+    if (
+        not isinstance(descriptor, dict)
+        or descriptor.get("file") != RELIEF.name
+        or relief.get("source_sha256") != EXPECTED_ARDACRAFT_HEIGHTMAP_SHA256
+        or relief.get("source_sha256") != descriptor.get("source_sha256")
+        or relief.get("field_sha256") != descriptor.get("field_sha256")
+        or relief.get("resolution") != [2500, 2003]
+        or relief.get("quantization_max") != 255
+        or relief.get("encoding") != "zlib_base85_u8"
+        or relief.get("nonzero_samples", 0) < 400_000
+    ):
+        raise ValueError("Ardacraft-derived relief provenance or detail regressed")
     feature_counts = {
         "mainland_vertices": len(projection["land_polygons"]["mainland"]),
         "offshore_islands": len(projection["land_polygons"]) - 1,
@@ -188,12 +240,12 @@ def render_report() -> dict:
         mordor.get("shape") != "source_proximity_field"
         or mordor.get("source_zone_keys")
         != ["low_08", "low_09", "low_10", "low_11"]
-        or mordor.get("inside_ridges")
-        != {
-            "north": "ered_lithui",
-            "west": "ephel_duath",
-            "south": "mountains_of_shadow_south",
-        }
+        or "inside_ridges" in mordor
+        or not math.isclose(float(mordor.get("seal_radius", 0.0)), 0.003)
+        or not math.isclose(float(mordor.get("edge_feather", 0.0)), 0.004)
+        or not math.isclose(
+            float(mordor.get("east_closure_wander", 0.0)), 0.006
+        )
         or mordor.get("source")
         != "Arda Maps poly_mountainlow 8-11 and point_mount MountDoom"
     ):
@@ -225,8 +277,93 @@ def render_report() -> dict:
         "harnen",
     }
     river_by_key = {item["key"]: item for item in projection["rivers"]}
-    if set(river_by_key) != expected_river_keys:
-        raise ValueError("named river coverage changed without cartographic review")
+    if not expected_river_keys.issubset(river_by_key):
+        raise ValueError("binding named river coverage changed without review")
+    terrain_only_rivers = [
+        item for item in projection["rivers"] if item.get("terrain_only")
+    ]
+    if len(projection["rivers"]) != 100 or len(terrain_only_rivers) != 76:
+        raise ValueError("source tributary coverage changed without cartographic review")
+    named_supplementary_count = sum(
+        bool(item.get("label")) for item in terrain_only_rivers
+    )
+    total_river_points = sum(len(item["points"]) for item in projection["rivers"])
+    total_river_length = sum(
+        math.dist(start, end)
+        for item in projection["rivers"]
+        for start, end in zip(item["points"], item["points"][1:], strict=False)
+    )
+    if named_supplementary_count != 30:
+        raise ValueError("named/unnamed supplementary drainage balance changed")
+    if total_river_points < 1_800 or total_river_length < 5.20:
+        raise ValueError("source river detail was over-simplified")
+    drainage_theatres = {}
+    for key, contract in SOURCE_DRAINAGE_THEATRES.items():
+        x0, y0, x1, y1 = contract["bbox"]
+        controls = set()
+        points = 0
+        length = 0.0
+        for river in projection["rivers"]:
+            river_points = river["points"]
+            inside = [
+                x0 <= x <= x1 and y0 <= y <= y1 for x, y in river_points
+            ]
+            if any(inside):
+                controls.add(river["key"])
+            points += sum(inside)
+            for start, end in zip(river_points, river_points[1:], strict=False):
+                midpoint_x = (start[0] + end[0]) / 2.0
+                midpoint_y = (start[1] + end[1]) / 2.0
+                if x0 <= midpoint_x <= x1 and y0 <= midpoint_y <= y1:
+                    length += math.dist(start, end)
+        if len(controls) < contract["minimum_controls"]:
+            raise ValueError(f"{key} lost source drainage controls")
+        if points < contract["minimum_points"]:
+            raise ValueError(f"{key} source drainage was over-simplified")
+        if length < contract["minimum_length"]:
+            raise ValueError(f"{key} source drainage lost too much path length")
+        drainage_theatres[key] = {
+            "bbox": list(contract["bbox"]),
+            "controls": len(controls),
+            "points": points,
+            "length": round(length, 6),
+            "minimum_controls": contract["minimum_controls"],
+            "minimum_points": contract["minimum_points"],
+            "minimum_length": contract["minimum_length"],
+        }
+    if any(
+        item.get("engine_raster") is not False
+        or not str(item.get("source", "")).startswith("Arda Maps line_river ")
+        for item in terrain_only_rivers
+    ):
+        raise ValueError("a source tributary lost its parser-safe terrain-only contract")
+    expected_supplementary_names = {
+        "Adorn", "Celos", "Ciril", "EnchantedRiver", "Erui", "Fenmark",
+        "Lefnui", "Lhun", "MouthsOfEntwash", "NimrodelRiver", "Serni",
+        "Shirebourn", "Sirannon", "Sirith", "Stockbrook", "ThistleBrook",
+        "Withywindle",
+    }
+    actual_supplementary_names = {
+        item.get("label") for item in terrain_only_rivers if item.get("label")
+    }
+    if actual_supplementary_names != expected_supplementary_names:
+        raise ValueError("named supplementary river coverage changed without review")
+    expected_major_widths = {
+        "anduin": 0.0068,
+        "upper_anduin": 0.0056,
+        "greyflood": 0.0042,
+        "celduin": 0.0042,
+        "baranduin": 0.0040,
+        "isen": 0.0038,
+        "carnen": 0.0033,
+        "harnen": 0.0032,
+        "poros": 0.0030,
+    }
+    for key, expected_width in expected_major_widths.items():
+        if not math.isclose(
+            float(river_by_key[key]["width"]), expected_width, abs_tol=1e-9
+        ):
+            raise ValueError(f"{key} lost its reviewed major-river width")
     if len(river_by_key["harnen"]["points"]) < 50:
         raise ValueError("source-backed Harnen detail regressed")
     if len(river_by_key["morgulduin"]["points"]) < 6:
@@ -290,11 +427,136 @@ def render_report() -> dict:
     if actual_peak_keys != expected_peak_keys:
         raise ValueError("named source-peak coverage changed without cartographic review")
     for peak in projection["named_peaks"]:
-        if peak.get("source") != "Arda Maps point_mount":
+        expected_source = (
+            "Ardacraft direct Erebor marker"
+            if peak["key"] == "erebor_peak"
+            else "Arda Maps point_mount"
+        )
+        if peak.get("source") != expected_source:
             raise ValueError(f"{peak['key']} lost its Arda Maps point provenance")
         x, y = peak["center"]
         if not (0.0 <= x <= 1.0 and 0.0 <= y <= 1.0):
             raise ValueError(f"{peak['key']} lies outside the production canvas")
+    peak_by_key = {item["key"]: item for item in projection["named_peaks"]}
+    erebor = peak_by_key["erebor_peak"]
+    if erebor.get("profile") != "isolated_peak" or not math.isclose(
+        float(erebor["radius"]), 0.0042, abs_tol=1e-9
+    ) or any(
+        not math.isclose(float(actual), expected, abs_tol=1e-9)
+        for actual, expected in zip(
+            erebor["center"], (0.599699, 0.137606), strict=True
+        )
+    ):
+        raise ValueError("Erebor lost its compact isolated-peak profile")
+    gundabad = peak_by_key["mount_gundabad"]
+    if gundabad.get("profile") != "chain_peak" or not math.isclose(
+        float(gundabad["radius"]), 0.0045, abs_tol=1e-9
+    ):
+        raise ValueError("Gundabad lost its compact chain-summit profile")
+    source_gap_peaks = {
+        peak["key"]
+        for peak in projection["named_peaks"]
+        if peak.get("synthetic_peak_required", False)
+    }
+    # v47 live evidence showed the two old source-gap fallback stamps as
+    # isolated mesas. The exact, source-clipped White Mountains continuity
+    # axis now covers both anchors, so no synthetic summit is permitted.
+    if source_gap_peaks:
+        raise ValueError("source-gap summit allowlist changed without review")
+    expected_relief_weights = {
+        "misty_mountains": 0.40,
+        "grey_mountains": 0.38,
+        "ered_luin": 0.34,
+        "white_mountains": 0.48,
+        "ephel_duath": 0.50,
+        "ered_lithui": 0.50,
+        "mountains_of_shadow_south": 0.46,
+        "iron_hills": 0.32,
+        "mountains_of_mirkwood": 0.28,
+    }
+    for ridge in projection["ridges"]:
+        if not math.isclose(
+            float(ridge.get("relief_weight", -1.0)),
+            expected_relief_weights[ridge["key"]],
+            abs_tol=1e-9,
+        ):
+            raise ValueError(f"{ridge['key']} lost its reviewed continuity weight")
+    expected_source_supported_gains = {
+        "white_mountains": 1.65,
+        "ephel_duath": 1.75,
+        "ered_lithui": 1.75,
+        "mountains_of_shadow_south": 1.65,
+    }
+    actual_source_supported_gains = {
+        ridge["key"]: ridge["source_supported_gain"]
+        for ridge in projection["ridges"]
+        if "source_supported_gain" in ridge
+    }
+    if actual_source_supported_gains != expected_source_supported_gains:
+        raise ValueError("source-supported severe-range gains changed")
+    ridge_by_key = {ridge["key"]: ridge for ridge in projection["ridges"]}
+    expected_mordor_walls = {
+        "ephel_duath": {
+            "width": 0.0085,
+            "points": [
+                [0.605128, 0.549585],
+                [0.610012, 0.558000],
+                [0.611477, 0.578000],
+                [0.614652, 0.596000],
+                [0.612454, 0.615000],
+                [0.613187, 0.632000],
+                [0.610745, 0.650000],
+                [0.615385, 0.665000],
+                [0.619780, 0.680000],
+                [0.616117, 0.690000],
+                [0.613675, 0.703000],
+            ],
+        },
+        "ered_lithui": {
+            "width": 0.0085,
+            "points": [
+                [0.621978, 0.531998],
+                [0.625000, 0.544211],
+                [0.637000, 0.545188],
+                [0.650000, 0.543723],
+                [0.666000, 0.544211],
+                [0.680000, 0.545677],
+                [0.694000, 0.544700],
+                [0.707000, 0.542745],
+                [0.719000, 0.533464],
+                [0.730000, 0.530044],
+                [0.740000, 0.529555],
+            ],
+        },
+    }
+    for key, expected in expected_mordor_walls.items():
+        ridge = ridge_by_key[key]
+        if (
+            not math.isclose(
+                float(ridge["width"]), expected["width"], abs_tol=1e-9
+            )
+            or ridge.get("sharp_cross_section") is not True
+            or ridge["points"] != expected["points"]
+        ):
+            raise ValueError(f"{key} lost its source-aligned sharp wall contract")
+    white_mountains = next(
+        ridge for ridge in projection["ridges"]
+        if ridge["key"] == "white_mountains"
+    )
+    if (
+        white_mountains.get("branches") != [
+            [
+                [0.500, 0.566],
+                [0.500845, 0.547265],
+                [0.497545, 0.541502],
+                [0.502831, 0.535253],
+            ],
+            [[0.578, 0.610], [0.585423, 0.607818]],
+        ]
+        or white_mountains.get("source_audited_branches") is not True
+        or white_mountains.get("source_audited_branch_gains") != [0.45, 0.65]
+    ):
+        raise ValueError("White Mountains lost its audited peak continuations")
     expected_pass_keys = {
         "lindon_road",
         "gundabad_gate",
@@ -315,6 +577,36 @@ def render_report() -> dict:
             raise ValueError(f"{pass_control['key']} lacks cartographic provenance")
         if not (0.0025 <= float(pass_control["radius"]) <= 0.0060):
             raise ValueError(f"{pass_control['key']} has a non-saddle-scale radius")
+    pass_by_key = {item["key"]: item for item in projection["passes"]}
+    expected_oriented_saddles = {
+        "paths_of_the_dead": [1.0, 0.0],
+        "morannon": [1.0, -1.0],
+    }
+    actual_oriented_saddles = {
+        item["key"]: item["range_tangent"]
+        for item in projection["passes"]
+        if "range_tangent" in item
+    }
+    if actual_oriented_saddles != expected_oriented_saddles:
+        raise ValueError("source-reviewed pass orientations changed")
+    morannon = pass_by_key["morannon"]
+    if (
+        morannon.get("center") != [0.609732, 0.529449]
+        or morannon.get("source") != "Ardacraft direct Morannon marker"
+    ):
+        raise ValueError("Morannon lost its direct Ardacraft marker")
+    if morannon.get("hinge_arms") != [
+        [0.621978, 0.531998],
+        [0.605128, 0.549585],
+    ]:
+        raise ValueError("Morannon lost its audited two-wall hinge")
+    gundabad_gate = pass_by_key["gundabad_gate"]
+    if (
+        gundabad_gate.get("center") != [0.506471, 0.097215]
+        or "access_to" in gundabad_gate
+        or not math.isclose(float(gundabad_gate["radius"]), 0.0040, abs_tol=1e-9)
+    ):
+        raise ValueError("Gundabad saddle moved back onto the canonical summit")
 
     entries: list[dict] = []
     failures: list[str] = []
@@ -378,10 +670,11 @@ def render_report() -> dict:
     if failures:
         raise ValueError("; ".join(failures))
     return {
-        "schema": 3,
+        "schema": 4,
         "projection": EXPECTED_PROJECTION,
         "projection_sha256": projection_sha256,
         "feature_counts": feature_counts,
+        "drainage_theatres": drainage_theatres,
         "anchor_count": len(entries),
         "landmark_count": len(landmarks),
         "manual_or_reconciled_landmarks": manual_landmarks,

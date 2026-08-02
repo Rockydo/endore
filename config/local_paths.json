@@ -1,29 +1,29 @@
 {
-    "generated_at_utc":  "2026-07-28T20:35:22.004137+00:00",
-    "steam_dir":  "C:\\Program Files (x86)\\Steam",
-    "steam_exe":  "C:\\Program Files (x86)\\Steam\\steam.exe",
-    "steam_libraries":  [
-                            "G:\\SteamLibrary",
-                            "D:\\SteamLibrary",
-                            "C:\\Program Files (x86)\\Steam",
-                            "F:\\SteamLibrary"
-                        ],
-    "game_dir":  "G:\\SteamLibrary\\steamapps\\common\\Europa Universalis V",
-    "game_exe":  "G:\\SteamLibrary\\steamapps\\common\\Europa Universalis V\\binaries\\eu5.exe",
-    "game_build_id":  "24187685",
-    "game_app_id":  "3450310",
-    "game_manifest":  "G:\\SteamLibrary\\steamapps\\appmanifest_3450310.acf",
-    "work_drive":  "G:\\",
-    "repo_dir":  "G:\\EUV mods\\endore",
-    "documents_dir":  "C:\\Users\\Alvin\\Documents",
-    "user_dir":  "G:\\endore_user_data",
-    "user_dir_ascii_safe":  true,
-    "candidate_relocated_user_dir":  "G:\\endore_user_data",
-    "mod_dir":  "G:\\endore_user_data\\mod\\endore",
-    "mod_visibility":  "user_dir_relocation+junction",
-    "free_bytes":  {
-                       "work_drive":  1162797293568,
-                       "system_drive":  9973731328
-                   },
-    "original_user_dir":  "G:\\endore_user_data"
+  "generated_at_utc": "2026-08-01T21:44:26.020928+00:00",
+  "steam_dir": "C:\\Program Files (x86)\\Steam",
+  "steam_exe": "C:\\Program Files (x86)\\Steam\\steam.exe",
+  "steam_libraries": [
+    "G:\\SteamLibrary",
+    "D:\\SteamLibrary",
+    "C:\\Program Files (x86)\\Steam",
+    "F:\\SteamLibrary"
+  ],
+  "game_dir": "G:\\SteamLibrary\\steamapps\\common\\Europa Universalis V",
+  "game_exe": "G:\\SteamLibrary\\steamapps\\common\\Europa Universalis V\\binaries\\eu5.exe",
+  "game_build_id": "24187685",
+  "game_app_id": "3450310",
+  "game_manifest": "G:\\SteamLibrary\\steamapps\\appmanifest_3450310.acf",
+  "work_drive": "G:\\",
+  "repo_dir": "G:\\EUV mods\\endore",
+  "documents_dir": "C:\\Users\\Alvin\\Documents",
+  "user_dir": "G:\\endore_user_data",
+  "user_dir_ascii_safe": true,
+  "candidate_relocated_user_dir": "G:\\endore_user_data",
+  "runtime_state_dir": "G:\\endore_runtime\\state",
+  "mod_dir": "G:\\endore_user_data\\mod\\endore",
+  "mod_visibility": "junction",
+  "free_bytes": {
+    "work_drive": 1131227471872,
+    "system_drive": 15148474368
+  }
 }

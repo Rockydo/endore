@@ -9,6 +9,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -66,6 +67,19 @@ def normalize(path: Path) -> set[str]:
         if line:
             lines.append(line)
     return set(lines)
+
+
+def runtime_link_needs_repair(config: dict[str, object]) -> bool:
+    """Fail closed when smoke is not configured for the relocated G: runtime."""
+
+    mod_dir_text = str(config.get("mod_dir", "")).strip()
+    if not mod_dir_text or not Path(mod_dir_text).exists():
+        return True
+    configured_user_dir = Path(str(config["user_dir"])).resolve()
+    relocated_user_dir = Path(
+        str(config["candidate_relocated_user_dir"])
+    ).resolve()
+    return configured_user_dir != relocated_user_dir
 
 
 def launch_and_capture(
@@ -131,7 +145,18 @@ def main() -> int:
     )
     parser.add_argument("--quiet-seconds", type=int, default=15)
     parser.add_argument("--timeout", type=int, default=480)
+    parser.add_argument(
+        "--slot-wait-seconds",
+        type=float,
+        default=0.0,
+        help=(
+            "retry the atomic shared-slot acquisition for this bounded interval; "
+            "default zero preserves immediate deferral"
+        ),
+    )
     args = parser.parse_args()
+    if args.slot_wait_seconds < 0.0:
+        parser.error("--slot-wait-seconds must be non-negative")
     baseline_only = args.baseline_only or not (ROOT / ".metadata/metadata.json").exists()
     baseline = ROOT / "baselines/vanilla_error.log"
     accepted = ROOT / "baselines/last_accepted_error.log"
@@ -142,25 +167,46 @@ def main() -> int:
     lease = None
     environment = None
     if not args.resume:
-        try:
-            lease = acquire(
-                ROOT,
-                "smoke: vanilla control + mod",
-                fingerprint=fingerprint,
-                scope="transaction",
-                allow_inherited=False,
-            )
-        except SlotBusy as exc:
-            pending = mark_pending(ROOT, "smoke", fingerprint, exc.owner)
-            print(f"smoketest: DEFERRED — {exc}", file=sys.stderr)
-            print(f"smoketest: pending gate recorded at {pending}", file=sys.stderr)
-            return EX_TEMPFAIL
+        slot_deadline = time.monotonic() + args.slot_wait_seconds
+        announced_wait = False
+        while lease is None:
+            try:
+                lease = acquire(
+                    ROOT,
+                    "smoke: vanilla control + mod",
+                    fingerprint=fingerprint,
+                    scope="transaction",
+                    allow_inherited=False,
+                )
+            except SlotBusy as exc:
+                remaining = slot_deadline - time.monotonic()
+                if remaining <= 0.0:
+                    pending = mark_pending(ROOT, "smoke", fingerprint, exc.owner)
+                    print(f"smoketest: DEFERRED — {exc}", file=sys.stderr)
+                    print(
+                        f"smoketest: pending gate recorded at {pending}",
+                        file=sys.stderr,
+                    )
+                    return EX_TEMPFAIL
+                if not announced_wait:
+                    print(
+                        "smoketest: waiting for the next atomic shared-slot "
+                        f"handoff (up to {args.slot_wait_seconds:.0f}s)",
+                        flush=True,
+                    )
+                    announced_wait = True
+                time.sleep(min(0.5, remaining))
         environment = lease.child_environment()
     try:
         if not args.resume:
             if not baseline_only:
                 config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
-                if not Path(str(config["mod_dir"])).exists():
+                # ``Path('')`` resolves to the current repository and therefore
+                # falsely passes ``exists()``. A freshly rediscovered config can
+                # contain exactly that empty mod path plus the default C: user
+                # directory. Always repair either condition before launch so a
+                # smoke test cannot silently exercise vanilla/default state.
+                if runtime_link_needs_repair(config):
                     subprocess.run(
                         [
                             "powershell",

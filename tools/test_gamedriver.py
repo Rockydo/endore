@@ -13,13 +13,17 @@ TOOLS = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS))
 
 from gamedriver import (
+    load_game_panel_state,
+    main_menu_new_game_button_state,
     mainmenu_game_transition_state,
     observer_confirmation_dialog_state,
     observer_frame_state,
     observer_pause_banner,
     observer_start_button_state,
+    observer_toggle_ready,
     transition_completion_signal,
 )
+from smoketest import runtime_link_needs_repair
 
 
 def require(condition: bool, message: str) -> None:
@@ -32,6 +36,36 @@ def write(path: Path, *lines: str) -> None:
 
 
 def main() -> int:
+    require(
+        runtime_link_needs_repair(
+            {
+                "mod_dir": "",
+                "user_dir": r"G:\endore_user_data",
+                "candidate_relocated_user_dir": r"G:\endore_user_data",
+            }
+        ),
+        "an empty mod path must never resolve to the repository as configured",
+    )
+    require(
+        runtime_link_needs_repair(
+            {
+                "mod_dir": ".",
+                "user_dir": r"C:\Users\Alvin\Documents\Paradox Interactive\Europa Universalis V",
+                "candidate_relocated_user_dir": r"G:\endore_user_data",
+            }
+        ),
+        "a valid mod path must not excuse the default C: user directory",
+    )
+    require(
+        not runtime_link_needs_repair(
+            {
+                "mod_dir": ".",
+                "user_dir": r"G:\endore_user_data",
+                "candidate_relocated_user_dir": r"G:\endore_user_data",
+            }
+        ),
+        "an existing mod path and matching relocated user directory must pass",
+    )
     with tempfile.TemporaryDirectory(dir="G:\\") as directory:
         debug = Path(directory) / "debug.log"
         require(
@@ -96,6 +130,28 @@ def main() -> int:
             "a stable country-selection frame must recover missed log markers",
         )
 
+        neutral_menu = Image.new("RGB", (1000, 600), (70, 75, 72))
+        still_menu, *_ = main_menu_new_game_button_state(neutral_menu)
+        load_panel, *_ = load_game_panel_state(neutral_menu)
+        require(not still_menu, "neutral paint must not mimic the New Game button")
+        require(not load_panel, "neutral paint must not mimic the Load Game panel")
+
+        ready_menu = neutral_menu.copy()
+        ready_menu_draw = ImageDraw.Draw(ready_menu)
+        ready_menu_draw.rectangle((55, 213, 200, 249), fill=(125, 78, 18))
+        still_menu, *_ = main_menu_new_game_button_state(ready_menu)
+        load_panel, *_ = load_game_panel_state(ready_menu)
+        require(still_menu, "the warm New Game button must prove a retained menu")
+        require(not load_panel, "the ready menu must not mimic the save-list page")
+
+        save_list = neutral_menu.copy()
+        save_list_draw = ImageDraw.Draw(save_list)
+        save_list_draw.rectangle((50, 504, 210, 534), fill=(32, 68, 118))
+        still_menu, *_ = main_menu_new_game_button_state(save_list)
+        load_panel, *_ = load_game_panel_state(save_list)
+        require(not still_menu, "the save-list page must not mimic New Game")
+        require(load_panel, "the blue Back control must identify Load Game")
+
         neutral_ui = Image.new("RGB", (1000, 600), (110, 120, 95))
         confirmation, *_ = observer_confirmation_dialog_state(neutral_ui)
         require(not confirmation, "plain political-map paint must not mimic a dialog")
@@ -116,6 +172,22 @@ def main() -> int:
         start_draw.rectangle((420, 498, 580, 528), fill=(55, 45, 30))
         start_visible, *_ = observer_start_button_state(start_ui)
         require(start_visible, "the gold Observer start control must be detected")
+
+        vanilla_start_ui = neutral_ui.copy()
+        vanilla_start_draw = ImageDraw.Draw(vanilla_start_ui)
+        vanilla_start_draw.rectangle((400, 480, 600, 546), fill=(42, 36, 28))
+        vanilla_start_draw.rectangle((410, 490, 590, 526), fill=(166, 122, 48))
+        vanilla_start_draw.rectangle((420, 497, 580, 519), fill=(72, 53, 31))
+        start_visible, *_ = observer_start_button_state(vanilla_start_ui)
+        require(start_visible, "the brighter vanilla Observer start control must be detected")
+        require(
+            not observer_toggle_ready(False, True),
+            "a gold country-selection button must not authorize Observer start",
+        )
+        require(
+            observer_toggle_ready(True, True),
+            "an accepted Observer confirmation plus start control must authorize start",
+        )
 
         # A red political-map patch can cover the centered pause-banner crop
         # while country selection is still active. It must never prove that a

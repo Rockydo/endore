@@ -332,7 +332,11 @@ def kind_masks(biomes: np.ndarray, anchors: list[Anchor]) -> tuple[np.ndarray, d
         kind_map[disk & (kind_map == KIND_CODE["mountain"])] = KIND_CODE["land"]
     clean_small_components(
         kind_map,
-        minimum=4,
+        # Native-resolution relief legitimately retains tiny detached rock
+        # teeth, but four-to-seven-cell biome flecks must not each force a
+        # separate political location. This affects only gameplay class;
+        # physical height and terrain material remain source-exact.
+        minimum=8,
         protected_land=set(pinned.values()),
     )
     return kind_map, pinned
@@ -345,17 +349,54 @@ def carve_anchor_access(kind_map: np.ndarray, y: int, x: int) -> None:
     search_radius = 96
     y0, y1 = max(0, y - search_radius), min(CONTROL_H, y + search_radius + 1)
     x0, x1 = max(0, x - search_radius), min(CONTROL_W, x + search_radius + 1)
-    candidates = np.argwhere(
-        kind_map[y0:y1, x0:x1] == KIND_CODE["land"]
-    )
+    candidates = np.argwhere(kind_map[y0:y1, x0:x1] == KIND_CODE["land"])
     if not len(candidates):
         raise ValueError(f"anchor {(y, x)} has no land within {search_radius} cells")
     candidates[:, 0] += y0
     candidates[:, 1] += x0
     distances = np.square(candidates[:, 0] - y) + np.square(candidates[:, 1] - x)
-    target_y, target_x = (
-        int(value) for value in candidates[int(np.argmin(distances))]
-    )
+    # The nearest nominal land pixel can itself be a tiny green pocket inside
+    # a massif.  Connecting an anchor to that pocket creates one passable
+    # location completely enclosed by mountain locations—as v35 initially did
+    # at Gundabad.  Prefer the nearest point belonging to a substantial
+    # four-connected land component.  Component searches stop as soon as
+    # 2,048 cells are proven, which excludes sizeable internal green pockets
+    # as well as raster specks while remaining cheap beside the main landmass.
+    rejected: set[tuple[int, int]] = set()
+    target: tuple[int, int] | None = None
+    for candidate_index in np.argsort(distances, kind="stable"):
+        candidate = tuple(int(value) for value in candidates[candidate_index])
+        if candidate in rejected:
+            continue
+        queue: deque[tuple[int, int]] = deque([candidate])
+        component = {candidate}
+        while queue and len(component) < 2_048:
+            cell_y, cell_x = queue.popleft()
+            for next_y, next_x in (
+                (cell_y - 1, cell_x),
+                (cell_y, cell_x - 1),
+                (cell_y, cell_x + 1),
+                (cell_y + 1, cell_x),
+            ):
+                next_cell = (next_y, next_x)
+                if (
+                    0 <= next_y < kind_map.shape[0]
+                    and 0 <= next_x < kind_map.shape[1]
+                    and next_cell not in component
+                    and kind_map[next_y, next_x] == KIND_CODE["land"]
+                ):
+                    component.add(next_cell)
+                    queue.append(next_cell)
+        if len(component) >= 2_048:
+            target = candidate
+            break
+        rejected.update(component)
+    if target is None:
+        raise ValueError(
+            f"anchor {(y, x)} has no stable land component within "
+            f"{search_radius} cells"
+        )
+    target_y, target_x = target
     steps = max(abs(target_y - y), abs(target_x - x), 1)
     for line_y, line_x in zip(
         np.rint(np.linspace(y, target_y, steps + 1)).astype(int),

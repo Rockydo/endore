@@ -476,11 +476,11 @@ location at the 420-unit water datum. Sea micro-components now remain water, eve
 they are smaller than a gameplay location; the fixed 180 sea seeds partition them
 without changing the location target.
 
-Gundabad is a playable fortress, not an impassable mountain location. Add a narrow
-authored pass at the canonical stronghold coordinate so its land component reaches the
-Anduin/northern road network. Preserve all 3,200 mountain locations and the surrounding
-source mountain footprint; connectivity is solved by the gate, not by reducing the
-range.
+Gundabad is a playable fortress, not an impassable mountain location. The original
+reduced-topology correction put its pass at the canonical stronghold coordinate. That
+specific placement and the former 3,200-mountain-cell count are superseded by the
+2026-08-01 v32 decision below: the 600-cell release-safe topology preserves the exact
+summit and opens a separate north-east saddle.
 
 ## 2026-07-31 — Return runtime tessellation to the proven 12,104-cell envelope
 
@@ -851,3 +851,429 @@ starved Ithilien's seventeen narrow woodland strips of high-LOD trees. Increase 
 Ithilien's sampling weight while retaining exactly 2,038,645 total vegetation transforms
 and all other named-forest floors. Validation must continue to count the resulting
 transforms inside the exact source polygons; no extra global renderer load is permitted.
+
+## 2026-08-01 — Bind crest structure to reduced Ardacraft relief
+
+Use the hash-pinned Ardacraft Heightmap V2 overlay as the placement authority for
+mountain crests and secondary branches, while Arda Maps polygons continue to bind the
+outer mountain/foothill envelopes and named points bind canonical summits. Never ship the
+overlay. The development rebuild reduces it to a 640×513, 4-bit warm-rock response with
+only 24,836 nonzero numeric samples and RLE serialization in
+`ardacraft_relief.json`; colour, hillshade, water, labels, and political information are
+discarded. Hash-pin both the quarantined source and committed numeric field.
+
+Demote the nine former hand-reconciled ridge axes to 18% relief weight: they remain useful
+for range identity, pass continuity, and renderer fields but may no longer pull a broad
+massif away from the source crest structure. Narrow their residual cross-range kernels,
+reduce Erebor's generic peak radius, and apply a continuous soft ceiling at both control
+and final height stages. This preserves summit ordering and removes the thousands of
+identical 65535 samples that rendered as flat plateaus.
+
+## 2026-08-01 — Separate dense physical drainage from the retail river parser
+
+Expand physical hydrology from 24 to 100 Arda Maps controls. The original 24 reviewed
+trunks/confluences remain; 76 additional source parts supply named tributaries,
+headwaters, distributaries, and substantial unnamed channels. These additions explicitly
+set `engine_raster = false`: they carve terrain and drive wet material without entering
+the installed river parser, whose rejection of custom affluent junctions is already
+proven. Widen the independent major trunks through earlier downstream palette progression
+up to index 15. This gains source fidelity and close-zoom drainage without weakening the
+load-safe river-graph contract.
+
+Render those terrain-only channels at 96/255 control strength and reserve 255/255 for the
+24 reviewed major controls. Major rivers keep a fifteen-pixel vegetation clearance at
+control scale; supplementary streams receive five pixels. This preserves visible
+tributaries without cutting Anduin-sized valleys or treeless corridors through compact
+canonical forests. The fixed high-LOD tree budget remains unchanged. Bind the atlas to
+at least 1,800 retained control vertices and normalized source-path length 5.20; v32
+contains 1,863 vertices over length 5.330748. Bind all nine explicitly widened trunks to
+their reviewed widths so a later simplification cannot silently undo the user's river
+readability requirement.
+
+As with relief, a world-total drainage count can conceal a locally emptied basin. Bind
+overlapping normalized windows for the northern basins, the Anduin system, White
+Mountains, and Mordor/Gondor. Each window independently enforces minimum source controls,
+retained vertices, and normalized path length. Preserve the 24 parser-safe engine trunks
+plus 76 terrain/material feeders; these regional floors validate source density without
+weakening the installed affluent-graph constraint.
+
+## 2026-08-01 — Reject widened source relief after live review
+
+The first source-field live candidate preserved the correct Ardacraft crest placement but
+used exponent 0.82, expanding every nonzero lower response. Real EU5 views at Gundabad,
+Erebor, Mordor, Morannon, and Dunharrow proved physical relief and exact branching but
+still read as broad high hills. Retain those screenshots as rejection evidence and do not
+accept that vertical profile.
+
+The v31 replacement used exponent 1.38 and passed load/smoke, but live evidence rejected
+it: its final multiplicative curve still raised the middle half of every source envelope.
+Keep Orodruin's dedicated cone, but replace the generic final transform with a convex
+profile and contract source relief at exponent 1.90. Reduce polygon-footprint lift so Arda
+Maps polygons remain low foothill bounds rather than a second mountain body. Validation
+must bind both high terrain and steep upper-massif gradient density; broad high-area
+counts alone are forbidden because they reward the rejected hill/plateau geometry. The
+final height field must continue to contain zero clipped samples; coast and source range
+placement remain unchanged. Static conformance must also retain at least 93% of the
+Ardacraft response at or above 0.70 as generated relief at or above 0.50, and at least
+99% of generated high-ridge pixels inside a ten-control-pixel source-support envelope.
+v32 records 93.3855% core coverage and 99.5973% source support.
+
+The exact Arda Maps `point_mount Gundabad` is the summit, not the pass. v31 placed the
+saddle at that point and physically suppressed Mount Gundabad. Preserve the summit and
+put the narrow gameplay saddle at the already reviewed north-east approach
+`[0.506471, 0.097215]`, radius 0.0040. That point already terminates on main-component
+land, so the former explicit corridor is unnecessary. Bind this separation in
+cartographic validation.
+
+Erebor's previous shared-landmark anchor `[0.599699, 0.137606]` is rejected because the
+live camera centred roughly 40 final-height pixels from the true summit. Align the
+settlement, cartography target, and ERE realm seat with exact Arda Maps
+`point_mount LonelyMountain` `[0.603783, 0.145042]`; retain the compact isolated-peak
+relief profile. This is a correction to a stronger source, not permission to move other
+political borders before terrain is final.
+
+## 2026-08-01 — Compact Gundabad's crown without moving its source ranges
+
+Reject v32's generic size-class named-peak envelope at Gundabad after the first correctly
+framed live close view showed a range-sized mesa cap. Preserve exact Arda Maps
+`point_mount Gundabad` `[0.502345, 0.102487]`, the Misty/Grey Mountains junction beneath
+it, and the separate north-east saddle. Replace only the redundant named-peak overlay:
+radius 0.0071 becomes 0.0045 with a `chain_peak` profile whose compact exact-centred core
+sits inside small irregular shoulders. Bind the radius/profile in the cartography audit.
+This is not an isolated-mountain treatment like Erebor and must not sever either chain.
+
+Changing the relief mask also deterministically changes the weighted location tessellation
+at this pre-M2 stage; the resulting 298-port world is a coherent regeneration, not a
+terrain-only byte patch. Freeze topology only after the physical atlas is accepted, as
+required by the M2 work order.
+
+## 2026-08-01 — Restore narrow named-range continuity after v33 live review
+
+Retain Ardacraft Heightmap V2 as the exact crest and secondary-branch placement authority,
+Arda Maps as the outer range-envelope authority, and named Arda Maps points as summit
+authority. Live v33 evidence accepts the compact Gundabad crown, isolated Erebor, and
+Orodruin components but rejects the Ered Lithui/Ephel Duath around Morannon and the White
+Mountains near Dunharrow because their source-correct relief still renders too low and
+green. The fault is continuity strength, not placement: the blanket 18% residual weight is
+too weak to carry long named chains through the renderer.
+
+Replace that blanket weight with reviewed range-specific continuity values: 0.40 Misty
+Mountains, 0.38 Grey Mountains, 0.34 Ered Luin, 0.48 White Mountains, 0.50 Ephel Duath,
+0.50 Ered Lithui, 0.46 southern Mountains of Shadow, 0.32 Iron Hills, and 0.28 Mountains
+of Mirkwood. Narrow the residual broad/body/spine kernels from 2.00/1.05/0.28 to
+1.50/0.82/0.20, and shift their coefficients from 0.18/0.40/0.42 to 0.12/0.32/0.56.
+Bind every value in static cartography validation. This restores tall, connected named
+ranges without widening or relocating their source geometry, and it does not authorize
+political-border work before the physical atlas is accepted.
+
+Global source-conformance averages are insufficient because a strong northern score could
+conceal a locally broken Mordor or White Mountains. Bind normalized equal-scale windows
+for the northern ranges, Erebor, White Mountains, and Mordor, and enforce independent
+strong-core coverage plus high-ridge source-support floors in each. Store the measured
+values and thresholds in `control_manifest.json` so future sessions can identify which
+theatre regressed rather than accepting a good world average.
+
+## 2026-08-01 — Reject range-axis continuity as a sufficient renderer fix
+
+Retain v34's source-correct per-range continuity weights and narrower residual kernels:
+they improve the offline field, preserve Gundabad/Erebor/Orodruin, and are protected by
+the new theatre audits. Do not accept them as the complete live solution. Exact-fingerprint
+smoke and a fresh Observer prove v34 loads cleanly, but valid reset views still render the
+Morannon and Dunharrow theatres as low green relief. The remaining fault therefore lies
+after placement—in final height response, pass suppression, and/or terrain-material
+classification—not in missing range geometry.
+
+For v35, trace exact source, ridge, pass, final-height, slope, and material values around
+both locations. Preserve the Morannon and Dunharrow as strategically low routes, but raise
+and expose their adjacent source-backed flanks so each reads as a pass through a tall,
+jagged range rather than a depression in rolling hills. No global height increase and no
+movement of source ranges or pass centres is permitted.
+
+## 2026-08-01 — Correct pass shape and material exposure without moving cartography
+
+Retain every Arda Maps summit/pass coordinate, every Ardacraft relief sample, and v34's
+reviewed secondary range axes. Correct the two live failures downstream. Paths of the
+Dead crosses the east-west White Mountains, so its depression is narrow along that range
+and elongated north-south across it. Cirith Gorgor opens north-west/south-east at the
+Ered Lithui/Ephel Duath corner, so its depression follows that crossing and preserves the
+two enclosing arms. Bind those two orientations in cartography validation; leave all
+already accepted pass profiles unchanged.
+
+Raise the exact hash-pinned Ardacraft crest field by 1.28 after its 1.90 contraction.
+Do not raise the secondary axes globally: the attempted stronger axes failed the source
+support gate, especially in Mordor, and were rejected. Expose earlier dark-rock and rock
+materials only where the reviewed White Mountains/Mordor range axes and real physical
+height overlap. Keep the pass floors below the highland gate. Add independent physical
+height and material-coverage contracts around Dunharrow and Morannon so a continent-wide
+average cannot hide another green bowl.
+
+Anchor passability is a topological contract distinct from visible summit relief. When a
+mountain anchor requires an access carve, connect it to the nearest land component proven
+to contain at least 2,048 control cells rather than the nearest nominal land pixel. This
+prevents Gundabad from becoming a one-location island inside a green mountain pocket
+without lowering or relocating its accepted crown.
+
+## 2026-08-01 — Gate stronger range continuity through exact source support
+
+Reject v35 as the visual mountain solution despite green validation and smoke. Valid
+reset live frames prove that its increased exact crest response remains too fragmented at
+renderer scale around Morannon and Dunharrow. Retain its oriented saddles, material rules,
+and accepted landmark components.
+
+For v36, strengthen only the four still-failed severe ranges and multiply that added axis
+response by a softly dilated binary support field derived from Ardacraft relief >=0.15.
+This makes the reviewed axes continuity guides inside measured source ranges rather than
+independent height authorities. Bind exact gains in cartography audit and retain every
+existing theatre-support floor. If the generated high ridge leaves source support, reject
+the candidate; do not relax the floor.
+
+## 2026-08-01 — Reject v36 live plateaus and rebuild the source profile
+
+Accept v36 only as load proof. Corrected exact-fingerprint smoke is clean and a fresh
+Observer load succeeds, but controlled regional/close pairs reject its visual result at
+Gundabad, Morannon, and Dunharrow. The root causes are downstream construction choices,
+not missing or movable cartography: a 640×513 four-bit source was bicubic-expanded; relief
+normalization clipped every control sample above 36,000 even though the field reaches
+40,800; and wide axis/material contracts rewarded large high or exposed areas.
+
+For v37, double the numeric source reduction to 1280×1026 and five-bit precision. Keep
+Arda Maps envelopes, all peak/pass coordinates, and Ardacraft branch placement fixed.
+Separate restrained foothills from a strongly convex upper-arête response, normalize at
+the real control maximum, and concentrate supported named axes into narrow spines. Add
+compact source-supported shoulders beside the two oriented strategic passes while keeping
+their saddle floors low. Replace one-sided minimum-area tests with bounded-area and steep-
+gradient contracts so both green bowls and broad plateaus fail deterministically.
+
+The material layer follows the same rule. Mordor's volcanic interior is broadly dark, but
+its silhouette must be the source-range enclosure rather than a Mount Doom-centred oval.
+Ordinary Gorgoroth ground may not become a light-grey slab, and high volcanic crests may
+not be overwritten to one uniform dark channel. Terrain-cache algorithm changes advance
+the generator version so a source-hash shortcut cannot silently retain stale paint.
+
+## 2026-08-01 — Make New Game and G: runtime identity fail closed
+
+The first v36 fresh-world attempt clicked Continue's lower edge because the hard-coded
+normalized y coordinate no longer matched the captured release-layout centre. Its
+incompatible-save/Continue-as-Observer modal is inadmissible as map evidence. Move the
+click to the measured New Game centre, require post-click pixel classification, and press
+Escape before retrying any retained menu so a modal cannot poison the next bounded click.
+The independent Load Game panel guard remains fail-closed.
+
+Likewise, an empty `mod_dir` must never pass an existence check as the current repository
+(`Path('')`). Before smoke, repair the runtime link whenever the mod path is empty/missing
+or the configured user directory differs from `G:\endore_user_data`. This keeps one-at-a-
+time behavior unchanged while preventing a deferred shared-lease run from later testing
+the default C: user directory or vanilla state.
+
+## 2026-08-01 — Let source-native relief replace redundant synthetic mountains
+
+Reject v37 after exact smoke and a fresh HUD-proven Observer: it loads correctly, but its
+hand axes, Gaussian pass flanks, and named-peak lobes still sit on top of Ardacraft's own
+relief and create broad slabs/tablelands. Treat the 1280×1026 five-bit numeric field as the
+physical range authority. Synthetic axes/flanks/peaks are opt-in fallbacks only when a
+reviewed source gap exists; currently only Mindolluin and Irensaga require compact jagged
+summits. Keep Arda Maps polygons as low footprint envelopes, not height plates.
+
+Direct shared Ardacraft markers supersede least-squares Arda coordinates where available.
+Move Erebor to the direct marker `(0.599699, 0.137606)` so the hold and Lonely Mountain
+coincide, and align the Morannon pass to the direct fortification marker
+`(0.609732, 0.529449)`. Retain Dunharrow as a low route below its source wall. Use a cubic
+68,000-unit upper-arête response to collapse painted shoulders without lowering exact
+crests; narrow Orodruin's apron/cone/crater instead of adding more amplitude to its mesa.
+
+`m2_world.py` must generate controls as its first stage. The old chain regenerated every
+downstream artefact while silently consuming committed control rasters after control-code
+changes. Making the dependency explicit ensures write/check cannot mix relief revisions.
+
+## 2026-08-01 - Reject v38 mesas; retain native relief without saturation
+
+Accept v38 as clean load proof only. Its exact fingerprint passes paired smoke and a
+fresh Observer start, but valid reset frames show that 1280x1026 five-bit samples become
+renderer-scale caps. Relief modulation clipped high samples to 1.0, while Mount Doom
+exceeded the generic final normalizer; both paths destroyed summit variation.
+
+For v39 retain the pinned Ardacraft warm-rock numeric response at native 2500x2003 and
+eight-bit precision. Store it as zlib/base85 numeric data rather than source art, and bind
+both field and file hashes. Modulation may lower shoulders but may never raise or clip a
+high source sample. Enforce a bounded 45k+ sample count and maximum flat-cap fraction.
+
+Canonical summit points may receive compact final-resolution profiles because they bind
+named peaks rather than invent range geometry. Erebor uses the direct Ardacraft marker
+and remains isolated. Mount Doom receives its apron/cone/rim/crater after the generic
+range transform. Around Morannon, expand only nonzero exact source samples and preserve
+the low gate. Physical rock teeth remain; gameplay mountain-class fragments smaller than
+eight control cells are absorbed so each cannot force a separate political location.
+
+Mordor's ash material may not derive its silhouette from a blurred mountain proximity or
+Mount Doom anchor. Rasterize the exact four source mountain polygons as a U-shaped wall,
+seal only pixel-scale gaps, derive its two eastern endpoints from that raster, add one
+narrow deterministic east transition, and flood-fill from Orodruin. Reject any fill that
+touches the canvas or occupies outside 1–3% of it. This turns the former rounded two-lobed
+blob into the actual Ered Lithui/Ephel Dúath/southern Mountains of Shadow enclosure.
+
+## 2026-08-01 - Reconstruct continuous relief instead of color shelves
+
+Reject v39 despite its exact smoke and fresh load proof. Installed vanilla terrain above
+45k has predominantly continuous gradients (77% of samples below 512 units), whereas
+v39's double-convex transform forced median/upper gradients of roughly 3,300/7,600 and
+turned Ardacraft colour bands into vertical shelves. Static mountain validation must now
+bind a vanilla-calibrated gradient interval as well as altitude and coverage; it must fail
+both broad featureless hills and excessive cliff gradients.
+
+The pinned Ardacraft warm-rock response remains the placement authority, but raw colour is
+a crest locator rather than a height field. Reconstruct range bodies and shoulders from
+4/12/18-pixel source-native convolutions while retaining 22% of the exact jagged core.
+Apply only a restrained gamma at control scale and one gentle final altitude response.
+This preserves source branches and intermediate relief without shipping source artwork.
+
+At Morannon reconcile the few missing low-colour pixels with the Ardacraft drawing layer:
+join the direct gate marker to the nearest unambiguous Ered Lithui and Ephel Duath source
+crests using two narrow audited traces, then apply the existing oriented saddle carve.
+This is a source reconciliation, not permission for a radial flank or relocated wall.
+
+Do not stamp source-backed named peaks with range-sized radial bodies. Exact Arda Maps
+summits may receive only a tiny final-resolution tooth; Gundabad is already owned by the
+source junction, Erebor retains its specialized isolated massif, and only Mindolluin and
+Irensaga retain larger source-gap profiles. Severe rock material follows reconstructed
+source crests rather than the wider legacy hand axes.
+
+## 2026-08-01 - Reject v40 hills; calibrate an intermediate half-canvas relief band
+
+Treat v40 as clean load proof, not visual acceptance. Its installed-vanilla gradient
+distribution was too low for ENDORË's 8192x4096 height source: exact ranges became grassy
+uplands, Erebor a weak regional hill, and Morannon a low V. Do not restore v39's raw colour
+shelves. Tighten the same pinned numeric field to a 3/8/15-pixel reconstruction, apply one
+moderate gamma, and require the final upper-massif gradient distribution to lie between
+the two rejected extremes.
+
+Named-point reinforcement is allowed only as compact final-resolution crowns at the exact
+audited coordinate. Narrow Erebor rather than raising its broad apron; restore Gundabad's
+canonical prominence at its measured junction; keep Cirith Gorgor low while raising only
+the two drawing-confirmed hinge arms. Terrain material must follow the new physical crests,
+with bounded exposed/rock fractions so taller relief cannot recreate grey slabs.
+
+## 2026-08-01 - Decode Ardacraft summit colour; remove synthetic point compensation
+
+Reject v41 despite clean validation, smoke, and fresh load proof. Red-minus-green is not a
+complete elevation proxy for Ardacraft: it retains brown mountain shoulders but discards
+the pale neutral pixels used for the highest jagged spines. Decode both signals from the
+same hash-pinned raster, with colour/water exclusions, before any convolution.
+
+Remove the ruler-straight Morannon hinge traces and ordinary source-backed named-point
+teeth. They compensated for the missing summit signal but visibly manufactured geometry:
+straight walls at Cirith Gorgor and disconnected spikes near Dunharrow. Preserve only
+specialized profiles whose source role is independently justified: isolated Erebor,
+canonical Gundabad, and the Mindolluin/Irensaga source gaps.
+
+## 2026-08-01 - Reject v42 shoulder mass; reserve height for true arêtes
+
+Treat v42 as clean fresh-load proof, not visual acceptance. Its pale-summit decoder fixed
+missing source information, but compositing a 1.18 gain after the control gamma still
+promoted too much warm upper shoulder. Static source coverage therefore measured the top
+8% of the response while live EU5 displayed broad rock carpets and rounded mounds.
+
+For v43 define source core as the >=0.92 native response and translate the complete field
+with an ungained 2.25 exponent. This preserves exact maxima while sharply lowering broad
+shoulders. The source coordinates remain binding; neither hand ridge axes nor synthetic
+Morannon lines return. A small radial theatre weight may amplify only pre-existing high
+relief around Morannon, never create relief on a low source sample, so Cirith Gorgor stays
+open and the two irregular source walls become taller.
+
+Erebor is the exceptional de-duplication case: Ardacraft's painted mountain and direct
+canonical marker encode one Lonely Mountain a few terrain samples apart. Suppress the
+overlapping local raster body and author one compact final-resolution cone at the direct
+marker. This is not permission to move or duplicate any other named summit.
+
+## 2026-08-01 - Reject v43 smooth walls; serrate only inside source mass
+
+Accept v43's single Erebor and compact Orodruin profiles, but reject its long-range live
+presentation. A narrow two-dimensional source footprint does not guarantee readable
+three-dimensional relief after EU5's shallow half-canvas projection and political tint.
+The source-aligned walls still need stronger along-range summit/gully variation.
+
+For v44 preserve the entire v43 horizontal model and increase only deterministic signed
+folds and sparse positive summits multiplied by the existing mountain-strength field.
+No noise term may create a mountain where the source model has no massif. Expand the
+static upper-gradient ceiling only enough to admit the new 2,304/3,283 p75/p90 response;
+keep it materially below v39's rejected 5,428/7,561 shelf distribution.
+
+## 2026-08-01 - Reject v44 and calibrate against matched installed-vanilla views
+
+Reject v44 despite complete regeneration, green validation, exact zero-new-line paired
+smoke, and a fresh HUD-proven Observer. Increasing deterministic serration inside the
+source footprint did not make the long ranges read as tall mountain chains; it mostly
+added isolated exposed patches to the same broad low masses. Preserve the accepted single
+Erebor and compact Orodruin profiles, and do not move any source-pinned coordinate.
+
+Before changing v45's vertical or material response, capture representative installed
+vanilla mountain systems in the same release-layout window and at the same camera tilt and
+zoom steps used for ENDÓRË. Measure their visible range width relative to nearby location
+cells, crest density, height contrast, and snow/rock exposure. Installed files and live
+renderer evidence outrank guessed numeric targets; v45 must translate those measured
+ratios onto the existing Arda geometry rather than amplify heights blindly.
+
+## 2026-08-01 - Reject v45 native-frequency corrugation and threshold-wide material
+
+Treat v45 as successful fresh-load proof and failed renderer calibration. Its
+high-frequency signed height field improved static crest counts and Gundabad cap ratios,
+but the real q64 renderer converted that signal into repeated terrace/facet bands around
+Dunharrow. Its wider global exposure thresholds likewise satisfied bounded fractions
+while producing disconnected rock blocks and a regional pale carpet at Gundabad. Static
+gradient and local-fraction gates are necessary but not sufficient when spatial frequency
+and material connectivity are unconstrained.
+
+For v46 retain Gundabad's successful local shoulder contraction and the accepted Erebor
+and Orodruin exclusions, but remove v45's native-frequency height field. Do not solve the
+live rejection by raising the global ceiling, lowering cache precision, or broadening
+altitude thresholds. Range arÃªtes must be smooth continuous source-aligned forms at a
+frequency the q64 renderer can resolve; rock/snow must be feathered along those physical
+forms and explicitly reject disconnected blocks and broad caps. Morannon may paint only
+the source-backed physically high arms around the low canonical saddle.
+
+## 2026-08-02 — Protect canonical forest density across every renderer LOD
+
+Owner close-view review rejects the 2,038,645-transform renderer budget as visibly sparse
+in Mirkwood and Lothlórien. The defect is not the source woodland boundary: both forests
+already use the hash-pinned Arda Maps polygons. It is the derived object distribution.
+The earlier generator protected a few forests only in the high-detail layer, gave
+Mirkwood no named-zone contract, and allowed the ordinary river dilation to consume most
+of narrow woodland polygons. Medium and low LODs therefore thinned abruptly at normal
+camera distances even where the biome remained dense forest.
+
+Use a bounded 3,057,385-transform budget with the release-safe 6,004-location topology.
+This is 30% of the installed 10,193,212-transform population and remains below the
+rejected 4,077,285-object/12,104-location pair. Increase high LOD by 25% and medium/low by
+75%, then bind Mirkwood, Lothlórien, Fangorn, Old Forest, and Ithilien independently at
+all three LODs. Preserve broad river readability globally, but narrow the extra bank
+clearance inside named dense forests and retain only the authored channel clearance in
+Ithilien's river-following strips. Source polygons, river pixels, political locations,
+and gameplay vegetation remain unchanged.
+
+Lothlórien must not inherit Mirkwood's conifer mixture. Reserve two installed vanilla
+light-trunk, full-canopy oceanic tree meshes for every Lothlórien transform and exclude
+pine there at all LODs; retain the exact four-object retail renderer ABI. This is a
+spatial species assignment using shipped EU5 assets, not invented woodland geometry or a
+new texture. Fresh live evidence and the next paired smoke remain mandatory before the
+candidate can be accepted.
+
+## 2026-08-02 — Replace nearest-seat political sprawl with audited source claims
+
+Reject unrestricted nearest-capital allocation as the final political model. It made
+Lothlórien cross into the Misty Mountains, expanded Dunland into a large rectangular
+block, left the Iron Hills as a one-cell placeholder, and assigned ordinary Ithilien to
+Mordor. Preserve nearest-seat scoring only inside each realm's reviewed regions and, for
+well-attested realms, inside explicit equal-scale source-side envelopes derived from
+Arda Maps, Ardacraft, and canonical physical frontiers.
+
+Keep capitals, named realm anchors, and occupied TA 3018 operational sites pinned before
+the wilderness mask. Make all other Ithilien cells deliberately wild. Expand the Iron
+Hills candidate region only enough to form its source-side cluster. Generate a complete
+5,200-land-location CSV ledger and JSON summary containing pre-correction exceptions,
+final bounds, forced anchors, contract violations, distance, and connected components.
+Validation must reject every envelope violation, any lower-confidence regional claim
+beyond the anti-sprawl ceiling, and fragmentation of compact source-side realms.
+
+Do not create small factions merely to consume neutral land. The existing 38-realm roster
+already includes attested small powers and communities; future additions require a
+distinct TA 3018 controller and a geographic improvement that can be defended in the
+canon ledger.

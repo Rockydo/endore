@@ -8,6 +8,9 @@ import sys
 import time
 from pathlib import Path
 
+import PIL
+import numpy as np
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import gen_adjacencies
@@ -25,11 +28,16 @@ import gen_rivers
 import gen_terrain_cache
 import m2_quarantine
 import m2_runtime
+import m2_controls
 import m3_realms
 import m4_peoples
 import m5_census
 
 STAGES = (
+    # Control rasters are generated code too. Keeping this explicit prevents
+    # a full rewrite from silently consuming stale elevation after the control
+    # renderer changes.
+    ("controls", m2_controls),
     ("locations", gen_locations),
     ("definitions", gen_definitions),
     ("heightmap", gen_heightmap),
@@ -52,6 +60,32 @@ STAGES = (
     # the previous control geometry during a full rewrite.
     ("templates", gen_location_templates),
 )
+
+PINNED_TOOLCHAIN = {
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6",
+}
+
+
+def assert_pinned_toolchain() -> None:
+    """Refuse byte-different world writes/checks from an unpinned raster stack."""
+
+    actual = {
+        "Pillow": PIL.__version__,
+        "numpy": np.__version__,
+    }
+    if actual != PINNED_TOOLCHAIN:
+        expected_text = ", ".join(
+            f"{name}=={version}" for name, version in PINNED_TOOLCHAIN.items()
+        )
+        actual_text = ", ".join(
+            f"{name}=={version}" for name, version in actual.items()
+        )
+        raise RuntimeError(
+            "M2 deterministic raster toolchain mismatch: expected "
+            f"{expected_text}; found {actual_text}. Run through "
+            ".venv\\Scripts\\python.exe or gmake."
+        )
 
 
 def write() -> None:
@@ -79,6 +113,7 @@ def main() -> int:
     mode.add_argument("--write", action="store_true")
     mode.add_argument("--check", action="store_true")
     args = parser.parse_args()
+    assert_pinned_toolchain()
     if args.write:
         write()
         return 0

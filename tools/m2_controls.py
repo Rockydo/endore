@@ -4,10 +4,12 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
 import hashlib
 import json
 import math
+import zlib
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -65,6 +67,33 @@ RIVER_INCISION_SAMPLE = 1450.0
 # counterpart. Reserve it for genuinely high crest islands; regional audit
 # showed that 0.56 still painted broad white slabs through the White Mountains.
 MOUNTAIN_BIOME_THRESHOLD = 0.68
+# Global source-conformance averages can conceal a locally broken theatre.
+# These normalized equal-scale windows bind the four relief zones called out
+# in live owner review. Thresholds retain deliberate named-axis continuity
+# outside the reduced raster while requiring the strong Ardacraft core to
+# survive independently in every window.
+SOURCE_RELIEF_THEATRES = {
+    "northern_ranges": {
+        "bbox": (0.42, 0.02, 0.78, 0.25),
+        "min_core_coverage": 0.925,
+        "min_high_support": 0.995,
+    },
+    "erebor": {
+        "bbox": (0.56, 0.10, 0.65, 0.20),
+        "min_core_coverage": 0.875,
+        "min_high_support": 0.985,
+    },
+    "white_mountains": {
+        "bbox": (0.31, 0.45, 0.60, 0.65),
+        "min_core_coverage": 0.940,
+        "min_high_support": 0.970,
+    },
+    "mordor": {
+        "bbox": (0.56, 0.45, 0.76, 0.72),
+        "min_core_coverage": 0.910,
+        "min_high_support": 0.970,
+    },
+}
 # Source lakes smaller than one runtime location become deep location-shaped
 # quarries when classified as engine water. Preserve every such source polygon
 # as a wet material control over continuous physical land. The explicit set is
@@ -103,6 +132,67 @@ def load_projection() -> dict:
     return json.loads(PROJECTION.read_text(encoding="utf-8"))
 
 
+def source_relief_field(projection: dict, size: tuple[int, int]) -> np.ndarray:
+    """Decode the committed Ardacraft-derived numeric relief control."""
+
+    descriptor = projection.get("source_relief")
+    if not isinstance(descriptor, dict):
+        raise ValueError("projection lacks the source-derived relief descriptor")
+    path = CONTROL / str(descriptor.get("file", ""))
+    if path.parent != CONTROL or not path.is_file():
+        raise ValueError("source-derived relief control is missing")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    for key in (
+        "source", "source_sha256", "field_sha256", "bounds", "resolution",
+        "quantization_max",
+    ):
+        if payload.get(key) != descriptor.get(key):
+            raise ValueError(f"source-relief descriptor mismatch: {key}")
+    if payload.get("schema") != 2 or payload.get("encoding") != "zlib_base85_u8":
+        raise ValueError("unsupported source-relief numeric encoding")
+    width, height = (int(value) for value in payload["resolution"])
+    quantization_max = int(payload["quantization_max"])
+    encoded = payload.get("data")
+    if width < 128 or height < 128 or quantization_max < 2 or not isinstance(encoded, str):
+        raise ValueError("source-relief numeric field lacks production detail")
+    try:
+        raw = zlib.decompress(base64.b85decode(encoded.encode("ascii")))
+    except (ValueError, zlib.error) as exc:
+        raise ValueError("source-relief compressed payload is invalid") from exc
+    if len(raw) != width * height:
+        raise ValueError("source-relief compressed payload has the wrong size")
+    decoded = np.frombuffer(raw, dtype=np.uint8).reshape((height, width))
+    if np.any(decoded > quantization_max):
+        raise ValueError("source-relief numeric field exceeds its quantization")
+    if hashlib.sha256(decoded.tobytes()).hexdigest() != payload["field_sha256"]:
+        raise ValueError("source-relief numeric field checksum changed")
+    bounds = [float(value) for value in payload["bounds"]]
+    if len(bounds) != 4 or bounds[1] != 0.0 or bounds[3] != 1.0:
+        raise ValueError("source-relief field lost its equal-scale full-height bounds")
+    left = round(bounds[0] * (size[0] - 1))
+    right = round(bounds[2] * (size[0] - 1))
+    if not (0 <= left < right < size[0]):
+        raise ValueError("source-relief field lies outside the production canvas")
+    mapped = Image.fromarray(
+        np.round(decoded.astype(np.float32) / quantization_max * 255.0).astype(np.uint8),
+        "L",
+    ).resize((right - left + 1, size[1]), Image.Resampling.BICUBIC)
+    result = np.zeros((size[1], size[0]), dtype=np.float32)
+    result[:, left : right + 1] = np.asarray(mapped, dtype=np.float32) / 255.0
+    return np.clip(result, 0.0, 1.0)
+
+
+def soft_ceiling(values: np.ndarray, *, knee: float, ceiling: float) -> np.ndarray:
+    """Compress extreme relief continuously instead of clipping flat summits."""
+
+    span = ceiling - knee
+    if span <= 0.0:
+        raise ValueError("terrain soft ceiling must exceed its knee")
+    above = np.maximum(values - knee, 0.0)
+    compressed = knee + above / (1.0 + above / span)
+    return np.where(values > knee, compressed, values)
+
+
 def validate_geometry_contract(projection: dict) -> None:
     """Reject a return to primitive proof-map lakes, forests, or coasts."""
 
@@ -115,6 +205,13 @@ def validate_geometry_contract(projection: dict) -> None:
             raise ValueError(f"sea cutout {key} lacks bay/headland detail")
     if len(projection.get("mountain_zones", [])) < 30:
         raise ValueError("mountain atlas lacks source-audited range footprints")
+    descriptor = projection.get("source_relief", {})
+    if (
+        descriptor.get("file") != "ardacraft_relief.json"
+        or descriptor.get("resolution") != [2500, 2003]
+        or descriptor.get("quantization_max") != 255
+    ):
+        raise ValueError("mountain atlas lacks the audited Ardacraft relief field")
     highlands = projection.get("highland_zones", [])
     if len(highlands) != 190:
         raise ValueError(
@@ -181,12 +278,7 @@ def validate_geometry_contract(projection: dict) -> None:
         mordor.get("shape") != "source_proximity_field"
         or mordor.get("source_zone_keys")
         != ["low_08", "low_09", "low_10", "low_11"]
-        or mordor.get("inside_ridges")
-        != {
-            "north": "ered_lithui",
-            "west": "ephel_duath",
-            "south": "mountains_of_shadow_south",
-        }
+        or "inside_ridges" in mordor
         or mordor.get("source")
         != "Arda Maps poly_mountainlow 8-11 and point_mount MountDoom"
     ):
@@ -506,63 +598,84 @@ def source_proximity_field(
             255,
             key=f"source-field:{zone['key']}:{key}",
         )
-    radius = max(3.0, float(zone["blur_radius"]) * size[1])
-    proximity = np.asarray(
-        boundary.filter(ImageFilter.GaussianBlur(radius=radius)),
+    # Seal pixel-scale breaks in the exact source U-shaped mountain wall. The
+    # source is open to the east, so derive its two eastern endpoints from the
+    # raster itself and join them with one narrow, deterministic transition.
+    # Flood filling from Mount Doom then yields the enclosed interior whose
+    # north/west/south silhouette is the measured mountain footprint—not a
+    # blurred axis envelope or an anchor-centred oval.
+    seal_radius = max(1, round(float(zone["seal_radius"]) * size[1]))
+    seal_kernel = seal_radius * 2 + 1
+    boundary = boundary.filter(ImageFilter.MaxFilter(seal_kernel))
+    boundary_array = np.asarray(boundary, dtype=np.uint8)
+    anchor_x, anchor_y = point(zone["anchor"], size)
+    x0, y0, x1, y1 = (float(value) for value in zone["bounds"])
+    wall_y, wall_x = np.where(boundary_array > 0)
+    upper = (
+        (wall_x >= anchor_x)
+        & (wall_x <= round(x1 * (size[0] - 1)))
+        & (wall_y >= round(y0 * (size[1] - 1)))
+        & (wall_y <= anchor_y)
+    )
+    lower = (
+        (wall_x >= anchor_x)
+        & (wall_x <= round(x1 * (size[0] - 1)))
+        & (wall_y >= anchor_y)
+        & (wall_y <= round(y1 * (size[1] - 1)))
+    )
+    if not upper.any() or not lower.any():
+        raise ValueError("Mordor source wall lacks an eastern endpoint")
+
+    def rightmost(mask: np.ndarray) -> tuple[int, int]:
+        candidate_x = wall_x[mask]
+        candidate_y = wall_y[mask]
+        index = int(np.argmax(candidate_x))
+        return int(candidate_x[index]), int(candidate_y[index])
+
+    upper_x, upper_y = rightmost(upper)
+    lower_x, lower_y = rightmost(lower)
+    closure = natural_path(
+        [
+            (upper_x / (size[0] - 1), upper_y / (size[1] - 1)),
+            (lower_x / (size[0] - 1), lower_y / (size[1] - 1)),
+        ],
+        size,
+        key="mordor:east-transition",
+        closed=False,
+        amplitude=float(zone["east_closure_wander"]),
+        spacing=0.003,
+    )
+    ImageDraw.Draw(boundary).line(
+        closure,
+        fill=255,
+        width=max(3, seal_kernel),
+        joint="curve",
+    )
+    filled = boundary.copy()
+    ImageDraw.floodfill(filled, (anchor_x, anchor_y), 128, thresh=0)
+    interior = np.asarray(filled, dtype=np.uint8) == 128
+    if (
+        not interior[anchor_y, anchor_x]
+        or interior[0].any()
+        or interior[-1].any()
+        or interior[:, 0].any()
+        or interior[:, -1].any()
+    ):
+        raise ValueError("Mordor source enclosure leaked outside its mountain wall")
+    interior_fraction = float(interior.mean())
+    if not 0.010 <= interior_fraction <= 0.030:
+        raise ValueError(
+            f"Mordor source enclosure has implausible area {interior_fraction:.6f}"
+        )
+    edge_radius = max(1.0, float(zone["edge_feather"]) * size[1])
+    edge = np.asarray(
+        Image.fromarray(interior.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.GaussianBlur(radius=edge_radius)
+        ),
         dtype=np.float32,
     ) / 255.0
-    proximity = np.sqrt(np.clip(proximity, 0.0, 1.0))
-
-    _x0, _y0, _x1, _y1 = (float(value) for value in zone["bounds"])
-    feather = 0.018
-    xx = np.linspace(0.0, 1.0, size[0], dtype=np.float32)[None, :]
-    yy = np.linspace(0.0, 1.0, size[1], dtype=np.float32)[:, None]
-
-    def smoothstep(values: np.ndarray) -> np.ndarray:
-        values = np.clip(values, 0.0, 1.0)
-        return values * values * (3.0 - 2.0 * values)
-
-    ridge_by_key = {
-        item["key"]: item for item in projection["ridges"]
-    }
-    north = ridge_by_key[zone["inside_ridges"]["north"]]["points"]
-    north = sorted((float(x), float(y)) for x, y in north)
-    north_y = np.interp(
-        xx[0],
-        [item[0] for item in north],
-        [item[1] for item in north],
-    )[None, :]
-    west = ridge_by_key[zone["inside_ridges"]["west"]]["points"]
-    west = sorted((float(y), float(x)) for x, y in west)
-    west_x = np.interp(
-        yy[:, 0],
-        [item[0] for item in west],
-        [item[1] for item in west],
-    )[:, None]
-    south = ridge_by_key[zone["inside_ridges"]["south"]]["points"]
-    south = sorted((float(x), float(y)) for x, y in south)
-    south_y = np.interp(
-        xx[0],
-        [item[0] for item in south],
-        [item[1] for item in south],
-    )[None, :]
-    # The three source-aligned ridge axes define Mordor's north, west, and
-    # south sides. Its open eastern landward transition receives an
-    # exponential fade rather than a fourth straight clipping edge.
-    east_decay = np.exp(-np.clip(xx - 0.700, 0.0, None) / 0.055)
-    window = (
-        smoothstep((yy - north_y) / feather)
-        * smoothstep((xx - west_x) / feather)
-        * smoothstep((south_y - yy) / feather)
-        * east_decay
-    )
-    anchor_x, anchor_y = (float(value) for value in zone["anchor"])
-    anchor_distance = np.hypot(
-        (xx - anchor_x) * 2.0,
-        yy - anchor_y,
-    )
-    anchor = np.exp(-np.square(anchor_distance / 0.048) * 0.5) * 0.72
-    return np.clip(np.maximum(proximity, anchor) * window, 0.0, 1.0)
+    interior_floor = 0.20 + relief_modulation(size) * 0.10
+    return np.clip(np.maximum(interior * interior_floor, edge * 0.18), 0.0, 1.0)
 
 
 def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
@@ -644,6 +757,168 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             dtype=np.float32,
         )
 
+    def normalized_gaussian_path(
+        path: list[tuple[int, int]],
+        *,
+        blur: int,
+    ) -> np.ndarray:
+        """Return a pointed one-pixel crest with a normalized Gaussian falloff."""
+
+        values = blurred_path(path, width=1, blur=blur)
+        maximum = float(values.max())
+        if maximum <= 0.0:
+            return values
+        return values * (255.0 / maximum)
+
+    # This numeric field is the exact-placement authority for range branches
+    # and jagged footprints. It is a severe reduction of the pinned
+    # Ardacraft terrain overlay, not reference artwork, and contains no colour,
+    # labels, water, terrain texture, or political information.
+    source_relief = source_relief_field(projection, size)
+    support_radius = max(1, round(size[1] * 0.0050))
+    support_kernel = support_radius * 2 + 1
+    source_axis_support = np.asarray(
+        Image.fromarray(
+            (source_relief >= 0.15).astype(np.uint8) * 255,
+            "L",
+        )
+        .filter(ImageFilter.MaxFilter(support_kernel))
+        .filter(
+            ImageFilter.GaussianBlur(
+                radius=max(1, round(size[1] * 0.0018))
+            )
+        ),
+        dtype=np.float32,
+    ) / 255.0
+    # Native eight-bit relief already contains continuous shoulders, spurs and
+    # crest variation. The v39 double-convex response discarded most of those
+    # levels and converted the remaining upper bands into renderer-scale cliff
+    # shelves. Retain the source morphology through one restrained gamma; the
+    # final terrain stage now supplies only a gentle altitude response.
+    # Fresh v42 Observer evidence showed that retaining the source morphology
+    # was necessary but not sufficient: the warm shoulder field still lifted
+    # entire range footprints into broad rock carpets.  Preserve the audited
+    # upper arêtes while compressing mid-level shoulders into steep flanks.
+    # The stronger exponent makes half-strength painted foothills less than
+    # one quarter as tall as the crest, while leaving the true source maxima
+    # untouched.  This is deliberately a narrow arête response: v42 proved
+    # that a compensating gain simply converted too much upper shoulder into
+    # another broad high field.
+    source_form = np.power(source_relief, 2.25)
+    # Mordor's numeric overlay has unusually broad, high shoulders along the
+    # Ered Lithui and Ephel Duath. v60 proved that the global response turns
+    # those shoulders into a table-like cap even after native-cache sculpting.
+    # Compress only the source-defined Mordor bounds more strongly; exact
+    # maxima, the audited range axes, and every footprint coordinate remain.
+    mordor_zone = next(
+        zone for zone in projection["biome_zones"] if zone["key"] == "mordor"
+    )
+    mordor_left, mordor_top, mordor_right, mordor_bottom = (
+        float(value) for value in mordor_zone["bounds"]
+    )
+    mordor_x0 = max(0, round(mordor_left * (size[0] - 1)))
+    mordor_x1 = min(size[0], round(mordor_right * (size[0] - 1)) + 1)
+    mordor_y0 = max(0, round(mordor_top * (size[1] - 1)))
+    mordor_y1 = min(size[1], round(mordor_bottom * (size[1] - 1)) + 1)
+    mordor_relief = source_relief[mordor_y0:mordor_y1, mordor_x0:mordor_x1]
+    source_form[mordor_y0:mordor_y1, mordor_x0:mordor_x1] = np.power(
+        mordor_relief,
+        3.10,
+    )
+
+    # The colour-derived relief contains a broad high body across the direct
+    # Morannon/Carchost marker. Once the drawing-confirmed hinge was restored
+    # below, that old body and the new bridge stacked into the rounded grey
+    # tabletop proven at medium and maximum-close zoom in v66-v67. De-duplicate
+    # only this bounded source body, then rebuild both exact hinge arms and the
+    # source-aligned walls below. This is the same evidence-led operation used
+    # for Ardacraft's duplicate Erebor body; no pass or endpoint moves.
+    morannon = next(item for item in projection["passes"] if item["key"] == "morannon")
+    suppress_y, suppress_x = np.ogrid[: size[1], : size[0]]
+    # The v68 renderer locates the surviving table body south-east of the
+    # direct gate marker, at the painted junction of the two source walls.
+    # Centre this de-duplication on that body rather than enlarging a circular
+    # hole around the traversable pass itself.
+    morannon_x = 0.615 * (size[0] - 1)
+    morannon_y = 0.545 * (size[1] - 1)
+    duplicate_body = np.exp(
+        -0.5
+        * (
+            np.square((suppress_x - morannon_x) / (size[1] * 0.038))
+            + np.square((suppress_y - morannon_y) / (size[1] * 0.040))
+        )
+    )
+    source_form *= 1.0 - duplicate_body * 0.985
+
+    # Ardacraft's painted height overlay loses the few low-colour pixels at
+    # Cirith Gorgor, although its drawing layer clearly joins Ered Lithui and
+    # Ephel Duath at the Morannon hinge. Two narrow audited traces reconcile
+    # that raster gap with the drawing without creating broad Gaussian flanks.
+    # The pass carve below keeps the direct Black Gate marker as the low saddle.
+    layers = smooth_union(layers, source_form * 255.0)
+    hinge_arms = morannon.get("hinge_arms", [])
+    if len(hinge_arms) != 2:
+        raise ValueError("Morannon requires two audited source-reconciliation arms")
+    # v41 proved literal straight strokes were visible as artificial walls,
+    # but v59's native-cache review proved the source raster alone leaves both
+    # range ends detached from Cirith Gorgor. Reconcile only the two audited
+    # source gaps with short naturally wandering arms. The general pass carve
+    # below then lowers their shared centre into the Black Gate saddle.
+    hinge_center = morannon["center"]
+    hinge_width = max(3, round(size[1] * 0.0050))
+    hinge_y, hinge_x = np.ogrid[: size[1], : size[0]]
+    hinge_center_x = float(hinge_center[0]) * (size[0] - 1)
+    hinge_center_y = float(hinge_center[1]) * (size[1] - 1)
+    for arm_index, endpoint in enumerate(hinge_arms):
+        hinge_path = natural_path(
+            [hinge_center, endpoint],
+            size,
+            key=f"morannon-hinge:{arm_index}",
+            closed=False,
+            amplitude=0.0022,
+            spacing=0.0012,
+        )
+        # v66's exact Carchost close-up proved that finite-width bridge lines
+        # enlarge into a sheer flat tabletop even when the adjoining source
+        # ranges are pointed. Use the same normalized one-pixel Gaussian
+        # section as the corrected Mordor walls; the pass carve below still
+        # owns the low centre and both audited endpoints remain unchanged.
+        hinge_body = normalized_gaussian_path(
+            hinge_path,
+            blur=max(1, round(hinge_width * 0.32)),
+        )
+        hinge_spine = normalized_gaussian_path(
+            hinge_path,
+            blur=max(1, round(hinge_width * 0.08)),
+        )
+        hinge_field = 255.0 * (
+            0.24 * (hinge_body / 255.0)
+            + 0.76 * (hinge_spine / 255.0)
+        )
+        endpoint_x = float(endpoint[0]) * (size[0] - 1)
+        endpoint_y = float(endpoint[1]) * (size[1] - 1)
+        arm_length = max(
+            math.hypot(endpoint_x - hinge_center_x, endpoint_y - hinge_center_y),
+            1.0,
+        )
+        distance_from_gate = np.hypot(
+            hinge_x - hinge_center_x,
+            hinge_y - hinge_center_y,
+        )
+        # Cirith Gorgor is a low cleft between two walls, not a high bridge.
+        # Rise steeply but continuously from zero at the gate to full pointed
+        # relief at the two audited source endpoints. This removes v69's
+        # uniform high tabletop while retaining an unbroken physical approach.
+        rise = np.clip(
+            (distance_from_gate - hinge_width * 0.30)
+            / max(arm_length - hinge_width * 0.30, 1.0),
+            0.0,
+            1.0,
+        )
+        rise = rise * rise * (3.0 - 2.0 * rise)
+        hinge_field *= rise
+        layers = smooth_union(layers, hinge_field)
+
     # Arda Maps mountain polygons bind the full range footprint, but they are
     # foothill envelopes rather than flat summit plates. Earlier versions
     # lifted almost every polygon interior to 44-100% of the relief range;
@@ -671,13 +946,30 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             softened
             * strength
             * 255.0
-            * (0.10 + 0.22 * modulation)
+            * (0.06 + 0.13 * modulation)
         )
         layers = smooth_union(layers, np.clip(zone_field, 0.0, 255.0))
 
-    for ridge in projection["ridges"]:
+    # Ardacraft supplies source-native relief across every covered range. v46
+    # live evidence nevertheless proved that its sparse upper samples leave
+    # disconnected cliff blocks where the drawing and continuous Arda Maps
+    # linework show one chain. Re-enable only the four projection axes carrying
+    # an explicit source_supported_gain: every added sample is multiplied by a
+    # soft dilation of the numeric source immediately below. Ordinary hand
+    # axes remain disabled; this cannot relocate or invent a mountain.
+    for ridge in (
+        item
+        for item in projection["ridges"]
+        if item.get("synthetic_axis_required", False)
+        or "source_supported_gain" in item
+    ):
         width = max(3, round(float(ridge["width"]) * size[1]))
-        value = float(ridge["height"]) * 255.0
+        value = (
+            float(ridge["height"])
+            * float(ridge.get("relief_weight", 1.0))
+            * float(ridge.get("source_supported_gain", 1.0))
+            * 255.0
+        )
         path = natural_path(
             ridge["points"],
             size,
@@ -689,32 +981,61 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
         # Earlier versions stacked four independently blurred paths with
         # ``maximum``. Their transition shoulders became visible as parallel,
         # terraced contour bands in EU5's close renderer. Three overlapping
-        # Gaussian envelopes instead form one continuously sloped massif:
-        # low foothills, a steep folded body, and an irregular central spine,
-        # with no discrete change in construction method at any radius. Live
-        # theatre evidence rejected the former 5.4-width broad envelope: even
-        # after polygon plateaus were removed it still read as a flat exposed-
-        # rock field. Concentrate height into a visibly steep chain.
-        broad = blurred_path(
-            path,
-            width=round(width * 3.2),
-            blur=round(width * 0.95),
-        )
-        body = blurred_path(
-            path,
-            width=round(width * 1.6),
-            blur=round(width * 0.45),
-        )
-        spine = blurred_path(
-            path,
-            width=round(width * 0.45),
-            blur=round(width * 0.18),
-        )
-        massif = value * (
-            0.18 * (broad / 255.0)
-            + 0.40 * (body / 255.0)
-            + 0.42 * (spine / 255.0)
-        )
+        # Gaussian envelopes instead form one continuously sloped massif.
+        # v48 proved that concentrating the full height into a very narrow
+        # spine merely exchanged a broad mesa for a vertical wall. Vanilla's
+        # calibrated ranges use a moderate connected body with separate high
+        # summits. Keep this control envelope lower and smoothly shouldered;
+        # gen_heightmap adds compact source-aligned summit teeth downstream.
+        source_supported = "source_supported_gain" in ridge
+        sharp_cross_section = bool(ridge.get("sharp_cross_section", False))
+        if sharp_cross_section:
+            # Live v60-v64 evidence isolated Mordor's remaining plateau to the
+            # finite-width line cores below. A normalized one-pixel Gaussian
+            # retains the same centre height and audited outer width while
+            # giving both enclosing walls a pointed, non-tabletop section.
+            broad = normalized_gaussian_path(
+                path,
+                blur=round(width * 0.30),
+            )
+            body = normalized_gaussian_path(
+                path,
+                blur=round(width * 0.13),
+            )
+            spine = normalized_gaussian_path(
+                path,
+                blur=round(width * 0.050),
+            )
+        else:
+            broad = blurred_path(
+                path,
+                width=round(width * (0.78 if source_supported else 1.20)),
+                blur=round(width * (0.24 if source_supported else 0.36)),
+            )
+            body = blurred_path(
+                path,
+                width=round(width * (0.46 if source_supported else 0.68)),
+                blur=round(width * (0.14 if source_supported else 0.19)),
+            )
+            spine = blurred_path(
+                path,
+                width=round(width * (0.14 if source_supported else 0.17)),
+                blur=round(width * (0.045 if source_supported else 0.045)),
+            )
+        if source_supported:
+            massif = value * (
+                0.10 * (broad / 255.0)
+                + 0.32 * (body / 255.0)
+                + 0.58 * (spine / 255.0)
+            )
+            longitudinal = np.clip((modulation - 0.66) / 0.58, 0.0, 1.0)
+            massif *= 0.56 * (0.78 + 0.22 * longitudinal)
+        else:
+            massif = value * (
+                0.06 * (broad / 255.0)
+                + 0.24 * (body / 255.0)
+                + 0.70 * (spine / 255.0)
+            )
         # A mountain chain is a field of overlapping massifs, not a uniform
         # wall. Scatter low-amplitude off-axis shoulders along the authored
         # spine. Smooth-union composition prevents their blurred ellipses from
@@ -732,9 +1053,16 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
                 continue
             normal = np.array([-tangent[1], tangent[0]]) / tangent_length
             center = np.array(path[path_index], dtype=np.float64)
-            center += normal * rng.uniform(-1.15, 1.15) * width
-            radius_x = rng.uniform(0.30, 0.66) * width
-            radius_y = rng.uniform(0.26, 0.60) * width
+            offset_limit = 0.30 if source_supported else 1.15
+            center += normal * rng.uniform(-offset_limit, offset_limit) * width
+            radius_x = rng.uniform(
+                0.12 if source_supported else 0.30,
+                0.30 if source_supported else 0.66,
+            ) * width
+            radius_y = rng.uniform(
+                0.10 if source_supported else 0.26,
+                0.27 if source_supported else 0.60,
+            ) * width
             peak_draw.ellipse(
                 (
                     round(center[0] - radius_x),
@@ -745,10 +1073,18 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
                 fill=round(rng.uniform(150.0, 235.0)),
             )
         peaks = peaks.filter(
-            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.18)))
+            ImageFilter.GaussianBlur(
+                radius=max(1, round(width * (0.08 if source_supported else 0.18)))
+            )
         )
         peak_values = np.asarray(peaks, dtype=np.float32) / 255.0
-        massif += value * peak_values * 0.72
+        massif += value * peak_values * (0.07 if source_supported else 0.40)
+        if source_supported:
+            # The stronger continuity is legal only inside a soft dilation of
+            # the measured Ardacraft range footprint.  This produces a tall,
+            # connected renderer-scale wall without relocating a crest or
+            # allowing the hand axis to invent high terrain in a source gap.
+            massif *= source_axis_support
         layers = smooth_union(layers, np.clip(massif, 0.0, 255.0))
         for branch_index, branch in enumerate(ridge.get("branches", [])):
             branch_path = natural_path(
@@ -761,36 +1097,119 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             )
             branch_body = blurred_path(
                 branch_path,
-                width=round(width * 1.30),
-                blur=round(width * 0.42),
+                width=round(width * (0.48 if source_supported else 0.95)),
+                blur=round(width * (0.14 if source_supported else 0.30)),
             )
             branch_spine = blurred_path(
                 branch_path,
-                width=round(width * 0.42),
-                blur=round(width * 0.18),
+                width=round(width * (0.15 if source_supported else 0.30)),
+                blur=round(width * (0.050 if source_supported else 0.12)),
             )
-            branch_field = value * 0.58 * (
-                0.68 * (branch_body / 255.0)
-                + 0.32 * (branch_spine / 255.0)
+            audited_branch_gains = ridge.get("source_audited_branch_gains")
+            branch_gain = float(
+                audited_branch_gains[branch_index]
+                if audited_branch_gains is not None
+                else 0.50 if source_supported else 0.55
             )
+            branch_field = value * branch_gain * (
+                (0.16 if source_supported else 0.48) * (branch_body / 255.0)
+                + (0.84 if source_supported else 0.52) * (branch_spine / 255.0)
+            )
+            if source_supported:
+                branch_field *= 0.78 + 0.22 * longitudinal
+                # White Mountain continuations are exact Arda Maps summit
+                # chains across two small holes in Ardacraft's numeric paint.
+                # They replace the rejected circular peak stamps, so retain
+                # their narrow connected geometry rather than fading them out
+                # at the second source's raster boundary.
+                if not ridge.get("source_audited_branches", False):
+                    branch_field *= source_axis_support
             layers = smooth_union(layers, branch_field)
 
-    # Place lore-sensitive summits at their hash-pinned Arda Maps point
-    # coordinates. Each field is a weighted blend of lumpy outer shoulders,
-    # an offset body, and a compact source-centered core. This keeps the
-    # canonical coordinate as the local maximum without stamping circular
-    # cones or concentric rings into isolated hills.
-    for peak in projection.get("named_peaks", []):
+    # Synthetic pass shoulders are likewise opt-in fallbacks. Ardacraft's
+    # measured relief owns both flanks wherever it is present; adding Gaussian
+    # shoulder stamps on top manufactured the rejected Morannon/Dunharrow
+    # uplands even though their centres remained correctly low.
+    flank_y, flank_x = np.ogrid[: size[1], : size[0]]
+    for pass_data in projection["passes"]:
+        range_tangent = pass_data.get("range_tangent")
+        if range_tangent is None or not pass_data.get(
+            "synthetic_flanks_required", False
+        ):
+            continue
+        tangent_x = float(range_tangent[0])
+        tangent_y = float(range_tangent[1])
+        tangent_length = math.hypot(tangent_x, tangent_y)
+        if tangent_length <= 0.0:
+            raise ValueError(f"{pass_data['key']} has a zero pass tangent")
+        tangent_x /= tangent_length
+        tangent_y /= tangent_length
+        center_x = float(pass_data["center"][0]) * (size[0] - 1)
+        center_y = float(pass_data["center"][1]) * (size[1] - 1)
+        radius_pixels = float(pass_data["radius"]) * size[1]
+        flank_field = np.zeros_like(layers)
+        for direction in (-1.0, 1.0):
+            peak_x = center_x + direction * tangent_x * radius_pixels
+            peak_y = center_y + direction * tangent_y * radius_pixels
+            delta_x = flank_x.astype(np.float32) - peak_x
+            delta_y = flank_y.astype(np.float32) - peak_y
+            along = delta_x * tangent_x + delta_y * tangent_y
+            across = -delta_x * tangent_y + delta_y * tangent_x
+            peak = np.exp(
+                -0.5
+                * (
+                    (along / max(1.0, radius_pixels * 0.45)) ** 2
+                    + (across / max(1.0, radius_pixels * 0.30)) ** 2
+                )
+            )
+            np.maximum(flank_field, peak * 242.0, out=flank_field)
+        flank_field *= source_axis_support
+        layers = smooth_union(layers, flank_field)
+
+    # Named summit coordinates remain audit anchors, not automatic relief
+    # stamps. Source-native Ardacraft relief and the clipped continuity axes
+    # now cover the formerly sparse Irensaga/Mindolluin samples. No production
+    # peak currently opts into this fallback; retaining the explicit gate
+    # prevents an audit marker from silently becoming a circular cap.
+    for peak in (
+        item
+        for item in projection.get("named_peaks", [])
+        if item.get("synthetic_peak_required", False)
+    ):
         x, y = point(peak["center"], size)
         radius = max(3, round(float(peak["radius"]) * size[1]))
         strength = float(peak["strength"])
         rng = np.random.default_rng(stable_seed(f"named-peak:{peak['key']}"))
         peak_field = np.zeros_like(layers)
-        for scale, lobe_count, blur, weight, offset in (
-            (1.65, 6, 0.72, 0.22, 0.65),
-            (0.95, 5, 0.38, 0.38, 0.34),
-            (0.42, 3, 0.18, 0.62, 0.10),
-        ):
+        profile = (
+            (
+                (0.55, 3, 0.12, 0.35, 0.18),
+                (0.25, 3, 0.06, 0.70, 0.08),
+                (0.08, 2, 0.03, 1.00, 0.02),
+            )
+            if peak.get("profile") == "source_gap_peak"
+            else
+            (
+                (1.05, 5, 0.42, 0.18, 0.42),
+                (0.58, 4, 0.22, 0.42, 0.20),
+                (0.24, 3, 0.09, 0.86, 0.05),
+            )
+            if peak.get("profile") == "isolated_peak"
+            else (
+                (
+                    (0.82, 5, 0.30, 0.14, 0.28),
+                    (0.42, 4, 0.16, 0.40, 0.14),
+                    (0.16, 3, 0.05, 0.94, 0.035),
+                )
+                if peak.get("profile") == "chain_peak"
+                else (
+                    (1.65, 6, 0.72, 0.22, 0.65),
+                    (0.95, 5, 0.38, 0.38, 0.34),
+                    (0.42, 3, 0.18, 0.62, 0.10),
+                )
+            )
+        )
+        for scale, lobe_count, blur, weight, offset in profile:
             lobe_image = Image.new("L", size, 0)
             lobe_draw = ImageDraw.Draw(lobe_image)
             for lobe_index in range(lobe_count):
@@ -829,6 +1248,48 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
 
     image = Image.fromarray(np.clip(layers, 0, 255).astype(np.uint8), "L")
     for pass_data in projection["passes"]:
+        range_tangent = pass_data.get("range_tangent")
+        if range_tangent is not None:
+            # A pass is a corridor across a range, not a circular crater.
+            # Work in equal-scale normalized map coordinates so the field is
+            # independent of the 2:1 control-raster aspect ratio.  It is
+            # narrow along the range tangent (retaining both adjacent flanks)
+            # and elongated along the crossing normal (opening the route).
+            center_x = float(pass_data["center"][0]) * (size[0] - 1)
+            center_y = float(pass_data["center"][1]) * (size[1] - 1)
+            radius_norm = float(pass_data["radius"])
+            tangent_x = float(range_tangent[0])
+            tangent_y = float(range_tangent[1])
+            tangent_length = math.hypot(tangent_x, tangent_y)
+            if tangent_length <= 0.0:
+                raise ValueError(f"{pass_data['key']} has a zero pass tangent")
+            tangent_x /= tangent_length
+            tangent_y /= tangent_length
+            extent = radius_norm * 3.25
+            left = max(0, math.floor(center_x - extent * size[1]))
+            right = min(size[0], math.ceil(center_x + extent * size[1]) + 1)
+            top = max(0, math.floor(center_y - extent * size[1]))
+            bottom = min(size[1], math.ceil(center_y + extent * size[1]) + 1)
+            pixel_x = np.arange(left, right, dtype=np.float32)
+            pixel_y = np.arange(top, bottom, dtype=np.float32)
+            delta_x = (pixel_x[None, :] - center_x) / float(size[1])
+            delta_y = (pixel_y[:, None] - center_y) / float(size[1])
+            along = delta_x * tangent_x + delta_y * tangent_y
+            across = -delta_x * tangent_y + delta_y * tangent_x
+            valley = np.exp(
+                -0.5
+                * (
+                    (along / (radius_norm * 0.32)) ** 2
+                    + (across / (radius_norm * 0.92)) ** 2
+                )
+            ).astype(np.float32)
+            layers = np.asarray(image, dtype=np.float32)
+            layers[top:bottom, left:right] *= 1.0 - valley * 0.58
+            image = Image.fromarray(
+                np.clip(layers, 0, 255).astype(np.uint8), "L"
+            )
+            continue
+
         valley = Image.new("L", size, 0)
         x, y = point(pass_data["center"], size)
         radius = max(2, round(float(pass_data["radius"]) * size[1]))
@@ -862,7 +1323,10 @@ def river_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
                 amplitude=float(river.get("wander", 0.0015)),
                 spacing=0.0025,
             ),
-            fill=255,
+            # Major reviewed trunks own the full incision/clearance response.
+            # Supplementary catchment detail remains visible but must not cut
+            # the same broad valley or tree-free bank as the Anduin.
+            fill=96 if river.get("terrain_only") else 255,
             width=width,
             joint="curve",
         )
@@ -911,13 +1375,96 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     land = land_mask(projection, size)
     land_array = np.asarray(land) > 0
     ridges = ridge_mask(projection, size)
-    ridge_array = np.clip(
-        np.asarray(ridges, dtype=np.float32)
-        / 255.0
-        * relief_modulation(size),
+    ridge_base = np.asarray(ridges, dtype=np.float32) / 255.0
+    ridge_variation = np.clip(
+        (relief_modulation(size) - 0.66) / 0.58,
         0.0,
         1.0,
     )
+    # Modulation may lower individual shoulders, but must never multiply an
+    # already-high source sample past 1.0. That saturation made v38's long,
+    # identical summit caps.
+    ridge_array = ridge_base * (
+        1.0 - (1.0 - ridge_base) * 0.22 * (1.0 - ridge_variation)
+    )
+    # Bind the generated crests to the reduced Ardacraft authority, not just
+    # to a checksum that a later renderer could accidentally ignore. Strong
+    # source cores must survive as high relief, while generated high relief may
+    # stray only within a narrow support envelope for named peaks and legacy
+    # continuity axes.
+    source_relief = source_relief_field(projection, size)
+    # Fresh v42 evidence shows that even 0.82 includes too much warm upper
+    # shoulder.  At native eight-bit precision, 0.92 isolates the actual
+    # pale/dark arête pixels which must remain visibly high after compression.
+    source_core = source_relief >= 0.92
+    source_core_coverage = float((ridge_array[source_core] >= 0.50).mean())
+    source_support_image = Image.fromarray(
+        (source_relief >= 0.15).astype(np.uint8) * 255,
+        "L",
+    ).filter(ImageFilter.MaxFilter(21))
+    # The two White Mountain continuation paths are themselves audited Arda
+    # Maps source geometry. Include their narrow corridors in the provenance
+    # support metric so the cross-source reconciliation is explicit rather
+    # than being misreported as invented relief.
+    source_support_draw = ImageDraw.Draw(source_support_image)
+    for ridge in projection["ridges"]:
+        if not ridge.get("source_audited_branches", False):
+            continue
+        for branch_index, branch in enumerate(ridge.get("branches", [])):
+            source_support_draw.line(
+                natural_path(
+                    branch,
+                    size,
+                    key=f"ridge:{ridge['key']}:branch:{branch_index}",
+                    closed=False,
+                    amplitude=float(ridge.get("wander", 0.0035)),
+                    spacing=0.003,
+                ),
+                fill=255,
+                width=21,
+                joint="curve",
+            )
+    source_support = np.asarray(source_support_image, dtype=np.uint8) > 0
+    high_ridge = ridge_array >= 0.50
+    high_ridge_source_support = float(source_support[high_ridge].mean())
+    if source_core_coverage < 0.93:
+        raise ValueError("generated relief dropped too much Ardacraft crest structure")
+    if high_ridge_source_support < 0.99:
+        raise ValueError("generated high relief drifted outside Ardacraft support")
+    theatre_conformance = {}
+    for key, contract in SOURCE_RELIEF_THEATRES.items():
+        x0, y0, x1, y1 = contract["bbox"]
+        left = round(x0 * size[0])
+        top = round(y0 * size[1])
+        right = round(x1 * size[0])
+        bottom = round(y1 * size[1])
+        theatre_core = source_core[top:bottom, left:right]
+        theatre_high = high_ridge[top:bottom, left:right]
+        if not theatre_core.any() or not theatre_high.any():
+            raise ValueError(f"{key} source-relief theatre became empty")
+        theatre_ridge = ridge_array[top:bottom, left:right]
+        theatre_support = source_support[top:bottom, left:right]
+        core_coverage = float((theatre_ridge[theatre_core] >= 0.50).mean())
+        high_support = float(theatre_support[theatre_high].mean())
+        if core_coverage < contract["min_core_coverage"]:
+            raise ValueError(
+                f"{key} dropped too much Ardacraft crest structure: "
+                f"{core_coverage:.6f} < {contract['min_core_coverage']:.6f}"
+            )
+        if high_support < contract["min_high_support"]:
+            raise ValueError(
+                f"{key} high relief drifted outside Ardacraft support: "
+                f"{high_support:.6f} < {contract['min_high_support']:.6f}"
+            )
+        theatre_conformance[key] = {
+            "bbox": list(contract["bbox"]),
+            "source_core_pixels": int(theatre_core.sum()),
+            "source_core_coverage": round(core_coverage, 6),
+            "high_ridge_pixels": int(theatre_high.sum()),
+            "high_ridge_source_support": round(high_support, 6),
+            "minimum_source_core_coverage": contract["min_core_coverage"],
+            "minimum_high_ridge_source_support": contract["min_high_support"],
+        }
     ridges = Image.fromarray(np.round(ridge_array * 255.0).astype(np.uint8), "L")
     rivers = river_mask(projection, size)
 
@@ -1017,10 +1564,10 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         pond_basin * 900.0 + material_pond_mask * 450.0,
         0.0,
     )
-    # Orodruin is an isolated stratovolcano, not another blurred mountain
-    # envelope. The former soft ellipse left only a shallow rise in the close
-    # renderer. Build an asymmetric apron, a steep cone, and a summit crater
-    # enclosed by a broken rim without moving the source-audited anchor.
+    # Orodruin's final cratered cone is authored at native terrain resolution
+    # in gen_heightmap.py. Keep only its low irregular apron here; feeding a
+    # 50k control cone through the generic range normalizer directly caused
+    # v38's flat-topped tower.
     mount_doom = next(item for item in settlements if item.key == "mount_doom")
     px, py = point((mount_doom.x, mount_doom.y), size)
     doom_y, doom_x = np.ogrid[: size[1], : size[0]]
@@ -1033,31 +1580,14 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         + 0.075 * np.sin(doom_angle * 5.0 + 0.8)
         + 0.040 * np.sin(doom_angle * 11.0 - 0.35)
     )
-    apron_radius = max(18.0, size[1] / 105.0)
-    cone_radius = max(6.0, size[1] / 300.0)
+    apron_radius = max(10.0, size[1] / 180.0)
     apron = np.power(
         np.clip(1.0 - irregular_distance / apron_radius, 0.0, 1.0),
-        2.15,
+        2.35,
     )
-    cone = np.power(
-        np.clip(1.0 - irregular_distance / cone_radius, 0.0, 1.0),
-        1.32,
-    )
-    rim_radius = cone_radius * 0.31
-    rim_width = max(0.75, cone_radius * 0.11)
-    rim = np.exp(
-        -np.square((doom_distance - rim_radius) / rim_width) * 0.5
-    )
-    crater = np.exp(
-        -np.square(doom_distance / max(0.85, rim_radius * 0.58)) * 0.5
-    )
-    doom_relief = (
-        apron * 7_500.0
-        + cone * 40_000.0
-        + rim * 6_000.0
-        - crater * 14_000.0
-    )
+    doom_relief = apron * 3_800.0
     elevation += np.where(land_array, doom_relief, 0.0)
+    elevation = soft_ceiling(elevation, knee=59_000.0, ceiling=65_300.0)
     elevation = np.clip(elevation, 0, 65535).astype(np.uint16)
     material_pond_pixels = int(material_pond_mask.sum())
     expected_material_pond_pixels = sum(
@@ -1211,6 +1741,10 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         "highland_source_pixels": int((highland_relief > 0.08).sum()),
         "moor_source_pixels": int((np.asarray(moor_mask) > 0).sum()),
         "named_peaks": len(projection.get("named_peaks", [])),
+        "source_relief_core_pixels": int(source_core.sum()),
+        "source_relief_core_coverage": round(source_core_coverage, 6),
+        "high_ridge_source_support": round(high_ridge_source_support, 6),
+        "source_relief_theatres": theatre_conformance,
         "passes": len(projection["passes"]),
         "rivers": len(projection["rivers"]),
         "lakes": len(projection["lakes"]),

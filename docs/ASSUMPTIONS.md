@@ -124,10 +124,13 @@ about Middle-earth.
 - † The three invented Rhûnic seats use the represented land around the source
   Rhûn and Sea of Rhûn labels, at x=0.77/0.80/0.82. The previous x=0.875
   Eastern March point was outside the source mainland and is rejected.
-- † The Mount Gundabad location represents its usable gate/approach as well as
-  the underground stronghold. A narrow pass centred on the canonical marker is
-  therefore necessary for gameplay connectivity and does not imply a broad
-  break in the surrounding mountains.
+- † The Arda Maps Gundabad point is interpreted as the summit/stronghold, not
+  the gameplay saddle. The usable gate/approach is represented by a separate
+  narrow pass immediately north-east at `[0.506471, 0.097215]`; this preserves
+  connectivity without lowering the canonical summit. Because the point lies
+  at a junction already represented by two source ranges, its named-peak field
+  is interpreted as a compact chain crown rather than a third range-sized
+  envelope or an Erebor-style isolated mountain.
 - † The Harlond below Minas Tirith is an operational Gondorian port on
   TA 3018.1.1. It remains owned even while most nearby Ithilien locations are
   deliberately wilderness; the wilderness mask cannot override its port rank.
@@ -162,3 +165,142 @@ about Middle-earth.
   therefore interpolates inward from Arda Maps mountain polygons 8-11, the three enclosing
   ridge axes, and Mount Doom, then fades toward the open east. It is a renderer
   reconciliation and must not be reused as a political frontier.
+
+## v30 source-relief and drainage interpretation
+
+- † Detailed crest and branch placement now uses the Ardacraft Heightmap V2
+  interpretation inside the audited Arda Maps outer mountain envelopes. This
+  supersedes the earlier blanket assumption that all mountain linework came
+  from Arda Maps. Exact named points still constrain canonical summits, and
+  Tolkien's published evidence remains superior to either community source.
+- † The committed Ardacraft relief field is an 8-bit native-resolution numeric
+  measurement, not a reusable heightmap or copy of the reference artwork. Its
+  losslessly compressed warm-rock response
+  contains no colour, labels, water, terrain texture, or political information.
+- † Arda Maps supplies named source polylines for 22 of the 24 parser-modelled
+  river controls and 30 of the 76 additional terrain-only source parts. The 76
+  additions are physical drainage controls, not 76 additional navigable EU5
+  rivers: build 24187685 rejects custom affluent junction graphs, so they carve
+  valleys and inform wet terrain while remaining absent from `rivers.png`.
+- † Ardacraft's direct Erebor marker supersedes the displaced least-squares Arda
+  point for Erebor's map anchor. The city/hold is represented
+  at the mountain point because EU5 requires one location anchor; this does not
+  claim that every Dale settlement or entrance occupied the summit itself.
+
+## v35 pass and surface interpretation
+
+- † The Arda Maps Paths of the Dead and Cirith Gorgor points identify route centres, not
+  circular lowland basins. Their gameplay saddles may be anisotropic according to the
+  surrounding source range structure while their coordinates remain exact.
+- † A passable stronghold location on a physical massif does not imply that its summit is
+  flat or low. Gundabad's location topology may use a narrow connection to the continental
+  land component while the canonical point retains its accepted high chain-crown relief.
+- † Earlier exposed-rock transitions on the White Mountains and Mordor's enclosing walls
+  are renderer calibration, not a claim of uniform bare stone. They apply only where a
+  reviewed named-range axis overlaps genuinely high physical terrain.
+
+## v40 relief reconstruction
+
+- † Ardacraft Heightmap V2's warm-rock colour identifies mountain placement and crest
+  structure but is not itself literal elevation. Continuous 4/12/18-pixel convolutions
+  of that exact numeric response are a renderer-scale height interpretation; they do not
+  move a range or import the reference image.
+- † The two Morannon hinge endpoints are the nearest unambiguous source-relief samples on
+  Ered Lithui and Ephel Duath. Ardacraft's drawing layer confirms both arms meet at Cirith
+  Gorgor, so restoring those short missing raster connections is preferable to leaving a
+  lore-inaccurate open basin.
+- † Small exact-coordinate teeth at strong Arda Maps peak points represent named summits
+  where the calibrated point and painted Ardacraft crest differ by a few pixels. Their
+  compact scale is not evidence for a separate massif or political boundary.
+
+## v41 half-canvas vertical calibration
+
+- † Installed vanilla gradient statistics are a useful lower reference but not a literal
+  visual target for ENDORË's half-sized terrain canvas. The accepted static interval is an
+  engine-scale interpretation: materially steeper than vanilla/v40, materially gentler
+  than v39, with unchanged source coordinates.
+- † A compact crown at Mount Gundabad's exact source junction represents the named peak's
+  required prominence; it does not alter the surrounding Grey/Misty Mountain geometry or
+  imply a separate massif.
+
+## v42 summit-colour interpretation
+
+- † Pale neutral pixels embedded in Ardacraft's warm mountain bodies represent the
+  highest snow/stone summit spines rather than lowland light. The numeric reduction may
+  decode them only when red, brightness, neutrality, and red/green-balance guards all
+  agree; it remains a derived height signal, not copied source artwork.
+
+## v43 renderer-scale arête interpretation
+
+- † The >=0.92 band of the committed Ardacraft numeric response represents the true
+  upper arête signal for EU5 height translation. Lower warm bands remain source-authored
+  foothills and shoulders, but may be vertically compressed because the reference's
+  painted colour width is not literal terrain width.
+- † Ardacraft's painted Erebor spot and its direct Erebor marker describe one physical
+  Lonely Mountain. Collapsing their few-sample overlap into one marker-centred summit is
+  a de-duplication of the same source feature, not an invented relocation.
+- † Raising only already-high source samples within the Morannon theatre represents
+  renderer-scale vertical exaggeration of Ered Lithui and Ephel Dúath. The exact source
+  shape and low Cirith Gorgor saddle remain authoritative.
+
+## v44 range serration
+
+- † Source-pinned mountain placement and renderer-scale summit variation are separate
+  concerns. Deterministic fold/peak variation may alter local altitude inside an existing
+  audited massif to make a long range physically readable, but it may not widen, move,
+  connect, or invent a range or close a named pass.
+
+## v45 installed-renderer calibration
+
+- † A visually convincing EU5 mountain is governed by the rendered relationship among
+  physical width, height contrast, crest frequency, camera scale, and material exposure;
+  raw height-gradient percentiles alone are not a sufficient proxy. Matched captures of
+  installed vanilla ranges may therefore define renderer-scale ratios for ENDÓRË while
+  Arda Maps and Ardacraft continue to define every horizontal placement and footprint.
+
+## v46 renderer-frequency interpretation
+
+- The installed q64 terrain renderer cannot be assumed to preserve arbitrary native-
+  sample signed detail even when its gradients pass static bounds. Repeated regular bands
+  in a fresh live frame are authoritative rejection evidence; a usable arÃªte signal must
+  vary smoothly over several cache samples and remain tied to the source range axis.
+- Exposed-material fraction is not sufficient evidence of convincing mountain surface.
+  Material must also be spatially connected to the physical crest/flank, feathered rather
+  than blocky, and bounded against theatre-scale caps. Live connectivity/regularity checks
+  may therefore supersede a numerically passing fraction window without changing any lore
+  geometry.
+
+## Canonical forest species and renderer density
+
+- † Owner direction treats TA 3018 Lothlórien as birch-dominant for map presentation.
+  Installed EU5 has no dedicated birch generated-object family. Its two full-canopy
+  `environment_oceanic_wt_tree` meshes use light wood and are therefore the closest
+  vanilla-format approximation. Reserving them for Lothlórien is a visual species proxy,
+  not a claim that every tree in the Golden Wood was botanically identical.
+- † Transform density and LOD continuity are renderer-scale interpretations of a source
+  woodland polygon, not cartographic evidence for a larger forest. Mirkwood and
+  Lothlórien keep their exact hash-pinned source boundaries while receiving more and
+  better-distributed physical trees inside those boundaries.
+
+## TA 3018 political-boundary interpretation
+
+- † Tolkien and the two accepted cartographic references identify named lands, seats,
+  forests, rivers, mountain walls, and spheres of control, but do not provide a complete
+  cadastral border for every 6,004-location cell. For well-attested western and northern
+  realms, equal-scale claim envelopes therefore follow those named physical limits and
+  are recorded per location in `m3_ownership_audit.csv`; the envelopes may constrain the
+  allocator but may never move terrain to make the political paint fit.
+- † Impassable mountain locations and water can divide the location-adjacency graph of a
+  canonically coherent realm. Such components are retained only when the generated audit
+  exposes them for review (for example Lindon's separated coasts or Mordor's occupied
+  gates). Compact realms including Lothlórien, Dunland, Woodmen, Woodland Realm, Dol
+  Guldur, Iron Hills, Erebor, Fangorn, and Isengard are required to remain contiguous.
+- † Rhûn, Khand, and Far Harad are much less precisely bounded in the accepted sources.
+  They remain explicitly lower-confidence region claims with a hard anti-sprawl distance
+  instead of receiving invented precise borders. The roster may gain a smaller realm only
+  where TA 3018 evidence supports distinct control; unclaimed or depopulated land is
+  preferable to decorative fragmentation.
+- † Ithilien is depopulated contested country on TA 3018.1.1, not ordinary Mordor
+  heartland. Its non-anchor locations therefore remain `wild_ithilien`; the occupied
+  refuges, crossings, towers, and gateworks at Henneth Annûn, Cair Andros, Cirith Ungol,
+  Durthang, Narchost, and Carchost stay explicitly pinned to their attested controllers.

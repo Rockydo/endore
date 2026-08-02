@@ -21,6 +21,7 @@ No installed-game payload is copied.
 from __future__ import annotations
 
 import argparse
+import functools
 import hashlib
 import io
 import json
@@ -38,7 +39,12 @@ from PIL import Image, ImageDraw, ImageFilter
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from gen_rivers import river_control_points
-from m2_controls import land_mask, natural_path, source_zone_mask
+from m2_controls import (
+    land_mask,
+    natural_path,
+    source_relief_field,
+    source_zone_mask,
+)
 from worldgen import CONTROL, DERIVED, TERRAIN_OUT
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,10 +67,48 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 29
-HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29}
+GENERATOR_VERSION = 42
+# v34-v35 change height payload semantics by adding and thresholding
+# native-cache sculpting. v37 replaces the broad high body with a lower body
+# plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
+# v39 makes both extremes of the global relief field eligible for summit teeth
+# and removes Erebor's clipped ceiling. v40-v41 change material eligibility and
+# face thresholds only, so their height payload is exactly compatible with v39.
+# v42 adds native-cache longitudinal serration to the two source-pinned Mordor
+# walls, so no older height payload is compatible with this generator.
+HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42})
+
+# Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
+# virtual-texture cache contains a separately sculpted 65536x32768 surface:
+# equal-area cache probes around Shey measure roughly three times the native
+# gradient and tens of thousands of distinct levels compared with a bilinear
+# enlargement. ENDÓRË must provide the same scale of renderer input or even
+# correctly placed high ranges collapse into broad plateaus at close zoom.
+# These global-coordinate octaves add no new horizontal mountain footprint;
+# they are multiplied by relief already present in the audited height source.
+MICRORELIEF_OCTAVES = (
+    (384.0, 1.00, 771),
+    (192.0, 0.70, 991),
+    (96.0, 0.55, 1_217),
+    (48.0, 0.40, 1_439),
+    (24.0, 0.26, 1_699),
+    (12.0, 0.15, 1_877),
+    (6.0, 0.08, 2_093),
 )
+MICRORELIEF_WEIGHT_NORM = math.sqrt(
+    sum(weight * weight for _, weight, _ in MICRORELIEF_OCTAVES)
+)
+
+# The runtime cache is eight times finer than the authored height source.  The
+# two paths below are looked up by key from the hash-pinned projection control,
+# so this stage changes only vertical crest morphology and can never drift from
+# the horizontal source geometry.  They form the canonical northern and
+# western walls of Mordor and meet at the low Cirith Gorgor/Morannon saddle.
+MORDOR_RUNTIME_WALL_PHASES = (
+    ("ephel_duath", 0.37),
+    ("ered_lithui", 1.81),
+)
+MORANNON_RUNTIME_CENTER = (0.609732, 0.529449)
 
 # Installed materials.txt establishes the native mask-channel meanings.  The
 # cache stores a bitset rather than a material index: several bits may be set
@@ -298,8 +342,12 @@ def transformed_height_tile(
         resample=Image.Resampling.BILINEAR,
         fillcolor=0,
     )
-    values = np.clip(np.asarray(tile, dtype=np.float32), 0, 65_535).astype(
-        np.uint16
+    values = np.clip(np.asarray(tile, dtype=np.float32), 0, 65_535)
+    values = sculpted_height_tile(
+        values,
+        mip=mip,
+        tile_x=tile_x,
+        tile_y=tile_y,
     )
     # Preserve the full-precision authored source, but package its derived
     # runtime tiles at the bounded HEIGHT_QUANTUM. q512 and q256 created
@@ -310,6 +358,326 @@ def transformed_height_tile(
         (values.astype(np.uint32) // HEIGHT_QUANTUM) * HEIGHT_QUANTUM
     ).astype(np.uint16)
     return values
+
+
+@functools.lru_cache(maxsize=1)
+def microrelief_noise_sources() -> dict[tuple[float, int], Image.Image]:
+    """Build compact global lattices once; PIL samples them in native code."""
+
+    result: dict[tuple[float, int], Image.Image] = {}
+    for cell_size, _, seed in MICRORELIEF_OCTAVES:
+        width = math.ceil(SOURCE_W / cell_size) + 2
+        height = math.ceil(SOURCE_H / cell_size) + 2
+        rng = np.random.default_rng(seed)
+        lattice = rng.integers(0, 256, (height, width), dtype=np.uint8)
+        result[(cell_size, seed)] = Image.fromarray(lattice, "L")
+    return result
+
+
+@functools.lru_cache(maxsize=1)
+def mordor_runtime_walls() -> tuple[tuple[str, np.ndarray, float], ...]:
+    projection = json.loads(PROJECTION_CONTROL.read_text(encoding="utf-8"))
+    ridges = {ridge["key"]: ridge for ridge in projection["ridges"]}
+    result: list[tuple[str, np.ndarray, float]] = []
+    for key, phase in MORDOR_RUNTIME_WALL_PHASES:
+        ridge = ridges.get(key)
+        if ridge is None:
+            raise ValueError(f"projection lacks source-pinned Mordor wall {key}")
+        result.append(
+            (
+                key,
+                np.asarray(
+                    [
+                        (float(x) * (SOURCE_W - 1), float(y) * (SOURCE_H - 1))
+                        for x, y in ridge["points"]
+                    ],
+                    dtype=np.float32,
+                ),
+                phase,
+            )
+        )
+    return tuple(result)
+
+
+def mordor_wall_serration(
+    result: np.ndarray,
+    *,
+    sample_x: np.ndarray,
+    sample_y: np.ndarray,
+) -> np.ndarray:
+    """Break Mordor's exact range axes into an irregular chain of summits.
+
+    The generic native-cache field gives mountain faces convincing small-scale
+    texture, but live v60-v62 evidence showed that the long Ered Lithui crest
+    still presents a level silhouette.  Measure distance and cumulative arc
+    length only against the two audited wall polylines, then vary height along
+    those same centerlines.  A broad guard around the direct Morannon marker
+    preserves its low saddle and the two short source-reconciliation arms.
+    """
+
+    # Nearly every runtime tile is outside Mordor.  Reject those before
+    # allocating a 132x132 coordinate grid or evaluating line segments.
+    margin = 420.0
+    left = 0.590 * (SOURCE_W - 1) - margin
+    right = 0.748 * (SOURCE_W - 1) + margin
+    top = 0.500 * (SOURCE_H - 1) - margin
+    bottom = 0.710 * (SOURCE_H - 1) + margin
+    if (
+        float(sample_x[-1]) < left
+        or float(sample_x[0]) > right
+        or float(sample_y[-1]) < top
+        or float(sample_y[0]) > bottom
+    ):
+        return result
+
+    grid_x = sample_x[None, :]
+    grid_y = sample_y[:, None]
+    wall_addition = np.zeros(result.shape, dtype=np.float32)
+    wall_trough = np.zeros(result.shape, dtype=np.float32)
+
+    for _, points, phase in mordor_runtime_walls():
+        segment_vectors = points[1:] - points[:-1]
+        segment_lengths = np.hypot(
+            segment_vectors[:, 0], segment_vectors[:, 1]
+        )
+        cumulative = np.concatenate(
+            (np.zeros(1, dtype=np.float32), np.cumsum(segment_lengths)[:-1])
+        )
+        closest_distance_sq = np.full(result.shape, np.inf, dtype=np.float32)
+        closest_arc = np.zeros(result.shape, dtype=np.float32)
+        for start, vector, length, arc_start in zip(
+            points[:-1],
+            segment_vectors,
+            segment_lengths,
+            cumulative,
+            strict=True,
+        ):
+            length_sq = max(float(length * length), 1.0)
+            relative_x = grid_x - float(start[0])
+            relative_y = grid_y - float(start[1])
+            along = np.clip(
+                (relative_x * float(vector[0]) + relative_y * float(vector[1]))
+                / length_sq,
+                0.0,
+                1.0,
+            )
+            nearest_x = float(start[0]) + along * float(vector[0])
+            nearest_y = float(start[1]) + along * float(vector[1])
+            distance_sq = np.square(grid_x - nearest_x) + np.square(grid_y - nearest_y)
+            nearer = distance_sq < closest_distance_sq
+            closest_distance_sq = np.where(nearer, distance_sq, closest_distance_sq)
+            closest_arc = np.where(
+                nearer,
+                float(arc_start) + along * float(length),
+                closest_arc,
+            )
+
+        distance = np.sqrt(closest_distance_sq)
+        # Overlapping incommensurate bands make irregular peak groups rather
+        # than evenly spaced beads.  The 0.22 floor is removed below so long
+        # troughs remain visibly lower than their neighbouring summits.
+        longitudinal = (
+            0.50
+            + 0.24 * np.sin(closest_arc / 183.0 + phase)
+            + 0.16 * np.sin(closest_arc / 79.0 + phase * 1.71)
+            + 0.10 * np.sin(closest_arc / 37.0 - phase * 0.63)
+        )
+        summit_chain = np.power(
+            np.clip((longitudinal - 0.22) / 0.78, 0.0, 1.0),
+            1.55,
+        )
+        crest = np.exp(-0.5 * np.square(distance / 82.0))
+        shoulder = np.exp(-0.5 * np.square(distance / 155.0))
+        np.maximum(
+            wall_addition,
+            crest * summit_chain * 18_000.0,
+            out=wall_addition,
+        )
+        np.maximum(
+            wall_trough,
+            shoulder
+            * np.power(np.clip(0.40 - longitudinal, 0.0, 0.40) / 0.40, 1.25)
+            * 4_500.0,
+            out=wall_trough,
+        )
+
+    gate_x = MORANNON_RUNTIME_CENTER[0] * (SOURCE_W - 1)
+    gate_y = MORANNON_RUNTIME_CENTER[1] * (SOURCE_H - 1)
+    gate_distance = np.hypot(grid_x - gate_x, grid_y - gate_y)
+    gate_guard = np.clip((gate_distance - 210.0) / 300.0, 0.0, 1.0)
+    gate_guard = gate_guard * gate_guard * (3.0 - 2.0 * gate_guard)
+    authored_strength = np.clip((result - 17_000.0) / 12_000.0, 0.0, 1.0)
+    authored_strength = authored_strength * authored_strength * (
+        3.0 - 2.0 * authored_strength
+    )
+    wall_addition *= gate_guard * authored_strength
+    wall_trough *= gate_guard * authored_strength
+
+    # Preserve ordering without creating a hard 64.4k cap.  The rational fit
+    # retains a distinct height for every peak even where the existing massif
+    # is already high, while bounded troughs cut the formerly level skyline.
+    result = np.maximum(result - wall_trough, 0.0)
+    headroom = np.maximum(64_400.0 - result, 1.0)
+    fitted_addition = headroom * wall_addition / (
+        headroom * 0.62 + wall_addition
+    )
+    return result + fitted_addition
+
+
+def sculpted_height_tile(
+    base: np.ndarray,
+    *,
+    mip: int,
+    tile_x: int,
+    tile_y: int,
+) -> np.ndarray:
+    """Add seamless native-cache relief only inside authored high terrain.
+
+    The 8192-wide source remains the geography contract. This stage supplies
+    the sub-source folds that vanilla bakes into its 65536-wide terrain cache.
+    Detail fades naturally in coarser mips so distant LODs retain the authored
+    silhouette and close LODs gain irregular faces, gullies, and summit teeth.
+    """
+
+    if float(np.max(base)) <= 15_000.0:
+        return base
+
+    virtual_step = float(2**mip)
+    virtual_x = float(tile_x * TILE_SIZE - BORDER_SIZE) * virtual_step
+    virtual_y = float(tile_y * TILE_SIZE - BORDER_SIZE) * virtual_step
+    rugged = np.zeros(base.shape, dtype=np.float32)
+    effective_weight_square = 0.0
+    noise_sources = microrelief_noise_sources()
+    for cell_size, weight, seed in MICRORELIEF_OCTAVES:
+        # Suppress frequencies smaller than four samples in this mip. This is
+        # a deterministic low-pass response, not a tile-local normalization,
+        # so adjacent tiles and LOD transitions cannot acquire seams.
+        lod_weight = min(1.0, cell_size / (virtual_step * 4.0))
+        effective_weight = weight * lod_weight
+        if effective_weight < 0.005:
+            continue
+        noise_tile = noise_sources[(cell_size, seed)].transform(
+            (STORED_TILE_SIZE, STORED_TILE_SIZE),
+            Image.Transform.AFFINE,
+            (
+                virtual_step / cell_size,
+                0.0,
+                virtual_x / cell_size,
+                0.0,
+                virtual_step / cell_size,
+                virtual_y / cell_size,
+            ),
+            resample=Image.Resampling.BILINEAR,
+            fillcolor=127,
+        )
+        rugged += (
+            np.asarray(noise_tile, dtype=np.float32) / 127.5 - 1.0
+        ) * effective_weight
+        effective_weight_square += effective_weight * effective_weight
+
+    if effective_weight_square <= 0.0:
+        return base
+    # Empirical global calibration of the lattice stack. Scaling by the
+    # effective octave norm keeps the response stable as fine octaves fade.
+    rugged /= max(
+        0.535
+        * math.sqrt(effective_weight_square)
+        / MICRORELIEF_WEIGHT_NORM,
+        1.0e-6,
+    )
+    folded = np.tanh(rugged * 0.82)
+    positive_teeth = np.power(
+        np.clip((rugged - 0.12) / 1.65, 0.0, 1.0),
+        1.50,
+    )
+    negative_teeth = 0.72 * np.power(
+        np.clip((-rugged - 0.18) / 1.65, 0.0, 1.0),
+        1.50,
+    )
+    # A one-sided crest response left whole source-backed arms smooth whenever
+    # their deterministic noise field happened to be negative. Both extrema
+    # now raise compact teeth; the calibrated subtraction preserves the global
+    # zero mean, so this changes morphology rather than inflating the ranges.
+    summit_teeth = np.maximum(positive_teeth, negative_teeth) - 0.257
+    detail = folded * 10_500.0 + summit_teeth * 30_000.0
+
+    # The normal dry datum is about 12.7k. Treating its harmless broad noise as
+    # mountain relief made a qualifying tile differ by one q64 step from an
+    # adjacent skipped lowland tile. Begin at the real foothill band instead;
+    # this makes ordinary ground bit-identical regardless of tile eligibility.
+    authored_relief = np.maximum(base - 15_000.0, 0.0)
+    strength = np.clip(authored_relief / 10_000.0, 0.0, 1.0)
+    strength = strength * strength * (3.0 - 2.0 * strength)
+    # The v53-v54 high-resolution folds sat on top of the full coarse range
+    # height, so the renderer still saw one broad high body. Vanilla instead
+    # keeps a lower connected massif beneath many native-cache summits. Lower
+    # only already-authored mountain relief here; the detail response then
+    # restores irregular peaks while its negative half opens real gullies.
+    mountain_body = base - authored_relief * strength * 0.42
+    # Fit positive relief continuously into the available headroom. A simple
+    # multiplier still allowed rare teeth to overshoot into the hard ceiling;
+    # this rational response stays strictly below it while retaining ordering
+    # between every summit sample. Negative gullies remain uncompressed.
+    positive_raw = np.maximum(detail, 0.0) * strength
+    headroom = np.maximum(64_400.0 - mountain_body, 1.0)
+    positive = headroom * positive_raw / (
+        headroom * 0.45 + positive_raw
+    )
+    negative = np.minimum(detail, 0.0) * strength
+    result = np.maximum(
+        mountain_body + positive + negative,
+        0.0,
+    )
+
+    # The 8192 source still retains two nearby responses around the direct
+    # Ardacraft Erebor marker: a tiny canonical tooth and a larger painted
+    # mound. At close zoom their magnified overlap produced v54's rejected
+    # U-shaped mesa. De-duplicate them at the renderer's native scale, then
+    # author one asymmetric cone. Ravenhill is about 466 virtual pixels away
+    # and therefore remains outside this bounded 400-pixel guard.
+    erebor_x = 0.599699 * (SOURCE_W - 1)
+    erebor_y = 0.137606 * (SOURCE_H - 1)
+    sample_x = virtual_x + np.arange(STORED_TILE_SIZE, dtype=np.float32) * virtual_step
+    sample_y = virtual_y + np.arange(STORED_TILE_SIZE, dtype=np.float32) * virtual_step
+    erebor_dx = sample_x[None, :] - erebor_x
+    erebor_dy = sample_y[:, None] - erebor_y
+    erebor_distance = np.hypot(erebor_dx, erebor_dy)
+    if float(np.min(erebor_distance)) < 400.0:
+        feather = np.clip((erebor_distance - 250.0) / 150.0, 0.0, 1.0)
+        feather = feather * feather * (3.0 - 2.0 * feather)
+        flatten_weight = 1.0 - feather
+        datum = 12_743.0
+        result = result * (1.0 - flatten_weight) + datum * flatten_weight
+        angle = np.arctan2(erebor_dy, erebor_dx)
+        irregular_distance = erebor_distance * (
+            1.0
+            + 0.045 * np.sin(angle * 3.0 + 0.7)
+            + 0.020 * np.sin(angle * 7.0 - 0.4)
+        )
+        apron = np.power(
+            np.clip(1.0 - irregular_distance / 180.0, 0.0, 1.0),
+            2.20,
+        )
+        cone = np.power(
+            np.clip(1.0 - irregular_distance / 84.0, 0.0, 1.0),
+            1.48,
+        )
+        # Keep the single peak below the cache ceiling. v38's 70.7k target was
+        # clipped to 64.5k across several samples and visibly flattened the
+        # Lonely Mountain's crown.
+        erebor_target = (
+            datum
+            + apron * 5_000.0
+            + cone * 43_000.0
+            + cone * np.tanh(rugged * 0.90) * 2_200.0
+        )
+        result = np.maximum(result, erebor_target)
+    result = mordor_wall_serration(
+        result,
+        sample_x=sample_x,
+        sample_y=sample_y,
+    )
+    return np.clip(result, 0.0, 64_400.0)
 
 
 def resized_mask(
@@ -413,7 +781,9 @@ def physical_slope(height: np.ndarray) -> np.ndarray:
     return slope
 
 
-def ridge_material_weight(projection: dict) -> np.ndarray:
+def ridge_material_weight(
+    projection: dict,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     """Return organic source-crest exposure without location-cell geometry.
 
     Height remains the authority for physical relief. This companion field
@@ -424,6 +794,7 @@ def ridge_material_weight(projection: dict) -> np.ndarray:
     """
 
     result = np.zeros((MATERIAL_H, MATERIAL_W), dtype=np.float32)
+    severe_range = np.zeros((MATERIAL_H, MATERIAL_W), dtype=np.float32)
 
     def path_field(
         points: list[list[float]],
@@ -432,6 +803,8 @@ def ridge_material_weight(projection: dict) -> np.ndarray:
         width: int,
         strength: float,
         wander: float,
+        expose_severe_range: bool,
+        sharp_cross_section: bool,
     ) -> None:
         path = natural_path(
             points,
@@ -441,31 +814,54 @@ def ridge_material_weight(projection: dict) -> np.ndarray:
             amplitude=wander,
             spacing=0.003,
         )
-        body = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
-        ImageDraw.Draw(body).line(
-            path,
-            fill=255,
-            width=max(3, round(width * 2.15)),
-            joint="curve",
-        )
-        body = body.filter(
-            ImageFilter.GaussianBlur(radius=max(2, round(width * 0.72)))
-        )
-        spine = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
-        ImageDraw.Draw(spine).line(
-            path,
-            fill=255,
-            width=max(2, round(width * 0.58)),
-            joint="curve",
-        )
-        spine = spine.filter(
-            ImageFilter.GaussianBlur(radius=max(1, round(width * 0.20)))
-        )
-        field = np.maximum(
-            np.asarray(body, dtype=np.float32) * 0.62,
-            np.asarray(spine, dtype=np.float32),
-        )
+        if sharp_cross_section:
+            body = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+            ImageDraw.Draw(body).line(path, fill=255, width=1, joint="curve")
+            body_values = np.asarray(
+                body.filter(
+                    ImageFilter.GaussianBlur(radius=max(2, round(width * 0.32)))
+                ),
+                dtype=np.float32,
+            )
+            spine = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+            ImageDraw.Draw(spine).line(path, fill=255, width=1, joint="curve")
+            spine_values = np.asarray(
+                spine.filter(
+                    ImageFilter.GaussianBlur(radius=max(1, round(width * 0.075)))
+                ),
+                dtype=np.float32,
+            )
+            body_values *= 255.0 / max(float(body_values.max()), 1.0)
+            spine_values *= 255.0 / max(float(spine_values.max()), 1.0)
+            field = np.maximum(body_values * 0.30, spine_values)
+        else:
+            body = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+            ImageDraw.Draw(body).line(
+                path,
+                fill=255,
+                width=max(3, round(width * 1.25)),
+                joint="curve",
+            )
+            body = body.filter(
+                ImageFilter.GaussianBlur(radius=max(2, round(width * 0.38)))
+            )
+            spine = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+            ImageDraw.Draw(spine).line(
+                path,
+                fill=255,
+                width=max(2, round(width * 0.34)),
+                joint="curve",
+            )
+            spine = spine.filter(
+                ImageFilter.GaussianBlur(radius=max(1, round(width * 0.10)))
+            )
+            field = np.maximum(
+                np.asarray(body, dtype=np.float32) * 0.35,
+                np.asarray(spine, dtype=np.float32),
+            )
         np.maximum(result, field / 255.0 * strength, out=result)
+        if expose_severe_range:
+            np.maximum(severe_range, field / 255.0 * strength, out=severe_range)
 
     for ridge in projection["ridges"]:
         width = max(3, round(float(ridge["width"]) * MATERIAL_H))
@@ -477,6 +873,8 @@ def ridge_material_weight(projection: dict) -> np.ndarray:
             width=width,
             strength=strength,
             wander=wander,
+            expose_severe_range=False,
+            sharp_cross_section=bool(ridge.get("sharp_cross_section", False)),
         )
         for branch_index, branch in enumerate(ridge.get("branches", [])):
             path_field(
@@ -485,24 +883,40 @@ def ridge_material_weight(projection: dict) -> np.ndarray:
                 width=max(3, round(width * 0.72)),
                 strength=strength * 0.72,
                 wander=wander,
+                expose_severe_range=bool(
+                    ridge.get("source_audited_branches", False)
+                ),
+                sharp_cross_section=False,
             )
 
     for peak in projection.get("named_peaks", []):
+        if peak["key"] not in {"erebor_peak", "mount_gundabad"}:
+            continue
         x = round(float(peak["center"][0]) * (MATERIAL_W - 1))
         y = round(float(peak["center"][1]) * (MATERIAL_H - 1))
-        radius = max(3, round(float(peak["radius"]) * MATERIAL_H))
+        radius_scale = (
+            0.72
+            if peak["key"] == "erebor_peak"
+            else 0.34
+            if peak["key"] == "mount_gundabad"
+            else 1.0
+        )
+        radius = max(
+            3,
+            round(float(peak["radius"]) * MATERIAL_H * radius_scale),
+        )
         image = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
         ImageDraw.Draw(image).ellipse(
             (
-                x - round(radius * 1.45),
-                y - round(radius * 1.45),
-                x + round(radius * 1.45),
-                y + round(radius * 1.45),
+                x - round(radius * 0.92),
+                y - round(radius * 0.92),
+                x + round(radius * 0.92),
+                y + round(radius * 0.92),
             ),
             fill=255,
         )
         image = image.filter(
-            ImageFilter.GaussianBlur(radius=max(2, round(radius * 0.62)))
+            ImageFilter.GaussianBlur(radius=max(1, round(radius * 0.28)))
         )
         field = (
             np.asarray(image, dtype=np.float32)
@@ -510,8 +924,36 @@ def ridge_material_weight(projection: dict) -> np.ndarray:
             * float(peak["strength"])
         )
         np.maximum(result, field, out=result)
+        if float(peak["strength"]) >= 0.80:
+            np.maximum(severe_range, field, out=severe_range)
 
-    return np.clip(result, 0.0, 1.0)
+    # Paint exposed rock from the exact Ardacraft numeric crest authority.
+    # The former material field depended mainly on broad hand axes and turned
+    # narrow ranges into grey slabs disconnected from their source arêtes.
+    # A convex response keeps foothills quiet while retaining every jagged
+    # high branch. The same source response makes all major northern and
+    # southern ranges eligible for the severe-height transition without
+    # inventing exposure outside the audited footprint.
+    source_relief = source_relief_field(
+        projection, (MATERIAL_W, MATERIAL_H)
+    )
+    source_crest = np.clip(
+        np.power(source_relief, 3.65) * 1.16,
+        0.0,
+        1.0,
+    )
+    np.maximum(result, source_crest, out=result)
+    np.maximum(
+        severe_range,
+        np.clip(np.power(source_relief, 3.05) * 1.10, 0.0, 1.0),
+        out=severe_range,
+    )
+
+    return (
+        np.clip(result, 0.0, 1.0),
+        np.clip(severe_range, 0.0, 1.0),
+        source_relief,
+    )
 
 
 def river_material_mask(projection: dict) -> np.ndarray:
@@ -638,9 +1080,13 @@ def render_material_source() -> np.ndarray:
     ash_active = (ash_weight > 0.025) & land
     ash_earth = ash_active & (ash_score < 112.0)
     ash_dark = ash_active & (
-        (ash_score >= 112.0) & (ash_score < 205.0)
+        (ash_score >= 112.0) & (ash_score < 286.0)
     )
-    ash_rock = ash_active & (ash_score >= 205.0)
+    # Keep Mordor's basin basaltic. The former 205 cutoff promoted most of the
+    # fully weighted ash interior to grey rock, so the basin read as one giant
+    # slab while the true enclosing ranges disappeared into it. Sparse ground
+    # rock remains organic; physical highland exposure below owns the crests.
+    ash_rock = ash_active & (ash_score >= 286.0)
     material[ash_earth] = MATERIAL_EARTH | MATERIAL_DARK_ROCK
     material[ash_dark] = MATERIAL_DARK_ROCK
     material[ash_rock] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
@@ -700,7 +1146,11 @@ def render_material_source() -> np.ndarray:
         0.0,
         1.0,
     )
-    crest_weight = ridge_material_weight(projection)
+    (
+        crest_weight,
+        severe_range_weight,
+        native_source_relief,
+    ) = ridge_material_weight(projection)
     organic_weight = (selector - 127.5) / 127.5
     exposure = (
         crest_weight * 0.52
@@ -708,38 +1158,131 @@ def render_material_source() -> np.ndarray:
         + slope_weight * 0.34
         + organic_weight * 0.10
     )
-    highland = land & (height >= 30_000) & (ash_weight < 0.62)
+    highland = land & (height >= 27_000) & (ash_weight < 0.62)
+    # Source-reviewed severe ranges receive earlier rock transitions only on
+    # their exact reconstructed crest response. The former hand-axis severe
+    # field was wider than the physical reconstructed ranges and recreated grey slabs
+    # after their height shelves had been removed. Pass floors remain below
+    # the highland gate and therefore stay traversable/green.
+    severe_range = highland & (severe_range_weight >= 0.50)
     highland_grass_earth = highland & (height < 38_000)
     highland_earth = highland & (height >= 38_000)
+    source_dark = (
+        highland & (height >= 33_000) & (native_source_relief >= 0.62)
+    )
+    source_blend = (
+        highland & (height >= 43_000) & (native_source_relief >= 0.74)
+    )
+    source_rock = (
+        highland & (height >= 50_000) & (native_source_relief >= 0.84)
+    )
     highland_dark = (
         highland & (height >= 43_000) & (exposure >= 0.66)
-    )
+    ) | (severe_range & (height >= 38_000) & (exposure >= 0.46)) | source_dark
     highland_blend = (
         highland & (height >= 49_000) & (exposure >= 0.78)
-    )
+    ) | (severe_range & (height >= 43_000) & (exposure >= 0.56)) | source_blend
     highland_rock = (
         highland & (height >= 54_000) & (exposure >= 0.88)
-    )
+    ) | (severe_range & (height >= 46_000) & (exposure >= 0.62)) | source_rock
     material[highland_grass_earth] = MATERIAL_GRASS | MATERIAL_EARTH
     material[highland_earth] = MATERIAL_EARTH
     material[highland_dark] = MATERIAL_EARTH | MATERIAL_DARK_ROCK
     material[highland_blend] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
     material[highland_rock] = MATERIAL_ROCK
 
+    # Gundabad's v46 height is deliberately contracted into a compact chain
+    # crown. Paint that *physical* body at lower thresholds than ordinary long
+    # ranges so it does not return to either v44's green bowl or v45's regional
+    # snow carpet. The neighbourhood only selects the canonical theatre; the
+    # 32k/35k height contours own the irregular visible boundary.
+    surface_y, surface_x = np.ogrid[:MATERIAL_H, :MATERIAL_W]
+    gundabad = next(
+        item for item in projection.get("named_peaks", [])
+        if item["key"] == "mount_gundabad"
+    )
+    gundabad_dx = (
+        surface_x.astype(np.float32)
+        - float(gundabad["center"][0]) * (MATERIAL_W - 1)
+    )
+    gundabad_dy = (
+        surface_y.astype(np.float32)
+        - float(gundabad["center"][1]) * (MATERIAL_H - 1)
+    )
+    gundabad_neighbourhood = (
+        np.hypot(gundabad_dx, gundabad_dy) <= MATERIAL_H * 0.014
+    )
+    gundabad_exposed = (
+        land & gundabad_neighbourhood & (height >= 32_000)
+    )
+    gundabad_rock = gundabad_exposed & (height >= 35_000)
+    material[gundabad_exposed] = MATERIAL_EARTH | MATERIAL_DARK_ROCK
+    material[gundabad_rock] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
+
     # Snow is the most selective crest material. It follows source-aligned
     # exposure plus actual altitude rather than a mountain-class footprint.
     crest = land & (ash_weight < 0.62)
     rock_snow = crest & (
-        (height >= 58_000) & (exposure >= 0.84)
+        (
+            (height >= 58_000)
+            & (exposure >= 0.84)
+            & (native_source_relief >= 0.88)
+        )
+        | (severe_range & (height >= 54_000) & (exposure >= 0.72))
     )
-    snow = crest & (height >= 62_000) & (exposure >= 0.91)
+    snow = crest & (
+        (
+            (height >= 62_000)
+            & (exposure >= 0.91)
+            & (native_source_relief >= 0.95)
+        )
+        | (severe_range & (height >= 59_000) & (exposure >= 0.82))
+    )
     material[rock_snow] = MATERIAL_ROCK | MATERIAL_SNOW
     material[snow] = MATERIAL_SNOW
 
-    volcanic_highland = (
-        land & (height >= 30_000) & (ash_weight >= 0.62)
+    volcanic_highland = land & (height >= 30_000) & (ash_weight >= 0.62)
+    volcanic_exposed = volcanic_highland & (
+        (height >= 42_000) & (exposure >= 0.58)
+    )
+    volcanic_rock = volcanic_highland & (
+        (height >= 52_000) & (exposure >= 0.74)
     )
     material[volcanic_highland] = MATERIAL_DARK_ROCK
+    material[volcanic_exposed] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
+    material[volcanic_rock] = MATERIAL_ROCK
+
+    # Morannon's canonical point is the low Cirith Gorgor saddle, so a broad
+    # altitude-only paint either misses its encircling walls or incorrectly
+    # rocks over the pass floor. Bind the visible wall transition to all three
+    # available authorities: proximity to the audited gate, exact source
+    # relief, and physical height. The 23k/30k steps expose the enclosing arms
+    # while the 12.7k saddle remains untouched and traversable.
+    morannon = next(
+        item for item in projection["passes"] if item["key"] == "morannon"
+    )
+    material_y, material_x = np.ogrid[:MATERIAL_H, :MATERIAL_W]
+    morannon_dx = (
+        material_x.astype(np.float32)
+        - float(morannon["center"][0]) * (MATERIAL_W - 1)
+    )
+    morannon_dy = (
+        material_y.astype(np.float32)
+        - float(morannon["center"][1]) * (MATERIAL_H - 1)
+    )
+    morannon_neighbourhood = (
+        np.hypot(morannon_dx, morannon_dy) <= MATERIAL_H * 0.040
+    )
+    morannon_source_wall = severe_range_weight >= 0.10
+    morannon_exposed = (
+        land
+        & morannon_neighbourhood
+        & morannon_source_wall
+        & (height >= 23_000)
+    )
+    morannon_rock = morannon_exposed & (height >= 30_000)
+    material[morannon_exposed] = MATERIAL_EARTH | MATERIAL_DARK_ROCK
+    material[morannon_rock] = MATERIAL_DARK_ROCK | MATERIAL_ROCK
 
     # Major coasts receive EU5's complete shore channel stack. Source lakes
     # smaller than one runtime location remain physical land because engine-
@@ -796,11 +1339,108 @@ def render_material_source() -> np.ndarray:
         raise AssertionError("material paint leaves land without a variation channel")
     if np.any(material[water & ~outer_coast] != 0):
         raise AssertionError("material paint leaks into open water")
+
+    # Bind renderer material to the same compact source geometry as the height
+    # contracts.  A minimum alone rewarded the rejected v34-v36 solution: it
+    # could pass by painting an ever larger grey slab.  These bounded windows
+    # require readable exposed crests while refusing range-sized caps.  The
+    # Morannon window is intentionally mostly dark rock because it overlaps the
+    # source-authored volcanic biome. Its grey-rock ceiling allows the two
+    # audited Cirith Gorgor hinge arms while the stricter total-exposure ceiling
+    # remains the anti-plateau signal there.
+    material_contracts = {
+        "dunharrow": {
+            "center": (0.496751, 0.553026),
+            "radius": 0.018,
+            "minimum_exposed": 0.14,
+            "maximum_exposed": 0.38,
+            "minimum_rock": 0.045,
+            "maximum_rock": 0.24,
+        },
+        "morannon": {
+            "center": (0.609732, 0.529449),
+            "radius": 0.015,
+            "minimum_exposed": 0.06,
+            "maximum_exposed": 0.18,
+            # v68 removes the duplicated colour-derived body which v66-v67
+            # proved as a grey tabletop at Carchost. The pointed hinge is
+            # predominantly volcanic dark rock; retain a compact grey crest
+            # signal without rewarding the deleted slab's broad coverage.
+            "minimum_rock": 0.001,
+            "maximum_rock": 0.03,
+        },
+        "gundabad": {
+            "center": (0.502345, 0.102487),
+            "radius": 0.008,
+            "minimum_exposed": 0.24,
+            "maximum_exposed": 0.45,
+            "minimum_rock": 0.10,
+            "maximum_rock": 0.25,
+        },
+        "erebor": {
+            "center": (0.599699, 0.137606),
+            "radius": 0.008,
+            "minimum_exposed": 0.007,
+            "maximum_exposed": 0.16,
+            "minimum_rock": 0.004,
+            "maximum_rock": 0.10,
+        },
+    }
+    contract_failures: list[str] = []
+    contract_metrics: list[str] = []
+    for key, contract in material_contracts.items():
+        center_x = round(contract["center"][0] * (MATERIAL_W - 1))
+        center_y = round(contract["center"][1] * (MATERIAL_H - 1))
+        radius = max(2, round(contract["radius"] * MATERIAL_H))
+        left = max(0, center_x - radius)
+        right = min(MATERIAL_W, center_x + radius + 1)
+        top = max(0, center_y - radius)
+        bottom = min(MATERIAL_H, center_y + radius + 1)
+        local_y, local_x = np.ogrid[top:bottom, left:right]
+        radial = (
+            (local_x - center_x) ** 2 + (local_y - center_y) ** 2
+        ) <= radius**2
+        samples = material[top:bottom, left:right][radial]
+        dark = (samples & MATERIAL_DARK_ROCK) != 0
+        rock = (samples & MATERIAL_ROCK) != 0
+        snow = (samples & MATERIAL_SNOW) != 0
+        exposed_fraction = float((dark | rock | snow).mean())
+        rock_fraction = float(rock.mean())
+        contract_metrics.append(
+            f"{key}=exposed:{exposed_fraction:.6f},rock:{rock_fraction:.6f}"
+        )
+        if exposed_fraction < contract["minimum_exposed"]:
+            contract_failures.append(
+                f"{key} mountain material remains too green: "
+                f"{exposed_fraction:.6f} < {contract['minimum_exposed']:.6f}"
+            )
+        if exposed_fraction > contract["maximum_exposed"]:
+            contract_failures.append(
+                f"{key} mountain material regressed to a broad cap: "
+                f"{exposed_fraction:.6f} > {contract['maximum_exposed']:.6f}"
+            )
+        if rock_fraction < contract["minimum_rock"]:
+            contract_failures.append(
+                f"{key} lacks exposed rock on its high flanks: "
+                f"{rock_fraction:.6f} < {contract['minimum_rock']:.6f}"
+            )
+        if rock_fraction > contract["maximum_rock"]:
+            contract_failures.append(
+                f"{key} exposed rock regressed to a broad slab: "
+                f"{rock_fraction:.6f} > {contract['maximum_rock']:.6f}"
+            )
+    if contract_failures:
+        raise AssertionError(
+            "; ".join(contract_failures)
+            + "; actual "
+            + ", ".join(contract_metrics)
+        )
     return material
 
 
 def transformed_material_tile(
     source: Image.Image,
+    height_source: Image.Image,
     mip: int,
     tile_x: int,
     tile_y: int,
@@ -815,7 +1455,62 @@ def transformed_material_tile(
         resample=Image.Resampling.NEAREST,
         fillcolor=0,
     )
-    return np.asarray(tile, dtype=np.uint16)
+    material = np.asarray(tile, dtype=np.uint16).copy()
+    # Vanilla's material cache, like its height cache, contains native virtual-
+    # texture detail absent from the coarse 8192-wide source. Keep every
+    # authored material logic, but let the physical cache relief select
+    # connected exposed faces at close and medium LOD. Height and slope are
+    # sufficient authorities even where the coarse material source was green;
+    # their thresholds cannot paint an ordinary lowland or source gap as a
+    # mountain.
+    if mip > 3:
+        return material
+
+    height = transformed_height_tile(
+        height_source,
+        mip,
+        tile_x,
+        tile_y,
+    ).astype(np.float32)
+    step = float(2**mip)
+    rise_x = np.abs(height[:, 2:] - height[:, :-2]) / (2.0 * step)
+    rise_y = np.abs(height[2:, :] - height[:-2, :]) / (2.0 * step)
+    slope = np.zeros(height.shape, dtype=np.float32)
+    slope[:, 1:-1] = np.maximum(slope[:, 1:-1], rise_x)
+    slope[1:-1, :] = np.maximum(slope[1:-1, :], rise_y)
+
+    dark_support = (
+        material & (MATERIAL_DARK_ROCK | MATERIAL_ROCK | MATERIAL_SNOW)
+    ) != 0
+    rock_support = (material & (MATERIAL_ROCK | MATERIAL_SNOW)) != 0
+    snow_support = (material & MATERIAL_SNOW) != 0
+    # Physical height is itself the audited range envelope. Requiring the
+    # coarse material bit again left more than 97% of Dunharrow green even on
+    # steep faces. Let physical high terrain expose dark rock directly, then
+    # reserve lighter rock/snow for the stronger face and source predicates.
+    dark_face = (height >= 20_000.0) & (
+        (slope >= 90.0) | (height >= 28_000.0)
+    )
+    volcanic_only = dark_support & ~rock_support
+    rock_face = (height >= 26_000.0) & (
+        (slope >= 120.0) | (height >= 34_000.0)
+    ) & (~volcanic_only | rock_support)
+    snow_face = snow_support & (height >= 39_000.0) & (
+        (slope >= 155.0) | (height >= 48_000.0)
+    )
+    snow_core = snow_support & (height >= 52_000.0)
+    fixed_channels = material & np.uint16(0x03FF)
+    material[dark_face] = (
+        fixed_channels[dark_face] | MATERIAL_EARTH | MATERIAL_DARK_ROCK
+    )
+    material[rock_face] = (
+        fixed_channels[rock_face] | MATERIAL_DARK_ROCK | MATERIAL_ROCK
+    )
+    material[snow_face] = (
+        fixed_channels[snow_face] | MATERIAL_ROCK | MATERIAL_SNOW
+    )
+    material[snow_core] = fixed_channels[snow_core] | MATERIAL_SNOW
+    return material
 
 
 def material_preview(values: np.ndarray) -> Image.Image:
@@ -912,28 +1607,36 @@ def write_material_layer() -> dict[str, int | float]:
     material_preview(values).save(MATERIAL_PREVIEW_OUT, compress_level=9)
 
     source = Image.fromarray(values)
-    with temp_bin.open("wb") as output:
-        for mip, tile_x, tile_y in engine_tile_sequence():
-            payload = png_bytes(
-                transformed_material_tile(source, mip, tile_x, tile_y)
-            )
-            key = hashlib.blake2b(payload, digest_size=16).digest()
-            known = dedup.get(key)
-            if known is None:
-                offset = output.tell()
-                output.write(payload)
-                known = (offset, len(payload))
-                dedup[key] = known
-                unique_tiles += 1
-            entries.append(known)
-            written_tiles += 1
-            if written_tiles % 8_192 == 0:
-                print(
-                    "gen_terrain_cache: materials "
-                    f"{written_tiles:,}/{total_tiles:,} tiles, "
-                    f"{unique_tiles:,} unique",
-                    flush=True,
+    with Image.open(HEIGHT_SOURCE) as opened_height:
+        height_source = opened_height.convert("F")
+        with temp_bin.open("wb") as output:
+            for mip, tile_x, tile_y in engine_tile_sequence():
+                payload = png_bytes(
+                    transformed_material_tile(
+                        source,
+                        height_source,
+                        mip,
+                        tile_x,
+                        tile_y,
+                    )
                 )
+                key = hashlib.blake2b(payload, digest_size=16).digest()
+                known = dedup.get(key)
+                if known is None:
+                    offset = output.tell()
+                    output.write(payload)
+                    known = (offset, len(payload))
+                    dedup[key] = known
+                    unique_tiles += 1
+                entries.append(known)
+                written_tiles += 1
+                if written_tiles % 8_192 == 0:
+                    print(
+                        "gen_terrain_cache: materials "
+                        f"{written_tiles:,}/{total_tiles:,} tiles, "
+                        f"{unique_tiles:,} unique",
+                        flush=True,
+                    )
     temp_bin.replace(bin_path)
     write_info(info_path, entries, scalar_fields=True)
     print(

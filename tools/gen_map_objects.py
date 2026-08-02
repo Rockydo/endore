@@ -34,7 +34,7 @@ from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 9
+GENERATOR_VERSION = 10
 
 
 @dataclass(frozen=True)
@@ -53,13 +53,17 @@ FAMILIES = (
         (3,),
         1.0,
         (
-            "vegetation_diorama_tree_single_mesh",
-            "vegetation_diorama_tree_single1_mesh",
+            # Installed full-canopy, light-trunk oceanic meshes are the
+            # closest retail analogue for Lothlórien's birch-dominant read.
+            # Variant assignment below reserves these two for that source
+            # forest; no new mesh or texture asset is invented.
+            "environment_oceanic_wt_tree_01_mesh",
+            "environment_oceanic_wt_tree_02_mesh",
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (240_337, 119_797, 119_286),
-        (0.72, 0.92),
+        (300_421, 209_645, 208_750),
+        (0.765, 0.935),
     ),
     Family(
         "woods",
@@ -71,8 +75,8 @@ FAMILIES = (
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (88_904, 44_818, 47_454),
-        (0.68, 0.88),
+        (111_130, 78_432, 83_044),
+        (0.70, 0.92),
     ),
     Family(
         "pine",
@@ -84,38 +88,35 @@ FAMILIES = (
             "vegetation_diorama_arctic_tree3_mesh",
             "vegetation_diorama_arctic_tree4_mesh",
         ),
-        (691_244, 345_495, 341_310),
-        (0.70, 0.86),
+        (864_055, 604_616, 597_292),
+        (0.72, 0.86),
     ),
 )
 LODS = ("high", "medium", "low")
-# Twenty percent of the installed per-family/LOD population remains nearly
-# five times denser than the rejected 420k proof and preserves every retail
-# ratio. The 4.08m set contributed to a 32.4 GB fresh-game private allocation
-# when combined with the 12,104-cell political tree. This changes only derived
-# 3D object density; biome/forest controls and gameplay vegetation assignments
-# remain full resolution, with canonical-forest high-detail floors retained.
-EXPECTED_RECORDS = 2_038_645
-FOREST_ZONE_MINIMUM_HIGH_DETAIL = {
-    "fangorn": 50_000,
-    # Source-area-scaled floors: Old Forest is compact, while Ithilien is a
-    # collection of narrow woodland strips rather than one broad polygon.
-    "old_forest": 2_000,
-    "lothlorien": 15_000,
-    "ithilien": 100,
+# The release-safe 6,004-location topology leaves materially more headroom
+# than the rejected 12,104-location/4.08m-object pair. Use a bounded 3.06m
+# vegetation budget: high detail rises 25%, while medium/low rise 75% so named
+# forests no longer collapse as the camera crosses an LOD boundary. This is
+# still only 30% of the installed transform population and remains far below
+# the rejected pair's object count.
+EXPECTED_RECORDS = 3_057_385
+FOREST_ZONE_MINIMUM_DETAIL = {
+    # Floors are checked independently for every renderer LOD. They are
+    # tightened after generation from the deterministic zone census below.
+    "fangorn": {"high": 50_000, "medium": 25_000, "low": 25_000},
+    "old_forest": {"high": 8_000, "medium": 8_000, "low": 8_000},
+    "lothlorien": {"high": 25_000, "medium": 18_000, "low": 18_000},
+    "ithilien": {"high": 700, "medium": 500, "low": 500},
+    "mirkwood": {"high": 550_000, "medium": 420_000, "low": 420_000},
 }
-FOREST_ZONE_HIGH_DETAIL_BOOST = {
-    # Reallocate a small fraction of the fixed high-LOD budget into the
-    # canonical forest theatres. Global downscaling without this stratification
-    # passed total-density checks while starving compact/narrow source zones.
-    "fangorn": 5.0,
-    "old_forest": 5.0,
-    "lothlorien": 4.0,
-    # Ithilien is 17 narrow source components beside the Mordor mountain
-    # biome. A modest stochastic boost ceased to protect them once the exact
-    # moor/upland controls redistributed eligible cells. Reserve their tiny
-    # share by weight inside the unchanged global high-LOD budget.
-    "ithilien": 600.0,
+FOREST_ZONE_LOD_BOOST = {
+    # Apply named-forest protection at every LOD. The former high-only field
+    # made dense woods visibly evaporate at the normal regional camera.
+    "fangorn": {"high": 7.5, "medium": 7.5, "low": 7.5},
+    "old_forest": {"high": 7.5, "medium": 12.0, "low": 12.0},
+    "lothlorien": {"high": 12.0, "medium": 15.0, "low": 15.0},
+    "ithilien": {"high": 2.0, "medium": 2.0, "low": 2.0},
+    "mirkwood": {"high": 2.0, "medium": 2.5, "low": 2.5},
 }
 
 
@@ -173,13 +174,66 @@ def placement_field(
     # Preserve readable water and banks through dense woodland. Rivers are
     # already organic authored controls; this merely prevents millions of
     # valid tree instances from obscuring their terrain material at close zoom.
-    river_corridor = np.asarray(
-        Image.fromarray((rivers > 0).astype(np.uint8) * 255, "L").filter(
+    pre_river_suitability = suitability.copy()
+    major_pixels = rivers >= 192
+    minor_pixels = (rivers > 0) & (rivers < 192)
+    major_corridor = np.asarray(
+        Image.fromarray(major_pixels.astype(np.uint8) * 255, "L").filter(
             ImageFilter.MaxFilter(15)
         ),
         dtype=np.uint8,
     ) > 0
+    minor_corridor = np.asarray(
+        Image.fromarray(minor_pixels.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.MaxFilter(5)
+        ),
+        dtype=np.uint8,
+    ) > 0
+    river_corridor = major_corridor | minor_corridor
     suitability[river_corridor] = 0.0
+    # A seven-pixel blanket clearance consumed a disproportionate share of
+    # narrow canonical forests. Preserve a smaller three-pixel bank corridor
+    # inside the large dense woods, and only the authored channel itself in
+    # Ithilien's river-following strips. The water remains continuously clear
+    # while the canopy no longer vanishes from both sides of it.
+    dense_named = np.zeros((CONTROL_H, CONTROL_W), dtype=bool)
+    for key in ("fangorn", "old_forest", "lothlorien", "mirkwood"):
+        dense_named |= named_forest_mask(key)
+    narrow_major = np.asarray(
+        Image.fromarray(major_pixels.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.MaxFilter(7)
+        ),
+        dtype=np.uint8,
+    ) > 0
+    narrow_minor = np.asarray(
+        Image.fromarray(minor_pixels.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.MaxFilter(3)
+        ),
+        dtype=np.uint8,
+    ) > 0
+    dense_restore = dense_named & ~(narrow_major | narrow_minor)
+    suitability[dense_restore] = pre_river_suitability[dense_restore]
+    ithilien_restore = named_forest_mask("ithilien") & (rivers == 0)
+    suitability[ithilien_restore] = pre_river_suitability[ithilien_restore]
+    # The Gaussian placement field is useful for porous natural margins, but
+    # it attenuates very narrow source polygons almost to zero. Guarantee a
+    # continuous interior suitability floor only where the authored biome is
+    # already eligible for this family. Rare deterministic glades and the
+    # narrowed river corridors remain excluded.
+    dense_interior = dense_named & core & (glade_values >= 14)
+    dense_interior &= ~(narrow_major | narrow_minor)
+    suitability[dense_interior] = np.maximum(suitability[dense_interior], 0.62)
+    ithilien_interior = ithilien_restore & core & (glade_values >= 14)
+    suitability[ithilien_interior] = np.maximum(
+        suitability[ithilien_interior],
+        0.45,
+    )
+    if family.key == "pine":
+        # Lothlórien's renderer identity is a dense light-trunk deciduous wood,
+        # not the generic dense-forest pine mixture used across Mirkwood. The
+        # exact source boundary remains unchanged; only species eligibility is
+        # specialized inside it.
+        suitability[named_forest_mask("lothlorien")] = 0.0
     suitability[~land] = 0.0
     suitability[suitability < 0.025] = 0.0
     return suitability
@@ -197,20 +251,16 @@ def eligible_cells(
     return cells, suitability
 
 
-@lru_cache(maxsize=1)
-def high_detail_boost_field() -> np.ndarray:
-    """Return named-source-zone weights for the fixed high-LOD budget."""
-
+@lru_cache(maxsize=None)
+def named_forest_mask(key: str) -> np.ndarray:
+    """Return one exact naturalized source-forest mask on physical land."""
     projection = load_projection()
     land = np.asarray(
         land_mask(projection, (CONTROL_W, CONTROL_H)),
         dtype=np.uint8,
     ) > 0
-    result = np.ones((CONTROL_H, CONTROL_W), dtype=np.float32)
     for zone in projection["biome_zones"]:
-        key = str(zone["key"])
-        boost = FOREST_ZONE_HIGH_DETAIL_BOOST.get(key)
-        if boost is None:
+        if str(zone["key"]) != key:
             continue
         mask = Image.new("L", (CONTROL_W, CONTROL_H), 0)
         draw_shape(
@@ -222,7 +272,20 @@ def high_detail_boost_field() -> np.ndarray:
             key=f"biome:{key}",
         )
         mask = naturalize_forest_mask(mask, key=key)
-        active = (np.asarray(mask, dtype=np.uint8) > 0) & land
+        return (np.asarray(mask, dtype=np.uint8) > 0) & land
+    raise ValueError(f"missing named forest zone {key!r}")
+
+
+@lru_cache(maxsize=3)
+def detail_boost_field(lod: str) -> np.ndarray:
+    """Return named-source-zone weights for one renderer LOD."""
+
+    if lod not in LODS:
+        raise ValueError(f"unsupported vegetation LOD {lod!r}")
+    result = np.ones((CONTROL_H, CONTROL_W), dtype=np.float32)
+    for key, lod_weights in FOREST_ZONE_LOD_BOOST.items():
+        boost = lod_weights[lod]
+        active = named_forest_mask(key)
         result[active] = np.maximum(result[active], boost)
     return result
 
@@ -278,9 +341,8 @@ def transforms(
         0.35,
         1.0,
     )
-    if lod == "high":
-        boost = high_detail_boost_field()
-        weights *= boost[cells[:, 0], cells[:, 1]]
+    boost = detail_boost_field(lod)
+    weights *= boost[cells[:, 0], cells[:, 1]]
     choices = rng.choice(len(cells), size=count, replace=True, p=weights / weights.sum())
     selected = cells[choices]
     # Random position inside its authored control cell; source Y is inverted
@@ -290,6 +352,15 @@ def transforms(
     yaw = rng.uniform(0.0, 2.0 * math.pi, count)
     scale = rng.uniform(family.scale[0], family.scale[1], count)
     variants = rng.integers(0, len(family.meshes), count)
+    if family.key == "forest":
+        lothlorien = named_forest_mask("lothlorien")[selected[:, 0], selected[:, 1]]
+        # Reserve the two installed light-trunk full-canopy variants for
+        # Lothlórien and the two retail billboard variants for other deciduous
+        # forests. This makes species identity spatial rather than a global
+        # random tint and preserves the four-object renderer ABI.
+        variants[lothlorien] = rng.integers(0, 2, int(lothlorien.sum()))
+        variants[~lothlorien] = rng.integers(2, 4, int((~lothlorien).sum()))
+        scale[lothlorien] = rng.uniform(0.88, 1.08, int(lothlorien.sum()))
     half = yaw * 0.5
     records = np.zeros((count, 10), dtype="<f4")
     records[:, 0] = x
@@ -322,52 +393,53 @@ def locality_metrics(data: bytes) -> tuple[float, float]:
     return float(np.median(consecutive)), float(np.median(spans))
 
 
-def high_detail_zone_counts(expected: dict[Path, bytes]) -> dict[str, int]:
-    """Count high-detail trees inside named authored woodland envelopes."""
+def detail_zone_counts(expected: dict[Path, bytes]) -> dict[str, dict[str, int]]:
+    """Count transforms in every protected source forest at every LOD."""
 
-    points: list[np.ndarray] = []
-    for path, data in expected.items():
-        if path.suffix != ".bin" or "_high_" not in path.name:
+    result: dict[str, dict[str, int]] = {
+        key: {} for key in FOREST_ZONE_MINIMUM_DETAIL
+    }
+    for lod in LODS:
+        points: list[np.ndarray] = []
+        for path, data in expected.items():
+            if path.suffix != ".bin" or f"_{lod}_" not in path.name:
+                continue
+            records = np.frombuffer(data, dtype="<f4").reshape(-1, 10)
+            points.append(records[:, (0, 2)])
+        if not points:
             continue
-        records = np.frombuffer(data, dtype="<f4").reshape(-1, 10)
-        points.append(records[:, (0, 2)])
-    if not points:
-        return {}
-    world_points = np.concatenate(points)
+        world_points = np.concatenate(points)
+        control_x = np.clip(
+            (world_points[:, 0] / WORLD_W * CONTROL_W).astype(np.int32),
+            0,
+            CONTROL_W - 1,
+        )
+        control_y = np.clip(
+            ((WORLD_H - world_points[:, 1]) / WORLD_H * CONTROL_H).astype(np.int32),
+            0,
+            CONTROL_H - 1,
+        )
+        for key in FOREST_ZONE_MINIMUM_DETAIL:
+            active = named_forest_mask(key)
+            result[key][lod] = int(active[control_y, control_x].sum())
+    return result
+
+
+def count_records_in_mask(data: bytes, mask: np.ndarray) -> int:
+    """Count one transform payload inside a control-resolution mask."""
+
+    records = np.frombuffer(data, dtype="<f4").reshape(-1, 10)
     control_x = np.clip(
-        (world_points[:, 0] / WORLD_W * CONTROL_W).astype(np.int32),
+        (records[:, 0] / WORLD_W * CONTROL_W).astype(np.int32),
         0,
         CONTROL_W - 1,
     )
     control_y = np.clip(
-        ((WORLD_H - world_points[:, 1]) / WORLD_H * CONTROL_H).astype(np.int32),
+        ((WORLD_H - records[:, 2]) / WORLD_H * CONTROL_H).astype(np.int32),
         0,
         CONTROL_H - 1,
     )
-
-    projection = load_projection()
-    land = np.asarray(
-        land_mask(projection, (CONTROL_W, CONTROL_H)),
-        dtype=np.uint8,
-    ) > 0
-    result: dict[str, int] = {}
-    for zone in projection["biome_zones"]:
-        key = str(zone["key"])
-        if key not in FOREST_ZONE_MINIMUM_HIGH_DETAIL:
-            continue
-        mask = Image.new("L", (CONTROL_W, CONTROL_H), 0)
-        draw_shape(
-            mask,
-            str(zone["shape"]),
-            zone["coords"],
-            (CONTROL_W, CONTROL_H),
-            255,
-            key=f"biome:{key}",
-        )
-        mask = naturalize_forest_mask(mask, key=key)
-        active = (np.asarray(mask, dtype=np.uint8) > 0) & land
-        result[key] = int(active[control_y, control_x].sum())
-    return result
+    return int(mask[control_y, control_x].sum())
 
 
 def definition_text(family: Family, lod: str) -> str:
@@ -479,13 +551,44 @@ def check() -> list[str]:
         failures.append(
             f"vegetation density regressed ({records:,} != {EXPECTED_RECORDS:,})"
         )
-    zone_counts = high_detail_zone_counts(expected)
-    for key, minimum in FOREST_ZONE_MINIMUM_HIGH_DETAIL.items():
-        count = zone_counts.get(key, 0)
-        if count < minimum:
+    zone_counts = detail_zone_counts(expected)
+    for key, lod_minimums in FOREST_ZONE_MINIMUM_DETAIL.items():
+        for lod, minimum in lod_minimums.items():
+            count = zone_counts.get(key, {}).get(lod, 0)
+            if count < minimum:
+                failures.append(
+                    f"{key} {lod}-detail vegetation regressed "
+                    f"({count:,} < {minimum:,})"
+                )
+    lothlorien = named_forest_mask("lothlorien")
+    for lod in LODS:
+        light_trunk = sum(
+            count_records_in_mask(
+                expected[OUT / f"forest_generator_{lod}_{variant}.bin"],
+                lothlorien,
+            )
+            for variant in (0, 1)
+        )
+        generic = sum(
+            count_records_in_mask(
+                expected[OUT / f"forest_generator_{lod}_{variant}.bin"],
+                lothlorien,
+            )
+            for variant in (2, 3)
+        )
+        pine = sum(
+            count_records_in_mask(
+                expected[OUT / f"pine_generator_{lod}_{variant}.bin"],
+                lothlorien,
+            )
+            for variant in range(4)
+        )
+        lothlorien_total = zone_counts["lothlorien"][lod]
+        if light_trunk != lothlorien_total or generic or pine:
             failures.append(
-                f"{key} high-detail vegetation regressed "
-                f"({count:,} < {minimum:,})"
+                f"lothlorien {lod} species contract regressed "
+                f"(light={light_trunk:,}, generic={generic:,}, pine={pine:,}, "
+                f"total={lothlorien_total:,})"
             )
     for path, data in expected.items():
         if path.suffix != ".bin":

@@ -1,0 +1,1169 @@
+{
+  "heightmap_shape": [
+    8192,
+    4096
+  ],
+  "installed_build_id": "24187685",
+  "live_evidence": "docs/screens/20260801_vanilla_mountain_calibration",
+  "notes": [
+    "Equal native-pixel windows compare morphology, not geographic elevation.",
+    "Arda Maps and Ardacraft remain authoritative for END\u00d3R\u00cb horizontal geometry.",
+    "The v44 isolated Erebor and Orodruin profiles are retained as accepted components."
+  ],
+  "samples": {
+    "endore_current": {
+      "dunharrow": {
+        "normalized_center": [
+          0.496751,
+          0.553026
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              4069,
+              2265
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              816.03,
+              1525.94,
+              2228.815,
+              2666.664
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              13133.0,
+              20178.0,
+              30995.0,
+              39310.4,
+              44112.2,
+              52282.08
+            ],
+            "maximum": 58315.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 45572.0,
+            "upper_half_fraction": 0.163779,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              1477.238,
+              2195.168,
+              2893.371,
+              3368.326
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              8.0,
+              25.0,
+              36.0,
+              50.0
+            ],
+            "upper_quarter_fraction": 0.031672,
+            "upper_quarter_local_maxima": 3,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              6.0,
+              13.5,
+              18.4,
+              25.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4069,
+              2265
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              361.017,
+              1187.352,
+              2090.221,
+              2667.504
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              13842.0,
+              24106.0,
+              36761.0,
+              44947.6,
+              57608.56
+            ],
+            "maximum": 62041.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 49298.0,
+            "upper_half_fraction": 0.094875,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              1747.5,
+              2492.064,
+              3237.555,
+              3932.465
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              15.0,
+              26.0,
+              35.0,
+              51.0
+            ],
+            "upper_quarter_fraction": 0.029424,
+            "upper_quarter_local_maxima": 9,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              13.0,
+              18.0,
+              22.0,
+              25.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4069,
+              2265
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              786.52,
+              1837.456,
+              2481.062
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              18185.0,
+              35238.0,
+              46800.0,
+              59208.6
+            ],
+            "maximum": 63273.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 50530.0,
+            "upper_half_fraction": 0.086257,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              1693.648,
+              2515.005,
+              3303.634,
+              3963.126
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              21.0,
+              29.0,
+              51.0,
+              92.0
+            ],
+            "upper_quarter_fraction": 0.035365,
+            "upper_quarter_local_maxima": 29,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              14.0,
+              20.0,
+              26.0,
+              67.0
+            ]
+          }
+        ]
+      },
+      "erebor": {
+        "normalized_center": [
+          0.599699,
+          0.137606
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              4912,
+              563
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              4.61,
+              163.109,
+              779.799,
+              1264.889
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12744.0,
+              13753.0,
+              16886.2,
+              19718.8,
+              26712.6
+            ],
+            "maximum": 61926.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 49183.0,
+            "upper_half_fraction": 0.002976,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              9515.112,
+              9830.139,
+              10795.023,
+              10905.604
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              5.0,
+              6.0,
+              6.0,
+              6.0
+            ],
+            "upper_quarter_fraction": 0.00085,
+            "upper_quarter_local_maxima": 1,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              2.0,
+              3.0,
+              3.4,
+              4.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4912,
+              563
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              345.856,
+              1287.134,
+              1804.694
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              13898.0,
+              30318.2,
+              40875.2,
+              57471.28
+            ],
+            "maximum": 62865.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 50122.0,
+            "upper_half_fraction": 0.062096,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              1485.115,
+              2307.105,
+              3105.903,
+              3572.252
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              12.0,
+              31.0,
+              41.0,
+              62.0
+            ],
+            "upper_quarter_fraction": 0.020779,
+            "upper_quarter_local_maxima": 8,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              6.0,
+              16.25,
+              27.0,
+              44.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4912,
+              563
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              342.925,
+              1326.585,
+              2114.248
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              14655.0,
+              36871.0,
+              53468.0,
+              62713.6
+            ],
+            "maximum": 63754.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 51011.0,
+            "upper_half_fraction": 0.095166,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              1198.04,
+              2239.34,
+              3356.395,
+              4103.021
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              33.0,
+              54.0,
+              73.0,
+              211.0
+            ],
+            "upper_quarter_fraction": 0.056152,
+            "upper_quarter_local_maxima": 67,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              25.0,
+              38.0,
+              57.0,
+              126.0
+            ]
+          }
+        ]
+      },
+      "gundabad": {
+        "normalized_center": [
+          0.502345,
+          0.102487
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              4115,
+              420
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              710.31,
+              1188.284,
+              1802.958,
+              2248.663
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              14149.8,
+              16299.0,
+              24500.0,
+              31678.0,
+              36359.2,
+              40607.6,
+              46257.64
+            ],
+            "maximum": 63036.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 48886.2,
+            "upper_half_fraction": 0.070571,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              833.718,
+              1385.987,
+              3357.865,
+              7325.305
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              11.0,
+              16.0,
+              19.5,
+              26.0
+            ],
+            "upper_quarter_fraction": 0.002019,
+            "upper_quarter_local_maxima": 1,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              4.0,
+              5.0,
+              5.0,
+              5.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4115,
+              420
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              665.23,
+              1369.317,
+              2457.473,
+              3251.569
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12902.0,
+              14568.0,
+              23750.0,
+              37364.0,
+              49652.2,
+              54869.8,
+              60799.52
+            ],
+            "maximum": 63036.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 50134.0,
+            "upper_half_fraction": 0.241886,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              952.748,
+              2026.427,
+              3369.336,
+              4112.975
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              23.0,
+              37.0,
+              53.0,
+              95.0
+            ],
+            "upper_quarter_fraction": 0.092029,
+            "upper_quarter_local_maxima": 26,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              16.0,
+              23.0,
+              29.0,
+              85.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4115,
+              420
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              385.35,
+              1334.177,
+              2612.54,
+              3381.707
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12778.0,
+              12960.0,
+              18562.0,
+              40085.0,
+              57339.0,
+              62265.0,
+              63652.0
+            ],
+            "maximum": 64158.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 51380.0,
+            "upper_half_fraction": 0.263216,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              979.044,
+              2249.825,
+              3452.762,
+              4182.764
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              34.0,
+              49.0,
+              71.0,
+              147.0
+            ],
+            "upper_quarter_fraction": 0.151134,
+            "upper_quarter_local_maxima": 102,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              22.0,
+              39.0,
+              57.6,
+              84.0
+            ]
+          }
+        ]
+      },
+      "morannon": {
+        "normalized_center": [
+          0.609732,
+          0.529449
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              4994,
+              2168
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              0.0,
+              0.0,
+              292.318
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              13106.0,
+              16908.44
+            ],
+            "maximum": 23897.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 11154.0,
+            "upper_half_fraction": 0.005952,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              1606.872,
+              2323.497,
+              3116.142,
+              3380.992
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              3.0,
+              4.0,
+              4.0,
+              12.0
+            ],
+            "upper_quarter_fraction": 0.001275,
+            "upper_quarter_local_maxima": 1,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              2.0,
+              2.0,
+              3.0,
+              3.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4994,
+              2168
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              0.0,
+              0.0,
+              200.704
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12809.6,
+              25559.44
+            ],
+            "maximum": 55713.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 42970.0,
+            "upper_half_fraction": 0.005128,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              6073.172,
+              9842.34,
+              11909.284,
+              12403.271
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              4.0,
+              5.0,
+              9.9,
+              16.0
+            ],
+            "upper_quarter_fraction": 0.001933,
+            "upper_quarter_local_maxima": 4,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              2.5,
+              4.0,
+              6.0,
+              7.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4994,
+              2168
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              0.0,
+              0.0,
+              167.1
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12863.0,
+              21997.6
+            ],
+            "maximum": 56290.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 43547.0,
+            "upper_half_fraction": 0.002669,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              4755.264,
+              8929.901,
+              11711.628,
+              12387.442
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              4.0,
+              5.0,
+              8.0,
+              17.0
+            ],
+            "upper_quarter_fraction": 0.000776,
+            "upper_quarter_local_maxima": 5,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              2.5,
+              4.0,
+              5.9,
+              6.0
+            ]
+          }
+        ]
+      },
+      "mount_doom": {
+        "normalized_center": [
+          0.628659,
+          0.577115
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              5149,
+              2363
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              0.0,
+              47.45,
+              153.106
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12799.2,
+              13219.6,
+              31832.0
+            ],
+            "maximum": 61847.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 49104.0,
+            "upper_half_fraction": 0.007546,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              8657.392,
+              9944.431,
+              10379.952,
+              10542.213
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              8.0,
+              9.0,
+              10.0,
+              10.0
+            ],
+            "upper_quarter_fraction": 0.004039,
+            "upper_quarter_local_maxima": 1,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              6.0,
+              6.75,
+              7.0,
+              7.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              5149,
+              2363
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              13476.56
+            ],
+            "maximum": 61847.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 49104.0,
+            "upper_half_fraction": 0.001906,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              8657.392,
+              9944.431,
+              10379.952,
+              10542.213
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              8.0,
+              9.0,
+              10.0,
+              10.0
+            ],
+            "upper_quarter_fraction": 0.00102,
+            "upper_quarter_local_maxima": 1,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              6.0,
+              6.75,
+              7.0,
+              7.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              5149,
+              2363
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              0.0,
+              418.143,
+              1326.913
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              12743.0,
+              12743.0,
+              12743.0,
+              12743.0,
+              14337.0,
+              18612.0,
+              35062.4
+            ],
+            "maximum": 61847.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 49104.0,
+            "upper_half_fraction": 0.008026,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              2756.915,
+              4096.218,
+              5854.109,
+              8169.729
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              6.0,
+              10.0,
+              14.0,
+              30.0
+            ],
+            "upper_quarter_fraction": 0.001388,
+            "upper_quarter_local_maxima": 3,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              6.0,
+              7.0,
+              9.0,
+              11.0
+            ]
+          }
+        ]
+      }
+    },
+    "vanilla": {
+      "chur": {
+        "normalized_center": [
+          0.496062992,
+          0.259797339
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              4063,
+              1064
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              128.5,
+              181.726,
+              257.0
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              11051.0,
+              11051.0,
+              11308.0,
+              11308.0,
+              11822.0,
+              12336.0,
+              12593.0
+            ],
+            "maximum": 12850.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 1799.0,
+            "upper_half_fraction": 0.091614,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              181.726,
+              257.0,
+              287.335,
+              363.453
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              11.0,
+              16.0,
+              23.0,
+              29.0
+            ],
+            "upper_quarter_fraction": 0.033372,
+            "upper_quarter_local_maxima": 166,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              3.0,
+              4.0,
+              5.0,
+              15.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4063,
+              1064
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              128.5,
+              181.726,
+              257.0
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              11051.0,
+              11051.0,
+              11308.0,
+              11565.0,
+              12079.0,
+              12336.0,
+              12593.0
+            ],
+            "maximum": 13107.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 2056.0,
+            "upper_half_fraction": 0.151279,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              128.5,
+              181.726,
+              287.335,
+              287.335
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              10.0,
+              17.0,
+              29.0,
+              100.0
+            ],
+            "upper_quarter_fraction": 0.026014,
+            "upper_quarter_local_maxima": 588,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              3.0,
+              4.0,
+              6.0,
+              25.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              4063,
+              1064
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              0.0,
+              128.5,
+              181.726,
+              181.726
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              11051.0,
+              11051.0,
+              11308.0,
+              12079.0,
+              12850.0,
+              13621.0,
+              14906.0
+            ],
+            "maximum": 15934.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 4883.0,
+            "upper_half_fraction": 0.061839,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              128.5,
+              181.726,
+              181.726,
+              257.0
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              20.0,
+              42.0,
+              58.6,
+              207.0
+            ],
+            "upper_quarter_fraction": 0.012451,
+            "upper_quarter_local_maxima": 825,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              8.5,
+              19.0,
+              27.0,
+              43.0
+            ]
+          }
+        ]
+      },
+      "kathmandu": {
+        "normalized_center": [
+          0.706525056,
+          0.402637041
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              5787,
+              1649
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              257.0,
+              363.453,
+              463.313,
+              574.669
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              17990.0,
+              20560.0,
+              24158.0,
+              26471.0,
+              28527.0,
+              29298.0,
+              31097.0
+            ],
+            "maximum": 32382.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 14392.0,
+            "upper_half_fraction": 0.420874,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              181.726,
+              363.453,
+              529.819,
+              642.5
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              32.0,
+              40.75,
+              70.0,
+              97.0
+            ],
+            "upper_quarter_fraction": 0.096716,
+            "upper_quarter_local_maxima": 173,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              14.0,
+              19.5,
+              24.0,
+              27.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              5787,
+              1649
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              257.0,
+              385.5,
+              529.819,
+              726.906
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              19532.0,
+              22873.0,
+              26214.0,
+              29041.0,
+              32125.0,
+              33410.0,
+              41634.0
+            ],
+            "maximum": 47545.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 28013.0,
+            "upper_half_fraction": 0.049021,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              749.277,
+              1212.267,
+              1459.468,
+              1563.27
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              14.0,
+              23.0,
+              36.8,
+              46.0
+            ],
+            "upper_quarter_fraction": 0.01294,
+            "upper_quarter_local_maxima": 26,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              12.0,
+              14.0,
+              25.2,
+              32.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              5787,
+              1649
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              257.0,
+              385.5,
+              642.5,
+              822.801
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              20560.0,
+              24158.0,
+              27242.0,
+              30840.0,
+              34438.0,
+              37008.0,
+              40349.0
+            ],
+            "maximum": 47545.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 26985.0,
+            "upper_half_fraction": 0.113275,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              406.353,
+              749.277,
+              1059.638,
+              1322.989
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              20.0,
+              32.0,
+              43.9,
+              154.0
+            ],
+            "upper_quarter_fraction": 0.007715,
+            "upper_quarter_local_maxima": 84,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              7.0,
+              12.0,
+              17.0,
+              31.0
+            ]
+          }
+        ]
+      },
+      "shey": {
+        "normalized_center": [
+          0.68558872,
+          0.358320107
+        ],
+        "windows": [
+          {
+            "center_height_pixel": [
+              5616,
+              1467
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              385.5,
+              574.669,
+              781.635,
+              935.494
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              26985.0,
+              29298.0,
+              32896.0,
+              36237.0,
+              38550.0,
+              39835.0,
+              40863.0
+            ],
+            "maximum": 42662.0,
+            "radius_pixels": 48,
+            "relief_above_p10": 15677.0,
+            "upper_half_fraction": 0.35381,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              406.353,
+              574.669,
+              781.635,
+              935.494
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              24.0,
+              29.0,
+              61.0,
+              74.0
+            ],
+            "upper_quarter_fraction": 0.09002,
+            "upper_quarter_local_maxima": 139,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              12.0,
+              14.25,
+              16.7,
+              33.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              5616,
+              1467
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              287.335,
+              529.819,
+              781.635,
+              978.627
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              24672.0,
+              26471.0,
+              28784.0,
+              33153.0,
+              37265.0,
+              39064.0,
+              40606.0
+            ],
+            "maximum": 42662.0,
+            "radius_pixels": 96,
+            "relief_above_p10": 17990.0,
+            "upper_half_fraction": 0.232248,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              406.353,
+              642.5,
+              908.632,
+              1036.0
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              16.0,
+              44.0,
+              62.0,
+              122.0
+            ],
+            "upper_quarter_fraction": 0.075277,
+            "upper_quarter_local_maxima": 427,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              14.0,
+              19.0,
+              32.0,
+              65.0
+            ]
+          },
+          {
+            "center_height_pixel": [
+              5616,
+              1467
+            ],
+            "gradient_percentiles_50_75_90_95": [
+              287.335,
+              463.313,
+              691.994,
+              908.632
+            ],
+            "height_percentiles_10_25_50_75_90_95_99": [
+              21588.0,
+              24672.0,
+              28013.0,
+              32382.0,
+              36237.0,
+              38550.0,
+              40863.0
+            ],
+            "maximum": 43176.0,
+            "radius_pixels": 160,
+            "relief_above_p10": 21588.0,
+            "upper_half_fraction": 0.250648,
+            "upper_half_gradient_percentiles_50_75_90_95": [
+              406.353,
+              642.5,
+              862.004,
+              1036.0
+            ],
+            "upper_half_run_percentiles_50_75_90_max": [
+              23.0,
+              54.0,
+              73.0,
+              198.0
+            ],
+            "upper_quarter_fraction": 0.064916,
+            "upper_quarter_local_maxima": 845,
+            "upper_quarter_run_percentiles_50_75_90_max": [
+              14.0,
+              24.0,
+              42.0,
+              85.0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "schema": 1,
+  "window_radii_pixels": [
+    48,
+    96,
+    160
+  ]
+}

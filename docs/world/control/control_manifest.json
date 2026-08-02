@@ -16,8 +16,69 @@
   "highland_source_pixels": 309673,
   "moor_source_pixels": 11387,
   "named_peaks": 18,
+  "source_relief_core_pixels": 58827,
+  "source_relief_core_coverage": 0.997875,
+  "high_ridge_source_support": 1.0,
+  "source_relief_theatres": {
+    "northern_ranges": {
+      "bbox": [
+        0.42,
+        0.02,
+        0.78,
+        0.25
+      ],
+      "source_core_pixels": 23246,
+      "source_core_coverage": 1.0,
+      "high_ridge_pixels": 49716,
+      "high_ridge_source_support": 1.0,
+      "minimum_source_core_coverage": 0.925,
+      "minimum_high_ridge_source_support": 0.995
+    },
+    "erebor": {
+      "bbox": [
+        0.56,
+        0.1,
+        0.65,
+        0.2
+      ],
+      "source_core_pixels": 2460,
+      "source_core_coverage": 1.0,
+      "high_ridge_pixels": 5699,
+      "high_ridge_source_support": 1.0,
+      "minimum_source_core_coverage": 0.875,
+      "minimum_high_ridge_source_support": 0.985
+    },
+    "white_mountains": {
+      "bbox": [
+        0.31,
+        0.45,
+        0.6,
+        0.65
+      ],
+      "source_core_pixels": 8036,
+      "source_core_coverage": 1.0,
+      "high_ridge_pixels": 26814,
+      "high_ridge_source_support": 1.0,
+      "minimum_source_core_coverage": 0.94,
+      "minimum_high_ridge_source_support": 0.97
+    },
+    "mordor": {
+      "bbox": [
+        0.56,
+        0.45,
+        0.76,
+        0.72
+      ],
+      "source_core_pixels": 1671,
+      "source_core_coverage": 0.925194,
+      "high_ridge_pixels": 12715,
+      "high_ridge_source_support": 1.0,
+      "minimum_source_core_coverage": 0.91,
+      "minimum_high_ridge_source_support": 0.97
+    }
+  },
   "passes": 10,
-  "rivers": 24,
+  "rivers": 100,
   "lakes": 15,
   "engine_water_lakes": 5,
   "material_pond_keys": [
@@ -53,7 +114,7 @@
   "material_pond_pixels": 189,
   "material_pond_height": [
     10750,
-    47715
+    41666
   ],
   "land_fraction": 0.464592,
   "land_bbox_pixels": [
@@ -73,7 +134,7 @@
     "south": 1672
   },
   "engine_water_level_sample": 5466,
-  "minimum_land_height": 10463,
+  "minimum_land_height": 10328,
   "maximum_water_height": 420,
   "biome_ids": {
     "ocean": 0,
@@ -88,5 +149,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "2319a92de30ae8ca66d22732f05138dccc29b6f58b5e6fdc454e3b0e335ebb9c"
+  "source_sha256": "d5afe88230cde83a0055ed98b6ac7b97ed94d961e08db4c40a82aaf71dc49dba"
 }

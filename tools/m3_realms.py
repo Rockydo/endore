@@ -38,6 +38,8 @@ from worldgen import (
 REALMS_CSV = ROOT / "docs/world/realms.csv"
 LANDMARKS_CSV = ROOT / "docs/world/control/m3_landmarks.csv"
 OWNERSHIP_CSV = DERIVED / "m3_ownership.csv"
+OWNERSHIP_AUDIT_CSV = DERIVED / "m3_ownership_audit.csv"
+OWNERSHIP_AUDIT_JSON = DERIVED / "m3_ownership_audit.json"
 GAZETTEER_CSV = DERIVED / "m3_gazetteer.csv"
 MANIFEST_JSON = DERIVED / "m3_manifest.json"
 POLITICAL_QA_OUT = DERIVED / "m3_political_control.png"
@@ -57,6 +59,90 @@ EXPECTED_REALM_COUNT = 38
 MINAS_MORGUL_DECISION = (
     "Minas Morgul is a Mordor fortress-location, not a separate country."
 )
+
+# Source-side political envelopes are deliberately few and high-confidence. They bind
+# the theatres whose unrestricted nearest-seat allocation visibly crossed canonical
+# physical barriers; other realms continue to use their reviewed region membership.
+# Coordinates are in the equal-scale ENDÓRË projection. Exact borders are necessarily
+# judgement calls because Tolkien supplies named lands and physical frontiers rather
+# than cadastral boundaries; the rationale is logged in docs/ASSUMPTIONS.md.
+CLAIM_BOUNDS: dict[str, tuple[float, float, float, float, str]] = {
+    "GON": (0.350, 0.690, 0.550, 0.770, "Gondor fiefs from Anfalas to the Anduin"),
+    "DAM": (0.460, 0.530, 0.600, 0.730, "Dol Amroth and Belfalas peninsula"),
+    "ROH": (0.450, 0.570, 0.420, 0.580, "The Mark between Isen, Anduin, and White Mountains"),
+    "SHI": (0.315, 0.390, 0.200, 0.290, "Shire bounds west of the Brandywine"),
+    "BRE": (0.380, 0.415, 0.200, 0.285, "Bree-land's four-village crossroads"),
+    "RAN": (0.430, 0.500, 0.235, 0.335, "The Angle and immediate Ranger refuge"),
+    "LIN": (0.140, 0.320, 0.110, 0.380, "Lindon west of the Blue Mountains"),
+    "BLU": (0.260, 0.320, 0.120, 0.230, "Surviving Ered Luin halls"),
+    "LOR": (0.498, 0.550, 0.330, 0.395, "Naith between Misty foothills and Anduin"),
+    "DUN": (0.395, 0.470, 0.400, 0.515, "Dunland west of Isen and the Gap"),
+    "MOA": (0.470, 0.505, 0.300, 0.370, "Moria and immediate Dimrill/Sirannon approaches"),
+    "GOB": (0.490, 0.522, 0.150, 0.235, "Goblin-town and High Pass under the Misty Mountains"),
+    "GUN": (0.470, 0.545, 0.065, 0.150, "Gundabad and the northern mountain junction"),
+    "IRO": (0.645, 0.710, 0.120, 0.190, "Iron Hills source label and adjacent holds"),
+    "ERE": (0.570, 0.630, 0.110, 0.190, "Erebor and its immediate mountain approaches"),
+    "DAL": (0.585, 0.640, 0.130, 0.230, "Dale and the upper Celduin plain"),
+    "ESG": (0.585, 0.630, 0.150, 0.230, "Lake-town and Long Lake shore"),
+    "WOO": (0.550, 0.640, 0.120, 0.305, "Thranduil's northern and eastern Mirkwood"),
+    "WDM": (0.525, 0.595, 0.220, 0.355, "Woodmen settlements in western Mirkwood"),
+    "BEO": (0.490, 0.555, 0.150, 0.300, "Beorning crossings and upper Anduin vales"),
+    "DOL": (0.530, 0.600, 0.310, 0.410, "Dol Guldur's southern Mirkwood shadow"),
+    "DOR": (0.640, 0.730, 0.285, 0.440, "Dorwinion around the northwest Sea of Rhûn"),
+    "FAN": (0.450, 0.520, 0.405, 0.505, "Fangorn source forest and Entwash headwaters"),
+    "DRU": (0.535, 0.585, 0.560, 0.625, "Drúadan Forest and Stonewain approaches"),
+    "RIV": (0.475, 0.510, 0.195, 0.245, "Imladris hidden valley and immediate refuge"),
+    "LOS": (0.190, 0.410, 0.000, 0.130, "Lossoth settlements around the Icebay"),
+    "MOR": (0.595, 0.770, 0.515, 0.730, "Mordor within the enclosing mountain walls"),
+    "ISE": (0.445, 0.480, 0.415, 0.515, "Isengard ring and Nan Curunír approaches"),
+    "UMB": (0.440, 0.590, 0.770, 1.000, "Umbar coast and corsair hinterland"),
+    "ANG": (0.415, 0.480, 0.060, 0.200, "Mount Gram and Angmar remnant fastnesses"),
+}
+
+# Measured against the validated v71 nearest-seat tree before these contracts were
+# applied. Retaining the baseline in the generated audit makes the correction reviewable
+# without keeping a second, stale political raster.
+PRE_CONTRACT_EXCEPTIONS: dict[str, tuple[int, int]] = {
+    "LOR": (16, 55),
+    "DUN": (218, 265),
+    "MOA": (3, 26),
+    "GOB": (3, 32),
+    "GUN": (34, 62),
+    "IRO": (0, 1),
+    "WOO": (40, 119),
+    "WDM": (30, 95),
+    "BEO": (10, 65),
+    "DOL": (20, 65),
+}
+
+# These compact, well-attested polities have no canonical reason to fracture into
+# detached colour islands.  Mountain strongholds and coastal powers are audited but
+# deliberately omitted because impassable ridges and water can split their location
+# graph without implying a political error.
+CONTIGUOUS_CLAIM_REALMS = frozenset(
+    {
+        "BLU",
+        "BRE",
+        "DOL",
+        "DOR",
+        "DUN",
+        "ERE",
+        "ESG",
+        "FAN",
+        "IRO",
+        "ISE",
+        "LOR",
+        "MOA",
+        "RAN",
+        "WDM",
+        "WOO",
+    }
+)
+# Region-only claims lack a precise source envelope, so this ceiling prevents their
+# allocator from reaching implausibly far across the thinly documented East and South.
+# Contracted realms instead use their stronger, source-specific physical bounds.
+MAX_UNCONTRACTED_CAPITAL_DISTANCE = 0.32
+_LOCATION_ADJACENCY_CACHE: dict[str, dict[str, set[str]]] = {}
 
 
 @dataclass(frozen=True)
@@ -244,6 +330,18 @@ def normalized_distance(location: Location, x: float, y: float) -> float:
     return ((lx - x) * 2.0) ** 2 + (ly - y) ** 2
 
 
+def claim_contract(location: Location, realm: Realm) -> tuple[bool, str]:
+    """Apply reviewed physical-frontier contracts before political allocation."""
+    contract = CLAIM_BOUNDS.get(realm.tag)
+    if contract is None:
+        return True, "reviewed_region_claim"
+    x0, x1, y0, y1, rationale = contract
+    x, y = location.normalized
+    if x0 <= x <= x1 and y0 <= y <= y1:
+        return True, rationale
+    return False, rationale
+
+
 def resolve_landmarks(
     model: WorldModel,
 ) -> tuple[dict[str, str], dict[str, Landmark]]:
@@ -293,24 +391,15 @@ def wilderness_reason(location: Location, protected: set[str]) -> str | None:
         and x < 0.62
     ):
         return "wild_brown_lands"
-    if (
-        location.region == "me_ithilien_region"
-        and 0.585 < x < 0.615
-        and 0.55 < y < 0.70
-    ):
+    if location.region == "me_ithilien_region":
         return "wild_ithilien"
     return None
 
 
-def assign_ownership(
-    model: WorldModel,
+def forced_ownership(
     realms: tuple[Realm, ...],
     ref_to_location: dict[str, str],
-) -> tuple[dict[str, str], dict[str, str]]:
-    ownership: dict[str, str] = {}
-    wild_reason: dict[str, str] = {}
-    counts: Counter[str] = Counter()
-    by_tag = {realm.tag: realm for realm in realms}
+) -> dict[str, str]:
     forced_owner = {
         ref_to_location[realm.capital_ref]: realm.tag
         for realm in realms
@@ -370,6 +459,19 @@ def assign_ownership(
         if location_key is None:
             raise ValueError(f"unresolved operational landmark {ref}")
         forced_owner[location_key] = tag
+    return forced_owner
+
+
+def assign_ownership(
+    model: WorldModel,
+    realms: tuple[Realm, ...],
+    ref_to_location: dict[str, str],
+) -> tuple[dict[str, str], dict[str, str]]:
+    ownership: dict[str, str] = {}
+    wild_reason: dict[str, str] = {}
+    counts: Counter[str] = Counter()
+    by_tag = {realm.tag: realm for realm in realms}
+    forced_owner = forced_ownership(realms, ref_to_location)
     for key, tag in forced_owner.items():
         ownership[key] = tag
         counts[tag] += 1
@@ -400,6 +502,7 @@ def assign_ownership(
                 realm,
             )
             for realm in candidates_by_region.get(location.region, ())
+            if claim_contract(location, realm)[0]
         )
         if not choices:
             ownership[location.key] = WILD
@@ -807,6 +910,228 @@ def ownership_csv(state: RealmState) -> str:
     return output.getvalue()
 
 
+def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
+    forced = forced_ownership(state.realms, state.ref_to_location)
+    rows: list[dict[str, object]] = []
+    for location in state.model.locations:
+        if location.kind != "land":
+            continue
+        owner = state.ownership[location.key]
+        x, y = location.normalized
+        if owner == WILD:
+            rows.append(
+                {
+                    "location": location.key,
+                    "realm": WILD,
+                    "normalized_x": f"{x:.7f}",
+                    "normalized_y": f"{y:.7f}",
+                    "region": location.region,
+                    "biome_id": location.biome_id,
+                    "distance_to_capital": "",
+                    "forced": "no",
+                    "contract": "deliberately unclaimed",
+                    "verdict": state.wild_reason[location.key],
+                }
+            )
+            continue
+        realm = state.by_tag[owner]
+        is_forced = forced.get(location.key) == owner
+        allowed, rationale = claim_contract(location, realm)
+        if is_forced:
+            verdict = "accepted_forced_anchor"
+        elif owner in CLAIM_BOUNDS:
+            verdict = "accepted_source_side_envelope" if allowed else "violation"
+        else:
+            verdict = "accepted_reviewed_region"
+        rows.append(
+            {
+                "location": location.key,
+                "realm": owner,
+                "normalized_x": f"{x:.7f}",
+                "normalized_y": f"{y:.7f}",
+                "region": location.region,
+                "biome_id": location.biome_id,
+                "distance_to_capital": (
+                    f"{normalized_distance(location, realm.x, realm.y) ** 0.5:.7f}"
+                ),
+                "forced": "yes" if is_forced else "no",
+                "contract": rationale,
+                "verdict": verdict,
+            }
+        )
+    return rows
+
+
+def ownership_audit_csv(state: RealmState) -> str:
+    output = io.StringIO(newline="")
+    fields = (
+        "location",
+        "realm",
+        "normalized_x",
+        "normalized_y",
+        "region",
+        "biome_id",
+        "distance_to_capital",
+        "forced",
+        "contract",
+        "verdict",
+    )
+    writer = csv.DictWriter(output, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(ownership_audit_rows(state))
+    return output.getvalue()
+
+
+def location_adjacency(model: WorldModel) -> dict[str, set[str]]:
+    """Return edge-sharing land-location neighbours from the generated raster."""
+    model_hash = model_manifest(model)["model_sha256"]
+    cached = _LOCATION_ADJACENCY_CACHE.get(model_hash)
+    if cached is not None:
+        return cached
+    adjacency: dict[str, set[str]] = {
+        location.key: set()
+        for location in model.locations
+        if location.kind == "land"
+    }
+    labels = model.labels
+    pairs = np.concatenate(
+        (
+            np.stack((labels[:, :-1].ravel(), labels[:, 1:].ravel()), axis=1),
+            np.stack((labels[:-1, :].ravel(), labels[1:, :].ravel()), axis=1),
+        )
+    )
+    kinds = [location.kind for location in model.locations]
+    keys = [location.key for location in model.locations]
+    for left, right in np.unique(pairs[pairs[:, 0] != pairs[:, 1]], axis=0):
+        left_index, right_index = int(left), int(right)
+        if kinds[left_index] != "land" or kinds[right_index] != "land":
+            continue
+        left_key, right_key = keys[left_index], keys[right_index]
+        adjacency[left_key].add(right_key)
+        adjacency[right_key].add(left_key)
+    _LOCATION_ADJACENCY_CACHE[model_hash] = adjacency
+    return adjacency
+
+
+def realm_connectivity(state: RealmState) -> dict[str, dict[str, object]]:
+    """Summarize connected political components and detached non-anchor specks."""
+    adjacency = location_adjacency(state.model)
+    forced = forced_ownership(state.realms, state.ref_to_location)
+    result: dict[str, dict[str, object]] = {}
+    for realm in state.realms:
+        owned = {
+            location.key
+            for location in state.model.locations
+            if location.kind == "land" and state.ownership[location.key] == realm.tag
+        }
+        unseen = set(owned)
+        components: list[set[str]] = []
+        while unseen:
+            seed = min(unseen)
+            component = {seed}
+            frontier = [seed]
+            unseen.remove(seed)
+            while frontier:
+                current = frontier.pop()
+                neighbours = adjacency[current] & unseen & owned
+                if neighbours:
+                    unseen.difference_update(neighbours)
+                    component.update(neighbours)
+                    frontier.extend(sorted(neighbours))
+            components.append(component)
+        components.sort(key=lambda values: (-len(values), min(values)))
+        component_rows = [
+            {
+                "size": len(component),
+                "forced_anchors": sum(
+                    forced.get(location) == realm.tag for location in component
+                ),
+                "sample": sorted(component)[:5],
+            }
+            for component in components
+        ]
+        detached_unforced_specks = sum(
+            row["size"] <= 2 and row["forced_anchors"] == 0
+            for row in component_rows[1:]
+        )
+        result[realm.tag] = {
+            "components": len(components),
+            "largest_component": len(components[0]) if components else 0,
+            "largest_component_fraction": (
+                round(len(components[0]) / len(owned), 6)
+                if components and owned
+                else 0.0
+            ),
+            "detached_unforced_specks": detached_unforced_specks,
+            "component_detail": component_rows,
+        }
+    return result
+
+
+def ownership_audit_json(state: RealmState) -> str:
+    rows = ownership_audit_rows(state)
+    connectivity = realm_connectivity(state)
+    contracted: dict[str, dict[str, object]] = {}
+    for tag, contract in CLAIM_BOUNDS.items():
+        tag_rows = [row for row in rows if row["realm"] == tag]
+        xs = [float(row["normalized_x"]) for row in tag_rows]
+        ys = [float(row["normalized_y"]) for row in tag_rows]
+        violations = sum(row["verdict"] == "violation" for row in tag_rows)
+        contracted[tag] = {
+            "rationale": contract[4],
+            "claim_bounds": list(contract[:4]),
+            "locations": len(tag_rows),
+            "forced_anchors": sum(row["forced"] == "yes" for row in tag_rows),
+            "final_bbox": (
+                [min(xs), max(xs), min(ys), max(ys)] if tag_rows else None
+            ),
+            "contract_violations": violations,
+            "connectivity": connectivity[tag],
+            "pre_contract_outside": (
+                list(PRE_CONTRACT_EXCEPTIONS[tag])
+                if tag in PRE_CONTRACT_EXCEPTIONS
+                else None
+            ),
+        }
+    uncontracted: dict[str, dict[str, object]] = {}
+    for realm in state.realms:
+        if realm.tag in CLAIM_BOUNDS:
+            continue
+        tag_rows = [row for row in rows if row["realm"] == realm.tag]
+        xs = [float(row["normalized_x"]) for row in tag_rows]
+        ys = [float(row["normalized_y"]) for row in tag_rows]
+        distances = [
+            float(row["distance_to_capital"])
+            for row in tag_rows
+            if row["distance_to_capital"] and row["forced"] == "no"
+        ]
+        uncontracted[realm.tag] = {
+            "rationale": "lower-confidence region claim; no invented cadastral envelope",
+            "locations": len(tag_rows),
+            "final_bbox": (
+                [min(xs), max(xs), min(ys), max(ys)] if tag_rows else None
+            ),
+            "maximum_unforced_capital_distance": (
+                max(distances) if distances else 0.0
+            ),
+            "connectivity": connectivity[realm.tag],
+        }
+    payload = {
+        "schema": 2,
+        "milestone": "M3 political assignment audit",
+        "audited_land_locations": len(rows),
+        "owned_locations": sum(row["realm"] != WILD for row in rows),
+        "wild_locations": sum(row["realm"] == WILD for row in rows),
+        "contract_violations": sum(
+            row["verdict"] == "violation" for row in rows
+        ),
+        "contracted_realms": contracted,
+        "uncontracted_realms": uncontracted,
+        "all_realm_connectivity": connectivity,
+    }
+    return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+
+
 def gazetteer_csv(state: RealmState) -> str:
     output = io.StringIO(newline="")
     writer = csv.writer(output, lineterminator="\n")
@@ -885,6 +1210,8 @@ def expected_payloads() -> dict[Path, str]:
         SCENARIO_OUT: scenario(),
         LOCALIZATION_OUT: localization(state),
         OWNERSHIP_CSV: ownership_csv(state),
+        OWNERSHIP_AUDIT_CSV: ownership_audit_csv(state),
+        OWNERSHIP_AUDIT_JSON: ownership_audit_json(state),
         GAZETTEER_CSV: gazetteer_csv(state),
         MANIFEST_JSON: manifest(state),
     }
@@ -908,6 +1235,8 @@ def owned_paths() -> tuple[Path, ...]:
         SCENARIO_OUT,
         LOCALIZATION_OUT,
         OWNERSHIP_CSV,
+        OWNERSHIP_AUDIT_CSV,
+        OWNERSHIP_AUDIT_JSON,
         GAZETTEER_CSV,
         MANIFEST_JSON,
         POLITICAL_QA_OUT,
@@ -960,6 +1289,40 @@ def check() -> list[str]:
             "a realm capital snaps too far from its authored position: "
             f"{alignment['maximum_capital_snap_distance']:.6f}"
         )
+    audit_rows = ownership_audit_rows(state)
+    contract_violations = [
+        row for row in audit_rows if row["verdict"] == "violation"
+    ]
+    if contract_violations:
+        failures.append(
+            "political claim contracts reject final locations: "
+            f"{contract_violations[:5]}"
+        )
+    excessive_distance = [
+        row
+        for row in audit_rows
+        if row["realm"] != WILD
+        and row["realm"] not in CLAIM_BOUNDS
+        and row["forced"] == "no"
+        and row["distance_to_capital"]
+        and float(row["distance_to_capital"]) > MAX_UNCONTRACTED_CAPITAL_DISTANCE
+    ]
+    if excessive_distance:
+        failures.append(
+            "uncontracted political claims exceed the anti-sprawl distance: "
+            f"{excessive_distance[:5]}"
+        )
+    connectivity = realm_connectivity(state)
+    fragmented_compact_realms = {
+        tag: connectivity[tag]["component_detail"]
+        for tag in CONTIGUOUS_CLAIM_REALMS
+        if connectivity[tag]["components"] != 1
+    }
+    if fragmented_compact_realms:
+        failures.append(
+            "compact source-side realms contain detached political components: "
+            f"{fragmented_compact_realms}"
+        )
     regions = {location.region for location in state.model.locations}
     for realm in realms:
         unknown = realm.regions - regions
@@ -979,6 +1342,8 @@ def check() -> list[str]:
             failures.append(
                 f"{realm.tag} owns {count}, above cap {realm.max_locations}"
             )
+    if sum(value == "IRO" for value in state.ownership.values()) < 12:
+        failures.append("Iron Hills lacks a viable source-side territorial cluster")
     parent = list(range(len(state.model.locations)))
 
     def find(value: int) -> int:

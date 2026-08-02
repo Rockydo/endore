@@ -9,7 +9,7 @@ the following two owner-approved cartographic references:
 | Reference | Accessed | Binding use |
 |---|---:|---|
 | [Arda Maps — Third Age](http://arda-maps.org/ages/third) | 2026-07-31 | Coastline, islands, lakes, drainage, mountain and woodland envelopes, roads, and an independent landmark cross-check. |
-| [ArdaCraft — interactive Middle-earth map](https://www.ardacraft.me/map/middle-earth-interactive-map) | 2026-07-31 | Equal-scale world grid, precise canon landmark anchors, detailed regional boundaries, biome footprints, and close-scale placement checks. |
+| [ArdaCraft — interactive Middle-earth map](https://www.ardacraft.me/map/middle-earth-interactive-map) | 2026-08-01 | Equal-scale world grid, precise canon landmark anchors, detailed regional boundaries, biome footprints, close-scale placement checks, and the Heightmap V2 crest/branch interpretation. |
 
 Tolkien's published text and map evidence retains the canon precedence stated
 in `docs/ENDORE_MASTER_PLAN.md`. Arda Maps and ArdaCraft are precise
@@ -45,6 +45,12 @@ tuning.
 - `docs/world/control/projection.json` contains only transformed, simplified,
   and hand-reviewed ENDÓRË control geometry. It must identify this projection
   contract and both reference roles.
+- `docs/world/control/ardacraft_relief.json` contains only a 2500x2003, 8-bit,
+  zlib/base85 numeric warm-rock plus pale-summit response derived from the hash-pinned
+  Heightmap V2 overlay. v42 retains a restrained exact crest response and reconstructs a dominant
+  tight body plus continuous shoulders at 3/8/15 source pixels; all terms remain
+  source samples. It contains no source colours, labels, water, political information,
+  or redistributable reference image. Validation binds its source and field hashes.
 - `tools/cartography_reference_audit.py --check` is a permanent static gate.
 - The gate hash-pins the complete reviewed `projection.json`, not only its
   feature counts. Any coordinate change to a coast, island, lake, mountain,
@@ -57,6 +63,20 @@ tuning.
   and the generated conformance report.
 - Coast, lake, forest, mountain, and river controls are reviewed by feature
   envelope, axis, adjacency, and ordering—not merely by landmark count.
+- Forest object density, LOD distribution, and species mix are renderer presentation
+  layered strictly inside those reviewed envelopes. They may not dilate, simplify, or
+  relocate an Arda Maps woodland polygon. Mirkwood and Lothlórien additionally carry
+  per-LOD transform floors so a correct source outline cannot pass with sparse physical
+  canopy.
+- Stronger renderer-scale continuity on the White Mountains and Mordor walls
+  is multiplied by a softly dilated mask of the committed Ardacraft numeric
+  support field. The added response therefore cannot authorize a high ridge
+  outside source-backed relief; global and four-theatre support floors remain
+  binding independently.
+- Morannon additionally binds two exact short hinge arms from the direct gate marker to
+  the nearest source crests at `[0.621978, 0.531998]` and `[0.605128, 0.549585]`.
+  Ardacraft's drawing layer confirms these Ered Lithui/Ephel Duath connections; the
+  oriented pass carve retains the low Cirith Gorgor saddle between them.
 - The gate also requires real EU5 screenshots in all nine theatres listed in
   `docs/m2/VISUAL_REOPEN_GATE.md`; static agreement never substitutes for
   renderer evidence.

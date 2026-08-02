@@ -29,6 +29,17 @@ ENGINE_MOUTHS: dict[str, list[list[float]]] = {
     "ringlo": [[0.496459, 0.649243]],
 }
 ENGINE_SOURCES: dict[str, list[float]] = {}
+WIDEST_RIVERS = {
+    "anduin",
+    "upper_anduin",
+    "baranduin",
+    "greyflood",
+    "isen",
+    "celduin",
+    "carnen",
+    "poros",
+    "harnen",
+}
 
 
 def game_rivers_path():
@@ -206,13 +217,19 @@ def flow_palette_index(river: dict, progress: float) -> int:
     nominal_width = float(river["width"]) * WORLD_H
     if nominal_width < 18:
         return 4 if progress < 0.78 else 5
-    if progress < 0.68:
+    if river["key"] in WIDEST_RIVERS:
+        if progress < 0.20:
+            return 4
+        if progress < 0.48:
+            return 5
+        if progress < 0.80:
+            return 11
+        return 15
+    if progress < 0.45:
         return 4
-    if progress < 0.90:
+    if progress < 0.80:
         return 5
-    if river["key"] != "anduin" or progress < 0.975:
-        return 11
-    return 15
+    return 11
 
 
 def render() -> Image.Image:
@@ -246,6 +263,8 @@ def render() -> Image.Image:
         parent = river.get("joins")
         if parent and parent not in rivers:
             raise ValueError(f"river {river['key']} joins unknown parent {parent}")
+        if river.get("engine_raster") is False:
+            continue
         # Installed build 24187685 rejects every tested custom affluent
         # junction topology at load. Tributaries remain binding height/valley
         # controls, while the engine raster ships only complete source-to-water

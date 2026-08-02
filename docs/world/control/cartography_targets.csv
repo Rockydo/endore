@@ -20,7 +20,7 @@ dol_guldur,Dol Guldur,0.556113,0.351780,ArdaCraft,DolGuldur,Dol Guldur,0.005000,
 thranduil_halls,Thranduil's Halls,0.582295,0.158091,ArdaCraft,ElvenkingsHalls,Thranduil’s Halls,0.006000,Shared landmark
 esgaroth,Esgaroth,0.599873,0.162764,ArdaCraft,LakeTown,Esgaroth (Lake-town),0.004000,Shared Long Lake control
 dale,Dale,0.601803,0.148883,ArdaCraft,Dale,Dale,0.004000,Shared landmark
-erebor,Erebor,0.599699,0.137606,ArdaCraft,LonelyMountain,Erebor,0.005000,Shared landmark
+erebor,Erebor,0.599699,0.137606,Ardacraft,Erebor,Erebor,0.002000,Direct mountain marker; aligns the hold with source-native Lonely Mountain relief
 dorwinion,Dorwinion,0.684658,0.351235,Arda Maps,Dorwinion,,0.012000,Area-label centroid used as strategic settlement seed
 isengard,Isengard,0.466546,0.462111,ArdaCraft,Isengard,Isengard,0.005000,Shared landmark
 helms_deep,Helm's Deep,0.475475,0.513986,ArdaCraft,HelmsDeep,Helm’s Deep,0.005000,Shared landmark
