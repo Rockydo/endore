@@ -356,3 +356,15 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   remained responsive, and used approximately 5.8 GB working set. Full-canopy installed
   `environment_oceanic_wt_tree_01_mesh` and `_02_mesh` references resolve correctly in
   Lothlórien at close zoom, so they are a viable light-trunk deciduous proxy in this build.
+- The exact installed `lakes_locators.txt` definition and headerless 40-byte transform ABI
+  activate `lake_mesh` on the custom map, but its unit-square carrier remains visibly
+  rectangular over shallow sub-location basins at both 0.42 and 0.10 terrain-relative Y
+  offsets. Build 24187685 does not depth-clip that carrier tightly enough to reproduce an
+  authored pond polygon; the layer must remain quarantined pending a different mechanism.
+- The exact installed `generic_rock_generator_high.txt`, `_medium.txt`, and `_low.txt`
+  definition filenames activate custom headerless 40-byte transforms on the Arda world.
+  A 36,000-record source-clipped population loads cleanly and remains visually sparse.
+  The same mechanism is not sufficient evidence of suitability for every retail mesh:
+  `vegetation_grass_test_mesh` renders as repeated green shrub-like rosettes at normal
+  camera scales, and removing its transforms removes those clumps in a fresh-game A/B.
+  Palm/grass exact definitions therefore remain quarantined and their bins absent.

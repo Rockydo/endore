@@ -41,7 +41,12 @@ EARTH_OBJECT_QUARANTINE = (
 )
 ACTIVE_VEGETATION_DEFINITIONS = frozenset(
     f"{family}_generator_{lod}.txt"
-    for family in ("forest", "woods", "pine")
+    for family in (
+        "forest",
+        "woods",
+        "pine",
+        "generic_rock",
+    )
     for lod in ("high", "medium", "low")
 )
 

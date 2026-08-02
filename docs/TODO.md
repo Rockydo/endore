@@ -149,6 +149,13 @@
    by a source-range/axis/Mount Doom field. Replace the remaining Brown Lands blob and
    broad Rhûn/Harad proof-era envelopes with audited source-native or explicitly logged
    continuous controls; never reintroduce an oval or straight clipped climate edge.
+   ACCEPTED FOCUSED v77 SCENERY CHECKPOINT — a source-clipped 36,000-transform retail
+   rock layer adds sparse close-zoom stone across only climate biomes 8/9/10. Repeated
+   Qarsad/Umbar A/Bs reject and quarantine the palm and grass-test families: the latter
+   creates a generic green rosette carpet, while the former adds no distinct readable
+   value. Validation removes and rejects every stale palm/grass bin. Full validation and
+   exact-fingerprint paired zero-new-line smoke are green. This does not close the still-
+   open macro-material/source-envelope audit.
 6. REOPENED M2 RIVERS/FORESTS — the primary rivers remain too narrow and the network too
    sparse for EU5 close zoom. Re-audit every visible watercourse against both owner-supplied
    online maps; widen the Anduin, Baranduin, Greyflood, Isen, Celduin, Carnen, Poros,
@@ -175,6 +182,10 @@
    multiple narrower Gondor/Lindon channels while preserving dense Lothlórien canopy.
    Full validation, nine-day Observer playback, and exact-fingerprint paired smoke with
    zero new lines pass. The complete nine-theatre physical/source-edge review remains open.
+   ACCEPTED FOCUSED v75 FOREST CHECKPOINT remains authoritative after v77 A/B: Mirkwood
+   stays a near-continuous all-LOD canopy and Lothlórien stays a dense source-shaped,
+   light-trunk-only wood. Removing the rejected generic green scenery does not alter any
+   accepted forest transform or boundary.
 7. REOPENED M2 SCALE/GRANULARITY — the measured source frame already occupies 100% of
    canvas height and 70.3% of width, with substantial land contact at both north and
    south crop edges. Do not enlarge uniformly: it would clip Forochel or Far Harad.

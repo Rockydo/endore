@@ -1261,3 +1261,30 @@
   confirms that the smoke covers exact fingerprint `fb07a215`. This accepts the focused
   dense-forest/source-shaped-ownership checkpoint; the wider nine-theatre physical gate
   remains red.
+
+## 2026-08-02 - v76/v77 bounded water and climate-scenery probes
+
+- Two fresh live lake-object variants proved that the installed `lake_mesh` ABI loads on
+  Arda but exposes a rectangular carrier around small authored basins. The complete
+  experiment was removed after the second strike; all ten material ponds and the exact
+  Earth-object quarantine remain unchanged. Rejected evidence is retained under
+  `docs/screens/docs/screens/20260802_v76_native_ponds/` and
+  `docs/screens/20260802_v76b_native_ponds/`.
+- Audited the installed exact generated-object families for palms, grass, and generic
+  rocks as a materially different alternative to rejected broad material masks. Palm
+  populations of 26,000, 4,000, and 1,600 records did not yield a defensible localized
+  improvement. A fresh zero-palm A/B left the southern green rosettes unchanged; a fresh
+  zero-grass A/B removed them. Palm and grass definitions are now quarantined, their bins
+  removed, and stale-output validation prevents either route from silently returning.
+- Retained only 16,000/10,000/10,000 high/medium/low generic-rock transforms. Static
+  contracts clip every record to source climate biomes 8/9/10, preserve all three biome
+  populations, and enforce spatial serialization. Fresh evidence under
+  `docs/screens/20260802_v77e_no_generic_green/` proves clean Qarsad and Umbar views while
+  the accepted dense Lothlórien canopy remains intact. The deterministic corpus now has
+  3,093,385 records: the unchanged 3,057,385-tree v75 baseline plus 36,000 sparse rocks.
+- The permanent quarantine/stale-output implementation passed full `gmake validate` in
+  405.9 seconds. Paired vanilla/ENDÓRË `gmake smoke` then passed in 200.4 seconds with
+  zero new mod error lines; `eu5_slot.py assert-smoked` binds that result to exact
+  game-visible fingerprint `f97befaa204df096c0877aa0d48f7de7f274060fd664598187a45e6de9d74366`.
+  This accepts the narrow rock/quarantine renderer batch only. M2's complete physical
+  nine-theatre owner gate remains red and no gameplay milestone is resumed.

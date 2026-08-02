@@ -1339,3 +1339,29 @@ material cache and source with no surviving diff. Future Harad/Forodwaith materi
 requires a materially different renderer mechanism, not another binary broad-noise mask.
 Do not alter source climate polygons or horizontal relief to solve a material-channel
 defect.
+
+## 2026-08-02 - Reject native square carriers for sub-location lakes
+
+Keep the systematic ten-key material-pond policy. The retail lake object is technically
+mod-addressable, but two fresh live variants prove that its unit plane exposes a blue
+rectangle instead of conforming to the exact source basin. Lowering its relative height
+from 0.42 to 0.10 and tightening its coverage does not change that geometric limitation.
+Remove every experimental transform and restore the exact Earth-object quarantine. A
+future lake presentation route must supply polygonal water without turning a complete
+runtime location into engine water; another scale/offset probe is not materially new.
+
+## 2026-08-02 - Keep only source-clipped sparse rocks from the climate-scenery probe
+
+Activate the exact retail `generic_rock_generator_{high,medium,low}.txt` renderer layers
+with 16,000/10,000/10,000 Arda-authored `sm_rock_a_01_mesh` transforms. Every placement
+must remain inside source climate biomes 8, 9, or 10, every biome must retain at least
+five percent of each LOD population, and generated records must keep locality-preserving
+serialization. Live Mordor/Harad evidence shows this layer as sparse, unobtrusive grey
+stone rather than a new terrain blanket.
+
+Reject and quarantine the simultaneously audited palm and grass families. Zero-palm and
+zero-grass fresh-game A/Bs prove that the repeated southern green clumps came from the
+retail grass-test family, while the sparse palm layer added no readable localized value.
+Remove both sets of bins and make stale-output detection enforce their absence. This
+decision changes renderer detail only; it does not alter any source climate polygon,
+height, coast, river, location, or political assignment.
