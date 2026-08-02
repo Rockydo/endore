@@ -1383,3 +1383,54 @@ Dorwinion; three stranded Lindon mountain cells join the Blue Mountain holds; an
 unattested remote Lindon island becomes wild. Preserve the separate Gondorian Tolfalas
 component and every other recorded barrier split. Add no faction without distinct TA
 3018 sovereignty evidence.
+
+## 2026-08-02 - Replace proof-era eastern climate envelopes with source-native biomes
+
+Reduce the hash-pinned Ardacraft biome atlas into detailed Brown Lands, Rhûn steppe, Near
+Harad scrub/woodland, and Far Harad arid control components. Ship only transformed and
+simplified numeric rings plus provenance and conformance counts; keep the downloaded
+atlas quarantined. Continue Rhûn and Harad through ENDÓRË's crop edges only with explicit
+organic judgement polygons. Apply Mordor ash last so the source-enclosed basin remains
+authoritative. Reject any return to the old eight/seventeen-vertex proof polygons, oval
+climate masks, or straight artificial climate edge.
+
+## 2026-08-02 - Bind political repairs to physical witnesses, not generated IDs alone
+
+A generated location key is insufficient evidence after any density or topology change.
+Each reviewed political repair must also bind the expected source region, a tight
+normalized coordinate window, and—unless becoming wilderness—the destination realm's
+authored claim contract. Validation fails immediately if any witness moves. Re-audit and
+replace all component member sets after a legitimate reseed; never carry an obsolete
+allowlist forward, disable the component gate, or smooth every detached component.
+
+## 2026-08-02 - Raise the forest budget only on the proven 6,004-location topology
+
+The fresh v79 close audit overrides the earlier fixed 3,093,385-object presentation
+budget: Mirkwood still reads as a loose park at ordinary play zoom. Raise the complete
+corpus to 3,493,385 transforms, still below the rejected 4,077,285-object experiment,
+while retaining the release-safe 6,004-location world. Increase installed-tree canopy
+scale and named-forest interior weighting at all LODs; do not change a source forest
+boundary, river corridor, terrain material, or political cell to fake density. Preserve
+independent Fangorn, Old Forest, Ithilien, Mirkwood, and Lothlorien census floors and the
+light-trunk-only Lothlorien species contract. Fresh-game and performance evidence remain
+mandatory before acceptance.
+
+The first v80 real-game calibration rejects the wide-canopy oceanic variants for
+Lothlorien: density improved, but their crown mass remained too dark and generic. Keep
+the same deterministic positions and counts, but use the installed slimmer light-trunk
+oceanic variants for Lothlorien only. Mirkwood retains its mixed conifer/broadleaf mesh
+population. This is a shipped-EU5 mesh selection, not a new asset or source-boundary
+change.
+
+## 2026-08-02 - Contract every realm and leave unattested land wild
+
+Reject the remaining free-sprawl political allocator. Every realm must have a source
+forest, irregular polygon, or reviewed physical envelope in addition to its region and
+capital. Intersect woodland source masks with separate internal theatre partitions for
+Lothlorien, Woodland Realm, Woodmen, and Dol Guldur. Replace wall-to-wall Harnendor,
+Harad, Khand, and Rhun expansion with conservative irregular envelopes around their
+attested or explicitly invented seats. Prefer wilderness buffers to invented cadastral
+certainty. Keep the 38-realm roster unchanged: smaller factions are welcome only when a
+distinct TA 3018 controller improves lore fidelity, never as a device for consuming
+neutral cells. Validation must continue to reject every contract violation and every
+undispositioned political component.

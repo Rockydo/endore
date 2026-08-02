@@ -156,6 +156,15 @@
    value. Validation removes and rejects every stale palm/grass bin. Full validation and
    exact-fingerprint paired zero-new-line smoke are green. This does not close the still-
    open macro-material/source-envelope audit.
+   CURRENT v79 SOURCE-BIOME CANDIDATE — the proof-era Brown Lands, Rhûn, and Harad
+   polygons have been replaced by a hash-pinned reduction of Ardacraft's 197-feature
+   biome atlas: one detailed Brown Lands component, 41 Rhûn steppe components, 37 Near
+   Harad scrub/woodland components, and seven Far Harad arid components. Explicit organic
+   continuations exist only where Rhûn and Harad meet the authored east/south crop edges;
+   Mordor ash remains last and cannot be overwritten. Static source, control, terrain-
+   cache, and complete 6,004-location regeneration are green. Keep this item open until
+   fresh real-renderer Rhûn/Brown Lands/Harad views and the complete nine-theatre review
+   accept the material read.
 6. REOPENED M2 RIVERS/FORESTS — the primary rivers remain too narrow and the network too
    sparse for EU5 close zoom. Re-audit every visible watercourse against both owner-supplied
    online maps; widen the Anduin, Baranduin, Greyflood, Isen, Celduin, Carnen, Poros,
@@ -247,6 +256,16 @@
    zero-new-line smoke, and exact-fingerprint assertion pass on `e2c57c6e`. This accepts
    the focused ownership checkpoint while the separate physical nine-theatre gate stays
    open; keep the schema-3 component audit active for every later topology change.
+   CURRENT v79 RESEED AUDIT — climate-weighted density legitimately changed generated
+   cell IDs, and schema 3 rejected the stale v78 dispositions before live testing. The
+   replacement audit removes every cross-theatre stale repair, records ten local repairs
+   with tight region/coordinate witnesses plus destination claim checks, and dispositions
+   every surviving barrier split. The regenerated result has 3,467 owned and 2,537 wild
+   land locations, zero claim violations, and zero unreviewed components; Lothlórien is a
+   single 20-location source-overlap claim and Dunland remains one 32-location polygon.
+   Static M3/M4/M5/template checks pass. Fresh political overview, playback, validation,
+   smoke, and exact-fingerprint assertion remain required before this supersedes v78 as
+   the accepted focused ownership checkpoint.
 11. PAUSED M5 renderer: isolate or replace the inherited `boat_with_oars_unit` path that
    emitted a missing `waves_vfx` / `foam_stop` pair on 3018.2.17. The attempted direct
    vanilla control was inconclusive because it still loaded the active ENDÓRË map.
@@ -307,3 +326,45 @@
   zero recovery and a baseline-only 1,486-byte error log. Paired smoke passed in 201.8
   seconds with zero new mod lines and exact `assert-smoked`. Commit and push this coherent
   checkpoint, then return to the still-red wider nine-theatre physical/material review.
+
+## Current v80 priority update (supersedes the stale v74/v75 preservation counts above)
+
+- REOPENED M2 remains the only content priority. The full nine-theatre owner gate is red;
+  do not resume gameplay work.
+- DENSE FORESTS: fresh v79 Caras Galadhon and Woodmen's Hall close views reproduced the
+  owner-reported defect. Mirkwood still exposed broad park-like gaps at ordinary play
+  zoom, and Lothlorien's riverward view read as a dark generic wall. Generator v13 raises
+  the bounded corpus from 3,093,385 to 3,493,385 total transforms, broadens only tree
+  canopies, and protects rare-clearance interiors at every LOD. The exact named-zone
+  census is Mirkwood 1,112,756/796,168/788,083 and Lothlorien
+  87,564/69,865/69,863 at high/medium/low. Lothlorien remains light-trunk-only with zero
+  pine or generic variants; Fangorn, Old Forest, and Ithilien retain independent floors.
+  Static generation/checks pass. Full validation, fresh regional/close live pairs,
+  playback, paired smoke, and exact-fingerprint assertion remain mandatory.
+- POLITICAL FRONTIERS: every one of the 38 realms now has an explicit geography contract;
+  there are zero free-sprawl realms. Lothlorien and the three Mirkwood controllers must
+  satisfy both source-forest overlap and an irregular theatre partition. Irregular
+  envelopes replace unconstrained Voronoi expansion for Harnendor, Qarsad, Far Harad,
+  Khand, and the three Rhunic polities, leaving neutral buffers where the sources do not
+  support centralized TA 3018 control. The coherent result has 3,044 owned and 2,156
+  deliberately wild land locations, zero violations, and zero unreviewed components;
+  Lothlorien is one compact 15-location Naith claim east of the Misty crest. The
+  permanent QA raster labels every capital/tag. No decorative subfaction was added.
+- v79 LOAD BASELINE: before these edits, a fresh HUD-proven Observer start and untouched
+  45-second maximum-speed playback passed on exact fingerprint `1f899f22` with the
+  1,486-byte error-log baseline. This proves the v79 source-biome tree was loadable, not
+  that v80 or the full physical gate is accepted.
+- v80b LIVE FOCUSED RESULT: retain the slimmer installed
+  `environment_oceanic_tree_01/02` meshes for Lothlorien; reject the v80 wide-canopy
+  calibration retained under `docs/screens/20260802_v80_dense_forests_frontiers/` as too
+  dark/generic. A genuinely fresh v80b New Game reached HUD-proven Observer on exact
+  fingerprint `2df4b63d`; regional/close Lothlorien views expose pale trunks and a closed
+  broadleaf canopy, while Mirkwood remains a darker near-continuous mixed forest. The
+  wide live Wilderland political view shows compact Lothlorien outside Moria/Misty
+  Mountain paint; the tagged full-world QA raster proves the new East/South wilderness
+  buffers. A 45-second maximum-speed playback required
+  zero recovery and retained the exact 1,486-byte error log. Final full validation passed
+  in 430.5 seconds. Paired vanilla/ENDORE smoke then passed in 200.8 seconds with zero
+  mod-unique error lines, and `eu5_slot.py assert-smoked` binds that result to exact
+  fingerprint `2df4b63d`. Commit and push this focused batch, then continue the still-red
+  full nine-theatre M2 owner gate.

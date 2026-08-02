@@ -530,3 +530,56 @@ political frames, post-rollback full validation, a separate untouched 45-second 
 playback with baseline-only error log, paired zero-new-line smoke, and exact
 `assert-smoked` all pass on fingerprint `fb07a215`. Harad, Forochel, and the wider
 nine-theatre material gate remain red.
+
+v79 is the current source-biome/topology candidate. It replaces the remaining proof-era
+Brown Lands, Rhûn, Near Harad, and Far Harad climate envelopes with a hash-pinned
+classification and simplified-ring reduction of Ardacraft's detailed biome atlas. The
+control gate binds 1/41/37/7 components and minimum vertex floors for those four groups;
+east/south continuations are explicit judgement controls rather than straight clipping
+or invented ocean closure. Mordor ash retains final precedence. The regenerated material
+preview shows varied western Rhûn steppe, Near Harad scrub/woodland, and aridity only
+farther south instead of uniform green or one pale sand blanket.
+
+The climate-density change reseeded generated location IDs. Schema 3 correctly rejected
+v78's now-stale component dispositions before live testing. v79 replaces them with
+coordinate-witnessed, contract-checked repairs and exact dispositions for every physical
+barrier split; the static political result has zero claim violations and no unreviewed
+component. This is not live acceptance. Fresh Rhûn, Brown Lands, Harad, political
+overview, 45-second playback, paired smoke, and the complete nine-theatre renderer sweep
+remain mandatory; the gate remains red.
+
+v80 is the current dense-forest/complete-frontier candidate. A fresh v79 Observer and
+45-second playback first proved the pre-edit world still loads and ticks cleanly on exact
+fingerprint `1f899f22`; close views then reproduced the owner's Mirkwood/Lothlorien
+density rejection. v80 raises the renderer corpus to a bounded 3,493,385 transforms and
+protects continuous ancient-forest interiors at all LODs. Static counts are
+1,112,756/796,168/788,083 in Mirkwood and 87,564/69,865/69,863 light-trunk-only in
+Lothlorien. These counts are not visual acceptance.
+
+The political audit now binds all 38 realms to explicit physical contracts. Lothlorien
+and each Mirkwood controller must satisfy both source woodland overlap and an irregular
+theatre partition. Harnendor, Near/Far Harad, Khand, and the three Rhunic controllers no
+longer fill their technical regions by unconstrained Voronoi distance; irregular bounded
+spheres leave wilderness where TA 3018 control is unattested. The result has 3,044 owned
+and 2,156 wild land locations, zero violations, zero unreviewed components, and zero
+uncontracted realms. Required acceptance evidence is a fresh v80 HUD-proven Observer,
+reset regional/close forest pairs, a wide live Wilderland political view backed by the
+tagged full-world QA raster, 45-second playback, paired zero-new-line smoke, and exact-
+fingerprint assertion. The full nine-theatre gate remains red regardless.
+
+v80b clears the focused live forest/frontier verification but not the complete M2 gate.
+The first v80 wide-canopy Lothlorien calibration is retained as rejected evidence under
+`docs/screens/20260802_v80_dense_forests_frontiers/`. v80b uses only the installed slimmer
+light-trunk oceanic tree variants for Lothlorien; all counts, source masks, and placements
+remain unchanged. A fresh New Game reached HUD-proven Observer on exact fingerprint
+`2df4b63d`; the frames under `docs/screens/20260802_v80b_birch_meshes/` show pale trunks,
+closed Lothlorien broadleaf canopy, darker near-continuous Mirkwood, and a wide live
+Wilderland political view. The tagged generated QA raster supplies full-world coverage
+of the contracted East/South realms and wilderness buffers. A 45-second maximum-speed
+playback required zero recovery and ended at the exact 1,486-byte baseline error log.
+Final full validation passed in 430.5 seconds. After Antiquitas released its healthy
+session, paired vanilla/ENDORE smoke passed at the next natural checkpoint in 200.8
+seconds with zero mod-unique error lines, and exact-fingerprint assertion binds the pass
+to `2df4b63d9be5180089d9d74fa4b61fb4c22f4c94020d481c394b3b02d0140e63`.
+The focused v80b forest/frontier checkpoint is accepted; the complete nine-theatre
+physical review remains red.

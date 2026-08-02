@@ -29,7 +29,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "cd3b4568e521909b3da61efb7c13e75a2b3c3ffe6e9086d5e9968a5b00bde825"
+    "e07d9c04b58794af270b7ccbbaa661c2acdde23deecdd35adc1a77e9ab9b798b"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -37,6 +37,21 @@ EXPECTED_RELIEF_FILE_SHA256 = (
 EXPECTED_ARDACRAFT_HEIGHTMAP_SHA256 = (
     "a1b05874cd447b9868c0d56a4fad523e5fc94053fa239dc5df7e0b31068144be"
 )
+EXPECTED_ARDACRAFT_BIOMES_SHA256 = (
+    "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
+)
+EXPECTED_SOURCE_BIOME_CLASSES = {
+    "brown_lands": ["M6"],
+    "rhun_steppe": [
+        "L3", "L5", "L7", "M11", "M18", "M2", "M20", "M7",
+        "Z2", "Z3", "Z4", "Z5",
+    ],
+    "near_harad_scrub": [
+        "H1", "H2", "H6", "H7", "J22", "J48", "J49", "K23",
+        "K31", "N4",
+    ],
+    "far_harad_arid": ["H3", "H4", "H5"],
+}
 EXPECTED_FOREST_KEYS = {
     "lothlorien",
     "rhun_woodlands",
@@ -138,6 +153,19 @@ def render_report() -> dict:
         or relief.get("nonzero_samples", 0) < 400_000
     ):
         raise ValueError("Ardacraft-derived relief provenance or detail regressed")
+    biome_descriptor = projection.get("source_biomes")
+    if (
+        not isinstance(biome_descriptor, dict)
+        or biome_descriptor.get("source")
+        != "Ardacraft Biome layer Middle-earth V3"
+        or biome_descriptor.get("source_sha256")
+        != EXPECTED_ARDACRAFT_BIOMES_SHA256
+        or biome_descriptor.get("classification")
+        != EXPECTED_SOURCE_BIOME_CLASSES
+        or biome_descriptor.get("endore_bounds")
+        != [0.148481643, 0.0, 0.774972679, 1.0]
+    ):
+        raise ValueError("Ardacraft-derived biome provenance or classes regressed")
     feature_counts = {
         "mainland_vertices": len(projection["land_polygons"]["mainland"]),
         "offshore_islands": len(projection["land_polygons"]) - 1,
@@ -170,6 +198,20 @@ def render_report() -> dict:
     )
     feature_counts["forest_source_zones"] = len(forest_zones)
     feature_counts["forest_source_components"] = forest_components
+    source_climate_zones = [
+        item
+        for item in projection["biome_zones"]
+        if item.get("source") == "Ardacraft Biome layer Middle-earth V3"
+    ]
+    feature_counts["source_climate_zones"] = len(source_climate_zones)
+    feature_counts["source_climate_components"] = sum(
+        len(item["coords"]) for item in source_climate_zones
+    )
+    feature_counts["source_climate_vertices"] = sum(
+        len(polygon)
+        for item in source_climate_zones
+        for polygon in item["coords"]
+    )
     feature_counts["river_control_vertices"] = sum(
         len(item["points"]) for item in projection["rivers"]
     )
@@ -186,9 +228,12 @@ def render_report() -> dict:
         "ridge_axes": 9,
         "passes": 10,
         "river_valley_controls": 24,
-        "biome_zones": 21,
+        "biome_zones": 25,
         "forest_source_zones": 15,
         "forest_source_components": 57,
+        "source_climate_zones": 4,
+        "source_climate_components": 86,
+        "source_climate_vertices": 7_400,
         "river_control_vertices": 800,
     }
     for key, minimum in minimums.items():
@@ -209,6 +254,23 @@ def render_report() -> dict:
         raise ValueError("one or more named forests lost source-polygon geometry")
     if {item["key"] for item in forest_zones} != EXPECTED_FOREST_KEYS:
         raise ValueError("named forest coverage changed without cartographic review")
+    source_climate_by_key = {item["key"]: item for item in source_climate_zones}
+    if set(source_climate_by_key) != set(EXPECTED_SOURCE_BIOME_CLASSES):
+        raise ValueError("source-derived macro climate coverage changed")
+    expected_components = {
+        "brown_lands": 1,
+        "rhun_steppe": 41,
+        "near_harad_scrub": 37,
+        "far_harad_arid": 7,
+    }
+    for key, labels in EXPECTED_SOURCE_BIOME_CLASSES.items():
+        zone = source_climate_by_key[key]
+        if (
+            zone.get("shape") != "multi_polygon"
+            or zone.get("source_labels") != labels
+            or len(zone.get("coords", [])) != expected_components[key]
+        ):
+            raise ValueError(f"{key} lost its reviewed source-biome reduction")
     highland_zones = projection.get("highland_zones", [])
     moor_zones = projection.get("moor_zones", [])
     if len(highland_zones) != 190 or len(moor_zones) != 8:

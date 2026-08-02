@@ -97,6 +97,7 @@ CLAIM_BOUNDS: dict[str, tuple[float, float, float, float, str]] = {
     "ISE": (0.445, 0.480, 0.415, 0.515, "Isengard ring and Nan Curunír approaches"),
     "UMB": (0.440, 0.590, 0.770, 1.000, "Umbar coast and corsair hinterland"),
     "ANG": (0.415, 0.480, 0.060, 0.200, "Mount Gram and Angmar remnant fastnesses"),
+    "RHO": (0.552, 0.580, 0.265, 0.300, "Rhosgobel's single inhabited clearing"),
 }
 
 # A rectangle is only a coarse search envelope. Canonical woodland realms use the
@@ -104,7 +105,7 @@ CLAIM_BOUNDS: dict[str, tuple[float, float, float, float, str]] = {
 # locations, while Dunland follows a reviewed lowland frontier rather than filling its
 # rectangular search box. Forced seats remain admissible and visible in the audit.
 SOURCE_ZONE_CLAIMS: dict[str, tuple[str, int, str]] = {
-    "LOR": ("lothlorien", 10, "Arda Maps Golden Wood / Naith physical polygon"),
+    "LOR": ("lothlorien", 4, "Arda Maps Golden Wood / Naith physical polygon"),
     "FAN": ("fangorn", 10, "Arda Maps Fangorn physical woodland polygon"),
     "DRU": ("druadan", 8, "Arda Maps Drúadan Forest physical woodland polygon"),
     "WOO": ("mirkwood", 10, "Arda Maps Mirkwood polygon: northern/eastern Woodland Realm"),
@@ -112,6 +113,55 @@ SOURCE_ZONE_CLAIMS: dict[str, tuple[str, int, str]] = {
     "DOL": ("mirkwood", 10, "Arda Maps Mirkwood polygon: southern Dol Guldur shadow"),
 }
 CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
+    "LOR": (
+        (
+            (0.501, 0.339),
+            (0.512, 0.326),
+            (0.532, 0.331),
+            (0.545, 0.349),
+            (0.543, 0.378),
+            (0.529, 0.398),
+            (0.507, 0.390),
+            (0.498, 0.366),
+        ),
+        "Lothlórien's Naith east of the Misty crest and west of Anduin",
+    ),
+    "WOO": (
+        (
+            (0.553, 0.122),
+            (0.598, 0.118),
+            (0.631, 0.145),
+            (0.631, 0.218),
+            (0.616, 0.266),
+            (0.588, 0.300),
+            (0.560, 0.287),
+            (0.550, 0.221),
+        ),
+        "Woodland Realm in northern and northeastern Mirkwood",
+    ),
+    "WDM": (
+        (
+            (0.529, 0.218),
+            (0.558, 0.210),
+            (0.584, 0.236),
+            (0.595, 0.284),
+            (0.580, 0.340),
+            (0.548, 0.350),
+            (0.526, 0.313),
+        ),
+        "Woodmen clearings along western and central Mirkwood",
+    ),
+    "DOL": (
+        (
+            (0.538, 0.307),
+            (0.577, 0.306),
+            (0.603, 0.332),
+            (0.596, 0.382),
+            (0.566, 0.409),
+            (0.534, 0.384),
+        ),
+        "Dol Guldur's southern Mirkwood shadow",
+    ),
     "DUN": (
         (
             (0.414, 0.414),
@@ -123,6 +173,90 @@ CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
             (0.406, 0.462),
         ),
         "Dunland lowlands west of Isen and the Gap, south of Glanduin",
+    ),
+    "HNE": (
+        (
+            (0.555, 0.754),
+            (0.650, 0.747),
+            (0.711, 0.774),
+            (0.718, 0.825),
+            (0.688, 0.858),
+            (0.612, 0.851),
+            (0.565, 0.817),
+        ),
+        "Harnendor between the Poros approaches and the Harnen",
+    ),
+    "HRA": (
+        (
+            (0.600, 0.824),
+            (0.688, 0.818),
+            (0.742, 0.850),
+            (0.736, 0.919),
+            (0.697, 0.965),
+            (0.625, 0.950),
+            (0.594, 0.889),
+        ),
+        "Qarsad's inland Near Harad sphere, separated from Harnendor and Khand",
+    ),
+    "HFA": (
+        (
+            (0.490, 0.904),
+            (0.575, 0.892),
+            (0.660, 0.919),
+            (0.682, 0.997),
+            (0.482, 0.997),
+            (0.463, 0.958),
+        ),
+        "represented northern fringe of Far Harad",
+    ),
+    "KHA": (
+        (
+            (0.686, 0.671),
+            (0.756, 0.650),
+            (0.833, 0.685),
+            (0.858, 0.751),
+            (0.828, 0.823),
+            (0.755, 0.836),
+            (0.692, 0.795),
+        ),
+        "Khand east and southeast of Mordor, excluding Far Harad",
+    ),
+    "RHU": (
+        (
+            (0.700, 0.115),
+            (0.770, 0.105),
+            (0.818, 0.142),
+            (0.825, 0.235),
+            (0.798, 0.310),
+            (0.727, 0.323),
+            (0.682, 0.268),
+            (0.684, 0.176),
+        ),
+        "western Rhûn polity north and east of Dorwinion",
+    ),
+    "RH2": (
+        (
+            (0.720, 0.286),
+            (0.791, 0.270),
+            (0.855, 0.301),
+            (0.871, 0.382),
+            (0.839, 0.455),
+            (0.759, 0.461),
+            (0.709, 0.407),
+        ),
+        "southeastern Rhûn wain-kingdom beyond the Sea of Rhûn",
+    ),
+    "RH3": (
+        (
+            (0.777, 0.091),
+            (0.851, 0.082),
+            (0.897, 0.124),
+            (0.898, 0.220),
+            (0.864, 0.283),
+            (0.811, 0.277),
+            (0.785, 0.219),
+        ),
+        "northeastern Rhûn confederation beyond the Iron Hills",
     ),
 }
 CONTRACTED_TAGS = (
@@ -170,58 +304,110 @@ CONTIGUOUS_CLAIM_REALMS = frozenset(
         "WOO",
     }
 )
-# Full-raster v77 review found a small set of unforced one/two-cell colour
-# islands that passed their coarse realm envelope but contradicted the local
-# physical frontier. Keep these repairs explicit and reviewable rather than
-# adding a generic smoothing pass that could erase real islands, divided
-# valleys, or mountain fastnesses. Every key and disposition is emitted in the
-# location-level ownership audit and therefore breaks validation if topology
-# changes under it.
-REVIEWED_COMPONENT_REPAIRS: dict[str, tuple[str, str]] = {
-    "me_land_1322": (WILD, "east/south of the reviewed Brandywine Shire claim"),
-    "me_land_2686": (WILD, "east of the reviewed Brandywine Shire claim"),
-    "me_land_2291": ("GON", "south of the White Mountains on Gondor's side"),
-    "me_land_2844": ("GON", "south of the White Mountains on Gondor's side"),
-    "me_land_2679": ("DAM", "Belfalas coast contiguous with the Dol Amroth fief"),
-    "me_land_4786": ("ESG", "Long Lake shore contiguous with Esgaroth"),
-    "me_land_0616": ("GOB", "Misty Mountain/High Pass side of the vale frontier"),
-    "me_land_2623": ("GOB", "Misty Mountain/High Pass side of the vale frontier"),
-    "me_land_1671": ("BEO", "Anduin-vale side of the Misty Mountain frontier"),
-    "me_land_2985": ("DOR", "contiguous southwest Dorwinion frontier"),
-    "me_land_4621": ("DOR", "contiguous southwest Dorwinion frontier"),
-    "me_land_4846": ("DOR", "contiguous southwest Dorwinion frontier"),
-    "me_land_0469": ("BLU", "Blue Mountain holding beyond Lindon's coast"),
-    "me_land_3379": ("BLU", "Blue Mountain holding beyond Lindon's coast"),
-    "me_land_4141": ("BLU", "Blue Mountain holding beyond Lindon's coast"),
-    "me_land_0003": (WILD, "unattested remote island beyond Lindon's coast"),
+# The climate-density reseed changed generated location IDs after the v77/v78
+# political review. Each repair therefore carries a narrow physical witness as
+# well as the target owner: expected region and normalized coordinate window.
+# This makes a future reseed fail at assignment time rather than silently
+# repainting an unrelated cell that inherited an old generated ID.
+#
+# These are deliberately local corrections, not a generic smoothing pass that
+# could erase real islands, divided valleys, or mountain fastnesses.
+REVIEWED_COMPONENT_REPAIRS: dict[
+    str, tuple[str, str, str, tuple[float, float, float, float]]
+] = {
+    "me_land_1771": (
+        "DAM",
+        "Belfalas coast contiguous with the Dol Amroth fief",
+        "me_belfalas_region",
+        (0.500, 0.520, 0.720, 0.740),
+    ),
+    "me_land_2353": (
+        "GON",
+        "south of the White Mountains on Gondor's side",
+        "me_rohan_region",
+        (0.460, 0.480, 0.550, 0.580),
+    ),
+    "me_land_2909": (
+        "GON",
+        "south of the White Mountains on Gondor's side",
+        "me_rohan_region",
+        (0.460, 0.480, 0.550, 0.580),
+    ),
+    "me_land_1346": (
+        WILD,
+        "east of the reviewed Brandywine Shire claim at the Bree frontier",
+        "me_shire_breeland_region",
+        (0.375, 0.395, 0.255, 0.280),
+    ),
+    "me_land_2747": (
+        WILD,
+        "east/north of the reviewed Brandywine Shire claim at the Bree frontier",
+        "me_shire_breeland_region",
+        (0.375, 0.395, 0.205, 0.225),
+    ),
+    "me_land_0486": (
+        "BLU",
+        "Blue Mountain holding closer to the Blue Halls than northern Lindon",
+        "me_lindon_region",
+        (0.300, 0.320, 0.125, 0.145),
+    ),
+    "me_land_4249": (
+        "BLU",
+        "Blue Mountain holding closer to the Blue Halls than northern Lindon",
+        "me_lindon_region",
+        (0.270, 0.290, 0.115, 0.130),
+    ),
+    "me_land_0003": (
+        WILD,
+        "unattested remote island beyond Lindon's coast",
+        "me_lindon_region",
+        (0.135, 0.155, 0.165, 0.185),
+    ),
+    "me_land_4894": (
+        "ESG",
+        "Long Lake shore contiguous with and closer to Esgaroth than Dale",
+        "me_dale_region",
+        (0.600, 0.620, 0.210, 0.230),
+    ),
+    "me_land_1707": (
+        "BEO",
+        "Anduin-vale side of the High Pass frontier, contiguous with the Beornings",
+        "me_anduin_vale_region",
+        (0.510, 0.530, 0.210, 0.230),
+    ),
+    "me_land_3898": (
+        WILD,
+        "isolated western tip beyond the continuous southeastern Rhûn claim",
+        "me_rhun_region",
+        (0.710, 0.730, 0.395, 0.415),
+    ),
 }
 # Every surviving non-primary, non-forced political component has an explicit
 # physical explanation. The exact member sets intentionally make topology
 # changes fail validation and return to review rather than silently inheriting
 # an obsolete exception.
 REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
-    ("GON", frozenset({"me_land_0004", "me_land_1958"})): (
+    ("GON", frozenset({"me_land_0004", "me_land_1280"})): (
         "Tolfalas island, separated from mainland Gondor by engine water"
     ),
     (
         "ROH",
         frozenset(
             {
-                "me_land_0116",
-                "me_land_0411",
-                "me_land_0485",
-                "me_land_0520",
-                "me_land_0538",
-                "me_land_0738",
-                "me_land_0755",
-                "me_land_1175",
-                "me_land_2116",
-                "me_land_2484",
-                "me_land_3220",
-                "me_land_3332",
-                "me_land_4510",
-                "me_land_4833",
-                "me_land_5133",
+                "me_land_0119",
+                "me_land_0426",
+                "me_land_0502",
+                "me_land_0537",
+                "me_land_0556",
+                "me_land_0756",
+                "me_land_0771",
+                "me_land_1198",
+                "me_land_2167",
+                "me_land_2549",
+                "me_land_3295",
+                "me_land_3414",
+                "me_land_4614",
+                "me_land_4946",
             }
         ),
     ): "Westfold component divided by river/impassable location topology",
@@ -229,15 +415,15 @@ REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
         "LIN",
         frozenset(
             {
-                "me_land_0208",
-                "me_land_0762",
-                "me_land_2706",
-                "me_land_2874",
-                "me_land_3272",
-                "me_land_3941",
-                "me_land_3992",
-                "me_land_4263",
-                "me_land_4996",
+                "me_land_0214",
+                "me_land_0778",
+                "me_land_2766",
+                "me_land_2938",
+                "me_land_3349",
+                "me_land_4046",
+                "me_land_4096",
+                "me_land_4373",
+                "me_land_5113",
             }
         ),
     ): "reviewed Lindon coast divided by Gulf and Blue Mountain topology",
@@ -246,18 +432,19 @@ REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
         frozenset(
             {
                 "me_land_0001",
-                "me_land_0114",
-                "me_land_0274",
-                "me_land_0759",
-                "me_land_1532",
-                "me_land_1663",
-                "me_land_2202",
-                "me_land_3111",
-                "me_land_4340",
-                "me_land_4560",
-                "me_land_4729",
-                "me_land_4789",
-                "me_land_5060",
+                "me_land_0117",
+                "me_land_0284",
+                "me_land_0775",
+                "me_land_1562",
+                "me_land_1699",
+                "me_land_2259",
+                "me_land_2977",
+                "me_land_3182",
+                "me_land_4177",
+                "me_land_4447",
+                "me_land_4665",
+                "me_land_4833",
+                "me_land_4898",
             }
         ),
     ): "reviewed Lossoth shore divided by Icebay water topology",
@@ -266,11 +453,11 @@ REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
         "GUN",
         frozenset(
             {
-                "me_land_0891",
-                "me_land_3283",
-                "me_land_4680",
-                "me_land_4903",
-                "me_land_5049",
+                "me_land_1267",
+                "me_land_2275",
+                "me_land_2708",
+                "me_land_4604",
+                "me_land_4785",
             }
         ),
     ): "northern goblin fastnesses divided by impassable mountain locations",
@@ -278,47 +465,50 @@ REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
         "GUN",
         frozenset(
             {
-                "me_land_1243",
-                "me_land_2217",
-                "me_land_2645",
-                "me_land_4499",
-                "me_land_4678",
+                "me_land_0908",
+                "me_land_3360",
+                "me_land_4787",
+                "me_land_5022",
             }
         ),
     ): "northern goblin fastnesses divided by impassable mountain locations",
-    ("GUN", frozenset({"me_land_1312"})): (
+    ("GUN", frozenset({"me_land_1335"})): (
         "isolated northern goblin fastness among impassable peaks"
     ),
+    (
+        "BEO",
+        frozenset(
+            {
+                "me_land_0258",
+                "me_land_0361",
+                "me_land_0637",
+                "me_land_2685",
+                "me_land_2700",
+                "me_land_3535",
+            }
+        ),
+    ): "upper Anduin settlements divided by High Pass and impassable mountain locations",
     (
         "HNE",
         frozenset(
             {
-                "me_land_0770",
-                "me_land_1093",
-                "me_land_1382",
-                "me_land_2294",
-                "me_land_2446",
-                "me_land_2582",
-                "me_land_2997",
-                "me_land_3568",
-                "me_land_4050",
+                "me_land_0786",
+                "me_land_1114",
+                "me_land_1409",
+                "me_land_2356",
+                "me_land_2512",
+                "me_land_2645",
+                "me_land_3066",
+                "me_land_3652",
+                "me_land_4156",
             }
         ),
     ): "lower-confidence Near Harad component divided at the southern crop edge",
-    (
-        "HFA",
-        frozenset(
-            {
-                "me_land_0587",
-                "me_land_1202",
-                "me_land_2685",
-                "me_land_2958",
-                "me_land_4333",
-            }
-        ),
-    ): "lower-confidence Far Harad component divided at the southern crop edge",
-    ("KHA", frozenset({"me_land_1840", "me_land_3057", "me_land_3738"})): (
+    ("KHA", frozenset({"me_land_1202", "me_land_2057", "me_land_4792"})): (
         "Khand approach divided from its basin by Mordor's mountain wall"
+    ),
+    ("RHU", frozenset({"me_land_3054", "me_land_4727", "me_land_4963"})): (
+        "western Rhûn component divided from its basin at the Dorwinion frontier"
     ),
 }
 # Region-only claims lack a precise source envelope, so this ceiling prevents their
@@ -578,12 +768,22 @@ def claim_contract(
     source_contract = SOURCE_ZONE_CLAIMS.get(realm.tag)
     if source_contract is not None:
         allowed = location.key in source_zone_claims[realm.tag]
+        rationales = [source_contract[2]]
         bounds = CLAIM_BOUNDS.get(realm.tag)
         if bounds is not None:
             x0, x1, y0, y1, _ = bounds
             x, y = location.normalized
             allowed = allowed and x0 <= x <= x1 and y0 <= y <= y1
-        return allowed, source_contract[2]
+            rationales.append(bounds[4])
+        polygon_contract = CLAIM_POLYGONS.get(realm.tag)
+        if polygon_contract is not None:
+            polygon, rationale = polygon_contract
+            allowed = allowed and point_in_polygon(
+                *location.normalized,
+                polygon,
+            )
+            rationales.append(rationale)
+        return allowed, "; ".join(rationales)
     polygon_contract = CLAIM_POLYGONS.get(realm.tag)
     if polygon_contract is not None:
         polygon, rationale = polygon_contract
@@ -783,7 +983,7 @@ def assign_ownership(
         if location.kind != "land":
             ownership[location.key] = WILD
             wild_reason[location.key] = f"wild_{location.kind}"
-    for key, (tag, rationale) in REVIEWED_COMPONENT_REPAIRS.items():
+    for key, (tag, rationale, expected_region, witness) in REVIEWED_COMPONENT_REPAIRS.items():
         location = model.by_key.get(key)
         if location is None or location.kind != "land":
             raise ValueError(f"reviewed political repair lost land location {key}")
@@ -791,6 +991,24 @@ def assign_ownership(
             raise ValueError(f"reviewed political repair overlaps forced anchor {key}")
         if tag != WILD and tag not in by_tag:
             raise ValueError(f"reviewed political repair uses unknown realm {tag}")
+        if location.region != expected_region:
+            raise ValueError(
+                f"reviewed political repair {key} moved from {expected_region} "
+                f"to {location.region}"
+            )
+        x0, x1, y0, y1 = witness
+        x, y = location.normalized
+        if not (x0 <= x <= x1 and y0 <= y <= y1):
+            raise ValueError(
+                f"reviewed political repair {key} moved outside its physical witness: "
+                f"{x:.7f},{y:.7f}"
+            )
+        if tag != WILD:
+            accepted, contract = claim_contract(location, by_tag[tag], source_zone_claims)
+            if not accepted:
+                raise ValueError(
+                    f"reviewed political repair {key}->{tag} violates {contract}"
+                )
         ownership[key] = tag
         if tag == WILD:
             wild_reason[key] = f"wild_reviewed_component: {rationale}"
@@ -1013,6 +1231,16 @@ def political_qa_png(state: RealmState) -> bytes:
         x, y = location.x, location.y
         draw.rectangle((x - 2, y - 2, x + 2, y + 2), fill=(8, 8, 8))
         draw.point((x, y), fill=(255, 255, 255))
+        # The audit raster is a review artifact, not in-game art.  Labelling
+        # every seat makes the full 38-realm frontier review possible without
+        # guessing colours or cross-referencing a second image.
+        draw.text(
+            (x + 5, y - 6),
+            realm.tag,
+            fill=(255, 255, 255),
+            stroke_width=2,
+            stroke_fill=(8, 8, 8),
+        )
     output = io.BytesIO()
     image.save(output, format="PNG", compress_level=9)
     return output.getvalue()
@@ -1674,7 +1902,7 @@ def check() -> list[str]:
             failures.append(f"{realm.tag} owns no locations")
         reviewed_allowance = sum(
             target == realm.tag
-            for target, _ in REVIEWED_COMPONENT_REPAIRS.values()
+            for target, _, _, _ in REVIEWED_COMPONENT_REPAIRS.values()
         )
         if (
             realm.max_locations

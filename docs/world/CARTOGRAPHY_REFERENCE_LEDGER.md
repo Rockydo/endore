@@ -93,6 +93,27 @@ tuning.
   parts and binds the hierarchy, provenance, widths, incision, material
   response, and basin-level coverage independently.
 
+## Source-biome reduction contract
+
+The quarantined Ardacraft biome atlas is hash-pinned as
+`2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997`. Production
+code retains no downloaded image, label text, or source colour. It transforms and
+simplifies only the outer numeric rings needed by ENDÓRË, grouped as follows:
+
+- Brown Lands: `M6` (one component).
+- Rhûn steppe: `L3`, `L5`, `L7`, `M11`, `M18`, `M2`, `M20`, `M7`, and `Z2`–`Z5`
+  (41 components).
+- Near Harad scrub/woodland: `H1`, `H2`, `H6`, `H7`, `J22`, `J48`, `J49`, `K23`,
+  `K31`, and `N4` (37 components).
+- Far Harad arid: `H3`, `H4`, and `H5` (seven components).
+
+The source atlas ends at its own represented edge. ENDÓRË's wider east/south crop needs
+explicit organic continuation polygons for Rhûn and Harad; those controls are marked as
+judgement calls and may not masquerade as source geometry. Mordor's source-enclosed ash
+zone is applied after the reduced atlas so the eastern steppe cannot overwrite it.
+Validation binds the source hash, classification, component counts, vertex floors,
+continuation provenance, ordering, and the complete resulting projection hash.
+
 ## Political source-overlap contract
 
 Political woodland claims are independently raster-overlapped against the same

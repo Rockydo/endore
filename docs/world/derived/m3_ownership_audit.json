@@ -2,8 +2,8 @@
   "schema": 3,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3430,
-  "wild_locations": 1770,
+  "owned_locations": 3044,
+  "wild_locations": 2156,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -20,7 +20,7 @@
       "locations": 55,
       "forced_anchors": 2,
       "final_bbox": [
-        0.4224664,
+        0.4222222,
         0.4722833,
         0.0635076,
         0.1934538
@@ -36,11 +36,11 @@
             "size": 54,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0159",
-              "me_land_0342",
-              "me_land_0426",
-              "me_land_0540",
-              "me_land_0552"
+              "me_land_0161",
+              "me_land_0354",
+              "me_land_0441",
+              "me_land_0558",
+              "me_land_0570"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -71,33 +71,53 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 64,
+      "locations": 66,
       "forced_anchors": 1,
       "final_bbox": [
-        0.5201465,
+        0.5057387,
         0.5521368,
         0.1514411,
-        0.2989741
+        0.2745481
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 1,
-        "largest_component": 64,
-        "largest_component_fraction": 1.0,
+        "components": 2,
+        "largest_component": 60,
+        "largest_component_fraction": 0.909091,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 64,
+            "size": 60,
             "forced_anchors": 1,
             "sample": [
               "carrock",
-              "me_land_0016",
-              "me_land_0150",
-              "me_land_0204",
-              "me_land_0210"
+              "me_land_0015",
+              "me_land_0151",
+              "me_land_0210",
+              "me_land_0311"
             ],
             "locations": [],
             "disposition": "primary_component"
+          },
+          {
+            "size": 6,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0258",
+              "me_land_0361",
+              "me_land_0637",
+              "me_land_2685",
+              "me_land_2700"
+            ],
+            "locations": [
+              "me_land_0258",
+              "me_land_0361",
+              "me_land_0637",
+              "me_land_2685",
+              "me_land_2700",
+              "me_land_3535"
+            ],
+            "disposition": "upper Anduin settlements divided by High Pass and impassable mountain locations"
           }
         ]
       },
@@ -117,7 +137,7 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 43,
+      "locations": 42,
       "forced_anchors": 1,
       "final_bbox": [
         0.2661783,
@@ -128,19 +148,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 43,
+        "largest_component": 42,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 43,
+            "size": 42,
             "forced_anchors": 1,
             "sample": [
               "me_land_0039",
-              "me_land_0383",
-              "me_land_0384",
-              "me_land_0452",
-              "me_land_0469"
+              "me_land_0394",
+              "me_land_0395",
+              "me_land_0470",
+              "me_land_0486"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -180,10 +200,10 @@
             "forced_anchors": 1,
             "sample": [
               "me_bree",
-              "me_land_0573",
-              "me_land_0614",
-              "me_land_0882",
-              "me_land_0915"
+              "me_land_0591",
+              "me_land_0635",
+              "me_land_0900",
+              "me_land_0933"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -203,7 +223,7 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 16,
+      "locations": 15,
       "forced_anchors": 1,
       "final_bbox": [
         0.5931624,
@@ -214,19 +234,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 16,
+        "largest_component": 15,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 16,
+            "size": 15,
             "forced_anchors": 1,
             "sample": [
               "dale",
-              "me_land_0157",
-              "me_land_0659",
-              "me_land_0718",
-              "me_land_0954"
+              "me_land_0159",
+              "me_land_0678",
+              "me_land_0734",
+              "me_land_0971"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -266,10 +286,10 @@
             "forced_anchors": 1,
             "sample": [
               "dol_amroth",
-              "me_land_0084",
+              "me_land_0087",
               "me_land_0140",
-              "me_land_0262",
-              "me_land_0365"
+              "me_land_0273",
+              "me_land_0377"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -288,31 +308,56 @@
       ],
       "source_zone": "mirkwood",
       "source_dilation_pixels": 10,
-      "claim_polygon": null,
-      "locations": 36,
+      "claim_polygon": [
+        [
+          0.538,
+          0.307
+        ],
+        [
+          0.577,
+          0.306
+        ],
+        [
+          0.603,
+          0.332
+        ],
+        [
+          0.596,
+          0.382
+        ],
+        [
+          0.566,
+          0.409
+        ],
+        [
+          0.534,
+          0.384
+        ]
+      ],
+      "locations": 38,
       "forced_anchors": 1,
       "final_bbox": [
         0.5360195,
-        0.5941392,
+        0.5946276,
         0.3263312,
         0.3873962
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 36,
+        "largest_component": 38,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 36,
+            "size": 38,
             "forced_anchors": 1,
             "sample": [
               "dol_guldur",
-              "me_land_0069",
-              "me_land_0076",
-              "me_land_0105",
-              "me_land_0118"
+              "me_land_0072",
+              "me_land_0080",
+              "me_land_0108",
+              "me_land_0121"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -335,30 +380,30 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 93,
+      "locations": 90,
       "forced_anchors": 1,
       "final_bbox": [
         0.6498168,
         0.7194139,
         0.2877382,
-        0.43234
+        0.431363
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 93,
+        "largest_component": 90,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 93,
+            "size": 90,
             "forced_anchors": 1,
             "sample": [
               "dorwinion",
-              "me_land_0045",
-              "me_land_0057",
-              "me_land_0209",
-              "me_land_0264"
+              "me_land_0046",
+              "me_land_0061",
+              "me_land_0215",
+              "me_land_0275"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -397,9 +442,9 @@
             "size": 3,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0780",
-              "me_land_1245",
-              "me_land_2596"
+              "me_land_0798",
+              "me_land_1269",
+              "me_land_2658"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -467,11 +512,11 @@
             "size": 32,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0162",
-              "me_land_0199",
-              "me_land_0487",
-              "me_land_0605",
-              "me_land_0769"
+              "me_land_0164",
+              "me_land_0203",
+              "me_land_0504",
+              "me_land_0624",
+              "me_land_0785"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -494,30 +539,30 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 28,
+      "locations": 27,
       "forced_anchors": 1,
       "final_bbox": [
         0.570696,
         0.6273504,
         0.1201759,
-        0.1494871
+        0.1489985
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 28,
+        "largest_component": 27,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 28,
+            "size": 27,
             "forced_anchors": 1,
             "sample": [
               "erebor",
-              "me_land_0124",
-              "me_land_0284",
-              "me_land_0360",
-              "me_land_0453"
+              "me_land_0126",
+              "me_land_0296",
+              "me_land_0373",
+              "me_land_0471"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -557,10 +602,10 @@
             "forced_anchors": 1,
             "sample": [
               "esgaroth",
-              "me_land_0072",
-              "me_land_0465",
-              "me_land_0997",
-              "me_land_1399"
+              "me_land_0075",
+              "me_land_0482",
+              "me_land_1016",
+              "me_land_1427"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -580,7 +625,7 @@
       "source_zone": "fangorn",
       "source_dilation_pixels": 10,
       "claim_polygon": null,
-      "locations": 31,
+      "locations": 30,
       "forced_anchors": 2,
       "final_bbox": [
         0.4761905,
@@ -591,19 +636,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 31,
+        "largest_component": 30,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 31,
+            "size": 30,
             "forced_anchors": 2,
             "sample": [
               "me_land_0034",
-              "me_land_0247",
-              "me_land_0307",
-              "me_land_0532",
-              "me_land_0534"
+              "me_land_0259",
+              "me_land_0319",
+              "me_land_0550",
+              "me_land_0552"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -623,30 +668,30 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 32,
+      "locations": 28,
       "forced_anchors": 1,
       "final_bbox": [
         0.4903541,
         0.5181929,
         0.1504641,
-        0.2388862
+        0.2344895
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 32,
+        "largest_component": 28,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 32,
+            "size": 28,
             "forced_anchors": 1,
             "sample": [
               "goblin_town",
-              "me_land_0126",
-              "me_land_0337",
-              "me_land_0433",
-              "me_land_0616"
+              "me_land_0128",
+              "me_land_0349",
+              "me_land_0449",
+              "me_land_0717"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -669,7 +714,7 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 410,
+      "locations": 416,
       "forced_anchors": 9,
       "final_bbox": [
         0.354823,
@@ -680,19 +725,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 2,
-        "largest_component": 408,
-        "largest_component_fraction": 0.995122,
+        "largest_component": 414,
+        "largest_component_fraction": 0.995192,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 408,
+            "size": 414,
             "forced_anchors": 9,
             "sample": [
               "calembel",
               "erech",
               "linhir",
               "me_land_0011",
-              "me_land_0021"
+              "me_land_0020"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -702,11 +747,11 @@
             "forced_anchors": 0,
             "sample": [
               "me_land_0004",
-              "me_land_1958"
+              "me_land_1280"
             ],
             "locations": [
               "me_land_0004",
-              "me_land_1958"
+              "me_land_1280"
             ],
             "disposition": "Tolfalas island, separated from mainland Gondor by engine water"
           }
@@ -725,7 +770,7 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 28,
+      "locations": 27,
       "forced_anchors": 1,
       "final_bbox": [
         0.4708181,
@@ -737,18 +782,18 @@
       "connectivity": {
         "components": 5,
         "largest_component": 16,
-        "largest_component_fraction": 0.571429,
+        "largest_component_fraction": 0.592593,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
             "size": 16,
             "forced_anchors": 0,
             "sample": [
-              "me_land_0122",
-              "me_land_0218",
-              "me_land_0437",
-              "me_land_0468",
-              "me_land_0533"
+              "me_land_0124",
+              "me_land_0224",
+              "me_land_0454",
+              "me_land_0485",
+              "me_land_0551"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -757,37 +802,35 @@
             "size": 5,
             "forced_anchors": 0,
             "sample": [
-              "me_land_0891",
-              "me_land_3283",
-              "me_land_4680",
-              "me_land_4903",
-              "me_land_5049"
+              "me_land_1267",
+              "me_land_2275",
+              "me_land_2708",
+              "me_land_4604",
+              "me_land_4785"
             ],
             "locations": [
-              "me_land_0891",
-              "me_land_3283",
-              "me_land_4680",
-              "me_land_4903",
-              "me_land_5049"
+              "me_land_1267",
+              "me_land_2275",
+              "me_land_2708",
+              "me_land_4604",
+              "me_land_4785"
             ],
             "disposition": "northern goblin fastnesses divided by impassable mountain locations"
           },
           {
-            "size": 5,
+            "size": 4,
             "forced_anchors": 0,
             "sample": [
-              "me_land_1243",
-              "me_land_2217",
-              "me_land_2645",
-              "me_land_4499",
-              "me_land_4678"
+              "me_land_0908",
+              "me_land_3360",
+              "me_land_4787",
+              "me_land_5022"
             ],
             "locations": [
-              "me_land_1243",
-              "me_land_2217",
-              "me_land_2645",
-              "me_land_4499",
-              "me_land_4678"
+              "me_land_0908",
+              "me_land_3360",
+              "me_land_4787",
+              "me_land_5022"
             ],
             "disposition": "northern goblin fastnesses divided by impassable mountain locations"
           },
@@ -806,10 +849,10 @@
             "size": 1,
             "forced_anchors": 0,
             "sample": [
-              "me_land_1312"
+              "me_land_1335"
             ],
             "locations": [
-              "me_land_1312"
+              "me_land_1335"
             ],
             "disposition": "isolated northern goblin fastness among impassable peaks"
           }
@@ -819,6 +862,203 @@
         34,
         62
       ]
+    },
+    "HFA": {
+      "rationale": "represented northern fringe of Far Harad",
+      "claim_bounds": null,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.49,
+          0.904
+        ],
+        [
+          0.575,
+          0.892
+        ],
+        [
+          0.66,
+          0.919
+        ],
+        [
+          0.682,
+          0.997
+        ],
+        [
+          0.482,
+          0.997
+        ],
+        [
+          0.463,
+          0.958
+        ]
+      ],
+      "locations": 69,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5601954,
+        0.6793651,
+        0.9120664,
+        0.9960918
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 69,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 69,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0388",
+              "me_land_0505",
+              "me_land_0672",
+              "me_land_0735",
+              "me_land_0817"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "HNE": {
+      "rationale": "Harnendor between the Poros approaches and the Harnen",
+      "claim_bounds": null,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.555,
+          0.754
+        ],
+        [
+          0.65,
+          0.747
+        ],
+        [
+          0.711,
+          0.774
+        ],
+        [
+          0.718,
+          0.825
+        ],
+        [
+          0.688,
+          0.858
+        ],
+        [
+          0.612,
+          0.851
+        ],
+        [
+          0.565,
+          0.817
+        ]
+      ],
+      "locations": 105,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.558486,
+        0.6888889,
+        0.7601368,
+        0.8500244
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 105,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 105,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0031",
+              "me_land_0044",
+              "me_land_0060",
+              "me_land_0100",
+              "me_land_0147"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "HRA": {
+      "rationale": "Qarsad's inland Near Harad sphere, separated from Harnendor and Khand",
+      "claim_bounds": null,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.6,
+          0.824
+        ],
+        [
+          0.688,
+          0.818
+        ],
+        [
+          0.742,
+          0.85
+        ],
+        [
+          0.736,
+          0.919
+        ],
+        [
+          0.697,
+          0.965
+        ],
+        [
+          0.625,
+          0.95
+        ],
+        [
+          0.594,
+          0.889
+        ]
+      ],
+      "locations": 90,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.603663,
+        0.7338217,
+        0.8207132,
+        0.9599414
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 90,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 90,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0026",
+              "me_land_0173",
+              "me_land_0435",
+              "me_land_0439",
+              "me_land_0614"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
     },
     "IRO": {
       "rationale": "Iron Hills source label and adjacent holds",
@@ -837,7 +1077,7 @@
         0.645177,
         0.7064713,
         0.1216414,
-        0.1890572
+        0.1895457
       ],
       "contract_violations": 0,
       "connectivity": {
@@ -850,11 +1090,11 @@
             "size": 45,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0086",
-              "me_land_0224",
-              "me_land_0329",
-              "me_land_0427",
-              "me_land_0539"
+              "me_land_0088",
+              "me_land_0232",
+              "me_land_0343",
+              "me_land_0442",
+              "me_land_0557"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -897,13 +1137,95 @@
             "forced_anchors": 1,
             "sample": [
               "isengard",
-              "me_land_0063",
-              "me_land_0222",
-              "me_land_0278",
-              "me_land_0370"
+              "me_land_0066",
+              "me_land_0229",
+              "me_land_0289",
+              "me_land_0382"
             ],
             "locations": [],
             "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "KHA": {
+      "rationale": "Khand east and southeast of Mordor, excluding Far Harad",
+      "claim_bounds": null,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.686,
+          0.671
+        ],
+        [
+          0.756,
+          0.65
+        ],
+        [
+          0.833,
+          0.685
+        ],
+        [
+          0.858,
+          0.751
+        ],
+        [
+          0.828,
+          0.823
+        ],
+        [
+          0.755,
+          0.836
+        ],
+        [
+          0.692,
+          0.795
+        ]
+      ],
+      "locations": 145,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.6913309,
+        0.8388278,
+        0.7205667,
+        0.8299951
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 142,
+        "largest_component_fraction": 0.97931,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 142,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0047",
+              "me_land_0158",
+              "me_land_0197",
+              "me_land_0207",
+              "me_land_0227"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          },
+          {
+            "size": 3,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1202",
+              "me_land_2057",
+              "me_land_4792"
+            ],
+            "locations": [
+              "me_land_1202",
+              "me_land_2057",
+              "me_land_4792"
+            ],
+            "disposition": "Khand approach divided from its basin by Mordor's mountain wall"
           }
         ]
       },
@@ -920,7 +1242,7 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 135,
+      "locations": 131,
       "forced_anchors": 3,
       "final_bbox": [
         0.225641,
@@ -931,19 +1253,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 3,
-        "largest_component": 77,
-        "largest_component_fraction": 0.57037,
+        "largest_component": 73,
+        "largest_component_fraction": 0.557252,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 77,
+            "size": 73,
             "forced_anchors": 2,
             "sample": [
               "harlond_lindon",
-              "me_land_0029",
-              "me_land_0289",
-              "me_land_0324",
-              "me_land_0471"
+              "me_land_0028",
+              "me_land_0300",
+              "me_land_0338",
+              "me_land_0488"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -953,61 +1275,61 @@
             "forced_anchors": 1,
             "sample": [
               "forlond",
-              "me_land_0189",
-              "me_land_0388",
-              "me_land_0390",
-              "me_land_0436"
+              "me_land_0192",
+              "me_land_0400",
+              "me_land_0402",
+              "me_land_0453"
             ],
             "locations": [
               "forlond",
-              "me_land_0189",
-              "me_land_0388",
-              "me_land_0390",
-              "me_land_0436",
-              "me_land_0502",
-              "me_land_0553",
-              "me_land_0662",
-              "me_land_0665",
-              "me_land_0677",
-              "me_land_0919",
-              "me_land_1053",
-              "me_land_1138",
-              "me_land_1291",
-              "me_land_1426",
-              "me_land_1639",
-              "me_land_1854",
-              "me_land_1956",
-              "me_land_1971",
-              "me_land_2058",
-              "me_land_2067",
-              "me_land_2073",
-              "me_land_2163",
-              "me_land_2445",
-              "me_land_2605",
-              "me_land_2619",
-              "me_land_3002",
-              "me_land_3173",
-              "me_land_3219",
-              "me_land_3324",
+              "me_land_0192",
+              "me_land_0400",
+              "me_land_0402",
+              "me_land_0453",
+              "me_land_0519",
+              "me_land_0571",
+              "me_land_0680",
+              "me_land_0683",
+              "me_land_0694",
+              "me_land_0936",
+              "me_land_1072",
+              "me_land_1161",
+              "me_land_1314",
+              "me_land_1453",
+              "me_land_1673",
+              "me_land_1894",
+              "me_land_1999",
+              "me_land_2012",
+              "me_land_2108",
+              "me_land_2117",
+              "me_land_2124",
+              "me_land_2217",
+              "me_land_2511",
+              "me_land_2667",
+              "me_land_2682",
+              "me_land_3070",
+              "me_land_3247",
+              "me_land_3294",
               "me_land_3405",
-              "me_land_3841",
-              "me_land_3869",
-              "me_land_3878",
-              "me_land_3970",
-              "me_land_4035",
-              "me_land_4080",
-              "me_land_4103",
-              "me_land_4154",
-              "me_land_4374",
-              "me_land_4451",
+              "me_land_3483",
+              "me_land_3937",
+              "me_land_3971",
+              "me_land_3981",
+              "me_land_4076",
+              "me_land_4141",
+              "me_land_4187",
+              "me_land_4211",
+              "me_land_4262",
+              "me_land_4483",
               "me_land_4557",
-              "me_land_4626",
-              "me_land_4711",
-              "me_land_4749",
-              "me_land_4808",
-              "me_land_4888",
-              "me_land_4992",
-              "me_land_5009"
+              "me_land_4662",
+              "me_land_4733",
+              "me_land_4816",
+              "me_land_4856",
+              "me_land_4917",
+              "me_land_5007",
+              "me_land_5110",
+              "me_land_5127"
             ],
             "disposition": "accepted_forced_anchor_barrier_split"
           },
@@ -1015,22 +1337,22 @@
             "size": 9,
             "forced_anchors": 0,
             "sample": [
-              "me_land_0208",
-              "me_land_0762",
-              "me_land_2706",
-              "me_land_2874",
-              "me_land_3272"
+              "me_land_0214",
+              "me_land_0778",
+              "me_land_2766",
+              "me_land_2938",
+              "me_land_3349"
             ],
             "locations": [
-              "me_land_0208",
-              "me_land_0762",
-              "me_land_2706",
-              "me_land_2874",
-              "me_land_3272",
-              "me_land_3941",
-              "me_land_3992",
-              "me_land_4263",
-              "me_land_4996"
+              "me_land_0214",
+              "me_land_0778",
+              "me_land_2766",
+              "me_land_2938",
+              "me_land_3349",
+              "me_land_4046",
+              "me_land_4096",
+              "me_land_4373",
+              "me_land_5113"
             ],
             "disposition": "reviewed Lindon coast divided by Gulf and Blue Mountain topology"
           }
@@ -1047,32 +1369,65 @@
         0.395
       ],
       "source_zone": "lothlorien",
-      "source_dilation_pixels": 10,
-      "claim_polygon": null,
-      "locations": 21,
+      "source_dilation_pixels": 4,
+      "claim_polygon": [
+        [
+          0.501,
+          0.339
+        ],
+        [
+          0.512,
+          0.326
+        ],
+        [
+          0.532,
+          0.331
+        ],
+        [
+          0.545,
+          0.349
+        ],
+        [
+          0.543,
+          0.378
+        ],
+        [
+          0.529,
+          0.398
+        ],
+        [
+          0.507,
+          0.39
+        ],
+        [
+          0.498,
+          0.366
+        ]
+      ],
+      "locations": 15,
       "forced_anchors": 1,
       "final_bbox": [
         0.5037851,
-        0.5272283,
+        0.5260073,
         0.3302394,
-        0.394724
+        0.3854421
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 21,
+        "largest_component": 15,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 21,
+            "size": 15,
             "forced_anchors": 1,
             "sample": [
               "caras_galadhon",
-              "me_land_0221",
-              "me_land_0409",
-              "me_land_0493",
-              "me_land_0562"
+              "me_land_0424",
+              "me_land_0510",
+              "me_land_0579",
+              "me_land_0869"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1095,10 +1450,10 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 85,
+      "locations": 84,
       "forced_anchors": 1,
       "final_bbox": [
-        0.198779,
+        0.192674,
         0.3968254,
         0.0107474,
         0.1196873
@@ -1106,47 +1461,48 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 3,
-        "largest_component": 71,
-        "largest_component_fraction": 0.835294,
+        "largest_component": 69,
+        "largest_component_fraction": 0.821429,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 71,
+            "size": 69,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0092",
-              "me_land_0235",
-              "me_land_0354",
-              "me_land_0496",
-              "me_land_0617"
+              "me_land_0095",
+              "me_land_0244",
+              "me_land_0367",
+              "me_land_0513",
+              "me_land_0638"
             ],
             "locations": [],
             "disposition": "primary_component"
           },
           {
-            "size": 13,
+            "size": 14,
             "forced_anchors": 0,
             "sample": [
               "me_land_0001",
-              "me_land_0114",
-              "me_land_0274",
-              "me_land_0759",
-              "me_land_1532"
+              "me_land_0117",
+              "me_land_0284",
+              "me_land_0775",
+              "me_land_1562"
             ],
             "locations": [
               "me_land_0001",
-              "me_land_0114",
-              "me_land_0274",
-              "me_land_0759",
-              "me_land_1532",
-              "me_land_1663",
-              "me_land_2202",
-              "me_land_3111",
-              "me_land_4340",
-              "me_land_4560",
-              "me_land_4729",
-              "me_land_4789",
-              "me_land_5060"
+              "me_land_0117",
+              "me_land_0284",
+              "me_land_0775",
+              "me_land_1562",
+              "me_land_1699",
+              "me_land_2259",
+              "me_land_2977",
+              "me_land_3182",
+              "me_land_4177",
+              "me_land_4447",
+              "me_land_4665",
+              "me_land_4833",
+              "me_land_4898"
             ],
             "disposition": "reviewed Lossoth shore divided by Icebay water topology"
           },
@@ -1195,11 +1551,11 @@
             "size": 24,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0251",
-              "me_land_0340",
-              "me_land_0870",
-              "me_land_0899",
-              "me_land_1110"
+              "me_land_0263",
+              "me_land_0352",
+              "me_land_0888",
+              "me_land_0916",
+              "me_land_1132"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1222,7 +1578,7 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 247,
+      "locations": 238,
       "forced_anchors": 9,
       "final_bbox": [
         0.6,
@@ -1233,19 +1589,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 7,
-        "largest_component": 238,
-        "largest_component_fraction": 0.963563,
+        "largest_component": 229,
+        "largest_component_fraction": 0.962185,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 238,
+            "size": 229,
             "forced_anchors": 0,
             "sample": [
               "me_land_0005",
               "me_land_0009",
-              "me_land_0018",
-              "me_land_0022",
-              "me_land_0030"
+              "me_land_0017",
+              "me_land_0021",
+              "me_land_0029"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1254,13 +1610,13 @@
             "size": 3,
             "forced_anchors": 3,
             "sample": [
-              "me_land_1615",
-              "me_land_1811",
+              "me_land_1647",
+              "me_land_1848",
               "morannon"
             ],
             "locations": [
-              "me_land_1615",
-              "me_land_1811",
+              "me_land_1647",
+              "me_land_1848",
               "morannon"
             ],
             "disposition": "accepted_forced_anchor_barrier_split"
@@ -1269,11 +1625,11 @@
             "size": 2,
             "forced_anchors": 2,
             "sample": [
-              "me_land_0660",
+              "me_land_0679",
               "minas_morgul"
             ],
             "locations": [
-              "me_land_0660",
+              "me_land_0679",
               "minas_morgul"
             ],
             "disposition": "accepted_forced_anchor_barrier_split"
@@ -1293,10 +1649,10 @@
             "size": 1,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0416"
+              "me_land_0431"
             ],
             "locations": [
-              "me_land_0416"
+              "me_land_0431"
             ],
             "disposition": "accepted_forced_anchor_barrier_split"
           },
@@ -1340,7 +1696,7 @@
       "locations": 45,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4454212,
+        0.4449328,
         0.4827839,
         0.2374206,
         0.3321935
@@ -1357,10 +1713,254 @@
             "forced_anchors": 1,
             "sample": [
               "me_land_0032",
-              "me_land_0279",
-              "me_land_0358",
-              "me_land_0379",
-              "me_land_0399"
+              "me_land_0290",
+              "me_land_0371",
+              "me_land_0391",
+              "me_land_0414"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "RH2": {
+      "rationale": "southeastern Rhûn wain-kingdom beyond the Sea of Rhûn",
+      "claim_bounds": null,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.72,
+          0.286
+        ],
+        [
+          0.791,
+          0.27
+        ],
+        [
+          0.855,
+          0.301
+        ],
+        [
+          0.871,
+          0.382
+        ],
+        [
+          0.839,
+          0.455
+        ],
+        [
+          0.759,
+          0.461
+        ],
+        [
+          0.709,
+          0.407
+        ]
+      ],
+      "locations": 155,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.7313797,
+        0.8395604,
+        0.2862726,
+        0.4562775
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 155,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 155,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0027",
+              "me_land_0052",
+              "me_land_0090",
+              "me_land_0176",
+              "me_land_0211"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "RH3": {
+      "rationale": "northeastern Rhûn confederation beyond the Iron Hills",
+      "claim_bounds": null,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.777,
+          0.091
+        ],
+        [
+          0.851,
+          0.082
+        ],
+        [
+          0.897,
+          0.124
+        ],
+        [
+          0.898,
+          0.22
+        ],
+        [
+          0.864,
+          0.283
+        ],
+        [
+          0.811,
+          0.277
+        ],
+        [
+          0.785,
+          0.219
+        ]
+      ],
+      "locations": 89,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.7819292,
+        0.8373626,
+        0.1235955,
+        0.272594
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 89,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 89,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0074",
+              "me_land_0093",
+              "me_land_0202",
+              "me_land_0218",
+              "me_land_0246"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "RHO": {
+      "rationale": "Rhosgobel's single inhabited clearing",
+      "claim_bounds": [
+        0.552,
+        0.58,
+        0.265,
+        0.3
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 1,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5665446,
+        0.5665446,
+        0.2789448,
+        0.2789448
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 1,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_3220"
+            ],
+            "locations": [],
+            "disposition": "primary_component"
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "RHU": {
+      "rationale": "western Rhûn polity north and east of Dorwinion",
+      "claim_bounds": null,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.7,
+          0.115
+        ],
+        [
+          0.77,
+          0.105
+        ],
+        [
+          0.818,
+          0.142
+        ],
+        [
+          0.825,
+          0.235
+        ],
+        [
+          0.798,
+          0.31
+        ],
+        [
+          0.727,
+          0.323
+        ],
+        [
+          0.682,
+          0.268
+        ],
+        [
+          0.684,
+          0.176
+        ]
+      ],
+      "locations": 183,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.6835165,
+        0.8058608,
+        0.1265266,
+        0.3219345
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 183,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 183,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0107",
+              "me_land_0160",
+              "me_land_0253",
+              "me_land_0256",
+              "me_land_0280"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1399,11 +1999,11 @@
             "size": 8,
             "forced_anchors": 0,
             "sample": [
-              "me_land_0497",
-              "me_land_0607",
-              "me_land_0979",
-              "me_land_2861",
-              "me_land_3066"
+              "me_land_0514",
+              "me_land_0626",
+              "me_land_0997",
+              "me_land_2925",
+              "me_land_3137"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1434,10 +2034,10 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 197,
+      "locations": 192,
       "forced_anchors": 4,
       "final_bbox": [
-        0.4551893,
+        0.4556777,
         0.5648352,
         0.4347826,
         0.5696141
@@ -1445,12 +2045,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 2,
-        "largest_component": 182,
-        "largest_component_fraction": 0.923858,
+        "largest_component": 178,
+        "largest_component_fraction": 0.927083,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 182,
+            "size": 178,
             "forced_anchors": 4,
             "sample": [
               "aldberg",
@@ -1463,31 +2063,30 @@
             "disposition": "primary_component"
           },
           {
-            "size": 15,
+            "size": 14,
             "forced_anchors": 0,
             "sample": [
-              "me_land_0116",
-              "me_land_0411",
-              "me_land_0485",
-              "me_land_0520",
-              "me_land_0538"
+              "me_land_0119",
+              "me_land_0426",
+              "me_land_0502",
+              "me_land_0537",
+              "me_land_0556"
             ],
             "locations": [
-              "me_land_0116",
-              "me_land_0411",
-              "me_land_0485",
-              "me_land_0520",
-              "me_land_0538",
-              "me_land_0738",
-              "me_land_0755",
-              "me_land_1175",
-              "me_land_2116",
-              "me_land_2484",
-              "me_land_3220",
-              "me_land_3332",
-              "me_land_4510",
-              "me_land_4833",
-              "me_land_5133"
+              "me_land_0119",
+              "me_land_0426",
+              "me_land_0502",
+              "me_land_0537",
+              "me_land_0556",
+              "me_land_0756",
+              "me_land_0771",
+              "me_land_1198",
+              "me_land_2167",
+              "me_land_2549",
+              "me_land_3295",
+              "me_land_3414",
+              "me_land_4614",
+              "me_land_4946"
             ],
             "disposition": "Westfold component divided by river/impassable location topology"
           }
@@ -1526,10 +2125,10 @@
             "forced_anchors": 2,
             "sample": [
               "hobbiton",
-              "me_land_0393",
-              "me_land_0450",
-              "me_land_0470",
-              "me_land_0509"
+              "me_land_0407",
+              "me_land_0468",
+              "me_land_0487",
+              "me_land_0524"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1560,30 +2159,30 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 210,
+      "locations": 236,
       "forced_anchors": 1,
       "final_bbox": [
         0.4500611,
-        0.580464,
-        0.7777235,
+        0.5892552,
+        0.7708842,
         1.0
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 210,
+        "largest_component": 236,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 210,
+            "size": 236,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0050",
-              "me_land_0073",
-              "me_land_0083",
-              "me_land_0115",
-              "me_land_0121"
+              "me_land_0053",
+              "me_land_0076",
+              "me_land_0086",
+              "me_land_0118",
+              "me_land_0123"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1602,31 +2201,60 @@
       ],
       "source_zone": "mirkwood",
       "source_dilation_pixels": 10,
-      "claim_polygon": null,
-      "locations": 40,
+      "claim_polygon": [
+        [
+          0.529,
+          0.218
+        ],
+        [
+          0.558,
+          0.21
+        ],
+        [
+          0.584,
+          0.236
+        ],
+        [
+          0.595,
+          0.284
+        ],
+        [
+          0.58,
+          0.34
+        ],
+        [
+          0.548,
+          0.35
+        ],
+        [
+          0.526,
+          0.313
+        ]
+      ],
+      "locations": 35,
       "forced_anchors": 1,
       "final_bbox": [
         0.5499389,
-        0.5946276,
+        0.5899878,
         0.2252076,
-        0.3370787
+        0.3307279
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 40,
+        "largest_component": 35,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 40,
+            "size": 35,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0107",
-              "me_land_0120",
-              "me_land_0626",
-              "me_land_0697",
-              "me_land_0946"
+              "me_land_0122",
+              "me_land_0715",
+              "me_land_0964",
+              "me_land_1053",
+              "me_land_1331"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1648,31 +2276,64 @@
       ],
       "source_zone": "mirkwood",
       "source_dilation_pixels": 10,
-      "claim_polygon": null,
-      "locations": 59,
+      "claim_polygon": [
+        [
+          0.553,
+          0.122
+        ],
+        [
+          0.598,
+          0.118
+        ],
+        [
+          0.631,
+          0.145
+        ],
+        [
+          0.631,
+          0.218
+        ],
+        [
+          0.616,
+          0.266
+        ],
+        [
+          0.588,
+          0.3
+        ],
+        [
+          0.56,
+          0.287
+        ],
+        [
+          0.55,
+          0.221
+        ]
+      ],
+      "locations": 57,
       "forced_anchors": 1,
       "final_bbox": [
         0.5550672,
         0.6080586,
         0.1514411,
-        0.2940889
+        0.2936004
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 59,
+        "largest_component": 57,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 59,
+            "size": 57,
             "forced_anchors": 1,
             "sample": [
               "me_land_0033",
-              "me_land_0200",
-              "me_land_0215",
-              "me_land_0234",
-              "me_land_0268"
+              "me_land_0204",
+              "me_land_0221",
+              "me_land_0243",
+              "me_land_0279"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1685,333 +2346,23 @@
       ]
     }
   },
-  "uncontracted_realms": {
-    "RHO": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 1,
-      "final_bbox": [
-        0.5665446,
-        0.5665446,
-        0.2789448,
-        0.2789448
-      ],
-      "maximum_unforced_capital_distance": 0.0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 1,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_3146"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          }
-        ]
-      }
-    },
-    "HNE": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 107,
-      "final_bbox": [
-        0.5521368,
-        0.7199023,
-        0.7601368,
-        0.9975574
-      ],
-      "maximum_unforced_capital_distance": 0.2510245,
-      "connectivity": {
-        "components": 2,
-        "largest_component": 98,
-        "largest_component_fraction": 0.915888,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 98,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0059",
-              "me_land_0081",
-              "me_land_0094",
-              "me_land_0169",
-              "me_land_0260"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          },
-          {
-            "size": 9,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0770",
-              "me_land_1093",
-              "me_land_1382",
-              "me_land_2294",
-              "me_land_2446"
-            ],
-            "locations": [
-              "me_land_0770",
-              "me_land_1093",
-              "me_land_1382",
-              "me_land_2294",
-              "me_land_2446",
-              "me_land_2582",
-              "me_land_2997",
-              "me_land_3568",
-              "me_land_4050"
-            ],
-            "disposition": "lower-confidence Near Harad component divided at the southern crop edge"
-          }
-        ]
-      }
-    },
-    "HRA": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 90,
-      "final_bbox": [
-        0.6258852,
-        0.7308913,
-        0.8021495,
-        0.9892526
-      ],
-      "maximum_unforced_capital_distance": 0.1192561,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 90,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 90,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0027",
-              "me_land_0171",
-              "me_land_0408",
-              "me_land_0419",
-              "me_land_0424"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          }
-        ]
-      }
-    },
-    "HFA": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 72,
-      "final_bbox": [
-        0.5601954,
-        0.6984127,
-        0.9120664,
-        1.0
-      ],
-      "maximum_unforced_capital_distance": 0.2309654,
-      "connectivity": {
-        "components": 2,
-        "largest_component": 67,
-        "largest_component_fraction": 0.930556,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 67,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0377",
-              "me_land_0488",
-              "me_land_0652",
-              "me_land_0719",
-              "me_land_0799"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          },
-          {
-            "size": 5,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0587",
-              "me_land_1202",
-              "me_land_2685",
-              "me_land_2958",
-              "me_land_4333"
-            ],
-            "locations": [
-              "me_land_0587",
-              "me_land_1202",
-              "me_land_2685",
-              "me_land_2958",
-              "me_land_4333"
-            ],
-            "disposition": "lower-confidence Far Harad component divided at the southern crop edge"
-          }
-        ]
-      }
-    },
-    "KHA": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 281,
-      "final_bbox": [
-        0.6903541,
-        0.8432234,
-        0.7220322,
-        1.0
-      ],
-      "maximum_unforced_capital_distance": 0.3009019,
-      "connectivity": {
-        "components": 2,
-        "largest_component": 278,
-        "largest_component_fraction": 0.989324,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 278,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0053",
-              "me_land_0054",
-              "me_land_0085",
-              "me_land_0093",
-              "me_land_0131"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          },
-          {
-            "size": 3,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_1840",
-              "me_land_3057",
-              "me_land_3738"
-            ],
-            "locations": [
-              "me_land_1840",
-              "me_land_3057",
-              "me_land_3738"
-            ],
-            "disposition": "Khand approach divided from its basin by Mordor's mountain wall"
-          }
-        ]
-      }
-    },
-    "RHU": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 251,
-      "final_bbox": [
-        0.6346764,
-        0.8058608,
-        0.1250611,
-        0.3321935
-      ],
-      "maximum_unforced_capital_distance": 0.290076,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 251,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 251,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0104",
-              "me_land_0158",
-              "me_land_0243",
-              "me_land_0244",
-              "me_land_0269"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          }
-        ]
-      }
-    },
-    "RH2": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 321,
-      "final_bbox": [
-        0.6637363,
-        0.840293,
-        0.284807,
-        0.5197851
-      ],
-      "maximum_unforced_capital_distance": 0.3071204,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 321,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 321,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0006",
-              "me_land_0012",
-              "me_land_0028",
-              "me_land_0048",
-              "me_land_0049"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          }
-        ]
-      }
-    },
-    "RH3": {
-      "rationale": "lower-confidence region claim; no invented cadastral envelope",
-      "locations": 92,
-      "final_bbox": [
-        0.7787546,
-        0.8373626,
-        0.1235955,
-        0.2882267
-      ],
-      "maximum_unforced_capital_distance": 0.1078666,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 92,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 92,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0071",
-              "me_land_0090",
-              "me_land_0198",
-              "me_land_0212",
-              "me_land_0237"
-            ],
-            "locations": [],
-            "disposition": "primary_component"
-          }
-        ]
-      }
-    }
-  },
+  "uncontracted_realms": {},
   "all_realm_connectivity": {
     "GON": {
       "components": 2,
-      "largest_component": 408,
-      "largest_component_fraction": 0.995122,
+      "largest_component": 414,
+      "largest_component_fraction": 0.995192,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 408,
+          "size": 414,
           "forced_anchors": 9,
           "sample": [
             "calembel",
             "erech",
             "linhir",
             "me_land_0011",
-            "me_land_0021"
+            "me_land_0020"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2021,11 +2372,11 @@
           "forced_anchors": 0,
           "sample": [
             "me_land_0004",
-            "me_land_1958"
+            "me_land_1280"
           ],
           "locations": [
             "me_land_0004",
-            "me_land_1958"
+            "me_land_1280"
           ],
           "disposition": "Tolfalas island, separated from mainland Gondor by engine water"
         }
@@ -2042,10 +2393,10 @@
           "forced_anchors": 1,
           "sample": [
             "dol_amroth",
-            "me_land_0084",
+            "me_land_0087",
             "me_land_0140",
-            "me_land_0262",
-            "me_land_0365"
+            "me_land_0273",
+            "me_land_0377"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2054,12 +2405,12 @@
     },
     "ROH": {
       "components": 2,
-      "largest_component": 182,
-      "largest_component_fraction": 0.923858,
+      "largest_component": 178,
+      "largest_component_fraction": 0.927083,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 182,
+          "size": 178,
           "forced_anchors": 4,
           "sample": [
             "aldberg",
@@ -2072,31 +2423,30 @@
           "disposition": "primary_component"
         },
         {
-          "size": 15,
+          "size": 14,
           "forced_anchors": 0,
           "sample": [
-            "me_land_0116",
-            "me_land_0411",
-            "me_land_0485",
-            "me_land_0520",
-            "me_land_0538"
+            "me_land_0119",
+            "me_land_0426",
+            "me_land_0502",
+            "me_land_0537",
+            "me_land_0556"
           ],
           "locations": [
-            "me_land_0116",
-            "me_land_0411",
-            "me_land_0485",
-            "me_land_0520",
-            "me_land_0538",
-            "me_land_0738",
-            "me_land_0755",
-            "me_land_1175",
-            "me_land_2116",
-            "me_land_2484",
-            "me_land_3220",
-            "me_land_3332",
-            "me_land_4510",
-            "me_land_4833",
-            "me_land_5133"
+            "me_land_0119",
+            "me_land_0426",
+            "me_land_0502",
+            "me_land_0537",
+            "me_land_0556",
+            "me_land_0756",
+            "me_land_0771",
+            "me_land_1198",
+            "me_land_2167",
+            "me_land_2549",
+            "me_land_3295",
+            "me_land_3414",
+            "me_land_4614",
+            "me_land_4946"
           ],
           "disposition": "Westfold component divided by river/impassable location topology"
         }
@@ -2113,10 +2463,10 @@
           "forced_anchors": 2,
           "sample": [
             "hobbiton",
-            "me_land_0393",
-            "me_land_0450",
-            "me_land_0470",
-            "me_land_0509"
+            "me_land_0407",
+            "me_land_0468",
+            "me_land_0487",
+            "me_land_0524"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2145,10 +2495,10 @@
           "forced_anchors": 1,
           "sample": [
             "me_bree",
-            "me_land_0573",
-            "me_land_0614",
-            "me_land_0882",
-            "me_land_0915"
+            "me_land_0591",
+            "me_land_0635",
+            "me_land_0900",
+            "me_land_0933"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2166,10 +2516,10 @@
           "forced_anchors": 1,
           "sample": [
             "me_land_0032",
-            "me_land_0279",
-            "me_land_0358",
-            "me_land_0379",
-            "me_land_0399"
+            "me_land_0290",
+            "me_land_0371",
+            "me_land_0391",
+            "me_land_0414"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2186,11 +2536,11 @@
           "size": 8,
           "forced_anchors": 0,
           "sample": [
-            "me_land_0497",
-            "me_land_0607",
-            "me_land_0979",
-            "me_land_2861",
-            "me_land_3066"
+            "me_land_0514",
+            "me_land_0626",
+            "me_land_0997",
+            "me_land_2925",
+            "me_land_3137"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2210,19 +2560,19 @@
     },
     "LIN": {
       "components": 3,
-      "largest_component": 77,
-      "largest_component_fraction": 0.57037,
+      "largest_component": 73,
+      "largest_component_fraction": 0.557252,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 77,
+          "size": 73,
           "forced_anchors": 2,
           "sample": [
             "harlond_lindon",
-            "me_land_0029",
-            "me_land_0289",
-            "me_land_0324",
-            "me_land_0471"
+            "me_land_0028",
+            "me_land_0300",
+            "me_land_0338",
+            "me_land_0488"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2232,61 +2582,61 @@
           "forced_anchors": 1,
           "sample": [
             "forlond",
-            "me_land_0189",
-            "me_land_0388",
-            "me_land_0390",
-            "me_land_0436"
+            "me_land_0192",
+            "me_land_0400",
+            "me_land_0402",
+            "me_land_0453"
           ],
           "locations": [
             "forlond",
-            "me_land_0189",
-            "me_land_0388",
-            "me_land_0390",
-            "me_land_0436",
-            "me_land_0502",
-            "me_land_0553",
-            "me_land_0662",
-            "me_land_0665",
-            "me_land_0677",
-            "me_land_0919",
-            "me_land_1053",
-            "me_land_1138",
-            "me_land_1291",
-            "me_land_1426",
-            "me_land_1639",
-            "me_land_1854",
-            "me_land_1956",
-            "me_land_1971",
-            "me_land_2058",
-            "me_land_2067",
-            "me_land_2073",
-            "me_land_2163",
-            "me_land_2445",
-            "me_land_2605",
-            "me_land_2619",
-            "me_land_3002",
-            "me_land_3173",
-            "me_land_3219",
-            "me_land_3324",
+            "me_land_0192",
+            "me_land_0400",
+            "me_land_0402",
+            "me_land_0453",
+            "me_land_0519",
+            "me_land_0571",
+            "me_land_0680",
+            "me_land_0683",
+            "me_land_0694",
+            "me_land_0936",
+            "me_land_1072",
+            "me_land_1161",
+            "me_land_1314",
+            "me_land_1453",
+            "me_land_1673",
+            "me_land_1894",
+            "me_land_1999",
+            "me_land_2012",
+            "me_land_2108",
+            "me_land_2117",
+            "me_land_2124",
+            "me_land_2217",
+            "me_land_2511",
+            "me_land_2667",
+            "me_land_2682",
+            "me_land_3070",
+            "me_land_3247",
+            "me_land_3294",
             "me_land_3405",
-            "me_land_3841",
-            "me_land_3869",
-            "me_land_3878",
-            "me_land_3970",
-            "me_land_4035",
-            "me_land_4080",
-            "me_land_4103",
-            "me_land_4154",
-            "me_land_4374",
-            "me_land_4451",
+            "me_land_3483",
+            "me_land_3937",
+            "me_land_3971",
+            "me_land_3981",
+            "me_land_4076",
+            "me_land_4141",
+            "me_land_4187",
+            "me_land_4211",
+            "me_land_4262",
+            "me_land_4483",
             "me_land_4557",
-            "me_land_4626",
-            "me_land_4711",
-            "me_land_4749",
-            "me_land_4808",
-            "me_land_4888",
-            "me_land_4992",
-            "me_land_5009"
+            "me_land_4662",
+            "me_land_4733",
+            "me_land_4816",
+            "me_land_4856",
+            "me_land_4917",
+            "me_land_5007",
+            "me_land_5110",
+            "me_land_5127"
           ],
           "disposition": "accepted_forced_anchor_barrier_split"
         },
@@ -2294,22 +2644,22 @@
           "size": 9,
           "forced_anchors": 0,
           "sample": [
-            "me_land_0208",
-            "me_land_0762",
-            "me_land_2706",
-            "me_land_2874",
-            "me_land_3272"
+            "me_land_0214",
+            "me_land_0778",
+            "me_land_2766",
+            "me_land_2938",
+            "me_land_3349"
           ],
           "locations": [
-            "me_land_0208",
-            "me_land_0762",
-            "me_land_2706",
-            "me_land_2874",
-            "me_land_3272",
-            "me_land_3941",
-            "me_land_3992",
-            "me_land_4263",
-            "me_land_4996"
+            "me_land_0214",
+            "me_land_0778",
+            "me_land_2766",
+            "me_land_2938",
+            "me_land_3349",
+            "me_land_4046",
+            "me_land_4096",
+            "me_land_4373",
+            "me_land_5113"
           ],
           "disposition": "reviewed Lindon coast divided by Gulf and Blue Mountain topology"
         }
@@ -2317,19 +2667,19 @@
     },
     "BLU": {
       "components": 1,
-      "largest_component": 43,
+      "largest_component": 42,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 43,
+          "size": 42,
           "forced_anchors": 1,
           "sample": [
             "me_land_0039",
-            "me_land_0383",
-            "me_land_0384",
-            "me_land_0452",
-            "me_land_0469"
+            "me_land_0394",
+            "me_land_0395",
+            "me_land_0470",
+            "me_land_0486"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2338,19 +2688,19 @@
     },
     "LOR": {
       "components": 1,
-      "largest_component": 21,
+      "largest_component": 15,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 21,
+          "size": 15,
           "forced_anchors": 1,
           "sample": [
             "caras_galadhon",
-            "me_land_0221",
-            "me_land_0409",
-            "me_land_0493",
-            "me_land_0562"
+            "me_land_0424",
+            "me_land_0510",
+            "me_land_0579",
+            "me_land_0869"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2359,19 +2709,19 @@
     },
     "WOO": {
       "components": 1,
-      "largest_component": 59,
+      "largest_component": 57,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 59,
+          "size": 57,
           "forced_anchors": 1,
           "sample": [
             "me_land_0033",
-            "me_land_0200",
-            "me_land_0215",
-            "me_land_0234",
-            "me_land_0268"
+            "me_land_0204",
+            "me_land_0221",
+            "me_land_0243",
+            "me_land_0279"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2380,19 +2730,19 @@
     },
     "ERE": {
       "components": 1,
-      "largest_component": 28,
+      "largest_component": 27,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 28,
+          "size": 27,
           "forced_anchors": 1,
           "sample": [
             "erebor",
-            "me_land_0124",
-            "me_land_0284",
-            "me_land_0360",
-            "me_land_0453"
+            "me_land_0126",
+            "me_land_0296",
+            "me_land_0373",
+            "me_land_0471"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2409,11 +2759,11 @@
           "size": 45,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0086",
-            "me_land_0224",
-            "me_land_0329",
-            "me_land_0427",
-            "me_land_0539"
+            "me_land_0088",
+            "me_land_0232",
+            "me_land_0343",
+            "me_land_0442",
+            "me_land_0557"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2422,19 +2772,19 @@
     },
     "DAL": {
       "components": 1,
-      "largest_component": 16,
+      "largest_component": 15,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 16,
+          "size": 15,
           "forced_anchors": 1,
           "sample": [
             "dale",
-            "me_land_0157",
-            "me_land_0659",
-            "me_land_0718",
-            "me_land_0954"
+            "me_land_0159",
+            "me_land_0678",
+            "me_land_0734",
+            "me_land_0971"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2452,10 +2802,10 @@
           "forced_anchors": 1,
           "sample": [
             "esgaroth",
-            "me_land_0072",
-            "me_land_0465",
-            "me_land_0997",
-            "me_land_1399"
+            "me_land_0075",
+            "me_land_0482",
+            "me_land_1016",
+            "me_land_1427"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2463,41 +2813,61 @@
       ]
     },
     "BEO": {
-      "components": 1,
-      "largest_component": 64,
-      "largest_component_fraction": 1.0,
+      "components": 2,
+      "largest_component": 60,
+      "largest_component_fraction": 0.909091,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 64,
+          "size": 60,
           "forced_anchors": 1,
           "sample": [
             "carrock",
-            "me_land_0016",
-            "me_land_0150",
-            "me_land_0204",
-            "me_land_0210"
+            "me_land_0015",
+            "me_land_0151",
+            "me_land_0210",
+            "me_land_0311"
           ],
           "locations": [],
           "disposition": "primary_component"
+        },
+        {
+          "size": 6,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0258",
+            "me_land_0361",
+            "me_land_0637",
+            "me_land_2685",
+            "me_land_2700"
+          ],
+          "locations": [
+            "me_land_0258",
+            "me_land_0361",
+            "me_land_0637",
+            "me_land_2685",
+            "me_land_2700",
+            "me_land_3535"
+          ],
+          "disposition": "upper Anduin settlements divided by High Pass and impassable mountain locations"
         }
       ]
     },
     "WDM": {
       "components": 1,
-      "largest_component": 40,
+      "largest_component": 35,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 40,
+          "size": 35,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0107",
-            "me_land_0120",
-            "me_land_0626",
-            "me_land_0697",
-            "me_land_0946"
+            "me_land_0122",
+            "me_land_0715",
+            "me_land_0964",
+            "me_land_1053",
+            "me_land_1331"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2506,19 +2876,19 @@
     },
     "DOR": {
       "components": 1,
-      "largest_component": 93,
+      "largest_component": 90,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 93,
+          "size": 90,
           "forced_anchors": 1,
           "sample": [
             "dorwinion",
-            "me_land_0045",
-            "me_land_0057",
-            "me_land_0209",
-            "me_land_0264"
+            "me_land_0046",
+            "me_land_0061",
+            "me_land_0215",
+            "me_land_0275"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2527,19 +2897,19 @@
     },
     "FAN": {
       "components": 1,
-      "largest_component": 31,
+      "largest_component": 30,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 31,
+          "size": 30,
           "forced_anchors": 2,
           "sample": [
             "me_land_0034",
-            "me_land_0247",
-            "me_land_0307",
-            "me_land_0532",
-            "me_land_0534"
+            "me_land_0259",
+            "me_land_0319",
+            "me_land_0550",
+            "me_land_0552"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2556,9 +2926,9 @@
           "size": 3,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0780",
-            "me_land_1245",
-            "me_land_2596"
+            "me_land_0798",
+            "me_land_1269",
+            "me_land_2658"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2567,47 +2937,48 @@
     },
     "LOS": {
       "components": 3,
-      "largest_component": 71,
-      "largest_component_fraction": 0.835294,
+      "largest_component": 69,
+      "largest_component_fraction": 0.821429,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 71,
+          "size": 69,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0092",
-            "me_land_0235",
-            "me_land_0354",
-            "me_land_0496",
-            "me_land_0617"
+            "me_land_0095",
+            "me_land_0244",
+            "me_land_0367",
+            "me_land_0513",
+            "me_land_0638"
           ],
           "locations": [],
           "disposition": "primary_component"
         },
         {
-          "size": 13,
+          "size": 14,
           "forced_anchors": 0,
           "sample": [
             "me_land_0001",
-            "me_land_0114",
-            "me_land_0274",
-            "me_land_0759",
-            "me_land_1532"
+            "me_land_0117",
+            "me_land_0284",
+            "me_land_0775",
+            "me_land_1562"
           ],
           "locations": [
             "me_land_0001",
-            "me_land_0114",
-            "me_land_0274",
-            "me_land_0759",
-            "me_land_1532",
-            "me_land_1663",
-            "me_land_2202",
-            "me_land_3111",
-            "me_land_4340",
-            "me_land_4560",
-            "me_land_4729",
-            "me_land_4789",
-            "me_land_5060"
+            "me_land_0117",
+            "me_land_0284",
+            "me_land_0775",
+            "me_land_1562",
+            "me_land_1699",
+            "me_land_2259",
+            "me_land_2977",
+            "me_land_3182",
+            "me_land_4177",
+            "me_land_4447",
+            "me_land_4665",
+            "me_land_4833",
+            "me_land_4898"
           ],
           "disposition": "reviewed Lossoth shore divided by Icebay water topology"
         },
@@ -2634,7 +3005,7 @@
           "size": 1,
           "forced_anchors": 1,
           "sample": [
-            "me_land_3146"
+            "me_land_3220"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2643,19 +3014,19 @@
     },
     "MOR": {
       "components": 7,
-      "largest_component": 238,
-      "largest_component_fraction": 0.963563,
+      "largest_component": 229,
+      "largest_component_fraction": 0.962185,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 238,
+          "size": 229,
           "forced_anchors": 0,
           "sample": [
             "me_land_0005",
             "me_land_0009",
-            "me_land_0018",
-            "me_land_0022",
-            "me_land_0030"
+            "me_land_0017",
+            "me_land_0021",
+            "me_land_0029"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2664,13 +3035,13 @@
           "size": 3,
           "forced_anchors": 3,
           "sample": [
-            "me_land_1615",
-            "me_land_1811",
+            "me_land_1647",
+            "me_land_1848",
             "morannon"
           ],
           "locations": [
-            "me_land_1615",
-            "me_land_1811",
+            "me_land_1647",
+            "me_land_1848",
             "morannon"
           ],
           "disposition": "accepted_forced_anchor_barrier_split"
@@ -2679,11 +3050,11 @@
           "size": 2,
           "forced_anchors": 2,
           "sample": [
-            "me_land_0660",
+            "me_land_0679",
             "minas_morgul"
           ],
           "locations": [
-            "me_land_0660",
+            "me_land_0679",
             "minas_morgul"
           ],
           "disposition": "accepted_forced_anchor_barrier_split"
@@ -2703,10 +3074,10 @@
           "size": 1,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0416"
+            "me_land_0431"
           ],
           "locations": [
-            "me_land_0416"
+            "me_land_0431"
           ],
           "disposition": "accepted_forced_anchor_barrier_split"
         },
@@ -2736,19 +3107,19 @@
     },
     "DOL": {
       "components": 1,
-      "largest_component": 36,
+      "largest_component": 38,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 36,
+          "size": 38,
           "forced_anchors": 1,
           "sample": [
             "dol_guldur",
-            "me_land_0069",
-            "me_land_0076",
-            "me_land_0105",
-            "me_land_0118"
+            "me_land_0072",
+            "me_land_0080",
+            "me_land_0108",
+            "me_land_0121"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2766,10 +3137,10 @@
           "forced_anchors": 1,
           "sample": [
             "isengard",
-            "me_land_0063",
-            "me_land_0222",
-            "me_land_0278",
-            "me_land_0370"
+            "me_land_0066",
+            "me_land_0229",
+            "me_land_0289",
+            "me_land_0382"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2786,11 +3157,11 @@
           "size": 24,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0251",
-            "me_land_0340",
-            "me_land_0870",
-            "me_land_0899",
-            "me_land_1110"
+            "me_land_0263",
+            "me_land_0352",
+            "me_land_0888",
+            "me_land_0916",
+            "me_land_1132"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2800,18 +3171,18 @@
     "GUN": {
       "components": 5,
       "largest_component": 16,
-      "largest_component_fraction": 0.571429,
+      "largest_component_fraction": 0.592593,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
           "size": 16,
           "forced_anchors": 0,
           "sample": [
-            "me_land_0122",
-            "me_land_0218",
-            "me_land_0437",
-            "me_land_0468",
-            "me_land_0533"
+            "me_land_0124",
+            "me_land_0224",
+            "me_land_0454",
+            "me_land_0485",
+            "me_land_0551"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2820,37 +3191,35 @@
           "size": 5,
           "forced_anchors": 0,
           "sample": [
-            "me_land_0891",
-            "me_land_3283",
-            "me_land_4680",
-            "me_land_4903",
-            "me_land_5049"
+            "me_land_1267",
+            "me_land_2275",
+            "me_land_2708",
+            "me_land_4604",
+            "me_land_4785"
           ],
           "locations": [
-            "me_land_0891",
-            "me_land_3283",
-            "me_land_4680",
-            "me_land_4903",
-            "me_land_5049"
+            "me_land_1267",
+            "me_land_2275",
+            "me_land_2708",
+            "me_land_4604",
+            "me_land_4785"
           ],
           "disposition": "northern goblin fastnesses divided by impassable mountain locations"
         },
         {
-          "size": 5,
+          "size": 4,
           "forced_anchors": 0,
           "sample": [
-            "me_land_1243",
-            "me_land_2217",
-            "me_land_2645",
-            "me_land_4499",
-            "me_land_4678"
+            "me_land_0908",
+            "me_land_3360",
+            "me_land_4787",
+            "me_land_5022"
           ],
           "locations": [
-            "me_land_1243",
-            "me_land_2217",
-            "me_land_2645",
-            "me_land_4499",
-            "me_land_4678"
+            "me_land_0908",
+            "me_land_3360",
+            "me_land_4787",
+            "me_land_5022"
           ],
           "disposition": "northern goblin fastnesses divided by impassable mountain locations"
         },
@@ -2869,10 +3238,10 @@
           "size": 1,
           "forced_anchors": 0,
           "sample": [
-            "me_land_1312"
+            "me_land_1335"
           ],
           "locations": [
-            "me_land_1312"
+            "me_land_1335"
           ],
           "disposition": "isolated northern goblin fastness among impassable peaks"
         }
@@ -2880,19 +3249,19 @@
     },
     "GOB": {
       "components": 1,
-      "largest_component": 32,
+      "largest_component": 28,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 32,
+          "size": 28,
           "forced_anchors": 1,
           "sample": [
             "goblin_town",
-            "me_land_0126",
-            "me_land_0337",
-            "me_land_0433",
-            "me_land_0616"
+            "me_land_0128",
+            "me_land_0349",
+            "me_land_0449",
+            "me_land_0717"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2901,19 +3270,19 @@
     },
     "UMB": {
       "components": 1,
-      "largest_component": 210,
+      "largest_component": 236,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 210,
+          "size": 236,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0050",
-            "me_land_0073",
-            "me_land_0083",
-            "me_land_0115",
-            "me_land_0121"
+            "me_land_0053",
+            "me_land_0076",
+            "me_land_0086",
+            "me_land_0118",
+            "me_land_0123"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2921,46 +3290,23 @@
       ]
     },
     "HNE": {
-      "components": 2,
-      "largest_component": 98,
-      "largest_component_fraction": 0.915888,
+      "components": 1,
+      "largest_component": 105,
+      "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 98,
+          "size": 105,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0059",
-            "me_land_0081",
-            "me_land_0094",
-            "me_land_0169",
-            "me_land_0260"
+            "me_land_0031",
+            "me_land_0044",
+            "me_land_0060",
+            "me_land_0100",
+            "me_land_0147"
           ],
           "locations": [],
           "disposition": "primary_component"
-        },
-        {
-          "size": 9,
-          "forced_anchors": 0,
-          "sample": [
-            "me_land_0770",
-            "me_land_1093",
-            "me_land_1382",
-            "me_land_2294",
-            "me_land_2446"
-          ],
-          "locations": [
-            "me_land_0770",
-            "me_land_1093",
-            "me_land_1382",
-            "me_land_2294",
-            "me_land_2446",
-            "me_land_2582",
-            "me_land_2997",
-            "me_land_3568",
-            "me_land_4050"
-          ],
-          "disposition": "lower-confidence Near Harad component divided at the southern crop edge"
         }
       ]
     },
@@ -2974,11 +3320,11 @@
           "size": 90,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0027",
-            "me_land_0171",
-            "me_land_0408",
-            "me_land_0419",
-            "me_land_0424"
+            "me_land_0026",
+            "me_land_0173",
+            "me_land_0435",
+            "me_land_0439",
+            "me_land_0614"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2986,60 +3332,41 @@
       ]
     },
     "HFA": {
-      "components": 2,
-      "largest_component": 67,
-      "largest_component_fraction": 0.930556,
+      "components": 1,
+      "largest_component": 69,
+      "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 67,
+          "size": 69,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0377",
-            "me_land_0488",
-            "me_land_0652",
-            "me_land_0719",
-            "me_land_0799"
+            "me_land_0388",
+            "me_land_0505",
+            "me_land_0672",
+            "me_land_0735",
+            "me_land_0817"
           ],
           "locations": [],
           "disposition": "primary_component"
-        },
-        {
-          "size": 5,
-          "forced_anchors": 0,
-          "sample": [
-            "me_land_0587",
-            "me_land_1202",
-            "me_land_2685",
-            "me_land_2958",
-            "me_land_4333"
-          ],
-          "locations": [
-            "me_land_0587",
-            "me_land_1202",
-            "me_land_2685",
-            "me_land_2958",
-            "me_land_4333"
-          ],
-          "disposition": "lower-confidence Far Harad component divided at the southern crop edge"
         }
       ]
     },
     "KHA": {
       "components": 2,
-      "largest_component": 278,
-      "largest_component_fraction": 0.989324,
+      "largest_component": 142,
+      "largest_component_fraction": 0.97931,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 278,
+          "size": 142,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0053",
-            "me_land_0054",
-            "me_land_0085",
-            "me_land_0093",
-            "me_land_0131"
+            "me_land_0047",
+            "me_land_0158",
+            "me_land_0197",
+            "me_land_0207",
+            "me_land_0227"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3048,14 +3375,14 @@
           "size": 3,
           "forced_anchors": 0,
           "sample": [
-            "me_land_1840",
-            "me_land_3057",
-            "me_land_3738"
+            "me_land_1202",
+            "me_land_2057",
+            "me_land_4792"
           ],
           "locations": [
-            "me_land_1840",
-            "me_land_3057",
-            "me_land_3738"
+            "me_land_1202",
+            "me_land_2057",
+            "me_land_4792"
           ],
           "disposition": "Khand approach divided from its basin by Mordor's mountain wall"
         }
@@ -3063,19 +3390,19 @@
     },
     "RHU": {
       "components": 1,
-      "largest_component": 251,
+      "largest_component": 183,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 251,
+          "size": 183,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0104",
-            "me_land_0158",
-            "me_land_0243",
-            "me_land_0244",
-            "me_land_0269"
+            "me_land_0107",
+            "me_land_0160",
+            "me_land_0253",
+            "me_land_0256",
+            "me_land_0280"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3084,19 +3411,19 @@
     },
     "RH2": {
       "components": 1,
-      "largest_component": 321,
+      "largest_component": 155,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 321,
+          "size": 155,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0006",
-            "me_land_0012",
-            "me_land_0028",
-            "me_land_0048",
-            "me_land_0049"
+            "me_land_0027",
+            "me_land_0052",
+            "me_land_0090",
+            "me_land_0176",
+            "me_land_0211"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3105,19 +3432,19 @@
     },
     "RH3": {
       "components": 1,
-      "largest_component": 92,
+      "largest_component": 89,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 92,
+          "size": 89,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0071",
-            "me_land_0090",
-            "me_land_0198",
-            "me_land_0212",
-            "me_land_0237"
+            "me_land_0074",
+            "me_land_0093",
+            "me_land_0202",
+            "me_land_0218",
+            "me_land_0246"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3134,11 +3461,11 @@
           "size": 32,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0162",
-            "me_land_0199",
-            "me_land_0487",
-            "me_land_0605",
-            "me_land_0769"
+            "me_land_0164",
+            "me_land_0203",
+            "me_land_0504",
+            "me_land_0624",
+            "me_land_0785"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3155,11 +3482,11 @@
           "size": 54,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0159",
-            "me_land_0342",
-            "me_land_0426",
-            "me_land_0540",
-            "me_land_0552"
+            "me_land_0161",
+            "me_land_0354",
+            "me_land_0441",
+            "me_land_0558",
+            "me_land_0570"
           ],
           "locations": [],
           "disposition": "primary_component"

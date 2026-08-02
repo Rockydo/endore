@@ -94,6 +94,21 @@ SOURCE_RELIEF_THEATRES = {
         "min_high_support": 0.970,
     },
 }
+EXPECTED_ARDACRAFT_BIOME_SHA256 = (
+    "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
+)
+EXPECTED_SOURCE_BIOME_CLASSES = {
+    "brown_lands": ["M6"],
+    "rhun_steppe": [
+        "L3", "L5", "L7", "M11", "M18", "M2", "M20", "M7",
+        "Z2", "Z3", "Z4", "Z5",
+    ],
+    "near_harad_scrub": [
+        "H1", "H2", "H6", "H7", "J22", "J48", "J49", "K23",
+        "K31", "N4",
+    ],
+    "far_harad_arid": ["H3", "H4", "H5"],
+}
 # Source lakes smaller than one runtime location become deep location-shaped
 # quarries when classified as engine water. Preserve every such source polygon
 # as a wet material control over continuous physical land. The explicit set is
@@ -212,6 +227,19 @@ def validate_geometry_contract(projection: dict) -> None:
         or descriptor.get("quantization_max") != 255
     ):
         raise ValueError("mountain atlas lacks the audited Ardacraft relief field")
+    biome_descriptor = projection.get("source_biomes")
+    if (
+        not isinstance(biome_descriptor, dict)
+        or biome_descriptor.get("source")
+        != "Ardacraft Biome layer Middle-earth V3"
+        or biome_descriptor.get("source_sha256")
+        != EXPECTED_ARDACRAFT_BIOME_SHA256
+        or biome_descriptor.get("classification")
+        != EXPECTED_SOURCE_BIOME_CLASSES
+        or biome_descriptor.get("endore_bounds")
+        != [0.148481643, 0.0, 0.774972679, 1.0]
+    ):
+        raise ValueError("macro climates lack the audited Ardacraft biome reduction")
     highlands = projection.get("highland_zones", [])
     if len(highlands) != 190:
         raise ValueError(
@@ -283,6 +311,48 @@ def validate_geometry_contract(projection: dict) -> None:
         != "Arda Maps poly_mountainlow 8-11 and point_mount MountDoom"
     ):
         raise ValueError("Mordor regressed to a hand-authored oval")
+    zones_by_key = {zone["key"]: zone for zone in projection["biome_zones"]}
+    expected_source_shapes = {
+        "brown_lands": ("steppe", 1, 80),
+        "rhun_steppe": ("steppe", 41, 3_800),
+        "near_harad_scrub": ("steppe", 37, 2_800),
+        "far_harad_arid": ("arid", 7, 650),
+    }
+    for key, (biome_name, components, minimum_vertices) in (
+        expected_source_shapes.items()
+    ):
+        zone = zones_by_key.get(key, {})
+        coords = zone.get("coords", [])
+        vertices = sum(len(polygon) for polygon in coords)
+        if (
+            zone.get("biome") != biome_name
+            or zone.get("shape") != "multi_polygon"
+            or zone.get("source") != "Ardacraft Biome layer Middle-earth V3"
+            or zone.get("source_labels")
+            != EXPECTED_SOURCE_BIOME_CLASSES[key]
+            or len(coords) != components
+            or vertices < minimum_vertices
+        ):
+            raise ValueError(f"{key} lost its source-derived climate geometry")
+    for key in (
+        "rhun_source_edge_continuation",
+        "harad_source_edge_scrub",
+        "harad_source_edge_arid",
+    ):
+        zone = zones_by_key.get(key, {})
+        if (
+            zone.get("shape") != "organic_polygon"
+            or len(zone.get("coords", [])) < 8
+            or not str(zone.get("source", "")).startswith("Judgment: continuous")
+        ):
+            raise ValueError(f"{key} lost its reviewed source-edge continuation")
+    climate_keys = [
+        zone["key"]
+        for zone in projection["biome_zones"]
+        if zone["biome"] not in {"forest", "dense_forest"}
+    ]
+    if climate_keys[-1] != "mordor" or "harad" in zones_by_key:
+        raise ValueError("macro climate ordering regressed to proof-era envelopes")
 
 
 def load_settlements() -> list[Settlement]:

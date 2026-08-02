@@ -27,16 +27,16 @@
   "passable_land_locations": 5200,
   "anchor_locations": 42,
   "continent_counts": {
-    "me_eriador": 1225,
-    "me_forodwaith": 625,
+    "me_eriador": 1206,
+    "me_forodwaith": 614,
     "me_gondor": 808,
-    "me_harad": 632,
-    "me_mordor_and_rhun": 1490,
-    "me_rhovanion": 1224
+    "me_harad": 673,
+    "me_mordor_and_rhun": 1499,
+    "me_rhovanion": 1204
   },
   "minimum_control_area": 1,
-  "median_control_area": 590.0,
+  "median_control_area": 598.5,
   "maximum_control_area": 82429,
-  "control_source_sha256": "9b6f0f834b0d22a993e520dff561c3198b9b3d57c7d9aedda856af647613e9e0",
-  "model_sha256": "6048d0cc97170670688e2d8259517242efffc1482bf14d0a141745f90735ed34"
+  "control_source_sha256": "acbcca5ba1b084d67e88c8ddce7a5e351cd534aeeacc6da4671647c5fc0ed9b8",
+  "model_sha256": "6f62b3260752cab50f2b5905d576e6eceb2dd0b47b2a34a8784d5d31ae740076"
 }

@@ -6,7 +6,7 @@ object={
 	render_under_water=no
 	generated_content=yes
 	layer="vegetation_medium"
-	pdxmesh="environment_oceanic_wt_tree_01_mesh"
+	pdxmesh="environment_oceanic_tree_01_mesh"
 	transform_bin_file="gfx/map/map_objects/forest_generator_medium_0.bin"
 }
 object={
@@ -15,7 +15,7 @@ object={
 	render_under_water=no
 	generated_content=yes
 	layer="vegetation_medium"
-	pdxmesh="environment_oceanic_wt_tree_02_mesh"
+	pdxmesh="environment_oceanic_tree_02_mesh"
 	transform_bin_file="gfx/map/map_objects/forest_generator_medium_1.bin"
 }
 object={

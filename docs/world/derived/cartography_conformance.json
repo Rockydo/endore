@@ -8,7 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
-  "projection_sha256": "cd3b4568e521909b3da61efb7c13e75a2b3c3ffe6e9086d5e9968a5b00bde825",
+  "projection_sha256": "e07d9c04b58794af270b7ccbbaa661c2acdde23deecdd35adc1a77e9ab9b798b",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -20,11 +20,14 @@
     "ridge_axes": 9,
     "passes": 10,
     "river_valley_controls": 102,
-    "biome_zones": 21,
+    "biome_zones": 25,
     "highland_source_vertices": 10805,
     "moor_source_vertices": 369,
     "forest_source_zones": 15,
     "forest_source_components": 57,
+    "source_climate_zones": 4,
+    "source_climate_components": 86,
+    "source_climate_vertices": 7592,
     "river_control_vertices": 1736
   },
   "drainage_theatres": {

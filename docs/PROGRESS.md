@@ -1321,3 +1321,94 @@
   with zero new mod lines, and `eu5_slot.py assert-smoked` binds the result to the same
   fingerprint. This accepts the focused component audit; M2's full physical nine-theatre
   owner gate remains red.
+
+## 2026-08-02 - v79 source-biome and topology-reseed candidate
+
+- Replaced the proof-era Brown Lands, Rhûn, and Harad climate polygons with an exact,
+  hash-pinned reduction of Ardacraft's 197-feature biome atlas. The production controls
+  now contain one detailed Brown Lands component, 41 Rhûn steppe components, 37 Near
+  Harad scrub/woodland components, and seven Far Harad arid components. Only explicitly
+  logged organic continuations reach the authored east/south crop edges; Mordor's
+  source-enclosed ash field retains final precedence.
+- Regenerated the complete 174,763-tile terrain cache. It now contains 68,178 unique
+  material records in a 204.0 MB self-contained cache while retaining the accepted
+  heightfield, coast, rivers, mountain geometry, and 3,093,385-object renderer budget.
+  The coherent world remains 6,004 locations: 5,200 land, 600 impassable mountain, 60
+  lake, and 144 sea locations.
+- Climate-weighted density legitimately reseeded generated location IDs. The schema-3
+  political gate rejected the stale v78 component repairs before a game launch; the
+  stale mapping would otherwise have painted Gondor in Rhûn, Blue Mountain holdings in
+  Far Harad, and Dorwinion in Angmar. Replaced it with ten physically witnessed local
+  repairs. Every repair now binds an expected region, a tight coordinate window, and the
+  destination realm's source-side claim contract, so a future reseed fails immediately.
+- The renewed audit has 3,467 owned and 2,537 wild land locations, zero contract
+  violations, and zero unreviewed political components. Lothlórien remains one compact
+  20-location source-overlap claim east of the Misty crest; Dunland remains one compact
+  32-location lowland polygon. M3, M4, M5, and all 6,004 engine templates pass their
+  independent static checks. Full validation, live nine-theatre renderer evidence,
+  playback, paired smoke, and exact-fingerprint assertion are still pending, so v79 is a
+  candidate and M2 remains red.
+
+## 2026-08-02 - v80 dense ancient forests and complete frontier contracts
+
+- Before changing the proven tree, completed v79's fresh-game baseline. New Game reached
+  HUD-proven Observer on exact game-visible fingerprint
+  `1f899f223fe4b5a389530523c21f1453023bdf2644edc23d689134b8bb13b425`;
+  an untouched 45-second maximum-speed playback required zero recovery and retained the
+  exact 1,486-byte `error.log` baseline. Evidence is under
+  `docs/screens/20260802_v79_source_biomes/`. This proves v79 loadability, not its complete
+  nine-theatre acceptance. The preceding v79 summary's `2,537 wild` figure included 804
+  mountain/lake/sea entries; its land-only count was 1,733.
+- Fresh Caras Galadhon and Woodmen's Hall close views reproduced the owner report. The
+  source forest shapes were present, but Mirkwood exposed broad park-like openings.
+  Vegetation generator v13 therefore increases the bounded total from 3,093,385 to
+  3,493,385 transforms, broadens tree canopies, and raises continuous-interior
+  suitability without changing any source woodland polygon or river corridor.
+- The deterministic high/medium/low census is Mirkwood
+  1,112,756/796,168/788,083; Lothlorien 87,564/69,865/69,863; Fangorn
+  57,974/26,658/26,881; Old Forest 13,186/12,968/13,078; and Ithilien
+  1,757/1,313/1,356. Every Lothlorien transform remains an installed light-trunk
+  full-canopy variant, with zero pine/generic intrusion. The complete 3.49m transform
+  corpus passes deterministic, locality, climate-escape, tundra, named-zone, and species
+  checks.
+- Audited all realm extents after the v79 reseed. Harnendor had reached the far-south
+  crop, Khand had reached Far Harad, and Rhunic allocations had spilled into the Brown
+  Lands. Every one of the 38 realms now has an explicit physical geography contract.
+  Lothlorien and all three Mirkwood powers intersect source-forest overlap with irregular
+  theatre partitions; seven East/South states use irregular bounded spheres and leave
+  wilderness between unattested controllers. The result has 3,044 owned and 2,156 wild
+  land locations, zero violations, zero unreviewed components, and zero uncontracted
+  realms. No new realm was invented to absorb neutral cells.
+- Regenerated M3/M4/M5, definitions, localization, census, and all 6,004 location
+  templates coherently. The tagged political QA raster makes every realm directly
+  identifiable. Targeted `gen_map_objects.py --check` and `m3_realms.py --check` pass.
+  Full validation, fresh v80 renderer evidence, playback, paired smoke, and exact
+  fingerprint assertion remain pending; M2's complete nine-theatre gate stays red.
+
+### v80b live focused verification
+
+- The first v80 launch on fingerprint `fabdcff9` loaded and proved the denser Mirkwood,
+  but close Caras Galadhon views rejected the original wide-canopy Lothlorien variants as
+  too dark and generic. This negative calibration is retained under
+  `docs/screens/20260802_v80_dense_forests_frontiers/`.
+- Replaced only Lothlorien's two renderer mesh references with the installed slimmer,
+  light-trunk `environment_oceanic_tree_01/02` meshes. Counts, positions, source masks,
+  political cells, and Mirkwood remained byte-identical. Deterministic map-object checks
+  passed before launch.
+- A genuinely fresh v80b New Game reached HUD-proven Observer in 113.6 seconds on exact
+  fingerprint `2df4b63d9be5180089d9d74fa4b61fb4c22f4c94020d481c394b3b02d0140e63`.
+  Evidence under `docs/screens/20260802_v80b_birch_meshes/` includes a wide live
+  Wilderland political view, Caras Galadhon and interior Lothlorien regional/close,
+  Mirkwood regional/close, and playback frames. The tagged generated QA raster supplies
+  the corresponding full-world political coverage. Lothlorien now exposes pale trunks
+  and a separate broadleaf silhouette;
+  Mirkwood reads as a darker near-continuous ancient canopy.
+- Maximum-speed Observer playback ran 45 seconds with zero pause recovery and retained
+  the exact 1,486-byte `error.log` baseline. Final full validation passed in 430.5 seconds,
+  including the complete 174,763-tile terrain cache, 3,493,385 map-object corpus, all
+  realm/people/census/template outputs, and lint. After Antiquitas released its healthy
+  session, paired vanilla/ENDORE smoke passed at the next natural checkpoint in 200.8
+  seconds with zero mod-unique error lines. `eu5_slot.py assert-smoked` binds the pass to
+  exact fingerprint `2df4b63d9be5180089d9d74fa4b61fb4c22f4c94020d481c394b3b02d0140e63`.
+  This accepts the focused v80b forest/frontier checkpoint; the complete nine-theatre
+  owner gate is still red.

@@ -34,7 +34,7 @@ from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 12
+GENERATOR_VERSION = 13
 
 
 @dataclass(frozen=True)
@@ -54,17 +54,17 @@ FAMILIES = (
         (3,),
         1.0,
         (
-            # Installed full-canopy, light-trunk oceanic meshes are the
+            # Installed slender-canopy, light-trunk oceanic meshes are the
             # closest retail analogue for Lothlórien's birch-dominant read.
             # Variant assignment below reserves these two for that source
             # forest; no new mesh or texture asset is invented.
-            "environment_oceanic_wt_tree_01_mesh",
-            "environment_oceanic_wt_tree_02_mesh",
+            "environment_oceanic_tree_01_mesh",
+            "environment_oceanic_tree_02_mesh",
             "vegetation_diorama_tree_single2_mesh",
             "vegetation_diorama_tree_single3_mesh",
         ),
-        (300_421, 209_645, 208_750),
-        (0.765, 0.935),
+        (340_421, 249_645, 248_750),
+        (0.82, 1.00),
     ),
     Family(
         "woods",
@@ -89,8 +89,8 @@ FAMILIES = (
             "vegetation_diorama_arctic_tree3_mesh",
             "vegetation_diorama_arctic_tree4_mesh",
         ),
-        (864_055, 604_616, 597_292),
-        (0.72, 0.86),
+        (984_055, 684_616, 677_292),
+        (0.86, 1.02),
     ),
     Family(
         "generic_rock",
@@ -103,30 +103,30 @@ FAMILIES = (
 )
 LODS = ("high", "medium", "low")
 # The release-safe 6,004-location topology leaves materially more headroom
-# than the rejected 12,104-location/4.08m-object pair. Use a bounded 3.06m
-# vegetation budget: high detail rises 25%, while medium/low rise 75% so named
-# forests no longer collapse as the camera crosses an LOD boundary. This is
-# still only 30% of the installed transform population and remains far below
-# the rejected pair's object count.
-EXPECTED_RECORDS = 3_093_385
+# than the rejected 12,104-location/4.08m-object pair.  The v79 live audit
+# proved that 3.06m transforms loaded cleanly but left broad Mirkwood glades at
+# normal play zoom.  Use a bounded 3.49m population and slightly broader
+# canopies; this remains below the rejected object budget while protecting all
+# three renderer LODs rather than hiding density in the close-only layer.
+EXPECTED_RECORDS = 3_493_385
 REJECTED_EXPERIMENTAL_PREFIXES = ("palms_generator_", "grass_generator_")
 FOREST_ZONE_MINIMUM_DETAIL = {
     # Floors are checked independently for every renderer LOD. They are
     # tightened after generation from the deterministic zone census below.
     "fangorn": {"high": 50_000, "medium": 25_000, "low": 25_000},
     "old_forest": {"high": 8_000, "medium": 8_000, "low": 8_000},
-    "lothlorien": {"high": 52_000, "medium": 40_000, "low": 40_000},
+    "lothlorien": {"high": 70_000, "medium": 52_000, "low": 52_000},
     "ithilien": {"high": 700, "medium": 500, "low": 500},
-    "mirkwood": {"high": 740_000, "medium": 550_000, "low": 550_000},
+    "mirkwood": {"high": 940_000, "medium": 660_000, "low": 650_000},
 }
 FOREST_ZONE_LOD_BOOST = {
     # Apply named-forest protection at every LOD. The former high-only field
     # made dense woods visibly evaporate at the normal regional camera.
-    "fangorn": {"high": 26.0, "medium": 26.0, "low": 26.0},
+    "fangorn": {"high": 34.0, "medium": 26.0, "low": 26.0},
     "old_forest": {"high": 16.0, "medium": 28.0, "low": 28.0},
-    "lothlorien": {"high": 110.0, "medium": 140.0, "low": 140.0},
+    "lothlorien": {"high": 140.0, "medium": 185.0, "low": 185.0},
     "ithilien": {"high": 2.0, "medium": 2.0, "low": 2.0},
-    "mirkwood": {"high": 5.8, "medium": 7.5, "low": 7.5},
+    "mirkwood": {"high": 8.5, "medium": 11.0, "low": 11.0},
 }
 TUNDRA_VEGETATION_BOUNDS = {
     # The Forodwaith is open tundra with only sparse, stunted conifer pockets.
@@ -250,9 +250,14 @@ def placement_field(
     # continuous interior suitability floor only where the authored biome is
     # already eligible for this family. Rare deterministic glades and the
     # narrowed river corridors remain excluded.
-    dense_interior = dense_named & core & (glade_values >= 14)
+    # Named ancient woods must read as continuous forests at play zoom.  Keep
+    # only exceptionally rare internal openings here; the source polygon's
+    # porous edge and authored river corridors provide the large-scale shape.
+    # The previous generic 5.5% glade threshold left Mirkwood looking like a
+    # loose park despite a high transform census.
+    dense_interior = dense_named & core & (glade_values >= 4)
     dense_interior &= ~(narrow_major | narrow_minor)
-    suitability[dense_interior] = np.maximum(suitability[dense_interior], 0.62)
+    suitability[dense_interior] = np.maximum(suitability[dense_interior], 0.88)
     ithilien_interior = ithilien_restore & core & (glade_values >= 14)
     suitability[ithilien_interior] = np.maximum(
         suitability[ithilien_interior],
@@ -405,7 +410,7 @@ def transforms(
         # random tint and preserves the four-object renderer ABI.
         variants[lothlorien] = rng.integers(0, 2, int(lothlorien.sum()))
         variants[~lothlorien] = rng.integers(2, 4, int((~lothlorien).sum()))
-        scale[lothlorien] = rng.uniform(0.88, 1.08, int(lothlorien.sum()))
+        scale[lothlorien] = rng.uniform(0.98, 1.16, int(lothlorien.sum()))
     half = yaw * 0.5
     records = np.zeros((count, 10), dtype="<f4")
     records[:, 0] = x

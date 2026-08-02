@@ -30,6 +30,21 @@ ARDA_MAPS_SHA256 = (
 ARDACRAFT_HEIGHTMAP_SHA256 = (
     "a1b05874cd447b9868c0d56a4fad523e5fc94053fa239dc5df7e0b31068144be"
 )
+ARDACRAFT_BIOMES_SHA256 = (
+    "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
+)
+
+# Ardacraft's biome GeoJSON uses a projected vegetation-atlas coordinate
+# system. Its own map client maps that atlas onto the same 53,888 x 43,008
+# equal-scale image used by the height and drainage layers. Keep the complete
+# transform here so the reduced climate controls cannot drift independently.
+ARDACRAFT_BIOME_BOUNDS = {
+    "min_x": -1_432_090.0,
+    "max_x": 3_488_504.0,
+    "min_z": 3_755_586.0,
+    "max_z": 7_796_957.0,
+    "horizontal_scale": 1.029,
+}
 
 # Least-squares calibration from 64 shared named points in Arda Maps to the
 # ArdaCraft equal-scale world grid. It is used for continuous Arda Maps
@@ -149,6 +164,25 @@ def endore_from_world(x: float, z: float) -> list[float]:
     ]
 
 
+def endore_from_ardacraft_biome(x: float, z: float) -> list[float]:
+    """Project one Ardacraft biome-atlas coordinate onto ENDÓRË."""
+
+    bounds = ARDACRAFT_BIOME_BOUNDS
+    source_span = (
+        (bounds["max_x"] - bounds["min_x"])
+        * bounds["horizontal_scale"]
+    )
+    source_x = 1.0 - (bounds["max_x"] - x) / source_span
+    source_y = 1.0 - (
+        (z - bounds["min_z"]) / (bounds["max_z"] - bounds["min_z"])
+    )
+    left, _, right, _ = ARDACRAFT_IMAGE_BOUNDS
+    return [
+        round(left + source_x * (right - left), 6),
+        round(source_y, 6),
+    ]
+
+
 def endore_from_arda_maps(x: float, y: float) -> list[float]:
     world_x, world_z = (
         np.asarray([x, y, 1.0], dtype=np.float64)
@@ -205,6 +239,73 @@ def simplify_ring(points: list[list[float]], epsilon: float) -> list[list[float]
     second = rdp(rotated[farthest:] + [rotated[0]], epsilon)
     result = first[:-1] + second[:-1]
     return [[round(x, 6), round(y, 6)] for x, y in result]
+
+
+def ardacraft_biome_polygons(
+    reference_root: Path,
+    *,
+    labels: set[str],
+    component_filter=None,
+) -> list[list[list[float]]]:
+    """Reduce reviewed Ardacraft vegetation polygons to climate envelopes.
+
+    This deliberately keeps only simplified outer rings and broad ENDÓRË
+    climate classes. Source colour, prose, labels, and imagery never enter the
+    repository. Exact named forests remain governed independently by Arda Maps.
+    """
+
+    source_path = reference_root / "ardacraft_biomes_v3.json"
+    if sha256(source_path) != ARDACRAFT_BIOMES_SHA256:
+        raise ValueError(
+            "Ardacraft biome atlas changed; re-audit before rebuilding controls"
+        )
+    source = json.loads(source_path.read_text(encoding="utf-8"))
+    if source.get("type") != "FeatureCollection":
+        raise ValueError("Ardacraft biome atlas lost its FeatureCollection contract")
+    available = {
+        (feature.get("properties") or {}).get("Label")
+        for feature in source.get("features", [])
+    }
+    missing = sorted(labels - available)
+    if missing:
+        raise ValueError(f"Ardacraft biome labels disappeared: {missing}")
+
+    polygons: list[list[list[float]]] = []
+    for feature in source["features"]:
+        properties = feature.get("properties") or {}
+        if properties.get("Label") not in labels:
+            continue
+        geometry = feature.get("geometry") or {}
+        if geometry.get("type") == "Polygon":
+            source_polygons = [geometry.get("coordinates", [])]
+        elif geometry.get("type") == "MultiPolygon":
+            source_polygons = geometry.get("coordinates", [])
+        else:
+            raise ValueError("Ardacraft biome source gained unsupported geometry")
+        for source_polygon in source_polygons:
+            if not source_polygon or len(source_polygon[0]) < 4:
+                continue
+            outer = [
+                endore_from_ardacraft_biome(float(x), float(z))
+                for x, z in source_polygon[0]
+            ]
+            xs = [point[0] for point in outer]
+            ys = [point[1] for point in outer]
+            bbox = (min(xs), min(ys), max(xs), max(ys))
+            centroid = (
+                sum(xs) / len(xs),
+                sum(ys) / len(ys),
+            )
+            if component_filter is not None and not component_filter(
+                properties.get("Label"), bbox, centroid
+            ):
+                continue
+            simplified = simplify_ring(outer, 0.00020)
+            if len(simplified) >= 4 and in_view(simplified):
+                polygons.append(simplified)
+    if not polygons:
+        raise ValueError(f"Ardacraft biome reduction became empty: {sorted(labels)}")
+    return polygons
 
 
 class Topology:
@@ -629,6 +730,41 @@ def build(reference_root: Path) -> tuple[dict, dict]:
     topology = Topology(source)
     previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
     relief_payload = ardacraft_relief_payload(reference_root)
+
+    brown_lands_polygons = ardacraft_biome_polygons(
+        reference_root,
+        labels={"M6"},
+    )
+    rhun_steppe_labels = {
+        "L3", "L5", "L7", "M2", "M7", "M11", "M18", "M20",
+        "Z2", "Z3", "Z4", "Z5",
+    }
+    rhun_steppe_polygons = ardacraft_biome_polygons(
+        reference_root,
+        labels=rhun_steppe_labels,
+        component_filter=lambda _label, bbox, centroid: (
+            bbox[2] >= 0.56 and centroid[0] >= 0.54 and centroid[1] <= 0.76
+        ),
+    )
+    harad_steppe_labels = {
+        "H1", "H2", "H6", "H7", "J22", "J48", "J49",
+        "K23", "K31", "N4",
+    }
+    harad_steppe_polygons = ardacraft_biome_polygons(
+        reference_root,
+        labels=harad_steppe_labels,
+        component_filter=lambda _label, bbox, centroid: (
+            bbox[3] >= 0.65 and centroid[1] >= 0.64
+        ),
+    )
+    harad_arid_labels = {"H3", "H4", "H5"}
+    harad_arid_polygons = ardacraft_biome_polygons(
+        reference_root,
+        labels=harad_arid_labels,
+        component_filter=lambda _label, bbox, centroid: (
+            bbox[3] >= 0.79 and centroid[1] >= 0.79
+        ),
+    )
 
     outline_geometries = source["objects"]["poly_outline"]["geometries"]
     islands: dict[str, list[list[float]]] = {}
@@ -1128,6 +1264,84 @@ def build(reference_root: Path) -> tuple[dict, dict]:
                 "source": "Arda Maps poly_moor 0",
             },
             {
+                "key": "brown_lands",
+                "biome": "steppe",
+                "shape": "multi_polygon",
+                "coords": brown_lands_polygons,
+                "source_labels": ["M6"],
+                "source": "Ardacraft Biome layer Middle-earth V3",
+            },
+            {
+                "key": "rhun_steppe",
+                "biome": "steppe",
+                "shape": "multi_polygon",
+                "coords": rhun_steppe_polygons,
+                "source_labels": sorted(rhun_steppe_labels),
+                "source": "Ardacraft Biome layer Middle-earth V3",
+            },
+            {
+                "key": "rhun_source_edge_continuation",
+                "biome": "steppe",
+                "shape": "organic_polygon",
+                "coords": [
+                    [0.744, 0.205], [0.783, 0.195], [0.824, 0.211],
+                    [0.861, 0.196], [0.879, 0.278], [0.872, 0.376],
+                    [0.883, 0.468], [0.868, 0.573], [0.842, 0.657],
+                    [0.798, 0.701], [0.756, 0.679], [0.738, 0.604],
+                    [0.751, 0.527], [0.743, 0.438], [0.756, 0.346],
+                ],
+                "source": (
+                    "Judgment: continuous east-edge extension from Ardacraft "
+                    "L/M/Z steppe polygons beyond its equal-scale image bound"
+                ),
+            },
+            {
+                "key": "near_harad_scrub",
+                "biome": "steppe",
+                "shape": "multi_polygon",
+                "coords": harad_steppe_polygons,
+                "source_labels": sorted(harad_steppe_labels),
+                "source": "Ardacraft Biome layer Middle-earth V3",
+            },
+            {
+                "key": "harad_source_edge_scrub",
+                "biome": "steppe",
+                "shape": "organic_polygon",
+                "coords": [
+                    [0.724, 0.653], [0.771, 0.642], [0.815, 0.666],
+                    [0.861, 0.650], [0.879, 0.721], [0.867, 0.789],
+                    [0.828, 0.834], [0.778, 0.820], [0.739, 0.786],
+                ],
+                "source": (
+                    "Judgment: continuous east-edge extension from Ardacraft "
+                    "Near Harad scrub polygons beyond its equal-scale image bound"
+                ),
+            },
+            {
+                "key": "far_harad_arid",
+                "biome": "arid",
+                "shape": "multi_polygon",
+                "coords": harad_arid_polygons,
+                "source_labels": sorted(harad_arid_labels),
+                "source": "Ardacraft Biome layer Middle-earth V3",
+            },
+            {
+                "key": "harad_source_edge_arid",
+                "biome": "arid",
+                "shape": "organic_polygon",
+                "coords": [
+                    [0.723, 0.792], [0.770, 0.783], [0.817, 0.804],
+                    [0.864, 0.786], [0.883, 0.872], [0.875, 1.000],
+                    [0.724, 1.000], [0.735, 0.913],
+                ],
+                "source": (
+                    "Judgment: continuous east-edge extension from Ardacraft "
+                    "H3/H4/H5 arid polygons beyond its equal-scale image bound"
+                ),
+            },
+            # Paint Mordor after eastern climate controls so its exact source
+            # enclosure remains ash rather than being overwritten by Z-steppe.
+            {
                 "key": "mordor",
                 "biome": "ash",
                 "shape": "source_proximity_field",
@@ -1144,39 +1358,6 @@ def build(reference_root: Path) -> tuple[dict, dict]:
                     "Arda Maps poly_mountainlow 8-11 and "
                     "point_mount MountDoom"
                 ),
-            },
-            {
-                "key": "brown_lands",
-                "biome": "steppe",
-                "shape": "organic_polygon",
-                "coords": [
-                    [0.548, 0.382], [0.590, 0.360], [0.632, 0.372],
-                    [0.649, 0.414], [0.640, 0.466], [0.615, 0.505],
-                    [0.577, 0.500], [0.552, 0.455],
-                ],
-            },
-            {
-                "key": "rhun_steppe",
-                "biome": "steppe",
-                "shape": "organic_polygon",
-                "coords": [
-                    [0.645, 0.115], [0.790, 0.105], [1.000, 0.130],
-                    [1.000, 0.510], [0.820, 0.500], [0.750, 0.455],
-                    [0.705, 0.390], [0.670, 0.310],
-                ],
-            },
-            {
-                "key": "harad",
-                "biome": "arid",
-                "shape": "organic_polygon",
-                "coords": [
-                    [0.385, 0.730], [0.425, 0.708], [0.468, 0.724],
-                    [0.512, 0.699], [0.558, 0.729], [0.606, 0.702],
-                    [0.654, 0.727], [0.704, 0.694], [0.756, 0.716],
-                    [0.810, 0.688], [0.868, 0.711], [0.928, 0.684],
-                    [1.000, 0.700], [1.000, 1.000], [0.220, 1.000],
-                    [0.250, 0.900], [0.310, 0.820],
-                ],
             },
         ]
     )
@@ -1303,6 +1484,18 @@ def build(reference_root: Path) -> tuple[dict, dict]:
             "bounds": relief_payload["bounds"],
             "resolution": relief_payload["resolution"],
             "quantization_max": relief_payload["quantization_max"],
+        },
+        "source_biomes": {
+            "source": "Ardacraft Biome layer Middle-earth V3",
+            "source_sha256": ARDACRAFT_BIOMES_SHA256,
+            "source_bounds": ARDACRAFT_BIOME_BOUNDS,
+            "endore_bounds": ARDACRAFT_IMAGE_BOUNDS,
+            "classification": {
+                "brown_lands": ["M6"],
+                "rhun_steppe": sorted(rhun_steppe_labels),
+                "near_harad_scrub": sorted(harad_steppe_labels),
+                "far_harad_arid": sorted(harad_arid_labels),
+            },
         },
         "extent": previous["extent"],
         "land_polygons": {

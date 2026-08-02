@@ -363,3 +363,41 @@ about Middle-earth.
   requires distinct TA 3018 control evidence under the existing canon hierarchy; wild
   land or a physically adjacent attested controller is preferable to decorative
   fragmentation.
+
+## v79 Ardacraft biome reduction and political reseed
+
+- † Ardacraft's biome codes are environmental interpretation, not canonical political or
+  cadastral facts. `M6` is used for the Brown Lands; the `L`/`M`/`Z2`–`Z5` families for
+  western Rhûn steppe; `H1`/`H2`/`H6`/`H7` plus the listed `J`/`K`/`N` codes for Near
+  Harad scrub and woodland; and `H3`–`H5` for the farther-south arid belt. Tolkien's text
+  and map evidence retains precedence if a later conflict is demonstrated.
+- † The accepted source atlas stops before ENDÓRË's authored east/south crop. Irregular
+  continuation polygons preserve open Rhûn and Harad land at those map edges; they are
+  explicit ENDÓRË interpolation, not attributed to Ardacraft and not permission to close
+  the crop with a false ocean.
+- † Generated location IDs are not stable evidence. After climate-weighted density
+  reseeded the 6,004-cell topology, v78 repair IDs were discarded and every resulting
+  component was re-audited from physical coordinates and adjacency. A repair may cross a
+  technical region seam only when its coordinate lies inside the destination realm's
+  authored physical claim—for example the two cells south of the White Mountains on
+  Gondor's side.
+
+## v80 ancient-forest presentation and eastern/southern political limits
+
+- The accepted sources establish Mirkwood and Lothlorien as ancient, canopy-dominant
+  woods but do not specify an EU5 transform density. Increasing tree count and canopy
+  scale inside the unchanged hash-pinned woodland masks is a renderer-presentation
+  judgment. It does not enlarge either forest or imply settlement in every clearing.
+- Lothlorien's political sphere is the Naith/eastern Golden Wood, not the Misty crest. A
+  location must now overlap the source forest and fall within the reviewed Naith
+  partition. Woodland Realm, Woodmen, and Dol Guldur likewise intersect the same source
+  Mirkwood mask with northern/eastern, western/central, and southern partitions.
+- Tolkien and the accepted maps do not supply cadastral TA 3018 borders for Harnendor,
+  the invented Qarsad polity, Far Harad's represented fringe, Khand, or the three Rhunic
+  gameplay polities. Their irregular envelopes are conservative gameplay interpretations
+  around attested broad regions and seats, not claims of canonical exactness. Unassigned
+  land between them represents unknown, decentralized, contested, or sparsely controlled
+  country and is preferable to a false wall-to-wall state map.
+- The existing 38-realm roster already distinguishes the canon-supported small powers in
+  Mirkwood and elsewhere. No additional realm is assumed merely to improve border
+  smoothness; a future addition still requires independent TA 3018 control evidence.
