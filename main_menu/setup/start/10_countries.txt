@@ -202,6 +202,7 @@ countries = {
 				me_land_2266
 				me_land_2276
 				me_land_2290
+				me_land_2291
 				me_land_2305
 				me_land_2306
 				me_land_2308
@@ -232,7 +233,6 @@ countries = {
 				me_land_2613
 				me_land_2647
 				me_land_2664
-				me_land_2679
 				me_land_2692
 				me_land_2705
 				me_land_2709
@@ -247,6 +247,7 @@ countries = {
 				me_land_2800
 				me_land_2806
 				me_land_2811
+				me_land_2844
 				me_land_2851
 				me_land_2873
 				me_land_2889
@@ -558,6 +559,7 @@ countries = {
 				me_land_2580
 				me_land_2653
 				me_land_2670
+				me_land_2679
 				me_land_2850
 				me_land_3252
 				me_land_3261
@@ -784,7 +786,6 @@ countries = {
 				me_land_2224
 				me_land_2268
 				me_land_2286
-				me_land_2291
 				me_land_2311
 				me_land_2342
 				me_land_2348
@@ -801,7 +802,6 @@ countries = {
 				me_land_2712
 				me_land_2727
 				me_land_2788
-				me_land_2844
 				me_land_2857
 				me_land_2866
 				me_land_2886
@@ -992,7 +992,6 @@ countries = {
 				me_land_1054
 				me_land_1172
 				me_land_1229
-				me_land_1322
 				me_land_1397
 				me_land_1448
 				me_land_1488
@@ -1011,7 +1010,6 @@ countries = {
 				me_land_2292
 				me_land_2472
 				me_land_2578
-				me_land_2686
 				me_land_2746
 				me_land_2777
 				me_land_2925
@@ -1512,7 +1510,6 @@ countries = {
 			own_control_core = {
 				forlond
 				harlond_lindon
-				me_land_0003
 				me_land_0029
 				me_land_0189
 				me_land_0208
@@ -1521,7 +1518,6 @@ countries = {
 				me_land_0388
 				me_land_0390
 				me_land_0436
-				me_land_0469
 				me_land_0471
 				me_land_0502
 				me_land_0553
@@ -1593,7 +1589,6 @@ countries = {
 				me_land_3324
 				me_land_3367
 				me_land_3376
-				me_land_3379
 				me_land_3394
 				me_land_3405
 				me_land_3565
@@ -1614,7 +1609,6 @@ countries = {
 				me_land_4080
 				me_land_4097
 				me_land_4103
-				me_land_4141
 				me_land_4154
 				me_land_4174
 				me_land_4195
@@ -1750,6 +1744,7 @@ countries = {
 				me_land_0383
 				me_land_0384
 				me_land_0452
+				me_land_0469
 				me_land_0594
 				me_land_0764
 				me_land_0812
@@ -1772,10 +1767,12 @@ countries = {
 				me_land_3012
 				me_land_3079
 				me_land_3140
+				me_land_3379
 				me_land_3432
 				me_land_3498
 				me_land_3873
 				me_land_4067
+				me_land_4141
 				me_land_4177
 				me_land_4315
 				me_land_4325
@@ -2439,7 +2436,6 @@ countries = {
 				me_land_3105
 				me_land_3654
 				me_land_4142
-				me_land_4786
 				me_land_5109
 			}
 			starting_technology_level = 3
@@ -2560,6 +2556,7 @@ countries = {
 				me_land_4257
 				me_land_4423
 				me_land_4468
+				me_land_4786
 				me_land_4823
 				me_land_4847
 				me_land_4925
@@ -2672,7 +2669,6 @@ countries = {
 				me_land_0566
 				me_land_0590
 				me_land_0603
-				me_land_0616
 				me_land_0631
 				me_land_0675
 				me_land_0701
@@ -2687,6 +2683,7 @@ countries = {
 				me_land_1563
 				me_land_1565
 				me_land_1579
+				me_land_1671
 				me_land_1764
 				me_land_1894
 				me_land_2185
@@ -2697,7 +2694,6 @@ countries = {
 				me_land_2337
 				me_land_2351
 				me_land_2355
-				me_land_2623
 				me_land_2649
 				me_land_2816
 				me_land_2822
@@ -3006,6 +3002,7 @@ countries = {
 				me_land_2819
 				me_land_2882
 				me_land_2955
+				me_land_2985
 				me_land_3061
 				me_land_3185
 				me_land_3228
@@ -3041,10 +3038,12 @@ countries = {
 				me_land_4418
 				me_land_4428
 				me_land_4508
+				me_land_4621
 				me_land_4736
 				me_land_4737
 				me_land_4818
 				me_land_4840
+				me_land_4846
 				me_land_4875
 				me_land_4880
 				me_land_5011
@@ -4516,15 +4515,16 @@ countries = {
 				me_land_0126
 				me_land_0337
 				me_land_0433
+				me_land_0616
 				me_land_0699
 				me_land_0956
 				me_land_1024
 				me_land_1428
 				me_land_1550
 				me_land_1603
-				me_land_1671
 				me_land_2416
 				me_land_2440
+				me_land_2623
 				me_land_2774
 				me_land_2790
 				me_land_2878
@@ -6018,7 +6018,6 @@ countries = {
 				me_land_2855
 				me_land_2924
 				me_land_2936
-				me_land_2985
 				me_land_2993
 				me_land_3016
 				me_land_3125
@@ -6101,7 +6100,6 @@ countries = {
 				me_land_4587
 				me_land_4589
 				me_land_4618
-				me_land_4621
 				me_land_4625
 				me_land_4651
 				me_land_4686
@@ -6114,7 +6112,6 @@ countries = {
 				me_land_4783
 				me_land_4817
 				me_land_4827
-				me_land_4846
 				me_land_4851
 				me_land_4856
 				me_land_4866

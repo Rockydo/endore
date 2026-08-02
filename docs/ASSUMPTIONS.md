@@ -346,3 +346,20 @@ about Middle-earth.
   texture distribution is accepted: both v44 and v45 live calibrations were rejected and
   the proven v43 cache was restored. A future presentation pass may reveal source
   highlands but may not change the climate outline, coast, rivers, or elevation.
+
+## v78 political-component disposition
+
+- † Edge-sharing location connectivity is a diagnostic for political paint, not a claim
+  that rivers, lakes, seas, or impassable mountain locations sever sovereignty. Tolfalas,
+  Westfold, the divided Lindon/Lossoth coasts, northern goblin fastnesses, and forced
+  refuges/gates may therefore remain separate components only with an exact member list
+  and a recorded physical explanation in the generated ownership audit.
+- † Tiny unforced components with no such explanation are treated as allocator artifacts.
+  The reviewed v78 repairs follow the immediately visible physical frontier: Shire west
+  of the Brandywine, Rohan north of the White Mountains, Gondor/Dol Amroth in Belfalas,
+  Dale/Esgaroth at Long Lake, Beorning vale versus Misty Mountain goblin holds, Dorwinion
+  at its southwest source-side frontier, and Lindon west of the Blue Mountains.
+- † No smaller polity is introduced merely to absorb an isolated location. A new realm
+  requires distinct TA 3018 control evidence under the existing canon hierarchy; wild
+  land or a physically adjacent attested controller is preferable to decorative
+  fragmentation.

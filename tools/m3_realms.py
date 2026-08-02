@@ -170,6 +170,157 @@ CONTIGUOUS_CLAIM_REALMS = frozenset(
         "WOO",
     }
 )
+# Full-raster v77 review found a small set of unforced one/two-cell colour
+# islands that passed their coarse realm envelope but contradicted the local
+# physical frontier. Keep these repairs explicit and reviewable rather than
+# adding a generic smoothing pass that could erase real islands, divided
+# valleys, or mountain fastnesses. Every key and disposition is emitted in the
+# location-level ownership audit and therefore breaks validation if topology
+# changes under it.
+REVIEWED_COMPONENT_REPAIRS: dict[str, tuple[str, str]] = {
+    "me_land_1322": (WILD, "east/south of the reviewed Brandywine Shire claim"),
+    "me_land_2686": (WILD, "east of the reviewed Brandywine Shire claim"),
+    "me_land_2291": ("GON", "south of the White Mountains on Gondor's side"),
+    "me_land_2844": ("GON", "south of the White Mountains on Gondor's side"),
+    "me_land_2679": ("DAM", "Belfalas coast contiguous with the Dol Amroth fief"),
+    "me_land_4786": ("ESG", "Long Lake shore contiguous with Esgaroth"),
+    "me_land_0616": ("GOB", "Misty Mountain/High Pass side of the vale frontier"),
+    "me_land_2623": ("GOB", "Misty Mountain/High Pass side of the vale frontier"),
+    "me_land_1671": ("BEO", "Anduin-vale side of the Misty Mountain frontier"),
+    "me_land_2985": ("DOR", "contiguous southwest Dorwinion frontier"),
+    "me_land_4621": ("DOR", "contiguous southwest Dorwinion frontier"),
+    "me_land_4846": ("DOR", "contiguous southwest Dorwinion frontier"),
+    "me_land_0469": ("BLU", "Blue Mountain holding beyond Lindon's coast"),
+    "me_land_3379": ("BLU", "Blue Mountain holding beyond Lindon's coast"),
+    "me_land_4141": ("BLU", "Blue Mountain holding beyond Lindon's coast"),
+    "me_land_0003": (WILD, "unattested remote island beyond Lindon's coast"),
+}
+# Every surviving non-primary, non-forced political component has an explicit
+# physical explanation. The exact member sets intentionally make topology
+# changes fail validation and return to review rather than silently inheriting
+# an obsolete exception.
+REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
+    ("GON", frozenset({"me_land_0004", "me_land_1958"})): (
+        "Tolfalas island, separated from mainland Gondor by engine water"
+    ),
+    (
+        "ROH",
+        frozenset(
+            {
+                "me_land_0116",
+                "me_land_0411",
+                "me_land_0485",
+                "me_land_0520",
+                "me_land_0538",
+                "me_land_0738",
+                "me_land_0755",
+                "me_land_1175",
+                "me_land_2116",
+                "me_land_2484",
+                "me_land_3220",
+                "me_land_3332",
+                "me_land_4510",
+                "me_land_4833",
+                "me_land_5133",
+            }
+        ),
+    ): "Westfold component divided by river/impassable location topology",
+    (
+        "LIN",
+        frozenset(
+            {
+                "me_land_0208",
+                "me_land_0762",
+                "me_land_2706",
+                "me_land_2874",
+                "me_land_3272",
+                "me_land_3941",
+                "me_land_3992",
+                "me_land_4263",
+                "me_land_4996",
+            }
+        ),
+    ): "reviewed Lindon coast divided by Gulf and Blue Mountain topology",
+    (
+        "LOS",
+        frozenset(
+            {
+                "me_land_0001",
+                "me_land_0114",
+                "me_land_0274",
+                "me_land_0759",
+                "me_land_1532",
+                "me_land_1663",
+                "me_land_2202",
+                "me_land_3111",
+                "me_land_4340",
+                "me_land_4560",
+                "me_land_4729",
+                "me_land_4789",
+                "me_land_5060",
+            }
+        ),
+    ): "reviewed Lossoth shore divided by Icebay water topology",
+    ("LOS", frozenset({"me_land_0002"})): "remote reviewed Icebay shore/island",
+    (
+        "GUN",
+        frozenset(
+            {
+                "me_land_0891",
+                "me_land_3283",
+                "me_land_4680",
+                "me_land_4903",
+                "me_land_5049",
+            }
+        ),
+    ): "northern goblin fastnesses divided by impassable mountain locations",
+    (
+        "GUN",
+        frozenset(
+            {
+                "me_land_1243",
+                "me_land_2217",
+                "me_land_2645",
+                "me_land_4499",
+                "me_land_4678",
+            }
+        ),
+    ): "northern goblin fastnesses divided by impassable mountain locations",
+    ("GUN", frozenset({"me_land_1312"})): (
+        "isolated northern goblin fastness among impassable peaks"
+    ),
+    (
+        "HNE",
+        frozenset(
+            {
+                "me_land_0770",
+                "me_land_1093",
+                "me_land_1382",
+                "me_land_2294",
+                "me_land_2446",
+                "me_land_2582",
+                "me_land_2997",
+                "me_land_3568",
+                "me_land_4050",
+            }
+        ),
+    ): "lower-confidence Near Harad component divided at the southern crop edge",
+    (
+        "HFA",
+        frozenset(
+            {
+                "me_land_0587",
+                "me_land_1202",
+                "me_land_2685",
+                "me_land_2958",
+                "me_land_4333",
+            }
+        ),
+    ): "lower-confidence Far Harad component divided at the southern crop edge",
+    ("KHA", frozenset({"me_land_1840", "me_land_3057", "me_land_3738"})): (
+        "Khand approach divided from its basin by Mordor's mountain wall"
+    ),
+}
 # Region-only claims lack a precise source envelope, so this ceiling prevents their
 # allocator from reaching implausibly far across the thinly documented East and South.
 # Contracted realms instead use their stronger, source-specific physical bounds.
@@ -632,6 +783,24 @@ def assign_ownership(
         if location.kind != "land":
             ownership[location.key] = WILD
             wild_reason[location.key] = f"wild_{location.kind}"
+    for key, (tag, rationale) in REVIEWED_COMPONENT_REPAIRS.items():
+        location = model.by_key.get(key)
+        if location is None or location.kind != "land":
+            raise ValueError(f"reviewed political repair lost land location {key}")
+        if key in forced_owner:
+            raise ValueError(f"reviewed political repair overlaps forced anchor {key}")
+        if tag != WILD and tag not in by_tag:
+            raise ValueError(f"reviewed political repair uses unknown realm {tag}")
+        ownership[key] = tag
+        if tag == WILD:
+            wild_reason[key] = f"wild_reviewed_component: {rationale}"
+        else:
+            wild_reason.pop(key, None)
+    counts = Counter(
+        ownership[location.key]
+        for location in model.locations
+        if location.kind == "land" and ownership[location.key] != WILD
+    )
     for tag in by_tag:
         if counts[tag] < 1:
             raise ValueError(f"{tag} owns no location")
@@ -1049,6 +1218,7 @@ def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
             continue
         realm = state.by_tag[owner]
         is_forced = forced.get(location.key) == owner
+        component_repair = REVIEWED_COMPONENT_REPAIRS.get(location.key)
         allowed, rationale = claim_contract(
             location,
             realm,
@@ -1056,6 +1226,9 @@ def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
         )
         if is_forced:
             verdict = "accepted_forced_anchor"
+        elif component_repair and component_repair[0] == owner:
+            rationale = component_repair[1]
+            verdict = "accepted_component_repair"
         elif owner in SOURCE_ZONE_CLAIMS:
             verdict = "accepted_source_zone_overlap" if allowed else "violation"
         elif owner in CLAIM_POLYGONS:
@@ -1135,7 +1308,7 @@ def location_adjacency(model: WorldModel) -> dict[str, set[str]]:
 
 
 def realm_connectivity(state: RealmState) -> dict[str, dict[str, object]]:
-    """Summarize connected political components and detached non-anchor specks."""
+    """Summarize and disposition every connected political component."""
     adjacency = location_adjacency(state.model)
     forced = forced_ownership(state.realms, state.ref_to_location)
     result: dict[str, dict[str, object]] = {}
@@ -1161,16 +1334,29 @@ def realm_connectivity(state: RealmState) -> dict[str, dict[str, object]]:
                     frontier.extend(sorted(neighbours))
             components.append(component)
         components.sort(key=lambda values: (-len(values), min(values)))
-        component_rows = [
-            {
-                "size": len(component),
-                "forced_anchors": sum(
-                    forced.get(location) == realm.tag for location in component
-                ),
-                "sample": sorted(component)[:5],
-            }
-            for component in components
-        ]
+        component_rows: list[dict[str, object]] = []
+        for index, component in enumerate(components):
+            forced_anchors = sum(
+                forced.get(location) == realm.tag for location in component
+            )
+            if index == 0:
+                disposition = "primary_component"
+            elif forced_anchors:
+                disposition = "accepted_forced_anchor_barrier_split"
+            else:
+                disposition = REVIEWED_DISCONNECTED_COMPONENTS.get(
+                    (realm.tag, frozenset(component)),
+                    "unreviewed",
+                )
+            component_rows.append(
+                {
+                    "size": len(component),
+                    "forced_anchors": forced_anchors,
+                    "sample": sorted(component)[:5],
+                    "locations": sorted(component) if index else [],
+                    "disposition": disposition,
+                }
+            )
         detached_unforced_specks = sum(
             row["size"] <= 2 and row["forced_anchors"] == 0
             for row in component_rows[1:]
@@ -1248,7 +1434,7 @@ def ownership_audit_json(state: RealmState) -> str:
             "connectivity": connectivity[realm.tag],
         }
     payload = {
-        "schema": 2,
+        "schema": 3,
         "milestone": "M3 political assignment audit",
         "audited_land_locations": len(rows),
         "owned_locations": sum(row["realm"] != WILD for row in rows),
@@ -1454,6 +1640,23 @@ def check() -> list[str]:
             "compact source-side realms contain detached political components: "
             f"{fragmented_compact_realms}"
         )
+    unreviewed_components = {
+        tag: [
+            row
+            for row in summary["component_detail"][1:]
+            if row["disposition"] == "unreviewed"
+        ]
+        for tag, summary in connectivity.items()
+        if any(
+            row["disposition"] == "unreviewed"
+            for row in summary["component_detail"][1:]
+        )
+    }
+    if unreviewed_components:
+        failures.append(
+            "political components lack a physical disposition: "
+            f"{unreviewed_components}"
+        )
     regions = {location.region for location in state.model.locations}
     for realm in realms:
         unknown = realm.regions - regions
@@ -1469,9 +1672,17 @@ def check() -> list[str]:
         count = sum(value == realm.tag for value in state.ownership.values())
         if count < 1:
             failures.append(f"{realm.tag} owns no locations")
-        if realm.max_locations and count > realm.max_locations:
+        reviewed_allowance = sum(
+            target == realm.tag
+            for target, _ in REVIEWED_COMPONENT_REPAIRS.values()
+        )
+        if (
+            realm.max_locations
+            and count > realm.max_locations + reviewed_allowance
+        ):
             failures.append(
-                f"{realm.tag} owns {count}, above cap {realm.max_locations}"
+                f"{realm.tag} owns {count}, above allocator cap "
+                f"{realm.max_locations} plus {reviewed_allowance} reviewed repairs"
             )
     if sum(value == "IRO" for value in state.ownership.values()) < 12:
         failures.append("Iron Hills lacks a viable source-side territorial cluster")

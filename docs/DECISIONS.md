@@ -1365,3 +1365,21 @@ retail grass-test family, while the sparse palm layer added no readable localize
 Remove both sets of bins and make stale-output detection enforce their absence. This
 decision changes renderer detail only; it does not alter any source climate polygon,
 height, coast, river, location, or political assignment.
+
+## 2026-08-02 - Disposition every detached political component
+
+Upgrade the complete 5,200-land-location ownership audit to schema 3. Every political
+component beyond a realm's primary connected body must now be either anchored by an
+attested forced site or match an exact reviewed member set with a physical explanation.
+Any new or changed unclassified component fails validation. Do not use generic border
+smoothing: it would erase real islands, divided coasts, mountain fastnesses, and hidden
+valleys along with actual allocator specks.
+
+Apply sixteen explicit cell repairs found by the full-raster review: two Shire outliers
+become wild; two south-of-White-Mountains Rohan cells return to Gondor; one Belfalas coast
+cell joins Dol Amroth; one Long Lake cell joins Esgaroth; two Beorning/Goblin groups are
+put on their correct vale/mountain sides; three southwest Rhûn cells join contiguous
+Dorwinion; three stranded Lindon mountain cells join the Blue Mountain holds; and one
+unattested remote Lindon island becomes wild. Preserve the separate Gondorian Tolfalas
+component and every other recorded barrier split. Add no faction without distinct TA
+3018 sovereignty evidence.

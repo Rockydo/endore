@@ -1288,3 +1288,36 @@
   game-visible fingerprint `f97befaa204df096c0877aa0d48f7de7f274060fd664598187a45e6de9d74366`.
   This accepts the narrow rock/quarantine renderer batch only. M2's complete physical
   nine-theatre owner gate remains red and no gameplay milestone is resumed.
+
+## 2026-08-02 - v78 full political-component review candidate
+
+- Rebuilt the edge-sharing graph for all 5,200 land locations and reviewed every
+  component beyond each realm's primary body. The previous audit reported components but
+  only failed fragmentation for fifteen compact realms; it could still admit tiny
+  unforced color islands elsewhere. Schema 3 now records complete detached member lists,
+  forced-anchor status, and one exact physical disposition per surviving split. Any
+  unclassified future component is a validation failure.
+- Applied sixteen bounded source-side repairs. Two Shire specks outside the reviewed
+  Brandywine claim and one unattested far Lindon island become wild. Three Lindon cells
+  beyond its coast join the Blue Mountain holds; two Rohan cells south of the White
+  Mountains join Gondor; one Belfalas coast cell joins Dol Amroth; one Long Lake cell
+  joins Esgaroth; reciprocal Beorning/Goblin specks move to the vale/mountain sides; and
+  three southwest Rhûn cells join contiguous Dorwinion. The two-location Tolfalas island,
+  Westfold, divided coasts, mountain fastnesses, crop-edge claims, and all forced
+  strongholds/refuges remain with explicit dispositions.
+- The regenerated audit has 3,430 owned and 1,770 deliberately wild land locations,
+  zero claim violations, and zero unreviewed detached components. Lothlórien remains a
+  single 21-location Golden Wood overlap and Dunland a single 32-location reviewed
+  lowland polygon. The roster remains 38 realms: no subfaction was invented merely to
+  hide a border defect. M3, M4 people assignments, the deterministic location
+  localization/templates, and the 5,179-location census were regenerated coherently.
+- Full `gmake validate` passed in 536.8 seconds. A genuinely fresh player-facing New Game
+  reached HUD-proven Observer on exact game-visible fingerprint
+  `e2c57c6edf7cde11a71f944732a1c597efc7830f170270b33b0cada5995f12f8`; evidence under
+  `docs/screens/20260802_v78_component_audit/` includes the complete political overview,
+  dense source-side Lothlórien, bounded Dunland, and corrected Esgaroth/Long Lake view.
+  A 45-second maximum-speed playback required zero pause recovery and ended at the exact
+  1,486-byte `error.log` baseline. Paired vanilla/ENDÓRË smoke passed in 265.3 seconds
+  with zero new mod lines, and `eu5_slot.py assert-smoked` binds the result to the same
+  fingerprint. This accepts the focused component audit; M2's full physical nine-theatre
+  owner gate remains red.

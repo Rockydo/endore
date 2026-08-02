@@ -236,6 +236,17 @@
    paired zero-new-line smoke are green on fingerprint `d595e311`. Keep the complete
    per-location audit active while the separately open nine-theatre physical review
    continues; add a smaller faction only with distinct TA 3018 control evidence.
+   ACCEPTED STATIC v78 COMPONENT AUDIT CANDIDATE — schema 3 now records the full member
+   list and physical disposition of every non-primary political component and validation
+   rejects any unreviewed split. Sixteen reviewed cells remove Shire, White Mountains,
+   Belfalas, Long Lake, Misty/Anduin, southwest Dorwinion, and Blue Mountains specks
+   without changing a source polygon or major realm silhouette. Lothlórien remains one
+   contiguous 21-location source-overlap claim and Dunland one contiguous 32-location
+   frontier polygon. No smaller faction was invented without distinct TA 3018 evidence.
+   Full validation, fresh political-map evidence, untouched 45-second playback, paired
+   zero-new-line smoke, and exact-fingerprint assertion pass on `e2c57c6e`. This accepts
+   the focused ownership checkpoint while the separate physical nine-theatre gate stays
+   open; keep the schema-3 component audit active for every later topology change.
 11. PAUSED M5 renderer: isolate or replace the inherited `boat_with_oars_unit` path that
    emitted a missing `waves_vfx` / `foam_stop` pair on 3018.2.17. The attempted direct
    vanilla control was inconclusive because it still loaded the active ENDÓRË map.
