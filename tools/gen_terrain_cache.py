@@ -67,7 +67,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 43
+GENERATOR_VERSION = 46
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -76,8 +76,10 @@ GENERATOR_VERSION = 43
 # face thresholds only, so their height payload is exactly compatible with v39.
 # v42 adds native-cache longitudinal serration to the two source-pinned Mordor
 # walls, so no older height payload is compatible with this generator. v43
-# changes river-material semantics only and may reuse a verified v42 height.
-HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42, 43})
+# changes river-material semantics only. The rejected v44/v45 climate probes
+# never survived in source. v46 changes the custom palette and material mask
+# only, so it may reuse a verified v42/v43 height payload.
+HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42, 43, 46})
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
 # virtual-texture cache contains a separately sculpted 65536x32768 surface:
@@ -124,8 +126,12 @@ MATERIAL_WETLAND_COAST = np.uint16(1 << 4)
 MATERIAL_COAST_TRANSITION = np.uint16(1 << 5)
 MATERIAL_RIVER = np.uint16(1 << 6)
 MATERIAL_WATER_TRANSITION = np.uint16(1 << 7)
-MATERIAL_VEGETATION_TRANSITION = np.uint16(1 << 8)
-MATERIAL_CLIMATE_TRANSITION = np.uint16(1 << 9)
+# v44/v45 proved that encoding climate by mixing the six terrain-variation
+# channels creates green/pale islands or huge rock blotches. The single
+# continuous ENDORË biome instead gives its otherwise-unused transition slots
+# dedicated installed-material identities, preserving seamless raster edges.
+MATERIAL_TUNDRA = np.uint16(1 << 8)
+MATERIAL_STEPPE = np.uint16(1 << 9)
 MATERIAL_GRASS = np.uint16(1 << 10)
 MATERIAL_EARTH = np.uint16(1 << 11)
 MATERIAL_DARK_ROCK = np.uint16(1 << 12)
@@ -1052,36 +1058,29 @@ def render_material_source() -> np.ndarray:
     material[cool_blend] = MATERIAL_GRASS | MATERIAL_EARTH
     material[cool_earth] = MATERIAL_EARTH
 
-    # Climate envelopes are continuous material weights. Painting their
-    # integer control IDs directly produced ruler-straight Harad boundaries
-    # and hard green islands in Mordor. Broad feathering preserves the
-    # source-aligned macro envelope while noise breaks the transition into
-    # natural tongues instead of location-sized patches.
+    # Climate envelopes use dedicated native-material channels inside the one
+    # continuous renderer biome. This is deliberately different from the
+    # rejected v44/v45 binary mixtures: source geometry owns the interior and
+    # a broad distance weight owns only the edge feather. No location template
+    # or high-frequency selector can create cell-shaped climate islands.
+    tundra = (biomes == 5) & land
+    material[tundra] = MATERIAL_TUNDRA
+
     steppe_weight = smoothed_biome_weight(
         control_biomes, (9,), radius=44.0
     )
-    steppe_score = selector + steppe_weight * 82.0
-    steppe_active = (steppe_weight > 0.025) & land
-    steppe_blend = steppe_active & (
-        (steppe_score >= 142.0) & (steppe_score < 174.0)
-    )
-    steppe_earth = steppe_active & (steppe_score >= 174.0)
-    material[steppe_blend] = MATERIAL_GRASS | MATERIAL_EARTH
-    material[steppe_earth] = MATERIAL_EARTH
+    steppe_fringe = (steppe_weight >= 0.10) & (steppe_weight < 0.62) & land
+    steppe_core = (steppe_weight >= 0.62) & land
+    material[steppe_fringe] = MATERIAL_GRASS | MATERIAL_STEPPE
+    material[steppe_core] = MATERIAL_STEPPE
 
     arid_weight = smoothed_biome_weight(
         control_biomes, (10,), radius=72.0
     )
-    arid_score = arid_weight * 255.0 + (selector - 127.5) * 0.34
-    arid_active = (arid_weight > 0.025) & land
-    arid_earth = arid_active & (arid_score < 108.0)
-    arid_blend = arid_active & (
-        (arid_score >= 108.0) & (arid_score < 174.0)
-    )
-    arid_sand = arid_active & (arid_score >= 174.0)
-    material[arid_earth] = MATERIAL_EARTH
-    material[arid_blend] = MATERIAL_EARTH | MATERIAL_SAND
-    material[arid_sand] = MATERIAL_SAND
+    arid_fringe = (arid_weight >= 0.10) & (arid_weight < 0.58) & land
+    arid_core = (arid_weight >= 0.58) & land
+    material[arid_fringe] = MATERIAL_STEPPE | MATERIAL_SAND
+    material[arid_core] = MATERIAL_SAND
 
     ash_weight = smoothed_biome_weight(
         control_biomes, (8,), radius=42.0
@@ -1338,9 +1337,8 @@ def render_material_source() -> np.ndarray:
     material[outer_coast] |= MATERIAL_WATER_TRANSITION
 
     # Every playable dry cell uses one ENDÓRË renderer biome. Engine
-    # vegetation/climate transition bits are therefore neither necessary nor
-    # safe: live evidence showed that they override semantic surface bits with
-    # ochre and green islands. Continuous weights above own all dry blends.
+    # channels 8/9 above are terrain variations in that custom palette, not
+    # engine vegetation/climate transitions or per-location templates.
 
     rivers = river_material_mask(projection) & land
     material[rivers] |= MATERIAL_RIVER
@@ -1349,6 +1347,21 @@ def render_material_source() -> np.ndarray:
         raise AssertionError("material paint leaves land without a variation channel")
     if np.any(material[water & ~outer_coast] != 0):
         raise AssertionError("material paint leaks into open water")
+
+    climate_contracts = (
+        ("tundra", (biomes == 5) & land & (height < 27_000), MATERIAL_TUNDRA, 0.96),
+        ("steppe", (biomes == 9) & land & (height < 27_000), MATERIAL_STEPPE, 0.90),
+        ("arid", (biomes == 10) & land & (height < 27_000), MATERIAL_SAND, 0.90),
+    )
+    for key, active, channel, minimum in climate_contracts:
+        if not np.any(active):
+            raise AssertionError(f"{key} material contract has no lowland samples")
+        coverage = float(((material[active] & channel) != 0).mean())
+        if coverage < minimum:
+            raise AssertionError(
+                f"{key} dedicated material coverage regressed: "
+                f"{coverage:.6f} < {minimum:.6f}"
+            )
 
     # Bind renderer material to the same compact source geometry as the height
     # contracts.  A minimum alone rewarded the rejected v34-v36 solution: it
@@ -1537,16 +1550,13 @@ def material_preview(values: np.ndarray) -> Image.Image:
         (MATERIAL_ROCK, (112, 108, 101)),
         (MATERIAL_SNOW, (224, 229, 225)),
         (MATERIAL_SAND, (174, 143, 83)),
+        (MATERIAL_TUNDRA, (91, 94, 89)),
+        (MATERIAL_STEPPE, (151, 116, 69)),
     )
     for bit, color in colors:
         rgb[(reduced & bit) != 0] = color
     coast = (reduced & MATERIAL_COAST_TRANSITION) != 0
     rgb[coast] = (154, 142, 105)
-    transition = (reduced & MATERIAL_VEGETATION_TRANSITION) != 0
-    rgb[transition] = (
-        rgb[transition].astype(np.uint16) * 3 // 4
-        + np.asarray((38, 66, 39), dtype=np.uint16) // 4
-    ).astype(np.uint8)
     rivers = (reduced & MATERIAL_RIVER) != 0
     rgb[rivers] = (55, 104, 127)
     return Image.fromarray(rgb, "RGB")

@@ -1412,3 +1412,46 @@
   exact fingerprint `2df4b63d9be5180089d9d74fa4b61fb4c22f4c94020d481c394b3b02d0140e63`.
   This accepts the focused v80b forest/frontier checkpoint; the complete nine-theatre
   owner gate is still red.
+
+## 2026-08-02 - v81 nine-theatre audit and v82 climate/Old Forest correction
+
+- Launched an exact fresh v80b Observer and captured all nine physical theatres under
+  `docs/screens/20260802_v81_nine_theatre_audit/`. The audit accepted Mirkwood's
+  near-continuous close canopy and the retained rugged mountain renderer, while proving
+  three presentation defects: Forochel still read as temperate green, Rhûn/Near Harad
+  were nearly uniform green plains, and the Old Forest's old roughly 13k-per-LOD budget
+  read as isolated clumps. Far Harad was a single pale sand surface. A 45-second playback
+  retained the 1,486-byte error-log baseline. Dol Amroth's ocean-only capture was marked
+  inconclusive rather than misclassified as a coast defect.
+- Implemented a materially different climate renderer instead of repeating rejected
+  v44/v45 noise masks. The single seamless ENDÓRË biome now exposes installed native
+  tundra, steppe, and stony-sand materials as dedicated palette channels. Generator v46
+  paints source-smoothed climate interiors deterministically and enforces lowland coverage
+  floors. It reused the verified v43 height cache and regenerated all 174,763 material
+  tiles; the self-contained cache remains 193.3 MB and contains zero Earth decal layers.
+- Generator v14 preserves the v13 per-family random seed while redistributing the fixed
+  3,493,385-transform corpus into the unchanged Old Forest mask. Final named-zone counts
+  are Old Forest 75,027/56,507/55,995, Mirkwood 1,060,221/759,520/752,336, Lothlórien
+  85,157/67,671/67,930, Fangorn 56,299/25,896/26,082, and Ithilien
+  1,735/1,282/1,324 at high/medium/low. Lothlórien remains pine-free and uses only the
+  installed light-trunk oceanic variants.
+- A genuinely fresh v82 New Game reached HUD-proven Observer in 124.2 seconds on exact
+  fingerprint `9edf9d2da385ca1c3a619ea8c213226f851c7a2f8e969070836beed31cd073eb`.
+  Evidence under `docs/screens/20260802_v82_climate_old_forest/` proves cold stony
+  Forochel, ochre Rhûn/Near Harad, stony Far Harad, retained dense Mirkwood/Lothlórien,
+  and the compact closed Old Forest source core. A unique Edhellond retest proves
+  Belfalas land is intact. Maximum-speed Observer playback ran 45 seconds with no recovery
+  and no error-log growth. Full validation passed in 462.6 seconds, including all 174,763
+  cache tiles, 3,493,385 object transforms, downstream world outputs, and lint. After
+  several correct lease deferrals behind Antiquitas, paired vanilla/ENDÓRË smoke acquired
+  the slot and passed in 202.7 seconds with zero new lines. Exact-fingerprint assertion
+  binds the pass to `9edf9d2da385ca1c3a619ea8c213226f851c7a2f8e969070836beed31cd073eb`;
+  the complete nine-theatre M2 gate remains red regardless.
+- Used the lease interval for a read-only drainage audit. The pinned controls retain 102
+  non-duplicated Arda Maps courses and 1,736 vertices, but the installed-safe writer emits
+  only 12 independent source-to-water channels: 28,512 non-background width-marker pixels
+  versus vanilla's 741,652. Fourteen named tributaries are skipped because they join a
+  parent; 76 additional courses remain height/material drainage. Vanilla uses green
+  source endpoints, red/yellow degree-two junction markers, and 4/5/11/15 width channels,
+  but earlier exact red-endpoint tests still failed in build 24187685. This isolates the
+  next physical-map task without contaminating the accepted v82 candidate.

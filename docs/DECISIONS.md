@@ -1434,3 +1434,24 @@ certainty. Keep the 38-realm roster unchanged: smaller factions are welcome only
 distinct TA 3018 controller improves lore fidelity, never as a device for consuming
 neutral cells. Validation must continue to reject every contract violation and every
 undispositioned political component.
+
+## 2026-08-02 - Use dedicated native-material channels for continuous climate
+
+Keep the single `endore_dynamic_land_biome` across every playable land location; it is the
+proven protection against hard location-cell climate seams. Repurpose its otherwise-unused
+palette slots 8 and 9 as installed `sediment_dark_01` tundra and
+`sediment_orange_01` steppe, and use installed `sand_rocks_variation_01` for Far Harad's
+arid core. Feather only the source-envelope boundaries by distance. Reject random binary
+mixtures, per-location biome templates, and any return to v44/v45's green/pale islands or
+large dark blotches. Mordor ash keeps final material precedence. This is a renderer
+presentation decision; it does not alter the pinned Ardacraft climate geometry, coast,
+rivers, relief, or political ownership.
+
+## 2026-08-02 - Protect Old Forest density without enlarging it
+
+The v81 live audit proves that the prior Old Forest transform floor is visually
+insufficient. Reweight the fixed global tree corpus inside the exact naturalized Old
+Forest source polygon at every LOD and preserve all unrelated random streams with a stable
+placement seed version. Do not enlarge the forest mask, change nearby ownership, or infer
+that Bucklebury's fields and roadward edge should be continuous canopy. Acceptance depends
+on both the complete named-mask census and source-core live evidence.

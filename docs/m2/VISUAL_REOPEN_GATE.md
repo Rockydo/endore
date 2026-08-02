@@ -583,3 +583,24 @@ seconds with zero mod-unique error lines, and exact-fingerprint assertion binds 
 to `2df4b63d9be5180089d9d74fa4b61fb4c22f4c94020d481c394b3b02d0140e63`.
 The focused v80b forest/frontier checkpoint is accepted; the complete nine-theatre
 physical review remains red.
+
+v81 completed a fresh full-atlas audit on the exact accepted v80b fingerprint. Mirkwood
+and the retained mountain relief pass their focused views. Forochel, Rhûn/Near Harad, Far
+Harad, and Old Forest presentation failed; the Dol Amroth ocean-only finder result was
+explicitly inconclusive. The untouched Observer ran 45 seconds at maximum speed with the
+exact 1,486-byte baseline error log. Evidence is retained under
+`docs/screens/20260802_v81_nine_theatre_audit/`.
+
+v82 is the accepted live correction candidate for those material and Old Forest defects.
+It retains the single seamless land biome and maps dedicated installed native materials
+to tundra, steppe, and stony-sand palette channels; no per-location climate template or
+binary noise selector remains. It also redistributes the fixed map-object corpus into the
+unchanged Old Forest source mask while preserving Mirkwood and light-trunk Lothlórien
+density. A fresh HUD-proven Observer on fingerprint
+`9edf9d2da385ca1c3a619ea8c213226f851c7a2f8e969070836beed31cd073eb` proves the three
+climate reads, dense named forests, intact Belfalas land at Edhellond, and 45 seconds of
+playback with no error-log growth. Full validation passed in 462.6 seconds. After correct
+lease deferrals behind Antiquitas, paired vanilla/ENDÓRË smoke passed in 202.7 seconds
+with zero new lines and exact-fingerprint assertion binds it to `9edf9d2d`. The complete
+gate remains red for remaining source-edge, regional river, small-water, and inconclusive
+unique-anchor review.

@@ -28,14 +28,14 @@ BIOME_BLOCK = r"""
 			sand_transition			# 5 coast transition
 			dirt_ponds_01			# 6 rivers/lakes
 			dirt_transition_02		# 7 water transition
-			grass_scatter_variation_01	# 8 vegetation transition
-			dirt_grass_transition_01	# 9 climate transition
+			sediment_dark_01			# 8 cold tundra
+			sediment_orange_01		# 9 dry steppe
 			grass_dense_variation_01	# 10 grass
 			base_dirt				# 11 earth
 			base_rock_dark			# 12 dark/volcanic rock
 			base_rock				# 13 exposed rock
 			Snow					# 14 snow
-			base_sand				# 15 sand
+			sand_rocks_variation_01	# 15 stony sand
 		}
 	}
 """

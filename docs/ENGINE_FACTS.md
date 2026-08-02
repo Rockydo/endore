@@ -212,6 +212,14 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   overwhelmingly adjacent to index 4, while red/yellow junction markers touch all four
   widths. Index 6 is absent from the installed raster and is not a valid basis for the
   previous width heuristic.
+- A complete installed-raster graph census gives 693 green index-0 degree-one sources,
+  1,286 red index-1 degree-two markers, 129 yellow index-2 degree-two markers, and 1,414
+  ordinary river pixels of graph degree three. The installed raster contains 741,652
+  4/5/11/15 width-marker pixels; ENDÓRË's proven independent-channel raster contains
+  28,512. These counts explain the regional density gap but do not supersede the live
+  finding that a single red endpoint beside a clean parent still fails the custom affluent
+  parser. A future junction experiment must reproduce a complete retail local grammar,
+  not infer safety from marker colors alone.
 - Naturalized independent channels are parser-safe when a static graph proof forbids
   repeated pixels, diagonal gaps, non-consecutive orthogonal neighbours, and contact
   between channels. The exact current tree loaded in no-debug Observer with downstream

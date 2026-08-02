@@ -401,3 +401,18 @@ about Middle-earth.
 - The existing 38-realm roster already distinguishes the canon-supported small powers in
   Mirkwood and elsewhere. No additional realm is assumed merely to improve border
   smoothness; a future addition still requires independent TA 3018 control evidence.
+
+## v82 climate and Old Forest presentation
+
+- The pinned Ardacraft reduction defines climate envelopes, not an exact EU5 texture at
+  every metre. Installed `sediment_dark_01`, `sediment_orange_01`, and
+  `sand_rocks_variation_01` are treated as the closest native renderer analogues for open
+  northern tundra, eastern/southern dry steppe, and the far-southern arid belt. This does
+  not assert that all Forochel is snow-covered or that all Rhûn and Near Harad have the
+  same soil; later variation may be added only without moving the source envelope or
+  reintroducing visible climate islands.
+- Old Forest's exact source mask is much smaller than a normal EU5 camera frame and its
+  only generated location centre lies toward the roadward edge. A dense source-core mass
+  beside sparser Buckland fringe is therefore the intended reading. Transform density is
+  a presentation proxy for ancient canopy, not evidence of settlements, political extent,
+  or a larger woodland boundary.

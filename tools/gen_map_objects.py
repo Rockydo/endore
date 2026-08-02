@@ -34,7 +34,12 @@ from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 13
+GENERATOR_VERSION = 14
+# Keep accepted per-family placement streams stable across this targeted
+# weighting change. The generator contract advances to v14, but unchanged
+# families (notably source-clipped climate rocks and ordinary woods) must not
+# churn merely because the Old Forest receives a stronger protected weight.
+PLACEMENT_SEED_VERSION = 13
 
 
 @dataclass(frozen=True)
@@ -114,7 +119,7 @@ FOREST_ZONE_MINIMUM_DETAIL = {
     # Floors are checked independently for every renderer LOD. They are
     # tightened after generation from the deterministic zone census below.
     "fangorn": {"high": 50_000, "medium": 25_000, "low": 25_000},
-    "old_forest": {"high": 8_000, "medium": 8_000, "low": 8_000},
+    "old_forest": {"high": 52_000, "medium": 45_000, "low": 45_000},
     "lothlorien": {"high": 70_000, "medium": 52_000, "low": 52_000},
     "ithilien": {"high": 700, "medium": 500, "low": 500},
     "mirkwood": {"high": 940_000, "medium": 660_000, "low": 650_000},
@@ -123,7 +128,10 @@ FOREST_ZONE_LOD_BOOST = {
     # Apply named-forest protection at every LOD. The former high-only field
     # made dense woods visibly evaporate at the normal regional camera.
     "fangorn": {"high": 34.0, "medium": 26.0, "low": 26.0},
-    "old_forest": {"high": 16.0, "medium": 28.0, "low": 28.0},
+    # The v81 full-atlas capture proved that the old 13k-per-LOD floor still
+    # rendered the Old Forest as isolated clumps. Protect a closed ancient
+    # canopy while keeping its exact source polygon and global object budget.
+    "old_forest": {"high": 96.0, "medium": 128.0, "low": 128.0},
     "lothlorien": {"high": 140.0, "medium": 185.0, "low": 185.0},
     "ithilien": {"high": 2.0, "medium": 2.0, "low": 2.0},
     "mirkwood": {"high": 8.5, "medium": 11.0, "low": 11.0},
@@ -139,7 +147,7 @@ TUNDRA_VEGETATION_BOUNDS = {
 
 
 def seed(*parts: str) -> int:
-    payload = "|".join(("ENDORE", str(GENERATOR_VERSION), *parts, "3018"))
+    payload = "|".join(("ENDORE", str(PLACEMENT_SEED_VERSION), *parts, "3018"))
     return int.from_bytes(hashlib.sha256(payload.encode("utf-8")).digest()[:8], "little")
 
 

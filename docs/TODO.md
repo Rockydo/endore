@@ -368,3 +368,42 @@
   mod-unique error lines, and `eu5_slot.py assert-smoked` binds that result to exact
   fingerprint `2df4b63d`. Commit and push this focused batch, then continue the still-red
   full nine-theatre M2 owner gate.
+
+## Current v82 physical checkpoint
+
+- ACCEPTED LIVE CLIMATE MECHANISM: keep one continuous ENDÓRË renderer biome, but assign
+  its previously unused palette channels 8 and 9 to installed `sediment_dark_01` tundra
+  and `sediment_orange_01` steppe, with installed `sand_rocks_variation_01` reserved for
+  the Far Harad arid core. Source-smoothed edges blend only those dedicated channels;
+  never restore v44/v45's broad binary noise mixtures or location-scoped biome templates.
+  Fresh close views prove cold stony Forochel, ochre Rhûn/Near Harad, and distinct stony
+  Qarsad desert without location-cell seams or pale/dark material islands. Mordor retains
+  final ash precedence. Static lowland coverage floors are 96% tundra, 90% steppe, and
+  90% arid sand.
+- ACCEPTED ANCIENT-FOREST REBALANCE: preserve the fixed 3,493,385-transform corpus and
+  unchanged hash-pinned forest boundaries. Old Forest now receives 75,027/56,507/55,995
+  high/medium/low transforms instead of roughly 13k per LOD. The exact source core is a
+  closed canopy in the regional evidence; Bucklebury and generated `Land 4390` sit on its
+  agricultural/roadward edge and must not be used alone as an interior-density verdict.
+  Mirkwood remains dense at 1,060,221/759,520/752,336, and Lothlórien remains a dense
+  light-trunk-only wood at 85,157/67,671/67,930.
+- LIVE SAFETY: a fresh New Game reached HUD-proven Observer on exact candidate fingerprint
+  `9edf9d2da385ca1c3a619ea8c213226f851c7a2f8e969070836beed31cd073eb`; 45 seconds of
+  maximum-speed playback required one initial unpause, no recovery, and retained the exact
+  1,486-byte error-log baseline. Belfalas retesting at unique Edhellond proves that the
+  earlier ocean-only Dol Amroth capture was an ambiguous first-result finder target, not a
+  coastline regression. Full validation passed in 462.6 seconds. Paired vanilla/ENDÓRË
+  smoke passed in 202.7 seconds with zero new lines, and exact-fingerprint assertion binds
+  it to `9edf9d2da385ca1c3a619ea8c213226f851c7a2f8e969070836beed31cd073eb`.
+- GATE STATUS: M2 remains red. Continue the complete nine-theatre source-edge sweep,
+  small-water presentation, regional river visibility, and any theatre whose unique-anchor
+  evidence is still inconclusive. Do not reopen accepted coast or mountain relief without
+  a specific source mismatch, and do not resume gameplay milestones.
+- NEXT DRAINAGE MECHANISM: the source atlas already contains 102 non-duplicated courses,
+  but the installed-safe raster currently serializes only 12 independent source-to-water
+  channels (28,512 width-marker pixels versus vanilla's 741,652). Fourteen additional
+  named controls join parents and 76 feeders remain physical incision/material because
+  build 24187685 rejects custom affluent graphs. Do not naively promote them. Either prove
+  an exact retail junction-marker grammar in a bounded experiment or strengthen only the
+  source-backed physical feeder presentation while retaining the parser-safe 12-channel
+  graph.
