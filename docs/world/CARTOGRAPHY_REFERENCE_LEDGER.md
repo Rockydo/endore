@@ -93,6 +93,15 @@ tuning.
   parts and binds the hierarchy, provenance, widths, incision, material
   response, and basin-level coverage independently.
 
+## Political source-overlap contract
+
+Political woodland claims are independently raster-overlapped against the same
+hash-pinned source masks. Rectangular search bounds cannot authorize ownership by
+themselves; the generated audit binds substantial overlap, forced exceptions, final
+bounding boxes, and connected components for Lothlorien, Fangorn, Druadan, Woodland
+Realm, Woodmen, and Dol Guldur. Dunland instead carries an explicit reviewed lowland
+polygon because it is not defined by a woodland mask.
+
 ## Reference quarantine
 
 Downloaded TopoJSON, GeoJSON, scripts, tiles, screenshots, film frames, and

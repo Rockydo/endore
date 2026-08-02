@@ -9,6 +9,7 @@ countries = {
 				erech
 				linhir
 				me_land_0004
+				me_land_0011
 				me_land_0021
 				me_land_0024
 				me_land_0040
@@ -54,6 +55,7 @@ countries = {
 				me_land_0495
 				me_land_0530
 				me_land_0544
+				me_land_0555
 				me_land_0563
 				me_land_0577
 				me_land_0580
@@ -86,10 +88,12 @@ countries = {
 				me_land_0911
 				me_land_0936
 				me_land_0939
+				me_land_0972
 				me_land_1014
 				me_land_1020
 				me_land_1049
 				me_land_1051
+				me_land_1055
 				me_land_1066
 				me_land_1067
 				me_land_1071
@@ -97,6 +101,7 @@ countries = {
 				me_land_1086
 				me_land_1088
 				me_land_1091
+				me_land_1096
 				me_land_1103
 				me_land_1108
 				me_land_1120
@@ -107,7 +112,9 @@ countries = {
 				me_land_1182
 				me_land_1189
 				me_land_1193
+				me_land_1204
 				me_land_1220
+				me_land_1260
 				me_land_1261
 				me_land_1282
 				me_land_1284
@@ -164,6 +171,7 @@ countries = {
 				me_land_1932
 				me_land_1933
 				me_land_1934
+				me_land_1951
 				me_land_1958
 				me_land_1981
 				me_land_2003
@@ -186,6 +194,7 @@ countries = {
 				me_land_2198
 				me_land_2200
 				me_land_2208
+				me_land_2209
 				me_land_2215
 				me_land_2226
 				me_land_2241
@@ -209,6 +218,7 @@ countries = {
 				me_land_2468
 				me_land_2481
 				me_land_2490
+				me_land_2491
 				me_land_2495
 				me_land_2509
 				me_land_2512
@@ -228,6 +238,7 @@ countries = {
 				me_land_2709
 				me_land_2710
 				me_land_2720
+				me_land_2741
 				me_land_2745
 				me_land_2751
 				me_land_2755
@@ -235,11 +246,13 @@ countries = {
 				me_land_2767
 				me_land_2800
 				me_land_2806
+				me_land_2811
 				me_land_2851
 				me_land_2873
 				me_land_2889
 				me_land_2907
 				me_land_2917
+				me_land_2919
 				me_land_2927
 				me_land_2935
 				me_land_2965
@@ -249,6 +262,7 @@ countries = {
 				me_land_3018
 				me_land_3019
 				me_land_3024
+				me_land_3036
 				me_land_3041
 				me_land_3047
 				me_land_3048
@@ -280,6 +294,7 @@ countries = {
 				me_land_3377
 				me_land_3406
 				me_land_3418
+				me_land_3421
 				me_land_3422
 				me_land_3440
 				me_land_3455
@@ -300,6 +315,7 @@ countries = {
 				me_land_3687
 				me_land_3692
 				me_land_3706
+				me_land_3724
 				me_land_3726
 				me_land_3757
 				me_land_3761
@@ -332,6 +348,7 @@ countries = {
 				me_land_4188
 				me_land_4204
 				me_land_4235
+				me_land_4237
 				me_land_4247
 				me_land_4249
 				me_land_4290
@@ -372,6 +389,7 @@ countries = {
 				me_land_4788
 				me_land_4791
 				me_land_4836
+				me_land_4857
 				me_land_4870
 				me_land_4878
 				me_land_4899
@@ -387,6 +405,7 @@ countries = {
 				me_land_4993
 				me_land_4997
 				me_land_5046
+				me_land_5073
 				me_land_5076
 				me_land_5085
 				me_land_5096
@@ -674,12 +693,15 @@ countries = {
 				me_land_0128
 				me_land_0174
 				me_land_0211
+				me_land_0240
 				me_land_0249
 				me_land_0258
 				me_land_0266
+				me_land_0281
 				me_land_0282
 				me_land_0290
 				me_land_0330
+				me_land_0372
 				me_land_0411
 				me_land_0422
 				me_land_0485
@@ -699,8 +721,10 @@ countries = {
 				me_land_0777
 				me_land_0783
 				me_land_0830
+				me_land_0878
 				me_land_0895
 				me_land_0923
+				me_land_0927
 				me_land_0933
 				me_land_0940
 				me_land_0978
@@ -723,7 +747,6 @@ countries = {
 				me_land_1471
 				me_land_1473
 				me_land_1497
-				me_land_1517
 				me_land_1524
 				me_land_1535
 				me_land_1544
@@ -735,9 +758,12 @@ countries = {
 				me_land_1601
 				me_land_1638
 				me_land_1647
+				me_land_1652
 				me_land_1690
+				me_land_1706
 				me_land_1715
 				me_land_1738
+				me_land_1781
 				me_land_1791
 				me_land_1793
 				me_land_1796
@@ -751,6 +777,7 @@ countries = {
 				me_land_2082
 				me_land_2100
 				me_land_2116
+				me_land_2139
 				me_land_2143
 				me_land_2170
 				me_land_2190
@@ -760,8 +787,10 @@ countries = {
 				me_land_2291
 				me_land_2311
 				me_land_2342
+				me_land_2348
 				me_land_2443
 				me_land_2484
+				me_land_2502
 				me_land_2503
 				me_land_2540
 				me_land_2571
@@ -775,14 +804,18 @@ countries = {
 				me_land_2844
 				me_land_2857
 				me_land_2866
+				me_land_2886
+				me_land_2922
 				me_land_2926
 				me_land_2990
 				me_land_3027
+				me_land_3075
 				me_land_3083
 				me_land_3089
 				me_land_3117
 				me_land_3121
 				me_land_3148
+				me_land_3220
 				me_land_3238
 				me_land_3245
 				me_land_3332
@@ -790,6 +823,7 @@ countries = {
 				me_land_3400
 				me_land_3433
 				me_land_3456
+				me_land_3504
 				me_land_3551
 				me_land_3560
 				me_land_3566
@@ -804,6 +838,7 @@ countries = {
 				me_land_3861
 				me_land_3891
 				me_land_3915
+				me_land_3935
 				me_land_3963
 				me_land_3976
 				me_land_3983
@@ -814,8 +849,11 @@ countries = {
 				me_land_4199
 				me_land_4318
 				me_land_4332
+				me_land_4337
 				me_land_4466
 				me_land_4469
+				me_land_4480
+				me_land_4492
 				me_land_4504
 				me_land_4510
 				me_land_4523
@@ -826,6 +864,7 @@ countries = {
 				me_land_4684
 				me_land_4809
 				me_land_4833
+				me_land_4844
 				me_land_4877
 				me_land_4889
 				me_land_4923
@@ -837,6 +876,7 @@ countries = {
 				me_land_5081
 				me_land_5099
 				me_land_5117
+				me_land_5133
 			}
 			starting_technology_level = 3
 
@@ -1844,49 +1884,26 @@ countries = {
 		LOR = { # Lothlórien
 			own_control_core = {
 				caras_galadhon
-				me_land_0167
-				me_land_0203
 				me_land_0221
-				me_land_0271
-				me_land_0402
 				me_land_0409
-				me_land_0480
 				me_land_0493
 				me_land_0562
 				me_land_0851
 				me_land_0856
-				me_land_0934
 				me_land_1236
 				me_land_1477
 				me_land_1538
-				me_land_1569
 				me_land_1590
 				me_land_1740
-				me_land_1814
-				me_land_1864
-				me_land_1955
-				me_land_2047
 				me_land_2096
-				me_land_2415
 				me_land_2633
-				me_land_2901
-				me_land_3065
-				me_land_3078
 				me_land_3417
 				me_land_3466
 				me_land_3519
-				me_land_3530
-				me_land_3763
-				me_land_3800
 				me_land_3961
-				me_land_4038
-				me_land_4135
-				me_land_4184
 				me_land_4282
 				me_land_4679
-				me_land_5053
 				me_land_5135
-				me_land_5147
 			}
 			starting_technology_level = 3
 
@@ -1985,69 +2002,44 @@ countries = {
 		WOO = { # The Woodland Realm
 			own_control_core = {
 				me_land_0033
-				me_land_0149
-				me_land_0155
 				me_land_0200
 				me_land_0215
 				me_land_0234
-				me_land_0265
 				me_land_0268
 				me_land_0338
 				me_land_0380
-				me_land_0475
 				me_land_0518
 				me_land_0546
 				me_land_0558
-				me_land_0564
 				me_land_0640
 				me_land_0702
 				me_land_0778
-				me_land_0920
 				me_land_0942
-				me_land_1039
 				me_land_1113
-				me_land_1142
-				me_land_1339
-				me_land_1409
 				me_land_1416
 				me_land_1424
 				me_land_1468
 				me_land_1558
 				me_land_1593
 				me_land_1637
-				me_land_1688
-				me_land_1702
 				me_land_1745
 				me_land_1807
 				me_land_1883
 				me_land_1926
 				me_land_1950
 				me_land_2024
-				me_land_2027
 				me_land_2056
-				me_land_2072
 				me_land_2089
-				me_land_2138
 				me_land_2192
 				me_land_2434
-				me_land_2478
-				me_land_2521
-				me_land_2558
 				me_land_2584
 				me_land_2989
 				me_land_3054
-				me_land_3134
-				me_land_3147
 				me_land_3155
 				me_land_3167
-				me_land_3251
-				me_land_3344
-				me_land_3355
 				me_land_3359
 				me_land_3391
 				me_land_3444
-				me_land_3457
-				me_land_3547
 				me_land_3599
 				me_land_3613
 				me_land_3649
@@ -2055,26 +2047,17 @@ countries = {
 				me_land_3748
 				me_land_3754
 				me_land_3802
-				me_land_3803
-				me_land_3953
-				me_land_4011
 				me_land_4086
 				me_land_4098
-				me_land_4123
 				me_land_4170
 				me_land_4250
 				me_land_4353
-				me_land_4427
 				me_land_4458
-				me_land_4483
 				me_land_4554
 				me_land_4573
 				me_land_4578
-				me_land_4582
-				me_land_4622
 				me_land_4675
 				me_land_4895
-				me_land_4907
 				me_land_4959
 				thranduil_halls
 			}
@@ -2681,10 +2664,10 @@ countries = {
 				me_land_0016
 				me_land_0150
 				me_land_0204
-				me_land_0246
+				me_land_0210
 				me_land_0299
 				me_land_0327
-				me_land_0348
+				me_land_0397
 				me_land_0513
 				me_land_0566
 				me_land_0590
@@ -2693,27 +2676,28 @@ countries = {
 				me_land_0631
 				me_land_0675
 				me_land_0701
+				me_land_0773
+				me_land_0883
 				me_land_1231
 				me_land_1281
 				me_land_1360
+				me_land_1402
 				me_land_1435
 				me_land_1456
 				me_land_1563
 				me_land_1565
+				me_land_1579
 				me_land_1764
 				me_land_1894
-				me_land_2037
-				me_land_2147
 				me_land_2185
-				me_land_2219
 				me_land_2225
+				me_land_2227
 				me_land_2248
 				me_land_2287
+				me_land_2337
 				me_land_2351
 				me_land_2355
-				me_land_2535
 				me_land_2623
-				me_land_2638
 				me_land_2649
 				me_land_2816
 				me_land_2822
@@ -2727,21 +2711,20 @@ countries = {
 				me_land_3305
 				me_land_3357
 				me_land_3389
-				me_land_3454
-				me_land_3511
 				me_land_3714
 				me_land_3784
+				me_land_3794
 				me_land_3882
 				me_land_3898
 				me_land_3945
 				me_land_3974
+				me_land_4012
 				me_land_4063
-				me_land_4216
+				me_land_4260
 				me_land_4314
-				me_land_4824
+				me_land_4760
 				me_land_4887
 				me_land_5131
-				me_land_5146
 			}
 			starting_technology_level = 3
 
@@ -2841,73 +2824,44 @@ countries = {
 			own_control_core = {
 				me_land_0107
 				me_land_0120
-				me_land_0210
-				me_land_0397
-				me_land_0615
 				me_land_0626
 				me_land_0697
-				me_land_0773
-				me_land_0883
 				me_land_0946
 				me_land_1034
 				me_land_1076
 				me_land_1307
 				me_land_1347
-				me_land_1402
 				me_land_1495
 				me_land_1521
-				me_land_1579
 				me_land_1813
 				me_land_1838
 				me_land_1856
-				me_land_2068
-				me_land_2113
 				me_land_2180
-				me_land_2218
-				me_land_2227
-				me_land_2337
 				me_land_2432
 				me_land_2463
 				me_land_2566
-				me_land_2632
-				me_land_2778
 				me_land_2783
 				me_land_3029
-				me_land_3129
 				me_land_3273
 				me_land_3278
-				me_land_3307
 				me_land_3402
 				me_land_3512
 				me_land_3601
 				me_land_3602
-				me_land_3667
 				me_land_3671
 				me_land_3740
-				me_land_3794
 				me_land_3858
 				me_land_3934
-				me_land_4012
-				me_land_4111
 				me_land_4117
-				me_land_4178
 				me_land_4246
-				me_land_4259
-				me_land_4260
 				me_land_4307
-				me_land_4320
 				me_land_4328
 				me_land_4464
-				me_land_4502
-				me_land_4507
 				me_land_4566
 				me_land_4669
-				me_land_4703
 				me_land_4728
-				me_land_4760
 				me_land_4835
 				me_land_4981
-				me_land_5077
 			}
 			starting_technology_level = 3
 
@@ -3193,50 +3147,36 @@ countries = {
 		FAN = { # Fangorn
 			own_control_core = {
 				me_land_0034
-				me_land_0240
 				me_land_0247
-				me_land_0281
-				me_land_0372
+				me_land_0307
 				me_land_0532
 				me_land_0534
 				me_land_0737
 				me_land_0781
 				me_land_0841
-				me_land_0878
 				me_land_0886
-				me_land_0927
 				me_land_0966
 				me_land_1019
 				me_land_1262
 				me_land_1452
-				me_land_1652
-				me_land_1706
-				me_land_1781
+				me_land_1507
+				me_land_1517
 				me_land_1923
-				me_land_2139
-				me_land_2348
-				me_land_2502
 				me_land_2579
 				me_land_2657
 				me_land_2759
 				me_land_2794
 				me_land_2820
-				me_land_2886
-				me_land_2922
 				me_land_3070
-				me_land_3075
 				me_land_3447
-				me_land_3504
 				me_land_3749
 				me_land_3916
-				me_land_3935
+				me_land_3954
 				me_land_3994
 				me_land_4169
 				me_land_4327
-				me_land_4337
-				me_land_4480
-				me_land_4492
-				me_land_4844
+				me_land_4773
+				me_land_5040
 			}
 			starting_technology_level = 3
 
@@ -3334,28 +3274,9 @@ countries = {
 
 		DRU = { # Drúadan Forest
 			own_control_core = {
-				me_land_0011
-				me_land_0555
 				me_land_0780
-				me_land_0972
-				me_land_1055
-				me_land_1096
-				me_land_1204
 				me_land_1245
-				me_land_1260
-				me_land_1951
-				me_land_2209
-				me_land_2491
 				me_land_2596
-				me_land_2741
-				me_land_2811
-				me_land_2919
-				me_land_3036
-				me_land_3421
-				me_land_3724
-				me_land_4237
-				me_land_4857
-				me_land_5073
 			}
 			starting_technology_level = 3
 
@@ -4078,51 +3999,41 @@ countries = {
 		DOL = { # Dol Guldur
 			own_control_core = {
 				dol_guldur
-				me_land_0035
 				me_land_0069
 				me_land_0076
 				me_land_0105
 				me_land_0118
-				me_land_0146
 				me_land_0229
+				me_land_0271
+				me_land_0402
 				me_land_0489
 				me_land_0679
 				me_land_0686
-				me_land_0790
-				me_land_0976
 				me_land_1080
 				me_land_1178
 				me_land_1224
 				me_land_1259
-				me_land_1287
-				me_land_1530
 				me_land_1704
-				me_land_1850
 				me_land_1941
 				me_land_2026
 				me_land_2039
+				me_land_2047
+				me_land_2218
 				me_land_2389
 				me_land_2467
-				me_land_2648
 				me_land_2701
-				me_land_2715
 				me_land_2722
 				me_land_3055
-				me_land_3145
+				me_land_3078
 				me_land_3165
-				me_land_3189
 				me_land_3313
 				me_land_3481
-				me_land_3562
-				me_land_3742
 				me_land_3899
 				me_land_3913
 				me_land_3920
+				me_land_4038
 				me_land_4536
-				me_land_4894
-				me_land_4951
 				me_land_4980
-				me_land_5016
 			}
 			starting_technology_level = 3
 
@@ -6938,48 +6849,33 @@ countries = {
 				me_land_0487
 				me_land_0605
 				me_land_0769
-				me_land_0809
-				me_land_0865
 				me_land_0906
 				me_land_1249
 				me_land_1304
-				me_land_1419
-				me_land_1611
 				me_land_1759
 				me_land_1895
-				me_land_1990
 				me_land_2108
-				me_land_2120
-				me_land_2171
 				me_land_2183
 				me_land_2220
-				me_land_2313
-				me_land_2513
 				me_land_2575
 				me_land_2798
 				me_land_2972
 				me_land_2986
 				me_land_3198
-				me_land_3220
 				me_land_3237
 				me_land_3397
 				me_land_3537
 				me_land_3641
-				me_land_3847
 				me_land_3933
 				me_land_4005
-				me_land_4180
 				me_land_4240
 				me_land_4358
 				me_land_4368
 				me_land_4371
-				me_land_4517
 				me_land_4528
 				me_land_4756
 				me_land_4821
 				me_land_4960
-				me_land_4974
-				me_land_5133
 			}
 			starting_technology_level = 3
 

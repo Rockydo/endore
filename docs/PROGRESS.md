@@ -1190,3 +1190,74 @@
   lease. At the next natural checkpoint, the exact pending fingerprint acquired the slot
   and `gmake smoke` passed in 201.5 seconds: vanilla and ENDÓRË both reached menu-ready,
   the mod added exactly zero error-log lines, and the transaction lease released cleanly.
+
+## 2026-08-02 - v74 dense canonical forests and source-shaped realm claims
+
+- Owner review reopened Mirkwood/Lothlorien density and political silhouettes. A direct
+  audit proved that only 5 of Lothlorien's former 44 location centres lay inside the
+  physical Golden Wood source mask; the other 39 were admitted by a rectangular search
+  envelope. Rectangles are now search bounds only, never sufficient woodland evidence.
+- The political generator raster-overlaps complete EU5 locations against the hash-pinned,
+  naturalized Arda Maps polygons for Lothlorien, Fangorn, Druadan, and the three Mirkwood
+  controllers. Dunland uses a reviewed seven-vertex lowland polygon. A detected four-cell
+  detached Woodmen island exposed an artificial region seam and was correctly transferred
+  to Dol Guldur's southern-Mirkwood claim. The final audit covers all 5,200 land locations,
+  has zero violations, and makes every affected compact realm contiguous: LOR 21, DUN 32,
+  WOO 59, WDM 40, DOL 36, FAN 31, DRU 3.
+- The fixed 3,057,385-object runtime budget was redistributed without reducing the accepted
+  Fangorn, Old Forest, or Ithilien floors. Final high/medium/low counts are Mirkwood
+  760,747/567,263/561,115 and Lothlorien 70,991/50,758/50,250. Every Lothlorien transform
+  remains one of the two installed light-trunk full-canopy meshes, with zero pine/generic
+  variants. Generator version 11 makes the placement deterministic.
+- One coherent 394.6-second regeneration rebuilt 6,004 locations, 38 realms, 5,200 land
+  profiles, 5,179 populated locations, 242 route edges, and all three vegetation LODs on
+  unchanged world model `6048d0cc97170670688e2d8259517242efffc1482bf14d0a141745f90735ed34`.
+  Full `gmake validate` passed every gate in 415.0 seconds.
+- A genuinely fresh New Game reached HUD-proven Observer in 147.8 seconds on exact tree
+  fingerprint `98c795b54ca828d998f81ed2e3548cc61087dc6955fce28aab6ba8410b26962a`.
+  Evidence under `docs/screens/20260802_v74_dense_forests_source_claims/` proves the smaller
+  irregular Lothlorien silhouette outside the Misty Mountains, dense light-trunk interior
+  canopy, near-continuous Mirkwood canopy, and corrected Dunland silhouette. A 45-second
+  maximum-speed playback advanced from TA 3018.1.1 to TA 3018.1.15 without pause recovery;
+  `error.log` remained exactly 1,486 bytes. The EU5 lease was released cleanly. Paired
+  commit-gate smoke remains pending.
+
+## 2026-08-02 - v75 sparse tundra and varied Harad renderer candidate
+
+- The v73 nine-theatre evidence exposed two independent renderer defects while the v74
+  commit gate was lease-deferred: biome 5 tundra had been omitted from material climate
+  handling, and the pine family treated tundra as ordinary conifer country. Vegetation
+  generator v12 now retains only 14,589/8,171/7,921 transforms across the complete tundra
+  at high/medium/low LOD. The unchanged 3,057,385-object budget redistributes those trees
+  into true forests, raising Mirkwood to 950,729/677,500/670,517 and Lothlorien to
+  75,643/54,871/54,459 while preserving its light-trunk-only species contract.
+- Terrain material generator v44 was rejected in real EU5 evidence under
+  `docs/screens/20260802_v75_climate_forests/`: the installed renderer resolved its
+  earth/sand combination as green ground with pale sand islands. The evidence is retained
+  as a failed calibration and is not an accepted visual checkpoint.
+- Terrain material generator v45 was also rejected in real EU5 evidence under
+  `docs/screens/20260802_v75b_climate_forests/`: its binary rock/sand channels formed
+  enormous dark blotches across Harad. Both speculative climate branches were removed.
+  `gen_terrain_cache.py`, its preview, and all 174,763 cache tiles were regenerated from
+  and verified against the last proven v43 source; all three now have zero Git diff.
+- The complete v45 source tree had passed full validation in 461.8 seconds, proving the
+  failure was visual rather than structural. That result does not accept the rejected
+  palette. The remaining combined candidate is narrowly scoped to vegetation v12 and
+  source-shaped political ownership. Post-rollback full validation passed in 405.4
+  seconds with the proven v43 material source/cache at zero diff.
+- Fresh v75c evidence under
+  `docs/screens/20260802_v75c_dense_forests_source_claims/` reached HUD-proven Observer on
+  exact fingerprint `fb07a2150e6aa439efb5c1cad6f9c3d52f22cfdf496fa7b698a8a20008791283`.
+  Regional/close frames prove theatre-scale continuous Mirkwood and a closed
+  light-canopy Lothlorien interior; the clean political overview retains the compact
+  source-shaped woodland controllers and smaller Dunland. Finder/country-panel evidence
+  interactions produced only a reproducible GUI data-model loop, with no map, terrain,
+  setup, ownership, or simulation diagnostic, so that playback was not used as the clean
+  runtime proof.
+- A second untouched fresh session under `docs/screens/20260802_v75d_clean_playback/`
+  immediately ran maximum-speed Observer for 45 seconds with zero pause recovery and
+  ended at the exact 1,486-byte baseline `error.log`. Paired vanilla plus ENDÓRË smoke
+  then passed in 201.8 seconds with zero new mod lines. `eu5_slot.py assert-smoked`
+  confirms that the smoke covers exact fingerprint `fb07a215`. This accepts the focused
+  dense-forest/source-shaped-ownership checkpoint; the wider nine-theatre physical gate
+  remains red.

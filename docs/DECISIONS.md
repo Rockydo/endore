@@ -1300,3 +1300,42 @@ The resulting contract is 102 non-duplicated controls, 76 terrain-only controls,
 non-terrain controls, and 12 independent indexed channels. Validation binds every
 river's source, the hierarchy balance, major widths, basin minima, independent-channel
 count, exact Ethir coverage, and absence of duplicate source segments.
+
+## 2026-08-02 - Make physical source overlap authoritative for woodland polities
+
+Reject an axis-aligned envelope as sufficient political evidence wherever a controller is
+defined by a canonical woodland. Retain envelopes only as coarse search limits. Assign
+ordinary Lothlorien, Fangorn, Druadan, Woodland Realm, Woodmen, and Dol Guldur locations
+only when the complete generated location substantially overlaps the corresponding
+hash-pinned Arda Maps forest mask after a small renderer-independent contact tolerance.
+Reject one-pixel tangencies, audit every forced exception, and require the compact result
+to remain connected. Use a reviewed lowland polygon for Dunland because no single biome
+mask defines it. An artificial internal region seam may not override the physical Mirkwood
+polygon; southern source-overlap cells belong in Dol Guldur's candidate set.
+
+Do not add a faction simply to smooth a border or consume wilderness. Mirkwood already has
+distinct Woodland Realm, Woodmen, Dol Guldur, Rhosgobel, and Beorning controllers. A new
+tag requires independent TA 3018 political evidence and must improve source fidelity.
+
+## 2026-08-02 - Densify named forests by redistribution, not runtime inflation
+
+Keep the proven 3,057,385-transform ceiling and the existing renderer ABI. Increase the
+relative all-LOD weights of Mirkwood and Lothlorien while simultaneously preserving hard
+Fangorn, Old Forest, Ithilien, and named-zone floors. Bind the final per-LOD census so a
+future global-count-preserving change cannot make either owner-rejected forest sparse
+again. Lothlorien continues to exclude every pine and generic billboard variant.
+
+## 2026-08-02 - Separate climate materials from vegetation eligibility
+
+Treat tundra as an open climate surface, not a forest class. Keep biome 5 eligible for a
+small deterministic population of installed arctic conifers, but enforce per-LOD minimum
+and maximum bounds across the complete tundra envelope. Preserve the fixed global object
+budget so removing false northern woodland increases detail in source-authored forests.
+
+Reject both attempted Harad material redistributions on installed build 24187685. Live
+v44 evidence resolves earth/sand as green ground with pale islands; live v45 evidence
+resolves rock/sand masks as enormous dark blotches. Restore the complete proven v43
+material cache and source with no surviving diff. Future Harad/Forodwaith material work
+requires a materially different renderer mechanism, not another binary broad-noise mask.
+Do not alter source climate polygons or horizontal relief to solve a material-channel
+defect.

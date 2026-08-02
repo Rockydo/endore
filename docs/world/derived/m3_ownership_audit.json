@@ -2,374 +2,109 @@
   "schema": 2,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3537,
-  "wild_locations": 1663,
+  "owned_locations": 3433,
+  "wild_locations": 1767,
   "contract_violations": 0,
   "contracted_realms": {
-    "GON": {
-      "rationale": "Gondor fiefs from Anfalas to the Anduin",
+    "ANG": {
+      "rationale": "Mount Gram and Angmar remnant fastnesses",
       "claim_bounds": [
-        0.35,
-        0.69,
-        0.55,
-        0.77
+        0.415,
+        0.48,
+        0.06,
+        0.2
       ],
-      "locations": 390,
-      "forced_anchors": 9,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 55,
+      "forced_anchors": 2,
       "final_bbox": [
-        0.354823,
-        0.6859585,
-        0.5603322,
-        0.7596483
+        0.4224664,
+        0.4722833,
+        0.0635076,
+        0.1934538
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 3,
-        "largest_component": 387,
-        "largest_component_fraction": 0.992308,
-        "detached_unforced_specks": 2,
+        "components": 2,
+        "largest_component": 54,
+        "largest_component_fraction": 0.981818,
+        "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 387,
-            "forced_anchors": 9,
+            "size": 54,
+            "forced_anchors": 1,
             "sample": [
-              "calembel",
-              "erech",
-              "linhir",
-              "me_land_0021",
-              "me_land_0024"
-            ]
-          },
-          {
-            "size": 2,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0004",
-              "me_land_1958"
+              "me_land_0159",
+              "me_land_0342",
+              "me_land_0426",
+              "me_land_0540",
+              "me_land_0552"
             ]
           },
           {
             "size": 1,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_2679"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "DAM": {
-      "rationale": "Dol Amroth and Belfalas peninsula",
-      "claim_bounds": [
-        0.46,
-        0.53,
-        0.6,
-        0.73
-      ],
-      "locations": 70,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.4681319,
-        0.5216117,
-        0.6082071,
-        0.7244748
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 70,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 70,
             "forced_anchors": 1,
             "sample": [
-              "dol_amroth",
-              "me_land_0084",
-              "me_land_0140",
-              "me_land_0262",
-              "me_land_0365"
+              "carn_dum"
             ]
           }
         ]
       },
       "pre_contract_outside": null
     },
-    "ROH": {
-      "rationale": "The Mark between Isen, Anduin, and White Mountains",
+    "BEO": {
+      "rationale": "Beorning crossings and upper Anduin vales",
       "claim_bounds": [
-        0.45,
-        0.57,
-        0.42,
-        0.58
+        0.49,
+        0.555,
+        0.15,
+        0.3
       ],
-      "locations": 178,
-      "forced_anchors": 4,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 65,
+      "forced_anchors": 1,
       "final_bbox": [
-        0.4556777,
-        0.5648352,
-        0.4318515,
-        0.5696141
+        0.5076923,
+        0.5521368,
+        0.1514411,
+        0.2989741
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 3,
-        "largest_component": 163,
-        "largest_component_fraction": 0.91573,
+        "components": 2,
+        "largest_component": 63,
+        "largest_component_fraction": 0.969231,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 163,
-            "forced_anchors": 4,
+            "size": 63,
+            "forced_anchors": 1,
             "sample": [
-              "aldberg",
-              "dunharrow",
-              "edoras",
-              "helms_deep",
-              "me_land_0010"
-            ]
-          },
-          {
-            "size": 13,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0116",
-              "me_land_0411",
-              "me_land_0485",
-              "me_land_0520",
-              "me_land_0538"
+              "carrock",
+              "me_land_0016",
+              "me_land_0150",
+              "me_land_0204",
+              "me_land_0210"
             ]
           },
           {
             "size": 2,
             "forced_anchors": 0,
             "sample": [
-              "me_land_2291",
-              "me_land_2844"
+              "me_land_0616",
+              "me_land_2623"
             ]
           }
         ]
       },
-      "pre_contract_outside": null
-    },
-    "SHI": {
-      "rationale": "Shire bounds west of the Brandywine",
-      "claim_bounds": [
-        0.315,
-        0.39,
-        0.2,
-        0.29
-      ],
-      "locations": 70,
-      "forced_anchors": 3,
-      "final_bbox": [
-        0.3203907,
-        0.3860806,
-        0.2056668,
-        0.2823644
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 4,
-        "largest_component": 67,
-        "largest_component_fraction": 0.957143,
-        "detached_unforced_specks": 2,
-        "component_detail": [
-          {
-            "size": 67,
-            "forced_anchors": 2,
-            "sample": [
-              "hobbiton",
-              "me_land_0393",
-              "me_land_0450",
-              "me_land_0470",
-              "me_land_0509"
-            ]
-          },
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
-              "bucklebury"
-            ]
-          },
-          {
-            "size": 1,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_1322"
-            ]
-          },
-          {
-            "size": 1,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_2686"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "BRE": {
-      "rationale": "Bree-land's four-village crossroads",
-      "claim_bounds": [
-        0.38,
-        0.415,
-        0.2,
-        0.285
-      ],
-      "locations": 24,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.3811966,
-        0.404884,
-        0.2056668,
-        0.2755252
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 24,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 24,
-            "forced_anchors": 1,
-            "sample": [
-              "me_bree",
-              "me_land_0573",
-              "me_land_0614",
-              "me_land_0882",
-              "me_land_0915"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "RAN": {
-      "rationale": "The Angle and immediate Ranger refuge",
-      "claim_bounds": [
-        0.43,
-        0.5,
-        0.235,
-        0.335
-      ],
-      "locations": 45,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.4454212,
-        0.4827839,
-        0.2374206,
-        0.3321935
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 45,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 45,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0032",
-              "me_land_0279",
-              "me_land_0358",
-              "me_land_0379",
-              "me_land_0399"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "LIN": {
-      "rationale": "Lindon west of the Blue Mountains",
-      "claim_bounds": [
-        0.14,
-        0.32,
-        0.11,
-        0.38
-      ],
-      "locations": 139,
-      "forced_anchors": 3,
-      "final_bbox": [
-        0.1445665,
-        0.3147741,
-        0.1211529,
-        0.3761602
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 6,
-        "largest_component": 77,
-        "largest_component_fraction": 0.553957,
-        "detached_unforced_specks": 3,
-        "component_detail": [
-          {
-            "size": 77,
-            "forced_anchors": 2,
-            "sample": [
-              "harlond_lindon",
-              "me_land_0029",
-              "me_land_0289",
-              "me_land_0324",
-              "me_land_0471"
-            ]
-          },
-          {
-            "size": 49,
-            "forced_anchors": 1,
-            "sample": [
-              "forlond",
-              "me_land_0189",
-              "me_land_0388",
-              "me_land_0390",
-              "me_land_0436"
-            ]
-          },
-          {
-            "size": 9,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0208",
-              "me_land_0762",
-              "me_land_2706",
-              "me_land_2874",
-              "me_land_3272"
-            ]
-          },
-          {
-            "size": 2,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0469",
-              "me_land_3379"
-            ]
-          },
-          {
-            "size": 1,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0003"
-            ]
-          },
-          {
-            "size": 1,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_4141"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
+      "pre_contract_outside": [
+        10,
+        65
+      ]
     },
     "BLU": {
       "rationale": "Surviving Ered Luin halls",
@@ -379,6 +114,9 @@
         0.12,
         0.23
       ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
       "locations": 40,
       "forced_anchors": 1,
       "final_bbox": [
@@ -409,72 +147,317 @@
       },
       "pre_contract_outside": null
     },
-    "LOR": {
-      "rationale": "Naith between Misty foothills and Anduin",
+    "BRE": {
+      "rationale": "Bree-land's four-village crossroads",
       "claim_bounds": [
-        0.498,
-        0.55,
-        0.33,
-        0.395
+        0.38,
+        0.415,
+        0.2,
+        0.285
       ],
-      "locations": 44,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 24,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4989011,
-        0.5492063,
-        0.3302394,
-        0.394724
+        0.3811966,
+        0.404884,
+        0.2056668,
+        0.2755252
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 44,
+        "largest_component": 24,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 44,
+            "size": 24,
             "forced_anchors": 1,
             "sample": [
-              "caras_galadhon",
-              "me_land_0167",
-              "me_land_0203",
-              "me_land_0221",
-              "me_land_0271"
+              "me_bree",
+              "me_land_0573",
+              "me_land_0614",
+              "me_land_0882",
+              "me_land_0915"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "DAL": {
+      "rationale": "Dale and the upper Celduin plain",
+      "claim_bounds": [
+        0.585,
+        0.64,
+        0.13,
+        0.23
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 17,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5931624,
+        0.6351648,
+        0.1489985,
+        0.2183683
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 16,
+        "largest_component_fraction": 0.941176,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 16,
+            "forced_anchors": 1,
+            "sample": [
+              "dale",
+              "me_land_0157",
+              "me_land_0659",
+              "me_land_0718",
+              "me_land_0954"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_4786"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "DAM": {
+      "rationale": "Dol Amroth and Belfalas peninsula",
+      "claim_bounds": [
+        0.46,
+        0.53,
+        0.6,
+        0.73
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 70,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4681319,
+        0.5216117,
+        0.6082071,
+        0.7244748
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 70,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 70,
+            "forced_anchors": 1,
+            "sample": [
+              "dol_amroth",
+              "me_land_0084",
+              "me_land_0140",
+              "me_land_0262",
+              "me_land_0365"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "DOL": {
+      "rationale": "Arda Maps Mirkwood polygon: southern Dol Guldur shadow",
+      "claim_bounds": [
+        0.53,
+        0.6,
+        0.31,
+        0.41
+      ],
+      "source_zone": "mirkwood",
+      "source_dilation_pixels": 10,
+      "claim_polygon": null,
+      "locations": 36,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5360195,
+        0.5941392,
+        0.3263312,
+        0.3873962
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 36,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 36,
+            "forced_anchors": 1,
+            "sample": [
+              "dol_guldur",
+              "me_land_0069",
+              "me_land_0076",
+              "me_land_0105",
+              "me_land_0118"
             ]
           }
         ]
       },
       "pre_contract_outside": [
-        16,
-        55
+        20,
+        65
       ]
     },
+    "DOR": {
+      "rationale": "Dorwinion around the northwest Sea of Rhûn",
+      "claim_bounds": [
+        0.64,
+        0.73,
+        0.285,
+        0.44
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 90,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.6498168,
+        0.7194139,
+        0.2877382,
+        0.431363
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 90,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 90,
+            "forced_anchors": 1,
+            "sample": [
+              "dorwinion",
+              "me_land_0045",
+              "me_land_0057",
+              "me_land_0209",
+              "me_land_0264"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "DRU": {
+      "rationale": "Arda Maps Drúadan Forest physical woodland polygon",
+      "claim_bounds": [
+        0.535,
+        0.585,
+        0.56,
+        0.625
+      ],
+      "source_zone": "druadan",
+      "source_dilation_pixels": 8,
+      "claim_polygon": null,
+      "locations": 3,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5626374,
+        0.571917,
+        0.5828041,
+        0.5974597
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 3,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 3,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0780",
+              "me_land_1245",
+              "me_land_2596"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
     "DUN": {
-      "rationale": "Dunland west of Isen and the Gap",
+      "rationale": "Dunland lowlands west of Isen and the Gap, south of Glanduin",
       "claim_bounds": [
         0.395,
         0.47,
         0.4,
         0.515
       ],
-      "locations": 47,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": [
+        [
+          0.414,
+          0.414
+        ],
+        [
+          0.445,
+          0.401
+        ],
+        [
+          0.461,
+          0.425
+        ],
+        [
+          0.458,
+          0.468
+        ],
+        [
+          0.446,
+          0.507
+        ],
+        [
+          0.42,
+          0.5
+        ],
+        [
+          0.406,
+          0.462
+        ]
+      ],
+      "locations": 32,
       "forced_anchors": 1,
       "final_bbox": [
         0.4214896,
-        0.4605617,
-        0.4005862,
-        0.5144113
+        0.4466422,
+        0.4015633,
+        0.5061065
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 47,
+        "largest_component": 32,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 47,
+            "size": 32,
             "forced_anchors": 1,
             "sample": [
               "me_land_0162",
@@ -491,46 +474,128 @@
         265
       ]
     },
-    "MOA": {
-      "rationale": "Moria and immediate Dimrill/Sirannon approaches",
+    "ERE": {
+      "rationale": "Erebor and its immediate mountain approaches",
       "claim_bounds": [
-        0.47,
-        0.505,
-        0.3,
-        0.37
+        0.57,
+        0.63,
+        0.11,
+        0.19
       ],
-      "locations": 24,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 28,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4708181,
-        0.5025641,
-        0.3038593,
-        0.3678554
+        0.570696,
+        0.6273504,
+        0.1201759,
+        0.1494871
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 24,
+        "largest_component": 28,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 24,
+            "size": 28,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0251",
-              "me_land_0340",
-              "me_land_0870",
-              "me_land_0899",
-              "me_land_1110"
+              "erebor",
+              "me_land_0124",
+              "me_land_0284",
+              "me_land_0360",
+              "me_land_0453"
             ]
           }
         ]
       },
-      "pre_contract_outside": [
-        3,
-        26
-      ]
+      "pre_contract_outside": null
+    },
+    "ESG": {
+      "rationale": "Lake-town and Long Lake shore",
+      "claim_bounds": [
+        0.585,
+        0.63,
+        0.15,
+        0.23
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 25,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5894994,
+        0.6229548,
+        0.159746,
+        0.2178798
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 25,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 25,
+            "forced_anchors": 1,
+            "sample": [
+              "esgaroth",
+              "me_land_0072",
+              "me_land_0465",
+              "me_land_0997",
+              "me_land_1399"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "FAN": {
+      "rationale": "Arda Maps Fangorn physical woodland polygon",
+      "claim_bounds": [
+        0.45,
+        0.52,
+        0.405,
+        0.505
+      ],
+      "source_zone": "fangorn",
+      "source_dilation_pixels": 10,
+      "claim_polygon": null,
+      "locations": 31,
+      "forced_anchors": 2,
+      "final_bbox": [
+        0.4761905,
+        0.5152625,
+        0.4054714,
+        0.4748412
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 31,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 31,
+            "forced_anchors": 2,
+            "sample": [
+              "me_land_0034",
+              "me_land_0247",
+              "me_land_0307",
+              "me_land_0532",
+              "me_land_0534"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
     },
     "GOB": {
       "rationale": "Goblin-town and High Pass under the Misty Mountains",
@@ -540,6 +605,9 @@
         0.15,
         0.235
       ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
       "locations": 31,
       "forced_anchors": 1,
       "final_bbox": [
@@ -580,6 +648,62 @@
         32
       ]
     },
+    "GON": {
+      "rationale": "Gondor fiefs from Anfalas to the Anduin",
+      "claim_bounds": [
+        0.35,
+        0.69,
+        0.55,
+        0.77
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 409,
+      "forced_anchors": 9,
+      "final_bbox": [
+        0.354823,
+        0.6859585,
+        0.5603322,
+        0.7596483
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 3,
+        "largest_component": 406,
+        "largest_component_fraction": 0.992665,
+        "detached_unforced_specks": 2,
+        "component_detail": [
+          {
+            "size": 406,
+            "forced_anchors": 9,
+            "sample": [
+              "calembel",
+              "erech",
+              "linhir",
+              "me_land_0011",
+              "me_land_0021"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0004",
+              "me_land_1958"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2679"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
     "GUN": {
       "rationale": "Gundabad and the northern mountain junction",
       "claim_bounds": [
@@ -588,6 +712,9 @@
         0.065,
         0.15
       ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
       "locations": 28,
       "forced_anchors": 1,
       "final_bbox": [
@@ -665,6 +792,9 @@
         0.12,
         0.19
       ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
       "locations": 45,
       "forced_anchors": 1,
       "final_bbox": [
@@ -698,476 +828,175 @@
         1
       ]
     },
-    "ERE": {
-      "rationale": "Erebor and its immediate mountain approaches",
+    "ISE": {
+      "rationale": "Isengard ring and Nan Curunír approaches",
       "claim_bounds": [
-        0.57,
-        0.63,
+        0.445,
+        0.48,
+        0.415,
+        0.515
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 38,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4503053,
+        0.4774115,
+        0.4176844,
+        0.5085491
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 38,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 38,
+            "forced_anchors": 1,
+            "sample": [
+              "isengard",
+              "me_land_0063",
+              "me_land_0222",
+              "me_land_0278",
+              "me_land_0370"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "LIN": {
+      "rationale": "Lindon west of the Blue Mountains",
+      "claim_bounds": [
+        0.14,
+        0.32,
         0.11,
-        0.19
+        0.38
       ],
-      "locations": 28,
-      "forced_anchors": 1,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 139,
+      "forced_anchors": 3,
       "final_bbox": [
-        0.570696,
-        0.6273504,
-        0.1201759,
-        0.1494871
+        0.1445665,
+        0.3147741,
+        0.1211529,
+        0.3761602
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 1,
-        "largest_component": 28,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
+        "components": 6,
+        "largest_component": 77,
+        "largest_component_fraction": 0.553957,
+        "detached_unforced_specks": 3,
         "component_detail": [
           {
-            "size": 28,
-            "forced_anchors": 1,
-            "sample": [
-              "erebor",
-              "me_land_0124",
-              "me_land_0284",
-              "me_land_0360",
-              "me_land_0453"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "DAL": {
-      "rationale": "Dale and the upper Celduin plain",
-      "claim_bounds": [
-        0.585,
-        0.64,
-        0.13,
-        0.23
-      ],
-      "locations": 17,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.5931624,
-        0.6351648,
-        0.1489985,
-        0.2183683
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 2,
-        "largest_component": 16,
-        "largest_component_fraction": 0.941176,
-        "detached_unforced_specks": 1,
-        "component_detail": [
-          {
-            "size": 16,
-            "forced_anchors": 1,
-            "sample": [
-              "dale",
-              "me_land_0157",
-              "me_land_0659",
-              "me_land_0718",
-              "me_land_0954"
-            ]
-          },
-          {
-            "size": 1,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_4786"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "ESG": {
-      "rationale": "Lake-town and Long Lake shore",
-      "claim_bounds": [
-        0.585,
-        0.63,
-        0.15,
-        0.23
-      ],
-      "locations": 25,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.5894994,
-        0.6229548,
-        0.159746,
-        0.2178798
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 25,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 25,
-            "forced_anchors": 1,
-            "sample": [
-              "esgaroth",
-              "me_land_0072",
-              "me_land_0465",
-              "me_land_0997",
-              "me_land_1399"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "WOO": {
-      "rationale": "Thranduil's northern and eastern Mirkwood",
-      "claim_bounds": [
-        0.55,
-        0.64,
-        0.12,
-        0.305
-      ],
-      "locations": 93,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.5550672,
-        0.6393162,
-        0.1514411,
-        0.3048363
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 93,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 93,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0033",
-              "me_land_0149",
-              "me_land_0155",
-              "me_land_0200",
-              "me_land_0215"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": [
-        40,
-        119
-      ]
-    },
-    "WDM": {
-      "rationale": "Woodmen settlements in western Mirkwood",
-      "claim_bounds": [
-        0.525,
-        0.595,
-        0.22,
-        0.355
-      ],
-      "locations": 69,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.5252747,
-        0.5946276,
-        0.2252076,
-        0.3370787
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 69,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 69,
-            "forced_anchors": 1,
-            "sample": [
-              "me_land_0107",
-              "me_land_0120",
-              "me_land_0210",
-              "me_land_0397",
-              "me_land_0615"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": [
-        30,
-        95
-      ]
-    },
-    "BEO": {
-      "rationale": "Beorning crossings and upper Anduin vales",
-      "claim_bounds": [
-        0.49,
-        0.555,
-        0.15,
-        0.3
-      ],
-      "locations": 65,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.4954823,
-        0.5521368,
-        0.1514411,
-        0.2857841
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 3,
-        "largest_component": 57,
-        "largest_component_fraction": 0.876923,
-        "detached_unforced_specks": 1,
-        "component_detail": [
-          {
-            "size": 57,
-            "forced_anchors": 1,
-            "sample": [
-              "carrock",
-              "me_land_0016",
-              "me_land_0150",
-              "me_land_0204",
-              "me_land_0299"
-            ]
-          },
-          {
-            "size": 6,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0246",
-              "me_land_0348",
-              "me_land_0616",
-              "me_land_2623",
-              "me_land_2638"
-            ]
-          },
-          {
-            "size": 2,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_2037",
-              "me_land_5146"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": [
-        10,
-        65
-      ]
-    },
-    "DOL": {
-      "rationale": "Dol Guldur's southern Mirkwood shadow",
-      "claim_bounds": [
-        0.53,
-        0.6,
-        0.31,
-        0.41
-      ],
-      "locations": 46,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.5455433,
-        0.5997558,
-        0.3263312,
-        0.4098681
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 46,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 46,
-            "forced_anchors": 1,
-            "sample": [
-              "dol_guldur",
-              "me_land_0035",
-              "me_land_0069",
-              "me_land_0076",
-              "me_land_0105"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": [
-        20,
-        65
-      ]
-    },
-    "DOR": {
-      "rationale": "Dorwinion around the northwest Sea of Rhûn",
-      "claim_bounds": [
-        0.64,
-        0.73,
-        0.285,
-        0.44
-      ],
-      "locations": 90,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.6498168,
-        0.7194139,
-        0.2877382,
-        0.431363
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 90,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 90,
-            "forced_anchors": 1,
-            "sample": [
-              "dorwinion",
-              "me_land_0045",
-              "me_land_0057",
-              "me_land_0209",
-              "me_land_0264"
-            ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "FAN": {
-      "rationale": "Fangorn source forest and Entwash headwaters",
-      "claim_bounds": [
-        0.45,
-        0.52,
-        0.405,
-        0.505
-      ],
-      "locations": 45,
-      "forced_anchors": 2,
-      "final_bbox": [
-        0.4761905,
-        0.5140415,
-        0.4054714,
-        0.5021983
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 1,
-        "largest_component": 45,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
-        "component_detail": [
-          {
-            "size": 45,
+            "size": 77,
             "forced_anchors": 2,
             "sample": [
-              "me_land_0034",
-              "me_land_0240",
-              "me_land_0247",
-              "me_land_0281",
-              "me_land_0372"
+              "harlond_lindon",
+              "me_land_0029",
+              "me_land_0289",
+              "me_land_0324",
+              "me_land_0471"
             ]
-          }
-        ]
-      },
-      "pre_contract_outside": null
-    },
-    "DRU": {
-      "rationale": "Drúadan Forest and Stonewain approaches",
-      "claim_bounds": [
-        0.535,
-        0.585,
-        0.56,
-        0.625
-      ],
-      "locations": 22,
-      "forced_anchors": 1,
-      "final_bbox": [
-        0.5477411,
-        0.5763126,
-        0.5622863,
-        0.6233512
-      ],
-      "contract_violations": 0,
-      "connectivity": {
-        "components": 2,
-        "largest_component": 20,
-        "largest_component_fraction": 0.909091,
-        "detached_unforced_specks": 1,
-        "component_detail": [
+          },
           {
-            "size": 20,
+            "size": 49,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0011",
-              "me_land_0555",
-              "me_land_0780",
-              "me_land_0972",
-              "me_land_1055"
+              "forlond",
+              "me_land_0189",
+              "me_land_0388",
+              "me_land_0390",
+              "me_land_0436"
+            ]
+          },
+          {
+            "size": 9,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0208",
+              "me_land_0762",
+              "me_land_2706",
+              "me_land_2874",
+              "me_land_3272"
             ]
           },
           {
             "size": 2,
             "forced_anchors": 0,
             "sample": [
-              "me_land_1260",
-              "me_land_5073"
+              "me_land_0469",
+              "me_land_3379"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0003"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_4141"
             ]
           }
         ]
       },
       "pre_contract_outside": null
     },
-    "RIV": {
-      "rationale": "Imladris hidden valley and immediate refuge",
+    "LOR": {
+      "rationale": "Arda Maps Golden Wood / Naith physical polygon",
       "claim_bounds": [
-        0.475,
-        0.51,
-        0.195,
-        0.245
+        0.498,
+        0.55,
+        0.33,
+        0.395
       ],
-      "locations": 9,
+      "source_zone": "lothlorien",
+      "source_dilation_pixels": 10,
+      "claim_polygon": null,
+      "locations": 21,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4761905,
-        0.4935287,
-        0.196385,
-        0.2408403
+        0.5037851,
+        0.5272283,
+        0.3302394,
+        0.394724
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 2,
-        "largest_component": 8,
-        "largest_component_fraction": 0.888889,
+        "components": 1,
+        "largest_component": 21,
+        "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 8,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0497",
-              "me_land_0607",
-              "me_land_0979",
-              "me_land_2861",
-              "me_land_3066"
-            ]
-          },
-          {
-            "size": 1,
+            "size": 21,
             "forced_anchors": 1,
             "sample": [
-              "rivendell"
+              "caras_galadhon",
+              "me_land_0221",
+              "me_land_0409",
+              "me_land_0493",
+              "me_land_0562"
             ]
           }
         ]
       },
-      "pre_contract_outside": null
+      "pre_contract_outside": [
+        16,
+        55
+      ]
     },
     "LOS": {
       "rationale": "Lossoth settlements around the Icebay",
@@ -1177,6 +1006,9 @@
         0.0,
         0.13
       ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
       "locations": 85,
       "forced_anchors": 1,
       "final_bbox": [
@@ -1225,6 +1057,50 @@
       },
       "pre_contract_outside": null
     },
+    "MOA": {
+      "rationale": "Moria and immediate Dimrill/Sirannon approaches",
+      "claim_bounds": [
+        0.47,
+        0.505,
+        0.3,
+        0.37
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 24,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4708181,
+        0.5025641,
+        0.3038593,
+        0.3678554
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 24,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 24,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0251",
+              "me_land_0340",
+              "me_land_0870",
+              "me_land_0899",
+              "me_land_1110"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        3,
+        26
+      ]
+    },
     "MOR": {
       "rationale": "Mordor within the enclosing mountain walls",
       "claim_bounds": [
@@ -1233,6 +1109,9 @@
         0.515,
         0.73
       ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
       "locations": 247,
       "forced_anchors": 9,
       "final_bbox": [
@@ -1308,38 +1187,211 @@
       },
       "pre_contract_outside": null
     },
-    "ISE": {
-      "rationale": "Isengard ring and Nan Curunír approaches",
+    "RAN": {
+      "rationale": "The Angle and immediate Ranger refuge",
       "claim_bounds": [
-        0.445,
-        0.48,
-        0.415,
-        0.515
+        0.43,
+        0.5,
+        0.235,
+        0.335
       ],
-      "locations": 38,
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 45,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4503053,
-        0.4774115,
-        0.4176844,
-        0.5085491
+        0.4454212,
+        0.4827839,
+        0.2374206,
+        0.3321935
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 38,
+        "largest_component": 45,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 38,
+            "size": 45,
             "forced_anchors": 1,
             "sample": [
-              "isengard",
-              "me_land_0063",
-              "me_land_0222",
-              "me_land_0278",
-              "me_land_0370"
+              "me_land_0032",
+              "me_land_0279",
+              "me_land_0358",
+              "me_land_0379",
+              "me_land_0399"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "RIV": {
+      "rationale": "Imladris hidden valley and immediate refuge",
+      "claim_bounds": [
+        0.475,
+        0.51,
+        0.195,
+        0.245
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 9,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.4761905,
+        0.4935287,
+        0.196385,
+        0.2408403
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 2,
+        "largest_component": 8,
+        "largest_component_fraction": 0.888889,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 8,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0497",
+              "me_land_0607",
+              "me_land_0979",
+              "me_land_2861",
+              "me_land_3066"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "rivendell"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "ROH": {
+      "rationale": "The Mark between Isen, Anduin, and White Mountains",
+      "claim_bounds": [
+        0.45,
+        0.57,
+        0.42,
+        0.58
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 199,
+      "forced_anchors": 4,
+      "final_bbox": [
+        0.4551893,
+        0.5648352,
+        0.4347826,
+        0.5696141
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 3,
+        "largest_component": 182,
+        "largest_component_fraction": 0.914573,
+        "detached_unforced_specks": 1,
+        "component_detail": [
+          {
+            "size": 182,
+            "forced_anchors": 4,
+            "sample": [
+              "aldberg",
+              "dunharrow",
+              "edoras",
+              "helms_deep",
+              "me_land_0010"
+            ]
+          },
+          {
+            "size": 15,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0116",
+              "me_land_0411",
+              "me_land_0485",
+              "me_land_0520",
+              "me_land_0538"
+            ]
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2291",
+              "me_land_2844"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": null
+    },
+    "SHI": {
+      "rationale": "Shire bounds west of the Brandywine",
+      "claim_bounds": [
+        0.315,
+        0.39,
+        0.2,
+        0.29
+      ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
+      "locations": 70,
+      "forced_anchors": 3,
+      "final_bbox": [
+        0.3203907,
+        0.3860806,
+        0.2056668,
+        0.2823644
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 4,
+        "largest_component": 67,
+        "largest_component_fraction": 0.957143,
+        "detached_unforced_specks": 2,
+        "component_detail": [
+          {
+            "size": 67,
+            "forced_anchors": 2,
+            "sample": [
+              "hobbiton",
+              "me_land_0393",
+              "me_land_0450",
+              "me_land_0470",
+              "me_land_0509"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 1,
+            "sample": [
+              "bucklebury"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1322"
+            ]
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2686"
             ]
           }
         ]
@@ -1354,6 +1406,9 @@
         0.77,
         1.0
       ],
+      "source_zone": null,
+      "source_dilation_pixels": null,
+      "claim_polygon": null,
       "locations": 210,
       "forced_anchors": 1,
       "final_bbox": [
@@ -1384,50 +1439,93 @@
       },
       "pre_contract_outside": null
     },
-    "ANG": {
-      "rationale": "Mount Gram and Angmar remnant fastnesses",
+    "WDM": {
+      "rationale": "Arda Maps Mirkwood polygon: western Woodmen settlements",
       "claim_bounds": [
-        0.415,
-        0.48,
-        0.06,
-        0.2
+        0.525,
+        0.595,
+        0.22,
+        0.355
       ],
-      "locations": 55,
-      "forced_anchors": 2,
+      "source_zone": "mirkwood",
+      "source_dilation_pixels": 10,
+      "claim_polygon": null,
+      "locations": 40,
+      "forced_anchors": 1,
       "final_bbox": [
-        0.4224664,
-        0.4722833,
-        0.0635076,
-        0.1934538
+        0.5499389,
+        0.5946276,
+        0.2252076,
+        0.3370787
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 2,
-        "largest_component": 54,
-        "largest_component_fraction": 0.981818,
+        "components": 1,
+        "largest_component": 40,
+        "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 54,
+            "size": 40,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0159",
-              "me_land_0342",
-              "me_land_0426",
-              "me_land_0540",
-              "me_land_0552"
-            ]
-          },
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
-              "carn_dum"
+              "me_land_0107",
+              "me_land_0120",
+              "me_land_0626",
+              "me_land_0697",
+              "me_land_0946"
             ]
           }
         ]
       },
-      "pre_contract_outside": null
+      "pre_contract_outside": [
+        30,
+        95
+      ]
+    },
+    "WOO": {
+      "rationale": "Arda Maps Mirkwood polygon: northern/eastern Woodland Realm",
+      "claim_bounds": [
+        0.55,
+        0.64,
+        0.12,
+        0.305
+      ],
+      "source_zone": "mirkwood",
+      "source_dilation_pixels": 10,
+      "claim_polygon": null,
+      "locations": 59,
+      "forced_anchors": 1,
+      "final_bbox": [
+        0.5550672,
+        0.6080586,
+        0.1514411,
+        0.2940889
+      ],
+      "contract_violations": 0,
+      "connectivity": {
+        "components": 1,
+        "largest_component": 59,
+        "largest_component_fraction": 1.0,
+        "detached_unforced_specks": 0,
+        "component_detail": [
+          {
+            "size": 59,
+            "forced_anchors": 1,
+            "sample": [
+              "me_land_0033",
+              "me_land_0200",
+              "me_land_0215",
+              "me_land_0234",
+              "me_land_0268"
+            ]
+          }
+        ]
+      },
+      "pre_contract_outside": [
+        40,
+        119
+      ]
     }
   },
   "uncontracted_realms": {
@@ -1711,19 +1809,19 @@
   "all_realm_connectivity": {
     "GON": {
       "components": 3,
-      "largest_component": 387,
-      "largest_component_fraction": 0.992308,
+      "largest_component": 406,
+      "largest_component_fraction": 0.992665,
       "detached_unforced_specks": 2,
       "component_detail": [
         {
-          "size": 387,
+          "size": 406,
           "forced_anchors": 9,
           "sample": [
             "calembel",
             "erech",
             "linhir",
-            "me_land_0021",
-            "me_land_0024"
+            "me_land_0011",
+            "me_land_0021"
           ]
         },
         {
@@ -1764,12 +1862,12 @@
     },
     "ROH": {
       "components": 3,
-      "largest_component": 163,
-      "largest_component_fraction": 0.91573,
+      "largest_component": 182,
+      "largest_component_fraction": 0.914573,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 163,
+          "size": 182,
           "forced_anchors": 4,
           "sample": [
             "aldberg",
@@ -1780,7 +1878,7 @@
           ]
         },
         {
-          "size": 13,
+          "size": 15,
           "forced_anchors": 0,
           "sample": [
             "me_land_0116",
@@ -1988,38 +2086,38 @@
     },
     "LOR": {
       "components": 1,
-      "largest_component": 44,
+      "largest_component": 21,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 44,
+          "size": 21,
           "forced_anchors": 1,
           "sample": [
             "caras_galadhon",
-            "me_land_0167",
-            "me_land_0203",
             "me_land_0221",
-            "me_land_0271"
+            "me_land_0409",
+            "me_land_0493",
+            "me_land_0562"
           ]
         }
       ]
     },
     "WOO": {
       "components": 1,
-      "largest_component": 93,
+      "largest_component": 59,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 93,
+          "size": 59,
           "forced_anchors": 1,
           "sample": [
             "me_land_0033",
-            "me_land_0149",
-            "me_land_0155",
             "me_land_0200",
-            "me_land_0215"
+            "me_land_0215",
+            "me_land_0234",
+            "me_land_0268"
           ]
         }
       ]
@@ -2108,58 +2206,47 @@
       ]
     },
     "BEO": {
-      "components": 3,
-      "largest_component": 57,
-      "largest_component_fraction": 0.876923,
+      "components": 2,
+      "largest_component": 63,
+      "largest_component_fraction": 0.969231,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 57,
+          "size": 63,
           "forced_anchors": 1,
           "sample": [
             "carrock",
             "me_land_0016",
             "me_land_0150",
             "me_land_0204",
-            "me_land_0299"
-          ]
-        },
-        {
-          "size": 6,
-          "forced_anchors": 0,
-          "sample": [
-            "me_land_0246",
-            "me_land_0348",
-            "me_land_0616",
-            "me_land_2623",
-            "me_land_2638"
+            "me_land_0210"
           ]
         },
         {
           "size": 2,
           "forced_anchors": 0,
           "sample": [
-            "me_land_2037",
-            "me_land_5146"
+            "me_land_0616",
+            "me_land_2623"
           ]
         }
       ]
     },
     "WDM": {
       "components": 1,
-      "largest_component": 69,
+      "largest_component": 40,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 69,
+          "size": 40,
           "forced_anchors": 1,
           "sample": [
             "me_land_0107",
             "me_land_0120",
-            "me_land_0210",
-            "me_land_0397",
-            "me_land_0615"
+            "me_land_0626",
+            "me_land_0697",
+            "me_land_0946"
           ]
         }
       ]
@@ -2185,46 +2272,36 @@
     },
     "FAN": {
       "components": 1,
-      "largest_component": 45,
+      "largest_component": 31,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 45,
+          "size": 31,
           "forced_anchors": 2,
           "sample": [
             "me_land_0034",
-            "me_land_0240",
             "me_land_0247",
-            "me_land_0281",
-            "me_land_0372"
+            "me_land_0307",
+            "me_land_0532",
+            "me_land_0534"
           ]
         }
       ]
     },
     "DRU": {
-      "components": 2,
-      "largest_component": 20,
-      "largest_component_fraction": 0.909091,
-      "detached_unforced_specks": 1,
+      "components": 1,
+      "largest_component": 3,
+      "largest_component_fraction": 1.0,
+      "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 20,
+          "size": 3,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0011",
-            "me_land_0555",
             "me_land_0780",
-            "me_land_0972",
-            "me_land_1055"
-          ]
-        },
-        {
-          "size": 2,
-          "forced_anchors": 0,
-          "sample": [
-            "me_land_1260",
-            "me_land_5073"
+            "me_land_1245",
+            "me_land_2596"
           ]
         }
       ]
@@ -2347,19 +2424,19 @@
     },
     "DOL": {
       "components": 1,
-      "largest_component": 46,
+      "largest_component": 36,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 46,
+          "size": 36,
           "forced_anchors": 1,
           "sample": [
             "dol_guldur",
-            "me_land_0035",
             "me_land_0069",
             "me_land_0076",
-            "me_land_0105"
+            "me_land_0105",
+            "me_land_0118"
           ]
         }
       ]
@@ -2677,12 +2754,12 @@
     },
     "DUN": {
       "components": 1,
-      "largest_component": 47,
+      "largest_component": 32,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 47,
+          "size": 32,
           "forced_anchors": 1,
           "sample": [
             "me_land_0162",

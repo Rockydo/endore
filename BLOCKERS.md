@@ -487,3 +487,28 @@ the owner-requested static forest-density/species batch and retry fresh Observer
 paired smoke after that fingerprint changes. Evidence:
 `docs/screens/20260802_v70_morannon_ramped_hinge/` and
 `docs/screens/20260802_v70b_morannon_ramped_hinge/`.
+
+## 2026-08-02 - v74 paired smoke deferred behind Antiquitas
+
+Status: two-strike external coordination blocker; pending gate retained, continue the next
+static atlas correction and retry only at a natural checkpoint.
+
+Two `gmake smoke` attempts for exact game-visible fingerprint
+`98c795b54ca828d998f81ed2e3548cc61087dc6955fce28aab6ba8410b26962a` correctly returned
+exit 75 while Antiquitas owned the shared EU5 session lease (PID 8848, fingerprint
+`ad4bd264`). Neither attempt launched, waited on, or interfered with the other project.
+ENDORE's pending smoke gate remains recorded at
+`G:\endore_runtime\state\pending_eu5_gate.json`. This is not a game or content failure:
+the same ENDORË candidate already completed a fresh HUD-proven Observer start, dense-forest
+and political-map captures, and 14 days of playback with no `error.log` growth.
+
+Do not poll the lease or attempt a third immediate smoke. Continue the static correction
+of the nine-theatre Forochel/Belfalas/Rhun/Harad defects and retry the exact pending gate
+at the next coherent checkpoint. Do not commit the game-visible v74 batch until paired
+smoke and `tools/eu5_slot.py assert-smoked` pass.
+
+Resolution: the lease became available at later natural checkpoints. Two speculative
+climate-material candidates were live-rejected and fully rolled back; the narrowed
+vegetation/source-ownership tree then passed fresh Observer, untouched 45-second playback,
+paired smoke, and exact `assert-smoked` on fingerprint `fb07a215`. This coordination
+blocker is resolved for the v75 focused checkpoint.

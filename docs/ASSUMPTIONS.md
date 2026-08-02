@@ -320,3 +320,29 @@ about Middle-earth.
 - † A sub-control-pixel endpoint extension for Lefnui or Serni is a raster contact
   correction at the already authored coastline, not new cartographic linework. Longer
   manually drawn extensions are forbidden.
+
+## v74 forest-edge and political-overlap interpretation
+
+- Caras Galadhon lies near Lothlorien's eastern edge and the Anduin/Celebrant approach.
+  A visibly more open riverward margin around its locator is therefore not evidence that
+  the whole Golden Wood is sparse. Acceptance requires separate interior regional/close
+  evidence, a dense all-LOD source-zone census, and light-trunk-only species checks.
+- Generated political locations are larger than many source-forest details. A location
+  may therefore qualify when at least 16 control pixels overlap a small, softly contacted
+  source mask even if its seed/label centre lies outside the polygon. This is a whole-cell
+  raster assignment tolerance, not authorization to enlarge the physical woodland.
+- `me_anduin_vale_region` is a technical setup partition that cuts across southern
+  Mirkwood. Including that region in Dol Guldur's candidate roster asserts no claim west
+  of the forest: the independent Mirkwood source-overlap mask and southern bounds remain
+  mandatory and prevent political spill.
+
+## v75 climate-renderer interpretation
+
+- Forodwaith and Forochel are open cold country at TA 3018, not continuous northern
+  conifer forest. Sparse installed arctic-tree pockets are a renderer approximation for
+  stunted vegetation; their bounded count does not assert a woodland boundary.
+- The accepted cartographic sources define Harad's broad arid envelope and source-backed
+  uplands but not a cadastral distribution of individual sand and stone textures. No new
+  texture distribution is accepted: both v44 and v45 live calibrations were rejected and
+  the proven v43 cache was restored. A future presentation pass may reveal source
+  highlands but may not change the climate outline, coast, rivers, or elevation.

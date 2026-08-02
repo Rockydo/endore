@@ -503,3 +503,30 @@ Gondor/Lindon channels. Observer advanced nine days with no map/river diagnostic
 smoke initially lease-deferred behind Antiquitas, then passed at the next natural
 checkpoint in 201.5 seconds with exactly zero new mod lines. This clears the focused v73
 river checkpoint; the complete nine-theatre physical/source-edge review remains red.
+
+v74 clears the reopened focused forest-density and source-shaped political checkpoints.
+The fixed 3.057m renderer budget now places 760,747/567,263/561,115 transforms in Mirkwood
+and 70,991/50,758/50,250 light-trunk-only transforms in Lothlorien across high/medium/low
+LOD while retaining Fangorn, Old Forest, and Ithilien floors. The political generator no
+longer treats rectangles as woodland evidence: six woodland polities require complete-cell
+overlap with their hash-pinned Arda Maps source mask, and Dunland follows a seven-vertex
+lowland polygon. The 5,200-location audit has zero violations and every affected compact
+realm is contiguous. Fresh real-game evidence under
+`docs/screens/20260802_v74_dense_forests_source_claims/` shows an irregular 21-location
+Lothlorien outside the Misty Mountains, dense light-trunk interior canopy, near-continuous
+Mirkwood canopy, and the smaller Dunland silhouette. A fresh Observer advanced from
+TA 3018.1.1 to 3018.1.15 without recovery or any error-log growth. This does not clear the
+complete gate: Forochel, Belfalas, Rhun, Harad, macro materials, small water presentation,
+and the full source-edge sweep remain red.
+
+v75 clears the focused vegetation/source-shaped-ownership checkpoint. Static vegetation
+contracts now make the complete
+tundra sparse while increasing the already accepted Lothlorien and Mirkwood counts. Both
+climate-material experiments are rejected: v44 rendered Harad as green earth with pale
+sand islands, while v45 rendered enormous dark rock blotches. The complete v43 material
+source, preview, and 174,763-tile cache were restored with zero diff. Retain both v75
+climate evidence directories as negative calibration evidence. Fresh v75c forest and
+political frames, post-rollback full validation, a separate untouched 45-second v75d
+playback with baseline-only error log, paired zero-new-line smoke, and exact
+`assert-smoked` all pass on fingerprint `fb07a215`. Harad, Forochel, and the wider
+nine-theatre material gate remain red.

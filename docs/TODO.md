@@ -237,3 +237,51 @@
    then repeat paired smoke and the five-year economy evidence run.
 15. Later map tooling: revisit Himling/Tolfalas adjacency candidates only through a bounded
    editor-backed experiment; the zero-byte fallback remains the proven safe contract.
+
+## Current v74 focused checkpoint
+
+- ACCEPTED FOREST CHECKPOINT: retain the fixed 3,057,385-transform runtime budget, but
+  preserve the v74 redistribution in which Mirkwood carries 760,747/567,263/561,115
+  transforms and Lothlorien 70,991/50,758/50,250 transforms at high/medium/low LOD.
+  Lothlorien remains pine-free and generic-tree-free, using only installed light-trunk
+  full-canopy meshes. Fresh interior/regional/close evidence proves a continuous
+  birch-dominant visual read with irregular clearings; Caras Galadhon remains at the
+  canonical eastern forest edge beside the Anduin. Mirkwood reads as a near-continuous
+  deep mixed canopy. Full validation and a fresh 14-day Observer playback with an
+  unchanged error log pass on fingerprint `98c795b5`; paired smoke remains mandatory
+  before commit. Keep the complete nine-theatre physical review open for the separately
+  identified Forochel, Belfalas, Rhun, Harad, macro-material, and water defects.
+- ACCEPTED SOURCE-SHAPE CHECKPOINT: rectangular search envelopes are no longer sufficient
+  evidence for woodland polities. Lothlorien, Fangorn, Druadan Forest, Woodland Realm,
+  Woodmen, and Dol Guldur now require substantial whole-location overlap with their
+  hash-pinned Arda Maps woodland polygon; Dunland uses a reviewed seven-vertex lowland
+  frontier. Lothlorien is a single 21-location source-overlap Naith and no longer paints
+  the Misty Mountains; Dunland is a single 32-location lowland polity. Woodland Realm
+  (59), Woodmen (40), Dol Guldur (36), Fangorn (31), and Druadan (3) are all contiguous.
+  The complete 5,200-location audit has zero violations. Do not add a new subfaction
+  merely to consume wild land: the current Mirkwood controllers already represent the
+  distinct TA 3018 powers, and lower-confidence East/South borders remain openly
+  approximate pending stronger source evidence.
+
+## ACCEPTED v75 focused checkpoint
+
+- Preserve v74's source-shaped ownership exactly: LOR 21, DUN 32, WOO 59, WDM 40,
+  DOL 36, FAN 31, and DRU 3 remain contiguous with zero audit violations. Do not add a
+  decorative faction merely to fill wilderness.
+- Preserve the fixed 3,057,385-transform budget and v12 redistribution. Current
+  high/medium/low counts are Mirkwood 950,729/677,500/670,517 and Lothlorien
+  75,643/54,871/54,459; all Lothlorien transforms remain installed light-trunk meshes.
+  Complete tundra vegetation must remain within its sparse 1,000..30,000 high,
+  700..24,000 medium, and 700..24,000 low bounds.
+- REJECTED: never restore terrain-material v44's green earth/sand islands or v45's huge
+  dark rock/sand blotches. The negative live evidence is retained under
+  `docs/screens/20260802_v75_climate_forests/` and
+  `docs/screens/20260802_v75b_climate_forests/`. The complete material source, preview,
+  and cache are restored to proven v43 with zero diff. Reopen Harad/Forodwaith materials
+  later only through a materially different renderer mechanism.
+- ACCEPTED: post-rollback full validation passed in 405.4 seconds. Fresh v75c frames prove
+  the denser canonical forests and source-shaped political overview on fingerprint
+  `fb07a215`; the separate untouched v75d session ran 45 seconds at maximum speed with
+  zero recovery and a baseline-only 1,486-byte error log. Paired smoke passed in 201.8
+  seconds with zero new mod lines and exact `assert-smoked`. Commit and push this coherent
+  checkpoint, then return to the still-red wider nine-theatre physical/material review.

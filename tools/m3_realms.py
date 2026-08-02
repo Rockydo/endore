@@ -16,7 +16,7 @@ from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -99,6 +99,38 @@ CLAIM_BOUNDS: dict[str, tuple[float, float, float, float, str]] = {
     "ANG": (0.415, 0.480, 0.060, 0.200, "Mount Gram and Angmar remnant fastnesses"),
 }
 
+# A rectangle is only a coarse search envelope. Canonical woodland realms use the
+# hash-pinned Arda Maps physical polygon itself, raster-overlapped against complete EU5
+# locations, while Dunland follows a reviewed lowland frontier rather than filling its
+# rectangular search box. Forced seats remain admissible and visible in the audit.
+SOURCE_ZONE_CLAIMS: dict[str, tuple[str, int, str]] = {
+    "LOR": ("lothlorien", 10, "Arda Maps Golden Wood / Naith physical polygon"),
+    "FAN": ("fangorn", 10, "Arda Maps Fangorn physical woodland polygon"),
+    "DRU": ("druadan", 8, "Arda Maps Drúadan Forest physical woodland polygon"),
+    "WOO": ("mirkwood", 10, "Arda Maps Mirkwood polygon: northern/eastern Woodland Realm"),
+    "WDM": ("mirkwood", 10, "Arda Maps Mirkwood polygon: western Woodmen settlements"),
+    "DOL": ("mirkwood", 10, "Arda Maps Mirkwood polygon: southern Dol Guldur shadow"),
+}
+CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
+    "DUN": (
+        (
+            (0.414, 0.414),
+            (0.445, 0.401),
+            (0.461, 0.425),
+            (0.458, 0.468),
+            (0.446, 0.507),
+            (0.420, 0.500),
+            (0.406, 0.462),
+        ),
+        "Dunland lowlands west of Isen and the Gap, south of Glanduin",
+    ),
+}
+CONTRACTED_TAGS = (
+    frozenset(CLAIM_BOUNDS)
+    | frozenset(SOURCE_ZONE_CLAIMS)
+    | frozenset(CLAIM_POLYGONS)
+)
+
 # Measured against the validated v71 nearest-seat tree before these contracts were
 # applied. Retaining the baseline in the generated audit makes the correction reviewable
 # without keeping a second, stale political raster.
@@ -178,6 +210,7 @@ class RealmState:
     by_tag: dict[str, Realm]
     ref_to_location: dict[str, str]
     landmark_by_location: dict[str, Landmark]
+    source_zone_claims: dict[str, frozenset[str]]
     ownership: dict[str, str]
     wild_reason: dict[str, str]
     names: dict[str, str]
@@ -330,8 +363,80 @@ def normalized_distance(location: Location, x: float, y: float) -> float:
     return ((lx - x) * 2.0) ** 2 + (ly - y) ** 2
 
 
-def claim_contract(location: Location, realm: Realm) -> tuple[bool, str]:
+def point_in_polygon(
+    x: float,
+    y: float,
+    polygon: tuple[tuple[float, float], ...],
+) -> bool:
+    """Return whether an equal-scale source point lies inside a simple polygon."""
+
+    inside = False
+    previous_x, previous_y = polygon[-1]
+    for current_x, current_y in polygon:
+        if (current_y > y) != (previous_y > y):
+            crossing_x = (
+                (previous_x - current_x)
+                * (y - current_y)
+                / (previous_y - current_y)
+                + current_x
+            )
+            if x < crossing_x:
+                inside = not inside
+        previous_x, previous_y = current_x, current_y
+    return inside
+
+
+def source_zone_location_claims(model: WorldModel) -> dict[str, frozenset[str]]:
+    """Map source woodland polygons to every substantially overlapping location."""
+
+    # Local import avoids coupling the political module's basic data types to the
+    # renderer generator while sharing its exact hash-pinned/naturalized mask routine.
+    from gen_map_objects import named_forest_mask
+
+    result: dict[str, frozenset[str]] = {}
+    for tag, (zone, dilation, _) in SOURCE_ZONE_CLAIMS.items():
+        mask = named_forest_mask(zone)
+        if dilation:
+            mask = np.asarray(
+                Image.fromarray(mask.astype(np.uint8) * 255, "L").filter(
+                    ImageFilter.MaxFilter(dilation * 2 + 1)
+                ),
+                dtype=np.uint8,
+            ) > 0
+        overlap = np.bincount(
+            model.labels[mask].astype(np.int64),
+            minlength=len(model.locations),
+        )
+        # Sixteen source pixels is well below a typical location's area but rejects a
+        # one-pixel tangency. Full location assignment then stays jagged and contiguous
+        # without turning the source polygon into a cadastral rectangle.
+        result[tag] = frozenset(
+            location.key
+            for location in model.locations
+            if location.kind == "land" and overlap[location.index] >= 16
+        )
+    return result
+
+
+def claim_contract(
+    location: Location,
+    realm: Realm,
+    source_zone_claims: dict[str, frozenset[str]],
+) -> tuple[bool, str]:
     """Apply reviewed physical-frontier contracts before political allocation."""
+    source_contract = SOURCE_ZONE_CLAIMS.get(realm.tag)
+    if source_contract is not None:
+        allowed = location.key in source_zone_claims[realm.tag]
+        bounds = CLAIM_BOUNDS.get(realm.tag)
+        if bounds is not None:
+            x0, x1, y0, y1, _ = bounds
+            x, y = location.normalized
+            allowed = allowed and x0 <= x <= x1 and y0 <= y <= y1
+        return allowed, source_contract[2]
+    polygon_contract = CLAIM_POLYGONS.get(realm.tag)
+    if polygon_contract is not None:
+        polygon, rationale = polygon_contract
+        return point_in_polygon(*location.normalized, polygon), rationale
     contract = CLAIM_BOUNDS.get(realm.tag)
     if contract is None:
         return True, "reviewed_region_claim"
@@ -466,6 +571,7 @@ def assign_ownership(
     model: WorldModel,
     realms: tuple[Realm, ...],
     ref_to_location: dict[str, str],
+    source_zone_claims: dict[str, frozenset[str]],
 ) -> tuple[dict[str, str], dict[str, str]]:
     ownership: dict[str, str] = {}
     wild_reason: dict[str, str] = {}
@@ -502,7 +608,7 @@ def assign_ownership(
                 realm,
             )
             for realm in candidates_by_region.get(location.region, ())
-            if claim_contract(location, realm)[0]
+            if claim_contract(location, realm, source_zone_claims)[0]
         )
         if not choices:
             ownership[location.key] = WILD
@@ -630,7 +736,13 @@ def build_state() -> RealmState:
     realms = load_realms()
     by_tag = {realm.tag: realm for realm in realms}
     ref_to_location, landmark_by_location = resolve_landmarks(model)
-    ownership, wild_reason = assign_ownership(model, realms, ref_to_location)
+    source_zone_claims = source_zone_location_claims(model)
+    ownership, wild_reason = assign_ownership(
+        model,
+        realms,
+        ref_to_location,
+        source_zone_claims,
+    )
     names, rank, source = all_location_names(
         model,
         ownership,
@@ -643,6 +755,7 @@ def build_state() -> RealmState:
         by_tag=by_tag,
         ref_to_location=ref_to_location,
         landmark_by_location=landmark_by_location,
+        source_zone_claims=source_zone_claims,
         ownership=ownership,
         wild_reason=wild_reason,
         names=names,
@@ -936,9 +1049,17 @@ def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
             continue
         realm = state.by_tag[owner]
         is_forced = forced.get(location.key) == owner
-        allowed, rationale = claim_contract(location, realm)
+        allowed, rationale = claim_contract(
+            location,
+            realm,
+            state.source_zone_claims,
+        )
         if is_forced:
             verdict = "accepted_forced_anchor"
+        elif owner in SOURCE_ZONE_CLAIMS:
+            verdict = "accepted_source_zone_overlap" if allowed else "violation"
+        elif owner in CLAIM_POLYGONS:
+            verdict = "accepted_frontier_polygon" if allowed else "violation"
         elif owner in CLAIM_BOUNDS:
             verdict = "accepted_source_side_envelope" if allowed else "violation"
         else:
@@ -1072,14 +1193,24 @@ def ownership_audit_json(state: RealmState) -> str:
     rows = ownership_audit_rows(state)
     connectivity = realm_connectivity(state)
     contracted: dict[str, dict[str, object]] = {}
-    for tag, contract in CLAIM_BOUNDS.items():
+    for tag in sorted(CONTRACTED_TAGS):
+        contract = CLAIM_BOUNDS.get(tag)
         tag_rows = [row for row in rows if row["realm"] == tag]
         xs = [float(row["normalized_x"]) for row in tag_rows]
         ys = [float(row["normalized_y"]) for row in tag_rows]
         violations = sum(row["verdict"] == "violation" for row in tag_rows)
         contracted[tag] = {
-            "rationale": contract[4],
-            "claim_bounds": list(contract[:4]),
+            "rationale": (
+                SOURCE_ZONE_CLAIMS[tag][2]
+                if tag in SOURCE_ZONE_CLAIMS
+                else CLAIM_POLYGONS[tag][1]
+                if tag in CLAIM_POLYGONS
+                else contract[4]
+            ),
+            "claim_bounds": list(contract[:4]) if contract else None,
+            "source_zone": SOURCE_ZONE_CLAIMS[tag][0] if tag in SOURCE_ZONE_CLAIMS else None,
+            "source_dilation_pixels": SOURCE_ZONE_CLAIMS[tag][1] if tag in SOURCE_ZONE_CLAIMS else None,
+            "claim_polygon": [list(point) for point in CLAIM_POLYGONS[tag][0]] if tag in CLAIM_POLYGONS else None,
             "locations": len(tag_rows),
             "forced_anchors": sum(row["forced"] == "yes" for row in tag_rows),
             "final_bbox": (
@@ -1095,7 +1226,7 @@ def ownership_audit_json(state: RealmState) -> str:
         }
     uncontracted: dict[str, dict[str, object]] = {}
     for realm in state.realms:
-        if realm.tag in CLAIM_BOUNDS:
+        if realm.tag in CONTRACTED_TAGS:
             continue
         tag_rows = [row for row in rows if row["realm"] == realm.tag]
         xs = [float(row["normalized_x"]) for row in tag_rows]
@@ -1302,7 +1433,7 @@ def check() -> list[str]:
         row
         for row in audit_rows
         if row["realm"] != WILD
-        and row["realm"] not in CLAIM_BOUNDS
+        and row["realm"] not in CONTRACTED_TAGS
         and row["forced"] == "no"
         and row["distance_to_capital"]
         and float(row["distance_to_capital"]) > MAX_UNCONTRACTED_CAPITAL_DISTANCE

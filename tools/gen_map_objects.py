@@ -34,7 +34,7 @@ from worldgen import CONTROL, CONTROL_H, CONTROL_W, ROOT, WORLD_H, WORLD_W
 OUT = ROOT / "in_game/gfx/map/map_objects"
 GENERATED = OUT / "generated"
 RECORD = struct.Struct("<10f")
-GENERATOR_VERSION = 10
+GENERATOR_VERSION = 12
 
 
 @dataclass(frozen=True)
@@ -105,18 +105,26 @@ FOREST_ZONE_MINIMUM_DETAIL = {
     # tightened after generation from the deterministic zone census below.
     "fangorn": {"high": 50_000, "medium": 25_000, "low": 25_000},
     "old_forest": {"high": 8_000, "medium": 8_000, "low": 8_000},
-    "lothlorien": {"high": 25_000, "medium": 18_000, "low": 18_000},
+    "lothlorien": {"high": 52_000, "medium": 40_000, "low": 40_000},
     "ithilien": {"high": 700, "medium": 500, "low": 500},
-    "mirkwood": {"high": 550_000, "medium": 420_000, "low": 420_000},
+    "mirkwood": {"high": 740_000, "medium": 550_000, "low": 550_000},
 }
 FOREST_ZONE_LOD_BOOST = {
     # Apply named-forest protection at every LOD. The former high-only field
     # made dense woods visibly evaporate at the normal regional camera.
-    "fangorn": {"high": 7.5, "medium": 7.5, "low": 7.5},
-    "old_forest": {"high": 7.5, "medium": 12.0, "low": 12.0},
-    "lothlorien": {"high": 12.0, "medium": 15.0, "low": 15.0},
+    "fangorn": {"high": 26.0, "medium": 26.0, "low": 26.0},
+    "old_forest": {"high": 16.0, "medium": 28.0, "low": 28.0},
+    "lothlorien": {"high": 110.0, "medium": 140.0, "low": 140.0},
     "ithilien": {"high": 2.0, "medium": 2.0, "low": 2.0},
-    "mirkwood": {"high": 2.0, "medium": 2.5, "low": 2.5},
+    "mirkwood": {"high": 5.8, "medium": 7.5, "low": 7.5},
+}
+TUNDRA_VEGETATION_BOUNDS = {
+    # The Forodwaith is open tundra with only sparse, stunted conifer pockets.
+    # The v73 live audit found ordinary forest density here because pine
+    # eligibility treated biome 5 exactly like dense woodland.
+    "high": (1_000, 30_000),
+    "medium": (700, 24_000),
+    "low": (700, 24_000),
 }
 
 
@@ -229,6 +237,11 @@ def placement_field(
         0.45,
     )
     if family.key == "pine":
+        # Preserve a few deterministic arctic groves without rendering the
+        # entire Forodwaith as temperate woodland. Fixed global transform
+        # counts redistribute the removed instances into genuinely forested
+        # source zones, especially Mirkwood, rather than reducing detail.
+        suitability[biomes == 5] *= 0.05
         # Lothlórien's renderer identity is a dense light-trunk deciduous wood,
         # not the generic dense-forest pine mixture used across Mirkwood. The
         # exact source boundary remains unchanged; only species eligibility is
@@ -589,6 +602,19 @@ def check() -> list[str]:
                 f"lothlorien {lod} species contract regressed "
                 f"(light={light_trunk:,}, generic={generic:,}, pine={pine:,}, "
                 f"total={lothlorien_total:,})"
+            )
+    biomes, _, _ = controls()
+    tundra = biomes == 5
+    for lod, (minimum, maximum) in TUNDRA_VEGETATION_BOUNDS.items():
+        tundra_count = sum(
+            count_records_in_mask(data, tundra)
+            for path, data in expected.items()
+            if path.suffix == ".bin" and f"_{lod}_" in path.name
+        )
+        if not minimum <= tundra_count <= maximum:
+            failures.append(
+                f"{lod}-detail tundra vegetation left sparse-arctic bounds "
+                f"({tundra_count:,}, expected {minimum:,}..{maximum:,})"
             )
     for path, data in expected.items():
         if path.suffix != ".bin":
