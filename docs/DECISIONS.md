@@ -1466,3 +1466,16 @@ terrain-only drainage hierarchy-aware in the material cache: named courses recei
 rivers retain 0.62/two pixels. This preserves exact source geometry and load safety while
 improving regional legibility. Treat rocky physical incision as an interim honest renderer
 distinction, not as completion of the river system or permission to close M2.
+
+## 2026-08-02 - Represent sub-location lakes with one exact terrain channel
+
+Keep Mirrormere and the nine other source lakes below the 64-pixel engine-water threshold
+as continuous physical land, because engine-water host locations and the installed square
+lake carrier both visibly destroy their authored outlines. Reserve one otherwise-unused
+dynamic-biome channel for a cool still-water material derived deterministically from the
+hash-pinned installed `dirt_ponds_01` diffuse, paired with vanilla's unmasked level normal
+and glossy properties. Paint only the exact lake-biome cores, restore their precedence
+after river composition, and retain the feathered bank. Reject the first muddy live colour
+calibration and keep the cooler second calibration proven by the irregular Nindalf island
+cluster. This is a supported 2D terrain-material treatment, not a new mesh or a claim that
+tiny ponds have gained engine-water simulation.

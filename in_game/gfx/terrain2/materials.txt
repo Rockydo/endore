@@ -490,6 +490,20 @@
 	}			
 		
 
+
+
+	# ENDÓRË: a terrain-native still-water read for lakes too small to own an
+	# engine-water location. The diffuse is a deterministic cool recolour of
+	# vanilla dirt_ponds_01; vanilla's comparatively level unmasked ice normal
+	# and glossy properties suppress the earthen puddle relief without inventing
+	# a new shader or mesh.
+	{
+		name = 		"endore_still_water"
+		diffuse =	"textures/endore/endore_still_water_diffuse.dds"
+		normal =	"unmasked/ice_normal.dds"
+		properties =	"unmasked/ice_properties.dds"
+	}
+
 #Special Folders (CodeStuff)	
 
 	{
@@ -4747,7 +4761,7 @@ biomes = {
 			base_rock_02			# 1 hill coast
 			base_rock				# 2 plateau coast
 			base_rock_dark			# 3 mountain coast
-			dirt_ponds_01			# 4 wetland coast
+			endore_still_water		# 4 wetland coast / source ponds
 			sand_transition			# 5 coast transition
 			dirt_ponds_01			# 6 rivers/lakes
 			dirt_transition_02		# 7 water transition

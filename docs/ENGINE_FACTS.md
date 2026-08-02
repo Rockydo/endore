@@ -387,3 +387,10 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   load-safe visibility distinction, not proof that build 24187685 supports arbitrary
   affluent water graphs; the earlier exact red degree-two endpoint candidate remains
   rejected.
+- Build 24187685 resolves an appended terrain material that combines a mod-owned diffuse
+  with vanilla's packed `unmasked/ice_normal.dds` and `unmasked/ice_properties.dds` without
+  a missing-asset diagnostic. Assigning that material as the sole variation bit over an
+  exact land-surface mask preserves irregular sub-location lake outlines. The first
+  dirt-normal/muted-teal probe read as mottled ground; a darker blue diffuse plus the
+  level unmasked normal reads as water in a fresh calibrated Nindalf A/B. It remains
+  terrain, not navigable engine water, and cannot inherit water-location simulation.

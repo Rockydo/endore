@@ -67,7 +67,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 47
+GENERATOR_VERSION = 48
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -79,7 +79,7 @@ GENERATOR_VERSION = 47
 # changes river-material semantics only. The rejected v44/v45 climate probes
 # never survived in source. v46 changes the custom palette and material mask
 # only, so it may reuse a verified v42/v43 height payload.
-HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42, 43, 46, 47})
+HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset({42, 43, 46, 47, 48})
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
 # virtual-texture cache contains a separately sculpted 65536x32768 surface:
@@ -1353,13 +1353,11 @@ def render_material_source() -> np.ndarray:
     material[material_pond_margin] |= (
         MATERIAL_WETLAND_COAST | MATERIAL_WATER_TRANSITION
     )
-    material[material_pond] = (
-        MATERIAL_GRASS
-        | MATERIAL_EARTH
-        | MATERIAL_WETLAND_COAST
-        | MATERIAL_WATER_TRANSITION
-        | MATERIAL_RIVER
-    )
+    # The exact source core is one dedicated terrain material. Blending grass,
+    # earth, river and transition channels made these tiny lakes read as dark
+    # marsh stains; one source-derived glossy water channel preserves their
+    # irregular outlines without any engine-water cell or rectangular mesh.
+    material[material_pond] = MATERIAL_WETLAND_COAST
     material[outer_coast] |= MATERIAL_WATER_TRANSITION
 
     # Every playable dry cell uses one ENDÓRË renderer biome. Engine
@@ -1368,6 +1366,12 @@ def render_material_source() -> np.ndarray:
 
     rivers = river_material_mask(projection) & land
     material[rivers] |= MATERIAL_RIVER
+    # River painting is intentionally later than the general terrain stack,
+    # but 115 high-resolution samples cross a lake-biome shore/core. Restore
+    # pond precedence so no dirt-river blend can puncture the still-water read.
+    material[material_pond] = MATERIAL_WETLAND_COAST
+    if not np.all(material[material_pond] == MATERIAL_WETLAND_COAST):
+        raise AssertionError("material pond core lost its final water precedence")
 
     if np.any(material[land] == 0):
         raise AssertionError("material paint leaves land without a variation channel")

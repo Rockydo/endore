@@ -1480,3 +1480,41 @@
   passed in 415.2 seconds, including all cartography controls, 174,763 cache tiles,
   downstream world outputs, and lint. This accepts only the narrow visibility mechanism;
   the complete river presentation and M2 nine-theatre gate remain red.
+
+## 2026-08-02 - v84 terrain-native sub-location water checkpoint
+
+- Re-audited all fifteen source lakes and the installed lake-object/material contracts.
+  Five large lakes remain engine water. Mirrormere and minor lakes 04-07/10-14 occupy
+  only 189 pixels in the 4096x2048 source atlas and remain continuous physical land to
+  avoid the already proven whole-location quarry. The prior retail `lake_mesh` variants
+  remain rejected because their unit-square carriers render as visible blue rectangles.
+- Removed an uncommitted exact-outline mesh experiment after the session-start master-plan
+  review reaffirmed the explicit ban on generating new 3D meshes. No experimental mesh,
+  locator, transform, or quarantine change survives in the tree.
+- Built a materially different supported A/B: `endore_still_water` derives its diffuse
+  deterministically from the hash-pinned installed vanilla `dirt_ponds_01` texture,
+  using vanilla's flatter unmasked normal and glossy properties contract.
+  Only the existing wetland-coast channel changes identity. Each exact material-pond core
+  now uses that one channel instead of the former grass/earth/pond/transition/river blend;
+  the feathered rim remains, and source geometry, height, coast, river raster, forests,
+  relief, locations, and ownership are byte-identical.
+- Generator write/check, byte-for-byte DDS derivation, terrain-cache regeneration,
+  `pdxlint`, and a pre-precedence full `gmake validate` passed. A final audit found 115
+  high-resolution pond/shore samples crossed by the later river pass; generator v48 now
+  restores water-channel precedence after that pass and regenerated the full material
+  payload. Targeted checks pass on final candidate fingerprint
+  `bfecb37264d46f9f08c6762cff1b732e9ca3f65c69887fa20906a4effaecd5de`.
+  The first fresh live colour/relief calibration was rejected: exact Nindalf outlines
+  appeared, but their mottled brown-green cores read as craters rather than water. A
+  second genuinely fresh New Game on the pre-manifest fingerprint
+  `9f4f323905de8b47587a296ec41b08fb3b3202a0b8590e01119b8bae3e086ccc`
+  accepted a cooler blue range plus vanilla's level unmasked normal. Calibrated Nindalf,
+  Mirrormere, and Shire evidence under `docs/screens/20260802_v84b_terrain_water/` shows
+  level blue irregular water and no square carrier, hard rim, or polygon spill. A
+  45-second maximum-speed Observer interval required zero recovery and retained the
+  1,486-byte baseline. The first full gate then correctly rejected stale cache provenance;
+  coherent regeneration retained byte-identical material payload hashes while updating
+  the source manifest. Paired vanilla/ENDÓRË smoke passed in 201.0 seconds with zero new
+  lines on final exact fingerprint
+  `9fff7077743c1f78248aa48ab5a3342d5ae3917c328803878698b6b43973ed4e`.
+  Commit remains conditioned on repository-wide static green; M2 remains red regardless.

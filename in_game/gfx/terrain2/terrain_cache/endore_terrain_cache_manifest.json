@@ -1,6 +1,6 @@
 {
   "generator": "gen_terrain_cache.py",
-  "generator_version": 47,
+  "generator_version": 48,
   "source": "in_game/gfx/terrain2/heightmap.png",
   "source_sha256": "090fde98f5f94faad693939e5a04fc17ea676936aca4c77a9ef66ac8f213e683",
   "source_resolution": [
@@ -19,7 +19,7 @@
     "in_game/gfx/terrain2/heightmap.png": "090fde98f5f94faad693939e5a04fc17ea676936aca4c77a9ef66ac8f213e683",
     "docs/world/control/biomes.png": "c041b21d3569e1552e3a754f04dee0d045134a5f8e72a2fd8549d8f1a569e7d3",
     "docs/world/control/projection.json": "e07d9c04b58794af270b7ccbbaa661c2acdde23deecdd35adc1a77e9ab9b798b",
-    "in_game/gfx/terrain2/materials.txt": "184bc2a45f1393834d0d861f4fd8d09522e98eb3eac98a0f1bf6c47b3d935236"
+    "in_game/gfx/terrain2/materials.txt": "b114e78faf19c2142119d081e6f2aca771a1a0a3cac2d7f0c58eb30d663a70af"
   },
   "mip_layout": [
     [
@@ -80,8 +80,8 @@
   "earth_decal_layers": 0,
   "material_preview": {
     "path": "docs/world/derived/terrain_material_preview.png",
-    "bytes": 52148,
-    "sha256": "3ea69f0e55a854e60443795d4d729c0280304f2123882d811e130d76157ec6c9"
+    "bytes": 52077,
+    "sha256": "213dc3fe6269e75fdeaec18902e2aa9becb80353df4d968a28285e89182752c2"
   },
   "outputs": {
     "heightmap.bin": {
@@ -109,20 +109,20 @@
       "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
     },
     "materials.bin": {
-      "bytes": 23539125,
-      "sha256": "7ce8916e148671e3882f210705e3f1fbc71f697376e89c81bc8097fc4cf42984"
+      "bytes": 23534185,
+      "sha256": "df7f45b392508456f450c5a56c3fa81d40632dcf45a0a4591a34f6352edfded1"
     },
     "materials.info": {
-      "bytes": 5189130,
-      "sha256": "58f61c103a547b70e096489a72bf40462523533a58855e077eace2e9f827769a"
+      "bytes": 5189123,
+      "sha256": "ed717599db289119e0a6fb4fe4f83b154667f8aac42964066498adfff875e181"
     },
     "quadtree_nodes.bin": {
       "bytes": 67108880,
       "sha256": "452816940799ecfdffa83b22b8b4c4cba43d1983189aea1d76b45fea15ff2e1d"
     },
     "checksum.json": {
-      "bytes": 58,
-      "sha256": "aa955f9f35c5f0414e49e56ea716e1aa796b6ca7cbd863d93f9cd56cf9f752dd"
+      "bytes": 57,
+      "sha256": "2b2ac3f51012d981b22bf9ba858da646ca586834ff4e390e7f6090126e0aa94e"
     }
   }
 }

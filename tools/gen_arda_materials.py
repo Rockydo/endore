@@ -4,13 +4,46 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import subprocess
+import tempfile
 from pathlib import Path
+
+import dds
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "local_paths.json"
 OUT = ROOT / "in_game" / "gfx" / "terrain2" / "materials.txt"
 CITY_OUT = ROOT / "in_game" / "gfx" / "city_materials" / "99_endore.txt"
+STILL_WATER_OUT = (
+    ROOT
+    / "in_game"
+    / "gfx"
+    / "terrain2"
+    / "terrain_textures"
+    / "textures"
+    / "endore"
+    / "endore_still_water_diffuse.dds"
+)
+VANILLA_POND_DIFFUSE_SHA256 = (
+    "60ab4421f7466dd7f8d2c73eb7ab305fd37b76219a40c60c2360f81fcb4fa613"
+)
+
+MATERIAL_BLOCK = r"""
+
+	# ENDÓRË: a terrain-native still-water read for lakes too small to own an
+	# engine-water location. The diffuse is a deterministic cool recolour of
+	# vanilla dirt_ponds_01; vanilla's comparatively level unmasked ice normal
+	# and glossy properties suppress the earthen puddle relief without inventing
+	# a new shader or mesh.
+	{
+		name = 		"endore_still_water"
+		diffuse =	"textures/endore/endore_still_water_diffuse.dds"
+		normal =	"unmasked/ice_normal.dds"
+		properties =	"unmasked/ice_properties.dds"
+	}
+"""
 
 BIOME_BLOCK = r"""
 
@@ -24,7 +57,7 @@ BIOME_BLOCK = r"""
 			base_rock_02			# 1 hill coast
 			base_rock				# 2 plateau coast
 			base_rock_dark			# 3 mountain coast
-			dirt_ponds_01			# 4 wetland coast
+			endore_still_water		# 4 wetland coast / source ponds
 			sand_transition			# 5 coast transition
 			dirt_ponds_01			# 6 rivers/lakes
 			dirt_transition_02		# 7 water transition
@@ -62,11 +95,67 @@ def installed_source() -> Path:
     )
 
 
+def installed_pond_diffuse() -> Path:
+    config = json.loads(CONFIG.read_text(encoding="utf-8"))
+    return (
+        Path(config["game_dir"])
+        / "game"
+        / "in_game"
+        / "gfx"
+        / "terrain2"
+        / "terrain_textures"
+        / "textures"
+        / "dirt"
+        / "dirt_ponds_01_diffuse.dds"
+    )
+
+
+def assert_vanilla_pond_source() -> Path:
+    source = installed_pond_diffuse()
+    if not source.is_file():
+        raise FileNotFoundError(f"missing installed pond diffuse: {source}")
+    digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    if digest != VANILLA_POND_DIFFUSE_SHA256:
+        raise ValueError(
+            "installed dirt_ponds_01 diffuse changed: "
+            f"{digest} != {VANILLA_POND_DIFFUSE_SHA256}"
+        )
+    return source
+
+
+def build_still_water_texture(target: Path) -> None:
+    """Recolour the exact vanilla pond diffuse into muted blue-green water."""
+
+    source = assert_vanilla_pond_source()
+    temp_root = ROOT / ".tmp"
+    temp_root.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix="endore-still-water-", dir=temp_root) as tmp:
+        preview = Path(tmp) / "endore_still_water.png"
+        subprocess.run(
+            [
+                str(dds.magick()),
+                f"{source}[0]",
+                "-colorspace",
+                "gray",
+                "-auto-level",
+                "+level-colors",
+                "#092e49,#3f7891",
+                str(preview),
+            ],
+            check=True,
+        )
+        dds.convert(preview, target, compression="dxt5", mipmaps=True)
+
+
 def expected_text() -> str:
     source = installed_source()
     text = source.read_text(encoding="utf-8-sig").replace("\r\n", "\n")
     if "name = endore_dynamic_land_biome" in text:
         raise ValueError("installed materials unexpectedly contain ENDÓRË biome")
+    marker = "#Special Folders (CodeStuff)"
+    if text.count(marker) != 1:
+        raise ValueError("installed materials lacks unique special-folders marker")
+    text = text.replace(marker, MATERIAL_BLOCK + "\n" + marker, 1)
     closing = text.rfind("\n}")
     if closing < 0:
         raise ValueError("installed materials file lacks its final biomes closure")
@@ -78,9 +167,10 @@ def write() -> None:
     OUT.write_text(expected_text(), encoding="utf-8-sig", newline="\n")
     CITY_OUT.parent.mkdir(parents=True, exist_ok=True)
     CITY_OUT.write_text(CITY_MATERIALS, encoding="utf-8-sig", newline="\n")
+    build_still_water_texture(STILL_WATER_OUT)
     print(
-        "gen_arda_materials: wrote installed-compatible dynamic land and "
-        "city-ground palettes"
+        "gen_arda_materials: wrote installed-compatible dynamic land, "
+        "terrain-native still water, and city-ground palettes"
     )
 
 
@@ -94,6 +184,8 @@ def check() -> list[str]:
         failures.append("materials.txt differs from installed-compatible palette")
     if actual.count("name = endore_dynamic_land_biome") != 1:
         failures.append("dynamic land biome is not unique")
+    if actual.count('name = \t\t"endore_still_water"') != 1:
+        failures.append("terrain-native still-water material is not unique")
     block = actual[actual.index("name = endore_dynamic_land_biome") :]
     if block.split("}", 2)[0].count("# ") != 16:
         failures.append("dynamic land biome does not expose exactly 16 channels")
@@ -101,6 +193,28 @@ def check() -> list[str]:
         failures.append("missing city material mapping for dynamic land biome")
     elif CITY_OUT.read_text(encoding="utf-8-sig").replace("\r\n", "\n") != CITY_MATERIALS:
         failures.append("dynamic land city material mapping differs from contract")
+    try:
+        assert_vanilla_pond_source()
+    except (FileNotFoundError, ValueError) as exc:
+        failures.append(str(exc))
+    if not STILL_WATER_OUT.is_file():
+        failures.append("missing terrain-native still-water texture")
+    else:
+        temp_root = ROOT / ".tmp"
+        temp_root.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(
+            prefix="endore-still-water-check-", dir=temp_root
+        ) as tmp:
+            expected_texture = Path(tmp) / STILL_WATER_OUT.name
+            try:
+                build_still_water_texture(expected_texture)
+            except (FileNotFoundError, ValueError, subprocess.CalledProcessError) as exc:
+                failures.append(f"could not derive still-water texture: {exc}")
+            else:
+                if STILL_WATER_OUT.read_bytes() != expected_texture.read_bytes():
+                    failures.append(
+                        "terrain-native still-water texture differs from vanilla-derived contract"
+                    )
     return failures
 
 

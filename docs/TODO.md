@@ -140,6 +140,26 @@
    feathered physical bowls and a wetland/water-transition stack. Verify and refine the
    close-zoom water/scenery read without
    restoring engine-water host cells or changing any source outline.
+   ACCEPTED v84 TERRAIN-WATER CHECKPOINT — the master-plan ban on new 3D meshes rules out a
+   custom-polygon carrier. Instead, reserve the existing wetland-coast material channel
+   for a deterministic muted blue-green still-water surface derived from the exact
+   hash-pinned vanilla `dirt_ponds_01` diffuse, with vanilla's flatter unmasked normal and
+   glossy properties. The exact 189-pixel source cores now use only that channel; their
+   feathered margins, shallow above-water bowls, all source outlines, and every
+   engine-water lake remain unchanged. Material generation/checks, cache regeneration,
+   `pdxlint`, and a pre-precedence full `gmake validate` are green. Generator v48 restores
+   pond precedence after the river pass at 115 intersecting high-resolution samples;
+   targeted checks pass. The first live colour/relief probe was honestly rejected as a
+   mottled crater. A fresh exact-camera A/B then accepted the cooler surface: the Nindalf
+   cluster reads as level blue water with its authored irregular islands, while calibrated
+   Mirrormere/Shire views show no tile, rectangle, hard rim, or spill. A 45-second maximum-
+   speed Observer run required zero recovery and retained the 1,486-byte baseline. The
+   first full gate correctly rejected stale cache provenance after the live colour change;
+   coherent regeneration kept the material payload hashes unchanged and updated its source
+   manifest. Paired smoke then passed in 201.0 seconds with zero mod-unique lines on exact
+   game-visible fingerprint `9fff7077`; commit remains conditioned on repository-wide
+   static green. Keep this item open: small-lake presentation is improved, not the complete
+   nine-theatre M2 terrain gate.
 4. REOPENED M2 BELFALAS — preserve the hash-pinned Arda Maps mainland ring: the apparent
    inlet is backed by 2,043 raw Belfalas-window source vertices and the committed
    simplification deviates by at most roughly three location-raster pixels. Treat the
