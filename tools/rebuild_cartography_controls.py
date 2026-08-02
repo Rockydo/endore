@@ -370,6 +370,32 @@ def river_geometry(topology: Topology, event_name: str) -> list[list[float]]:
     return rdp(path, 0.00020)
 
 
+def lhun_main_geometry(topology: Topology) -> list[list[float]]:
+    """Recover the northern Lhûn main stem without serializing its branch.
+
+    Arda Maps stores Lhûn as a three-part Y. Parts 1 and 0 are the continuous
+    northern headwater-to-sea trunk; part 2 is the southern tributary and stays
+    in the parser-safe terrain-only drainage layer.
+    """
+
+    geometry = topology.data["objects"]["line_river"]["geometries"][84]
+    if (
+        (geometry.get("properties") or {}).get("eventname") != "Lhun"
+        or geometry["type"] != "MultiLineString"
+    ):
+        raise ValueError("Arda Maps Lhûn source contract changed")
+    parts = topology.line_parts(geometry)
+    if len(parts) != 3:
+        raise ValueError("Arda Maps Lhûn branch count changed")
+    path = list(reversed(parts[1]))
+    append_path(path, parts[0])
+    if math.dist(path[0], [0.304246, 0.044596]) > 0.001:
+        raise ValueError("Arda Maps Lhûn headwater moved")
+    if math.dist(path[-1], [0.286711, 0.114941]) > 0.001:
+        raise ValueError("Arda Maps Lhûn mouth moved")
+    return rdp(path, 0.00020)
+
+
 def harnen_geometry(topology: Topology) -> list[list[float]]:
     """Recover Arda Maps' unnamed Harnen channel and reconcile its mouth.
 
@@ -499,6 +525,7 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
         "Limlight", "Entwash", "Snowbourn", "Brandywine", "Hoarwell",
         "Bruinen", "Gwathlo", "Glanduin", "Isen", "Morthond", "Ringlo",
         "Gilrain", "RiverRunning", "ForestRiver", "Carnen", "Poros",
+        "Lefnui", "Serni",
     }
     broad_named = {
         "Adorn", "Celos", "Ciril", "Erui", "Lefnui", "Lhun", "Serni",
@@ -512,6 +539,20 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
         if source_name in modelled_names:
             continue
         for part_index, source_part in enumerate(topology.line_parts(geometry)):
+            # These exact lines already back the reviewed Harnen and
+            # Morgulduin controls. Drawing them again creates artificial
+            # double-width valleys.
+            if geometry_index in {8, 14}:
+                continue
+            # The lower Anduin control owns parts 11-14. Parts 0-10 are the
+            # real Ethir distributaries and remain visible physical drainage,
+            # including their sub-threshold connector segments.
+            if geometry_index == 71 and part_index >= 11:
+                continue
+            # Lhûn parts 1 and 0 form the reviewed terrain-only trunk; part 2
+            # remains its separate source-derived southern tributary.
+            if geometry_index == 84 and part_index in {0, 1}:
+                continue
             if len(source_part) < 2 or not in_view(source_part):
                 continue
             path = rdp(source_part, 0.00014)
@@ -521,8 +562,36 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
             )
             # Discard only genuinely sub-location scratches. Short named
             # tributaries remain binding because several are lore landmarks.
-            if path_length < (0.0018 if source_name else 0.0035):
+            if (
+                path_length < (0.0018 if source_name else 0.0012)
+                and geometry_index != 71
+            ):
                 continue
+            if source_name in broad_named:
+                hydrology_class = "named_branch"
+                width = 0.0021
+                incision_strength = 176
+                material_scale = 1.00
+            elif source_name:
+                hydrology_class = "named_tributary"
+                width = 0.0016
+                incision_strength = 150
+                material_scale = 0.86
+            elif path_length >= 0.040:
+                hydrology_class = "unnamed_trunk"
+                width = 0.00155
+                incision_strength = 138
+                material_scale = 0.82
+            elif path_length >= 0.015:
+                hydrology_class = "unnamed_branch"
+                width = 0.00140
+                incision_strength = 124
+                material_scale = 0.74
+            else:
+                hydrology_class = "unnamed_feeder"
+                width = 0.00125
+                incision_strength = 108
+                material_scale = 0.68
             label = stable_key(str(source_name)) if source_name else "unnamed"
             controls.append(
                 {
@@ -530,10 +599,17 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
                         f"source_{label}_{geometry_index:02d}_{part_index:02d}"
                     ),
                     "label": source_name,
-                    "width": 0.0017 if source_name in broad_named else 0.00115,
+                    "width": width,
                     "wander": 0.0,
                     "engine_raster": False,
                     "terrain_only": True,
+                    "hydrology_class": hydrology_class,
+                    "incision_strength": incision_strength,
+                    "material_scale": material_scale,
+                    # Source storage direction is not uniformly head-to-mouth;
+                    # keep minor bank paint nearly uniform instead of applying
+                    # the engine-raster downstream taper backwards.
+                    "material_growth": 0.20,
                     "points": [
                         [round(x, 6), round(y, 6)] for x, y in path
                     ],
@@ -1137,6 +1213,8 @@ def build(reference_root: Path) -> tuple[dict, dict]:
         ("forest_river", "ForestRiver", None, 0.0018, (0.600, 0.165)),
         ("carnen", "Carnen", "celduin", 0.0033, (0.715, 0.345)),
         ("poros", "Poros", "anduin", 0.0030, (0.620, 0.725)),
+        ("lefnui", "Lefnui", None, 0.0028, (0.408670, 0.657678)),
+        ("serni", "Serni", None, 0.0024, (0.540569, 0.696225)),
     ]
     rivers = [
         {
@@ -1144,12 +1222,14 @@ def build(reference_root: Path) -> tuple[dict, dict]:
             "width": 0.0056,
             "wander": 0.0,
             "points": orient(upper_anduin, (0.553, 0.509)),
+            "source": "Arda Maps line_river 70 and 71 main stem",
         },
         {
             "key": "anduin",
             "width": 0.0068,
             "wander": 0.0,
             "points": orient(lower_anduin, (0.535, 0.717)),
+            "source": "Arda Maps line_river 71 lower main stem",
         },
     ]
     for key, source_name, joins, width, mouth in river_specs:
@@ -1159,6 +1239,7 @@ def build(reference_root: Path) -> tuple[dict, dict]:
             "width": width,
             "wander": 0.00035,
             "points": points,
+            "source": f"Arda Maps line_river named {source_name}",
         }
         if joins:
             if joins == "anduin" and key in {
@@ -1178,17 +1259,32 @@ def build(reference_root: Path) -> tuple[dict, dict]:
     rivers.extend(
         [
             {
+                "key": "lhun",
+                "width": 0.0031,
+                "wander": 0.00035,
+                "engine_raster": False,
+                "terrain_only": True,
+                "hydrology_class": "named_trunk",
+                "incision_strength": 176,
+                "material_scale": 1.0,
+                "material_growth": 0.20,
+                "points": lhun_main_geometry(topology),
+                "source": "Arda Maps line_river 84 parts 1+0",
+            },
+            {
                 "key": "morgulduin",
                 "width": 0.0018,
                 "wander": 0.00035,
                 "joins": "anduin",
                 "points": morgulduin_geometry(topology),
+                "source": "Arda Maps line_river 14",
             },
             {
                 "key": "harnen",
                 "width": 0.0032,
                 "wander": 0.00035,
                 "points": harnen_geometry(topology),
+                "source": "Arda Maps line_river 8 plus reconciled coastward reach",
             },
         ]
     )

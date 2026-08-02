@@ -1160,3 +1160,33 @@
   no map, ownership, setup, or simulation error appeared.
 - Mandatory paired `gmake smoke` then launched vanilla and ENDÓRË back-to-back under one
   transaction lease and passed in 202.2 seconds with exactly zero new error-log lines.
+
+## 2026-08-02 — v73 source-drainage hierarchy candidate
+
+- Rebuilt the hash-pinned Arda Maps drainage as 102 non-duplicated physical controls.
+  Lefnui and Serni are now independent indexed channels; Lhûn is a strong source-derived
+  main stem plus southern branch; Sirith and all eleven Ethir Anduin distributaries remain
+  visible parser-safe physical drainage. Duplicate Harnen, Morgulduin, and lower-Anduin
+  source parts were removed rather than double-incised.
+- Added six bounded hydrology classes with reviewed incision/material response, nearly
+  uniform minor-bank growth, complete provenance, twelve independent-channel and basin
+  coverage contracts, exact Ethir retention, and duplicate-source rejection. Major rivers
+  keep the installed downstream 4→5→11→15 widening grammar; dense-forest bank clearance
+  remains below the major threshold, preserving the accepted Lothlórien/Mirkwood canopy.
+- One coherent 834.2-second regeneration produced 6,004 locations, 102 river controls,
+  287 ports, 25,247 unique height tiles, 63,979 unique material tiles, and 3,057,385 forest
+  transforms on unchanged world model
+  `6048d0cc97170670688e2d8259517242efffc1482bf14d0a141745f90735ed34`.
+  Full `gmake validate` passed every gate in 373.6 seconds.
+- A genuinely fresh visual New Game reached HUD-proven Observer in 147 seconds on exact
+  tree fingerprint `c9b21485f3d78d7f11874c4f48ae706b33ad02146953008f9956c66a5c5eee1b`.
+  Evidence under `docs/screens/docs/screens/20260802_v73_river_hierarchy/` proves the broad
+  Anduin beside dense light-trunk Lothlórien, the broad Osgiliath reach, and multiple
+  narrower Gondor/Lindon source channels at regional and close zoom. A 45-second playback
+  advanced from TA 3018.1.1 to TA 3018.1.10 without pause recovery. The sole appended
+  95-byte diagnostic was the inherited machine `AudioArena size is too small` warning;
+  no map, river, terrain, ownership, setup, or simulation line appeared.
+- The first paired-smoke attempt correctly deferred while Antiquitas owned the shared
+  lease. At the next natural checkpoint, the exact pending fingerprint acquired the slot
+  and `gmake smoke` passed in 201.5 seconds: vanilla and ENDÓRË both reached menu-ready,
+  the mod added exactly zero error-log lines, and the transaction lease released cleanly.

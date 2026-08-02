@@ -1326,7 +1326,12 @@ def river_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             # Major reviewed trunks own the full incision/clearance response.
             # Supplementary catchment detail remains visible but must not cut
             # the same broad valley or tree-free bank as the Anduin.
-            fill=96 if river.get("terrain_only") else 255,
+            fill=int(
+                river.get(
+                    "incision_strength",
+                    96 if river.get("terrain_only") else 255,
+                )
+            ),
             width=width,
             joint="curve",
         )

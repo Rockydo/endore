@@ -1277,3 +1277,26 @@ Do not create small factions merely to consume neutral land. The existing 38-rea
 already includes attested small powers and communities; future additions require a
 distinct TA 3018 controller and a geographic improvement that can be defended in the
 canon ledger.
+
+## 2026-08-02 — Render the complete source drainage without fabricating parser graphs
+
+Replace the flat 96-strength supplementary treatment with a reviewed hierarchy of named
+branches, named tributaries, unnamed trunks, branches, and feeders. Every class retains
+its exact hash-pinned Arda Maps linework but receives bounded incision and material width
+below the engine-major threshold. Keep minor material growth nearly uniform because the
+source's stored line direction is not consistently headwater-to-mouth; downstream palette
+growth remains reserved for independently serialized major rivers.
+
+Promote Lefnui and Serni to independent indexed EU5 channels because their exact source
+courses reach source water with only sub-control-pixel coastline contact fixes. Do not
+force Sirith or the three-part Lhûn Y into independent source-to-water lines: that would
+require either a fabricated long extension or a custom junction layout already rejected
+by installed build 24187685. Preserve Lhûn as one strong northern trunk plus its southern
+source branch, Sirith as a strong named physical channel, and all eleven Ethir Anduin
+parts as physical drainage. Remove the duplicate source copies of Harnen geometry 8,
+Morgulduin geometry 14, and lower-Anduin geometry 71 parts 11–14.
+
+The resulting contract is 102 non-duplicated controls, 76 terrain-only controls, 26
+non-terrain controls, and 12 independent indexed channels. Validation binds every
+river's source, the hierarchy balance, major widths, basin minima, independent-channel
+count, exact Ethir coverage, and absence of duplicate source segments.

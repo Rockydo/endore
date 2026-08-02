@@ -81,6 +81,18 @@ tuning.
   `docs/m2/VISUAL_REOPEN_GATE.md`; static agreement never substitutes for
   renderer evidence.
 
+- River conformance binds 102 non-duplicated Arda Maps controls: 26 reviewed
+  trunks/tributaries and 76 parser-safe physical-drainage controls. Twelve
+  complete source-to-water channels are independently serializable in EU5's
+  installed indexed raster; the remaining tributaries still own exact valley
+  incision and wet-bank material without invented unsupported junctions.
+  Lefnui and Serni are independent indexed channels. Sirith, the branched Lhûn
+  system, and the complete Ethir Anduin distributaries remain visible physical
+  drainage where build 24187685 cannot serialize their true receiving graph.
+  Validation rejects duplicated Harnen, Morgulduin, or lower-Anduin source
+  parts and binds the hierarchy, provenance, widths, incision, material
+  response, and basin-level coverage independently.
+
 ## Reference quarantine
 
 Downloaded TopoJSON, GeoJSON, scripts, tiles, screenshots, film frames, and

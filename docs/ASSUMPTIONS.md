@@ -304,3 +304,19 @@ about Middle-earth.
   heartland. Its non-anchor locations therefore remain `wild_ithilien`; the occupied
   refuges, crossings, towers, and gateworks at Henneth Annûn, Cair Andros, Cirith Ungol,
   Durthang, Narchost, and Carchost stay explicitly pinned to their attested controllers.
+
+## Source-drainage hierarchy interpretation
+
+- † Arda Maps' `line_river` storage order is not a reliable flow-direction claim for
+  every minor part. A terrain-only channel may therefore use nearly uniform wet-bank
+  material width while retaining its exact path; this avoids depicting a tributary as
+  widening toward its headwaters. Independently indexed major rivers keep EU5's proven
+  downstream 4→5→11→15 palette progression.
+- † Lhûn's three source parts encode a Y-shaped system: parts 1 and 0 form the northern
+  main stem and part 2 is the southern branch. Preserving that physical Y is more faithful
+  than inventing an independent coastward parser channel. Sirith likewise remains a
+  physical receiving-channel control until the installed engine accepts a source-faithful
+  junction graph. Neither choice means the watercourse is absent from the terrain.
+- † A sub-control-pixel endpoint extension for Lefnui or Serni is a raster contact
+  correction at the already authored coastline, not new cartographic linework. Longer
+  manually drawn extensions are forbidden.

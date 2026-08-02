@@ -100760,7 +100760,8 @@
           0.552965,
           0.508585
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river 70 and 71 main stem"
     },
     {
       "key": "anduin",
@@ -100935,7 +100936,8 @@
           0.535188,
           0.716594
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river 71 lower main stem"
     },
     {
       "key": "langwell",
@@ -100995,6 +100997,7 @@
           0.117449
         ]
       ],
+      "source": "Arda Maps line_river named Langwell",
       "joins": "upper_anduin"
     },
     {
@@ -101035,6 +101038,7 @@
           0.098531
         ]
       ],
+      "source": "Arda Maps line_river named Greylin",
       "joins": "upper_anduin"
     },
     {
@@ -101103,6 +101107,7 @@
           0.276128
         ]
       ],
+      "source": "Arda Maps line_river named GladdenRiver",
       "joins": "upper_anduin"
     },
     {
@@ -101167,6 +101172,7 @@
           0.363774
         ]
       ],
+      "source": "Arda Maps line_river named Celebrant",
       "joins": "upper_anduin"
     },
     {
@@ -101279,6 +101285,7 @@
           0.419363
         ]
       ],
+      "source": "Arda Maps line_river named Limlight",
       "joins": "upper_anduin"
     },
     {
@@ -101499,6 +101506,7 @@
           0.56653
         ]
       ],
+      "source": "Arda Maps line_river named Entwash",
       "joins": "upper_anduin"
     },
     {
@@ -101595,6 +101603,7 @@
           0.526788
         ]
       ],
+      "source": "Arda Maps line_river named Snowbourn",
       "joins": "entwash"
     },
     {
@@ -101910,7 +101919,8 @@
           0.3296,
           0.348702
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river named Brandywine"
     },
     {
       "key": "mitheithel",
@@ -102090,6 +102100,7 @@
           0.33524
         ]
       ],
+      "source": "Arda Maps line_river named Hoarwell",
       "joins": "greyflood"
     },
     {
@@ -102202,6 +102213,7 @@
           0.285324
         ]
       ],
+      "source": "Arda Maps line_river named Bruinen",
       "joins": "mitheithel"
     },
     {
@@ -102289,7 +102301,8 @@
           0.373187,
           0.440952
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river named Gwathlo"
     },
     {
       "key": "glanduin",
@@ -102433,6 +102446,7 @@
           0.33524
         ]
       ],
+      "source": "Arda Maps line_river named Glanduin",
       "joins": "greyflood"
     },
     {
@@ -102668,7 +102682,8 @@
           0.380165,
           0.521377
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river named Isen"
     },
     {
       "key": "morthond",
@@ -102792,6 +102807,7 @@
           0.645841
         ]
       ],
+      "source": "Arda Maps line_river named Morthond",
       "joins": "ringlo"
     },
     {
@@ -102891,7 +102907,8 @@
           0.496599,
           0.648795
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river named Ringlo"
     },
     {
       "key": "gilrain",
@@ -102962,7 +102979,8 @@
           0.544243,
           0.690624
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river named Gilrain"
     },
     {
       "key": "celduin",
@@ -103173,7 +103191,8 @@
           0.721018,
           0.323087
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river named RiverRunning"
     },
     {
       "key": "forest_river",
@@ -103360,7 +103379,8 @@
           0.601883,
           0.164878
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river named ForestRiver"
     },
     {
       "key": "carnen",
@@ -103488,6 +103508,7 @@
           0.26586
         ]
       ],
+      "source": "Arda Maps line_river named Carnen",
       "joins": "celduin"
     },
     {
@@ -103624,7 +103645,546 @@
           0.687878
         ]
       ],
+      "source": "Arda Maps line_river named Poros",
       "joins": "anduin"
+    },
+    {
+      "key": "lefnui",
+      "width": 0.0028,
+      "wander": 0.00035,
+      "points": [
+        [
+          0.471773,
+          0.552933
+        ],
+        [
+          0.467463,
+          0.557319
+        ],
+        [
+          0.464608,
+          0.558146
+        ],
+        [
+          0.463624,
+          0.55924
+        ],
+        [
+          0.462386,
+          0.55988
+        ],
+        [
+          0.460024,
+          0.560236
+        ],
+        [
+          0.457799,
+          0.561663
+        ],
+        [
+          0.45506,
+          0.56172
+        ],
+        [
+          0.452707,
+          0.562843
+        ],
+        [
+          0.451078,
+          0.561956
+        ],
+        [
+          0.449834,
+          0.561982
+        ],
+        [
+          0.447978,
+          0.563095
+        ],
+        [
+          0.445783,
+          0.567284
+        ],
+        [
+          0.442845,
+          0.571949
+        ],
+        [
+          0.435938,
+          0.577924
+        ],
+        [
+          0.43471,
+          0.579484
+        ],
+        [
+          0.433225,
+          0.580282
+        ],
+        [
+          0.430274,
+          0.583719
+        ],
+        [
+          0.427182,
+          0.585625
+        ],
+        [
+          0.425593,
+          0.588267
+        ],
+        [
+          0.424117,
+          0.589986
+        ],
+        [
+          0.42279,
+          0.59385
+        ],
+        [
+          0.422828,
+          0.597379
+        ],
+        [
+          0.422226,
+          0.599233
+        ],
+        [
+          0.422648,
+          0.603675
+        ],
+        [
+          0.422288,
+          0.60491
+        ],
+        [
+          0.421046,
+          0.605243
+        ],
+        [
+          0.419916,
+          0.604345
+        ],
+        [
+          0.41903,
+          0.602983
+        ],
+        [
+          0.418231,
+          0.598242
+        ],
+        [
+          0.416948,
+          0.594739
+        ],
+        [
+          0.41595,
+          0.594606
+        ],
+        [
+          0.414574,
+          0.59402
+        ],
+        [
+          0.413819,
+          0.593269
+        ],
+        [
+          0.412196,
+          0.592842
+        ],
+        [
+          0.410086,
+          0.5935
+        ],
+        [
+          0.409356,
+          0.59505
+        ],
+        [
+          0.408072,
+          0.602903
+        ],
+        [
+          0.406254,
+          0.607391
+        ],
+        [
+          0.406047,
+          0.611232
+        ],
+        [
+          0.40522,
+          0.615393
+        ],
+        [
+          0.40486,
+          0.616628
+        ],
+        [
+          0.403028,
+          0.619889
+        ],
+        [
+          0.402189,
+          0.622822
+        ],
+        [
+          0.40115,
+          0.630364
+        ],
+        [
+          0.401307,
+          0.633276
+        ],
+        [
+          0.40246,
+          0.636322
+        ],
+        [
+          0.403247,
+          0.639989
+        ],
+        [
+          0.404252,
+          0.640735
+        ],
+        [
+          0.405249,
+          0.640868
+        ],
+        [
+          0.406877,
+          0.641755
+        ],
+        [
+          0.407501,
+          0.641895
+        ],
+        [
+          0.408492,
+          0.641414
+        ],
+        [
+          0.40974,
+          0.641695
+        ],
+        [
+          0.410512,
+          0.643981
+        ],
+        [
+          0.410645,
+          0.644746
+        ],
+        [
+          0.408616,
+          0.652768
+        ],
+        [
+          0.408402,
+          0.655996
+        ],
+        [
+          0.40867,
+          0.657678
+        ]
+      ],
+      "source": "Arda Maps line_river named Lefnui"
+    },
+    {
+      "key": "serni",
+      "width": 0.0024,
+      "wander": 0.00035,
+      "points": [
+        [
+          0.562824,
+          0.624861
+        ],
+        [
+          0.561629,
+          0.62949
+        ],
+        [
+          0.561291,
+          0.63272
+        ],
+        [
+          0.560682,
+          0.63396
+        ],
+        [
+          0.560218,
+          0.637039
+        ],
+        [
+          0.559496,
+          0.639356
+        ],
+        [
+          0.55928,
+          0.64243
+        ],
+        [
+          0.558111,
+          0.64936
+        ],
+        [
+          0.558017,
+          0.652125
+        ],
+        [
+          0.557426,
+          0.655053
+        ],
+        [
+          0.557342,
+          0.658738
+        ],
+        [
+          0.557749,
+          0.661799
+        ],
+        [
+          0.557161,
+          0.665034
+        ],
+        [
+          0.556843,
+          0.670105
+        ],
+        [
+          0.557013,
+          0.674245
+        ],
+        [
+          0.556659,
+          0.676094
+        ],
+        [
+          0.55508,
+          0.679656
+        ],
+        [
+          0.554723,
+          0.681198
+        ],
+        [
+          0.553746,
+          0.682907
+        ],
+        [
+          0.552664,
+          0.686459
+        ],
+        [
+          0.550098,
+          0.690963
+        ],
+        [
+          0.548256,
+          0.693303
+        ],
+        [
+          0.547021,
+          0.694249
+        ],
+        [
+          0.544665,
+          0.695065
+        ],
+        [
+          0.543046,
+          0.695099
+        ],
+        [
+          0.540569,
+          0.696225
+        ]
+      ],
+      "source": "Arda Maps line_river named Serni"
+    },
+    {
+      "key": "lhun",
+      "width": 0.0031,
+      "wander": 0.00035,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "named_trunk",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.304246,
+          0.044596
+        ],
+        [
+          0.304879,
+          0.045504
+        ],
+        [
+          0.305144,
+          0.047033
+        ],
+        [
+          0.304697,
+          0.051646
+        ],
+        [
+          0.303267,
+          0.057508
+        ],
+        [
+          0.303292,
+          0.059809
+        ],
+        [
+          0.304065,
+          0.062249
+        ],
+        [
+          0.305938,
+          0.06267
+        ],
+        [
+          0.307919,
+          0.061708
+        ],
+        [
+          0.308666,
+          0.061693
+        ],
+        [
+          0.313416,
+          0.063436
+        ],
+        [
+          0.316429,
+          0.065675
+        ],
+        [
+          0.316938,
+          0.066739
+        ],
+        [
+          0.317345,
+          0.0698
+        ],
+        [
+          0.320406,
+          0.076489
+        ],
+        [
+          0.322854,
+          0.083958
+        ],
+        [
+          0.32254,
+          0.089489
+        ],
+        [
+          0.320493,
+          0.095824
+        ],
+        [
+          0.320156,
+          0.099207
+        ],
+        [
+          0.318605,
+          0.105378
+        ],
+        [
+          0.316912,
+          0.110017
+        ],
+        [
+          0.316589,
+          0.114628
+        ],
+        [
+          0.314068,
+          0.111764
+        ],
+        [
+          0.313681,
+          0.110545
+        ],
+        [
+          0.313178,
+          0.110095
+        ],
+        [
+          0.309928,
+          0.108934
+        ],
+        [
+          0.307442,
+          0.109293
+        ],
+        [
+          0.305686,
+          0.108102
+        ],
+        [
+          0.304317,
+          0.10813
+        ],
+        [
+          0.303455,
+          0.109069
+        ],
+        [
+          0.302586,
+          0.10924
+        ],
+        [
+          0.301953,
+          0.108332
+        ],
+        [
+          0.301079,
+          0.108044
+        ],
+        [
+          0.299568,
+          0.10654
+        ],
+        [
+          0.297082,
+          0.106899
+        ],
+        [
+          0.29634,
+          0.107375
+        ],
+        [
+          0.294521,
+          0.111863
+        ],
+        [
+          0.29329,
+          0.113116
+        ],
+        [
+          0.291699,
+          0.115605
+        ],
+        [
+          0.290708,
+          0.116086
+        ],
+        [
+          0.289076,
+          0.114892
+        ],
+        [
+          0.286711,
+          0.114941
+        ]
+      ],
+      "source": "Arda Maps line_river 84 parts 1+0"
     },
     {
       "key": "morgulduin",
@@ -103656,7 +104216,8 @@
           0.594108,
           0.605029
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river 14"
     },
     {
       "key": "harnen",
@@ -103867,15 +104428,20 @@
           0.516,
           0.858
         ]
-      ]
+      ],
+      "source": "Arda Maps line_river 8 plus reconciled coastward reach"
     },
     {
       "key": "source_unnamed_01_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.636297,
@@ -103919,10 +104485,14 @@
     {
       "key": "source_unnamed_02_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00155,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_trunk",
+      "incision_strength": 138,
+      "material_scale": 0.82,
+      "material_growth": 0.2,
       "points": [
         [
           0.669304,
@@ -104070,10 +104640,14 @@
     {
       "key": "source_unnamed_04_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.524604,
@@ -104125,10 +104699,14 @@
     {
       "key": "source_unnamed_05_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.528908,
@@ -104176,10 +104754,14 @@
     {
       "key": "source_enchantedriver_06_00",
       "label": "EnchantedRiver",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.57928,
@@ -104277,271 +104859,16 @@
       "source": "Arda Maps line_river 6 part 0"
     },
     {
-      "key": "source_unnamed_08_00",
-      "label": null,
-      "width": 0.00115,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.546302,
-          0.833765
-        ],
-        [
-          0.551585,
-          0.83872
-        ],
-        [
-          0.553965,
-          0.840052
-        ],
-        [
-          0.556342,
-          0.841077
-        ],
-        [
-          0.559578,
-          0.84101
-        ],
-        [
-          0.562055,
-          0.839731
-        ],
-        [
-          0.562795,
-          0.839101
-        ],
-        [
-          0.570306,
-          0.831426
-        ],
-        [
-          0.571912,
-          0.830318
-        ],
-        [
-          0.573033,
-          0.830295
-        ],
-        [
-          0.574668,
-          0.831796
-        ],
-        [
-          0.575913,
-          0.83177
-        ],
-        [
-          0.576777,
-          0.831138
-        ],
-        [
-          0.577151,
-          0.83113
-        ],
-        [
-          0.578014,
-          0.830345
-        ],
-        [
-          0.581603,
-          0.828429
-        ],
-        [
-          0.584335,
-          0.827758
-        ],
-        [
-          0.58558,
-          0.827733
-        ],
-        [
-          0.587955,
-          0.828604
-        ],
-        [
-          0.591106,
-          0.832069
-        ],
-        [
-          0.592863,
-          0.833413
-        ],
-        [
-          0.59612,
-          0.835187
-        ],
-        [
-          0.598256,
-          0.836985
-        ],
-        [
-          0.600009,
-          0.837869
-        ],
-        [
-          0.602261,
-          0.838897
-        ],
-        [
-          0.604633,
-          0.839461
-        ],
-        [
-          0.60538,
-          0.839446
-        ],
-        [
-          0.607985,
-          0.838624
-        ],
-        [
-          0.611069,
-          0.835952
-        ],
-        [
-          0.613888,
-          0.831903
-        ],
-        [
-          0.615241,
-          0.83034
-        ],
-        [
-          0.619302,
-          0.825959
-        ],
-        [
-          0.621398,
-          0.824074
-        ],
-        [
-          0.622624,
-          0.82236
-        ],
-        [
-          0.62311,
-          0.821276
-        ],
-        [
-          0.624416,
-          0.815417
-        ],
-        [
-          0.624753,
-          0.812034
-        ],
-        [
-          0.624418,
-          0.804214
-        ],
-        [
-          0.624986,
-          0.799138
-        ],
-        [
-          0.625593,
-          0.797744
-        ],
-        [
-          0.627316,
-          0.795867
-        ],
-        [
-          0.628646,
-          0.792309
-        ],
-        [
-          0.629508,
-          0.791371
-        ],
-        [
-          0.6321,
-          0.789322
-        ],
-        [
-          0.634058,
-          0.786212
-        ],
-        [
-          0.634783,
-          0.784202
-        ],
-        [
-          0.635732,
-          0.779885
-        ],
-        [
-          0.636414,
-          0.773886
-        ],
-        [
-          0.637354,
-          0.768802
-        ],
-        [
-          0.638073,
-          0.766178
-        ],
-        [
-          0.641631,
-          0.761347
-        ],
-        [
-          0.643974,
-          0.759303
-        ],
-        [
-          0.645194,
-          0.756976
-        ],
-        [
-          0.646303,
-          0.755878
-        ],
-        [
-          0.649393,
-          0.753819
-        ],
-        [
-          0.653368,
-          0.752969
-        ],
-        [
-          0.654234,
-          0.752491
-        ],
-        [
-          0.65522,
-          0.75155
-        ],
-        [
-          0.655711,
-          0.750926
-        ],
-        [
-          0.656433,
-          0.748609
-        ],
-        [
-          0.657047,
-          0.747829
-        ],
-        [
-          0.657525,
-          0.745977
-        ]
-      ],
-      "source": "Arda Maps line_river 8 part 0"
-    },
-    {
       "key": "source_unnamed_09_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00155,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_trunk",
+      "incision_strength": 138,
+      "material_scale": 0.82,
+      "material_growth": 0.2,
       "points": [
         [
           0.706513,
@@ -104697,10 +105024,14 @@
     {
       "key": "source_unnamed_10_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00155,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_trunk",
+      "incision_strength": 138,
+      "material_scale": 0.82,
+      "material_growth": 0.2,
       "points": [
         [
           0.717048,
@@ -105000,10 +105331,14 @@
     {
       "key": "source_unnamed_11_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.70095,
@@ -105063,10 +105398,14 @@
     {
       "key": "source_unnamed_12_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.562565,
@@ -105110,10 +105449,14 @@
     {
       "key": "source_erui_13_00",
       "label": "Erui",
-      "width": 0.0017,
+      "width": 0.0021,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_branch",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
       "points": [
         [
           0.592567,
@@ -105175,55 +105518,16 @@
       "source": "Arda Maps line_river 13 part 0"
     },
     {
-      "key": "source_unnamed_14_00",
-      "label": null,
-      "width": 0.00115,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.594108,
-          0.605029
-        ],
-        [
-          0.595459,
-          0.603313
-        ],
-        [
-          0.598507,
-          0.597418
-        ],
-        [
-          0.599123,
-          0.596791
-        ],
-        [
-          0.599745,
-          0.596778
-        ],
-        [
-          0.600857,
-          0.595988
-        ],
-        [
-          0.602967,
-          0.59533
-        ],
-        [
-          0.603831,
-          0.594698
-        ]
-      ],
-      "source": "Arda Maps line_river 14 part 0"
-    },
-    {
       "key": "source_fenmark_15_00",
       "label": "Fenmark",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.53305,
@@ -105307,10 +105611,14 @@
     {
       "key": "source_mouthsofentwash_16_00",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.562347,
@@ -105334,10 +105642,14 @@
     {
       "key": "source_mouthsofentwash_17_00",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.551516,
@@ -105395,12 +105707,47 @@
       "source": "Arda Maps line_river 17 part 0"
     },
     {
-      "key": "source_nimrodelriver_22_00",
-      "label": "NimrodelRiver",
-      "width": 0.00115,
+      "key": "source_unnamed_18_00",
+      "label": null,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.478459,
+          0.446748
+        ],
+        [
+          0.478324,
+          0.44583
+        ],
+        [
+          0.477947,
+          0.445531
+        ],
+        [
+          0.4777,
+          0.44569
+        ]
+      ],
+      "source": "Arda Maps line_river 18 part 0"
+    },
+    {
+      "key": "source_nimrodelriver_22_00",
+      "label": "NimrodelRiver",
+      "width": 0.0016,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.493953,
@@ -105436,10 +105783,14 @@
     {
       "key": "source_unnamed_24_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.514806,
@@ -105479,10 +105830,14 @@
     {
       "key": "source_unnamed_27_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.361708,
@@ -105546,10 +105901,14 @@
     {
       "key": "source_unnamed_28_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.367408,
@@ -105617,10 +105976,14 @@
     {
       "key": "source_unnamed_29_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.367783,
@@ -105692,10 +106055,14 @@
     {
       "key": "source_unnamed_30_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.372863,
@@ -105727,10 +106094,14 @@
     {
       "key": "source_unnamed_31_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.380818,
@@ -105762,10 +106133,14 @@
     {
       "key": "source_unnamed_32_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00155,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_trunk",
+      "incision_strength": 138,
+      "material_scale": 0.82,
+      "material_growth": 0.2,
       "points": [
         [
           0.245968,
@@ -105877,10 +106252,14 @@
     {
       "key": "source_unnamed_33_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.321187,
@@ -105934,12 +106313,47 @@
       "source": "Arda Maps line_river 33 part 0"
     },
     {
-      "key": "source_unnamed_36_00",
+      "key": "source_unnamed_35_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.430632,
+          0.331106
+        ],
+        [
+          0.43163,
+          0.331239
+        ],
+        [
+          0.432249,
+          0.330919
+        ],
+        [
+          0.433244,
+          0.330898
+        ]
+      ],
+      "source": "Arda Maps line_river 35 part 0"
+    },
+    {
+      "key": "source_unnamed_36_00",
+      "label": null,
+      "width": 0.00125,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.429749,
@@ -105967,10 +106381,14 @@
     {
       "key": "source_unnamed_37_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.427219,
@@ -105996,12 +106414,47 @@
       "source": "Arda Maps line_river 37 part 0"
     },
     {
-      "key": "source_unnamed_39_00",
+      "key": "source_unnamed_38_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.426748,
+          0.328884
+        ],
+        [
+          0.427132,
+          0.329797
+        ],
+        [
+          0.429125,
+          0.329909
+        ],
+        [
+          0.429502,
+          0.330208
+        ]
+      ],
+      "source": "Arda Maps line_river 38 part 0"
+    },
+    {
+      "key": "source_unnamed_39_00",
+      "label": null,
+      "width": 0.00125,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.434136,
@@ -106025,10 +106478,14 @@
     {
       "key": "source_unnamed_40_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.427535,
@@ -106072,10 +106529,14 @@
     {
       "key": "source_unnamed_41_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.424805,
@@ -106101,12 +106562,74 @@
       "source": "Arda Maps line_river 41 part 0"
     },
     {
-      "key": "source_unnamed_44_00",
+      "key": "source_unnamed_42_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.440755,
+          0.334579
+        ],
+        [
+          0.441009,
+          0.335034
+        ],
+        [
+          0.442501,
+          0.33485
+        ]
+      ],
+      "source": "Arda Maps line_river 42 part 0"
+    },
+    {
+      "key": "source_unnamed_43_00",
+      "label": null,
+      "width": 0.00125,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.437145,
+          0.334654
+        ],
+        [
+          0.437648,
+          0.335104
+        ],
+        [
+          0.438519,
+          0.335086
+        ],
+        [
+          0.439133,
+          0.334306
+        ]
+      ],
+      "source": "Arda Maps line_river 43 part 0"
+    },
+    {
+      "key": "source_unnamed_44_00",
+      "label": null,
+      "width": 0.00125,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.430171,
@@ -106130,10 +106653,14 @@
     {
       "key": "source_unnamed_45_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.426564,
@@ -106165,10 +106692,14 @@
     {
       "key": "source_unnamed_46_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.485385,
@@ -106216,10 +106747,14 @@
     {
       "key": "source_adorn_48_00",
       "label": "Adorn",
-      "width": 0.0017,
+      "width": 0.0021,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_branch",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
       "points": [
         [
           0.423385,
@@ -106309,311 +106844,16 @@
       "source": "Arda Maps line_river 48 part 0"
     },
     {
-      "key": "source_lefnui_50_00",
-      "label": "Lefnui",
-      "width": 0.0017,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.40867,
-          0.657678
-        ],
-        [
-          0.408402,
-          0.655996
-        ],
-        [
-          0.408616,
-          0.652768
-        ],
-        [
-          0.410645,
-          0.644746
-        ],
-        [
-          0.410512,
-          0.643981
-        ],
-        [
-          0.40974,
-          0.641695
-        ],
-        [
-          0.408492,
-          0.641414
-        ],
-        [
-          0.407501,
-          0.641895
-        ],
-        [
-          0.406877,
-          0.641755
-        ],
-        [
-          0.405249,
-          0.640868
-        ],
-        [
-          0.404252,
-          0.640735
-        ],
-        [
-          0.403247,
-          0.639989
-        ],
-        [
-          0.40246,
-          0.636322
-        ],
-        [
-          0.401307,
-          0.633276
-        ],
-        [
-          0.40115,
-          0.630364
-        ],
-        [
-          0.401623,
-          0.628052
-        ],
-        [
-          0.402189,
-          0.622822
-        ],
-        [
-          0.403028,
-          0.619889
-        ],
-        [
-          0.40486,
-          0.616628
-        ],
-        [
-          0.40522,
-          0.615393
-        ],
-        [
-          0.406047,
-          0.611232
-        ],
-        [
-          0.406254,
-          0.607391
-        ],
-        [
-          0.408072,
-          0.602903
-        ],
-        [
-          0.408528,
-          0.599057
-        ],
-        [
-          0.409356,
-          0.59505
-        ],
-        [
-          0.410086,
-          0.5935
-        ],
-        [
-          0.412196,
-          0.592842
-        ],
-        [
-          0.413819,
-          0.593269
-        ],
-        [
-          0.414574,
-          0.59402
-        ],
-        [
-          0.41595,
-          0.594606
-        ],
-        [
-          0.416948,
-          0.594739
-        ],
-        [
-          0.417841,
-          0.596715
-        ],
-        [
-          0.418231,
-          0.598242
-        ],
-        [
-          0.418641,
-          0.601609
-        ],
-        [
-          0.41903,
-          0.602983
-        ],
-        [
-          0.419916,
-          0.604345
-        ],
-        [
-          0.421046,
-          0.605243
-        ],
-        [
-          0.421793,
-          0.605227
-        ],
-        [
-          0.422288,
-          0.60491
-        ],
-        [
-          0.422648,
-          0.603675
-        ],
-        [
-          0.422244,
-          0.600921
-        ],
-        [
-          0.422226,
-          0.599233
-        ],
-        [
-          0.422828,
-          0.597379
-        ],
-        [
-          0.42279,
-          0.59385
-        ],
-        [
-          0.424117,
-          0.589986
-        ],
-        [
-          0.425593,
-          0.588267
-        ],
-        [
-          0.427182,
-          0.585625
-        ],
-        [
-          0.430274,
-          0.583719
-        ],
-        [
-          0.433225,
-          0.580282
-        ],
-        [
-          0.43471,
-          0.579484
-        ],
-        [
-          0.435938,
-          0.577924
-        ],
-        [
-          0.438778,
-          0.575716
-        ],
-        [
-          0.4405,
-          0.573839
-        ],
-        [
-          0.442845,
-          0.571949
-        ],
-        [
-          0.443582,
-          0.571013
-        ],
-        [
-          0.445167,
-          0.56791
-        ],
-        [
-          0.445783,
-          0.567284
-        ],
-        [
-          0.447978,
-          0.563095
-        ],
-        [
-          0.449093,
-          0.562611
-        ],
-        [
-          0.449834,
-          0.561982
-        ],
-        [
-          0.451078,
-          0.561956
-        ],
-        [
-          0.452707,
-          0.562843
-        ],
-        [
-          0.45506,
-          0.56172
-        ],
-        [
-          0.457799,
-          0.561663
-        ],
-        [
-          0.460024,
-          0.560236
-        ],
-        [
-          0.462386,
-          0.55988
-        ],
-        [
-          0.463624,
-          0.55924
-        ],
-        [
-          0.464608,
-          0.558146
-        ],
-        [
-          0.467463,
-          0.557319
-        ],
-        [
-          0.46882,
-          0.556217
-        ],
-        [
-          0.470047,
-          0.554503
-        ],
-        [
-          0.471773,
-          0.552933
-        ]
-      ],
-      "source": "Arda Maps line_river 50 part 0"
-    },
-    {
       "key": "source_ciril_51_00",
       "label": "Ciril",
-      "width": 0.0017,
+      "width": 0.0021,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_branch",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
       "points": [
         [
           0.51935,
@@ -106741,10 +106981,14 @@
     {
       "key": "source_unnamed_53_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.534081,
@@ -106792,10 +107036,14 @@
     {
       "key": "source_unnamed_55_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.545377,
@@ -106831,10 +107079,14 @@
     {
       "key": "source_unnamed_56_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.543149,
@@ -106852,151 +107104,16 @@
       "source": "Arda Maps line_river 56 part 0"
     },
     {
-      "key": "source_serni_58_00",
-      "label": "Serni",
-      "width": 0.0017,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.540569,
-          0.696225
-        ],
-        [
-          0.543046,
-          0.695099
-        ],
-        [
-          0.544665,
-          0.695065
-        ],
-        [
-          0.547021,
-          0.694249
-        ],
-        [
-          0.548256,
-          0.693303
-        ],
-        [
-          0.550098,
-          0.690963
-        ],
-        [
-          0.551072,
-          0.688947
-        ],
-        [
-          0.552664,
-          0.686459
-        ],
-        [
-          0.55315,
-          0.685374
-        ],
-        [
-          0.553746,
-          0.682907
-        ],
-        [
-          0.554723,
-          0.681198
-        ],
-        [
-          0.55508,
-          0.679656
-        ],
-        [
-          0.556659,
-          0.676094
-        ],
-        [
-          0.557013,
-          0.674245
-        ],
-        [
-          0.556843,
-          0.670105
-        ],
-        [
-          0.557188,
-          0.667488
-        ],
-        [
-          0.557161,
-          0.665034
-        ],
-        [
-          0.557749,
-          0.661799
-        ],
-        [
-          0.557342,
-          0.658738
-        ],
-        [
-          0.557562,
-          0.656124
-        ],
-        [
-          0.557426,
-          0.655053
-        ],
-        [
-          0.558017,
-          0.652125
-        ],
-        [
-          0.558111,
-          0.64936
-        ],
-        [
-          0.55928,
-          0.64243
-        ],
-        [
-          0.559496,
-          0.639356
-        ],
-        [
-          0.560218,
-          0.637039
-        ],
-        [
-          0.560324,
-          0.635349
-        ],
-        [
-          0.560682,
-          0.63396
-        ],
-        [
-          0.561291,
-          0.63272
-        ],
-        [
-          0.561643,
-          0.630718
-        ],
-        [
-          0.561629,
-          0.62949
-        ],
-        [
-          0.562824,
-          0.624861
-        ]
-      ],
-      "source": "Arda Maps line_river 58 part 0"
-    },
-    {
       "key": "source_shirebourn_59_00",
       "label": "Shirebourn",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.379537,
@@ -107068,10 +107185,14 @@
     {
       "key": "source_thistlebrook_60_00",
       "label": "ThistleBrook",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.383727,
@@ -107151,10 +107272,14 @@
     {
       "key": "source_stockbrook_61_00",
       "label": "Stockbrook",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.38199,
@@ -107226,10 +107351,14 @@
     {
       "key": "source_unnamed_62_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.606464,
@@ -107285,10 +107414,14 @@
     {
       "key": "source_unnamed_65_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.4995,
@@ -107316,10 +107449,14 @@
     {
       "key": "source_unnamed_67_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.5915,
@@ -107347,10 +107484,14 @@
     {
       "key": "source_withywindle_68_00",
       "label": "Withywindle",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.383342,
@@ -107406,10 +107547,14 @@
     {
       "key": "source_unnamed_71_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.0014,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_branch",
+      "incision_strength": 124,
+      "material_scale": 0.74,
+      "material_growth": 0.2,
       "points": [
         [
           0.535188,
@@ -107437,10 +107582,14 @@
     {
       "key": "source_unnamed_71_01",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.535582,
@@ -107476,10 +107625,14 @@
     {
       "key": "source_unnamed_71_02",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.536848,
@@ -107511,10 +107664,14 @@
     {
       "key": "source_unnamed_71_03",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.539492,
@@ -107534,10 +107691,14 @@
     {
       "key": "source_unnamed_71_04",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.541633,
@@ -107561,10 +107722,14 @@
     {
       "key": "source_unnamed_71_05",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.543406,
@@ -107588,10 +107753,14 @@
     {
       "key": "source_unnamed_71_06",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.545572,
@@ -107605,264 +107774,108 @@
       "source": "Arda Maps line_river 71 part 6"
     },
     {
-      "key": "source_unnamed_71_11",
+      "key": "source_unnamed_71_07",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
+        [
+          0.547382,
+          0.71588
+        ],
+        [
+          0.54849,
+          0.714783
+        ]
+      ],
+      "source": "Arda Maps line_river 71 part 7"
+    },
+    {
+      "key": "source_unnamed_71_08",
+      "label": null,
+      "width": 0.00125,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.54849,
+          0.714783
+        ],
+        [
+          0.548985,
+          0.714466
+        ]
+      ],
+      "source": "Arda Maps line_river 71 part 8"
+    },
+    {
+      "key": "source_unnamed_71_09",
+      "label": null,
+      "width": 0.00125,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.54849,
+          0.714783
+        ],
+        [
+          0.548985,
+          0.714466
+        ]
+      ],
+      "source": "Arda Maps line_river 71 part 9"
+    },
+    {
+      "key": "source_unnamed_71_10",
+      "label": null,
+      "width": 0.00125,
+      "wander": 0.0,
+      "engine_raster": false,
+      "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
+      "points": [
+        [
+          0.548985,
+          0.714466
+        ],
         [
           0.549727,
           0.71399
-        ],
-        [
-          0.550718,
-          0.713509
-        ],
-        [
-          0.556885,
-          0.708163
-        ],
-        [
-          0.560836,
-          0.705166
-        ],
-        [
-          0.563302,
-          0.702966
-        ],
-        [
-          0.565641,
-          0.700462
-        ],
-        [
-          0.570178,
-          0.694076
-        ],
-        [
-          0.571767,
-          0.691434
-        ],
-        [
-          0.573487,
-          0.68925
-        ],
-        [
-          0.574474,
-          0.688462
-        ],
-        [
-          0.577169,
-          0.684416
-        ],
-        [
-          0.580857,
-          0.680042
-        ],
-        [
-          0.58674,
-          0.671479
-        ],
-        [
-          0.589791,
-          0.665891
-        ],
-        [
-          0.59281,
-          0.657235
-        ],
-        [
-          0.593639,
-          0.653381
-        ],
-        [
-          0.593971,
-          0.649537
-        ],
-        [
-          0.593909,
-          0.64386
-        ],
-        [
-          0.592285,
-          0.631923
-        ],
-        [
-          0.591254,
-          0.628722
-        ],
-        [
-          0.590209,
-          0.624293
-        ],
-        [
-          0.589411,
-          0.619552
-        ],
-        [
-          0.589867,
-          0.615706
-        ],
-        [
-          0.59342,
-          0.610415
-        ],
-        [
-          0.594017,
-          0.6081
-        ],
-        [
-          0.593922,
-          0.599355
-        ],
-        [
-          0.591892,
-          0.58451
         ]
       ],
-      "source": "Arda Maps line_river 71 part 11"
-    },
-    {
-      "key": "source_unnamed_71_12",
-      "label": null,
-      "width": 0.00115,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.588062,
-          0.575842
-        ],
-        [
-          0.585536,
-          0.572518
-        ],
-        [
-          0.583147,
-          0.570419
-        ],
-        [
-          0.579642,
-          0.56865
-        ],
-        [
-          0.57602,
-          0.567651
-        ],
-        [
-          0.573152,
-          0.56725
-        ],
-        [
-          0.570528,
-          0.566384
-        ],
-        [
-          0.566495,
-          0.561864
-        ],
-        [
-          0.564587,
-          0.55822
-        ],
-        [
-          0.563664,
-          0.553482
-        ],
-        [
-          0.56315,
-          0.551958
-        ],
-        [
-          0.560867,
-          0.548168
-        ],
-        [
-          0.560364,
-          0.547719
-        ],
-        [
-          0.558319,
-          0.54285
-        ],
-        [
-          0.557406,
-          0.539032
-        ],
-        [
-          0.556864,
-          0.535053
-        ],
-        [
-          0.555701,
-          0.531087
-        ],
-        [
-          0.554236,
-          0.52237
-        ]
-      ],
-      "source": "Arda Maps line_river 71 part 12"
-    },
-    {
-      "key": "source_unnamed_71_13",
-      "label": null,
-      "width": 0.00115,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.588062,
-          0.575842
-        ],
-        [
-          0.589245,
-          0.581496
-        ],
-        [
-          0.589626,
-          0.582255
-        ],
-        [
-          0.591892,
-          0.58451
-        ]
-      ],
-      "source": "Arda Maps line_river 71 part 13"
-    },
-    {
-      "key": "source_unnamed_71_14",
-      "label": null,
-      "width": 0.00115,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.591892,
-          0.58451
-        ],
-        [
-          0.590602,
-          0.580394
-        ],
-        [
-          0.588062,
-          0.575842
-        ]
-      ],
-      "source": "Arda Maps line_river 71 part 14"
+      "source": "Arda Maps line_river 71 part 10"
     },
     {
       "key": "source_unnamed_72_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.410978,
@@ -107902,10 +107915,14 @@
     {
       "key": "source_unnamed_73_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.603702,
@@ -107945,10 +107962,14 @@
     {
       "key": "source_mouthsofentwash_74_00",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.538091,
@@ -107980,10 +108001,14 @@
     {
       "key": "source_mouthsofentwash_74_01",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.542426,
@@ -108003,10 +108028,14 @@
     {
       "key": "source_mouthsofentwash_74_02",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.542426,
@@ -108098,10 +108127,14 @@
     {
       "key": "source_mouthsofentwash_74_03",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.545158,
@@ -108133,10 +108166,14 @@
     {
       "key": "source_mouthsofentwash_74_04",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.545158,
@@ -108164,10 +108201,14 @@
     {
       "key": "source_mouthsofentwash_74_05",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.550093,
@@ -108187,10 +108228,14 @@
     {
       "key": "source_mouthsofentwash_74_06",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.550093,
@@ -108210,10 +108255,14 @@
     {
       "key": "source_mouthsofentwash_74_07",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.551383,
@@ -108257,10 +108306,14 @@
     {
       "key": "source_mouthsofentwash_74_08",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.551383,
@@ -108308,10 +108361,14 @@
     {
       "key": "source_mouthsofentwash_74_09",
       "label": "MouthsOfEntwash",
-      "width": 0.00115,
+      "width": 0.0016,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_tributary",
+      "incision_strength": 150,
+      "material_scale": 0.86,
+      "material_growth": 0.2,
       "points": [
         [
           0.551574,
@@ -108347,10 +108404,14 @@
     {
       "key": "source_sirith_75_00",
       "label": "Sirith",
-      "width": 0.0017,
+      "width": 0.0021,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_branch",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
       "points": [
         [
           0.572504,
@@ -108442,10 +108503,14 @@
     {
       "key": "source_celos_76_00",
       "label": "Celos",
-      "width": 0.0017,
+      "width": 0.0021,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_branch",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
       "points": [
         [
           0.567529,
@@ -108489,10 +108554,14 @@
     {
       "key": "source_unnamed_78_00",
       "label": null,
-      "width": 0.00115,
+      "width": 0.00125,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "unnamed_feeder",
+      "incision_strength": 108,
+      "material_scale": 0.68,
+      "material_growth": 0.2,
       "points": [
         [
           0.523505,
@@ -108516,10 +108585,14 @@
     {
       "key": "source_sirannon_82_00",
       "label": "Sirannon",
-      "width": 0.0017,
+      "width": 0.0021,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_branch",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
       "points": [
         [
           0.455902,
@@ -108589,254 +108662,16 @@
       "source": "Arda Maps line_river 82 part 0"
     },
     {
-      "key": "source_lhun_84_00",
-      "label": "Lhun",
-      "width": 0.0017,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.316589,
-          0.114628
-        ],
-        [
-          0.314068,
-          0.111764
-        ],
-        [
-          0.313681,
-          0.110545
-        ],
-        [
-          0.313178,
-          0.110095
-        ],
-        [
-          0.309928,
-          0.108934
-        ],
-        [
-          0.307442,
-          0.109293
-        ],
-        [
-          0.305686,
-          0.108102
-        ],
-        [
-          0.304317,
-          0.10813
-        ],
-        [
-          0.30395,
-          0.108751
-        ],
-        [
-          0.303455,
-          0.109069
-        ],
-        [
-          0.302586,
-          0.10924
-        ],
-        [
-          0.301953,
-          0.108332
-        ],
-        [
-          0.301079,
-          0.108044
-        ],
-        [
-          0.299568,
-          0.10654
-        ],
-        [
-          0.297082,
-          0.106899
-        ],
-        [
-          0.29634,
-          0.107375
-        ],
-        [
-          0.295729,
-          0.108462
-        ],
-        [
-          0.294521,
-          0.111863
-        ],
-        [
-          0.29329,
-          0.113116
-        ],
-        [
-          0.292681,
-          0.114357
-        ],
-        [
-          0.291699,
-          0.115605
-        ],
-        [
-          0.290708,
-          0.116086
-        ],
-        [
-          0.289076,
-          0.114892
-        ],
-        [
-          0.287332,
-          0.114774
-        ],
-        [
-          0.286711,
-          0.114941
-        ]
-      ],
-      "source": "Arda Maps line_river 84 part 0"
-    },
-    {
-      "key": "source_lhun_84_01",
-      "label": "Lhun",
-      "width": 0.0017,
-      "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
-      "points": [
-        [
-          0.316589,
-          0.114628
-        ],
-        [
-          0.316566,
-          0.11248
-        ],
-        [
-          0.316912,
-          0.110017
-        ],
-        [
-          0.318605,
-          0.105378
-        ],
-        [
-          0.319076,
-          0.102913
-        ],
-        [
-          0.320156,
-          0.099207
-        ],
-        [
-          0.320493,
-          0.095824
-        ],
-        [
-          0.322064,
-          0.091494
-        ],
-        [
-          0.32254,
-          0.089489
-        ],
-        [
-          0.322773,
-          0.08795
-        ],
-        [
-          0.322854,
-          0.083958
-        ],
-        [
-          0.321315,
-          0.079846
-        ],
-        [
-          0.321047,
-          0.078164
-        ],
-        [
-          0.320406,
-          0.076489
-        ],
-        [
-          0.317345,
-          0.0698
-        ],
-        [
-          0.316938,
-          0.066739
-        ],
-        [
-          0.316429,
-          0.065675
-        ],
-        [
-          0.315176,
-          0.064934
-        ],
-        [
-          0.313416,
-          0.063436
-        ],
-        [
-          0.308666,
-          0.061693
-        ],
-        [
-          0.307919,
-          0.061708
-        ],
-        [
-          0.305938,
-          0.06267
-        ],
-        [
-          0.305191,
-          0.062686
-        ],
-        [
-          0.304065,
-          0.062249
-        ],
-        [
-          0.303292,
-          0.059809
-        ],
-        [
-          0.303267,
-          0.057508
-        ],
-        [
-          0.304697,
-          0.051646
-        ],
-        [
-          0.305144,
-          0.047033
-        ],
-        [
-          0.304879,
-          0.045504
-        ],
-        [
-          0.304246,
-          0.044596
-        ]
-      ],
-      "source": "Arda Maps line_river 84 part 1"
-    },
-    {
       "key": "source_lhun_84_02",
       "label": "Lhun",
-      "width": 0.0017,
+      "width": 0.0021,
       "wander": 0.0,
       "engine_raster": false,
       "terrain_only": true,
+      "hydrology_class": "named_branch",
+      "incision_strength": 176,
+      "material_scale": 1.0,
+      "material_growth": 0.2,
       "points": [
         [
           0.3208,

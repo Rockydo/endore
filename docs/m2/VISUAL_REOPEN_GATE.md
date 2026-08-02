@@ -490,3 +490,16 @@ political renderer. Observer advanced nine days, full validation passed, and pai
 added zero error-log lines. Physical river/source-edge and remaining nine-theatre review
 stay open; future political additions require distinct TA 3018 evidence rather than a
 desire to fill neutral land.
+
+v73 is the focused source-drainage candidate. It replaces duplicated/flat supplementary
+marks with 102 non-duplicated, classed Arda Maps controls and promotes only Lefnui and
+Serni where exact source courses can safely reach engine water. Sirith, Lhûn's true Y,
+and the complete Ethir remain strong physical drainage instead of fabricated independent
+parser lines. Full validation passed after one coherent regeneration. A fresh visual New
+Game reached HUD-proven Observer on fingerprint `c9b21485`; regional and close frames
+under `docs/screens/docs/screens/20260802_v73_river_hierarchy/` prove the broad Anduin at
+Caras Galadhon/Osgiliath, retained dense Lothlórien canopy, and multiple narrower
+Gondor/Lindon channels. Observer advanced nine days with no map/river diagnostic. Paired
+smoke initially lease-deferred behind Antiquitas, then passed at the next natural
+checkpoint in 201.5 seconds with exactly zero new mod lines. This clears the focused v73
+river checkpoint; the complete nine-theatre physical/source-edge review remains red.

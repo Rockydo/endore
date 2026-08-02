@@ -8,7 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
-  "projection_sha256": "5fca05e0298e9245f68710056846742800e0d02639e4162854e69f072ce70d0f",
+  "projection_sha256": "cd3b4568e521909b3da61efb7c13e75a2b3c3ffe6e9086d5e9968a5b00bde825",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -19,13 +19,13 @@
     "named_peaks": 18,
     "ridge_axes": 9,
     "passes": 10,
-    "river_valley_controls": 100,
+    "river_valley_controls": 102,
     "biome_zones": 21,
     "highland_source_vertices": 10805,
     "moor_source_vertices": 369,
     "forest_source_zones": 15,
     "forest_source_components": 57,
-    "river_control_vertices": 1863
+    "river_control_vertices": 1736
   },
   "drainage_theatres": {
     "northern_basins": {
@@ -38,9 +38,9 @@
       "controls": 28,
       "points": 527,
       "length": 1.569023,
-      "minimum_controls": 25,
-      "minimum_points": 500,
-      "minimum_length": 1.5
+      "minimum_controls": 27,
+      "minimum_points": 515,
+      "minimum_length": 1.54
     },
     "anduin_system": {
       "bbox": [
@@ -50,11 +50,11 @@
         0.62
       ],
       "controls": 63,
-      "points": 903,
-      "length": 2.694059,
-      "minimum_controls": 58,
-      "minimum_points": 850,
-      "minimum_length": 2.55
+      "points": 874,
+      "length": 2.567027,
+      "minimum_controls": 62,
+      "minimum_points": 860,
+      "minimum_length": 2.54
     },
     "white_mountains": {
       "bbox": [
@@ -63,12 +63,12 @@
         0.63,
         0.68
       ],
-      "controls": 40,
-      "points": 632,
-      "length": 1.829746,
-      "minimum_controls": 36,
-      "minimum_points": 590,
-      "minimum_length": 1.72
+      "controls": 36,
+      "points": 571,
+      "length": 1.627718,
+      "minimum_controls": 35,
+      "minimum_points": 560,
+      "minimum_length": 1.6
     },
     "mordor_gondor": {
       "bbox": [
@@ -77,12 +77,12 @@
         0.8,
         0.75
       ],
-      "controls": 49,
-      "points": 636,
-      "length": 1.737885,
-      "minimum_controls": 45,
-      "minimum_points": 590,
-      "minimum_length": 1.63
+      "controls": 47,
+      "points": 575,
+      "length": 1.486147,
+      "minimum_controls": 46,
+      "minimum_points": 565,
+      "minimum_length": 1.46
     }
   },
   "anchor_count": 42,

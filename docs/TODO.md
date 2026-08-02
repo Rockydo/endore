@@ -168,6 +168,13 @@
    additions remain parser-safe terrain-only channels. v32 live views visibly proved the
    broadened Anduin at Caras Galadhon and Osgiliath; keep open for systematic tributary,
    bank, confluence, and canopy review across the full nine-theatre evidence set.
+   ACCEPTED FOCUSED v73 RIVER CHECKPOINT — 102 non-duplicated source controls now form six reviewed
+   hydrology classes; Lefnui and Serni join the indexed raster, while Sirith, the branched
+   Lhûn, and all eleven Ethir distributaries retain their exact physical drainage without
+   a fabricated engine graph. Fresh close/regional frames prove the broad Anduin and
+   multiple narrower Gondor/Lindon channels while preserving dense Lothlórien canopy.
+   Full validation, nine-day Observer playback, and exact-fingerprint paired smoke with
+   zero new lines pass. The complete nine-theatre physical/source-edge review remains open.
 7. REOPENED M2 SCALE/GRANULARITY — the measured source frame already occupies 100% of
    canvas height and 70.3% of width, with substantial land contact at both north and
    south crop edges. Do not enlarge uniformly: it would clip Forochel or Far Harad.

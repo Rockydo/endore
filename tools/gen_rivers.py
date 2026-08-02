@@ -27,6 +27,8 @@ ENGINE_MOUTHS: dict[str, list[list[float]]] = {
     "greyflood": [[0.373138, 0.441622]],
     "isen": [[0.379976, 0.521739]],
     "ringlo": [[0.496459, 0.649243]],
+    "lefnui": [[0.408655, 0.657795]],
+    "serni": [[0.540255, 0.696374]],
 }
 ENGINE_SOURCES: dict[str, list[float]] = {}
 WIDEST_RIVERS = {
@@ -39,6 +41,7 @@ WIDEST_RIVERS = {
     "carnen",
     "poros",
     "harnen",
+    "lefnui",
 }
 
 

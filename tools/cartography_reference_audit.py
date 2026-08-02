@@ -29,7 +29,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "5fca05e0298e9245f68710056846742800e0d02639e4162854e69f072ce70d0f"
+    "cd3b4568e521909b3da61efb7c13e75a2b3c3ffe6e9086d5e9968a5b00bde825"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -57,27 +57,27 @@ EXPECTED_FOREST_KEYS = {
 SOURCE_DRAINAGE_THEATRES = {
     "northern_basins": {
         "bbox": (0.35, 0.00, 0.80, 0.32),
-        "minimum_controls": 25,
-        "minimum_points": 500,
-        "minimum_length": 1.50,
+        "minimum_controls": 27,
+        "minimum_points": 515,
+        "minimum_length": 1.54,
     },
     "anduin_system": {
         "bbox": (0.42, 0.12, 0.68, 0.62),
-        "minimum_controls": 58,
-        "minimum_points": 850,
-        "minimum_length": 2.55,
+        "minimum_controls": 62,
+        "minimum_points": 860,
+        "minimum_length": 2.54,
     },
     "white_mountains": {
         "bbox": (0.25, 0.43, 0.63, 0.68),
-        "minimum_controls": 36,
-        "minimum_points": 590,
-        "minimum_length": 1.72,
+        "minimum_controls": 35,
+        "minimum_points": 560,
+        "minimum_length": 1.60,
     },
     "mordor_gondor": {
         "bbox": (0.52, 0.43, 0.80, 0.75),
-        "minimum_controls": 45,
-        "minimum_points": 590,
-        "minimum_length": 1.63,
+        "minimum_controls": 46,
+        "minimum_points": 565,
+        "minimum_length": 1.46,
     },
 }
 
@@ -275,6 +275,9 @@ def render_report() -> dict:
         "poros",
         "morgulduin",
         "harnen",
+        "lhun",
+        "lefnui",
+        "serni",
     }
     river_by_key = {item["key"]: item for item in projection["rivers"]}
     if not expected_river_keys.issubset(river_by_key):
@@ -282,7 +285,7 @@ def render_report() -> dict:
     terrain_only_rivers = [
         item for item in projection["rivers"] if item.get("terrain_only")
     ]
-    if len(projection["rivers"]) != 100 or len(terrain_only_rivers) != 76:
+    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 76:
         raise ValueError("source tributary coverage changed without cartographic review")
     named_supplementary_count = sum(
         bool(item.get("label")) for item in terrain_only_rivers
@@ -293,10 +296,22 @@ def render_report() -> dict:
         for item in projection["rivers"]
         for start, end in zip(item["points"], item["points"][1:], strict=False)
     )
-    if named_supplementary_count != 30:
+    if named_supplementary_count != 26:
         raise ValueError("named/unnamed supplementary drainage balance changed")
-    if total_river_points < 1_800 or total_river_length < 5.20:
+    if total_river_points < 1_700 or total_river_length < 4.85:
         raise ValueError("source river detail was over-simplified")
+    if any(
+        not str(item.get("source", "")).startswith("Arda Maps")
+        for item in projection["rivers"]
+    ):
+        raise ValueError("a river control lost its hash-pinned source provenance")
+    independent_engine_rivers = [
+        item
+        for item in projection["rivers"]
+        if not item.get("terrain_only") and not item.get("joins")
+    ]
+    if len(independent_engine_rivers) != 12:
+        raise ValueError("parser-safe independent river coverage changed")
     drainage_theatres = {}
     for key, contract in SOURCE_DRAINAGE_THEATRES.items():
         x0, y0, x1, y1 = contract["bbox"]
@@ -339,7 +354,7 @@ def render_report() -> dict:
         raise ValueError("a source tributary lost its parser-safe terrain-only contract")
     expected_supplementary_names = {
         "Adorn", "Celos", "Ciril", "EnchantedRiver", "Erui", "Fenmark",
-        "Lefnui", "Lhun", "MouthsOfEntwash", "NimrodelRiver", "Serni",
+        "Lhun", "MouthsOfEntwash", "NimrodelRiver",
         "Shirebourn", "Sirannon", "Sirith", "Stockbrook", "ThistleBrook",
         "Withywindle",
     }
@@ -358,6 +373,9 @@ def render_report() -> dict:
         "carnen": 0.0033,
         "harnen": 0.0032,
         "poros": 0.0030,
+        "lhun": 0.0031,
+        "lefnui": 0.0028,
+        "serni": 0.0024,
     }
     for key, expected_width in expected_major_widths.items():
         if not math.isclose(
@@ -368,6 +386,44 @@ def render_report() -> dict:
         raise ValueError("source-backed Harnen detail regressed")
     if len(river_by_key["morgulduin"]["points"]) < 6:
         raise ValueError("source-backed Morgulduin detail regressed")
+    expected_hydrology_classes = {
+        "named_branch": 7,
+        "named_tributary": 19,
+        "named_trunk": 1,
+        "unnamed_branch": 11,
+        "unnamed_feeder": 34,
+        "unnamed_trunk": 4,
+    }
+    actual_hydrology_classes = {
+        key: sum(item.get("hydrology_class") == key for item in terrain_only_rivers)
+        for key in expected_hydrology_classes
+    }
+    if actual_hydrology_classes != expected_hydrology_classes:
+        raise ValueError("reviewed tributary hierarchy changed")
+    if any(
+        not (96 < int(item.get("incision_strength", 0)) < 192)
+        or not (0.65 <= float(item.get("material_scale", 0.0)) <= 1.0)
+        or not math.isclose(
+            float(item.get("material_growth", -1.0)), 0.20, abs_tol=1e-9
+        )
+        for item in terrain_only_rivers
+    ):
+        raise ValueError("parser-safe drainage presentation contract regressed")
+    forbidden_duplicate_keys = {
+        "source_unnamed_08_00",
+        "source_unnamed_14_00",
+        "source_unnamed_71_11",
+        "source_unnamed_71_12",
+        "source_unnamed_71_13",
+        "source_unnamed_71_14",
+    }
+    if forbidden_duplicate_keys & river_by_key.keys():
+        raise ValueError("an already-modelled source channel was duplicated")
+    expected_ethir_keys = {
+        f"source_unnamed_71_{index:02d}" for index in range(11)
+    }
+    if not expected_ethir_keys.issubset(river_by_key):
+        raise ValueError("the source Ethir Anduin distributaries regressed")
     expected_confluences = {
         "langwell": "upper_anduin",
         "greylin": "upper_anduin",

@@ -25,7 +25,7 @@
           0.611296
         ],
         "snap_distance": 0.000252,
-        "raw_height": 30676
+        "raw_height": 30664
       },
       "DAM": {
         "location": "dol_amroth",
@@ -53,7 +53,7 @@
           0.538308
         ],
         "snap_distance": 4.1e-05,
-        "raw_height": 16128
+        "raw_height": 16122
       },
       "SHI": {
         "location": "michel_delving",
@@ -109,7 +109,7 @@
           0.222638
         ],
         "snap_distance": 0.000127,
-        "raw_height": 16967
+        "raw_height": 16921
       },
       "LIN": {
         "location": "mithlond",
@@ -165,7 +165,7 @@
           0.158091
         ],
         "snap_distance": 0.000308,
-        "raw_height": 12449
+        "raw_height": 12392
       },
       "ERE": {
         "location": "erebor",
@@ -207,7 +207,7 @@
           0.148883
         ],
         "snap_distance": 0.00022,
-        "raw_height": 14762
+        "raw_height": 14745
       },
       "ESG": {
         "location": "esgaroth",
@@ -431,7 +431,7 @@
           0.793325
         ],
         "snap_distance": 0.004573,
-        "raw_height": 10984
+        "raw_height": 10979
       },
       "HRA": {
         "location": "me_land_3196",

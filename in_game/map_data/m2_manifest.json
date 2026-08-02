@@ -37,6 +37,6 @@
   "minimum_control_area": 1,
   "median_control_area": 590.0,
   "maximum_control_area": 82429,
-  "control_source_sha256": "a65baeb15991a270e5e4ae80b5371ad7fb599362e9afdfcd844e10c466d2b333",
+  "control_source_sha256": "9b6f0f834b0d22a993e520dff561c3198b9b3d57c7d9aedda856af647613e9e0",
   "model_sha256": "6048d0cc97170670688e2d8259517242efffc1482bf14d0a141745f90735ed34"
 }
