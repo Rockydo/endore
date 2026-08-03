@@ -5,9 +5,9 @@ Status: awaiting explicit owner acceptance. This page does not make the gate gre
 ## Exact candidate
 
 - Game-visible fingerprint:
-  `0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`
-- Generator: v53 native-resolution river banks over the accepted source-complete physical
-  map.
+  `9d1357d8bff04560a847c1ce9b0dab3f56e5da248be5c49f1365b25b2d64dd80`
+- Generator: v54 native-resolution river banks plus owner-calibrated Great River scale
+  over the source-complete physical map.
 - Runtime proof: fresh HUD-proven Observer, repeated 45-second maximum-speed playback,
   zero recovery, unchanged 1,486-byte baseline error log, full validation, paired smoke,
   and exact smoke assertion.
@@ -39,6 +39,7 @@ does not overwrite personal audio, display-mode, or UI choices.
 | `docs/screens/20260803_v91_full_atlas/` | Complete nine-theatre orientation plus core hydrology coverage. Three misleading feature-camera conclusions are superseded by v91b. |
 | `docs/screens/20260803_v91b_camera_calibration/` | Maximum-close forests, Edhellond land, and exact Orodruin physical evidence. |
 | `docs/screens/20260803_v92_remaining_drainage/` | Remaining twelve source-bound drainage pairs and complete 102-course review. |
+| `docs/screens/20260803_v93_anduin_scale/` | Same-camera owner-calibrated upper/lower Anduin scale and clean 45-second playback. |
 
 Screenshots are reproducible, ignored working evidence rather than shipped mod payload.
 Regional frames establish position and political context; the corresponding close frames

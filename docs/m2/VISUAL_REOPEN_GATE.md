@@ -605,13 +605,14 @@ with zero new lines and exact-fingerprint assertion binds it to `9edf9d2d`. The 
 gate remains red for remaining source-edge, regional river, small-water, and inconclusive
 unique-anchor review.
 
-## Current technical review state (v92)
+## Current technical review state (v93; v92 full-atlas coverage)
 
 The exact current candidate is fingerprint
-`0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`. Generator v53
+`9d1357d8bff04560a847c1ce9b0dab3f56e5da248be5c49f1365b25b2d64dd80`. Generator v54
 keeps the complete source geometry and renders only the one-bit river core at the native
 65,536×32,768 virtual resolution, eliminating the former 8×8 stair-step banks without
-changing widths, incision, coast, relief, forests, ownership, or general materials.
+changing authored axes/control widths, incision, coast, relief, forests, ownership, or
+general materials.
 
 The v91 full atlas plus corrected v91b feature cameras provide current physical evidence
 for all nine theatres. Maximum-close views prove dense Mirkwood and Old Forest objects;
@@ -633,3 +634,12 @@ Repository-wide validation, paired smoke with zero new error-log lines, exact-fi
 assertion, fresh HUD-proven Observer entry, and repeated 45-second maximum-speed playback
 are green on this tree. The compact review route is `docs/m2/M2_OWNER_REVIEW.md`. M2 stays
 blocking until explicit owner acceptance; no gameplay content may begin.
+
+Direct owner review after v92 found that source completeness did not yet make the Great
+River visually massive. v93 therefore broadens only the upper/lower Anduin's
+native-resolution water core, retaining every source axis, confluence, incision, bank
+envelope, and non-Anduin scale. Same-camera Caras Galadhon/Osgiliath evidence shows a
+roughly doubled, dominant Great River without inland-water spill, followed by 45 seconds
+of clean maximum-speed playback. Paired smoke passed in 201.7 seconds with zero new or
+mod-unique lines. Full validation and exact-fingerprint smoke assertion are mandatory
+final technical commit gates; M2 remains red for explicit owner acceptance.

@@ -1597,3 +1597,21 @@ The apparent gap at the upper Lhûn Y is not a geometry defect: `lhun` and
 `source_lhun_84_02` share the exact projected endpoint `[0.316589, 0.114628]`. Treat the
 finder marker and camera occlusion as presentation unless a source-bound close view proves
 otherwise.
+
+## 2026-08-03 - Let direct owner scale review supersede v92 for Anduin only
+
+Keep v92's conclusion that the 102-course Arda Maps network is source-complete, but
+supersede its conservative Anduin visual-width judgment. Direct owner review is binding
+for the reopened visual gate and found that the Great River still did not read as massive
+in live play.
+
+Generator v54 increases only the native-resolution still-water core scale from 0.22 to
+0.46 on the upper Anduin and 0.44 on the lower Anduin. It does not change either source
+axis, the authored control width, downstream growth, height incision, wet-bank envelope,
+tributary course, confluence, or engine graph. The wider core remains materially inside
+the accepted bank mask and therefore cannot restore v49-v50's whole-band inland water.
+
+Accept the calibration only on same-camera Caras Galadhon and Osgiliath evidence: both
+reaches must read as a Great River, their affluents must remain visibly subordinate, and
+the fresh Observer session must retain clean playback and logs. Do not infer permission
+to widen unrelated courses or add uncited drainage.

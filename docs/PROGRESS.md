@@ -1708,3 +1708,25 @@
   inventing additional decorative watercourses. Freeze the present hierarchy and change
   only a specifically named course with a demonstrated source mismatch. M2 remains red
   for explicit owner acceptance.
+
+## 2026-08-03 - v93 owner-calibrated Great River scale
+
+- Direct owner review superseded v92's conservative visual-width conclusion for the
+  Anduin while leaving its source-completeness conclusion intact. Generator v54 changes
+  only the native-resolution water-core scales for upper_anduin (0.22→0.46) and
+  anduin (0.22→0.44). All 102 axes, control widths, confluences, incision paths,
+  parser-safe channels, bank envelopes, height data, and non-Anduin materials remain
+  unchanged.
+- The regenerated material cache reused the verified height payload and completed in
+  248.2 seconds: 174,763 tiles, 45,088 unique material tiles, 24.0 MB material payload,
+  and 193.8 MB complete cache. Its direct checker passes with zero Earth decal layers.
+- Fresh same-camera evidence under docs/screens/20260803_v93_anduin_scale/ proves a
+  visibly massive upper Anduin at Caras Galadhon and a roughly doubled lower reach through
+  Osgiliath, while the tributaries remain narrow and readable. The water stays inside the
+  existing source-incised valley and does not recreate the rejected inland-water bands.
+- The exact candidate fingerprint is
+  9d1357d8bff04560a847c1ce9b0dab3f56e5da248be5c49f1365b25b2d64dd80.
+  Fresh HUD-proven Observer playback ran 45 seconds at maximum speed with zero recovery
+  and the unchanged 1,486-byte error log. Paired vanilla/Endórë smoke passed in 201.7
+  seconds with zero new lines and no mod-unique diagnostic. Full validation and exact
+  smoke assertion remain before commit; M2 remains red for owner acceptance.

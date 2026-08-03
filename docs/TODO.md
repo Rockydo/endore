@@ -576,8 +576,8 @@
 ## Current v92 complete-drainage checkpoint
 
 - Preserve the complete 102-course source atlas, native-resolution banks, full-resolution
-  incision paths, twelve parser-safe engine channels, and current width hierarchy. Fresh
-  close evidence confirms the lower Anduin is massive and dominant while Entwash, Lhûn,
+  incision paths, and twelve parser-safe engine channels. Fresh close evidence confirms
+  all reviewed courses while Entwash, Lhûn,
   Greyflood, Isen, Celduin, Carnen, Poros, Lefnui, Serni, Gladden, and Limlight remain
   readable at their intended subordinate scales.
 - Do not add uncited decorative channels or globally widen the system. All significant
@@ -590,6 +590,21 @@
   Fresh Observer playback ran 45 seconds at maximum speed with zero recovery and the
   unchanged 1,486-byte error log. The apparent upper-Lhûn interruption is rejected as a
   camera-marker artefact: its branch and trunk share an exact projected endpoint.
-- NEXT M2 GATE: use `docs/m2/M2_OWNER_REVIEW.md` for player-quality review. Record and
-  correct only concrete source-visible defects. M2 remains red pending explicit owner
-  acceptance; gameplay content remains blocked.
+- SUPERSEDED WIDTH JUDGMENT: direct owner review found the Great River still visually too
+  narrow. v93 below replaces only the Anduin core calibration; v92 remains authoritative
+  for the complete source-course and confluence audit.
+
+## Current v93 Great River candidate
+
+- Preserve generator v54's broader native-resolution upper/lower Anduin core. The source
+  axes, nominal control widths, height incision, wet-bank envelopes, tributaries, and
+  parser graph are unchanged; only the visible water core grows from 0.22 scale to 0.46
+  above Nen Hithoel and 0.44 below it.
+- Same-camera A/B under docs/screens/20260803_v93_anduin_scale/ proves a massive Great
+  River at Caras Galadhon and Osgiliath while narrower affluents retain clear hierarchy.
+  Fresh Observer playback completed 45 seconds at maximum speed with zero recovery and
+  the unchanged 1,486-byte log. Paired smoke passed in 201.7 seconds with zero new lines
+  on fingerprint 9d1357d8bff04560a847c1ce9b0dab3f56e5da248be5c49f1365b25b2d64dd80.
+- COMMIT GATE: repository validation and exact smoke assertion must pass, then use
+  docs/m2/M2_OWNER_REVIEW.md for player-quality review. M2 remains red pending explicit
+  owner acceptance; gameplay content remains blocked.

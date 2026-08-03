@@ -73,7 +73,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 53
+GENERATOR_VERSION = 54
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -91,8 +91,10 @@ GENERATOR_VERSION = 53
 # narrow water core and wider blended wet bank, again without touching height.
 # Live v51 evidence proved channel presence is dominant rather than blended,
 # so v52 leaves that wider envelope to the heightfield and paints only the core.
+# v53 moves that core to native virtual-texture resolution. v54 changes only
+# the two Anduin core scales after direct owner review; height remains compatible.
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53}
+    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 54}
 )
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
@@ -180,8 +182,9 @@ JOINED_RIVER_VISIBILITY = (0.78, 3, 0.50)
 
 # A dedicated water-only core is intentionally much narrower than the wet-bank
 # mask above. At close zoom, even one material pixel spans a meaningful world
-# width; the Anduin remains dominant at roughly five to six core pixels while
-# ordinary rivers and feeders remain two to three.
+# width. Ordinary rivers and feeders remain two to three source pixels. The
+# Anduin uses a native-resolution core roughly twice v53's calibration while
+# remaining well inside its accepted incised/wet-bank envelope.
 TERRAIN_ONLY_RIVER_CORE_VISIBILITY = {
     "named_trunk": (0.28, 3),
     "named_branch": (0.25, 2),
@@ -191,8 +194,8 @@ TERRAIN_ONLY_RIVER_CORE_VISIBILITY = {
     "unnamed_feeder": (0.20, 2),
 }
 ENGINE_RIVER_CORE_VISIBILITY = {
-    "upper_anduin": (0.22, 3, 0.58),
-    "anduin": (0.22, 3, 0.62),
+    "upper_anduin": (0.46, 3, 0.58),
+    "anduin": (0.44, 3, 0.62),
 }
 DEFAULT_ENGINE_RIVER_CORE_VISIBILITY = (0.18, 2, 0.58)
 JOINED_RIVER_CORE_VISIBILITY = (0.22, 2, 0.50)
