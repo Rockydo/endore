@@ -407,3 +407,9 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   `Land ####` display names are therefore not finder-safe once localization overrides
   their keys. Evidence tooling must validate the actual localized text together with the
   intended source coordinate and strategic region before launching the game.
+- Finder focus also selects its own maximum-close camera. Zooming out before a focus and
+  then applying positive detents makes nominal regional/close pairs saturate at effectively
+  the same close view. Hard-resetting after focus and applying +8/+12 detents produces
+  distinct political-map scales but not binding 3D terrain evidence. In build 24187685,
+  finder-relative -6 detents provide useful political/regional orientation while -1
+  retains a close 3D terrain view.

@@ -1608,7 +1608,34 @@
   source-bound location.
 - The corrected atlas supports only the focused mechanisms it visibly proves: dense
   source-shaped forests, source-derived climates, a dominant upper/lower Anduin, and
-  visible narrower Celebrant and Entwash courses. It does not close M2. Full feature-level
+  visible narrower Limlight and Entwash courses. Its frame labelled Celebrant was later
+  rejected because Field of Celebrant is physically on the Limlight. It does not close M2.
+  Full feature-level
   source comparison, political review after physical acceptance, and explicit owner
   acceptance remain open. Mordor camera framing was improved for the next atlas; terrain
   was not changed merely because a close camera looked into the canonical Morannon saddle.
+
+## 2026-08-03 - v89 source-bound drainage atlas and camera calibration
+
+- Expanded the focused hydrology manifest from four views to seventeen. Brandywine,
+  Lhûn, Greyflood, Isen, Celduin, Carnen, Harnen, Poros, Lefnui, Serni, Morgulduin,
+  Gladden, and Limlight now have unique ASCII finder anchors, exact localized
+  coordinate/region contracts, and a maximum 0.010 distance to their named source course.
+  The default nine-theatre run is unchanged; `--drainage-only` and selective exact
+  `--targets` runs avoid repeating unrelated cameras.
+- v89 completed all thirteen new drainage pairs in 812.8 seconds on exact fingerprint
+  `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`, then ran 45
+  seconds at maximum speed with zero recovery and the unchanged 1,486-byte error log.
+  Its frames prove that the major courses are present and substantial, but its nominal
+  regional/close pairs were rejected as scale evidence because finder focus saturated
+  both at effectively the same close camera.
+- v89b reversed the operation order and completed an eight-course sample in 551.4 seconds
+  with the same clean playback/log result. It proved source centers and distinct political
+  scales, but absolute +8/+12 detents from full-map state did not preserve 3D terrain, so
+  those frames are not accepted as physical-map evidence.
+- v89c used finder-relative -6/-1 zoom-outs and completed in 305.1 seconds with the same
+  exact fingerprint, clean 45-second playback, and 1,486-byte log. The regional frame now
+  supplies political orientation and the close frame retains 3D terrain. Close evidence
+  proves the upper Anduin is already massive, the true Celebrant is visible on its
+  mountain-to-Anduin course, and the narrower Morgulduin runs west from Minas Morgul.
+  No river was widened from the rejected intermediate frames. M2 remains red.

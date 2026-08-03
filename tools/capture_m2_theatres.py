@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
+import math
 import re
 import subprocess
 import sys
@@ -15,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DRIVER = ROOT / "tools" / "gamedriver.py"
 INDEX = ROOT / "docs" / "world" / "derived" / "location_index.csv"
 LOCALIZATION = ROOT / "in_game" / "localization" / "english" / "m2_map_l_english.yml"
+PROJECTION = ROOT / "docs" / "world" / "control" / "projection.json"
 EX_TEMPFAIL = 75
 
 
@@ -23,8 +26,10 @@ class Theatre:
     slug: str
     regional_query: str
     close_query: str
-    regional_zoom: int = 8
-    close_zoom: int = 12
+    # Finder focus establishes a stable maximum-close 3D camera. These are
+    # zoom-out detents from that camera, not absolute zoom-ins from full map.
+    regional_zoom: int = 6
+    close_zoom: int = 1
 
 
 # Queries deliberately resolve to one generated display name.  This avoids the
@@ -36,7 +41,7 @@ THEATRES = (
     Theatre("03_misty_anduin", "Caras Galadhon", "Khazad"),
     Theatre("04_mirkwood", "Woodmen's Hall", "Woodmen's Hall"),
     Theatre("05_rohan_white", "Edoras", "Dunharrow"),
-    Theatre("06_gondor_belfalas", "Dol Amroth", "Dol Amroth", 7, 10),
+    Theatre("06_gondor_belfalas", "Dol Amroth", "Dol Amroth", 7, 2),
     Theatre("07_mordor", "Morannon", "Barad"),
     Theatre("08_rhun", "Burh Gath", "Burh Gath"),
     Theatre("09_harad", "Qarsad", "Qarsad"),
@@ -46,13 +51,32 @@ THEATRES = (
 # deterministic pairs bind the owner's river acceptance criterion to the
 # upper and lower reaches of the Great River.
 HYDROLOGY_VIEWS = (
-    Theatre("10_anduin_upper", "Caras Galadhon", "Caras Galadhon", 8, 12),
-    Theatre("11_anduin_lower", "Osgiliath", "Osgiliath", 8, 12),
+    Theatre("10_anduin_upper", "Caras Galadhon", "Caras Galadhon"),
+    Theatre("11_anduin_lower", "Osgiliath", "Osgiliath"),
     # Current localized locations nearest the hash-pinned middle reaches of
     # Celebrant and Entwash; coordinate contracts below prevent name drift
     # from silently moving either camera to another theatre.
-    Theatre("12_celebrant", "Field of Celebrant", "Field of Celebrant", 8, 12),
-    Theatre("13_entwash", "odgar", "odgar", 8, 12),
+    Theatre("12_celebrant", "Westbank Heights", "Westbank Heights"),
+    Theatre("13_entwash", "odgar", "odgar"),
+)
+
+# A separate focused run covers the other binding major trunks and named
+# affluents without making the established nine-theatre default audit slower.
+# Anchors are deliberately ASCII finder queries and uniquely localized below.
+DRAINAGE_VIEWS = (
+    Theatre("14_baranduin", "Brandywine Bridge", "Brandywine Bridge"),
+    Theatre("15_lhun", "Winterhaven Waste", "Winterhaven Waste"),
+    Theatre("16_greyflood", "Blackdown End", "Blackdown End"),
+    Theatre("17_isen", "Fords of Isen", "Fords of Isen"),
+    Theatre("18_celduin", "Dalestrand", "Dalestrand"),
+    Theatre("19_carnen", "Gundgathol", "Gundgathol"),
+    Theatre("20_harnen", "Qasahir Oasis", "Qasahir Oasis"),
+    Theatre("21_poros", "Minas annonlad", "Minas annonlad"),
+    Theatre("22_lefnui", "Minas galeneth", "Minas galeneth"),
+    Theatre("23_serni", "Celon bellad", "Celon bellad"),
+    Theatre("24_morgulduin", "Minas Morgul", "Minas Morgul"),
+    Theatre("25_gladden", "Goldenhall", "Goldenhall"),
+    Theatre("26_limlight", "Field of Celebrant", "Field of Celebrant"),
 )
 
 # Finder success proves only that a string exists. Bind every formerly raw
@@ -65,7 +89,7 @@ SOURCE_TARGETS = {
     "Woodmen's Hall": (0.562000, 0.300000, "me_mirkwood_region"),
     "Burh Gath": (0.770000, 0.250000, "me_rhun_region"),
     "Qarsad": (0.675000, 0.870000, "me_near_harad_region"),
-    "Field of Celebrant": (0.539941, 0.413770, "me_anduin_vale_region"),
+    "Westbank Heights": (0.500366, 0.339521, "me_anduin_vale_region"),
     "odgar": (0.517055, 0.480938, "me_rohan_region"),
     "Caras Galadhon": (0.519414, 0.356131, "me_anduin_vale_region"),
     "Khazad": (0.490110, 0.335613, "me_anduin_vale_region"),
@@ -75,8 +99,45 @@ SOURCE_TARGETS = {
     "Morannon": (0.609768, 0.529555, "me_brown_lands_region"),
     "Barad": (0.643956, 0.573522, "me_mordor_region"),
     "Osgiliath": (0.592430, 0.603811, "me_ithilien_region"),
+    "Brandywine Bridge": (0.381197, 0.227162, "me_shire_breeland_region"),
+    "Winterhaven Waste": (0.316728, 0.115779, "me_forochel_region"),
+    "Blackdown End": (0.415629, 0.346849, "me_enedwaith_region"),
+    "Fords of Isen": (0.467888, 0.488520, "me_rohan_region"),
+    "Dalestrand": (0.607082, 0.211040, "me_dale_region"),
+    "Gundgathol": (0.671307, 0.181729, "me_rhun_region"),
+    "Qasahir Oasis": (0.586081, 0.827553, "me_near_harad_region"),
+    "Minas annonlad": (0.592918, 0.711773, "me_south_gondor_region"),
+    "Minas galeneth": (0.432234, 0.579384, "me_belfalas_region"),
+    "Celon bellad": (0.558974, 0.658525, "me_lebennin_region"),
+    "Minas Morgul": (0.607326, 0.595506, "me_ithilien_region"),
+    "Goldenhall": (0.522100, 0.269174, "me_anduin_vale_region"),
+    "Field of Celebrant": (0.539194, 0.417196, "me_anduin_vale_region"),
 }
 MAX_TARGET_DISTANCE = 0.012
+
+# Every hydrology camera must also lie near the exact source-backed course it
+# claims to show. This catches semantically wrong but geographically stable
+# labels such as the former Field-of-Celebrant camera on the Limlight.
+RIVER_TARGETS = {
+    "Caras Galadhon": "upper_anduin",
+    "Osgiliath": "anduin",
+    "Westbank Heights": "celebrant",
+    "odgar": "entwash",
+    "Brandywine Bridge": "baranduin",
+    "Winterhaven Waste": "lhun",
+    "Blackdown End": "greyflood",
+    "Fords of Isen": "isen",
+    "Dalestrand": "celduin",
+    "Gundgathol": "carnen",
+    "Qasahir Oasis": "harnen",
+    "Minas annonlad": "poros",
+    "Minas galeneth": "lefnui",
+    "Celon bellad": "serni",
+    "Minas Morgul": "morgulduin",
+    "Goldenhall": "gladden",
+    "Field of Celebrant": "limlight",
+}
+MAX_RIVER_DISTANCE = 0.010
 
 
 def localization_names() -> dict[str, str]:
@@ -95,6 +156,28 @@ def driver(*args: str) -> int:
     return subprocess.run(command, cwd=ROOT, check=False).returncode
 
 
+def point_segment_distance(
+    point: tuple[float, float],
+    start: list[float],
+    end: list[float],
+) -> float:
+    delta_x = float(end[0]) - float(start[0])
+    delta_y = float(end[1]) - float(start[1])
+    length_squared = delta_x * delta_x + delta_y * delta_y
+    if length_squared == 0.0:
+        return math.dist(point, (float(start[0]), float(start[1])))
+    progress = (
+        (point[0] - float(start[0])) * delta_x
+        + (point[1] - float(start[1])) * delta_y
+    ) / length_squared
+    progress = min(1.0, max(0.0, progress))
+    nearest = (
+        float(start[0]) + progress * delta_x,
+        float(start[1]) + progress * delta_y,
+    )
+    return math.dist(point, nearest)
+
+
 def check_manifest() -> list[str]:
     failures: list[str] = []
     with INDEX.open(encoding="utf-8-sig", newline="") as handle:
@@ -103,7 +186,10 @@ def check_manifest() -> list[str]:
     localized_rows = [
         (row, localized_by_key.get(row["key"], row["display_name"])) for row in rows
     ]
-    for theatre in THEATRES + HYDROLOGY_VIEWS:
+    projection = json.loads(PROJECTION.read_text(encoding="utf-8"))
+    rivers = {item["key"]: item for item in projection["rivers"]}
+    all_views = THEATRES + HYDROLOGY_VIEWS + DRAINAGE_VIEWS
+    for theatre in all_views:
         for role, query in (
             ("regional", theatre.regional_query),
             ("close", theatre.close_query),
@@ -135,20 +221,49 @@ def check_manifest() -> list[str]:
                         f"{theatre.slug} {role} target {name!r} is in "
                         f"{row['region']}, expected {expected_region}"
                     )
-        if not 1 <= theatre.regional_zoom < theatre.close_zoom <= 16:
+                river_key = RIVER_TARGETS.get(query)
+                if river_key:
+                    river = rivers.get(river_key)
+                    if river is None:
+                        failures.append(
+                            f"{theatre.slug} {role} references unknown river {river_key}"
+                        )
+                    else:
+                        point = (actual_x, actual_y)
+                        distance_to_river = min(
+                            point_segment_distance(point, start, end)
+                            for start, end in zip(
+                                river["points"], river["points"][1:], strict=False
+                            )
+                        )
+                        if distance_to_river > MAX_RIVER_DISTANCE:
+                            failures.append(
+                                f"{theatre.slug} {role} target {name!r} is "
+                                f"{distance_to_river:.5f} from river {river_key}"
+                            )
+        if not 0 <= theatre.close_zoom < theatre.regional_zoom <= 16:
             failures.append(f"{theatre.slug} has invalid zoom pair")
     if len({item.slug for item in THEATRES}) != 9:
         failures.append("the binding audit must contain nine unique theatres")
-    if len({item.slug for item in THEATRES + HYDROLOGY_VIEWS}) != 13:
+    if len({item.slug for item in all_views}) != len(all_views):
         failures.append("the theatre and hydrology audit slugs must be unique")
+    used_river_queries = {
+        query
+        for theatre in HYDROLOGY_VIEWS + DRAINAGE_VIEWS
+        for query in (theatre.regional_query, theatre.close_query)
+    }
+    if used_river_queries != set(RIVER_TARGETS):
+        failures.append("river camera/course bindings do not cover every drainage view")
     return failures
 
 
 def reset_and_capture(query: str, zoom: int, name: str, session: str) -> int:
     commands = (
-        ("scroll", "-32", "--settle", "2"),
         ("focus-location", query, "--settle", "4"),
-        ("scroll", str(zoom), "--settle", "4"),
+        # Finder focus establishes both the correct centre and a maximum-close
+        # 3D camera. Apply a bounded zoom-out from that known state: a larger
+        # value gives the regional frame and a smaller value the close frame.
+        ("scroll", str(-zoom), "--settle", "4"),
         (
             "move",
             "0.95",
@@ -168,12 +283,19 @@ def reset_and_capture(query: str, zoom: int, name: str, session: str) -> int:
     return 0
 
 
-def capture(session: str, playback: float, *, hydrology_only: bool) -> int:
+def capture(
+    session: str,
+    playback: float,
+    *,
+    hydrology_only: bool,
+    drainage_only: bool,
+    target_slugs: tuple[str, ...],
+) -> int:
     result = driver("new-observer", "--visual-map", "--session", session)
     if result:
         return result
     try:
-        if not hydrology_only:
+        if not hydrology_only and not drainage_only and not target_slugs:
             # Bind the full-map silhouette gate to the same fresh renderer
             # state as the theatre pairs. Focus first because the location
             # finder can retain or restore a close camera; the hard zoom-out
@@ -196,7 +318,16 @@ def capture(session: str, playback: float, *, hydrology_only: bool) -> int:
                 result = driver(*command)
                 if result:
                     return result
-        targets = HYDROLOGY_VIEWS if hydrology_only else THEATRES + HYDROLOGY_VIEWS
+        if target_slugs:
+            all_views = THEATRES + HYDROLOGY_VIEWS + DRAINAGE_VIEWS
+            by_slug = {item.slug: item for item in all_views}
+            targets = tuple(by_slug[slug] for slug in target_slugs)
+        elif drainage_only:
+            targets = DRAINAGE_VIEWS
+        elif hydrology_only:
+            targets = HYDROLOGY_VIEWS
+        else:
+            targets = THEATRES + HYDROLOGY_VIEWS
         for theatre in targets:
             result = reset_and_capture(
                 theatre.regional_query,
@@ -239,7 +370,13 @@ def main() -> int:
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--session", default="m2_nine_theatre_audit")
     parser.add_argument("--playback", type=float, default=45)
-    parser.add_argument("--hydrology-only", action="store_true")
+    focus = parser.add_mutually_exclusive_group()
+    focus.add_argument("--hydrology-only", action="store_true")
+    focus.add_argument("--drainage-only", action="store_true")
+    focus.add_argument(
+        "--targets",
+        help="comma-separated exact theatre slugs for a selective live rerun",
+    )
     args = parser.parse_args()
     failures = check_manifest()
     if failures:
@@ -247,12 +384,30 @@ def main() -> int:
             print(f"capture_m2_theatres: FAIL {failure}", file=sys.stderr)
         return 1
     if args.check:
-        print("capture_m2_theatres: PASS (source-bound localized camera targets)")
+        print(
+            "capture_m2_theatres: PASS "
+            "(source- and course-bound localized camera targets)"
+        )
         return 0
+    target_slugs: tuple[str, ...] = ()
+    if args.targets:
+        target_slugs = tuple(
+            slug.strip() for slug in args.targets.split(",") if slug.strip()
+        )
+        known_slugs = {
+            item.slug for item in THEATRES + HYDROLOGY_VIEWS + DRAINAGE_VIEWS
+        }
+        unknown_slugs = sorted(set(target_slugs) - known_slugs)
+        if unknown_slugs:
+            parser.error(f"unknown target slugs: {', '.join(unknown_slugs)}")
+        if len(target_slugs) != len(set(target_slugs)):
+            parser.error("--targets repeats a slug")
     return capture(
         args.session,
         args.playback,
         hydrology_only=args.hydrology_only,
+        drainage_only=args.drainage_only,
+        target_slugs=target_slugs,
     )
 
 

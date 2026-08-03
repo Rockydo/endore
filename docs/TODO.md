@@ -216,8 +216,10 @@
    mask as full water, so rejected v49-v51 must not return. v52 paints only nested water
    cores: ordinary drainage remains roughly two to three source pixels while upper/lower
    Anduin grow to roughly five or six and reach installed raster width 15 earlier. Fresh
-   Caras Galadhon, Osgiliath, Celebrant, and Entwash evidence proves a dominant Great River
-   plus narrower continuous affluents with readable banks. Keep this item open for the
+   Caras Galadhon and Osgiliath evidence proves a dominant Great River; the earlier raw
+   Celebrant frame is rejected, while Entwash remains continuous. Corrected v89c evidence
+   now proves the true Celebrant separately, plus narrower continuous affluents with
+   readable banks. Keep this item open for the
    complete source-edge and nine-theatre review; add no uncited decorative watercourse.
    ACCEPTED FOCUSED v75 FOREST CHECKPOINT remains authoritative after v77 A/B: Mirkwood
    stays a near-continuous all-LOD canopy and Lothlórien stays a dense source-shaped,
@@ -245,7 +247,7 @@
    the superseded 12,104-location fingerprints.
    CURRENT v88 EVIDENCE AUTOMATION — `tools/capture_m2_theatres.py` captures a centred
    full-map silhouette, hard-resets, and captures deterministic regional/close pairs for
-   all nine binding theatres plus four hydrology views, then runs bounded maximum-speed
+   all nine binding theatres plus four core hydrology views, then runs bounded maximum-speed
    playback and releases EU5. The first full run was mechanically clean but its raw
    `Land ####` queries were rejected because localized EU5 silently centred unrelated
    first results. Every camera query now resolves against committed localization and is
@@ -253,7 +255,11 @@
    v88b completed in 809.5 seconds on exact fingerprint
    `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`, followed by
    45 seconds of maximum-speed playback with zero recovery and the unchanged 1,486-byte
-   error log. The screenshots inspect focused mechanisms only; M2 remains red.
+   error log. Later inspection rejects the frame labelled Celebrant because its stable
+   Field-of-Celebrant anchor is physically on the Limlight, and rejects the old nominal
+   regional/close pair semantics because finder focus chose the final camera. Current v89c
+   uses a source-course distance contract plus finder-relative political-regional/3D-close
+   zooms. The screenshots inspect focused mechanisms only; M2 remains red.
 9. REOPENED M2 FIDELITY AUDIT — after relief, rivers, water, forests, and macro materials
    converge, compare the entire physical atlas theatre-by-theatre and feature-by-feature
    against `http://arda-maps.org/ages/third` and
@@ -503,12 +509,34 @@
   validation/smoke pair. The 193.3 MB terrain cache reuses unchanged height and replaces
   only the material payload/provenance needed by the river hierarchy.
 - Evidence under `docs/screens/20260802_v87d_hydrology/` and
-  `docs/screens/20260802_v87e_hydrology/` shows both Anduin reaches plus Celebrant and
-  Entwash. The exact-fingerprint session completed 45 seconds of maximum-speed playback
-  with zero recovery and the baseline-only 1,486-byte error log.
+  `docs/screens/20260802_v87e_hydrology/` shows both Anduin reaches and Entwash. The
+  former raw Celebrant frame is not accepted. Corrected v89c close evidence now shows the
+  actual Celebrant, while v89's source-bound drainage atlas covers thirteen further major
+  trunks/affluents. Every exact-fingerprint session completed 45 seconds of maximum-speed
+  playback with zero recovery and the baseline-only 1,486-byte error log.
 - REMAINING M2 WORK: the corrected full atlas is captured; continue feature-level source
   comparison and refine any demonstrable course, bank, or confluence mismatch. The next
   atlas uses regional Morannon and close Barad-dur anchors for more useful gate/interior
   framing. Jagged material edges may be softened only if both banks stay readable and the
   inland-sea failure does not return. Political review follows physical acceptance. M2
   remains red pending explicit owner acceptance.
+
+## Current v89 drainage evidence checkpoint
+
+- Preserve all 102 source-backed courses and the current width hierarchy. The complete
+  v89 drainage run visibly confirms that major non-Anduin trunks are already substantial;
+  do not globally widen them or the Great River from stale pre-v52 feedback. Corrected
+  v89c close evidence proves the upper Anduin is massive, the true Celebrant is visible,
+  and Morgulduin remains present but appropriately narrower.
+- Evidence cameras must resolve unique committed localization, their exact location
+  coordinate and strategic region, and a maximum 0.010 distance to the named source river.
+  Field of Celebrant is a Limlight camera, never a Celebrant camera. Finder-relative -6
+  detents are regional political orientation; -1 is the binding close 3D terrain view.
+- v89/v89b are retained as diagnostic evidence but their duplicated-close and
+  political-only pair semantics are rejected. v89c is the accepted camera calibration:
+  305.1 seconds, exact fingerprint
+  `f75e17f804a716537ec2b5acd9ca126bbae05b5d7338ca3f640ce8159e4151c9`, 45 seconds of
+  maximum-speed playback, zero recovery, and the unchanged 1,486-byte error log.
+- NEXT: use selective exact-slug reruns for any specific weak feature, continue the
+  feature-level source comparison, and change only demonstrable source or hierarchy
+  defects. This evidence checkpoint does not close the nine-theatre M2 owner gate.

@@ -1536,3 +1536,16 @@ Keep the full-map hard reset after establishing finder context. Frame Mordor wit
 Morannon as the regional anchor and Barad-dur as the close anchor so the next atlas shows
 both the northern gate theatre and the ash interior without treating camera direction as
 terrain geometry.
+
+## 2026-08-03 - Bind drainage evidence to courses and finder-relative zoom
+
+Require every hydrology camera to lie within 0.010 normalized units of the exact
+source-backed river it names, in addition to the localized location, coordinate, and
+strategic-region contract. The former Field of Celebrant target actually lay on the
+Limlight; retain it as a Limlight view and use Westbank Heights for the true Celebrant.
+
+Build 24187685's finder establishes a maximum-close 3D camera as a side effect. Treat a
+six-detent zoom-out as political/regional orientation and a one-detent zoom-out as the
+binding close 3D terrain view. Do not hard-reset to the full map after finder focus when
+capturing physical close evidence. Preserve selective exact-slug reruns so a single
+feature can be recalibrated without repeating the whole atlas.
