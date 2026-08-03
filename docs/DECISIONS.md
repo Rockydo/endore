@@ -1549,3 +1549,17 @@ six-detent zoom-out as political/regional orientation and a one-detent zoom-out 
 binding close 3D terrain view. Do not hard-reset to the full map after finder focus when
 capturing physical close evidence. Preserve selective exact-slug reruns so a single
 feature can be recalibrated without repeating the whole atlas.
+
+## 2026-08-03 - Render river cores at native virtual-texture resolution
+
+Keep the general material source at its release-safe 8,192×4,096 resolution and preserve
+every reviewed river width and source course. Its nearest sampling onto EU5's
+65,536×32,768 virtual surface expands each binary river pixel into an 8×8 block, producing
+visible tooth-like banks. Generate only the one-bit river core at the full virtual
+resolution and replace the coarse channel-6 bit in mip levels 0–3 during tile baking.
+
+Retain the underlying dry material below the coarse river bit so refined edges expose
+valid terrain rather than empty cache pixels. Preserve exact still-water pond precedence.
+This is a sampling-resolution correction, not permission to widen rivers, add uncited
+courses, alter height incision, or promote physical affluents into the rejected engine
+river graph.

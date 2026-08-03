@@ -413,3 +413,9 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   distinct political-map scales but not binding 3D terrain evidence. In build 24187685,
   finder-relative -6 detents provide useful political/regional orientation while -1
   retains a close 3D terrain view.
+- Build 24187685's material cache advertises a 65,536×32,768 virtual surface. Feeding its
+  close mips from an 8,192×4,096 binary river mask with nearest sampling visibly expands
+  each edge pixel into an 8×8 staircase. A full-virtual-resolution one-bit river source
+  can replace only channel 6 in mips 0–3 while the general material source remains 8K.
+  Fresh v90 evidence shows smooth continuous banks at unchanged normalized widths, and the
+  resulting 45,083-unique-tile material cache loads and plays without a new diagnostic.

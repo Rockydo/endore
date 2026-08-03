@@ -1639,3 +1639,25 @@
   proves the upper Anduin is already massive, the true Celebrant is visible on its
   mountain-to-Anduin course, and the narrower Morgulduin runs west from Minas Morgul.
   No river was widened from the rejected intermediate frames. M2 remains red.
+
+## 2026-08-03 - v90 native-resolution river banks
+
+- Traced the remaining tooth-like river banks to the material-cache scale mismatch:
+  Endórë's general material source is 8,192×4,096, while the installed cache contract is
+  65,536×32,768 and nearest sampling expands every binary edge pixel eightfold.
+- Generator v53 retains the complete 8K material stack and all v52 source paths, widths,
+  height incision, pond precedence, climate, relief, forests, and ownership. Only a
+  one-bit river core is rendered at the full virtual resolution and substituted for the
+  coarse channel-6 bit in close/medium mips. The verified height cache was reused.
+- The material bake completed in 244.2 seconds with 174,763 tiles, 45,083 unique material
+  tiles, and a 24.0 MB payload (about 0.5 MB larger than v52). The complete cache remains
+  193.8 MB.
+- Fresh v90 New Game evidence on fingerprint
+  `0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`
+  compares the same source-bound Anduin, Celebrant, Brandywine, Harnen, and Morgulduin
+  cameras. Banks are continuous rather than 8×8 stair-steps; Anduin remains dominant,
+  major trunks remain substantial, and Morgulduin remains narrower. The session completed
+  45 seconds at maximum speed with zero recovery and the unchanged 1,486-byte error log.
+  Repository-wide validation passed in 405.1 seconds. Paired vanilla/Endórë smoke passed
+  in 202.1 seconds with zero new lines. Final living-document validation and exact smoke
+  binding are being repeated before commit; M2 remains red regardless.

@@ -60,6 +60,12 @@ SOURCE_W = 65_536
 SOURCE_H = 32_768
 MATERIAL_W = 8_192
 MATERIAL_H = 4_096
+# Binary river edges are visibly block-expanded when the 8K material source is
+# sampled onto EU5's 65K virtual surface. Keep the general material stack at
+# its release-safe resolution, but render the one-bit river core directly at
+# full virtual resolution.
+RUNTIME_RIVER_W = SOURCE_W
+RUNTIME_RIVER_H = SOURCE_H
 TILE_SIZE = 128
 BORDER_SIZE = 2
 STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
@@ -67,7 +73,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 52
+GENERATOR_VERSION = 53
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -86,7 +92,7 @@ GENERATOR_VERSION = 52
 # Live v51 evidence proved channel presence is dominant rather than blended,
 # so v52 leaves that wider envelope to the heightfield and paints only the core.
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {42, 43, 46, 47, 48, 49, 50, 51, 52}
+    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53}
 )
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
@@ -1015,15 +1021,22 @@ def ridge_material_weight(
     )
 
 
-def river_material_mask(projection: dict, *, core: bool = False) -> np.ndarray:
-    image = Image.new("L", (MATERIAL_W, MATERIAL_H), 0)
+def river_material_image(
+    projection: dict,
+    *,
+    core: bool = False,
+    size: tuple[int, int] = (MATERIAL_W, MATERIAL_H),
+    mode: str = "L",
+) -> Image.Image:
+    image = Image.new(mode, size, 0)
     draw = ImageDraw.Draw(image)
+    fill = 1 if mode == "1" else 255
 
     for river in projection["rivers"]:
         source_points = river_control_points(river)
         points = natural_path(
             source_points,
-            (MATERIAL_W, MATERIAL_H),
+            size,
             key=f"river:{river['key']}",
             closed=False,
             amplitude=float(river.get("wander", 0.0015)),
@@ -1071,7 +1084,7 @@ def river_material_mask(projection: dict, *, core: bool = False) -> np.ndarray:
         nominal = max(
             float(minimum_width),
             float(river["width"])
-            * MATERIAL_H
+            * size[1]
             * visibility_scale
             * float(river.get("material_scale", 1.0)),
         )
@@ -1081,15 +1094,33 @@ def river_material_mask(projection: dict, *, core: bool = False) -> np.ndarray:
         for index, (start, end) in enumerate(zip(points, points[1:])):
             progress = (index + 0.5) / segments
             width = max(2, round(nominal * (1.0 - growth + progress * growth)))
-            draw.line((start, end), fill=255, width=width)
+            draw.line((start, end), fill=fill, width=width)
             radius = width // 2
             if radius:
                 for x, y in (start, end):
                     draw.ellipse(
                         (x - radius, y - radius, x + radius, y + radius),
-                        fill=255,
+                        fill=fill,
                     )
-    return np.asarray(image, dtype=np.uint8) > 0
+    return image
+
+
+def river_material_mask(projection: dict, *, core: bool = False) -> np.ndarray:
+    return np.asarray(
+        river_material_image(projection, core=core),
+        dtype=np.uint8,
+    ) > 0
+
+
+@functools.lru_cache(maxsize=1)
+def runtime_river_core_source() -> Image.Image:
+    projection = json.loads(PROJECTION_CONTROL.read_text(encoding="utf-8"))
+    return river_material_image(
+        projection,
+        core=True,
+        size=(RUNTIME_RIVER_W, RUNTIME_RIVER_H),
+        mode="1",
+    )
 
 
 def render_material_source() -> np.ndarray:
@@ -1430,7 +1461,9 @@ def render_material_source() -> np.ndarray:
     # EU5's terrain-material renderer treats the river channel as dominant,
     # not as a soft blend. Paint only the nested source-aligned water core;
     # the wider authored incision already supplies valley and bank geometry.
-    material[river_cores] = MATERIAL_RIVER
+    # Preserve the dry material below channel 6. The runtime tile stage clears
+    # this coarse bit and replaces it with the full-resolution one-bit core.
+    material[river_cores] |= MATERIAL_RIVER
     # River painting is intentionally later than the general terrain stack,
     # but 115 high-resolution samples cross a lake-biome shore/core. Restore
     # pond precedence so no dirt-river blend can puncture the still-water read.
@@ -1593,6 +1626,32 @@ def transformed_material_tile(
         fillcolor=0,
     )
     material = np.asarray(tile, dtype=np.uint16).copy()
+    if mip <= 3:
+        river_source = runtime_river_core_source()
+        river_scale = (2**mip) * river_source.width / SOURCE_W
+        river_x_offset = (tile_x * TILE_SIZE - BORDER_SIZE) * river_scale
+        river_y_offset = (tile_y * TILE_SIZE - BORDER_SIZE) * river_scale
+        river_tile = river_source.transform(
+            (STORED_TILE_SIZE, STORED_TILE_SIZE),
+            Image.Transform.AFFINE,
+            (
+                river_scale,
+                0.0,
+                river_x_offset,
+                0.0,
+                river_scale,
+                river_y_offset,
+            ),
+            resample=Image.Resampling.NEAREST,
+            fillcolor=0,
+        )
+        runtime_river = np.asarray(river_tile, dtype=np.uint8) != 0
+        # Clearing the coarse 8x-expanded bit reveals the preserved underlying
+        # terrain. Exact still-water ponds retain final precedence.
+        pond_support = material == MATERIAL_WETLAND_COAST
+        land_support = (material != 0) & ~pond_support
+        material &= np.uint16(0xFFFF ^ int(MATERIAL_RIVER))
+        material[runtime_river & land_support] = MATERIAL_RIVER
     # Vanilla's material cache, like its height cache, contains native virtual-
     # texture detail absent from the coarse 8192-wide source. Keep every
     # authored material logic, but let the physical cache relief select
@@ -1989,6 +2048,7 @@ def write() -> None:
         "tile_order": "fine_to_coarse_row_major_y_inverted",
         "height_quantum": HEIGHT_QUANTUM,
         "material_resolution": [MATERIAL_W, MATERIAL_H],
+        "runtime_river_resolution": [RUNTIME_RIVER_W, RUNTIME_RIVER_H],
         "material_sources": material_sources,
         "mip_layout": [
             [mip, width, height]
@@ -2095,6 +2155,11 @@ def check(*, quiet: bool = False) -> list[str]:
         failures.append("terrain cache does not match the authored height source")
     if manifest.get("material_resolution") != [MATERIAL_W, MATERIAL_H]:
         failures.append("terrain cache has the wrong material source resolution")
+    if manifest.get("runtime_river_resolution") != [
+        RUNTIME_RIVER_W,
+        RUNTIME_RIVER_H,
+    ]:
+        failures.append("terrain cache has the wrong runtime river resolution")
     if manifest.get("material_sources") != material_source_hashes():
         failures.append("terrain cache does not match its Arda material sources")
     if manifest.get("tile_count") != tile_count():

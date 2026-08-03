@@ -540,3 +540,20 @@
 - NEXT: use selective exact-slug reruns for any specific weak feature, continue the
   feature-level source comparison, and change only demonstrable source or hierarchy
   defects. This evidence checkpoint does not close the nine-theatre M2 owner gate.
+
+## Current v90 native-bank candidate
+
+- ACCEPTED LIVE MECHANISM: preserve v53's full-virtual-resolution one-bit river core over
+  the unchanged 8K general material source. Same-camera A/B proves continuous curves in
+  place of 8×8 material stair-steps on Anduin, Celebrant, Brandywine, Harnen, and
+  Morgulduin, with unchanged source courses and width hierarchy.
+- Preserve the verified height cache, 102-course control, twelve parser-safe engine
+  channels, pond precedence, and all non-river material bytes derived by the generator.
+  Never use the smoother edges as a reason to restore rejected broad water bands.
+- Candidate fingerprint is
+  `0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`.
+  Focused fresh playback is green for 45 seconds with zero recovery and the unchanged
+  1,486-byte error log. Repository-wide validation passed in 405.1 seconds and paired
+  smoke passed in 202.1 seconds with zero new lines. Repeat validation/smoke on the final
+  documentation fingerprint, assert the exact smoke record, commit, and push. M2 stays
+  red after those gates.
