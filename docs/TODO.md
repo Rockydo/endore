@@ -3,16 +3,18 @@
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
    receives explicit owner acceptance. The current v98 source-audited runtime tree loads
-   and ticks cleanly, but the nine-theatre visual gate remains red pending direct owner
-   re-review.
-2. REOPENED M2 MOUNTAINS — current relief remains too broad, low, rounded, and plateaued.
-   Retain source-pinned axes/peaks/saddles and separate impassability, but rebuild the
-   cross-range profile for substantially taller, narrower, jagged crests with secondary
-   ridges and irregular peak chains rather than flat-topped high hills. Audit Mordor's
-   Ered Lithui/Ephel Dúath/Mountains of Shadow structure and every northern range directly
-   against `arda-maps.org/ages/third` and Ardacraft before accepting a vertex or axis.
-   Erebor must read unmistakably as one isolated Lonely Mountain, not part of a broad
-   upland or range. Verify all named passes at close 3D zoom without opening them.
+   and ticks cleanly. The fresh v99 evidence set covers the full map, all nine theatres,
+   four core hydrology views, and focused Lothlorien/Gundabad/Erebor/Mirrormere/Nindalf
+   pairs on the exact same fingerprint, followed by 45 seconds of clean maximum-speed
+   Observer playback. The visual gate remains red pending direct owner re-review.
+2. M2 MOUNTAINS — ACCEPTED CURRENT MECHANISM / FREEZE. The owner's later live review
+   explicitly found that the mountains finally read as mountains, superseding the early
+   v30-v46 rejection language below. Preserve the current source-pinned axes, exact
+   named summits, low pass saddles, sharp renderer profile, Mordor enclosure, northern
+   chains, and isolated Erebor. The v99 focused Gundabad/Erebor plus nine-theatre close
+   frames show the retained 3D mechanism on the current fingerprint. Change mountain
+   data only for a newly named, source-demonstrated defect; do not revive v45 or execute
+   the old v46 experiment instructions. The following chronology is archival evidence.
    The first v30 source-field profile was live-rejected because exponent 0.82 widened its
    correct branches into broad high hills. v31 used exponent 1.38 and loaded/ticked cleanly,
    but like-for-like live Gundabad, Erebor, Morannon, Orodruin, and Dunharrow views rejected

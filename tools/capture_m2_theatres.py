@@ -63,6 +63,25 @@ HYDROLOGY_VIEWS = (
     Theatre("13_entwash", "Framham", "Framham"),
 )
 
+# The nine theatres prove continental coverage, but several owner-sensitive
+# mechanisms can fall between their camera centres. Keep them in the same
+# fresh renderer session so canopy density, isolated summits, and terrain-
+# native small water are never accepted from stale or incomparable captures.
+# Forest and sub-location-water close frames use finder maximum-close because
+# both object density and tiny irregular water outlines disappear rapidly one
+# detent farther out in build 24187685.
+FOCUSED_PHYSICAL_VIEWS = (
+    Theatre("27_lothlorien_canopy", "Caras Galadhon", "Caras Galadhon", 2, 0),
+    # The literal settlement name also matches a generated "Gundabad
+    # Heights" far to the south. Coldpoint Heights is the unique closest
+    # localized mountain cell to the audited summit and keeps the camera on
+    # the intended northern junction without renaming game content.
+    Theatre("28_gundabad", "Coldpoint Heights", "Coldpoint Heights", 4, 1),
+    Theatre("29_erebor", "Erebor", "Erebor", 4, 1),
+    Theatre("30_mirrormere", "Lake Alderbank", "Lake Alderbank", 2, 0),
+    Theatre("31_nindalf", "Nen Emyn adarath", "Nen Emyn adarath", 2, 0),
+)
+
 # A separate focused run covers the other binding major trunks and named
 # affluents without making the established nine-theatre default audit slower.
 # Anchors are deliberately ASCII finder queries and uniquely localized below.
@@ -115,6 +134,10 @@ SOURCE_TARGETS = {
     "Minas Morgul": (0.607326, 0.595506, "me_ithilien_region"),
     "Goldenhall": (0.522100, 0.269174, "me_anduin_vale_region"),
     "Field of Celebrant": (0.539194, 0.417196, "me_anduin_vale_region"),
+    "Coldpoint Heights": (0.502345, 0.102487, "me_northern_wastes_region"),
+    "Erebor": (0.599699, 0.137606, "me_dale_region"),
+    "Lake Alderbank": (0.496887, 0.330666, "me_anduin_vale_region"),
+    "Nen Emyn adarath": (0.580500, 0.511200, "me_brown_lands_region"),
 }
 MAX_TARGET_DISTANCE = 0.012
 
@@ -191,7 +214,12 @@ def check_manifest() -> list[str]:
     ]
     projection = json.loads(PROJECTION.read_text(encoding="utf-8"))
     rivers = {item["key"]: item for item in projection["rivers"]}
-    all_views = THEATRES + HYDROLOGY_VIEWS + DRAINAGE_VIEWS
+    all_views = (
+        THEATRES
+        + HYDROLOGY_VIEWS
+        + DRAINAGE_VIEWS
+        + FOCUSED_PHYSICAL_VIEWS
+    )
     for theatre in all_views:
         for role, query in (
             ("regional", theatre.regional_query),
@@ -322,7 +350,12 @@ def capture(
                 if result:
                     return result
         if target_slugs:
-            all_views = THEATRES + HYDROLOGY_VIEWS + DRAINAGE_VIEWS
+            all_views = (
+                THEATRES
+                + HYDROLOGY_VIEWS
+                + DRAINAGE_VIEWS
+                + FOCUSED_PHYSICAL_VIEWS
+            )
             by_slug = {item.slug: item for item in all_views}
             targets = tuple(by_slug[slug] for slug in target_slugs)
         elif drainage_only:
@@ -330,7 +363,7 @@ def capture(
         elif hydrology_only:
             targets = HYDROLOGY_VIEWS
         else:
-            targets = THEATRES + HYDROLOGY_VIEWS
+            targets = THEATRES + HYDROLOGY_VIEWS + FOCUSED_PHYSICAL_VIEWS
         for theatre in targets:
             result = reset_and_capture(
                 theatre.regional_query,
@@ -398,7 +431,13 @@ def main() -> int:
             slug.strip() for slug in args.targets.split(",") if slug.strip()
         )
         known_slugs = {
-            item.slug for item in THEATRES + HYDROLOGY_VIEWS + DRAINAGE_VIEWS
+            item.slug
+            for item in (
+                THEATRES
+                + HYDROLOGY_VIEWS
+                + DRAINAGE_VIEWS
+                + FOCUSED_PHYSICAL_VIEWS
+            )
         }
         unknown_slugs = sorted(set(target_slugs) - known_slugs)
         if unknown_slugs:

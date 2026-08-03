@@ -1666,3 +1666,19 @@ Increase upper/lower Anduin core scales to 0.72/0.68 and retain stronger but sub
 class scales for reviewed trunks, branches, tributaries, and feeders. The wet-bank nesting
 contract remains mandatory. This is renderer-scale hierarchy, not a claim about measured
 river miles, canon names for the new paths, navigability, or engine-river status.
+
+## 2026-08-03 - Make focused physical proofs part of the default M2 atlas
+
+The continental nine-theatre set remains necessary but is insufficient for mechanisms
+whose visibility is highly camera-scale dependent. Every default full atlas must also
+capture maximum-close Lothlorien canopy and small-water views at Mirrormere and Nindalf,
+plus source-bound close relief views for Gundabad and isolated Erebor. Keep these in the
+same fresh renderer session and exact fingerprint as the continental pairs.
+
+Use unique localized Coldpoint Heights for the Gundabad finder because the literal name
+also matches a generated southern `Gundabad Heights`; bind the resolved location to the
+audited Mount Gundabad coordinate instead of trusting finder text. Treat regional frames
+as orientation only. Terrain conclusions require the corresponding close physical frame.
+An unchanged payload that passes this stronger atlas should be frozen unless a named,
+source-demonstrated defect appears; evidence expansion alone is not permission to churn
+accepted terrain or mark the owner gate green.

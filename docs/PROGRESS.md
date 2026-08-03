@@ -1818,3 +1818,22 @@
   Eight regional/close pairs prove upper/lower Anduin, Celebrant, Entwash, Baranduin,
   Greyflood, Isen, and Celduin. Playback ran 45 seconds at maximum speed with zero
   recovery and the unchanged 1,486-byte error log. M2 remains red for direct owner review.
+
+## 2026-08-03 - v99 complete current-fingerprint visual gate
+
+- Expanded the default M2 atlas with focused pairs for Lothlorien canopy density,
+  Gundabad, isolated Erebor, Mirrormere, and the Nindalf wetland cluster. Every finder
+  query resolves to committed localization and is bound to an exact normalized source
+  coordinate and strategic region. The ambiguous literal Gundabad query is deliberately
+  replaced by unique Coldpoint Heights, the closest localized mountain cell to the
+  audited summit.
+- A fresh no-debug New Game entered HUD-proven Observer on unchanged fingerprint
+  `696cfc31bacb10bf238fa91becbff9e6678281d808d17bf99145fc56ea007f18` and captured the
+  full map, all nine regional/close theatres, four core hydrology pairs, and all five
+  focused physical pairs under `docs/screens/20260803_v99_full_atlas/`.
+- Native-resolution review confirms that the current payload retains dense Mirkwood and
+  Lothlorien canopies, visible 3D relief across the audited ranges, isolated Erebor,
+  source-shaped small-water material, and a dominant upper/lower Anduin. Playback then
+  ran 45 seconds at maximum speed with zero recovery and no change to the 1,486-byte
+  baseline error log. No game-visible correction is justified by this pass; M2 remains
+  red solely for explicit owner acceptance.

@@ -1,6 +1,8 @@
 # M2 owner review — current physical map
 
-Status: v98 awaits direct owner re-review; the previous v93 rejection keeps the gate red.
+Status: the v98 map payload awaits direct owner re-review; v99 is its fresh complete
+nine-theatre and focused-feature evidence set. The previous v93 rejection keeps the gate
+red until the owner explicitly accepts the current result.
 
 ## Exact candidate
 
@@ -9,9 +11,12 @@ Status: v98 awaits direct owner re-review; the previous v93 rejection keeps the 
 - Generator: v56 native-resolution river cores, enlarged Great River hierarchy, 102
   reviewed Arda Maps courses, and 61 curated source-connected Ardacraft affluents, with
   v94's compact Nan Curunir political correction.
-- Runtime proof: fresh HUD-proven Observer, eight source-bound river camera pairs,
-  45-second maximum-speed playback, zero recovery, and unchanged 1,486-byte baseline
-  error log. Full repository validation passes in 428.6 seconds.
+- Runtime proof: v98 supplied eight source-bound river camera pairs; v99 independently
+  supplied the full map, all nine regional/close theatre pairs, four core hydrology pairs,
+  and focused close pairs for Lothlorien, Gundabad, Erebor, Mirrormere, and Nindalf.
+  Both fresh HUD-proven Observer sessions completed 45-second maximum-speed playback with
+  zero recovery and the unchanged 1,486-byte baseline error log. Full repository
+  validation for the unchanged game-visible candidate passes in 428.6 seconds.
 
 ## Launch with physical terrain enabled
 
@@ -43,6 +48,7 @@ does not overwrite personal audio, display-mode, or UI choices.
 | `docs/screens/20260803_v93_anduin_scale/` | Same-camera owner-calibrated upper/lower Anduin scale and clean 45-second playback. |
 | `docs/screens/20260803_v94b_gap_political/` | Final-fingerprint source-bound Fords regional/close pair proving compact Isengard, separate Dunland/Fangorn/Rohan, live terrain, and clean playback. |
 | `docs/screens/20260803_v98_curated_affluents/` | Current upper/lower Anduin and six other course pairs after rejecting blocky v95-v97 feeder mechanisms. |
+| `docs/screens/20260803_v99_full_atlas/` | Current-fingerprint full map, all nine theatre pairs, four core hydrology pairs, and focused Lothlorien/Gundabad/Erebor/Mirrormere/Nindalf physical pairs; clean 45-second playback. |
 
 Screenshots are reproducible, ignored working evidence rather than shipped mod payload.
 Regional frames establish position and political context; the corresponding close frames
@@ -63,6 +69,9 @@ The current technical review supports these statements, but not visual acceptanc
 - the 102 committed courses remain source-backed and connected; v98 makes Anduin visibly
   dominant and adds only 61 directly source-connected, unnamed affluents after rejecting
   three denser but artificial-looking mechanisms;
+- v99 close frames independently show dense Mirkwood and Lothlorien canopies, fully 3D
+  Misty/White/northern relief, isolated Erebor, exact small-water material at Mirrormere
+  and Nindalf, and dominant upper/lower Anduin width on the unchanged candidate;
 - all 38 realm assignments satisfy their source/anchor contracts with no unreviewed
   political component; Isengard is a compact 13-location Nan Curunir claim and the Fords
   resolve outside it.
