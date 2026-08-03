@@ -32,19 +32,22 @@ class Theatre:
     close_zoom: int = 1
 
 
-# Queries deliberately resolve to one generated display name.  This avoids the
-# ambiguous Dol Amroth/Edhellond finder evidence that previously centred either
-# open sea or an inland cell and therefore proved nothing about Belfalas.
+# Physical-theatre cameras are feature-specific. Forest objects disappear one
+# detent before the finder's maximum-close camera in build 24187685, while
+# relief and material remain readable there. Regional frames deliberately
+# retain map orientation; close frames are the binding 3D evidence. Keep the
+# hydrology defaults above for river pairs, but bind forests to maximum close.
+# Queries deliberately resolve to one generated display name.
 THEATRES = (
-    Theatre("01_shire_old_forest", "The Old Forest", "The Old Forest"),
-    Theatre("02_forochel", "Forochel Camp", "Forochel Camp"),
-    Theatre("03_misty_anduin", "Caras Galadhon", "Khazad"),
-    Theatre("04_mirkwood", "Woodmen's Hall", "Woodmen's Hall"),
-    Theatre("05_rohan_white", "Edoras", "Dunharrow"),
-    Theatre("06_gondor_belfalas", "Dol Amroth", "Dol Amroth", 7, 2),
-    Theatre("07_mordor", "Morannon", "Barad"),
-    Theatre("08_rhun", "Burh Gath", "Burh Gath"),
-    Theatre("09_harad", "Qarsad", "Qarsad"),
+    Theatre("01_shire_old_forest", "The Old Forest", "The Old Forest", 2, 0),
+    Theatre("02_forochel", "Forochel Camp", "Forochel Camp", 4, 1),
+    Theatre("03_misty_anduin", "Caras Galadhon", "Khazad", 4, 1),
+    Theatre("04_mirkwood", "Woodmen's Hall", "Woodmen's Hall", 2, 0),
+    Theatre("05_rohan_white", "Edoras", "Dunharrow", 4, 1),
+    Theatre("06_gondor_belfalas", "Edhellond", "Edhellond", 4, 1),
+    Theatre("07_mordor", "Morannon", "Orodruin", 4, 1),
+    Theatre("08_rhun", "Burh Gath", "Burh Gath", 4, 1),
+    Theatre("09_harad", "Qarsad", "Qarsad", 4, 1),
 )
 
 # The nine-theatre gate proves continental coverage; these two additional
@@ -95,9 +98,9 @@ SOURCE_TARGETS = {
     "Khazad": (0.490110, 0.335613, "me_anduin_vale_region"),
     "Edoras": (0.498657, 0.538349, "me_rohan_region"),
     "Dunharrow": (0.496703, 0.553004, "me_rohan_region"),
-    "Dol Amroth": (0.489133, 0.672692, "me_belfalas_region"),
+    "Edhellond": (0.501832, 0.646800, "me_belfalas_region"),
     "Morannon": (0.609768, 0.529555, "me_brown_lands_region"),
-    "Barad": (0.643956, 0.573522, "me_mordor_region"),
+    "Orodruin": (0.628571, 0.576942, "me_mordor_region"),
     "Osgiliath": (0.592430, 0.603811, "me_ithilien_region"),
     "Brandywine Bridge": (0.381197, 0.227162, "me_shire_breeland_region"),
     "Winterhaven Waste": (0.316728, 0.115779, "me_forochel_region"),

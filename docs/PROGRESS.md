@@ -1661,3 +1661,27 @@
   Repository-wide validation passed in 405.1 seconds. Paired vanilla/Endórë smoke passed
   in 202.1 seconds with zero new lines. Final living-document validation and exact smoke
   binding are being repeated before commit; M2 remains red regardless.
+
+## 2026-08-03 - v91 full atlas and feature-specific camera correction
+
+- Sealed v90 after a final 422.6-second repository validation, exact 202.1-second paired
+  smoke with zero new lines, and `assert-smoked` on fingerprint
+  `0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`.
+  Commit `5e32785` is pushed to `origin/main`.
+- Captured the complete nine-theatre plus four-course hydrology atlas on that exact tree
+  in 721 seconds. Fresh New Game reached HUD-proven Observer and completed 45 seconds at
+  maximum speed with zero recovery and the unchanged 1,486-byte error log.
+- Rejected three misleading v91 camera conclusions rather than changing terrain from
+  them. A one-detent zoom-out hides forest objects; Dol Amroth centered its sea cell; and
+  Barad-dur did not frame Mount Doom. The renderer data itself remained intact.
+- Updated the source-bound manifest to use maximum-close forest cameras, unique Edhellond
+  land for Belfalas, and exact Orodruin for Mordor close evidence. A focused v91b fresh
+  run completed in 345.4 seconds with the same clean 45-second playback. It proves dense
+  Mirkwood, a dense source-shaped Old Forest core with porous surroundings, Belfalas land
+  and drainage at Edhellond, and compact cratered Orodruin. All localization, coordinate,
+  region, and river-camera contracts pass.
+- The current Anduin views remain visibly dominant over their affluents; the lower reach
+  at Osgiliath is especially broad. Do not globally widen the v53 hierarchy. Continue the
+  remaining course-by-course source-edge review and change only a demonstrated local
+  width, confluence, or coverage defect. M2 remains red pending the complete visual audit
+  and explicit owner acceptance.

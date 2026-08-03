@@ -541,7 +541,7 @@
   feature-level source comparison, and change only demonstrable source or hierarchy
   defects. This evidence checkpoint does not close the nine-theatre M2 owner gate.
 
-## Current v90 native-bank candidate
+## Current v90 native-bank checkpoint
 
 - ACCEPTED LIVE MECHANISM: preserve v53's full-virtual-resolution one-bit river core over
   the unchanged 8K general material source. Same-camera A/B proves continuous curves in
@@ -554,6 +554,23 @@
   `0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`.
   Focused fresh playback is green for 45 seconds with zero recovery and the unchanged
   1,486-byte error log. Repository-wide validation passed in 405.1 seconds and paired
-  smoke passed in 202.1 seconds with zero new lines. Repeat validation/smoke on the final
-  documentation fingerprint, assert the exact smoke record, commit, and push. M2 stays
-  red after those gates.
+  smoke passed in 202.1 seconds with zero new lines. Final validation passed in 422.6
+  seconds, the exact smoke assertion passed, and commit `5e32785` is pushed. M2 stays red.
+
+## Current v91 evidence checkpoint
+
+- The exact v90 tree completed a fresh full nine-theatre plus four-course hydrology atlas
+  in 721 seconds, followed by 45 seconds of maximum-speed playback with zero recovery and
+  the unchanged 1,486-byte error log. Treat this as technical coverage, not blanket visual
+  acceptance.
+- Reject v91's one-detent forest close frames and its Dol Amroth/Barad-dur conclusions:
+  those cameras hid forest objects, centered a sea cell, or omitted Orodruin. The v91b
+  manifest instead binds Old Forest and Mirkwood to maximum close, Belfalas to unique
+  Edhellond land, and Mordor close evidence to exact Orodruin. Its focused fresh run
+  completed in 345.4 seconds with clean playback and confirms the intended physical
+  features.
+- NEXT: run the remaining source-bound drainage views on v53's native-bank cache and
+  compare each visible course, bank, and confluence against the committed 102-course
+  Arda Maps control. Preserve the current Anduin hierarchy unless a specific view proves
+  a local defect. Continue the unresolved nine-theatre source-edge/material review; M2
+  remains red pending explicit owner acceptance.

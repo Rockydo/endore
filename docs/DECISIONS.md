@@ -1563,3 +1563,17 @@ valid terrain rather than empty cache pixels. Preserve exact still-water pond pr
 This is a sampling-resolution correction, not permission to widen rivers, add uncited
 courses, alter height incision, or promote physical affluents into the rejected engine
 river graph.
+
+## 2026-08-03 - Bind physical evidence to feature-specific cameras
+
+Do not use one generic finder-relative zoom pair as visual evidence for every physical
+layer. In build 24187685, forest objects disappear one detent before the finder-created
+maximum-close camera even though terrain relief and river material remain visible. Keep
+regional frames as orientation evidence, use maximum close for Old Forest and Mirkwood
+objects, and retain one-detent close views for relief, materials, coasts, and rivers.
+
+Replace the inconclusive Dol Amroth sea-cell camera with the unique localized Edhellond
+land location. Replace the Mordor interior close camera with the exact Orodruin landmark,
+while Morannon remains the regional gate anchor. Every replacement stays bound to its
+committed location coordinate and strategic region. Reject v91 frames whose camera scale
+hid the feature under judgment; do not reinterpret them as a terrain regression.
