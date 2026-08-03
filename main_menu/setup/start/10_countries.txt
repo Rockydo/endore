@@ -2157,12 +2157,8 @@ countries = {
 				me_land_0707
 				me_land_0870
 				me_land_0906
-				me_land_1935
 				me_land_3067
 				me_land_3746
-				me_land_4163
-				me_land_4241
-				me_land_4950
 			}
 			starting_technology_level = 3
 

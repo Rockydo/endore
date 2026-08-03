@@ -1837,3 +1837,29 @@
   ran 45 seconds at maximum speed with zero recovery and no change to the 1,486-byte
   baseline error log. No game-visible correction is justified by this pass; M2 remains
   red solely for explicit owner acceptance.
+
+## 2026-08-03 - v100 compact Erebor political correction
+
+- Replaced Erebor's source-inconsistent east-west strip with a compact nine-vertex claim
+  around the exact Lonely Mountain coordinate. ERE now owns nine connected locations
+  inside `x=0.588523..0.612454`, `y=0.123107..0.139228`; the four released locations
+  (`me_land_1935`, `me_land_4163`, `me_land_4241`, `me_land_4950`) return to deliberate
+  wild land. Dale and the Iron Hills are unchanged, all 38 realms remain present, and all
+  political silhouette contracts pass.
+- Regenerated the downstream M3-M5 ownership, people, census, localization, templates,
+  and setup layers. Deterministic naming changed the Celduin/Carnen camera labels from
+  Dalestrand/Gundgathol to Lakestrand/Gatholgathol without moving either source coordinate,
+  strategic region, or river geometry.
+- A fresh no-debug New Game entered HUD-proven Observer on fingerprint
+  `24b205efa0a037f7ae37b40cd15294d86fbbd32eac88749b97dd0005e854ab78` and captured
+  regional and close Erebor evidence under
+  `docs/screens/20260803_v100_compact_erebor/`. The regional frame proves the compact
+  political holding; the close frame retains the isolated physical summit. Playback ran
+  45 seconds at maximum speed with zero recovery and no change to the 1,486-byte log.
+- The first paired smoke attempt suffered a vanilla-control `nvtt.dll` access violation
+  while two orphaned ENDÓRË audit interpreters consumed roughly 17 GB of private memory.
+  Their exact PIDs and command lines matched the two earlier timed-out read-only probes.
+  After terminating only those owned orphans, free memory recovered to about 19.7 GB and
+  the unchanged candidate passed paired vanilla/mod smoke with zero new error lines. This
+  was a host-resource failure, not a candidate regression. M2 remains red pending direct
+  owner acceptance.

@@ -1,22 +1,24 @@
 # M2 owner review — current physical map
 
-Status: the v98 map payload awaits direct owner re-review; v99 is its fresh complete
-nine-theatre and focused-feature evidence set. The previous v93 rejection keeps the gate
-red until the owner explicitly accepts the current result.
+Status: the v100 map payload awaits direct owner re-review. v99 is the complete physical
+atlas; v100 adds the compact Erebor political correction and its fresh regional/close
+proof. The previous v93 rejection keeps the gate red until the owner explicitly accepts
+the current result.
 
 ## Exact candidate
 
 - Game-visible fingerprint:
-  `696cfc31bacb10bf238fa91becbff9e6678281d808d17bf99145fc56ea007f18`
+  `24b205efa0a037f7ae37b40cd15294d86fbbd32eac88749b97dd0005e854ab78`
 - Generator: v56 native-resolution river cores, enlarged Great River hierarchy, 102
   reviewed Arda Maps courses, and 61 curated source-connected Ardacraft affluents, with
-  v94's compact Nan Curunir political correction.
+  v94's compact Nan Curunir and v100's compact Erebor political corrections.
 - Runtime proof: v98 supplied eight source-bound river camera pairs; v99 independently
   supplied the full map, all nine regional/close theatre pairs, four core hydrology pairs,
   and focused close pairs for Lothlorien, Gundabad, Erebor, Mirrormere, and Nindalf.
-  Both fresh HUD-proven Observer sessions completed 45-second maximum-speed playback with
-  zero recovery and the unchanged 1,486-byte baseline error log. Full repository
-  validation for the unchanged game-visible candidate passes in 428.6 seconds.
+  v100 then supplied a fresh regional/close Erebor pair after its political correction.
+  All three HUD-proven Observer sessions completed 45-second maximum-speed playback with
+  zero recovery and the unchanged 1,486-byte baseline error log. The final v100 candidate
+  passes paired vanilla/mod smoke with zero new error lines.
 
 ## Launch with physical terrain enabled
 
@@ -49,6 +51,7 @@ does not overwrite personal audio, display-mode, or UI choices.
 | `docs/screens/20260803_v94b_gap_political/` | Final-fingerprint source-bound Fords regional/close pair proving compact Isengard, separate Dunland/Fangorn/Rohan, live terrain, and clean playback. |
 | `docs/screens/20260803_v98_curated_affluents/` | Current upper/lower Anduin and six other course pairs after rejecting blocky v95-v97 feeder mechanisms. |
 | `docs/screens/20260803_v99_full_atlas/` | Current-fingerprint full map, all nine theatre pairs, four core hydrology pairs, and focused Lothlorien/Gundabad/Erebor/Mirrormere/Nindalf physical pairs; clean 45-second playback. |
+| `docs/screens/20260803_v100_compact_erebor/` | Fresh regional/close proof that Erebor is a compact nine-cell holding around its unchanged isolated summit; clean 45-second playback. |
 
 Screenshots are reproducible, ignored working evidence rather than shipped mod payload.
 Regional frames establish position and political context; the corresponding close frames
@@ -74,7 +77,8 @@ The current technical review supports these statements, but not visual acceptanc
   and Nindalf, and dominant upper/lower Anduin width on the unchanged candidate;
 - all 38 realm assignments satisfy their source/anchor contracts with no unreviewed
   political component; Isengard is a compact 13-location Nan Curunir claim and the Fords
-  resolve outside it.
+  resolve outside it; Erebor is a compact nine-location Lonely Mountain claim, while Dale
+  and the Iron Hills remain separate and unchanged.
 
 Review v98's rendered width and visible network density against both accepted map sources.
 Additional courses remain prohibited unless source-traced or lore-attested; no decorative

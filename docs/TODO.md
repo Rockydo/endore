@@ -2,11 +2,12 @@
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
-   receives explicit owner acceptance. The current v98 source-audited runtime tree loads
-   and ticks cleanly. The fresh v99 evidence set covers the full map, all nine theatres,
-   four core hydrology views, and focused Lothlorien/Gundabad/Erebor/Mirrormere/Nindalf
-   pairs on the exact same fingerprint, followed by 45 seconds of clean maximum-speed
-   Observer playback. The visual gate remains red pending direct owner re-review.
+   receives explicit owner acceptance. The current v100 source-audited runtime tree loads
+   and ticks cleanly. v99 covers the full physical atlas; v100 adds a fresh regional/close
+   pair proving Erebor's corrected compact political silhouette around its unchanged
+   isolated summit. The exact v100 candidate completed 45 seconds of clean maximum-speed
+   Observer playback and a clean paired smoke. The visual gate remains red pending direct
+   owner re-review.
 2. M2 MOUNTAINS — ACCEPTED CURRENT MECHANISM / FREEZE. The owner's later live review
    explicitly found that the mountains finally read as mountains, superseding the early
    v30-v46 rejection language below. Preserve the current source-pinned axes, exact
@@ -634,7 +635,7 @@
   owner review supersedes its visual conclusion. M2 remains red; gameplay content remains
   blocked.
 
-## Current v98 curated-affluent candidate
+## Current v100 map candidate
 
 - Retain the 102-course Arda Maps atlas and twelve-channel parser graph. v98 enlarges the
   upper/lower Anduin native cores to 0.72/0.68 scale, strengthens ordinary reviewed river
@@ -655,3 +656,9 @@
 - Static cartography, controls, height, self-contained terrain-cache, and river-raster
   checks pass. M2 stays red until direct owner review accepts the visible result; do not
   resume gameplay or lore-content production.
+- v100 contracts Erebor from a thirteen-cell east-west strip to nine connected cells
+  around the exact Lonely Mountain source coordinate. Four overextended cells return to
+  deliberate wild land; Dale and the Iron Hills do not move. Fresh evidence under
+  `docs/screens/20260803_v100_compact_erebor/` proves the political correction and the
+  retained isolated summit on fingerprint
+  `24b205efa0a037f7ae37b40cd15294d86fbbd32eac88749b97dd0005e854ab78`.

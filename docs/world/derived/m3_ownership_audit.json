@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3194,
-  "wild_locations": 2006,
+  "owned_locations": 3190,
+  "wild_locations": 2010,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -549,7 +549,7 @@
       ]
     },
     "ERE": {
-      "rationale": "Erebor and its immediate mountain approaches",
+      "rationale": "Lonely Mountain and its immediate source-centred approaches",
       "claim_bounds": [
         0.57,
         0.63,
@@ -558,26 +558,63 @@
       ],
       "source_zone": null,
       "source_dilation_pixels": null,
-      "claim_polygon": null,
-      "locations": 13,
-      "eligible_locations": 78,
-      "claim_fill_fraction": 0.166667,
+      "claim_polygon": [
+        [
+          0.5997,
+          0.118
+        ],
+        [
+          0.609,
+          0.121
+        ],
+        [
+          0.614,
+          0.128
+        ],
+        [
+          0.614,
+          0.138
+        ],
+        [
+          0.607,
+          0.146
+        ],
+        [
+          0.598,
+          0.148
+        ],
+        [
+          0.589,
+          0.143
+        ],
+        [
+          0.585,
+          0.133
+        ],
+        [
+          0.589,
+          0.123
+        ]
+      ],
+      "locations": 9,
+      "eligible_locations": 10,
+      "claim_fill_fraction": 0.9,
       "forced_anchors": 1,
       "final_bbox": [
         0.5885226,
-        0.6273504,
-        0.1201759,
+        0.6124542,
+        0.123107,
         0.1392281
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 13,
+        "largest_component": 9,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 13,
+            "size": 9,
             "forced_anchors": 1,
             "sample": [
               "erebor",
@@ -2696,12 +2733,12 @@
     },
     "ERE": {
       "components": 1,
-      "largest_component": 13,
+      "largest_component": 9,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 13,
+          "size": 9,
           "forced_anchors": 1,
           "sample": [
             "erebor",

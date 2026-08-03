@@ -1682,3 +1682,22 @@ as orientation only. Terrain conclusions require the corresponding close physica
 An unchanged payload that passes this stronger atlas should be frozen unless a named,
 source-demonstrated defect appears; evidence expansion alone is not permission to churn
 accepted terrain or mark the owner gate green.
+
+## 2026-08-03 - Contract Erebor to the Lonely Mountain
+
+Replace Erebor's elongated thirteen-location strip with a nine-vertex claim centred on
+the exact Lonely Mountain source coordinate. Bind the silhouette to seven through twelve
+connected locations and normalized bounds `x=0.585..0.614`, `y=0.118..0.148`. This keeps
+the kingdom visually distinct from Dale, the Woodland Realm, the Grey Mountains, and the
+Iron Hills while preserving the isolated physical summit already accepted in live review.
+
+The resulting claim owns nine connected locations. Release exactly `me_land_1935`,
+`me_land_4163`, `me_land_4241`, and `me_land_4950` from ERE to deliberate wild land; do
+not infer a replacement owner without source evidence. Regenerate the downstream people,
+census, localization, templates, and setup deterministically. Two camera labels may move
+when the naming allocation is regenerated, but their bound Celduin and Carnen coordinates
+must not move.
+
+Accept this correction only with a fresh no-debug Observer view centred on Erebor, clean
+maximum-speed playback, full validation, and exact-fingerprint paired smoke. Keep M2 red
+for direct owner acceptance after the correction.

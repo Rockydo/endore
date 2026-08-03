@@ -470,3 +470,16 @@ about Middle-earth.
 - Curve simplification and endpoint-preserving smoothing remove source-raster sampling
   artifacts without moving a confluence or inventing a new basin. The reviewed 102-course
   atlas remains authoritative whenever the two numeric controls overlap.
+
+## v100 Erebor political silhouette
+
+- Tolkien and the accepted maps establish the Lonely Mountain, Dale, and the Iron Hills,
+  but do not supply a surveyed TA 3018 border for Dain's immediate domain. Erebor is
+  therefore represented by a compact source-centred holding around the mountain and its
+  approaches, not by the former east-west strip.
+- The four released eastern and western cells are deliberately left wild rather than
+  transferred without positive control evidence. This is a conservative political-map
+  judgment; it does not claim that the land was empty or inaccessible.
+- Dale and the Iron Hills retain their existing claims. The compact Erebor polygon changes
+  political presentation only: the exact summit, terrain, river network, settlement
+  anchors, and strategic regions remain fixed.

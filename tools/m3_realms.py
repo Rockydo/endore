@@ -187,6 +187,20 @@ CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
         ),
         "compact Nan Curunir vale north of the Fords of Isen",
     ),
+    "ERE": (
+        (
+            (0.5997, 0.118),
+            (0.6090, 0.121),
+            (0.6140, 0.128),
+            (0.6140, 0.138),
+            (0.6070, 0.146),
+            (0.5980, 0.148),
+            (0.5890, 0.143),
+            (0.5850, 0.133),
+            (0.5890, 0.123),
+        ),
+        "Lonely Mountain and its immediate source-centred approaches",
+    ),
     "HNE": (
         (
             (0.555, 0.754),
@@ -330,6 +344,12 @@ POLITICAL_SILHOUETTE_CONTRACTS: dict[
         18,
         (0.445, 0.480, 0.420, 0.480),
         "Isengard must remain a compact Nan Curunir holding, not a state-sized strip",
+    ),
+    "ERE": (
+        7,
+        12,
+        (0.585, 0.614, 0.118, 0.148),
+        "Erebor must remain a compact Lonely Mountain holding, not an east-west strip",
     ),
 }
 
