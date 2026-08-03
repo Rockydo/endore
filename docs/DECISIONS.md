@@ -1701,3 +1701,25 @@ must not move.
 Accept this correction only with a fresh no-debug Observer view centred on Erebor, clean
 maximum-speed playback, full validation, and exact-fingerprint paired smoke. Keep M2 red
 for direct owner acceptance after the correction.
+
+## 2026-08-03 - Make Mordor share the strategic mountain enclosure
+
+Remove Mordor's independent rectangular political envelope as the effective frontier and
+bind M3 allocation to `worldgen.MORDOR_REGION_POLYGON`, the same nine-vertex ring already
+accepted for the strategic region. A single source-reviewed enclosure must govern both
+systems so later edits cannot make the political map leak east toward Khand or west into
+Ithilien while the hierarchy claims otherwise.
+
+The correction changes 143 generated locations, all inside `me_mordor_region`: 133 move
+from MOR to deliberate wild land and ten previously wild holes inside the ring move to
+MOR. The final realm has 296 locations: 291 polygon-eligible cells plus five forced
+fortress/approach anchors outside the simplified ring. Preserve all nine forced Mordor
+anchors, including Minas Morgul and Morannon. Treat `me_land_4703` as the exact reviewed
+southeastern Nurn barrier-split component; no generic disconnected-component allowance is
+permitted.
+
+Bind the player-scale silhouette to 260..310 locations and normalized bounds
+`x=0.595..0.716`, `y=0.505..0.731`. Accept only after a fresh regional/close Mordor pair,
+clean maximum-speed playback, full validation, and exact-fingerprint paired smoke. This
+political correction does not reopen the accepted mountain, Orodruin, ash, or hydrology
+mechanisms, and does not green M2 without direct owner acceptance.

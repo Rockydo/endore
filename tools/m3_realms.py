@@ -27,6 +27,7 @@ from worldgen import (
     CONTROL_H,
     CONTROL_W,
     DERIVED,
+    MORDOR_REGION_POLYGON,
     ROOT,
     Location,
     WorldModel,
@@ -201,6 +202,10 @@ CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
         ),
         "Lonely Mountain and its immediate source-centred approaches",
     ),
+    "MOR": (
+        MORDOR_REGION_POLYGON,
+        "Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure",
+    ),
     "HNE": (
         (
             (0.555, 0.754),
@@ -351,6 +356,12 @@ POLITICAL_SILHOUETTE_CONTRACTS: dict[
         (0.585, 0.614, 0.118, 0.148),
         "Erebor must remain a compact Lonely Mountain holding, not an east-west strip",
     ),
+    "MOR": (
+        260,
+        310,
+        (0.595, 0.716, 0.505, 0.731),
+        "Mordor must follow its mountain enclosure, not fill an eastern rectangle",
+    ),
 }
 
 # The Fords lie south of Orthanc at the Gap and cannot be swallowed by Saruman's compact
@@ -451,6 +462,10 @@ REVIEWED_COMPONENT_REPAIRS: dict[
 REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
     ("GON", frozenset({"me_land_0004", "me_land_1280"})): (
         "Tolfalas island, separated from mainland Gondor by engine water"
+    ),
+    ("MOR", frozenset({"me_land_4703"})): (
+        "southeastern Nurn pocket divided from the main component by lake and "
+        "impassable enclosure topology"
     ),
     (
         "ROH",

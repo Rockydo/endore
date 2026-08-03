@@ -483,3 +483,18 @@ about Middle-earth.
 - Dale and the Iron Hills retain their existing claims. The compact Erebor polygon changes
   political presentation only: the exact summit, terrain, river network, settlement
   anchors, and strategic regions remain fixed.
+
+## v101 Mordor political enclosure
+
+- Tolkien and the accepted maps establish Mordor's enclosing Ered Lithui and Ephel Dúath,
+  but not a surveyed TA 3018 cadastral border. The same nine-vertex source-reviewed ring
+  already used for the Mordor strategic region is therefore the conservative political
+  boundary for the main realm.
+- Minas Morgul and the Morannon approaches remain Mordor-held forced fortress locations
+  where their exact anchors sit just outside the simplified basin ring. This represents
+  attested military control, not a claim that western Ithilien or the Cross-roads belong
+  to Mordor's continuous interior territory.
+- `me_land_4703` is retained as the exact southeastern Nurn pocket inside the accepted
+  ring. Its one-cell graph separation is caused by lake and impassable-enclosure topology,
+  not an unattested foreign enclave; the exact component is review-bound so a future map
+  topology change cannot inherit the exception silently.

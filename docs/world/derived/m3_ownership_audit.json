@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3190,
-  "wild_locations": 2010,
+  "owned_locations": 3067,
+  "wild_locations": 2133,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -1673,7 +1673,7 @@
       ]
     },
     "MOR": {
-      "rationale": "Mordor within the enclosing mountain walls",
+      "rationale": "Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure",
       "claim_bounds": [
         0.595,
         0.77,
@@ -1682,33 +1682,70 @@
       ],
       "source_zone": null,
       "source_dilation_pixels": null,
-      "claim_polygon": null,
-      "locations": 419,
-      "eligible_locations": 511,
-      "claim_fill_fraction": 0.819961,
+      "claim_polygon": [
+        [
+          0.609,
+          0.515
+        ],
+        [
+          0.675,
+          0.505
+        ],
+        [
+          0.715,
+          0.535
+        ],
+        [
+          0.715,
+          0.69
+        ],
+        [
+          0.675,
+          0.73
+        ],
+        [
+          0.635,
+          0.72
+        ],
+        [
+          0.621,
+          0.67
+        ],
+        [
+          0.617,
+          0.605
+        ],
+        [
+          0.62,
+          0.555
+        ]
+      ],
+      "locations": 296,
+      "eligible_locations": 291,
+      "claim_fill_fraction": 1.017182,
       "forced_anchors": 9,
       "final_bbox": [
         0.6,
-        0.769475,
-        0.5173425,
+        0.7147741,
+        0.5070835,
         0.7205667
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 3,
-        "largest_component": 416,
-        "largest_component_fraction": 0.99284,
-        "detached_unforced_specks": 0,
+        "components": 4,
+        "largest_component": 292,
+        "largest_component_fraction": 0.986486,
+        "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 416,
+            "size": 292,
             "forced_anchors": 6,
             "sample": [
               "barad_dur",
-              "me_land_0005",
-              "me_land_0009",
-              "me_land_0017",
-              "me_land_0021"
+              "me_land_0006",
+              "me_land_0021",
+              "me_land_0022",
+              "me_land_0029"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1736,6 +1773,17 @@
               "me_land_0431"
             ],
             "disposition": "accepted_forced_anchor_barrier_split"
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_4703"
+            ],
+            "locations": [
+              "me_land_4703"
+            ],
+            "disposition": "southeastern Nurn pocket divided from the main component by lake and impassable enclosure topology"
           }
         ]
       },
@@ -3016,20 +3064,20 @@
       ]
     },
     "MOR": {
-      "components": 3,
-      "largest_component": 416,
-      "largest_component_fraction": 0.99284,
-      "detached_unforced_specks": 0,
+      "components": 4,
+      "largest_component": 292,
+      "largest_component_fraction": 0.986486,
+      "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 416,
+          "size": 292,
           "forced_anchors": 6,
           "sample": [
             "barad_dur",
-            "me_land_0005",
-            "me_land_0009",
-            "me_land_0017",
-            "me_land_0021"
+            "me_land_0006",
+            "me_land_0021",
+            "me_land_0022",
+            "me_land_0029"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3057,6 +3105,17 @@
             "me_land_0431"
           ],
           "disposition": "accepted_forced_anchor_barrier_split"
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_4703"
+          ],
+          "locations": [
+            "me_land_4703"
+          ],
+          "disposition": "southeastern Nurn pocket divided from the main component by lake and impassable enclosure topology"
         }
       ]
     },

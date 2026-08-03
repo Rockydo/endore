@@ -1863,3 +1863,26 @@
   the unchanged candidate passed paired vanilla/mod smoke with zero new error lines. This
   was a host-resource failure, not a candidate regression. M2 remains red pending direct
   owner acceptance.
+
+## 2026-08-03 - v101 source-enclosed Mordor political correction
+
+- Replaced Mordor's rectangular political allocation with the same nine-vertex Ered
+  Lithui/Ephel Dúath enclosure already used by the strategic-region generator. Exactly
+  143 locations change inside `me_mordor_region`: 133 overextended MOR cells return to
+  deliberate wild land and ten holes inside the accepted ring become MOR. Gondor, Khand,
+  Rhûn, all other realms, terrain, rivers, regions, and landmark coordinates are unchanged.
+- Mordor now owns 296 locations: 291 eligible inside the ring and five forced fortress or
+  approach anchors outside it. All nine forced anchors survive, including Minas Morgul,
+  Morannon, Barad-dûr, Orodruin, and Nurn. The exact southeastern Nurn one-cell component
+  is review-bound as a lake/impassable-topology split; no unbounded island exemption was
+  added. All 38 realms remain present and every political contract passes.
+- A fresh no-debug New Game entered HUD-proven Observer on fingerprint
+  `3dbe7354260c77ea57bcdacfc4df62ec0a7a7ef07c2a930db5a7db94b879fd63` and captured
+  regional/close Mordor evidence under
+  `docs/screens/20260803_v101_mordor_enclosure/`. The regional frame proves the contracted
+  basin and separate canonical western outposts; the close frame retains Orodruin and the
+  accepted physical terrain. Playback ran 45 seconds at maximum speed with zero recovery
+  and ended on the normal 1,486-byte log.
+- Paired vanilla/ENDÓRË smoke passed in 201 seconds on the same fingerprint with zero new
+  lines; the current vanilla control has four archived-baseline delta types, none unique
+  to the mod. M2 remains red pending direct owner acceptance.

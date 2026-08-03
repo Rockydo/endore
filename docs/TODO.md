@@ -2,12 +2,12 @@
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
-   receives explicit owner acceptance. The current v100 source-audited runtime tree loads
-   and ticks cleanly. v99 covers the full physical atlas; v100 adds a fresh regional/close
-   pair proving Erebor's corrected compact political silhouette around its unchanged
-   isolated summit. The exact v100 candidate completed 45 seconds of clean maximum-speed
-   Observer playback and a clean paired smoke. The visual gate remains red pending direct
-   owner re-review.
+   receives explicit owner acceptance. The current v101 source-audited runtime tree loads
+   and ticks cleanly. v99 covers the full physical atlas; v100 proves compact Erebor; v101
+   proves Mordor contracted from an eastern rectangle to the shared Ered Lithui/Ephel
+   Dúath enclosure while retaining its canonical western fortress outposts. The exact
+   v101 candidate completed 45 seconds of clean maximum-speed Observer playback and a
+   clean paired smoke. The visual gate remains red pending direct owner re-review.
 2. M2 MOUNTAINS — ACCEPTED CURRENT MECHANISM / FREEZE. The owner's later live review
    explicitly found that the mountains finally read as mountains, superseding the early
    v30-v46 rejection language below. Preserve the current source-pinned axes, exact
@@ -635,7 +635,7 @@
   owner review supersedes its visual conclusion. M2 remains red; gameplay content remains
   blocked.
 
-## Current v100 map candidate
+## Current v101 map candidate
 
 - Retain the 102-course Arda Maps atlas and twelve-channel parser graph. v98 enlarges the
   upper/lower Anduin native cores to 0.72/0.68 scale, strengthens ordinary reviewed river
@@ -662,3 +662,9 @@
   `docs/screens/20260803_v100_compact_erebor/` proves the political correction and the
   retained isolated summit on fingerprint
   `24b205efa0a037f7ae37b40cd15294d86fbbd32eac88749b97dd0005e854ab78`.
+- v101 makes the political allocator reuse the accepted nine-vertex Mordor strategic
+  enclosure. The main realm now follows the Ered Lithui/Ephel Dúath basin rather than an
+  eastern rectangle; Minas Morgul and Morannon remain exact forced outposts. Fresh
+  regional/close evidence and 45 seconds of clean playback are under
+  `docs/screens/20260803_v101_mordor_enclosure/`; paired smoke is zero-new on fingerprint
+  `3dbe7354260c77ea57bcdacfc4df62ec0a7a7ef07c2a930db5a7db94b879fd63`.
