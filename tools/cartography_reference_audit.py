@@ -34,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "258e4bb0b9bc848ee3d1dbc74d062f9354cebf83fcbe9a29de2fa1a13781244d"
+    "6fe765d5450796979f1d56fba1e92de4e0b551107eb49e669fa6dc30803d922f"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -46,7 +46,7 @@ EXPECTED_ARDACRAFT_BIOMES_SHA256 = (
     "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
 )
 EXPECTED_DRAINAGE_FILE_SHA256 = (
-    "ff625cbb64e4806a031087b4b00a0541f349f1226803771521519625251f4a0f"
+    "0b64b7bcda723c13a582a90f8cf132ec7d04d9e18c500bed469a7c2b9a4dbd24"
 )
 EXPECTED_ARDACRAFT_DRAINAGE_SHA256 = (
     "d8ec6f22c0e3c87097145f2c3f3b831c778e4df8b705595d335e5c4d7be74871"
@@ -190,8 +190,8 @@ def render_report() -> dict:
         or drainage.get("opening_radius") != 1
         or drainage.get("terminal_prune_steps") != 8
         or drainage.get("affluent_near_distance") != 4
-        or drainage.get("affluent_far_distance") != 20
-        or drainage.get("affluent_min_path") != 16
+        or drainage.get("affluent_far_distance") != 16
+        or drainage.get("affluent_min_path") != 12
         or drainage.get("affluent_near_distance")
         != drainage_descriptor.get("affluent_near_distance")
         or drainage.get("affluent_far_distance")
@@ -200,9 +200,9 @@ def render_report() -> dict:
         != drainage_descriptor.get("affluent_min_path")
         or drainage.get("affluent_paths")
         != drainage_descriptor.get("affluent_paths")
-        or not (50 <= drainage.get("affluent_paths", 0) <= 75)
+        or not (95 <= drainage.get("affluent_paths", 0) <= 110)
         or drainage.get("encoding") != "zlib_base85_u8"
-        or not (1_800 <= drainage.get("centreline_samples", 0) <= 2_300)
+        or not (2_850 <= drainage.get("centreline_samples", 0) <= 3_250)
         or not (160_000 <= drainage.get("selected_samples", 0) <= 180_000)
     ):
         raise ValueError("Ardacraft-derived drainage provenance or detail regressed")

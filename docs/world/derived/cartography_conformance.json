@@ -8,7 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
-  "projection_sha256": "258e4bb0b9bc848ee3d1dbc74d062f9354cebf83fcbe9a29de2fa1a13781244d",
+  "projection_sha256": "6fe765d5450796979f1d56fba1e92de4e0b551107eb49e669fa6dc30803d922f",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -96,7 +96,7 @@
         0.8,
         0.32
       ],
-      "centreline_samples": 838,
+      "centreline_samples": 1191,
       "minimum_samples": 750
     },
     "anduin_system": {
@@ -106,7 +106,7 @@
         0.68,
         0.62
       ],
-      "centreline_samples": 1298,
+      "centreline_samples": 1882,
       "minimum_samples": 1150
     },
     "white_mountains": {
@@ -116,7 +116,7 @@
         0.63,
         0.68
       ],
-      "centreline_samples": 929,
+      "centreline_samples": 1264,
       "minimum_samples": 800
     },
     "mordor_gondor": {
@@ -126,11 +126,11 @@
         0.8,
         0.75
       ],
-      "centreline_samples": 527,
+      "centreline_samples": 747,
       "minimum_samples": 450
     }
   },
-  "source_feeder_samples": 2060,
+  "source_feeder_samples": 3075,
   "anchor_count": 42,
   "landmark_count": 62,
   "manual_or_reconciled_landmarks": 12,

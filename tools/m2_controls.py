@@ -495,9 +495,9 @@ def validate_geometry_contract(projection: dict) -> None:
         or drainage_descriptor.get("opening_radius") != 1
         or drainage_descriptor.get("terminal_prune_steps") != 8
         or drainage_descriptor.get("affluent_near_distance") != 4
-        or drainage_descriptor.get("affluent_far_distance") != 20
-        or drainage_descriptor.get("affluent_min_path") != 16
-        or not (50 <= drainage_descriptor.get("affluent_paths", 0) <= 75)
+        or drainage_descriptor.get("affluent_far_distance") != 16
+        or drainage_descriptor.get("affluent_min_path") != 12
+        or not (95 <= drainage_descriptor.get("affluent_paths", 0) <= 110)
     ):
         raise ValueError("river atlas lacks the audited Ardacraft drainage reduction")
     biome_descriptor = projection.get("source_biomes")

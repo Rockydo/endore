@@ -96,8 +96,8 @@ DRAINAGE_REACH = 24
 DRAINAGE_OPENING_RADIUS = 1
 DRAINAGE_PRUNE_STEPS = 8
 DRAINAGE_AFFLUENT_NEAR_DISTANCE = 4
-DRAINAGE_AFFLUENT_FAR_DISTANCE = 20
-DRAINAGE_AFFLUENT_MIN_PATH = 16
+DRAINAGE_AFFLUENT_FAR_DISTANCE = 16
+DRAINAGE_AFFLUENT_MIN_PATH = 12
 
 
 def sha256(path: Path) -> str:
@@ -550,7 +550,9 @@ def ardacraft_drainage_payload(reference_root: Path, projection: dict) -> dict:
             "alpha>=160; reviewed 102-course Arda Maps seed; 24-pixel connected "
             "geodesic reach; source-lake exclusion; 3x3 source-thickness opening; "
             "axis-connected components; Zhang-Suen centrelines; 8-step terminal "
-            "pruning; direct-affluent graph filter (near<=4, far>=20, length>=16); "
+            f"pruning; direct-affluent graph filter (near<={DRAINAGE_AFFLUENT_NEAR_DISTANCE}, "
+            f"far>={DRAINAGE_AFFLUENT_FAR_DISTANCE}, "
+            f"length>={DRAINAGE_AFFLUENT_MIN_PATH}); "
             "exact reviewed-axis reconnection"
         ),
         "bounds": ARDACRAFT_IMAGE_BOUNDS,

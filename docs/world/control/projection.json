@@ -139404,7 +139404,7 @@
     "file": "ardacraft_drainage.json",
     "source": "Ardacraft Drainage layer Middle-earth V2",
     "source_sha256": "d8ec6f22c0e3c87097145f2c3f3b831c778e4df8b705595d335e5c4d7be74871",
-    "field_sha256": "ac73227e67b39c7a36d2f519904cc9e01d719e2322e8d5d0258af96d809be763",
+    "field_sha256": "e9e00c2cd58a24e795e623a09ad111038e6abc2a610da8706ac8081a618b18ee",
     "bounds": [
       0.148481643,
       0.0,
@@ -139420,8 +139420,8 @@
     "opening_radius": 1,
     "terminal_prune_steps": 8,
     "affluent_near_distance": 4,
-    "affluent_far_distance": 20,
-    "affluent_min_path": 16,
-    "affluent_paths": 61
+    "affluent_far_distance": 16,
+    "affluent_min_path": 12,
+    "affluent_paths": 104
   }
 }

@@ -644,7 +644,7 @@
   owner review supersedes its visual conclusion. M2 remains red; gameplay content remains
   blocked.
 
-## Current v102 map candidate
+## Current v103 map candidate
 
 - Retain the 102-course Arda Maps atlas and twelve-channel parser graph. v98 enlarges the
   upper/lower Anduin native cores to 0.72/0.68 scale, strengthens ordinary reviewed river
@@ -682,12 +682,17 @@
   the combined candidate adds one tiny lore-attested summit at the unchanged landmark and
   regenerates the complete terrain cache. The final same-camera pair, 45-second playback,
   complete validation, and paired smoke all pass on the final fingerprint.
-- NEXT AFTER v102: deepen the source-reviewed hydrology without decorative invention.
-  Reassess the Great River's native width against the owner's live view, make Anduin read
-  unmistakably massive at close zoom, and add further tributaries only where Arda Maps,
-  Ardacraft drainage, or Tolkien's text supports their courses and confluences.
-  A read-only filter sweep on the hash-pinned Ardacraft network gives 61 paths at the
-  current `near<=4, far>=20, length>=16`, 104 at `near<=4, far>=16, length>=12`, 116 when
-  the join gap also rises to five pixels, and 179 at the looser `6/14/10` setting. Test
-  the conservative 104-path candidate first and reject it if like-for-like close frames
-  revive v95-v97 clutter; do not start from the 116/179 variants.
+- v103 implements the conservative 104-path source-connected affluent candidate at
+  `near<=4, far>=16, length>=12`; the looser measured 116/179 alternatives remain
+  rejected. Upper/lower Anduin cores grow from `0.72/0.68` to `1.10/1.15`, with broader
+  wet banks, while other river classes and all source axes stay unchanged. Eight fresh
+  regional/close pairs show a massive Great River, more source-shaped feeders, and no
+  v95-v97 block/comb artifacts. The wider water mask's derived vegetation payloads were
+  regenerated without changing their 3,493,385-transform budget. A second exact-final
+  atlas, 45-second maximum-speed playback, 470.4-second full validation, and 202.4-second
+  paired smoke are green on fingerprint `76fb6e7e104c...`; publish the batch.
+- NEXT AFTER v103: continue the source-bound fidelity audit while M2 awaits explicit owner
+  acceptance. Recheck remaining political edges and physical landmark placement against
+  the pinned Arda Maps/Ardacraft overlays at equal scale, beginning with any realm whose
+  allocation crosses a reviewed ridge, river, forest, or gap. Prefer small falsifiable
+  corrections over broad reshaping; do not add decorative geography or gameplay content.

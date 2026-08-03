@@ -92,6 +92,12 @@ tuning.
   Validation rejects duplicated Harnen, Morgulduin, or lower-Anduin source
   parts and binds the hierarchy, provenance, widths, incision, material
   response, and basin-level coverage independently.
+- Native terrain also carries 104 direct affluent paths reconstructed from the
+  hash-pinned Ardacraft drainage layer. The reduction retains only paths beginning within
+  four source pixels of one of the 102 reviewed courses, reaching at least sixteen pixels
+  away, spanning at least twelve centreline samples, and reconnecting to the exact axis.
+  Its 3,075 samples remain physical incision/material detail only; they do not fabricate
+  parser-unsafe EU5 river junctions or claim new Tolkien names.
 
 ## Source-biome reduction contract
 

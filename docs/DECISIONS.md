@@ -1762,3 +1762,28 @@ exact localized location and normalized coordinate. Accept the combined politica
 physical v102 only after a fresh regional/close pair, clean Observer playback, full
 validation, and exact-fingerprint paired smoke. A busy shared EU5 lease defers that
 runtime gate without reverting or weakening the statically green candidate.
+
+## 2026-08-03 - Make Anduin dominant and expand only source-connected affluents
+
+Supersede v102's 61-path Ardacraft affluent reduction with the conservative result of the
+recorded filter sweep: keep the join distance at four source pixels, reduce required
+distance from the reviewed axis from twenty to sixteen pixels, and reduce minimum path
+length from sixteen to twelve samples. This yields exactly 104 direct affluent paths and
+3,075 centreline samples. Do not use the tested 116- or 179-path alternatives; their
+looser join gaps are more likely to revive the blocky/comb-like v95-v97 failure mode.
+
+Increase the upper/lower Anduin native water-core scales from `0.72/0.68` to `1.10/1.15`
+and their wet-bank scales from `0.92/1.05` to `1.35/1.50`. Leave all 102 Arda Maps axes,
+nominal course widths, tributary class widths, and the twelve-channel parser graph
+unchanged. The larger core is a rendering hierarchy correction, not altered geography.
+
+Accept the v103 candidate only if the established eight-pair hydrology atlas shows both
+Anduin reaches dominating subordinate rivers without square blocks, equal-width clutter,
+or artificial meshes. The fresh exact-fingerprint frames pass that review across upper
+and lower Anduin, Celebrant, Entwash, Baranduin, Greyflood, Celduin, and Harnen; playback
+runs 45 seconds at maximum speed with zero recovery and the normal 1,486-byte log.
+
+Treat vegetation as a mandatory downstream artifact of every water-mask change. The first
+full v103 validation exposed that all 39 authored transform bins still encoded v102 river
+clearance. Regenerate them from the v103 controls while preserving the exact 3,493,385
+transform budget and all forest/species contracts; never waive or baseline this mismatch.

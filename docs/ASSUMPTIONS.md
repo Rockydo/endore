@@ -512,3 +512,13 @@ about Middle-earth.
   Tolkien names the mountain in *The Lord of the Rings*, Book I, Chapter 1. A tiny summit
   at the already source-crosswalked Mount Gram landmark is therefore a documented
   source-gap correction, not permission to invent additional mountains.
+
+## v103 Great River and affluent presentation
+
+- EU5's river surface is a symbolic map feature rather than a literal scale model. The
+  Anduin therefore receives a deliberately dominant rendered width at Caras Galadhon and
+  Osgiliath so the Great River reads correctly against settlements and subordinate
+  tributaries at the player's close zoom.
+- The 104 unnamed physical affluents are not invented named waterways or political
+  borders. They are a conservative subset of the hash-pinned Ardacraft drainage graph,
+  retained only where each source path connects directly to a reviewed Arda Maps course.

@@ -1930,3 +1930,34 @@
   and the normal 1,486-byte log. Paired smoke first deferred safely when Antiquitas
   acquired the shared slot immediately afterward, then ran on the unchanged pending
   fingerprint when the lease cleared: PASS in 201 seconds, zero new mod error lines.
+
+## 2026-08-03 - v103 dominant Anduin and denser source affluents
+
+- A read-only sweep of the hash-pinned Ardacraft drainage graph measured 61 paths at the
+  v102 `4/20/16` filter, 104 at `4/16/12`, 116 at `5/16/12`, and 179 at `6/14/10`.
+  Selected the conservative 104-path candidate; its 3,075 centreline samples remain
+  directly connected to the unchanged 102-course Arda Maps atlas.
+- Enlarged upper/lower Anduin's native core by about 53%/69% and its wet banks by about
+  47%/43%. No source axis, nominal river width, tributary class, parser channel, biome,
+  density, location, ownership, or name changes. `biomes.png` and `density.png` remain
+  byte-identical to v102 and the world model hash remains
+  `2276dfd0edc5d614224f05ee412f5e2617e1d0dfbd28a54917eb8830e15408d1`.
+- Rebuilt the 8K height source and complete 174,763-tile native cache. Focused
+  cartography/control, height/cache, location/definition, and flatmap checks pass. The
+  first full validation then correctly rejected all 39 stale vegetation payloads because
+  the wider water mask changes their river-clearance sampling. Regenerated the same
+  3,493,385 Arda-native transforms around the v103 channels; the authored forest/rock
+  model now passes byte-for-byte and no vegetation budget or species contract changed.
+- An initial no-debug Observer on development fingerprint
+  `c059a73b41f6206f46809eee34d6ba06a439c4054a9d092c28dc7864c02851a4`
+  captured eight regional/close pairs under
+  `docs/screens/20260803_v103_hydrology_candidate/`. Upper Anduin now clearly dominates
+  Celebrant and its neighbouring feeders; lower Anduin reads as a massive channel at
+  Osgiliath. The other six basins retain subordinate, source-shaped rivers without the
+  rejected v95-v97 block/comb artifacts. After the vegetation rebuild, a second fresh
+  exact-fingerprint atlas under `docs/screens/20260803_v103_hydrology_final/` repeated all
+  eight regional/close pairs and confirmed the same hierarchy with clean river banks.
+  Playback completed 45 seconds at maximum speed with zero recovery and the normal
+  1,486-byte log. Full validation passed in 470.4 seconds and paired smoke passed in 202.4
+  seconds with zero new mod lines on final fingerprint
+  `76fb6e7e104c9c82d33162ed17e690554e622ace6e335a104eaec94d6be1ff84`.
