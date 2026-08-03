@@ -174,6 +174,19 @@ CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
         ),
         "Dunland lowlands west of Isen and the Gap, south of Glanduin",
     ),
+    "ISE": (
+        (
+            (0.458, 0.424),
+            (0.470, 0.420),
+            (0.478, 0.438),
+            (0.477, 0.459),
+            (0.471, 0.477),
+            (0.458, 0.477),
+            (0.450, 0.460),
+            (0.451, 0.440),
+        ),
+        "compact Nan Curunir vale north of the Fords of Isen",
+    ),
     "HNE": (
         (
             (0.555, 0.754),
@@ -304,6 +317,29 @@ CONTIGUOUS_CLAIM_REALMS = frozenset(
         "WOO",
     }
 )
+
+# Player-scale silhouette contracts bind reviewed political shapes to physical
+# coordinates, not generated location IDs.  They deliberately cover only defects that
+# have been demonstrated in the live political map; future additions require the same
+# source/owner review rather than arbitrary numerical tidying.
+POLITICAL_SILHOUETTE_CONTRACTS: dict[
+    str, tuple[int, int, tuple[float, float, float, float], str]
+] = {
+    "ISE": (
+        8,
+        18,
+        (0.445, 0.480, 0.420, 0.480),
+        "Isengard must remain a compact Nan Curunir holding, not a state-sized strip",
+    ),
+}
+
+# The Fords lie south of Orthanc at the Gap and cannot be swallowed by Saruman's compact
+# ring-domain.  The positive owner may change with a later source-backed Rohan/Dunland
+# frontier revision, so the durable contract records only the canonically impossible
+# owner.
+FRONTIER_LANDMARK_EXCLUSIONS: dict[str, frozenset[str]] = {
+    "fords_of_isen": frozenset({"ISE"}),
+}
 # The climate-density reseed changed generated location IDs after the v77/v78
 # political review. Each repair therefore carries a narrow physical witness as
 # well as the target owner: expected region and normalized coordinate window.
@@ -1616,6 +1652,12 @@ def ownership_audit_json(state: RealmState) -> str:
     for tag in sorted(CONTRACTED_TAGS):
         contract = CLAIM_BOUNDS.get(tag)
         tag_rows = [row for row in rows if row["realm"] == tag]
+        realm = state.by_tag[tag]
+        eligible_locations = sum(
+            location.kind == "land"
+            and claim_contract(location, realm, state.source_zone_claims)[0]
+            for location in state.model.locations
+        )
         xs = [float(row["normalized_x"]) for row in tag_rows]
         ys = [float(row["normalized_y"]) for row in tag_rows]
         violations = sum(row["verdict"] == "violation" for row in tag_rows)
@@ -1632,6 +1674,12 @@ def ownership_audit_json(state: RealmState) -> str:
             "source_dilation_pixels": SOURCE_ZONE_CLAIMS[tag][1] if tag in SOURCE_ZONE_CLAIMS else None,
             "claim_polygon": [list(point) for point in CLAIM_POLYGONS[tag][0]] if tag in CLAIM_POLYGONS else None,
             "locations": len(tag_rows),
+            "eligible_locations": eligible_locations,
+            "claim_fill_fraction": (
+                round(len(tag_rows) / eligible_locations, 6)
+                if eligible_locations
+                else 0.0
+            ),
             "forced_anchors": sum(row["forced"] == "yes" for row in tag_rows),
             "final_bbox": (
                 [min(xs), max(xs), min(ys), max(ys)] if tag_rows else None
@@ -1668,7 +1716,7 @@ def ownership_audit_json(state: RealmState) -> str:
             "connectivity": connectivity[realm.tag],
         }
     payload = {
-        "schema": 3,
+        "schema": 4,
         "milestone": "M3 political assignment audit",
         "audited_land_locations": len(rows),
         "owned_locations": sum(row["realm"] != WILD for row in rows),
@@ -1874,6 +1922,47 @@ def check() -> list[str]:
             "compact source-side realms contain detached political components: "
             f"{fragmented_compact_realms}"
         )
+    for tag, (
+        minimum,
+        maximum,
+        bbox,
+        rationale,
+    ) in POLITICAL_SILHOUETTE_CONTRACTS.items():
+        owned = [
+            location
+            for location in state.model.locations
+            if location.kind == "land" and state.ownership[location.key] == tag
+        ]
+        if not minimum <= len(owned) <= maximum:
+            failures.append(
+                f"{tag} silhouette owns {len(owned)} locations outside "
+                f"reviewed range {minimum}..{maximum}: {rationale}"
+            )
+        x0, x1, y0, y1 = bbox
+        outside = [
+            location.key
+            for location in owned
+            if not (
+                x0 <= location.normalized[0] <= x1
+                and y0 <= location.normalized[1] <= y1
+            )
+        ]
+        if outside:
+            failures.append(
+                f"{tag} silhouette escapes reviewed physical bbox {bbox}: "
+                f"{outside[:5]} ({rationale})"
+            )
+    for ref, excluded_owners in FRONTIER_LANDMARK_EXCLUSIONS.items():
+        location_key = state.ref_to_location.get(ref)
+        if location_key is None:
+            failures.append(f"political frontier landmark {ref} is unresolved")
+            continue
+        actual_owner = state.ownership[location_key]
+        if actual_owner in excluded_owners:
+            failures.append(
+                f"political frontier landmark {ref} is incorrectly owned by "
+                f"{actual_owner}; excluded owners are {sorted(excluded_owners)}"
+            )
     unreviewed_components = {
         tag: [
             row

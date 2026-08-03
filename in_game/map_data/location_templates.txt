@@ -107,7 +107,7 @@ me_land_0062 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_0063 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = stone }
 me_land_0064 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = livestock }
 me_land_0065 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
-me_land_0066 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = clay }
+me_land_0066 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = clay }
 me_land_0067 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = livestock }
 me_land_0068 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = stone }
 me_land_0069 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = livestock }
@@ -270,7 +270,7 @@ me_land_0225 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_0226 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wheat }
 me_land_0227 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_variag raw_material = livestock }
 me_land_0228 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wool }
-me_land_0229 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_0229 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_0230 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = livestock }
 me_land_0231 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wool }
 me_land_0232 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_mahal_cult culture = me_longbeard raw_material = wool }
@@ -330,7 +330,7 @@ me_land_0285 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_0286 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = livestock }
 me_land_0287 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_variag raw_material = livestock }
 me_land_0288 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = horses }
-me_land_0289 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_0289 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_0290 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_arnor_dunedain raw_material = wheat }
 me_land_0291 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = livestock }
 me_land_0292 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = livestock }
@@ -423,7 +423,7 @@ me_land_0378 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_0379 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = wool }
 me_land_0380 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wool }
 me_land_0381 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = stone }
-me_land_0382 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_0382 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_0383 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
 me_land_0384 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = clay }
 me_land_0385 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_balchoth raw_material = wheat }
@@ -552,7 +552,7 @@ me_land_0507 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_0508 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = livestock }
 me_land_0509 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = livestock }
 me_land_0510 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_galadhrim raw_material = wool }
-me_land_0511 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_0511 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_0512 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = clay }
 me_land_0513 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = fish }
 me_land_0514 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_noldor raw_material = wool }
@@ -846,7 +846,7 @@ me_land_0801 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_0802 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = wheat }
 me_land_0803 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = stone }
 me_land_0804 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = horses }
-me_land_0805 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_0805 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_0806 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = livestock natural_harbor_suitability = 0.25 }
 me_land_0807 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = fish }
 me_land_0808 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wheat }
@@ -1170,7 +1170,7 @@ me_land_1125 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_1126 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = stone }
 me_land_1127 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_near_haradrim raw_material = livestock }
 me_land_1128 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
-me_land_1129 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = livestock }
+me_land_1129 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = livestock }
 me_land_1130 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = livestock }
 me_land_1131 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = wheat }
 me_land_1132 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_misty_orc raw_material = clay }
@@ -1233,7 +1233,7 @@ me_land_1188 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_1189 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = clay }
 me_land_1190 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = wild_game }
 me_land_1191 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = horses }
-me_land_1192 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wool }
+me_land_1192 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
 me_land_1193 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_dorwinrim raw_material = livestock }
 me_land_1194 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = stone }
 me_land_1195 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_shire_hobbit raw_material = fiber_crops }
@@ -1290,7 +1290,7 @@ me_land_1245 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_1246 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_dol_amrothian raw_material = wheat }
 me_land_1247 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = livestock }
 me_land_1248 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_misty_orc raw_material = wheat }
-me_land_1249 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_1249 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_1250 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_variag raw_material = livestock }
 me_land_1251 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_northern_orc raw_material = livestock }
 me_land_1252 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = livestock }
@@ -1362,7 +1362,7 @@ me_land_1317 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_1318 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = wheat }
 me_land_1319 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = livestock }
 me_land_1320 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = wheat }
-me_land_1321 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wool }
+me_land_1321 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = wool }
 me_land_1322 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wheat }
 me_land_1323 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wheat }
 me_land_1324 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = livestock }
@@ -1394,7 +1394,7 @@ me_land_1349 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_1350 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = livestock }
 me_land_1351 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = fish }
 me_land_1352 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = wheat }
-me_land_1353 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_1353 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_1354 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_far_haradrim raw_material = copper }
 me_land_1355 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wool }
 me_land_1356 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = livestock natural_harbor_suitability = 0.25 }
@@ -2064,7 +2064,7 @@ me_land_2019 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_2020 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_dol_amrothian raw_material = clay }
 me_land_2021 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_balchoth raw_material = clay }
 me_land_2022 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_near_haradrim raw_material = wheat }
-me_land_2023 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wool }
+me_land_2023 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = wool }
 me_land_2024 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wool }
 me_land_2025 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_northern_orc raw_material = fish }
 me_land_2026 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wheat }
@@ -2322,7 +2322,7 @@ me_land_2277 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_2278 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = clay }
 me_land_2279 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_far_haradrim raw_material = wool }
 me_land_2280 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = wheat }
-me_land_2281 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wool }
+me_land_2281 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
 me_land_2282 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = clay }
 me_land_2283 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_beorning raw_material = livestock }
 me_land_2284 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_variag raw_material = wool }
@@ -2379,7 +2379,7 @@ me_land_2334 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_2335 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = clay }
 me_land_2336 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_karmachi raw_material = wheat }
 me_land_2337 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_balchoth raw_material = wheat }
-me_land_2338 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wheat }
+me_land_2338 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = wheat }
 me_land_2339 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_near_haradrim raw_material = wheat }
 me_land_2340 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wheat }
 me_land_2341 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_mahal_cult culture = me_firebeard_broadbeam raw_material = wool }
@@ -2517,7 +2517,7 @@ me_land_2472 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_2473 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_balchoth raw_material = horses }
 me_land_2474 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = wheat }
 me_land_2475 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = iron }
-me_land_2476 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_2476 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_2477 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_dol_amrothian raw_material = livestock }
 me_land_2478 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wheat }
 me_land_2479 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = clay }
@@ -2867,7 +2867,7 @@ me_land_2822 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_2823 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = livestock }
 me_land_2824 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_balchoth raw_material = wool }
 me_land_2825 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wheat }
-me_land_2826 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wheat }
+me_land_2826 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = wheat }
 me_land_2827 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = fur }
 me_land_2828 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wool }
 me_land_2829 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_balchoth raw_material = livestock }
@@ -2938,7 +2938,7 @@ me_land_2893 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_2894 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wheat }
 me_land_2895 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_balchoth raw_material = livestock }
 me_land_2896 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = fur }
-me_land_2897 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = livestock }
+me_land_2897 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = livestock }
 me_land_2898 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = clay }
 me_land_2899 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = stone }
 me_land_2900 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_near_haradrim raw_material = wheat }
@@ -3047,7 +3047,7 @@ me_land_3002 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_3003 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = livestock }
 me_land_3004 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wheat natural_harbor_suitability = 0.25 }
 me_land_3005 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_balchoth raw_material = livestock }
-me_land_3006 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = livestock }
+me_land_3006 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = livestock }
 me_land_3007 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = livestock }
 me_land_3008 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = wool }
 me_land_3009 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = stone }
@@ -3767,7 +3767,7 @@ me_land_3722 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_3723 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_balchoth raw_material = wheat }
 me_land_3724 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = livestock }
 me_land_3725 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = iron }
-me_land_3726 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = clay }
+me_land_3726 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = clay }
 me_land_3727 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
 me_land_3728 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wool }
 me_land_3729 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_sagath raw_material = clay }
@@ -4502,7 +4502,7 @@ me_land_4457 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_4458 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_karmachi raw_material = wool }
 me_land_4459 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_silvan raw_material = wild_game }
 me_land_4460 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = wheat }
-me_land_4461 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = livestock }
+me_land_4461 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = livestock }
 me_land_4462 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_sindar raw_material = clay natural_harbor_suitability = 0.25 }
 me_land_4463 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_misty_orc raw_material = livestock }
 me_land_4464 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
@@ -4865,7 +4865,7 @@ me_land_4820 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_4821 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_balchoth raw_material = wool }
 me_land_4822 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_balchoth raw_material = wool }
 me_land_4823 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_umbarite raw_material = livestock }
-me_land_4824 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wheat }
+me_land_4824 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_eldest_ways culture = me_onodrim raw_material = wheat }
 me_land_4825 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = horses }
 me_land_4826 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = wheat }
 me_land_4827 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = horses }
@@ -4996,7 +4996,7 @@ me_land_4951 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_4952 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = clay }
 me_land_4953 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_dorwinrim raw_material = wool }
 me_land_4954 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_variag raw_material = wheat }
-me_land_4955 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = horses }
+me_land_4955 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = horses }
 me_land_4956 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_karmachi raw_material = wool }
 me_land_4957 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_variag raw_material = copper }
 me_land_4958 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_near_haradrim raw_material = wool }
@@ -5053,11 +5053,11 @@ me_land_5008 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_5009 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_near_haradrim raw_material = wool }
 me_land_5010 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_eriadoran raw_material = wool }
 me_land_5011 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_variag raw_material = livestock }
-me_land_5012 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wool }
+me_land_5012 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
 me_land_5013 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_woodman raw_material = wool }
 me_land_5014 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_silvan raw_material = medicaments }
 me_land_5015 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_lossoth_ways culture = me_lossoth raw_material = fish }
-me_land_5016 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wool }
+me_land_5016 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
 me_land_5017 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_far_haradrim raw_material = wool }
 me_land_5018 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_gondorian raw_material = wool }
 me_land_5019 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_mordor_orc raw_material = wheat }
@@ -5120,7 +5120,7 @@ me_land_5075 = { topography = flatland vegetation = grasslands climate = me_arda
 me_land_5076 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_southron_ways culture = me_near_haradrim raw_material = wool }
 me_land_5077 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_valar_worship culture = me_silvan raw_material = wild_game }
 me_land_5078 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_dunland_ways culture = me_dunlending raw_material = wool }
-me_land_5079 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_sauron_cult culture = me_isengard_uruk raw_material = wool }
+me_land_5079 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_rohirric raw_material = wool }
 me_land_5080 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_northern_ways culture = me_shire_hobbit raw_material = wheat }
 me_land_5081 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_melkorism culture = me_karmachi raw_material = wheat }
 me_land_5082 = { topography = flatland vegetation = grasslands climate = me_arda_surface religion = me_mahal_cult culture = me_longbeard raw_material = clay }

@@ -1730,3 +1730,55 @@
   and the unchanged 1,486-byte error log. Paired vanilla/Endórë smoke passed in 201.7
   seconds with zero new lines and no mod-unique diagnostic. Full validation and exact
   smoke assertion remain before commit; M2 remains red for owner acceptance.
+
+## 2026-08-03 - v94 compact Nan Curunir political correction
+
+- Direct full-map/raster review isolated Isengard's 38-location rectangular strip as a
+  concrete ownership defect. It extended south across the Gap almost to Helm's Deep and
+  included the source-bound Fords of Isen despite Saruman's attested domain being the
+  compact ring and vale of Nan Curunir.
+- Added an eight-vertex normalized polygon around the Isengard anchor and north of the
+  Fords. A permanent silhouette contract requires 8..18 locations inside a tight physical
+  bbox, one connected component, and an explicit `fords_of_isen != ISE` rule. Schema 4
+  now records eligible-location counts and fill fractions for all contracted realms.
+- The coherent result assigns 13 connected locations to Isengard, 193 to one connected
+  Rohan, 36 to one connected Dunland, and 31 to one connected Fangorn. Relative to v93,
+  16 cells return to Rohan, four to Dunland, one to Fangorn, and seven become deliberate
+  wilderness. All 38 realm contracts have zero violations and every detached component
+  has a physical disposition.
+- Regenerated M3 ownership/gazetteer/setup, all 5,200 M4 people profiles, the 5,179-location
+  M5 census, all 6,004 templates, and hierarchy localization. Focused M3/M4/M5/template
+  checks pass. Full validation correctly caught the initially stale hierarchy localization;
+  regenerating its owned payload resolved that deterministic cascade omission.
+- Fresh source-bound evidence under `docs/screens/20260803_v94b_gap_political/` entered
+  HUD-proven Observer on final fingerprint
+  `6572f6400849e103c54fdf526f0dbc8325713d38ad64b98451da38e25a46ba1b`.
+  The regional frame proves compact Isengard between Dunland, Fangorn, and Rohan with the
+  Fords inside Rohan; the close frame retains physical terrain and Isen. Playback ran 45
+  seconds at maximum speed with zero recovery and the unchanged 1,486-byte error log.
+  Paired vanilla/mod smoke passed in 221.8 seconds with zero new lines. Full repository
+  validation passed in 446.0 seconds and exact smoke assertion covers the same final
+  fingerprint. Commit/push this focused checkpoint; M2 stays red.
+
+## 2026-08-03 - owner hydrology review after v93
+
+- Direct player review rejects v93 as a final visual scale despite its technical/runtime
+  success: Anduin still reads too small and the visible network needs more rivers,
+  affluents, and feeder branches.
+- Reopened the hydrology TODO and owner gate. Preserve v54 as the minimum non-regression
+  baseline, but re-audit rendered Great River width and source-extraction completeness
+  against both accepted online maps. Every added course remains source-traced or otherwise
+  lore-attested; no decorative drainage is authorized.
+
+## 2026-08-03 - v94 deterministic cascade closure
+
+- The first full validation rejected stale hierarchy localization after the political
+  regeneration. Rewrote only `gen_definitions`' owned hierarchy/localization payload.
+- The regenerated lexicon moved two generated-name evidence queries. Static source
+  contracts rejected the stale Entwash `odgar`/Léodgar and Greyflood `Blackdown End`
+  matches; rebound them to current `Framham` and exact-coordinate `Cedardown End` without
+  moving either camera, course, coordinate, or strategic-region contract.
+- Final validation passes in 446.0 seconds. Final-fingerprint Fords evidence completes in
+  215.6 seconds with clean 45-second playback. Paired smoke passes in 221.8 seconds with
+  zero new lines, and exact assertion covers
+  `6572f6400849e103c54fdf526f0dbc8325713d38ad64b98451da38e25a46ba1b`.

@@ -311,6 +311,22 @@
    Static M3/M4/M5/template checks pass. Fresh political overview, playback, validation,
    smoke, and exact-fingerprint assertion remain required before this supersedes v78 as
    the accepted focused ownership checkpoint.
+   CURRENT v94 GAP CORRECTION — direct raster review found Isengard's rectangular
+   38-location envelope was the remaining demonstrated central political defect. An
+   eight-vertex Nan Curunir polygon contracts it to 13 connected locations and permanently
+   excludes the Fords of Isen. Sixteen released cells return to connected Rohan, four to
+   connected Dunland, one to Fangorn, and seven remain unclaimed; all 38 contracts have
+   zero violations and no unreviewed component. Schema 4 records every realm's eligible
+   location count/fill as well as the existing exact ownership rows and connectivity.
+   Coherent M3/M4/M5/template/localization regeneration and focused checks pass. Fresh
+   source-bound Fords regional/close evidence loads real terrain and completes 45 seconds
+   at maximum speed with zero recovery and the unchanged 1,486-byte log. The hierarchy
+   localization cascade and two generated-name camera bindings were regenerated and
+   re-linted without moving their source coordinates. Full validation passes in 446.0
+   seconds; final paired smoke passes in 221.8 seconds with zero new lines; exact smoke
+   assertion passes on fingerprint
+   `6572f6400849e103c54fdf526f0dbc8325713d38ad64b98451da38e25a46ba1b`.
+   Commit/push this focused checkpoint; M2 stays red.
 11. PAUSED M5 renderer: isolate or replace the inherited `boat_with_oars_unit` path that
    emitted a missing `waves_vfx` / `foam_stop` pair on 3018.2.17. The attempted direct
    vanilla control was inconclusive because it still loaded the active ENDÓRË map.
@@ -596,7 +612,14 @@
 
 ## Current v93 Great River candidate
 
-- Preserve generator v54's broader native-resolution upper/lower Anduin core. The source
+- REJECTED BY OWNER REVIEW: v54 is a valid technical baseline, not an accepted visual
+  scale. In the player's live close view Anduin still reads too small, and the total
+  drainage network lacks enough visible rivers, affluents, and feeder branches. Reopen
+  both rendered Great River scale and source-extraction completeness against Arda Maps
+  and Ardacraft; add only lore-approved/source-traced courses and bind every addition to
+  a reproducible close camera and receiving-water confluence.
+- Retain generator v54's broader native-resolution upper/lower Anduin core as the minimum
+  non-regression baseline. The source
   axes, nominal control widths, height incision, wet-bank envelopes, tributaries, and
   parser graph are unchanged; only the visible water core grows from 0.22 scale to 0.46
   above Nen Hithoel and 0.44 below it.
@@ -605,6 +628,6 @@
   Fresh Observer playback completed 45 seconds at maximum speed with zero recovery and
   the unchanged 1,486-byte log. Paired smoke passed in 201.7 seconds with zero new lines
   on fingerprint 9d1357d8bff04560a847c1ce9b0dab3f56e5da248be5c49f1365b25b2d64dd80.
-- COMMIT GATE: repository validation and exact smoke assertion must pass, then use
-  docs/m2/M2_OWNER_REVIEW.md for player-quality review. M2 remains red pending explicit
-  owner acceptance; gameplay content remains blocked.
+- The v93 validation/smoke gate passed and commit `13193e8` is pushed, but the subsequent
+  owner review supersedes its visual conclusion. M2 remains red; gameplay content remains
+  blocked.

@@ -60,7 +60,7 @@ HYDROLOGY_VIEWS = (
     # Celebrant and Entwash; coordinate contracts below prevent name drift
     # from silently moving either camera to another theatre.
     Theatre("12_celebrant", "Westbank Heights", "Westbank Heights"),
-    Theatre("13_entwash", "odgar", "odgar"),
+    Theatre("13_entwash", "Framham", "Framham"),
 )
 
 # A separate focused run covers the other binding major trunks and named
@@ -69,7 +69,7 @@ HYDROLOGY_VIEWS = (
 DRAINAGE_VIEWS = (
     Theatre("14_baranduin", "Brandywine Bridge", "Brandywine Bridge"),
     Theatre("15_lhun", "Winterhaven Waste", "Winterhaven Waste"),
-    Theatre("16_greyflood", "Blackdown End", "Blackdown End"),
+    Theatre("16_greyflood", "Cedardown End", "Cedardown End"),
     Theatre("17_isen", "Fords of Isen", "Fords of Isen"),
     Theatre("18_celduin", "Dalestrand", "Dalestrand"),
     Theatre("19_carnen", "Gundgathol", "Gundgathol"),
@@ -93,7 +93,7 @@ SOURCE_TARGETS = {
     "Burh Gath": (0.770000, 0.250000, "me_rhun_region"),
     "Qarsad": (0.675000, 0.870000, "me_near_harad_region"),
     "Westbank Heights": (0.500366, 0.339521, "me_anduin_vale_region"),
-    "odgar": (0.517055, 0.480938, "me_rohan_region"),
+    "Framham": (0.517055, 0.480938, "me_rohan_region"),
     "Caras Galadhon": (0.519414, 0.356131, "me_anduin_vale_region"),
     "Khazad": (0.490110, 0.335613, "me_anduin_vale_region"),
     "Edoras": (0.498657, 0.538349, "me_rohan_region"),
@@ -104,7 +104,7 @@ SOURCE_TARGETS = {
     "Osgiliath": (0.592430, 0.603811, "me_ithilien_region"),
     "Brandywine Bridge": (0.381197, 0.227162, "me_shire_breeland_region"),
     "Winterhaven Waste": (0.316728, 0.115779, "me_forochel_region"),
-    "Blackdown End": (0.415629, 0.346849, "me_enedwaith_region"),
+    "Cedardown End": (0.415629, 0.346849, "me_enedwaith_region"),
     "Fords of Isen": (0.467888, 0.488520, "me_rohan_region"),
     "Dalestrand": (0.607082, 0.211040, "me_dale_region"),
     "Gundgathol": (0.671307, 0.181729, "me_rhun_region"),
@@ -125,10 +125,10 @@ RIVER_TARGETS = {
     "Caras Galadhon": "upper_anduin",
     "Osgiliath": "anduin",
     "Westbank Heights": "celebrant",
-    "odgar": "entwash",
+    "Framham": "entwash",
     "Brandywine Bridge": "baranduin",
     "Winterhaven Waste": "lhun",
-    "Blackdown End": "greyflood",
+    "Cedardown End": "greyflood",
     "Fords of Isen": "isen",
     "Dalestrand": "celduin",
     "Gundgathol": "carnen",

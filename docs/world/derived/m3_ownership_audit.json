@@ -1,9 +1,9 @@
 {
-  "schema": 3,
+  "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3198,
-  "wild_locations": 2002,
+  "owned_locations": 3194,
+  "wild_locations": 2006,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -18,6 +18,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 55,
+      "eligible_locations": 96,
+      "claim_fill_fraction": 0.572917,
       "forced_anchors": 2,
       "final_bbox": [
         0.4222222,
@@ -72,6 +74,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 66,
+      "eligible_locations": 130,
+      "claim_fill_fraction": 0.507692,
       "forced_anchors": 1,
       "final_bbox": [
         0.5057387,
@@ -138,6 +142,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 42,
+      "eligible_locations": 70,
+      "claim_fill_fraction": 0.6,
       "forced_anchors": 1,
       "final_bbox": [
         0.2661783,
@@ -181,6 +187,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 24,
+      "eligible_locations": 51,
+      "claim_fill_fraction": 0.470588,
       "forced_anchors": 1,
       "final_bbox": [
         0.3811966,
@@ -224,6 +232,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 20,
+      "eligible_locations": 71,
+      "claim_fill_fraction": 0.28169,
       "forced_anchors": 1,
       "final_bbox": [
         0.5931624,
@@ -267,6 +277,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 71,
+      "eligible_locations": 106,
+      "claim_fill_fraction": 0.669811,
       "forced_anchors": 1,
       "final_bbox": [
         0.4681319,
@@ -335,6 +347,8 @@
         ]
       ],
       "locations": 38,
+      "eligible_locations": 43,
+      "claim_fill_fraction": 0.883721,
       "forced_anchors": 1,
       "final_bbox": [
         0.5360195,
@@ -381,6 +395,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 90,
+      "eligible_locations": 131,
+      "claim_fill_fraction": 0.687023,
       "forced_anchors": 1,
       "final_bbox": [
         0.6498168,
@@ -424,6 +440,8 @@
       "source_dilation_pixels": 8,
       "claim_polygon": null,
       "locations": 3,
+      "eligible_locations": 9,
+      "claim_fill_fraction": 0.333333,
       "forced_anchors": 1,
       "final_bbox": [
         0.5626374,
@@ -493,30 +511,32 @@
           0.462
         ]
       ],
-      "locations": 32,
+      "locations": 36,
+      "eligible_locations": 54,
+      "claim_fill_fraction": 0.666667,
       "forced_anchors": 1,
       "final_bbox": [
         0.4214896,
-        0.4466422,
+        0.4532357,
         0.4015633,
         0.5061065
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 32,
+        "largest_component": 36,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 32,
+            "size": 36,
             "forced_anchors": 1,
             "sample": [
+              "me_land_0066",
               "me_land_0164",
               "me_land_0203",
               "me_land_0504",
-              "me_land_0624",
-              "me_land_0785"
+              "me_land_0624"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -540,6 +560,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 13,
+      "eligible_locations": 78,
+      "claim_fill_fraction": 0.166667,
       "forced_anchors": 1,
       "final_bbox": [
         0.5885226,
@@ -583,6 +605,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 26,
+      "eligible_locations": 51,
+      "claim_fill_fraction": 0.509804,
       "forced_anchors": 1,
       "final_bbox": [
         0.5894994,
@@ -625,10 +649,12 @@
       "source_zone": "fangorn",
       "source_dilation_pixels": 10,
       "claim_polygon": null,
-      "locations": 30,
+      "locations": 31,
+      "eligible_locations": 32,
+      "claim_fill_fraction": 0.96875,
       "forced_anchors": 2,
       "final_bbox": [
-        0.4761905,
+        0.4752137,
         0.5152625,
         0.4054714,
         0.4748412
@@ -636,12 +662,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 30,
+        "largest_component": 31,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 30,
+            "size": 31,
             "forced_anchors": 2,
             "sample": [
               "me_land_0034",
@@ -669,6 +695,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 22,
+      "eligible_locations": 32,
+      "claim_fill_fraction": 0.6875,
       "forced_anchors": 1,
       "final_bbox": [
         0.4905983,
@@ -715,6 +743,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 411,
+      "eligible_locations": 782,
+      "claim_fill_fraction": 0.525575,
       "forced_anchors": 9,
       "final_bbox": [
         0.354823,
@@ -771,6 +801,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 23,
+      "eligible_locations": 35,
+      "claim_fill_fraction": 0.657143,
       "forced_anchors": 1,
       "final_bbox": [
         0.4708181,
@@ -878,6 +910,8 @@
         ]
       ],
       "locations": 69,
+      "eligible_locations": 192,
+      "claim_fill_fraction": 0.359375,
       "forced_anchors": 1,
       "final_bbox": [
         0.5601954,
@@ -945,6 +979,8 @@
         ]
       ],
       "locations": 105,
+      "eligible_locations": 147,
+      "claim_fill_fraction": 0.714286,
       "forced_anchors": 1,
       "final_bbox": [
         0.558486,
@@ -1012,6 +1048,8 @@
         ]
       ],
       "locations": 90,
+      "eligible_locations": 132,
+      "claim_fill_fraction": 0.681818,
       "forced_anchors": 1,
       "final_bbox": [
         0.603663,
@@ -1055,6 +1093,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 45,
+      "eligible_locations": 47,
+      "claim_fill_fraction": 0.957447,
       "forced_anchors": 1,
       "final_bbox": [
         0.645177,
@@ -1090,7 +1130,7 @@
       ]
     },
     "ISE": {
-      "rationale": "Isengard ring and Nan Curunír approaches",
+      "rationale": "compact Nan Curunir vale north of the Fords of Isen",
       "claim_bounds": [
         0.445,
         0.48,
@@ -1099,31 +1139,66 @@
       ],
       "source_zone": null,
       "source_dilation_pixels": null,
-      "claim_polygon": null,
-      "locations": 38,
+      "claim_polygon": [
+        [
+          0.458,
+          0.424
+        ],
+        [
+          0.47,
+          0.42
+        ],
+        [
+          0.478,
+          0.438
+        ],
+        [
+          0.477,
+          0.459
+        ],
+        [
+          0.471,
+          0.477
+        ],
+        [
+          0.458,
+          0.477
+        ],
+        [
+          0.45,
+          0.46
+        ],
+        [
+          0.451,
+          0.44
+        ]
+      ],
+      "locations": 13,
+      "eligible_locations": 14,
+      "claim_fill_fraction": 0.928571,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4503053,
-        0.4774115,
-        0.4176844,
-        0.5085491
+        0.4512821,
+        0.4730159,
+        0.4303859,
+        0.4758183
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 38,
+        "largest_component": 13,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 38,
+            "size": 13,
             "forced_anchors": 1,
             "sample": [
               "isengard",
-              "me_land_0066",
-              "me_land_0229",
-              "me_land_0289",
-              "me_land_0382"
+              "me_land_1070",
+              "me_land_1149",
+              "me_land_1533",
+              "me_land_1745"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1168,6 +1243,8 @@
         ]
       ],
       "locations": 145,
+      "eligible_locations": 231,
+      "claim_fill_fraction": 0.627706,
       "forced_anchors": 1,
       "final_bbox": [
         0.6913309,
@@ -1226,6 +1303,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 131,
+      "eligible_locations": 202,
+      "claim_fill_fraction": 0.648515,
       "forced_anchors": 3,
       "final_bbox": [
         0.225641,
@@ -1388,6 +1467,8 @@
         ]
       ],
       "locations": 15,
+      "eligible_locations": 17,
+      "claim_fill_fraction": 0.882353,
       "forced_anchors": 1,
       "final_bbox": [
         0.5037851,
@@ -1434,6 +1515,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 84,
+      "eligible_locations": 105,
+      "claim_fill_fraction": 0.8,
       "forced_anchors": 1,
       "final_bbox": [
         0.192674,
@@ -1516,6 +1599,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 24,
+      "eligible_locations": 27,
+      "claim_fill_fraction": 0.888889,
       "forced_anchors": 1,
       "final_bbox": [
         0.4708181,
@@ -1562,6 +1647,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 419,
+      "eligible_locations": 511,
+      "claim_fill_fraction": 0.819961,
       "forced_anchors": 9,
       "final_bbox": [
         0.6,
@@ -1629,6 +1716,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 45,
+      "eligible_locations": 103,
+      "claim_fill_fraction": 0.436893,
       "forced_anchors": 1,
       "final_bbox": [
         0.44884,
@@ -1696,6 +1785,8 @@
         ]
       ],
       "locations": 155,
+      "eligible_locations": 189,
+      "claim_fill_fraction": 0.820106,
       "forced_anchors": 1,
       "final_bbox": [
         0.7313797,
@@ -1763,6 +1854,8 @@
         ]
       ],
       "locations": 89,
+      "eligible_locations": 113,
+      "claim_fill_fraction": 0.787611,
       "forced_anchors": 1,
       "final_bbox": [
         0.7819292,
@@ -1806,6 +1899,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 1,
+      "eligible_locations": 10,
+      "claim_fill_fraction": 0.1,
       "forced_anchors": 1,
       "final_bbox": [
         0.5665446,
@@ -1873,6 +1968,8 @@
         ]
       ],
       "locations": 183,
+      "eligible_locations": 268,
+      "claim_fill_fraction": 0.682836,
       "forced_anchors": 1,
       "final_bbox": [
         0.6835165,
@@ -1916,6 +2013,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 16,
+      "eligible_locations": 23,
+      "claim_fill_fraction": 0.695652,
       "forced_anchors": 1,
       "final_bbox": [
         0.4786325,
@@ -1958,7 +2057,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 177,
+      "locations": 193,
+      "eligible_locations": 302,
+      "claim_fill_fraction": 0.639073,
       "forced_anchors": 4,
       "final_bbox": [
         0.4556777,
@@ -1968,13 +2069,13 @@
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 2,
-        "largest_component": 163,
-        "largest_component_fraction": 0.920904,
+        "components": 1,
+        "largest_component": 193,
+        "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 163,
+            "size": 193,
             "forced_anchors": 4,
             "sample": [
               "aldberg",
@@ -1985,34 +2086,6 @@
             ],
             "locations": [],
             "disposition": "primary_component"
-          },
-          {
-            "size": 14,
-            "forced_anchors": 0,
-            "sample": [
-              "me_land_0119",
-              "me_land_0426",
-              "me_land_0502",
-              "me_land_0537",
-              "me_land_0556"
-            ],
-            "locations": [
-              "me_land_0119",
-              "me_land_0426",
-              "me_land_0502",
-              "me_land_0537",
-              "me_land_0556",
-              "me_land_0756",
-              "me_land_0771",
-              "me_land_1198",
-              "me_land_2167",
-              "me_land_2549",
-              "me_land_3295",
-              "me_land_3414",
-              "me_land_4614",
-              "me_land_4946"
-            ],
-            "disposition": "Westfold component divided by river/impassable location topology"
           }
         ]
       },
@@ -2030,6 +2103,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 68,
+      "eligible_locations": 110,
+      "claim_fill_fraction": 0.618182,
       "forced_anchors": 3,
       "final_bbox": [
         0.3203907,
@@ -2084,6 +2159,8 @@
       "source_dilation_pixels": null,
       "claim_polygon": null,
       "locations": 236,
+      "eligible_locations": 285,
+      "claim_fill_fraction": 0.82807,
       "forced_anchors": 1,
       "final_bbox": [
         0.4500611,
@@ -2156,6 +2233,8 @@
         ]
       ],
       "locations": 35,
+      "eligible_locations": 48,
+      "claim_fill_fraction": 0.729167,
       "forced_anchors": 1,
       "final_bbox": [
         0.5499389,
@@ -2235,6 +2314,8 @@
         ]
       ],
       "locations": 62,
+      "eligible_locations": 114,
+      "claim_fill_fraction": 0.54386,
       "forced_anchors": 1,
       "final_bbox": [
         0.5550672,
@@ -2328,13 +2409,13 @@
       ]
     },
     "ROH": {
-      "components": 2,
-      "largest_component": 163,
-      "largest_component_fraction": 0.920904,
+      "components": 1,
+      "largest_component": 193,
+      "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 163,
+          "size": 193,
           "forced_anchors": 4,
           "sample": [
             "aldberg",
@@ -2345,34 +2426,6 @@
           ],
           "locations": [],
           "disposition": "primary_component"
-        },
-        {
-          "size": 14,
-          "forced_anchors": 0,
-          "sample": [
-            "me_land_0119",
-            "me_land_0426",
-            "me_land_0502",
-            "me_land_0537",
-            "me_land_0556"
-          ],
-          "locations": [
-            "me_land_0119",
-            "me_land_0426",
-            "me_land_0502",
-            "me_land_0537",
-            "me_land_0556",
-            "me_land_0756",
-            "me_land_0771",
-            "me_land_1198",
-            "me_land_2167",
-            "me_land_2549",
-            "me_land_3295",
-            "me_land_3414",
-            "me_land_4614",
-            "me_land_4946"
-          ],
-          "disposition": "Westfold component divided by river/impassable location topology"
         }
       ]
     },
@@ -2810,12 +2863,12 @@
     },
     "FAN": {
       "components": 1,
-      "largest_component": 30,
+      "largest_component": 31,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 30,
+          "size": 31,
           "forced_anchors": 2,
           "sample": [
             "me_land_0034",
@@ -2993,19 +3046,19 @@
     },
     "ISE": {
       "components": 1,
-      "largest_component": 38,
+      "largest_component": 13,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 38,
+          "size": 13,
           "forced_anchors": 1,
           "sample": [
             "isengard",
-            "me_land_0066",
-            "me_land_0229",
-            "me_land_0289",
-            "me_land_0382"
+            "me_land_1070",
+            "me_land_1149",
+            "me_land_1533",
+            "me_land_1745"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3301,19 +3354,19 @@
     },
     "DUN": {
       "components": 1,
-      "largest_component": 32,
+      "largest_component": 36,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 32,
+          "size": 36,
           "forced_anchors": 1,
           "sample": [
+            "me_land_0066",
             "me_land_0164",
             "me_land_0203",
             "me_land_0504",
-            "me_land_0624",
-            "me_land_0785"
+            "me_land_0624"
           ],
           "locations": [],
           "disposition": "primary_component"

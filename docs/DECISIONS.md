@@ -1615,3 +1615,27 @@ Accept the calibration only on same-camera Caras Galadhon and Osgiliath evidence
 reaches must read as a Great River, their affluents must remain visibly subordinate, and
 the fresh Observer session must retain clean playback and logs. Do not infer permission
 to widen unrelated courses or add uncited drainage.
+
+## 2026-08-03 - Reopen rendered hydrology after v93 owner review
+
+Direct owner review rejects v93 as a final visual calibration: Anduin still reads too
+small in ordinary player zoom and the network lacks sufficient visible rivers, affluents,
+and feeder branches. Retain v54 as the minimum technical baseline but reopen the visible
+core scale and the completeness of the source-extraction pass.
+
+The next pass must reconcile both accepted map sources and may add a course only when it
+is source-traced or otherwise lore-attested, with a bound confluence and close evidence.
+The earlier prohibition on decorative drainage remains. Source completeness in a control
+ledger is not a substitute for player-scale visibility.
+
+## 2026-08-03 - Contract Isengard to Nan Curunir
+
+Replace Isengard's rectangular 38-location envelope with an eight-vertex physical polygon
+around Orthanc and Nan Curunir. The source-bound Isengard anchor remains inside; the Fords
+of Isen lie south of the claim and may never be owned by ISE. The resulting 13-location
+claim is connected, while the released Gap cells return to Rohan, Dunland, Fangorn, or
+deliberately unclaimed land through their existing contracts.
+
+Bind the reviewed silhouette to normalized coordinates and a range of 8..18 locations,
+not generated IDs. Keep the positive ownership of the Fords open to later Rohan/Dunland
+frontier evidence; only their exclusion from Saruman's compact ring-domain is permanent.

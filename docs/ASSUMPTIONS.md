@@ -446,3 +446,14 @@ about Middle-earth.
 - A blue terrain-material core does not imply that the corresponding course is navigable
   or participates in EU5's engine river graph. Only the twelve parser-safe independent
   channels carry that stronger engine representation.
+
+## v94 Isengard political silhouette
+
+- Tolkien and the accepted maps locate Orthanc within Nan Curunir and the Fords of Isen
+  farther south, but do not provide a cadastral TA 3018 boundary for Saruman's domain.
+  The compact eight-vertex polygon is therefore a conservative political-presentation
+  judgment anchored to those two source coordinates, not a claim of surveyed borders.
+- The current allocator gives the released southern Gap cells to Rohan where its region
+  and claim apply, to Dunland west of the Gap, to Fangorn where the source forest applies,
+  and otherwise leaves them wild. Only the negative rule that the Fords are not part of
+  Isengard is treated as durable canon evidence.
