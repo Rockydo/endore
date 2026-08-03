@@ -114,6 +114,20 @@ SOURCE_ZONE_CLAIMS: dict[str, tuple[str, int, str]] = {
     "DOL": ("mirkwood", 10, "Arda Maps Mirkwood polygon: southern Dol Guldur shadow"),
 }
 CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
+    "ANG": (
+        (
+            (0.447, 0.122),
+            (0.460, 0.128),
+            (0.468, 0.141),
+            (0.466, 0.157),
+            (0.454, 0.166),
+            (0.438, 0.164),
+            (0.428, 0.153),
+            (0.429, 0.137),
+            (0.438, 0.126),
+        ),
+        "compact Mount Gram remnant with Carn Dum retained only as a forced fastness",
+    ),
     "LOR": (
         (
             (0.501, 0.339),
@@ -344,6 +358,12 @@ CONTIGUOUS_CLAIM_REALMS = frozenset(
 POLITICAL_SILHOUETTE_CONTRACTS: dict[
     str, tuple[int, int, tuple[float, float, float, float], str]
 ] = {
+    "ANG": (
+        16,
+        22,
+        (0.425, 0.470, 0.060, 0.168),
+        "Mount Gram must remain a remnant holding, not restore territorial Angmar",
+    ),
     "ISE": (
         8,
         18,

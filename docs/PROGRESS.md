@@ -1886,3 +1886,47 @@
 - Paired vanilla/ENDÓRË smoke passed in 201 seconds on the same fingerprint with zero new
   lines; the current vanilla control has four archived-baseline delta types, none unique
   to the mod. M2 remains red pending direct owner acceptance.
+
+## 2026-08-03 - v102 compact and physical Mount Gram candidate (runtime refresh pending)
+
+- Replaced the broad 55-location ANG envelope with a nine-vertex polygon around Mount
+  Gram while retaining Carn Dûm as the exact forced one-location fastness. The result is
+  18 locations in two fully dispositioned components: 17 around Mount Gram and Carn Dûm.
+  Exactly 37 ANG locations return to deliberate wild land; no other realm changes.
+- Added a source- and localization-bound `32_mount_gram` regional/close pair to the
+  default focused atlas. Rebased the Poros, Lefnui, and Serni camera display names after
+  deterministic gazetteer allocation changed their labels; all three location keys,
+  source coordinates, regions, and river geometries remain fixed.
+- Full repository validation passed in 426.3 seconds on the political-only game-visible
+  fingerprint `b1868fdd4c3ea01c43732d4bd6431c086e9cce35d28b7ee701a824055ebff4c4`.
+  The first focused runtime attempt deferred while Antiquitas owned the shared EU5 lease
+  and wrote an exact-fingerprint pending gate without launching. When that session ended,
+  the same command acquired the slot, entered a fresh HUD-proven Observer, and captured
+  `32_mount_gram` regional/close evidence under
+  `docs/screens/20260803_v102_mount_gram/`. The regional frame proves compact Mount Gram
+  plus separate Carn Dûm; playback ran 45 seconds at maximum speed with zero recovery and
+  the normal 1,486-byte log. Antiquitas then reacquired the slot before paired smoke, so
+  smoke deferred safely.
+- The maximum-close frame also demonstrated that Mount Gram did not read as a distinct
+  summit. Folded the correction into v102 rather than publishing a knowingly flat
+  namesake: one validation-allowlisted `source_gap_peak` at the unchanged reviewed
+  landmark, with no range-axis or pass change. Regenerated the 4096×2048 controls,
+  8192×4096 heightmap, and complete 174,763-tile native terrain cache. The focused output
+  reaches height 62,820/65,535 inside a compact 44×44 core and all four cartography,
+  control, height, and cache checks pass. A fresh same-camera runtime pair, playback,
+  paired smoke, and final full validation remain pending for the combined fingerprint.
+- The first combined full validation rejected a hidden topology coupling: the new relief
+  stamp had entered mountain-biome classification and moved reviewed `me_land_1771`
+  from Belfalas to Enedwaith. Fixed the generator rather than changing the ownership
+  exception. Synthetic named peaks now affect relief only; regenerated `biomes.png` and
+  `density.png` are byte-identical to v101, `elevation.png` retains Mount Gram,
+  `gen_definitions --check` passes, and the native material cache has been rebuilt from
+  the corrected sources.
+- Final full validation passes in 523.5 seconds on fingerprint
+  `ed451af60f533d7e022297621af86b43b031f7965ff3dd5397d7debb592f0c08`.
+  A fresh HUD-proven Observer then captured the identical `32_mount_gram` regional/close
+  pair under `docs/screens/20260803_v102_mount_gram_final/`; the close frame now shows a
+  compact isolated rocky summit. Maximum-speed playback ran 45 seconds with zero recovery
+  and the normal 1,486-byte log. Paired smoke first deferred safely when Antiquitas
+  acquired the shared slot immediately afterward, then ran on the unchanged pending
+  fingerprint when the lease cleared: PASS in 201 seconds, zero new mod error lines.

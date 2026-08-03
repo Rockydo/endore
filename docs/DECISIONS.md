@@ -1723,3 +1723,42 @@ Bind the player-scale silhouette to 260..310 locations and normalized bounds
 clean maximum-speed playback, full validation, and exact-fingerprint paired smoke. This
 political correction does not reopen the accepted mountain, Orodruin, ash, or hydrology
 mechanisms, and does not green M2 without direct owner acceptance.
+
+## 2026-08-03 - Present Mount Gram as an Angmar remnant, not a restored state
+
+Replace ANG's broad 55-location rectangular envelope with a nine-vertex polygon around
+the exact Mount Gram source coordinate. Retain Carn Dûm only as its existing forced,
+barrier-separated fastness. The resulting polity must own 16..22 locations inside
+normalized bounds `x=0.425..0.470`, `y=0.060..0.168`, with exactly one compact main
+component and the exact one-location forced Carn Dûm component.
+
+The v102 allocator yields 18 locations: 17 around Mount Gram and Carn Dûm. Exactly 37
+former ANG cells return to deliberate wild land, 28 in `me_north_arnor_region` and nine
+in `me_angmar_region`; no other ownership changes. This is a political-presentation and
+lore correction. It does not move the Mount Gram/Carn Dûm anchors, strategic regions,
+rivers, or any other realm.
+
+The first exact close frame proved a second defect in the same named feature: Mount Gram
+was physically flat beneath the corrected holding. Arda Maps omits it from `point_mount`,
+so add one explicit `source_gap_peak` at the existing `(0.448, 0.145)` reviewed landmark,
+radius `0.0038`, strength `0.92`, citing *The Lord of the Rings*, Book I, Chapter 1. The
+cartography audit permits exactly this one synthetic fallback and binds its complete
+profile and projection hash. It changes no range axis or pass. Generated local relief
+reaches 62,820/65,535 with a compact 44×44 high-resolution core; the exact summit is
+exposed earth rather than forest, pending like-for-like live review before any broader
+rock-material response is justified.
+
+Treat every `synthetic_peak_required` control as relief-only for location topology.
+Generate the political biome/density mask from the otherwise identical modulated ridge
+field with those peaks omitted, while retaining them in elevation and native materials.
+The first full validation correctly exposed the coupling when Mount Gram shifted a
+reviewed Belfalas cell into Enedwaith. The corrected generator restores `biomes.png` and
+`density.png` byte-for-byte to v101, keeps the summit elevation, and makes the existing
+political repair pass without weakening it. Future local relief corrections therefore
+cannot silently reroll world locations.
+
+Add Mount Gram to the default focused M2 evidence atlas and keep the target bound to its
+exact localized location and normalized coordinate. Accept the combined political and
+physical v102 only after a fresh regional/close pair, clean Observer playback, full
+validation, and exact-fingerprint paired smoke. A busy shared EU5 lease defers that
+runtime gate without reverting or weakening the statically green candidate.

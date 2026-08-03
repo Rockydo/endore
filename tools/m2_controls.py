@@ -1072,7 +1072,12 @@ def land_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
     return image
 
 
-def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
+def ridge_mask(
+    projection: dict,
+    size: tuple[int, int],
+    *,
+    include_synthetic_peaks: bool = True,
+) -> Image.Image:
     layers = np.zeros((size[1], size[0]), dtype=np.float32)
 
     def smooth_union(current: np.ndarray, addition: np.ndarray) -> np.ndarray:
@@ -1511,13 +1516,15 @@ def ridge_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
 
     # Named summit coordinates remain audit anchors, not automatic relief
     # stamps. Source-native Ardacraft relief and the clipped continuity axes
-    # now cover the formerly sparse Irensaga/Mindolluin samples. No production
-    # peak currently opts into this fallback; retaining the explicit gate
-    # prevents an audit marker from silently becoming a circular cap.
+    # cover the formerly sparse Irensaga/Mindolluin samples. Mount Gram is the
+    # sole reviewed fallback after its exact v102 camera proved the source
+    # field visually flat; cartography_reference_audit binds that exception
+    # to one tiny source-gap profile so other markers cannot become caps.
     for peak in (
         item
         for item in projection.get("named_peaks", [])
-        if item.get("synthetic_peak_required", False)
+        if include_synthetic_peaks
+        and item.get("synthetic_peak_required", False)
     ):
         x, y = point(peak["center"], size)
         radius = max(3, round(float(peak["radius"]) * size[1]))
@@ -1732,7 +1739,19 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     land = land_mask(projection, size)
     land_array = np.asarray(land) > 0
     ridges = ridge_mask(projection, size)
+    # Relief-only source-gap corrections must never change the passable-map
+    # tessellation. A tiny named summit may alter elevation and materials, but
+    # it cannot turn existing political cells into impassable mountain cells
+    # and thereby reroll location identities across the world.
+    classification_ridges = ridge_mask(
+        projection,
+        size,
+        include_synthetic_peaks=False,
+    )
     ridge_base = np.asarray(ridges, dtype=np.float32) / 255.0
+    classification_ridge_base = (
+        np.asarray(classification_ridges, dtype=np.float32) / 255.0
+    )
     ridge_variation = np.clip(
         (relief_modulation(size) - 0.66) / 0.58,
         0.0,
@@ -1743,6 +1762,12 @@ def render() -> tuple[dict[str, Image.Image], dict]:
     # identical summit caps.
     ridge_array = ridge_base * (
         1.0 - (1.0 - ridge_base) * 0.22 * (1.0 - ridge_variation)
+    )
+    classification_ridge_array = classification_ridge_base * (
+        1.0
+        - (1.0 - classification_ridge_base)
+        * 0.22
+        * (1.0 - ridge_variation)
     )
     # Bind the generated crests to the reduced Ardacraft authority, not just
     # to a checksum that a later renderer could accidentally ignore. Strong
@@ -1873,7 +1898,7 @@ def render() -> tuple[dict[str, Image.Image], dict]:
         active = (np.asarray(mask) > 0) & land_array
         biome[active] = BIOMES[zone["biome"]]
     biome[
-        (ridge_array > MOUNTAIN_BIOME_THRESHOLD) & land_array
+        (classification_ridge_array > MOUNTAIN_BIOME_THRESHOLD) & land_array
     ] = BIOMES["mountain"]
     for lake in projection["lakes"]:
         mask = Image.new("L", size, 0)

@@ -6608,60 +6608,23 @@ countries = {
 		ANG = { # Mount Gram
 			own_control_core = {
 				carn_dum
-				me_land_0161
-				me_land_0354
-				me_land_0441
 				me_land_0558
 				me_land_0570
 				me_land_0787
 				me_land_0858
 				me_land_0913
-				me_land_1010
-				me_land_1055
-				me_land_1086
-				me_land_1152
-				me_land_1224
 				me_land_1251
-				me_land_1283
-				me_land_1370
-				me_land_1391
-				me_land_1780
-				me_land_1863
-				me_land_1971
-				me_land_2028
 				me_land_2051
 				me_land_2069
 				me_land_2126
-				me_land_2166
-				me_land_2197
-				me_land_2231
-				me_land_2317
-				me_land_2328
 				me_land_2636
 				me_land_2776
 				me_land_2979
-				me_land_3100
-				me_land_3102
 				me_land_3354
-				me_land_3362
-				me_land_3561
-				me_land_3613
-				me_land_3615
-				me_land_3619
-				me_land_3659
-				me_land_3666
-				me_land_3864
 				me_land_3870
-				me_land_4175
 				me_land_4347
 				me_land_4553
-				me_land_4695
-				me_land_4745
-				me_land_4748
-				me_land_4836
 				me_land_5035
-				me_land_5059
-				me_land_5063
 			}
 			starting_technology_level = 3
 

@@ -498,3 +498,17 @@ about Middle-earth.
   ring. Its one-cell graph separation is caused by lake and impassable-enclosure topology,
   not an unattested foreign enclave; the exact component is review-bound so a future map
   topology change cannot inherit the exception silently.
+
+## v102 Mount Gram remnant
+
+- The realm tag `ANG` represents the TA 3018 orc-hold at Mount Gram, not a restored realm
+  of Angmar. Tolkien attests goblins of Mount Gram and the former Angmar stronghold at
+  Carn Dûm, but supplies no evidence for continuous remnant rule across northern Eriador.
+- A compact source-centred Mount Gram holding plus the separately forced Carn Dûm
+  fastness is therefore preferable to the former 55-location territorial blob. Released
+  land remains wild; it is not assigned to Rangers, Lossoth, Gundabad, or another polity
+  without positive TA 3018 control evidence.
+- Arda Maps' reviewed vector layers do not include Mount Gram as a `point_mount`, although
+  Tolkien names the mountain in *The Lord of the Rings*, Book I, Chapter 1. A tiny summit
+  at the already source-crosswalked Mount Gram landmark is therefore a documented
+  source-gap correction, not permission to invent additional mountains.

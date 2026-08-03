@@ -2,12 +2,12 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3067,
-  "wild_locations": 2133,
+  "owned_locations": 3030,
+  "wild_locations": 2170,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
-      "rationale": "Mount Gram and Angmar remnant fastnesses",
+      "rationale": "compact Mount Gram remnant with Carn Dum retained only as a forced fastness",
       "claim_bounds": [
         0.415,
         0.48,
@@ -16,33 +16,70 @@
       ],
       "source_zone": null,
       "source_dilation_pixels": null,
-      "claim_polygon": null,
-      "locations": 55,
-      "eligible_locations": 96,
-      "claim_fill_fraction": 0.572917,
+      "claim_polygon": [
+        [
+          0.447,
+          0.122
+        ],
+        [
+          0.46,
+          0.128
+        ],
+        [
+          0.468,
+          0.141
+        ],
+        [
+          0.466,
+          0.157
+        ],
+        [
+          0.454,
+          0.166
+        ],
+        [
+          0.438,
+          0.164
+        ],
+        [
+          0.428,
+          0.153
+        ],
+        [
+          0.429,
+          0.137
+        ],
+        [
+          0.438,
+          0.126
+        ]
+      ],
+      "locations": 18,
+      "eligible_locations": 17,
+      "claim_fill_fraction": 1.058824,
       "forced_anchors": 2,
       "final_bbox": [
-        0.4222222,
-        0.4722833,
+        0.4319902,
+        0.4656899,
         0.0635076,
-        0.1934538
+        0.1612115
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 2,
-        "largest_component": 54,
-        "largest_component_fraction": 0.981818,
+        "largest_component": 17,
+        "largest_component_fraction": 0.944444,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 54,
+            "size": 17,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0161",
-              "me_land_0354",
-              "me_land_0441",
               "me_land_0558",
-              "me_land_0570"
+              "me_land_0570",
+              "me_land_0787",
+              "me_land_0858",
+              "me_land_0913"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -3471,19 +3508,19 @@
     },
     "ANG": {
       "components": 2,
-      "largest_component": 54,
-      "largest_component_fraction": 0.981818,
+      "largest_component": 17,
+      "largest_component_fraction": 0.944444,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 54,
+          "size": 17,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0161",
-            "me_land_0354",
-            "me_land_0441",
             "me_land_0558",
-            "me_land_0570"
+            "me_land_0570",
+            "me_land_0787",
+            "me_land_0858",
+            "me_land_0913"
           ],
           "locations": [],
           "disposition": "primary_component"

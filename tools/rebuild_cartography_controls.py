@@ -1356,6 +1356,25 @@ def build(reference_root: Path) -> tuple[dict, dict, dict]:
             }
         )
 
+    # Mount Gram is attested in LOTR but does not appear in Arda Maps'
+    # point_mount layer. The v102 exact-camera review showed that leaving the
+    # reviewed landmark to low regional source relief makes the namesake
+    # stronghold read as flat woodland. Add one deliberately tiny source-gap
+    # summit at the existing M3 coordinate; the strict audit below prevents
+    # this exception from becoming a generic synthetic-peak route.
+    named_peaks.append(
+        {
+            "key": "mount_gram",
+            "label": "MountGram",
+            "center": [0.448, 0.145],
+            "radius": 0.0038,
+            "strength": 0.92,
+            "profile": "source_gap_peak",
+            "synthetic_peak_required": True,
+            "source": "LOTR Book I, Ch. 1; reviewed Mount Gram landmark",
+        }
+    )
+
     ridges = [
         {
             "key": "misty_mountains",

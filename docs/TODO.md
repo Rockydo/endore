@@ -2,20 +2,29 @@
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
-   receives explicit owner acceptance. The current v101 source-audited runtime tree loads
-   and ticks cleanly. v99 covers the full physical atlas; v100 proves compact Erebor; v101
-   proves Mordor contracted from an eastern rectangle to the shared Ered Lithui/Ephel
-   Dúath enclosure while retaining its canonical western fortress outposts. The exact
-   v101 candidate completed 45 seconds of clean maximum-speed Observer playback and a
-   clean paired smoke. The visual gate remains red pending direct owner re-review.
+   receives explicit owner acceptance. The v101 source-audited runtime tree loads and
+   ticks cleanly. The statically green v102 candidate additionally contracts the former
+   55-location Angmar blob to an 18-location Mount Gram remnant plus forced Carn Dûm;
+   exactly 37 ANG cells return to wild land and no other realm moves. Full validation is
+   green on fingerprint `b1868fdd4c3ea01c43732d4bd6431c086e9cce35d28b7ee701a824055ebff4c4`.
+   The first bound `32_mount_gram` pair exposed a flat namesake summit. The combined
+   candidate now adds one compact, audit-bound Mount Gram peak and a fully regenerated
+   native terrain cache. The repeated identical pair proves the isolated summit and
+   45-second playback is clean; full validation is green on fingerprint `ed451af60f...`.
+   Paired smoke first deferred safely when Antiquitas immediately acquired the shared slot,
+   then passed in 201 seconds on the unchanged pending fingerprint with zero new mod error
+   lines. The visual gate remains red only pending direct owner review.
 2. M2 MOUNTAINS — ACCEPTED CURRENT MECHANISM / FREEZE. The owner's later live review
    explicitly found that the mountains finally read as mountains, superseding the early
    v30-v46 rejection language below. Preserve the current source-pinned axes, exact
    named summits, low pass saddles, sharp renderer profile, Mordor enclosure, northern
    chains, and isolated Erebor. The v99 focused Gundabad/Erebor plus nine-theatre close
-   frames show the retained 3D mechanism on the current fingerprint. Change mountain
-   data only for a newly named, source-demonstrated defect; do not revive v45 or execute
-   the old v46 experiment instructions. The following chronology is archival evidence.
+   frames show the retained 3D mechanism on the current fingerprint. v102 supplied one
+   qualifying named defect: the maximum-close Mount Gram frame did not show a distinct
+   summit. The candidate now contains only a compact source-bound Mount Gram peak; prove
+   it at the identical `32_mount_gram` camera and do not alter any range axis, other
+   summit, pass, material family, or river. Do not revive v45 or execute the old v46
+   experiment instructions. The following chronology is archival evidence.
    The first v30 source-field profile was live-rejected because exponent 0.82 widened its
    correct branches into broad high hills. v31 used exponent 1.38 and loaded/ticked cleanly,
    but like-for-like live Gundabad, Erebor, Morannon, Orodruin, and Dunharrow views rejected
@@ -635,7 +644,7 @@
   owner review supersedes its visual conclusion. M2 remains red; gameplay content remains
   blocked.
 
-## Current v101 map candidate
+## Current v102 map candidate
 
 - Retain the 102-course Arda Maps atlas and twelve-channel parser graph. v98 enlarges the
   upper/lower Anduin native cores to 0.72/0.68 scale, strengthens ordinary reviewed river
@@ -668,3 +677,17 @@
   regional/close evidence and 45 seconds of clean playback are under
   `docs/screens/20260803_v101_mordor_enclosure/`; paired smoke is zero-new on fingerprint
   `3dbe7354260c77ea57bcdacfc4df62ec0a7a7ef07c2a930db5a7db94b879fd63`.
+- v102 replaces the broad ANG state with 17 compact Mount Gram locations and the exact
+  forced Carn Dûm fastness. Its first fresh Observer proof exposed a flat Mount Gram, so
+  the combined candidate adds one tiny lore-attested summit at the unchanged landmark and
+  regenerates the complete terrain cache. The final same-camera pair, 45-second playback,
+  complete validation, and paired smoke all pass on the final fingerprint.
+- NEXT AFTER v102: deepen the source-reviewed hydrology without decorative invention.
+  Reassess the Great River's native width against the owner's live view, make Anduin read
+  unmistakably massive at close zoom, and add further tributaries only where Arda Maps,
+  Ardacraft drainage, or Tolkien's text supports their courses and confluences.
+  A read-only filter sweep on the hash-pinned Ardacraft network gives 61 paths at the
+  current `near<=4, far>=20, length>=16`, 104 at `near<=4, far>=16, length>=12`, 116 when
+  the join gap also rises to five pixels, and 179 at the looser `6/14/10` setting. Test
+  the conservative 104-path candidate first and reject it if like-for-like close frames
+  revive v95-v97 clutter; do not start from the 116/179 variants.

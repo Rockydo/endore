@@ -34,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "1d8bd87f373a742b5ed956118f4aedd599fb166963e9d3551db2800a85a3e8b6"
+    "258e4bb0b9bc848ee3d1dbc74d062f9354cebf83fcbe9a29de2fa1a13781244d"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -311,7 +311,7 @@ def render_report() -> dict:
         "moor_footprints": 8,
         "highland_source_vertices": 10_000,
         "moor_source_vertices": 200,
-        "named_peaks": 18,
+        "named_peaks": 19,
         "ridge_axes": 9,
         "passes": 10,
         "river_valley_controls": 24,
@@ -627,6 +627,7 @@ def render_report() -> dict:
         "erebor_peak",
         "ravenhill",
         "amon_hen",
+        "mount_gram",
     }
     actual_peak_keys = {item["key"] for item in projection["named_peaks"]}
     if actual_peak_keys != expected_peak_keys:
@@ -635,7 +636,11 @@ def render_report() -> dict:
         expected_source = (
             "Ardacraft direct Erebor marker"
             if peak["key"] == "erebor_peak"
-            else "Arda Maps point_mount"
+            else (
+                "LOTR Book I, Ch. 1; reviewed Mount Gram landmark"
+                if peak["key"] == "mount_gram"
+                else "Arda Maps point_mount"
+            )
         )
         if peak.get("source") != expected_source:
             raise ValueError(f"{peak['key']} lost its Arda Maps point provenance")
@@ -658,15 +663,30 @@ def render_report() -> dict:
         float(gundabad["radius"]), 0.0045, abs_tol=1e-9
     ):
         raise ValueError("Gundabad lost its compact chain-summit profile")
+    mount_gram = peak_by_key["mount_gram"]
+    if (
+        mount_gram.get("profile") != "source_gap_peak"
+        or not mount_gram.get("synthetic_peak_required", False)
+        or not math.isclose(float(mount_gram["radius"]), 0.0038, abs_tol=1e-9)
+        or not math.isclose(float(mount_gram["strength"]), 0.92, abs_tol=1e-9)
+        or any(
+            not math.isclose(float(actual), expected, abs_tol=1e-9)
+            for actual, expected in zip(
+                mount_gram["center"], (0.448, 0.145), strict=True
+            )
+        )
+    ):
+        raise ValueError("Mount Gram lost its compact reviewed source-gap profile")
     source_gap_peaks = {
         peak["key"]
         for peak in projection["named_peaks"]
         if peak.get("synthetic_peak_required", False)
     }
-    # v47 live evidence showed the two old source-gap fallback stamps as
-    # isolated mesas. The exact, source-clipped White Mountains continuity
-    # axis now covers both anchors, so no synthetic summit is permitted.
-    if source_gap_peaks:
+    # v47 live evidence showed the two old White Mountains fallback stamps as
+    # isolated mesas. Mount Gram is the sole later exception: v102 proves its
+    # reviewed landmark lacks a visible source summit, and the compact profile
+    # is bound above so this cannot become a generic synthetic-peak route.
+    if source_gap_peaks != {"mount_gram"}:
         raise ValueError("source-gap summit allowlist changed without review")
     expected_relief_weights = {
         "misty_mountains": 0.40,

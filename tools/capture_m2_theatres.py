@@ -80,6 +80,7 @@ FOCUSED_PHYSICAL_VIEWS = (
     Theatre("29_erebor", "Erebor", "Erebor", 4, 1),
     Theatre("30_mirrormere", "Lake Alderbank", "Lake Alderbank", 2, 0),
     Theatre("31_nindalf", "Nen Emyn adarath", "Nen Emyn adarath", 2, 0),
+    Theatre("32_mount_gram", "Mount Gram", "Mount Gram", 4, 1),
 )
 
 # A separate focused run covers the other binding major trunks and named
@@ -93,9 +94,9 @@ DRAINAGE_VIEWS = (
     Theatre("18_celduin", "Lakestrand", "Lakestrand"),
     Theatre("19_carnen", "Gatholgathol", "Gatholgathol"),
     Theatre("20_harnen", "Qasahir Oasis", "Qasahir Oasis"),
-    Theatre("21_poros", "Minas annonlad", "Minas annonlad"),
-    Theatre("22_lefnui", "Minas galeneth", "Minas galeneth"),
-    Theatre("23_serni", "Celon bellad", "Celon bellad"),
+    Theatre("21_poros", "Bar bornlad", "Bar bornlad"),
+    Theatre("22_lefnui", "Celon gondeth", "Celon gondeth"),
+    Theatre("23_serni", "Eithel duinlad", "Eithel duinlad"),
     Theatre("24_morgulduin", "Minas Morgul", "Minas Morgul"),
     Theatre("25_gladden", "Goldenhall", "Goldenhall"),
     Theatre("26_limlight", "Field of Celebrant", "Field of Celebrant"),
@@ -128,9 +129,9 @@ SOURCE_TARGETS = {
     "Lakestrand": (0.607082, 0.211040, "me_dale_region"),
     "Gatholgathol": (0.671307, 0.181729, "me_rhun_region"),
     "Qasahir Oasis": (0.586081, 0.827553, "me_near_harad_region"),
-    "Minas annonlad": (0.592918, 0.711773, "me_south_gondor_region"),
-    "Minas galeneth": (0.432234, 0.579384, "me_belfalas_region"),
-    "Celon bellad": (0.558974, 0.658525, "me_lebennin_region"),
+    "Bar bornlad": (0.592918, 0.711773, "me_south_gondor_region"),
+    "Celon gondeth": (0.432234, 0.579384, "me_belfalas_region"),
+    "Eithel duinlad": (0.558974, 0.658525, "me_lebennin_region"),
     "Minas Morgul": (0.607326, 0.595506, "me_ithilien_region"),
     "Goldenhall": (0.522100, 0.269174, "me_anduin_vale_region"),
     "Field of Celebrant": (0.539194, 0.417196, "me_anduin_vale_region"),
@@ -138,6 +139,7 @@ SOURCE_TARGETS = {
     "Erebor": (0.599699, 0.137606, "me_dale_region"),
     "Lake Alderbank": (0.496887, 0.330666, "me_anduin_vale_region"),
     "Nen Emyn adarath": (0.580500, 0.511200, "me_brown_lands_region"),
+    "Mount Gram": (0.449084, 0.141671, "me_north_arnor_region"),
 }
 MAX_TARGET_DISTANCE = 0.012
 
@@ -156,9 +158,9 @@ RIVER_TARGETS = {
     "Lakestrand": "celduin",
     "Gatholgathol": "carnen",
     "Qasahir Oasis": "harnen",
-    "Minas annonlad": "poros",
-    "Minas galeneth": "lefnui",
-    "Celon bellad": "serni",
+    "Bar bornlad": "poros",
+    "Celon gondeth": "lefnui",
+    "Eithel duinlad": "serni",
     "Minas Morgul": "morgulduin",
     "Goldenhall": "gladden",
     "Field of Celebrant": "limlight",

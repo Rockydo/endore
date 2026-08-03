@@ -89280,6 +89280,19 @@
       "radius": 0.0047,
       "strength": 0.45,
       "source": "Arda Maps point_mount"
+    },
+    {
+      "key": "mount_gram",
+      "label": "MountGram",
+      "center": [
+        0.448,
+        0.145
+      ],
+      "radius": 0.0038,
+      "strength": 0.92,
+      "profile": "source_gap_peak",
+      "synthetic_peak_required": true,
+      "source": "LOTR Book I, Ch. 1; reviewed Mount Gram landmark"
     }
   ],
   "ridges": [

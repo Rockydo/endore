@@ -15,10 +15,10 @@
   "moor_zones": 8,
   "highland_source_pixels": 309673,
   "moor_source_pixels": 11387,
-  "named_peaks": 18,
+  "named_peaks": 19,
   "source_relief_core_pixels": 58827,
   "source_relief_core_coverage": 0.997875,
-  "high_ridge_source_support": 1.0,
+  "high_ridge_source_support": 0.999854,
   "source_relief_theatres": {
     "northern_ranges": {
       "bbox": [
@@ -29,8 +29,8 @@
       ],
       "source_core_pixels": 23246,
       "source_core_coverage": 1.0,
-      "high_ridge_pixels": 49716,
-      "high_ridge_source_support": 1.0,
+      "high_ridge_pixels": 49739,
+      "high_ridge_source_support": 0.999538,
       "minimum_source_core_coverage": 0.925,
       "minimum_high_ridge_source_support": 0.995
     },
@@ -149,5 +149,5 @@
     "steppe": 9,
     "arid": 10
   },
-  "source_sha256": "5e16aec12b4145df10356e78d52bd6596eb11f3f686c8b7013770d25a776b52a"
+  "source_sha256": "dc4f93fdb26a0c8c95aeb64d5c993c3bbd74b360d2d007a414e464a8fe96167a"
 }

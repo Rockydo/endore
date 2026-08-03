@@ -1,26 +1,30 @@
 # M2 owner review — current physical map
 
-Status: the v101 map payload awaits direct owner re-review. v99 is the complete physical
-atlas; v100 adds compact Erebor; v101 contracts Mordor to the shared mountain enclosure.
-The previous v93 rejection keeps the gate red until the owner explicitly accepts the
-current result.
+Status: the v102 map payload awaits direct owner re-review. v99 is the complete physical
+atlas; v100 adds compact Erebor; v101 contracts Mordor to the shared mountain enclosure;
+v102 contracts Mount Gram to a remnant holding and restores its namesake summit. The
+previous v93 rejection keeps the gate red until the owner explicitly accepts the current
+result.
 
 ## Exact candidate
 
 - Game-visible fingerprint:
-  `3dbe7354260c77ea57bcdacfc4df62ec0a7a7ef07c2a930db5a7db94b879fd63`
+  `ed451af60f533d7e022297621af86b43b031f7965ff3dd5397d7debb592f0c08`
 - Generator: v56 native-resolution river cores, enlarged Great River hierarchy, 102
   reviewed Arda Maps courses, and 61 curated source-connected Ardacraft affluents, with
   v94's compact Nan Curunir, v100's compact Erebor, and v101's source-enclosed Mordor
-  political corrections.
+  political corrections. v102 adds an 18-location Mount Gram remnant plus forced Carn Dûm
+  and one compact lore-attested, relief-only Mount Gram summit.
 - Runtime proof: v98 supplied eight source-bound river camera pairs; v99 independently
   supplied the full map, all nine regional/close theatre pairs, four core hydrology pairs,
   and focused close pairs for Lothlorien, Gundabad, Erebor, Mirrormere, and Nindalf.
   v100 supplied a fresh regional/close Erebor pair; v101 supplied a fresh regional/close
   Mordor pair after binding its politics to the shared mountain ring. All HUD-proven
   Observer sessions completed 45-second maximum-speed playback with zero recovery and the
-  normal 1,486-byte log. The final v101 candidate passes paired vanilla/mod smoke with
-  zero new error lines.
+  normal 1,486-byte log. v102 supplies a fresh same-camera Mount Gram pair and another
+  clean 45-second run on the exact candidate. The first paired-smoke request deferred when
+  Antiquitas acquired the shared lease immediately after capture; the pending fingerprint
+  then ran when the slot cleared and passed in 201 seconds with zero new mod error lines.
 
 ## Launch with physical terrain enabled
 
@@ -55,6 +59,7 @@ does not overwrite personal audio, display-mode, or UI choices.
 | `docs/screens/20260803_v99_full_atlas/` | Current-fingerprint full map, all nine theatre pairs, four core hydrology pairs, and focused Lothlorien/Gundabad/Erebor/Mirrormere/Nindalf physical pairs; clean 45-second playback. |
 | `docs/screens/20260803_v100_compact_erebor/` | Fresh regional/close proof that Erebor is a compact nine-cell holding around its unchanged isolated summit; clean 45-second playback. |
 | `docs/screens/20260803_v101_mordor_enclosure/` | Fresh regional/close proof that Mordor follows its mountain-enclosed basin with separate canonical western outposts; Orodruin retained; clean 45-second playback. |
+| `docs/screens/20260803_v102_mount_gram_final/` | Fresh same-camera proof of the compact Mount Gram remnant, separate Carn Dûm, and an isolated physical namesake summit; clean 45-second playback. |
 
 Screenshots are reproducible, ignored working evidence rather than shipped mod payload.
 Regional frames establish position and political context; the corresponding close frames
@@ -82,7 +87,9 @@ The current technical review supports these statements, but not visual acceptanc
   political component; Isengard is a compact 13-location Nan Curunir claim and the Fords
   resolve outside it; Erebor is a compact nine-location Lonely Mountain claim, while Dale
   and the Iron Hills remain separate and unchanged; Mordor's 296-location main body shares
-  the accepted Ered Lithui/Ephel Dúath ring and retains only source-bound western outposts.
+  the accepted Ered Lithui/Ephel Dúath ring and retains only source-bound western outposts;
+  Mount Gram is a compact 17-location main holding plus exact one-location Carn Dûm, with
+  the summit changing relief but not passability topology.
 
 Review v98's rendered width and visible network density against both accepted map sources.
 Additional courses remain prohibited unless source-traced or lore-attested; no decorative
