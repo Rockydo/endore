@@ -1787,3 +1787,36 @@ Treat vegetation as a mandatory downstream artifact of every water-mask change. 
 full v103 validation exposed that all 39 authored transform bins still encoded v102 river
 clearance. Regenerate them from the v103 controls while preserving the exact 3,493,385
 transform budget and all forest/species contracts; never waive or baseline this mismatch.
+
+## 2026-08-03 - Bind named frontier ownership by source reference
+
+Add exact required-owner contracts for Osgiliath and Rammas Echor (`GON`) and exact
+required-wilderness contracts for Amon Lhaw and the Barrow-downs. Resolve them through the
+stable cartography reference map rather than generated location IDs, apply them after the
+nearest-seat allocation, and emit each ruling and rationale in the generated ownership
+audit. This corrects four demonstrated source/frontier contradictions without widening a
+realm polygon, moving physical geography, or turning empty ruins into populated places.
+
+Keep ordinary Ithilien wild, Henneth Annûn and Cair Andros Gondorian, Mordor's occupied
+gateworks unchanged, west-bank Amon Hen in Rohan, and the existing 38-realm roster. The
+result must preserve compact-realm connectivity and all M4/M5 totals.
+
+## 2026-08-03 - Replace painted rivers with vanilla indexed drainage trees
+
+Reject v103's visual conclusion after direct owner close-zoom review. Its enlarged
+channel-6 material cores made blue ground beside a still-thin indexed river; a technically
+clean load does not make that a river. Preserve the source-aligned height incision, but
+remove every terrain-only course and nominal-width multiplier from water-material paint.
+
+Follow the installed Jomini grammar instead: one green source per connected drainage
+system, red terminal pixels for incoming tributaries, yellow only for later reviewed
+distributaries, and vanilla flow indices 4/5/11/15 for width progression. Join Langwell,
+upper Anduin, and the corrected lower Anduin ordering into one continuous Great River;
+join Mitheithel and Greyflood into one continuous trunk. Encode only source- and lore-
+reviewed affluents, leaving ambiguous or crossing lines as dry valley controls.
+
+Terrain-cache generator v58 must derive channel 6 directly and exclusively from
+`in_game/map_data/rivers.png` at nearest-neighbour scale. No other water-looking terrain
+band is permitted. Accept the redesign only after a fresh game proves all red junctions
+parse, close views show no blue shoulders, Anduin uses the widest vanilla class, playback
+is stable, full validation passes, and paired smoke covers the exact fingerprint.

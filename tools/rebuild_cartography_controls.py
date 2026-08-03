@@ -99,6 +99,26 @@ DRAINAGE_AFFLUENT_NEAR_DISTANCE = 4
 DRAINAGE_AFFLUENT_FAR_DISTANCE = 16
 DRAINAGE_AFFLUENT_MIN_PATH = 12
 
+# Reviewed Arda Maps watercourses whose receiving channel is unambiguous in
+# both the source topology and Tolkien's geography.  These are engine rivers,
+# not decorative material paint: gen_rivers serializes each one as a red-ended
+# tributary in its parent's indexed drainage network.
+SUPPLEMENTARY_ENGINE_PARENTS: dict[str, str] = {
+    "source_enchantedriver_06_00": "forest_river",
+    "source_erui_13_00": "anduin",
+    "source_fenmark_15_00": "entwash",
+    "source_nimrodelriver_22_00": "celebrant",
+    "source_adorn_48_00": "isen",
+    "source_ciril_51_00": "ringlo",
+    "source_shirebourn_59_00": "source_thistlebrook_60_00",
+    "source_thistlebrook_60_00": "baranduin",
+    "source_stockbrook_61_00": "baranduin",
+    "source_withywindle_68_00": "baranduin",
+    "source_sirith_75_00": "anduin",
+    "source_sirannon_82_00": "glanduin",
+    "source_lhun_84_02": "lhun",
+}
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -1013,7 +1033,13 @@ def anduin_geometries(topology: Topology) -> tuple[list[list[float]], list[list[
     lower_parts = topology.line_parts(lower_geometry)
     lower: list[list[float]] = []
     for part in (
-        lower_parts[12],
+        # Part 12 is stored mouthward-to-headward.  Reversing it is required
+        # before appending part 13 and the reversed downstream trunk; the old
+        # order doubled back from the Entwash confluence to Nen Hithoel and
+        # then jumped downstream again.  gen_rivers quite correctly erased
+        # that loop, but the result silently lost the real Rauros-to-Entwash
+        # reach of the Great River.
+        list(reversed(lower_parts[12])),
         lower_parts[13],
         list(reversed(lower_parts[11])),
     ):
@@ -1040,11 +1066,11 @@ def stable_key(value: str) -> str:
 def supplementary_river_controls(topology: Topology) -> list[dict]:
     """Retain every additional source watercourse as physical terrain detail.
 
-    EU5 build 24187685 rejects custom affluent junction graphs in rivers.png,
-    but the same exact source polylines are safe and valuable as height/material
-    controls.  Keep the explicitly modelled trunks out of this collection to
-    avoid thickening them twice; import every other named channel plus every
-    substantial unnamed source part independently.
+    Reviewed named affluents use the installed red-junction river grammar;
+    unreviewed minor lines remain height controls until their receiving course
+    is proved. Keep explicitly modelled trunks out of this collection to avoid
+    incising them twice; import every other named channel plus every substantial
+    unnamed source part independently.
     """
 
     modelled_names = {
@@ -1120,11 +1146,9 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
                 incision_strength = 108
                 material_scale = 0.68
             label = stable_key(str(source_name)) if source_name else "unnamed"
-            controls.append(
-                {
-                    "key": (
-                        f"source_{label}_{geometry_index:02d}_{part_index:02d}"
-                    ),
+            key = f"source_{label}_{geometry_index:02d}_{part_index:02d}"
+            item = {
+                    "key": key,
                     "label": source_name,
                     "width": width,
                     "wander": 0.0,
@@ -1144,7 +1168,12 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
                         f"Arda Maps line_river {geometry_index} part {part_index}"
                     ),
                 }
-            )
+            parent = SUPPLEMENTARY_ENGINE_PARENTS.get(key)
+            if parent is not None:
+                item["engine_raster"] = True
+                item["terrain_only"] = False
+                item["joins"] = parent
+            controls.append(item)
     return controls
 
 
@@ -1888,8 +1917,8 @@ def build(reference_root: Path) -> tuple[dict, dict, dict]:
                 "key": "lhun",
                 "width": 0.0031,
                 "wander": 0.00035,
-                "engine_raster": False,
-                "terrain_only": True,
+                "engine_raster": True,
+                "terrain_only": False,
                 "hydrology_class": "named_trunk",
                 "incision_strength": 176,
                 "material_scale": 1.0,

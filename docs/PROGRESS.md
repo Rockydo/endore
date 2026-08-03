@@ -1961,3 +1961,65 @@
   1,486-byte log. Full validation passed in 470.4 seconds and paired smoke passed in 202.4
   seconds with zero new mod lines on final fingerprint
   `76fb6e7e104c9c82d33162ed17e690554e622ace6e335a104eaec94d6be1ff84`.
+
+## 2026-08-03 - v104 named frontier ownership audit
+
+- Compared every canon-named ruin and landmark in the ownership ledger against its
+  physical side of the accepted frontier. Found four high-confidence contradictions:
+  Osgiliath and Rammas Echor were wild despite Gondorian military control; east-bank Amon
+  Lhaw crossed Rohan's Anduin boundary; haunted Barrow-downs leaked into compact Bree-land.
+- Added source-reference required-owner contracts and machine-visible audit rationales.
+  The final candidate moves only those four zero-population ruins: two to GON and two to
+  WILD. Gondor changes 411->413 locations, Rohan 193->192, and Bree-land 24->23; the total
+  remains 3,030 assigned / 2,974 wild with zero contract violations and intact compact
+  components. Amon Hen, ordinary Ithilien, all terrain, hydrology, forests, and the
+  38-realm roster are unchanged.
+- Regenerated the M3 ownership/gazetteer outputs and their M4 people and M5 census ledgers.
+  Dedicated M3, M4, M5, and template checks pass; all four sites remain zero-population
+  ruins. Full validation, live political review, and paired smoke are pending on
+  fingerprint `c6cb12feabdde45c0a08c388f72ab4bdcf711fb04fddd3d8c682d21e78829cbd`.
+
+## 2026-08-03 - v105 genuine indexed river redesign (runtime gate pending)
+
+- Direct owner close-zoom review rejects v103's hydrology presentation: much of its
+  apparent width was blue channel-6 terrain beside a thin real spline. v103 remains a
+  technically green historical commit, but its visual river judgment is superseded and
+  M2 remains red.
+- Audited vanilla `rivers.png` and `NRivers` directly. Vanilla has 693 source-rooted
+  components, 1,286 red tributary markers, 129 yellow distributary markers, and width
+  indices 4/5/11/15. Removed the false ENDORË constraint that every channel must be
+  isolated and added deterministic source/junction/mouth graph validation.
+- Corrected the reversed lower-Anduin source part that previously doubled back and was
+  loop-erased. The raster now forms continuous Langwell-upper/lower Anduin and
+  Mitheithel-Greyflood trunks, plus 25 red-ended source-backed tributaries in 12 complete
+  systems: 37 genuine engine courses rather than twelve real lines plus painted proxies.
+- Enabled only reviewed named tributaries. Celos remains a dry incised control because
+  its projected line intersects Serni; no invented detour was accepted. Reconciled the
+  Lhûn terminal reach to the nearest Gulf of Lune water cell with four documented points.
+- Terrain-cache generator v58 removes every nominal-width and terrain-only water mask.
+  Channel 6 is now the exact nearest-neighbour footprint of the indexed raster: 54,184
+  source pixels and exactly 866,944 pixels at the 4x runtime surface. The compatible
+  height cache was reused; all 174,763 material tiles rebuilt successfully in 325.7s
+  (44,855 unique, 23.5 MB; 193.3 MB complete cache).
+- Rebuilt the complete height/material cache after the corrected control source. The
+  final payload contains 25,246 unique height tiles in 82.9 MB and 44,855 unique material
+  tiles in 23.5 MB; all 174,763 virtual entries occupy 193.3 MB and contain no retail
+  decal layers. The dependent world, flatmap, ownership/census ledgers, and 3,493,385
+  vegetation transforms were regenerated from the same controls.
+- Full repository validation passes in 566.5s, including the 481.1s deterministic M2
+  world gate. The exact current game-visible fingerprint is
+  `3381fb36a8a87bd9d541cd153ed9c255fc1abacb4e53648dec1ce731bebd78e9`.
+  Paired smoke subsequently passed in 204.1s with zero new or mod-unique lines, and the
+  exact-fingerprint smoke assertion passes.
+- A fresh no-debug visual New Game entered live Observer and captured regional/close
+  pairs for upper/lower Anduin, Celebrant, Entwash, Baranduin, Lhûn, Greyflood, the
+  Sirith-Anduin reach, and the Shire tributary network under
+  `docs/screens/20260803_v105_genuine_rivers/`. The engine renders connected tributary
+  splines and width hierarchy without the rejected parallel blue terrain bands. The
+  Anduin is now a genuine continuous widest-class spline rather than a thin line inside a
+  painted proxy.
+- Maximum-speed playback advanced from TA 3018.1.1 to 3018.1.15 in 45 seconds with zero
+  recovery and no log growth during the interval. Two 308-byte `pdxinput_context` lines
+  occurred beforehand from failed Escape-key evidence cleanup and are classified as
+  harness noise. The v105 river mechanism is technically green; M2 remains red pending
+  explicit owner acceptance of the overall map.

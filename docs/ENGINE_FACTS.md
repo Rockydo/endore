@@ -425,3 +425,29 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   therefore falsely appear treeless. Forest-object evidence must use the finder maximum;
   the independently reset regional frame supplies orientation rather than object-density
   proof.
+- The v103 owner close-zoom inspection supersedes the earlier acceptance of material-
+  water cores as river presentation. A wide channel-6 material band beside a narrow
+  indexed spline is visibly blue terrain, not a wider river, and is rejected even when
+  it loads cleanly. Terrain-only drainage may shape valleys but must not paint water.
+- The installed 16,384x8,192 `rivers.png` proves the affluent grammar directly: 693
+  four-connected components contain exactly 693 green index-0 sources, 1,286 red index-1
+  incoming-junction markers, and 129 yellow index-2 distributary markers. Red markers
+  terminate incoming segments; a valid network is not a collection of mutually isolated
+  source-to-sea lines. The former ENDORË rule forbidding every inter-channel contact was
+  therefore an incorrect inference from failed junction experiments, not an engine limit.
+- Installed `NRivers` assigns thirteen palette values to rendered width, from 1.0 to 2.2;
+  vanilla currently uses flow indices 4, 5, 11, and 15. The v105 generator follows those
+  exact values, produces one source per source-to-water component, and uses explicit red
+  endpoints for tributaries. Its static candidate contains 12 systems, 25 red junctions,
+  and 37 real engine courses; live parser evidence remains required.
+- Terrain-cache generator v58 derives material channel 6 only from non-background pixels
+  of the generated indexed raster. Its 54,184 indexed pixels become exactly 866,944 mask
+  pixels on the 4x full virtual surface (16 per source pixel), with no nominal-width
+  multiplier, painted shoulders, or contribution from the remaining terrain-only lines.
+- Build 24187685 live-loads the v105 graph with all 12 source-rooted systems and 25 red
+  junctions. Maximum-close views show connected tributary/trunk splines at Celebrant,
+  Entwash, Lhûn, Greyflood, and the Shire network, with no separate blue channel-6 band.
+  Both Anduin reaches render as one continuous indexed widest-class river. A 45-second
+  maximum-speed Observer interval advanced from TA 3018.1.1 to 3018.1.15 without recovery
+  or error-log growth. Two `pdxinput_context` lines preceding playback were caused by
+  rejected automation Escape inputs and are not map diagnostics.

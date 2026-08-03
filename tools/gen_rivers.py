@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import deque
 import json
 import sys
 from pathlib import Path
@@ -26,6 +27,15 @@ ENGINE_MOUTHS: dict[str, list[list[float]]] = {
     "baranduin": [[0.329426, 0.349292]],
     "greyflood": [[0.373138, 0.441622]],
     "isen": [[0.379976, 0.521739]],
+    # Arda Maps' Lhûn line stops inland of the Ardacraft-derived Gulf of Lune
+    # coast after projection.  Continue its exact terminal bearing through the
+    # shortest four reviewed control points to the nearest gulf water cell.
+    "lhun": [
+        [0.279000, 0.113000],
+        [0.271000, 0.108000],
+        [0.264000, 0.101000],
+        [0.261900, 0.098300],
+    ],
     "ringlo": [[0.496459, 0.649243]],
     "lefnui": [[0.408655, 0.657795]],
     "serni": [[0.540255, 0.696374]],
@@ -43,6 +53,31 @@ WIDEST_RIVERS = {
     "harnen",
     "lefnui",
 }
+
+# A Jomini river network has one green source and may contain any number of
+# red-ended tributary segments.  These source controls are stored as separate
+# named reaches for cartographic auditing, but form one uninterrupted engine
+# trunk.  The first listed reach supplies the real headwater and the last one
+# reaches palette-index-254 water.
+COMPOSITE_TRUNKS: dict[str, tuple[str, ...]] = {
+    "anduin": ("langwell", "upper_anduin", "anduin"),
+    "greyflood": ("mitheithel", "greyflood"),
+}
+COMPOSITE_MEMBERS = {
+    member
+    for members in COMPOSITE_TRUNKS.values()
+    for member in members
+    if member != members[-1]
+}
+PARENT_ALIASES = {
+    "upper_anduin": "anduin",
+    "langwell": "anduin",
+    "mitheithel": "greyflood",
+}
+# Entwash belongs to the lower Anduin below Rauros.  It was previously pointed
+# at the separately authored upper reach only because the engine raster did
+# not support joins at all.
+PARENT_OVERRIDES = {"entwash": "anduin"}
 
 
 def game_rivers_path():
@@ -214,6 +249,273 @@ def parser_safe_path(
     return path
 
 
+def orthogonal_neighbours(point_: tuple[int, int]) -> tuple[tuple[int, int], ...]:
+    x, y = point_
+    return ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1))
+
+
+def merge_trunk_paths(
+    key: str,
+    segments: list[list[tuple[int, int]]],
+) -> list[tuple[int, int]]:
+    """Join audited reaches into one simple source-to-mouth engine trunk."""
+
+    result = list(segments[0])
+    for segment in segments[1:]:
+        if result[-1] == segment[0]:
+            result.extend(segment[1:])
+        else:
+            connector = orthogonal_path([result[-1], segment[0]])
+            result.extend(connector[1:-1])
+            result.extend(segment)
+        result = loop_erase_path(result)
+    validate_simple_path(key, result)
+    return result
+
+
+def main_river_path(
+    key: str,
+    rivers: dict[str, dict],
+    paths: dict[str, list[tuple[int, int]]],
+) -> list[tuple[int, int]]:
+    members = COMPOSITE_TRUNKS.get(key)
+    if members is None:
+        return paths[key]
+    segments = [list(paths[member]) for member in members]
+    # Source payload direction varies by named feature.  Orient the headwater
+    # so the endpoint nearest the following reach is downstream, then orient
+    # every later reach from the preceding endpoint toward the sea.
+    first, second = segments[0], segments[1]
+    first_start_distance = min(
+        abs(first[0][0] - point_[0]) + abs(first[0][1] - point_[1])
+        for point_ in (second[0], second[-1])
+    )
+    first_end_distance = min(
+        abs(first[-1][0] - point_[0]) + abs(first[-1][1] - point_[1])
+        for point_ in (second[0], second[-1])
+    )
+    if first_start_distance < first_end_distance:
+        first.reverse()
+    for index in range(1, len(segments)):
+        segment = segments[index]
+        previous_end = segments[index - 1][-1]
+        if (
+            abs(previous_end[0] - segment[-1][0])
+            + abs(previous_end[1] - segment[-1][1])
+            < abs(previous_end[0] - segment[0][0])
+            + abs(previous_end[1] - segment[0][1])
+        ):
+            segment.reverse()
+    return merge_trunk_paths(key, segments)
+
+
+def clip_main_to_mouth(
+    key: str,
+    path: list[tuple[int, int]],
+    water: np.ndarray,
+) -> list[tuple[int, int]]:
+    """Keep internal lake crossings and a short invisible ocean continuation."""
+
+    land_indices = [index for index, (x, y) in enumerate(path) if not water[y, x]]
+    if not land_indices:
+        raise ValueError(f"river {key} never crosses land")
+    start = land_indices[0]
+    final_land = land_indices[-1]
+    result = path[start : min(len(path), final_land + 4)]
+    if final_land == len(path) - 1:
+        mouth_x, mouth_y = result[-1]
+        if not any(
+            0 <= neighbour_y < WORLD_H
+            and 0 <= neighbour_x < WORLD_W
+            and water[neighbour_y, neighbour_x]
+            for neighbour_x, neighbour_y in orthogonal_neighbours((mouth_x, mouth_y))
+        ):
+            raise ValueError(
+                f"river {key} does not terminate orthogonally against "
+                "palette-index-254 water"
+            )
+    validate_simple_path(key, result)
+    return result
+
+
+def interaction_kind(
+    point_: tuple[int, int],
+    parent: set[tuple[int, int]],
+    occupied: set[tuple[int, int]],
+) -> tuple[bool, int, int]:
+    neighbours = orthogonal_neighbours(point_)
+    return (
+        point_ in occupied,
+        sum(neighbour in parent for neighbour in neighbours),
+        sum(neighbour in occupied and neighbour not in parent for neighbour in neighbours),
+    )
+
+
+def route_to_parent(
+    key: str,
+    path: list[tuple[int, int]],
+    parent: set[tuple[int, int]],
+    occupied: set[tuple[int, int]],
+) -> list[tuple[int, int]]:
+    """Terminate an incoming segment with one vanilla red confluence pixel."""
+
+    # Stop at the first clean orthogonal contact.  If the authored endpoint
+    # lands directly on its parent, the preceding pixel is normally the clean
+    # red terminus.
+    for index, current in enumerate(path):
+        overlaps, parent_neighbours, foreign_neighbours = interaction_kind(
+            current, parent, occupied
+        )
+        if not overlaps and parent_neighbours == 1 and foreign_neighbours == 0:
+            result = path[: index + 1]
+            validate_simple_path(key, result)
+            return result
+        if overlaps:
+            if current not in parent:
+                raise ValueError(
+                    f"river {key} intersects an unrelated river at {current}"
+                )
+            if index:
+                candidate = path[index - 1]
+                candidate_state = interaction_kind(candidate, parent, occupied)
+                if candidate_state == (False, 1, 0):
+                    result = path[:index]
+                    validate_simple_path(key, result)
+                    return result
+            # A shared endpoint on the inside of a parent bend can have two
+            # parent neighbours and is therefore not a valid vanilla red
+            # marker.  Back off two pixels and reconcile to a straight bank.
+            path = path[: max(2, index - 1)]
+            break
+        if parent_neighbours > 1:
+            path = path[: max(2, index - 1)]
+            break
+        if foreign_neighbours:
+            raise ValueError(
+                f"river {key} touches {foreign_neighbours} unrelated river "
+                f"pixel(s) at {current}"
+            )
+
+    # Source linework can end a few dozen raster cells short of its receiving
+    # course.  Route only that small final reconciliation through a one-cell
+    # exclusion halo, preserving every authored pixel before it.
+    if len(path) > 4:
+        # Leave enough clearance for the connector to turn away from the
+        # final authored stair-step without immediately self-touching it.
+        path = path[:-2]
+    start = path[-1]
+    parent_order = sorted(
+        parent,
+        key=lambda item: (abs(item[0] - start[0]) + abs(item[1] - start[1]), item),
+    )
+    candidates: list[tuple[int, int]] = []
+    for parent_pixel in parent_order[:256]:
+        for candidate in orthogonal_neighbours(parent_pixel):
+            x, y = candidate
+            if not (0 <= x < WORLD_W and 0 <= y < WORLD_H):
+                continue
+            if interaction_kind(candidate, parent, occupied) != (False, 1, 0):
+                continue
+            candidates.append(candidate)
+
+    branch = set(path[:-1])
+    blocked = set(occupied)
+    for pixel in occupied:
+        blocked.update(orthogonal_neighbours(pixel))
+    for pixel in branch:
+        blocked.add(pixel)
+        blocked.update(orthogonal_neighbours(pixel))
+    blocked.discard(start)
+
+    for target in sorted(
+        set(candidates),
+        key=lambda item: (abs(item[0] - start[0]) + abs(item[1] - start[1]), item),
+    ):
+        target_distance = abs(target[0] - start[0]) + abs(target[1] - start[1])
+        if target_distance > 192:
+            break
+        blocked.discard(target)
+        minimum_x = max(0, min(start[0], target[0]) - 24)
+        maximum_x = min(WORLD_W - 1, max(start[0], target[0]) + 24)
+        minimum_y = max(0, min(start[1], target[1]) - 24)
+        maximum_y = min(WORLD_H - 1, max(start[1], target[1]) + 24)
+        queue = deque([start])
+        previous: dict[tuple[int, int], tuple[int, int] | None] = {start: None}
+        while queue and target not in previous:
+            current = queue.popleft()
+            ordered = sorted(
+                orthogonal_neighbours(current),
+                key=lambda item: abs(item[0] - target[0]) + abs(item[1] - target[1]),
+            )
+            for neighbour in ordered:
+                if neighbour in previous or neighbour in blocked:
+                    continue
+                x, y = neighbour
+                if not (minimum_x <= x <= maximum_x and minimum_y <= y <= maximum_y):
+                    continue
+                previous[neighbour] = current
+                queue.append(neighbour)
+        if target not in previous:
+            blocked.add(target)
+            continue
+        connector: list[tuple[int, int]] = []
+        cursor: tuple[int, int] | None = target
+        while cursor is not None:
+            connector.append(cursor)
+            cursor = previous[cursor]
+        connector.reverse()
+        result = loop_erase_path(path + connector[1:])
+        validate_simple_path(key, result)
+        if interaction_kind(result[-1], parent, occupied) != (False, 1, 0):
+            raise ValueError(f"river {key} produced an invalid red confluence")
+        return result
+    raise ValueError(f"river {key} cannot reach parent within 192 raster cells")
+
+
+def validate_network_raster(result: np.ndarray) -> None:
+    """Enforce the installed vanilla source/junction/mouth graph invariants."""
+
+    river_pixels = {
+        (int(x), int(y)): int(result[y, x])
+        for y, x in zip(*np.where(~np.isin(result, (254, 255))), strict=True)
+    }
+    for current, value in river_pixels.items():
+        degree = sum(neighbour in river_pixels for neighbour in orthogonal_neighbours(current))
+        maximum = 3 if value in {1, 2, 4, 5, 11, 15} else 2
+        if degree > maximum:
+            raise ValueError(f"river pixel {current} index {value} has degree {degree}")
+        if value == 0 and degree != 1:
+            raise ValueError(f"river source {current} has degree {degree}, expected 1")
+        if value == 1 and degree != 2:
+            raise ValueError(f"river confluence {current} has degree {degree}, expected 2")
+
+    unseen = set(river_pixels)
+    while unseen:
+        seed = unseen.pop()
+        stack = [seed]
+        component = [seed]
+        while stack:
+            current = stack.pop()
+            for neighbour in orthogonal_neighbours(current):
+                if neighbour in unseen:
+                    unseen.remove(neighbour)
+                    stack.append(neighbour)
+                    component.append(neighbour)
+        sources = sum(river_pixels[pixel] == 0 for pixel in component)
+        if sources != 1:
+            raise ValueError(
+                f"river component at {seed} has {sources} green sources, expected 1"
+            )
+        if not any(
+            0 <= neighbour_y < WORLD_H
+            and 0 <= neighbour_x < WORLD_W
+            and result[neighbour_y, neighbour_x] == 254
+            for pixel in component
+            for neighbour_x, neighbour_y in orthogonal_neighbours(pixel)
+        ):
+            raise ValueError(f"river component at {seed} does not reach water")
+
+
 def flow_palette_index(river: dict, progress: float) -> int:
     """Approximate vanilla's downstream 4 -> 5 -> 11 -> 15 widening."""
 
@@ -279,70 +581,79 @@ def render() -> Image.Image:
             raise ValueError(f"river {river['key']} joins unknown parent {parent}")
         if river.get("engine_raster") is False:
             continue
-        # Installed build 24187685 rejects every tested custom affluent
-        # junction topology at load. Tributaries remain binding height/valley
-        # controls, while the engine raster ships only complete source-to-water
-        # major channels until an editor-authored junction contract is proven.
-        if parent:
-            continue
         paths[river["key"]] = parser_safe_path(river)
 
     result = pixels
     occupied: set[tuple[int, int]] = set()
-    for key, path in paths.items():
-        land_runs: list[list[tuple[int, int]]] = []
-        current_run: list[tuple[int, int]] = []
-        for x, y in path:
-            if water[y, x]:
-                if current_run:
-                    land_runs.append(current_run)
-                    current_run = []
-            else:
-                current_run.append((x, y))
-        if current_run:
-            land_runs.append(current_run)
-        if not land_runs:
-            raise ValueError(f"river {key} never crosses land")
-        land_path = max(land_runs, key=len)
-        if any(len(run) > 8 for run in land_runs if run is not land_path):
-            raise ValueError(f"river {key} leaves and re-enters land before its mouth")
-        mouth_x, mouth_y = land_path[-1]
-        if not any(
-            0 <= neighbour_y < WORLD_H
-            and 0 <= neighbour_x < WORLD_W
-            and water[neighbour_y, neighbour_x]
-            for neighbour_x, neighbour_y in (
-                (mouth_x - 1, mouth_y),
-                (mouth_x + 1, mouth_y),
-                (mouth_x, mouth_y - 1),
-                (mouth_x, mouth_y + 1),
-            )
-        ):
-            raise ValueError(
-                f"river {key} does not terminate orthogonally against "
-                "palette-index-254 water"
-            )
-        validate_simple_path(key, land_path)
+    drawn_paths: dict[str, list[tuple[int, int]]] = {}
+    roots = [
+        key
+        for key, river in rivers.items()
+        if key in paths and not river.get("joins") and key not in COMPOSITE_MEMBERS
+    ]
+    for key in roots:
+        main_path = clip_main_to_mouth(
+            key,
+            main_river_path(key, rivers, paths),
+            water,
+        )
         if any(
-            (x, y) in occupied
-            or any(
-                neighbour in occupied
-                for neighbour in (
-                    (x - 1, y),
-                    (x + 1, y),
-                    (x, y - 1),
-                    (x, y + 1),
-                )
-            )
-            for x, y in land_path
+            pixel in occupied
+            or any(neighbour in occupied for neighbour in orthogonal_neighbours(pixel))
+            for pixel in main_path
         ):
             raise ValueError(f"independent river {key} touches another channel")
-        for index, (x, y) in enumerate(land_path):
-            progress = index / max(1, len(land_path) - 1)
+        for index, (x, y) in enumerate(main_path):
+            progress = index / max(1, len(main_path) - 1)
             result[y, x] = flow_palette_index(rivers[key], progress)
             occupied.add((x, y))
-        source_x, source_y = land_path[0]
+        source_x, source_y = main_path[0]
         result[source_y, source_x] = 0
+        drawn_paths[key] = main_path
+        for member in COMPOSITE_TRUNKS.get(key, ()):
+            drawn_paths[member] = main_path
+
+    pending = {
+        key
+        for key, river in rivers.items()
+        if key in paths and river.get("joins") and key not in COMPOSITE_MEMBERS
+    }
+    while pending:
+        progressed = False
+        for key in sorted(pending):
+            river = rivers[key]
+            parent_key = PARENT_OVERRIDES.get(key, river["joins"])
+            parent_key = PARENT_ALIASES.get(parent_key, parent_key)
+            parent_path = drawn_paths.get(parent_key)
+            if parent_path is None:
+                continue
+            branch = list(paths[key])
+            parent = set(parent_path)
+            first_distance = min(
+                abs(branch[0][0] - x) + abs(branch[0][1] - y)
+                for x, y in parent
+            )
+            last_distance = min(
+                abs(branch[-1][0] - x) + abs(branch[-1][1] - y)
+                for x, y in parent
+            )
+            if first_distance < last_distance:
+                branch.reverse()
+            branch = route_to_parent(key, branch, parent, occupied)
+            for index, (x, y) in enumerate(branch):
+                progress = index / max(1, len(branch) - 1)
+                result[y, x] = flow_palette_index(river, progress)
+                occupied.add((x, y))
+            confluence_x, confluence_y = branch[-1]
+            result[confluence_y, confluence_x] = 1
+            drawn_paths[key] = branch
+            pending.remove(key)
+            progressed = True
+        if not progressed:
+            unresolved = ", ".join(sorted(pending))
+            raise ValueError(f"river parent cycle or missing engine parent: {unresolved}")
+
+    validate_network_raster(result)
     output = Image.fromarray(result, "P")
     output.putpalette(palette)
     return output
@@ -391,9 +702,7 @@ def check() -> list[str]:
             ):
                 failures.append("river_preview.png differs from deterministic river model")
     used = set(int(value) for value in np.unique(np.asarray(expected)))
-    if (
-        not {0, 4, 5, 11, 15, 254, 255}.issubset(used)
-    ):
+    if not {0, 1, 4, 5, 11, 15, 254, 255}.issubset(used):
         failures.append(f"river raster lacks expected source/flow/background indices: {used}")
     return failures
 

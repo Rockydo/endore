@@ -34,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "6fe765d5450796979f1d56fba1e92de4e0b551107eb49e669fa6dc30803d922f"
+    "094f31013dfa2601fadc6774df487db2fd68ee72c5ea61e02102ce7fa75c7def"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -46,7 +46,7 @@ EXPECTED_ARDACRAFT_BIOMES_SHA256 = (
     "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
 )
 EXPECTED_DRAINAGE_FILE_SHA256 = (
-    "0b64b7bcda723c13a582a90f8cf132ec7d04d9e18c500bed469a7c2b9a4dbd24"
+    "a3c6bfee8e306b1d8a40e8956c35e8be67fd0afe9813f5dd4840ea0a9c6d917e"
 )
 EXPECTED_ARDACRAFT_DRAINAGE_SHA256 = (
     "d8ec6f22c0e3c87097145f2c3f3b831c778e4df8b705595d335e5c4d7be74871"
@@ -91,19 +91,19 @@ SOURCE_DRAINAGE_THEATRES = {
         "bbox": (0.42, 0.12, 0.68, 0.62),
         "minimum_controls": 62,
         "minimum_points": 860,
-        "minimum_length": 2.54,
+        "minimum_length": 2.50,
     },
     "white_mountains": {
         "bbox": (0.25, 0.43, 0.63, 0.68),
         "minimum_controls": 35,
         "minimum_points": 560,
-        "minimum_length": 1.60,
+        "minimum_length": 1.56,
     },
     "mordor_gondor": {
         "bbox": (0.52, 0.43, 0.80, 0.75),
         "minimum_controls": 46,
         "minimum_points": 565,
-        "minimum_length": 1.46,
+        "minimum_length": 1.42,
     },
 }
 SOURCE_FEEDER_THEATRES = {
@@ -434,7 +434,7 @@ def render_report() -> dict:
     terrain_only_rivers = [
         item for item in projection["rivers"] if item.get("terrain_only")
     ]
-    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 76:
+    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 62:
         raise ValueError("source tributary coverage changed without cartographic review")
     named_supplementary_count = sum(
         bool(item.get("label")) for item in terrain_only_rivers
@@ -445,9 +445,11 @@ def render_report() -> dict:
         for item in projection["rivers"]
         for start, end in zip(item["points"], item["points"][1:], strict=False)
     )
-    if named_supplementary_count != 26:
+    if named_supplementary_count != 13:
         raise ValueError("named/unnamed supplementary drainage balance changed")
-    if total_river_points < 1_700 or total_river_length < 4.85:
+    # Correcting lower Anduin's reversed source part removes a spurious
+    # backtracking chord; the reviewed 4.84 floor retains the real atlas.
+    if total_river_points < 1_700 or total_river_length < 4.84:
         raise ValueError("source river detail was over-simplified")
     if any(
         not str(item.get("source", "")).startswith("Arda Maps")
@@ -459,7 +461,7 @@ def render_report() -> dict:
         for item in projection["rivers"]
         if not item.get("terrain_only") and not item.get("joins")
     ]
-    if len(independent_engine_rivers) != 12:
+    if len(independent_engine_rivers) != 13:
         raise ValueError("parser-safe independent river coverage changed")
     drainage_theatres = {}
     for key, contract in SOURCE_DRAINAGE_THEATRES.items():
@@ -501,17 +503,39 @@ def render_report() -> dict:
         for item in terrain_only_rivers
     ):
         raise ValueError("a source tributary lost its parser-safe terrain-only contract")
-    expected_supplementary_names = {
-        "Adorn", "Celos", "Ciril", "EnchantedRiver", "Erui", "Fenmark",
-        "Lhun", "MouthsOfEntwash", "NimrodelRiver",
-        "Shirebourn", "Sirannon", "Sirith", "Stockbrook", "ThistleBrook",
-        "Withywindle",
-    }
+    expected_supplementary_names = {"Celos", "MouthsOfEntwash"}
     actual_supplementary_names = {
         item.get("label") for item in terrain_only_rivers if item.get("label")
     }
     if actual_supplementary_names != expected_supplementary_names:
         raise ValueError("named supplementary river coverage changed without review")
+    expected_engine_supplementary = {
+        key: parent
+        for key, parent in {
+            "source_enchantedriver_06_00": "forest_river",
+            "source_erui_13_00": "anduin",
+            "source_fenmark_15_00": "entwash",
+            "source_nimrodelriver_22_00": "celebrant",
+            "source_adorn_48_00": "isen",
+            "source_ciril_51_00": "ringlo",
+            "source_shirebourn_59_00": "source_thistlebrook_60_00",
+            "source_thistlebrook_60_00": "baranduin",
+            "source_stockbrook_61_00": "baranduin",
+            "source_withywindle_68_00": "baranduin",
+            "source_sirith_75_00": "anduin",
+            "source_sirannon_82_00": "glanduin",
+            "source_lhun_84_02": "lhun",
+        }.items()
+    }
+    actual_engine_supplementary = {
+        item["key"]: item.get("joins")
+        for item in projection["rivers"]
+        if item["key"].startswith("source_") and not item.get("terrain_only")
+    }
+    if actual_engine_supplementary != expected_engine_supplementary:
+        raise ValueError("reviewed indexed tributary topology changed")
+    if river_by_key["lhun"].get("engine_raster") is not True:
+        raise ValueError("Lhûn lost its reviewed indexed trunk contract")
     expected_major_widths = {
         "anduin": 0.0068,
         "upper_anduin": 0.0056,
@@ -536,9 +560,8 @@ def render_report() -> dict:
     if len(river_by_key["morgulduin"]["points"]) < 6:
         raise ValueError("source-backed Morgulduin detail regressed")
     expected_hydrology_classes = {
-        "named_branch": 7,
-        "named_tributary": 19,
-        "named_trunk": 1,
+        "named_branch": 1,
+        "named_tributary": 12,
         "unnamed_branch": 11,
         "unnamed_feeder": 34,
         "unnamed_trunk": 4,

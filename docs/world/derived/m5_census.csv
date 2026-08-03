@@ -28,7 +28,7 @@ edoras,Edoras,me_rohan_region,ROH,city,25.078,me_rohirric,me_northern_ways,,hors
 aldberg,Aldburg,me_rohan_region,ROH,town,15.049,me_rohirric,me_northern_ways,,clay,town,akan
 dunharrow,Dunharrow,me_rohan_region,ROH,fortress,12.542,me_rohirric,me_northern_ways,,wheat,town,alabama_culture
 minas_tirith,Minas Tirith,me_anorien_region,GON,capital,70.324,me_gondorian,me_valar_worship,,clay,city,abipones_culture
-osgiliath,Osgiliath,me_ithilien_region,WILD,ruin,0,me_gondorian,me_valar_worship,,clay,rural_settlement,
+osgiliath,Osgiliath,me_ithilien_region,GON,ruin,0,me_gondorian,me_valar_worship,,clay,rural_settlement,
 minas_morgul,Minas Morgul,me_ithilien_region,MOR,fortress,37.377,me_mordor_orc,me_sauron_cult,,livestock,town,acaxee_culture
 morannon,The Morannon,me_brown_lands_region,MOR,fortress,33.968,me_mordor_orc,me_sauron_cult,,wheat,town,acehnese_culture
 barad_dur,Barad-dûr,me_mordor_region,MOR,capital,95.101,me_mordor_orc,me_sauron_cult,,iron,city,abazin_culture
@@ -384,7 +384,7 @@ me_land_0340,Taur duinath,me_lebennin_region,GON,place,5.027,me_gondorian,me_val
 me_land_0341,Riverbank,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wild_game,rural_settlement,
 me_land_0342,Gorfang,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_0343,Khazabad,me_rhun_region,IRO,place,0.449,me_longbeard,me_mahal_cult,,livestock,rural_settlement,
-me_land_0344,Amon Lhaw,me_rohan_region,ROH,ruin,0,me_rohirric,me_northern_ways,,wheat,rural_settlement,
+me_land_0344,Amon Lhaw,me_rohan_region,WILD,ruin,0,me_rohirric,me_northern_ways,,wheat,rural_settlement,
 me_land_0345,Kingbank,me_rhun_region,DOR,place,2.076,me_dorwinrim,me_northern_ways,,clay,rural_settlement,tayrona_culture
 me_land_0346,Grishfang,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
 me_land_0347,Krimpfang,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
@@ -1062,7 +1062,7 @@ me_land_1018,Northford,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,m
 me_land_1019,Calen borndor,me_south_gondor_region,GON,place,2.604,me_gondorian,me_valar_worship,,wool,rural_settlement,nisenan_culture
 me_land_1020,Starmere,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,fish,rural_settlement,
 me_land_1021,Celon borndor,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,livestock,rural_settlement,
-me_land_1022,Barrow-downs,me_shire_breeland_region,BRE,ruin,0,me_eriadoran,me_northern_ways,,wool,rural_settlement,
+me_land_1022,Barrow-downs,me_shire_breeland_region,WILD,ruin,0,me_eriadoran,me_northern_ways,,wool,rural_settlement,
 me_land_1023,Wainur,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,wheat,rural_settlement,mingrelian_culture
 me_land_1024,Faresh,me_umbar_region,UMB,place,1.693,me_umbarite,me_sauron_cult,,wheat,rural_settlement,xoco_culture
 me_land_1025,Hadresh,me_far_harad_region,HFA,place,3.574,me_far_haradrim,me_southron_ways,,copper,rural_settlement,kanum_culture
@@ -3624,7 +3624,7 @@ me_land_3580,Loden Road,me_rhun_region,WILD,wilderness,0.011,me_balchoth,me_melk
 me_land_3581,Nim lotheth,me_lebennin_region,GON,place,5.028,me_gondorian,me_valar_worship,,wheat,rural_settlement,chango_culture
 me_land_3582,Zigilinbar,me_lindon_region,BLU,place,0.263,me_firebeard_broadbeam,me_mahal_cult,,wheat,rural_settlement,
 me_land_3583,Amon morneth,me_lebennin_region,GON,place,5.028,me_gondorian,me_valar_worship,,wool,rural_settlement,changde_culture
-me_land_3584,Rammas Echor,me_ithilien_region,WILD,ruin,0,me_gondorian,me_valar_worship,,wheat,rural_settlement,
+me_land_3584,Rammas Echor,me_ithilien_region,GON,ruin,0,me_gondorian,me_valar_worship,,wheat,rural_settlement,
 me_land_3585,Dol morneth,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_3586,Naren Road,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,wool,rural_settlement,guanche
 me_land_3587,Ceorlmere,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,wheat,rural_settlement,nyikina_culture

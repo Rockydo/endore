@@ -9,7 +9,7 @@
   "minas_morgul_decision": "Minas Morgul is a Mordor fortress-location, not a separate country.",
   "physical_alignment": {
     "engine_water_level_sample": 5466,
-    "owned_control_pixels": 2090806,
+    "owned_control_pixels": 2090777,
     "wet_owned_control_pixels": 0,
     "maximum_capital_snap_distance": 0.021091,
     "capitals": {
@@ -548,11 +548,11 @@
     }
   },
   "realm_location_counts": {
-    "GON": 411,
+    "GON": 413,
     "DAM": 71,
-    "ROH": 193,
+    "ROH": 192,
     "SHI": 68,
-    "BRE": 24,
+    "BRE": 23,
     "RAN": 45,
     "RIV": 16,
     "LIN": 131,

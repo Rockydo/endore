@@ -8,7 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
-  "projection_sha256": "6fe765d5450796979f1d56fba1e92de4e0b551107eb49e669fa6dc30803d922f",
+  "projection_sha256": "094f31013dfa2601fadc6774df487db2fd68ee72c5ea61e02102ce7fa75c7def",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -28,7 +28,7 @@
     "source_climate_zones": 4,
     "source_climate_components": 86,
     "source_climate_vertices": 7592,
-    "river_control_vertices": 1736
+    "river_control_vertices": 1735
   },
   "drainage_theatres": {
     "northern_basins": {
@@ -53,11 +53,11 @@
         0.62
       ],
       "controls": 63,
-      "points": 874,
-      "length": 2.567027,
+      "points": 873,
+      "length": 2.503888,
       "minimum_controls": 62,
       "minimum_points": 860,
-      "minimum_length": 2.54
+      "minimum_length": 2.5
     },
     "white_mountains": {
       "bbox": [
@@ -67,11 +67,11 @@
         0.68
       ],
       "controls": 36,
-      "points": 571,
-      "length": 1.627718,
+      "points": 570,
+      "length": 1.564579,
       "minimum_controls": 35,
       "minimum_points": 560,
-      "minimum_length": 1.6
+      "minimum_length": 1.56
     },
     "mordor_gondor": {
       "bbox": [
@@ -81,11 +81,11 @@
         0.75
       ],
       "controls": 47,
-      "points": 575,
-      "length": 1.486147,
+      "points": 574,
+      "length": 1.423007,
       "minimum_controls": 46,
       "minimum_points": 565,
-      "minimum_length": 1.46
+      "minimum_length": 1.42
     }
   },
   "source_feeder_theatres": {
@@ -106,7 +106,7 @@
         0.68,
         0.62
       ],
-      "centreline_samples": 1882,
+      "centreline_samples": 1898,
       "minimum_samples": 1150
     },
     "white_mountains": {
@@ -116,7 +116,7 @@
         0.63,
         0.68
       ],
-      "centreline_samples": 1264,
+      "centreline_samples": 1280,
       "minimum_samples": 800
     },
     "mordor_gondor": {
@@ -126,11 +126,11 @@
         0.8,
         0.75
       ],
-      "centreline_samples": 747,
+      "centreline_samples": 763,
       "minimum_samples": 450
     }
   },
-  "source_feeder_samples": 3075,
+  "source_feeder_samples": 3091,
   "anchor_count": 42,
   "landmark_count": 62,
   "manual_or_reconciled_landmarks": 12,

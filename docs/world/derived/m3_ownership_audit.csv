@@ -28,7 +28,7 @@ edoras,ROH,0.4986569,0.5383488,me_rohan_region,1,0.0000408,yes,"The Mark between
 aldberg,ROH,0.5081807,0.5476307,me_rohan_region,1,0.0212065,yes,"The Mark between Isen, Anduin, and White Mountains",accepted_forced_anchor
 dunharrow,ROH,0.4967033,0.5530044,me_rohan_region,1,0.0152070,yes,"The Mark between Isen, Anduin, and White Mountains",accepted_forced_anchor
 minas_tirith,GON,0.5782662,0.6111383,me_anorien_region,1,0.0002519,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
-osgiliath,WILD,0.5924298,0.6038105,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
+osgiliath,GON,0.5924298,0.6038105,me_ithilien_region,1,0.0294895,no,Gondor garrisons the ruined Anduin crossing before the June 3018 assault,accepted_required_frontier_owner
 minas_morgul,MOR,0.6073260,0.5955056,me_ithilien_region,1,0.0766744,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
 morannon,MOR,0.6097680,0.5295554,me_brown_lands_region,1,0.0814473,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
 barad_dur,MOR,0.6439560,0.5735222,me_mordor_region,1,0.0001922,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
@@ -384,7 +384,7 @@ me_land_0340,GON,0.5494505,0.6468002,me_lebennin_region,1,0.0675227,no,Gondor fi
 me_land_0341,BEO,0.5477411,0.1543723,me_mirkwood_region,3,0.0500224,no,Beorning crossings and upper Anduin vales,accepted_source_side_envelope
 me_land_0342,WILD,0.7655678,0.5608207,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0343,IRO,0.6561661,0.1787982,me_rhun_region,1,0.0423010,no,Iron Hills source label and adjacent holds,accepted_source_side_envelope
-me_land_0344,ROH,0.5648352,0.5158769,me_rohan_region,1,0.1342436,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
+me_land_0344,WILD,0.5648352,0.5158769,me_rohan_region,1,,no,the east-bank Seat of Seeing lies beyond Rohan's Anduin frontier,accepted_required_frontier_owner
 me_land_0345,DOR,0.6954823,0.3180264,me_rhun_region,1,0.0396418,no,Dorwinion around the northwest Sea of Rhûn,accepted_source_side_envelope
 me_land_0346,MOR,0.7015873,0.6424035,me_mordor_region,8,0.1341172,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_0347,MOR,0.6603175,0.6736688,me_mordor_region,8,0.1053083,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
@@ -1062,7 +1062,7 @@ me_land_1018,WILD,0.4097680,0.4367367,me_enedwaith_region,1,,no,deliberately unc
 me_land_1019,GON,0.6246642,0.7557401,me_south_gondor_region,9,0.1717897,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_1020,WILD,0.4949939,0.0000000,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
 me_land_1021,WILD,0.3433455,0.1963850,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_1022,BRE,0.3941392,0.2359551,me_shire_breeland_region,1,0.0174551,no,Bree-land's four-village crossroads,accepted_source_side_envelope
+me_land_1022,WILD,0.3941392,0.2359551,me_shire_breeland_region,1,,no,the haunted downs are outside compact inhabited Bree-land,accepted_required_frontier_owner
 me_land_1023,RHU,0.7885226,0.1993161,me_rhun_region,9,0.0627790,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_1024,UMB,0.5504274,0.9345383,me_umbar_region,9,0.0815744,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_1025,HFA,0.6630037,0.9760625,me_far_harad_region,10,0.1574227,no,represented northern fringe of Far Harad,accepted_frontier_polygon
@@ -3624,7 +3624,7 @@ me_land_3580,WILD,0.6412698,0.1250611,me_rhun_region,1,,no,deliberately unclaime
 me_land_3581,GON,0.5279609,0.6609673,me_lebennin_region,1,0.1120278,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_3582,BLU,0.3076923,0.1426478,me_lindon_region,1,0.0474644,no,Surviving Ered Luin halls,accepted_source_side_envelope
 me_land_3583,GON,0.5409035,0.6555936,me_lebennin_region,1,0.0866997,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
-me_land_3584,WILD,0.5865690,0.6067416,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
+me_land_3584,GON,0.5865690,0.6067416,me_ithilien_region,1,0.0174083,no,the Pelennor defensive wall remains a Gondorian military work,accepted_required_frontier_owner
 me_land_3585,WILD,0.4227106,0.2877382,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_3586,RHU,0.7457875,0.2779678,me_rhun_region,1,0.0559211,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_3587,ROH,0.5123321,0.4772838,me_rohan_region,1,0.0668729,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope

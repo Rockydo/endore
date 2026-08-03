@@ -307,6 +307,7 @@ countries = {
 				me_land_3574
 				me_land_3581
 				me_land_3583
+				me_land_3584
 				me_land_3594
 				me_land_3618
 				me_land_3630
@@ -414,6 +415,7 @@ countries = {
 				me_land_5114
 				me_land_5135
 				minas_tirith
+				osgiliath
 				pelargir
 				pelennor
 			}
@@ -704,7 +706,6 @@ countries = {
 				me_land_0292
 				me_land_0293
 				me_land_0301
-				me_land_0344
 				me_land_0382
 				me_land_0384
 				me_land_0426
@@ -1141,7 +1142,6 @@ countries = {
 				me_land_0635
 				me_land_0900
 				me_land_0933
-				me_land_1022
 				me_land_1062
 				me_land_1111
 				me_land_1334

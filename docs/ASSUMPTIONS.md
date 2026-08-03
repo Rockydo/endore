@@ -522,3 +522,31 @@ about Middle-earth.
 - The 104 unnamed physical affluents are not invented named waterways or political
   borders. They are a conservative subset of the hash-pinned Ardacraft drainage graph,
   retained only where each source path connects directly to a reviewed Arda Maps course.
+
+## v104 named frontier control
+
+- Osgiliath remains a zero-population ruin, but Gondor holds its garrisoned crossing on
+  TA 3018.1.1 before the June assault (*The Lord of the Rings*, Book V, Chapter 4; the
+  governing plan's start-state ruling). Rammas Echor is likewise a Gondorian defensive
+  work on the Pelennor rather than unclaimed Ithilien.
+- Amon Lhaw is the east-bank Seat of Seeing (*The Lord of the Rings*, Book II, Chapter 9).
+  Since Anduin is Rohan's eastern frontier, its ruin remains wilderness rather than a
+  Rohan holding; west-bank Amon Hen remains unchanged.
+- The Barrow-downs are haunted wilderness outside compact inhabited Bree-land (*The Lord
+  of the Rings*, Book I, Chapter 7). Removing the ruin from BRE does not imply a new realm
+  or change the surrounding Eriadoran culture.
+
+## v105 indexed drainage networks
+
+- River water is accepted only when represented by EU5's indexed river graph. Exact
+  Arda Maps courses without a reviewed receiving-channel relation remain dry physical
+  valleys; they may not receive blue terrain material as a visual substitute.
+- The reviewed named affluents use their source topology and canonical receiving basins:
+  Enchanted River to Forest River; Erui and Sirith to Anduin; Fenmark to Entwash;
+  Nimrodel to Celebrant; Adorn to Isen; Ciril to Ringlo; Sirannon to Glanduin; the Lhûn
+  southern branch to Lhûn; and the four Shire streams to their source-connected
+  Brandywine network. Celos remains terrain-only because its projected source line
+  intersects Serni; fidelity is preferable to silently rerouting either named river.
+- Arda Maps' Lhûn trunk ends inland after projection onto the accepted Ardacraft coast.
+  Four short control points continue the same terminal bearing to the nearest Gulf of
+  Lune water cell. This is an explicit projection reconciliation, not a new tributary.

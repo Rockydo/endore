@@ -38,9 +38,8 @@ from PIL import Image, ImageDraw, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from gen_rivers import river_control_points
+from gen_rivers import RIVERS_OUT
 from m2_controls import (
-    draw_source_drainage_paths,
     land_mask,
     natural_path,
     source_relief_field,
@@ -74,7 +73,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 57
+GENERATOR_VERSION = 58
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -98,10 +97,12 @@ GENERATOR_VERSION = 57
 # pixels as simplified, rounded graph edges in both the incision mask and the
 # material cache, so its height source deliberately differs from v55. v57
 # enlarges the Great River's visible bank/core hierarchy and accepts the
-# conservative 104-path source-connected feeder reduction; the height payload
-# may still be reused only when its authored source hash is unchanged.
+# conservative 104-path source-connected feeder reduction. v58 removes that
+# rejected material-width surrogate and derives channel 6 directly from the
+# true indexed engine graph; the height payload may still be reused only when
+# its authored source hash is unchanged.
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57}
+    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58}
 )
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
@@ -162,50 +163,6 @@ MATERIAL_ROCK = np.uint16(1 << 13)
 MATERIAL_SNOW = np.uint16(1 << 14)
 MATERIAL_SAND = np.uint16(1 << 15)
 
-# Physical tributaries cannot enter build 24187685's rejected custom affluent
-# graph, but their exact Arda Maps courses still need to read as water-bearing
-# drainage in the native terrain material. These class-specific scales expose
-# the complete source network without turning every feeder into an Anduin-sized
-# band. Joined named rivers receive a stronger centre channel separately below.
-TERRAIN_ONLY_RIVER_VISIBILITY = {
-    "named_trunk": (0.92, 5),
-    "named_branch": (0.88, 4),
-    "named_tributary": (0.84, 4),
-    "unnamed_trunk": (0.80, 4),
-    "unnamed_branch": (0.76, 3),
-    "unnamed_feeder": (0.72, 3),
-}
-
-# The Great River must dominate the physical map. Its two parser-safe reaches
-# are split only by Nen Hithoel; both use the same source axis and a much wider
-# terrain-water surface than ordinary rivers. Values are material-resolution
-# scales, not changes to lore geometry or river graph topology.
-ENGINE_RIVER_VISIBILITY = {
-    "upper_anduin": (1.35, 6, 0.58),
-    "anduin": (1.50, 7, 0.62),
-}
-DEFAULT_ENGINE_RIVER_VISIBILITY = (0.68, 2, 0.58)
-JOINED_RIVER_VISIBILITY = (0.78, 3, 0.50)
-
-# A dedicated water-only core is intentionally much narrower than the wet-bank
-# mask above. At close zoom, even one material pixel spans a meaningful world
-# width. Ordinary rivers and feeders remain two to three source pixels. The
-# Anduin uses a native-resolution core roughly twice v53's calibration while
-# remaining well inside its accepted incised/wet-bank envelope.
-TERRAIN_ONLY_RIVER_CORE_VISIBILITY = {
-    "named_trunk": (0.38, 4),
-    "named_branch": (0.32, 3),
-    "named_tributary": (0.28, 2),
-    "unnamed_trunk": (0.28, 3),
-    "unnamed_branch": (0.24, 2),
-    "unnamed_feeder": (0.20, 2),
-}
-ENGINE_RIVER_CORE_VISIBILITY = {
-    "upper_anduin": (1.10, 6, 0.58),
-    "anduin": (1.15, 7, 0.62),
-}
-DEFAULT_ENGINE_RIVER_CORE_VISIBILITY = (0.28, 3, 0.58)
-JOINED_RIVER_CORE_VISIBILITY = (0.30, 3, 0.50)
 MATERIAL_VARIATIONS = np.asarray(
     [
         MATERIAL_GRASS,
@@ -1038,101 +995,18 @@ def river_material_image(
     size: tuple[int, int] = (MATERIAL_W, MATERIAL_H),
     mode: str = "L",
 ) -> Image.Image:
-    image = Image.new(mode, size, 0)
-    draw = ImageDraw.Draw(image)
-    fill = 1 if mode == "1" else 255
-
-    for river in projection["rivers"]:
-        source_points = river_control_points(river)
-        points = natural_path(
-            source_points,
-            size,
-            key=f"river:{river['key']}",
-            closed=False,
-            amplitude=float(river.get("wander", 0.0015)),
-            spacing=0.00125,
-        )
-        if len(points) < 2:
-            continue
-        # The indexed parser graph supplies actual engine water for twelve
-        # independent channels. All other source courses receive a visually
-        # water-bearing terrain centreline over their already-authored valley.
-        # This avoids fabricating the affluent junction graph rejected by the
-        # retail parser while making the complete drainage legible in game.
-        if river.get("terrain_only"):
-            hydrology_class = str(river.get("hydrology_class", ""))
-            if hydrology_class not in TERRAIN_ONLY_RIVER_VISIBILITY:
-                raise ValueError(
-                    f"river {river['key']} has unsupported physical-drainage class "
-                    f"{hydrology_class!r}"
-                )
-            visibility_contract = (
-                TERRAIN_ONLY_RIVER_CORE_VISIBILITY
-                if core
-                else TERRAIN_ONLY_RIVER_VISIBILITY
-            )
-            visibility_scale, minimum_width = visibility_contract[hydrology_class]
-            growth = float(river.get("material_growth", 0.20))
-        elif river.get("joins"):
-            visibility_scale, minimum_width, growth = (
-                JOINED_RIVER_CORE_VISIBILITY if core else JOINED_RIVER_VISIBILITY
-            )
-        else:
-            visibility_contract = (
-                ENGINE_RIVER_CORE_VISIBILITY
-                if core
-                else ENGINE_RIVER_VISIBILITY
-            )
-            default_contract = (
-                DEFAULT_ENGINE_RIVER_CORE_VISIBILITY
-                if core
-                else DEFAULT_ENGINE_RIVER_VISIBILITY
-            )
-            visibility_scale, minimum_width, growth = visibility_contract.get(
-                river["key"], default_contract
-            )
-        nominal = max(
-            float(minimum_width),
-            float(river["width"])
-            * size[1]
-            * visibility_scale
-            * float(river.get("material_scale", 1.0)),
-        )
-        if not 0.0 <= growth <= 0.75:
-            raise ValueError(f"river {river['key']} has invalid material growth")
-        segments = len(points) - 1
-        for index, (start, end) in enumerate(zip(points, points[1:])):
-            progress = (index + 0.5) / segments
-            width = max(2, round(nominal * (1.0 - growth + progress * growth)))
-            draw.line((start, end), fill=fill, width=width)
-            radius = width // 2
-            if radius:
-                for x, y in (start, end):
-                    draw.ellipse(
-                        (x - radius, y - radius, x + radius, y + radius),
-                        fill=fill,
-                    )
-    # These are physical, source-connected terrain feeders around the reviewed
-    # 102-course atlas, never additions to the load-sensitive parser graph.
-    # Draw their reconstructed graph paths directly at the target resolution:
-    # a restrained wet bank in the 8K material source and a one-bit core at
-    # the full 65K virtual-texture scale.
-    if core:
-        feeder_width = max(1, round(size[1] / 5460.0))
-    else:
-        feeder_width = max(3, round(size[1] / 1024.0))
-        # PIL centers even-width diagonal strokes asymmetrically. An odd bank
-        # width guarantees that the identical one-pixel centreline remains
-        # nested through bends and confluences at material-source resolution.
-        if feeder_width % 2 == 0:
-            feeder_width += 1
-    draw_source_drainage_paths(
-        image,
-        projection,
-        fill=fill,
-        width=feeder_width,
-    )
-    return image
+    del projection, core
+    if not RIVERS_OUT.is_file():
+        raise ValueError("indexed rivers.png must be generated before terrain cache")
+    with Image.open(RIVERS_OUT) as opened:
+        indexed = np.asarray(opened, dtype=np.uint8)
+    mask = (~np.isin(indexed, (254, 255))).astype(np.uint8) * 255
+    image = Image.fromarray(mask, "L").resize(size, Image.Resampling.NEAREST)
+    if mode == "1":
+        return image.convert("1")
+    if mode == "L":
+        return image
+    raise ValueError(f"unsupported river material mode {mode!r}")
 
 
 def river_material_mask(projection: dict, *, core: bool = False) -> np.ndarray:

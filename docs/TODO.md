@@ -1,5 +1,28 @@
 # TODO
 
+## Immediate gate - v105 genuine rivers
+
+- PRIORITY ZERO: owner live testing rejects v103's blue terrain shoulders. Do not expand
+  politics, terrain detail, factions, mechanics, or art until actual indexed rivers load
+  and look correct at close zoom.
+- Current static candidate replaces the isolated-channel model with vanilla source/red-
+  junction drainage trees: 12 source-to-water systems, 25 tributary junctions, and 37
+  genuine engine courses. Lower Anduin ordering and its missing upper/lower continuity
+  are corrected; Anduin reaches vanilla's widest class.
+- Terrain-cache v58 derives river material only from the exact indexed raster. No
+  terrain-only control, Ardacraft feeder, wet-bank multiplier, or nominal river width can
+  paint blue. Preserve dry source-backed valley incision for the 65 unreviewed courses.
+- STATIC GATE GREEN: full validation passes in 566.5s, including the complete 481.1s M2
+  world regeneration check, on exact game-visible fingerprint `3381fb36a8a87bd9d54...`.
+- RUNTIME GATE GREEN: paired smoke passed in 204.1s with zero new/mod-unique lines. A
+  fresh Observer captured both Anduin reaches and seven tributary/confluence theatres;
+  actual connected splines render with no separate blue terrain shoulders. Maximum-speed
+  playback advanced fourteen days in 45 seconds with zero recovery and no interval log
+  growth. Exact-fingerprint assertion passes on `3381fb36a8a87bd9d54...`.
+- NEXT: complete final validation after evidence-tool/doc changes, publish the coherent
+  v104/v105 batch, and keep M2 red for owner review. Any subsequent river change must be
+  tied to a specific source or same-camera live defect; never restore painted width.
+
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
    receives explicit owner acceptance. The v101 source-audited runtime tree loads and
@@ -644,7 +667,7 @@
   owner review supersedes its visual conclusion. M2 remains red; gameplay content remains
   blocked.
 
-## Current v103 map candidate
+## Current v105 map candidate
 
 - Retain the 102-course Arda Maps atlas and twelve-channel parser graph. v98 enlarges the
   upper/lower Anduin native cores to 0.72/0.68 scale, strengthens ordinary reviewed river
@@ -690,9 +713,14 @@
   v95-v97 block/comb artifacts. The wider water mask's derived vegetation payloads were
   regenerated without changing their 3,493,385-transform budget. A second exact-final
   atlas, 45-second maximum-speed playback, 470.4-second full validation, and 202.4-second
-  paired smoke are green on fingerprint `76fb6e7e104c...`; publish the batch.
-- NEXT AFTER v103: continue the source-bound fidelity audit while M2 awaits explicit owner
-  acceptance. Recheck remaining political edges and physical landmark placement against
-  the pinned Arda Maps/Ardacraft overlays at equal scale, beginning with any realm whose
-  allocation crosses a reviewed ridge, river, forest, or gap. Prefer small falsifiable
-  corrections over broad reshaping; do not add decorative geography or gameplay content.
+  paired smoke were green on fingerprint `76fb6e7e104c...`, but the owner's later
+  close-zoom inspection rejects its blue material shoulders. Do not restore that method.
+- v104's complete named-landmark sweep corrects four source/frontier contradictions using
+  stable reference keys: Osgiliath and Rammas Echor become Gondorian zero-population
+  ruins; east-bank Amon Lhaw and the haunted Barrow-downs become wilderness. Amon Hen,
+  ordinary Ithilien, realm polygons, and physical geography remain unchanged. M3/M4/M5/
+  template checks are green on fingerprint `c6cb12fe...`; run full validation, capture
+  the four political sites in-game, and complete paired smoke before publication.
+- v105 supersedes the twelve-channel/painted-proxy architecture with vanilla indexed
+  drainage trees. The static graph and exact-footprint v58 material bake are complete;
+  publish nothing until the runtime gate in the immediate section is green.

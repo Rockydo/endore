@@ -791,6 +791,14 @@ milestone-M12. Highlights (non-exhaustive — the sweep itself must be exhaustiv
   cost §13.8), Númenórean restoration (GON/RAN), uruk-breeding (Shadow-only branch),
   shipwright-lore (UMB/LIN/GON). NO printing/gunpowder/compass/banking anachronisms; culture/
   faith-gated branches keep races mechanically distinct.
+  MAKE SURE THAT IN 3018 MOST UNITS/BUILDINGS THAT GONDOR OR ANY OTHER REALM WOULD REALISTICALLY HAVE ARE ALREADY AVAILABLE
+   - THINGS FOUNTAIN GUARDS, KNIGHTS, ETC. Don't start as if they had nothing
+   - You can make Isengard build up and to some smaller extent Mordor but overall most countries already have a lot of tech available, you don't see the same huge tech evolution as vanilla
+   - However you can explore other lore friendly paths. Gondor has the tech but is weak overall, advances can make it progressively reclaim strenght, maybe better rely on its various sub fiefs and vassals, even renew with numenorian traditions, etc
+   - Same logic for dwarves that reclaim old ruins like Khazad-dûm and maybe get back old tech like mithril armor and more
+   - Overall it's more about reclaiming, regaining power and then renewed prosperity for the powers of good. The powers of evil can have more of a technological level up since that's a theme in Tolkien's work (the evils of industry and the price of progress)
+   - More neutral/ human primitive factions can definitely get inspiration from other more advanced civilization and have sort of hybrid units/buildings/privileges etc based on that. Perhap conditional to their alliances or something.
+   - Neutral factions can be given mutually exclusive paths depending on if they want to be more good or closer to Sauron(if that's possible)
 - **institution**: → REPLACE: slow world-currents like "The Shadow's Reach" (spreads from
   Mordor; darkens the East; Free realms resist), "Hope Rekindled" (spawns on war-turn
   events)†. Small set (3–5), silent otherwise.

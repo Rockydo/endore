@@ -643,3 +643,27 @@ roughly doubled, dominant Great River without inland-water spill, followed by 45
 of clean maximum-speed playback. Paired smoke passed in 201.7 seconds with zero new or
 mod-unique lines. Full validation and exact-fingerprint smoke assertion are mandatory
 final technical commit gates; M2 remains red for explicit owner acceptance.
+
+## v105 genuine indexed-river reopening
+
+Owner close-zoom review supersedes the v93/v103 visual conclusion. Their apparent broad
+channels combined a thin parser spline with separately painted channel-6 terrain, which
+does not match vanilla and is rejected. That architecture must not return.
+
+The current candidate uses vanilla's indexed-raster grammar: one green source per
+connected system, red tributary junctions, four installed width indices, and terminal
+contact with engine water. It contains 12 source-to-water systems, 25 red junctions, and
+37 genuine engine courses. Continuous Langwell-upper/lower Anduin and
+Mitheithel-Greyflood trunks replace the former isolated segments. The material cache may
+derive river color only from the exact nearest-neighbour footprint of `rivers.png`; dry
+incision for unpromoted source courses is not allowed to paint water.
+
+Static graph, cache, source-reference, and full repository validation are green on
+fingerprint `3381fb36a8a87bd9d541cd153ed9c255fc1abacb4e53648dec1ce731bebd78e9`.
+Paired smoke passed in 204.1 seconds with zero new/mod-unique lines. A fresh live Observer
+then supplied maximum-close proof of both Anduin reaches and the Celebrant, Entwash,
+Greyflood, Shire/Brandywine, Lhûn, and Sirith networks. The tributaries are connected
+engine splines and no independent blue terrain shoulder remains. Playback advanced from
+TA 3018.1.1 to 3018.1.15 in 45 seconds with zero recovery and no interval log growth;
+exact-fingerprint assertion passes. This clears the technical v105 mechanism, not owner
+acceptance of the complete map. M2 remains red until that explicit acceptance.

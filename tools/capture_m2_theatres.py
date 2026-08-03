@@ -100,6 +100,10 @@ DRAINAGE_VIEWS = (
     Theatre("24_morgulduin", "Minas Morgul", "Minas Morgul"),
     Theatre("25_gladden", "Goldenhall", "Goldenhall"),
     Theatre("26_limlight", "Field of Celebrant", "Field of Celebrant"),
+    # v105 junction proof: these pairs sit on newly promoted red-ended
+    # tributaries rather than merely revisiting their established trunks.
+    Theatre("33_sirith_confluence", "Minas Tirith", "Minas Tirith"),
+    Theatre("34_shire_confluences", "Bucklebury", "Bucklebury"),
 )
 
 # Finder success proves only that a string exists. Bind every formerly raw
@@ -135,6 +139,8 @@ SOURCE_TARGETS = {
     "Minas Morgul": (0.607326, 0.595506, "me_ithilien_region"),
     "Goldenhall": (0.522100, 0.269174, "me_anduin_vale_region"),
     "Field of Celebrant": (0.539194, 0.417196, "me_anduin_vale_region"),
+    "Minas Tirith": (0.578266, 0.611138, "me_anorien_region"),
+    "Bucklebury": (0.376801, 0.232535, "me_shire_breeland_region"),
     "Coldpoint Heights": (0.502345, 0.102487, "me_northern_wastes_region"),
     "Erebor": (0.599699, 0.137606, "me_dale_region"),
     "Lake Alderbank": (0.496887, 0.330666, "me_anduin_vale_region"),
@@ -164,6 +170,8 @@ RIVER_TARGETS = {
     "Minas Morgul": "morgulduin",
     "Goldenhall": "gladden",
     "Field of Celebrant": "limlight",
+    "Minas Tirith": "source_sirith_75_00",
+    "Bucklebury": "source_stockbrook_61_00",
 }
 MAX_RIVER_DISTANCE = 0.010
 

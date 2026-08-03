@@ -28,7 +28,7 @@ edoras,land,me_rohan_region,ROH,owned
 aldberg,land,me_rohan_region,ROH,owned
 dunharrow,land,me_rohan_region,ROH,owned
 minas_tirith,land,me_anorien_region,GON,owned
-osgiliath,land,me_ithilien_region,WILD,wild_ithilien
+osgiliath,land,me_ithilien_region,GON,owned
 minas_morgul,land,me_ithilien_region,MOR,owned
 morannon,land,me_brown_lands_region,MOR,owned
 barad_dur,land,me_mordor_region,MOR,owned
@@ -384,7 +384,7 @@ me_land_0340,land,me_lebennin_region,GON,owned
 me_land_0341,land,me_mirkwood_region,BEO,owned
 me_land_0342,land,me_mordor_region,WILD,wild_unclaimed
 me_land_0343,land,me_rhun_region,IRO,owned
-me_land_0344,land,me_rohan_region,ROH,owned
+me_land_0344,land,me_rohan_region,WILD,wild_reviewed_frontier: the east-bank Seat of Seeing lies beyond Rohan's Anduin frontier
 me_land_0345,land,me_rhun_region,DOR,owned
 me_land_0346,land,me_mordor_region,MOR,owned
 me_land_0347,land,me_mordor_region,MOR,owned
@@ -1062,7 +1062,7 @@ me_land_1018,land,me_enedwaith_region,WILD,wild_enedwaith
 me_land_1019,land,me_south_gondor_region,GON,owned
 me_land_1020,land,me_northern_wastes_region,WILD,wild_forodwaith
 me_land_1021,land,me_north_arnor_region,WILD,wild_unclaimed
-me_land_1022,land,me_shire_breeland_region,BRE,owned
+me_land_1022,land,me_shire_breeland_region,WILD,wild_reviewed_frontier: the haunted downs are outside compact inhabited Bree-land
 me_land_1023,land,me_rhun_region,RHU,owned
 me_land_1024,land,me_umbar_region,UMB,owned
 me_land_1025,land,me_far_harad_region,HFA,owned
@@ -3624,7 +3624,7 @@ me_land_3580,land,me_rhun_region,WILD,wild_unclaimed
 me_land_3581,land,me_lebennin_region,GON,owned
 me_land_3582,land,me_lindon_region,BLU,owned
 me_land_3583,land,me_lebennin_region,GON,owned
-me_land_3584,land,me_ithilien_region,WILD,wild_ithilien
+me_land_3584,land,me_ithilien_region,GON,owned
 me_land_3585,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_3586,land,me_rhun_region,RHU,owned
 me_land_3587,land,me_rohan_region,ROH,owned

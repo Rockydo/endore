@@ -391,6 +391,27 @@ POLITICAL_SILHOUETTE_CONTRACTS: dict[
 FRONTIER_LANDMARK_EXCLUSIONS: dict[str, frozenset[str]] = {
     "fords_of_isen": frozenset({"ISE"}),
 }
+# Named frontier sites provide more durable political witnesses than generated
+# location IDs.  These four rulings correct exact source anchors whose nearest-seat
+# allocation contradicts their TA 3018 control or an explicit physical frontier.
+FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
+    "osgiliath": (
+        "GON",
+        "Gondor garrisons the ruined Anduin crossing before the June 3018 assault",
+    ),
+    "rammas_echor": (
+        "GON",
+        "the Pelennor defensive wall remains a Gondorian military work",
+    ),
+    "amon_lhaw": (
+        WILD,
+        "the east-bank Seat of Seeing lies beyond Rohan's Anduin frontier",
+    ),
+    "barrow_downs": (
+        WILD,
+        "the haunted downs are outside compact inhabited Bree-land",
+    ),
+}
 # The climate-density reseed changed generated location IDs after the v77/v78
 # political review. Each repair therefore carries a narrow physical witness as
 # well as the target owner: expected region and normalized coordinate window.
@@ -1111,6 +1132,29 @@ def assign_ownership(
             wild_reason[key] = f"wild_reviewed_component: {rationale}"
         else:
             wild_reason.pop(key, None)
+    for ref, (tag, rationale) in FRONTIER_LANDMARK_REQUIRED_OWNERS.items():
+        key = ref_to_location.get(ref)
+        if key is None:
+            raise ValueError(f"unresolved required-owner frontier landmark {ref}")
+        location = model.by_key.get(key)
+        if location is None or location.kind != "land":
+            raise ValueError(f"frontier landmark {ref} does not resolve to passable land")
+        forced_tag = forced_owner.get(key)
+        if forced_tag is not None and forced_tag != tag:
+            raise ValueError(
+                f"frontier landmark {ref}->{tag} conflicts with forced owner {forced_tag}"
+            )
+        if tag != WILD:
+            accepted, contract = claim_contract(location, by_tag[tag], source_zone_claims)
+            if not accepted:
+                raise ValueError(
+                    f"frontier landmark {ref}->{tag} violates {contract}"
+                )
+        ownership[key] = tag
+        if tag == WILD:
+            wild_reason[key] = f"wild_reviewed_frontier: {rationale}"
+        else:
+            wild_reason.pop(key, None)
     counts = Counter(
         ownership[location.key]
         for location in model.locations
@@ -1519,13 +1563,22 @@ def ownership_csv(state: RealmState) -> str:
 
 def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
     forced = forced_ownership(state.realms, state.ref_to_location)
+    required_frontier_owner = {
+        state.ref_to_location[ref]: (tag, rationale)
+        for ref, (tag, rationale) in FRONTIER_LANDMARK_REQUIRED_OWNERS.items()
+    }
     rows: list[dict[str, object]] = []
     for location in state.model.locations:
         if location.kind != "land":
             continue
         owner = state.ownership[location.key]
         x, y = location.normalized
+        frontier_requirement = required_frontier_owner.get(location.key)
         if owner == WILD:
+            frontier_accepted = (
+                frontier_requirement is not None
+                and frontier_requirement[0] == WILD
+            )
             rows.append(
                 {
                     "location": location.key,
@@ -1536,8 +1589,16 @@ def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
                     "biome_id": location.biome_id,
                     "distance_to_capital": "",
                     "forced": "no",
-                    "contract": "deliberately unclaimed",
-                    "verdict": state.wild_reason[location.key],
+                    "contract": (
+                        frontier_requirement[1]
+                        if frontier_accepted
+                        else "deliberately unclaimed"
+                    ),
+                    "verdict": (
+                        "accepted_required_frontier_owner"
+                        if frontier_accepted
+                        else state.wild_reason[location.key]
+                    ),
                 }
             )
             continue
@@ -1549,7 +1610,14 @@ def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
             realm,
             state.source_zone_claims,
         )
-        if is_forced:
+        if frontier_requirement is not None:
+            rationale = frontier_requirement[1]
+            verdict = (
+                "accepted_required_frontier_owner"
+                if frontier_requirement[0] == owner
+                else "violation"
+            )
+        elif is_forced:
             verdict = "accepted_forced_anchor"
         elif component_repair and component_repair[0] == owner:
             rationale = component_repair[1]
@@ -2017,6 +2085,17 @@ def check() -> list[str]:
             failures.append(
                 f"political frontier landmark {ref} is incorrectly owned by "
                 f"{actual_owner}; excluded owners are {sorted(excluded_owners)}"
+            )
+    for ref, (required_owner, rationale) in FRONTIER_LANDMARK_REQUIRED_OWNERS.items():
+        location_key = state.ref_to_location.get(ref)
+        if location_key is None:
+            failures.append(f"required-owner frontier landmark {ref} is unresolved")
+            continue
+        actual_owner = state.ownership[location_key]
+        if actual_owner != required_owner:
+            failures.append(
+                f"frontier landmark {ref} is owned by {actual_owner}, expected "
+                f"{required_owner}: {rationale}"
             )
     unreviewed_components = {
         tag: [
