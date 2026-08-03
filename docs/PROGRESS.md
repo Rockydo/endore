@@ -1782,3 +1782,39 @@
   215.6 seconds with clean 45-second playback. Paired smoke passes in 221.8 seconds with
   zero new lines, and exact assertion covers
   `6572f6400849e103c54fdf526f0dbc8325713d38ad64b98451da38e25a46ba1b`.
+
+## 2026-08-03 - v95-v97 rejected dense-drainage experiments
+
+- Reduced the already quarantined, hash-pinned Ardacraft V2 drainage payload to a numeric
+  binary field around the complete 102-course Arda Maps atlas. Raw published imagery
+  remains outside Git.
+- v95 used native nearest-neighbour enlargement. A fresh New Game loaded and ticked cleanly
+  and Anduin's 0.72/0.68 native core scale finally read as massive, but the feeder layer
+  became giant square blocks. Reject it.
+- v96 replaced material enlargement with thresholded bilinear cores. It loaded and ticked
+  cleanly but left short right-angle stubs. Reject it.
+- v97 added a 24-pixel connected reach, source-thickness opening, component filtering,
+  thinning, and terminal pruning. Its 25,475-sample field loaded and ticked cleanly but
+  still presented combs/lattices because too much of the raw rill network survived.
+  Reject it. None of v95-v97 was committed.
+
+## 2026-08-03 - v98 curated source-connected affluents
+
+- Replaced broad raster presentation with a direct-affluent graph filter. A retained path
+  must start within four source pixels of a reviewed river, extend at least twenty pixels
+  away, contain at least sixteen samples, and reconnect to the exact reviewed axis. This
+  yields 61 source paths and 2,060 binary samples across all four bound drainage theatres.
+- Reconstructs those paths as corner-safe graph edges, removes source-pixel stair steps,
+  applies two endpoint-preserving curve passes, and uses the same geometry for shallow
+  incision, narrow tree clearance, wet banks, and full-resolution water cores. The 102
+  reviewed courses and twelve parser-safe channels remain unchanged.
+- The complete 6,004-location v56 bake passed in 833.8 seconds: height 0..64,310, 174,763
+  height tiles/25,246 unique, 174,763 material tiles/45,133 unique, 193.9 MB total cache,
+  and 3,493,385 vegetation transforms. Cartography, control, height, zero-Earth cache, and
+  indexed-river checks all pass. Full repository validation passes in 428.6 seconds.
+- Fresh source-bound evidence under
+  `docs/screens/20260803_v98_curated_affluents/` entered live Observer on fingerprint
+  `696cfc31bacb10bf238fa91becbff9e6678281d808d17bf99145fc56ea007f18`.
+  Eight regional/close pairs prove upper/lower Anduin, Celebrant, Entwash, Baranduin,
+  Greyflood, Isen, and Celduin. Playback ran 45 seconds at maximum speed with zero
+  recovery and the unchanged 1,486-byte error log. M2 remains red for direct owner review.

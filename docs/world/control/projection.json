@@ -1,5 +1,5 @@
 {
-  "schema": 3,
+  "schema": 4,
   "canvas": [
     16384,
     8192
@@ -139386,5 +139386,29 @@
       ],
       "source": "Arda Maps line_river 84 part 2"
     }
-  ]
+  ],
+  "source_drainage": {
+    "file": "ardacraft_drainage.json",
+    "source": "Ardacraft Drainage layer Middle-earth V2",
+    "source_sha256": "d8ec6f22c0e3c87097145f2c3f3b831c778e4df8b705595d335e5c4d7be74871",
+    "field_sha256": "ac73227e67b39c7a36d2f519904cc9e01d719e2322e8d5d0258af96d809be763",
+    "bounds": [
+      0.148481643,
+      0.0,
+      0.774972679,
+      1.0
+    ],
+    "resolution": [
+      2500,
+      2003
+    ],
+    "alpha_threshold": 160,
+    "geodesic_reach": 24,
+    "opening_radius": 1,
+    "terminal_prune_steps": 8,
+    "affluent_near_distance": 4,
+    "affluent_far_distance": 20,
+    "affluent_min_path": 16,
+    "affluent_paths": 61
+  }
 }

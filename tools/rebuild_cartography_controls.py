@@ -11,18 +11,25 @@ from __future__ import annotations
 
 import argparse
 import base64
+from collections import deque
 import hashlib
 import json
 import math
+import sys
 import zlib
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from gen_rivers import river_control_points
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs/world/control/projection.json"
 RELIEF_OUTPUT = ROOT / "docs/world/control/ardacraft_relief.json"
+DRAINAGE_OUTPUT = ROOT / "docs/world/control/ardacraft_drainage.json"
 DEFAULT_REFERENCE_ROOT = Path(r"G:\endore_runtime\cartography_references")
 ARDA_MAPS_SHA256 = (
     "147a2d0ff3e36e2b675afb40dd4a74f634006bc6350a6a7c31639019fd2bd4ab"
@@ -32,6 +39,9 @@ ARDACRAFT_HEIGHTMAP_SHA256 = (
 )
 ARDACRAFT_BIOMES_SHA256 = (
     "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
+)
+ARDACRAFT_DRAINAGE_SHA256 = (
+    "d8ec6f22c0e3c87097145f2c3f3b831c778e4df8b705595d335e5c4d7be74871"
 )
 
 # Ardacraft's biome GeoJSON uses a projected vegetation-atlas coordinate
@@ -79,6 +89,15 @@ ARDACRAFT_IMAGE_BOUNDS = [
 ]
 RELIEF_GRID_SIZE = (2500, 2003)
 RELIEF_QUANTIZATION_MAX = 255
+DRAINAGE_ALPHA_THRESHOLD = 160
+DRAINAGE_SEED_WIDTH = 5
+DRAINAGE_SEED_RADIUS = 8
+DRAINAGE_REACH = 24
+DRAINAGE_OPENING_RADIUS = 1
+DRAINAGE_PRUNE_STEPS = 8
+DRAINAGE_AFFLUENT_NEAR_DISTANCE = 4
+DRAINAGE_AFFLUENT_FAR_DISTANCE = 20
+DRAINAGE_AFFLUENT_MIN_PATH = 16
 
 
 def sha256(path: Path) -> str:
@@ -153,6 +172,411 @@ def ardacraft_relief_payload(reference_root: Path) -> dict:
         "encoding": "zlib_base85_u8",
         "field_sha256": hashlib.sha256(quantized.tobytes()).hexdigest(),
         "nonzero_samples": int(np.count_nonzero(quantized)),
+        "data": base64.b85encode(compressed).decode("ascii"),
+    }
+
+
+def _dilate_binary(values: np.ndarray) -> np.ndarray:
+    result = values.copy()
+    result[1:, :] |= values[:-1, :]
+    result[:-1, :] |= values[1:, :]
+    result[:, 1:] |= values[:, :-1]
+    result[:, :-1] |= values[:, 1:]
+    result[1:, 1:] |= values[:-1, :-1]
+    result[1:, :-1] |= values[:-1, 1:]
+    result[:-1, 1:] |= values[1:, :-1]
+    result[:-1, :-1] |= values[1:, 1:]
+    return result
+
+
+def _erode_binary(values: np.ndarray) -> np.ndarray:
+    result = np.zeros_like(values)
+    center = result[1:-1, 1:-1]
+    center[:] = True
+    height, width = values.shape
+    for dy in (-1, 0, 1):
+        for dx in (-1, 0, 1):
+            center &= values[1 + dy : height - 1 + dy, 1 + dx : width - 1 + dx]
+    return result
+
+
+def _connected_to_seed(values: np.ndarray, seed: np.ndarray) -> tuple[np.ndarray, int]:
+    """Keep complete eight-connected components that touch reviewed axes."""
+
+    height, width = values.shape
+    visited = np.zeros_like(values)
+    result = np.zeros_like(values)
+    kept_components = 0
+    for start_y, start_x in zip(*np.where(values), strict=True):
+        if visited[start_y, start_x]:
+            continue
+        queue = deque([(int(start_y), int(start_x))])
+        visited[start_y, start_x] = True
+        component: list[tuple[int, int]] = []
+        touches_seed = False
+        while queue:
+            y, x = queue.popleft()
+            component.append((y, x))
+            touches_seed |= bool(seed[y, x])
+            for dy in (-1, 0, 1):
+                for dx in (-1, 0, 1):
+                    if not (dx or dy):
+                        continue
+                    next_y, next_x = y + dy, x + dx
+                    if (
+                        0 <= next_y < height
+                        and 0 <= next_x < width
+                        and values[next_y, next_x]
+                        and not visited[next_y, next_x]
+                    ):
+                        visited[next_y, next_x] = True
+                        queue.append((next_y, next_x))
+        if touches_seed:
+            kept_components += 1
+            for y, x in component:
+                result[y, x] = True
+    return result, kept_components
+
+
+def _prune_binary_endpoints(values: np.ndarray, steps: int) -> np.ndarray:
+    """Remove short terminal rills while retaining confluences and trunks."""
+
+    result = values.copy()
+    for _ in range(steps):
+        neighbours = np.zeros(result.shape, dtype=np.uint8)
+        neighbours[1:, :] += result[:-1, :]
+        neighbours[:-1, :] += result[1:, :]
+        neighbours[:, 1:] += result[:, :-1]
+        neighbours[:, :-1] += result[:, 1:]
+        neighbours[1:, 1:] += result[:-1, :-1]
+        neighbours[1:, :-1] += result[:-1, 1:]
+        neighbours[:-1, 1:] += result[1:, :-1]
+        neighbours[:-1, :-1] += result[1:, 1:]
+        result &= neighbours > 1
+    return result
+
+
+def _thin_binary(values: np.ndarray) -> tuple[np.ndarray, int]:
+    """Return a deterministic one-pixel Zhang-Suen centreline field."""
+
+    image = values.copy()
+    iterations = 0
+    while True:
+        changed = 0
+        for phase in (0, 1):
+            center = image[1:-1, 1:-1]
+            north = image[:-2, 1:-1]
+            north_east = image[:-2, 2:]
+            east = image[1:-1, 2:]
+            south_east = image[2:, 2:]
+            south = image[2:, 1:-1]
+            south_west = image[2:, :-2]
+            west = image[1:-1, :-2]
+            north_west = image[:-2, :-2]
+            neighbours = (
+                north.astype(np.uint8)
+                + north_east
+                + east
+                + south_east
+                + south
+                + south_west
+                + west
+                + north_west
+            )
+            transitions = (
+                ((~north) & north_east).astype(np.uint8)
+                + ((~north_east) & east)
+                + ((~east) & south_east)
+                + ((~south_east) & south)
+                + ((~south) & south_west)
+                + ((~south_west) & west)
+                + ((~west) & north_west)
+                + ((~north_west) & north)
+            )
+            remove = (
+                center
+                & (neighbours >= 2)
+                & (neighbours <= 6)
+                & (transitions == 1)
+            )
+            if phase == 0:
+                remove &= ~(north & east & south)
+                remove &= ~(east & south & west)
+            else:
+                remove &= ~(north & east & west)
+                remove &= ~(north & south & west)
+            removed = int(remove.sum())
+            if removed:
+                updated = center.copy()
+                updated[remove] = False
+                image[1:-1, 1:-1] = updated
+            changed += removed
+        iterations += 1
+        if changed == 0:
+            return image, iterations
+        if iterations > 64:
+            raise ValueError("Ardacraft drainage thinning failed to converge")
+
+
+def _corner_safe_neighbours(
+    pixel: tuple[int, int],
+    pixels: set[tuple[int, int]],
+) -> list[tuple[int, int]]:
+    """Connect a raster graph without diagonal stair-step shortcuts."""
+
+    y, x = pixel
+    neighbours: list[tuple[int, int]] = []
+    for dy, dx in ((-1, 0), (0, 1), (1, 0), (0, -1)):
+        candidate = (y + dy, x + dx)
+        if candidate in pixels:
+            neighbours.append(candidate)
+    for dy, dx in ((-1, -1), (-1, 1), (1, 1), (1, -1)):
+        candidate = (y + dy, x + dx)
+        if (
+            candidate in pixels
+            and (y + dy, x) not in pixels
+            and (y, x + dx) not in pixels
+        ):
+            neighbours.append(candidate)
+    return neighbours
+
+
+def _trace_binary_paths(values: np.ndarray) -> list[list[tuple[int, int]]]:
+    """Split a one-pixel network into junction-to-junction paths."""
+
+    pixels = {(int(y), int(x)) for y, x in np.argwhere(values)}
+    adjacency = {
+        pixel: _corner_safe_neighbours(pixel, pixels) for pixel in pixels
+    }
+    nodes = {
+        pixel for pixel, neighbours in adjacency.items() if len(neighbours) != 2
+    }
+    visited: set[tuple[tuple[int, int], tuple[int, int]]] = set()
+    paths: list[list[tuple[int, int]]] = []
+
+    def edge_key(
+        first: tuple[int, int], second: tuple[int, int]
+    ) -> tuple[tuple[int, int], tuple[int, int]]:
+        return (first, second) if first < second else (second, first)
+
+    def trace(
+        start: tuple[int, int], neighbour: tuple[int, int]
+    ) -> list[tuple[int, int]]:
+        path = [start, neighbour]
+        visited.add(edge_key(start, neighbour))
+        previous, current = start, neighbour
+        while current not in nodes:
+            onward = [candidate for candidate in adjacency[current] if candidate != previous]
+            if not onward:
+                break
+            following = onward[0]
+            edge = edge_key(current, following)
+            if edge in visited:
+                break
+            visited.add(edge)
+            path.append(following)
+            previous, current = current, following
+        return path
+
+    for node in sorted(nodes):
+        for neighbour in adjacency[node]:
+            if edge_key(node, neighbour) not in visited:
+                paths.append(trace(node, neighbour))
+    for pixel in sorted(pixels):
+        for neighbour in adjacency[pixel]:
+            if edge_key(pixel, neighbour) not in visited:
+                paths.append(trace(pixel, neighbour))
+    return paths
+
+
+def _manhattan_distance(values: np.ndarray) -> np.ndarray:
+    """Return an integer city-block distance field without SciPy."""
+
+    height, width = values.shape
+    infinity = width + height + 5
+    columns = np.arange(width, dtype=np.int32)
+    left_index = np.maximum.accumulate(
+        np.where(values, columns[None, :], -infinity), axis=1
+    )
+    left_distance = columns[None, :] - left_index
+    right_index = np.minimum.accumulate(
+        np.where(values, columns[None, :], infinity)[:, ::-1], axis=1
+    )[:, ::-1]
+    right_distance = right_index - columns[None, :]
+    distance = np.minimum(left_distance, right_distance).astype(np.int32)
+    for y in range(1, height):
+        distance[y] = np.minimum(distance[y], distance[y - 1] + 1)
+    for y in range(height - 2, -1, -1):
+        distance[y] = np.minimum(distance[y], distance[y + 1] + 1)
+    return distance
+
+
+def _direct_affluents(
+    centreline: np.ndarray,
+    axes: np.ndarray,
+) -> tuple[np.ndarray, int]:
+    """Keep source branches that flow directly into a reviewed river axis."""
+
+    axis_distance = _manhattan_distance(axes)
+    candidates: list[list[tuple[int, int]]] = []
+    for raw_path in _trace_binary_paths(centreline):
+        distances = [int(axis_distance[pixel]) for pixel in raw_path]
+        nearest_index = int(np.argmin(distances))
+        # A graph edge can cross a reviewed course. Split it at that course so
+        # each retained object is one affluent, not a basin-to-basin bridge.
+        halves = (
+            list(reversed(raw_path[: nearest_index + 1])),
+            raw_path[nearest_index:],
+        )
+        for path in halves:
+            if len(path) < DRAINAGE_AFFLUENT_MIN_PATH:
+                continue
+            path_distances = [int(axis_distance[pixel]) for pixel in path]
+            if (
+                path_distances[0] <= DRAINAGE_AFFLUENT_NEAR_DISTANCE
+                and max(path_distances) >= DRAINAGE_AFFLUENT_FAR_DISTANCE
+            ):
+                candidates.append(path)
+
+    selected = np.zeros_like(centreline, dtype=bool)
+    height, width = selected.shape
+    for path in candidates:
+        for pixel in path:
+            selected[pixel] = True
+        # Close the at-most-four-pixel gap to the exact reviewed axis.
+        y, x = path[0]
+        while axis_distance[y, x] > 0:
+            neighbours = [
+                (next_y, next_x)
+                for next_y, next_x in (
+                    (y - 1, x), (y, x + 1), (y + 1, x), (y, x - 1)
+                )
+                if 0 <= next_y < height and 0 <= next_x < width
+            ]
+            next_y, next_x = min(
+                neighbours,
+                key=lambda value: (int(axis_distance[value]), value),
+            )
+            if axis_distance[next_y, next_x] >= axis_distance[y, x]:
+                raise ValueError("source affluent could not reach its reviewed axis")
+            y, x = next_y, next_x
+            selected[y, x] = True
+    return selected, len(candidates)
+
+
+def ardacraft_drainage_payload(reference_root: Path, projection: dict) -> dict:
+    """Reduce Ardacraft drainage to source-connected physical feeder axes.
+
+    The raw overlay contains every hillside rill. The reviewed 102-course Arda
+    Maps atlas therefore seeds a bounded geodesic reconstruction inside the
+    hash-pinned Ardacraft network. A 3x3 source-thickness opening rejects the
+    thinnest rill field. After thinning and spur pruning, only graph paths that
+    run materially away from and return directly to a reviewed river survive.
+    """
+
+    source_path = reference_root / "ardacraft_drainage_v2.webp"
+    if sha256(source_path) != ARDACRAFT_DRAINAGE_SHA256:
+        raise ValueError("Ardacraft drainage overlay changed; re-audit before rebuilding")
+    with Image.open(source_path) as opened:
+        alpha = np.asarray(opened.convert("RGBA"), dtype=np.uint8)[..., 3]
+    height, width = alpha.shape
+    if (width, height) != RELIEF_GRID_SIZE:
+        raise ValueError("Ardacraft drainage overlay has an unexpected resolution")
+    left, _, right, _ = ARDACRAFT_IMAGE_BOUNDS
+
+    def source_pixel(point: list[float]) -> tuple[int, int]:
+        x, y = (float(value) for value in point)
+        return (
+            round((x - left) / (right - left) * (width - 1)),
+            round(y * (height - 1)),
+        )
+
+    axes = Image.new("L", (width, height), 0)
+    axis_draw = ImageDraw.Draw(axes)
+    for river in projection["rivers"]:
+        points = [source_pixel(point) for point in river_control_points(river)]
+        if len(points) >= 2:
+            axis_draw.line(
+                points,
+                fill=255,
+                width=DRAINAGE_SEED_WIDTH,
+                joint="curve",
+            )
+    seed_neighbourhood = np.asarray(
+        axes.filter(ImageFilter.MaxFilter(DRAINAGE_SEED_RADIUS * 2 + 1)),
+        dtype=np.uint8,
+    ) > 0
+
+    lake_mask = Image.new("L", (width, height), 0)
+    lake_draw = ImageDraw.Draw(lake_mask)
+    for lake in projection["lakes"]:
+        points = [source_pixel(point) for point in lake["coords"]]
+        if len(points) >= 3:
+            lake_draw.polygon(points, fill=255)
+    lake_neighbourhood = np.asarray(
+        lake_mask.filter(ImageFilter.MaxFilter(9)), dtype=np.uint8
+    ) > 0
+
+    source_network = (alpha >= DRAINAGE_ALPHA_THRESHOLD) & ~lake_neighbourhood
+    selected = source_network & seed_neighbourhood
+    seeded_samples = int(selected.sum())
+    for _ in range(DRAINAGE_REACH):
+        selected = _dilate_binary(selected) & source_network
+    geodesic_samples = int(selected.sum())
+    opened = source_network.copy()
+    for _ in range(DRAINAGE_OPENING_RADIUS):
+        opened = _erode_binary(opened)
+    for _ in range(DRAINAGE_OPENING_RADIUS):
+        opened = _dilate_binary(opened)
+    selected, kept_components = _connected_to_seed(
+        selected & opened, seed_neighbourhood
+    )
+    selected_samples = int(selected.sum())
+    centreline, thinning_iterations = _thin_binary(selected)
+    unpruned_centreline_samples = int(centreline.sum())
+    centreline = _prune_binary_endpoints(centreline, DRAINAGE_PRUNE_STEPS)
+    pruned_centreline_samples = int(centreline.sum())
+    direct_affluents, affluent_paths = _direct_affluents(
+        centreline,
+        np.asarray(axes, dtype=bool),
+    )
+    quantized = direct_affluents.astype(np.uint8)
+    compressed = zlib.compress(quantized.tobytes(), level=9)
+    return {
+        "schema": 2,
+        "source": "Ardacraft Drainage layer Middle-earth V2",
+        "source_sha256": ARDACRAFT_DRAINAGE_SHA256,
+        "derivation": (
+            "alpha>=160; reviewed 102-course Arda Maps seed; 24-pixel connected "
+            "geodesic reach; source-lake exclusion; 3x3 source-thickness opening; "
+            "axis-connected components; Zhang-Suen centrelines; 8-step terminal "
+            "pruning; direct-affluent graph filter (near<=4, far>=20, length>=16); "
+            "exact reviewed-axis reconnection"
+        ),
+        "bounds": ARDACRAFT_IMAGE_BOUNDS,
+        "resolution": [width, height],
+        "alpha_threshold": DRAINAGE_ALPHA_THRESHOLD,
+        "seed_width": DRAINAGE_SEED_WIDTH,
+        "seed_radius": DRAINAGE_SEED_RADIUS,
+        "geodesic_reach": DRAINAGE_REACH,
+        "opening_radius": DRAINAGE_OPENING_RADIUS,
+        "terminal_prune_steps": DRAINAGE_PRUNE_STEPS,
+        "affluent_near_distance": DRAINAGE_AFFLUENT_NEAR_DISTANCE,
+        "affluent_far_distance": DRAINAGE_AFFLUENT_FAR_DISTANCE,
+        "affluent_min_path": DRAINAGE_AFFLUENT_MIN_PATH,
+        "encoding": "zlib_base85_u8",
+        "field_sha256": hashlib.sha256(quantized.tobytes()).hexdigest(),
+        "source_network_samples": int(source_network.sum()),
+        "seeded_samples": seeded_samples,
+        "geodesic_samples": geodesic_samples,
+        "opened_samples": int(opened.sum()),
+        "kept_components": kept_components,
+        "selected_samples": selected_samples,
+        "unpruned_centreline_samples": unpruned_centreline_samples,
+        "pruned_centreline_samples": pruned_centreline_samples,
+        "affluent_paths": affluent_paths,
+        "centreline_samples": int(direct_affluents.sum()),
+        "thinning_iterations": thinning_iterations,
         "data": base64.b85encode(compressed).decode("ascii"),
     }
 
@@ -722,7 +1146,7 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
     return controls
 
 
-def build(reference_root: Path) -> tuple[dict, dict]:
+def build(reference_root: Path) -> tuple[dict, dict, dict]:
     source_path = reference_root / "arda_maps_third_age.json"
     if sha256(source_path) != ARDA_MAPS_SHA256:
         raise ValueError("Arda Maps payload changed; re-audit before rebuilding controls")
@@ -1472,7 +1896,7 @@ def build(reference_root: Path) -> tuple[dict, dict]:
     rivers.extend(supplementary_river_controls(topology))
 
     projection = {
-        "schema": 3,
+        "schema": 4,
         "canvas": [16384, 8192],
         "control_resolution": [4096, 2048],
         "reference_projection": PROJECTION_CONTRACT,
@@ -1516,7 +1940,24 @@ def build(reference_root: Path) -> tuple[dict, dict]:
         "density_zones": density_zones,
         "rivers": rivers,
     }
-    return projection, relief_payload
+    drainage_payload = ardacraft_drainage_payload(reference_root, projection)
+    projection["source_drainage"] = {
+        "file": DRAINAGE_OUTPUT.name,
+        "source": drainage_payload["source"],
+        "source_sha256": drainage_payload["source_sha256"],
+        "field_sha256": drainage_payload["field_sha256"],
+        "bounds": drainage_payload["bounds"],
+        "resolution": drainage_payload["resolution"],
+        "alpha_threshold": drainage_payload["alpha_threshold"],
+        "geodesic_reach": drainage_payload["geodesic_reach"],
+        "opening_radius": drainage_payload["opening_radius"],
+        "terminal_prune_steps": drainage_payload["terminal_prune_steps"],
+        "affluent_near_distance": drainage_payload["affluent_near_distance"],
+        "affluent_far_distance": drainage_payload["affluent_far_distance"],
+        "affluent_min_path": drainage_payload["affluent_min_path"],
+        "affluent_paths": drainage_payload["affluent_paths"],
+    }
+    return projection, relief_payload, drainage_payload
 
 
 def main() -> int:
@@ -1528,13 +1969,18 @@ def main() -> int:
     )
     parser.add_argument("--write", action="store_true", required=True)
     args = parser.parse_args()
-    projection, relief_payload = build(args.reference_root)
+    projection, relief_payload, drainage_payload = build(args.reference_root)
     OUTPUT.write_text(
         json.dumps(projection, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     RELIEF_OUTPUT.write_text(
         json.dumps(relief_payload, separators=(",", ":"), ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    DRAINAGE_OUTPUT.write_text(
+        json.dumps(drainage_payload, separators=(",", ":"), ensure_ascii=False)
+        + "\n",
         encoding="utf-8",
     )
     print(
@@ -1544,7 +1990,8 @@ def main() -> int:
         f"{len(projection['highland_zones'])} highland zones, "
         f"{len(projection['moor_zones'])} moor zones, "
         f"{len(projection['biome_zones'])} biome zones, "
-        f"{len(projection['rivers'])} rivers"
+        f"{len(projection['rivers'])} rivers, "
+        f"{drainage_payload['centreline_samples']} Ardacraft feeder samples"
     )
     return 0
 

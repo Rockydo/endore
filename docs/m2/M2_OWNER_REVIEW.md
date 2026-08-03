@@ -1,16 +1,17 @@
 # M2 owner review — current physical map
 
-Status: rejected by direct owner review; the gate remains red.
+Status: v98 awaits direct owner re-review; the previous v93 rejection keeps the gate red.
 
 ## Exact candidate
 
 - Game-visible fingerprint:
-  `6572f6400849e103c54fdf526f0dbc8325713d38ad64b98451da38e25a46ba1b`
-- Generator: v54 native-resolution river banks plus the rejected-as-final Great River
-  scale, with v94's compact Nan Curunir political correction.
-- Runtime proof: fresh HUD-proven Observer, repeated 45-second maximum-speed playback,
-  zero recovery, unchanged 1,486-byte baseline error log, 446.0-second full validation,
-  221.8-second paired zero-new-line smoke, and exact smoke assertion.
+  `696cfc31bacb10bf238fa91becbff9e6678281d808d17bf99145fc56ea007f18`
+- Generator: v56 native-resolution river cores, enlarged Great River hierarchy, 102
+  reviewed Arda Maps courses, and 61 curated source-connected Ardacraft affluents, with
+  v94's compact Nan Curunir political correction.
+- Runtime proof: fresh HUD-proven Observer, eight source-bound river camera pairs,
+  45-second maximum-speed playback, zero recovery, and unchanged 1,486-byte baseline
+  error log. Full repository validation passes in 428.6 seconds.
 
 ## Launch with physical terrain enabled
 
@@ -41,6 +42,7 @@ does not overwrite personal audio, display-mode, or UI choices.
 | `docs/screens/20260803_v92_remaining_drainage/` | Remaining twelve source-bound drainage pairs and complete 102-course review. |
 | `docs/screens/20260803_v93_anduin_scale/` | Same-camera owner-calibrated upper/lower Anduin scale and clean 45-second playback. |
 | `docs/screens/20260803_v94b_gap_political/` | Final-fingerprint source-bound Fords regional/close pair proving compact Isengard, separate Dunland/Fangorn/Rohan, live terrain, and clean playback. |
+| `docs/screens/20260803_v98_curated_affluents/` | Current upper/lower Anduin and six other course pairs after rejecting blocky v95-v97 feeder mechanisms. |
 
 Screenshots are reproducible, ignored working evidence rather than shipped mod payload.
 Regional frames establish position and political context; the corresponding close frames
@@ -58,15 +60,15 @@ The current technical review supports these statements, but not visual acceptanc
 - no vanilla Earth terrain remains beneath the political map;
 - the coast, ridges, passes, forests, climate materials, small water, and 102-course
   drainage system come from the committed Middle-earth controls;
-- the 102 committed courses are source-backed and connected, but direct player review
-  still finds Anduin visibly too narrow and the overall tributary/affluent network too
-  sparse at ordinary close play zoom;
+- the 102 committed courses remain source-backed and connected; v98 makes Anduin visibly
+  dominant and adds only 61 directly source-connected, unnamed affluents after rejecting
+  three denser but artificial-looking mechanisms;
 - all 38 realm assignments satisfy their source/anchor contracts with no unreviewed
   political component; Isengard is a compact 13-location Nan Curunir claim and the Fords
   resolve outside it.
 
-The next hydrology pass must compare rendered width and visible network density—not only
-control-raster completeness—against both accepted map sources. Additional courses must be
-source-traced or lore-attested; no decorative drainage is permitted. Explicit owner
-acceptance is still required. Until then, M2 is red and gameplay, faction expansion,
-mechanics, bespoke art, and lore-content production remain prohibited.
+Review v98's rendered width and visible network density against both accepted map sources.
+Additional courses remain prohibited unless source-traced or lore-attested; no decorative
+drainage is permitted. Explicit owner acceptance is still required. Until then, M2 is red
+and gameplay, faction expansion, mechanics, bespoke art, and lore-content production
+remain prohibited.

@@ -1,5 +1,5 @@
 {
-  "schema": 4,
+  "schema": 6,
   "projection": {
     "source": "ardacraft_equal_scale_grid",
     "x_center": 10651.5,
@@ -8,7 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
-  "projection_sha256": "e07d9c04b58794af270b7ccbbaa661c2acdde23deecdd35adc1a77e9ab9b798b",
+  "projection_sha256": "1d8bd87f373a742b5ed956118f4aedd599fb166963e9d3551db2800a85a3e8b6",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -88,6 +88,49 @@
       "minimum_length": 1.46
     }
   },
+  "source_feeder_theatres": {
+    "northern_basins": {
+      "bbox": [
+        0.35,
+        0.0,
+        0.8,
+        0.32
+      ],
+      "centreline_samples": 838,
+      "minimum_samples": 750
+    },
+    "anduin_system": {
+      "bbox": [
+        0.42,
+        0.12,
+        0.68,
+        0.62
+      ],
+      "centreline_samples": 1298,
+      "minimum_samples": 1150
+    },
+    "white_mountains": {
+      "bbox": [
+        0.25,
+        0.43,
+        0.63,
+        0.68
+      ],
+      "centreline_samples": 929,
+      "minimum_samples": 800
+    },
+    "mordor_gondor": {
+      "bbox": [
+        0.52,
+        0.43,
+        0.8,
+        0.75
+      ],
+      "centreline_samples": 527,
+      "minimum_samples": 450
+    }
+  },
+  "source_feeder_samples": 2060,
   "anchor_count": 42,
   "landmark_count": 62,
   "manual_or_reconciled_landmarks": 12,

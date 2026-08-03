@@ -457,3 +457,16 @@ about Middle-earth.
   and claim apply, to Dunland west of the Gap, to Fangorn where the source forest applies,
   and otherwise leaves them wild. Only the negative rule that the Fords are not part of
   Isengard is treated as durable canon evidence.
+
+## v98 source-connected minor affluents
+
+- The Ardacraft V2 drainage overlay is treated as evidence for plausible minor physical
+  drainage inside the accepted equal-scale Middle-earth projection. Its complete hillside
+  rill field is not a canon list and is not rendered wholesale.
+- The 61 retained graph paths are unnamed affluents because each directly reconnects to a
+  reviewed Arda Maps course and satisfies the audited distance/length filter. They do not
+  establish Tolkien-authored names, settlements, political borders, navigability, or a
+  separate EU5 river-graph channel.
+- Curve simplification and endpoint-preserving smoothing remove source-raster sampling
+  artifacts without moving a confluence or inventing a new basin. The reviewed 102-course
+  atlas remains authoritative whenever the two numeric controls overlap.

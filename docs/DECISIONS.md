@@ -1639,3 +1639,30 @@ deliberately unclaimed land through their existing contracts.
 Bind the reviewed silhouette to normalized coordinates and a range of 8..18 locations,
 not generated IDs. Keep the positive ownership of the Fords open to later Rohan/Dunland
 frontier evidence; only their exclusion from Saruman's compact ring-domain is permanent.
+
+## 2026-08-03 - Curate Ardacraft affluents as connected graph paths
+
+Use the hash-pinned Ardacraft V2 drainage overlay only as a numeric source for unnamed
+physical affluents around the 102 reviewed Arda Maps courses. Do not ship the published
+raster and do not add these paths to build 24187685's load-sensitive twelve-channel river
+graph.
+
+Reject v95's nearest-neighbour enlargement, v96's thresholded bilinear enlargement, and
+v97's broadly pruned raster as presentation mechanisms. Although all three loaded and
+ticked cleanly, they exposed source pixels as blocks, right-angle stubs, combs, and small
+lattices. A technically valid cache is not sufficient visual evidence.
+
+The durable v98 reduction uses the reviewed atlas as its seed, retains only opened and
+axis-connected source drainage within a bounded 24-pixel geodesic reach, thins it, prunes
+terminal noise, then keeps only a direct affluent path when it begins within four source
+pixels of a reviewed course, extends at least twenty pixels from it, and contains at least
+sixteen samples. Reconnect each survivor to the exact reviewed axis. The resulting 61
+source paths/2,060 binary samples are reconstructed as corner-safe graph edges, simplified
+to remove raster stairs, and rounded with endpoint-preserving Chaikin passes. Use the same
+paths for shallow incision, narrow vegetation clearance, wet bank, and full-resolution
+water core so close zoom cannot reveal a second geometry.
+
+Increase upper/lower Anduin core scales to 0.72/0.68 and retain stronger but subordinate
+class scales for reviewed trunks, branches, tributaries, and feeders. The wet-bank nesting
+contract remains mandatory. This is renderer-scale hierarchy, not a claim about measured
+river miles, canon names for the new paths, navigability, or engine-river status.

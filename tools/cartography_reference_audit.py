@@ -4,11 +4,15 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
 import hashlib
 import json
 import math
+import zlib
 from pathlib import Path
+
+import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTROL = ROOT / "docs/world/control"
@@ -18,6 +22,7 @@ LANDMARKS = CONTROL / "m3_landmarks.csv"
 REALMS = ROOT / "docs/world/realms.csv"
 PROJECTION = CONTROL / "projection.json"
 RELIEF = CONTROL / "ardacraft_relief.json"
+DRAINAGE = CONTROL / "ardacraft_drainage.json"
 REPORT = ROOT / "docs/world/derived/cartography_conformance.json"
 
 EXPECTED_PROJECTION = {
@@ -29,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "e07d9c04b58794af270b7ccbbaa661c2acdde23deecdd35adc1a77e9ab9b798b"
+    "1d8bd87f373a742b5ed956118f4aedd599fb166963e9d3551db2800a85a3e8b6"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -39,6 +44,12 @@ EXPECTED_ARDACRAFT_HEIGHTMAP_SHA256 = (
 )
 EXPECTED_ARDACRAFT_BIOMES_SHA256 = (
     "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
+)
+EXPECTED_DRAINAGE_FILE_SHA256 = (
+    "ff625cbb64e4806a031087b4b00a0541f349f1226803771521519625251f4a0f"
+)
+EXPECTED_ARDACRAFT_DRAINAGE_SHA256 = (
+    "d8ec6f22c0e3c87097145f2c3f3b831c778e4df8b705595d335e5c4d7be74871"
 )
 EXPECTED_SOURCE_BIOME_CLASSES = {
     "brown_lands": ["M6"],
@@ -94,6 +105,12 @@ SOURCE_DRAINAGE_THEATRES = {
         "minimum_points": 565,
         "minimum_length": 1.46,
     },
+}
+SOURCE_FEEDER_THEATRES = {
+    "northern_basins": ((0.35, 0.00, 0.80, 0.32), 750),
+    "anduin_system": ((0.42, 0.12, 0.68, 0.62), 1_150),
+    "white_mountains": ((0.25, 0.43, 0.63, 0.68), 800),
+    "mordor_gondor": ((0.52, 0.43, 0.80, 0.75), 450),
 }
 
 
@@ -153,6 +170,76 @@ def render_report() -> dict:
         or relief.get("nonzero_samples", 0) < 400_000
     ):
         raise ValueError("Ardacraft-derived relief provenance or detail regressed")
+    if not DRAINAGE.is_file():
+        raise ValueError("committed Ardacraft-derived numeric drainage field is missing")
+    drainage_bytes = DRAINAGE.read_bytes()
+    if hashlib.sha256(drainage_bytes).hexdigest() != EXPECTED_DRAINAGE_FILE_SHA256:
+        raise ValueError("binding Ardacraft-derived drainage field changed without review")
+    drainage = json.loads(drainage_bytes)
+    drainage_descriptor = projection.get("source_drainage")
+    if (
+        not isinstance(drainage_descriptor, dict)
+        or drainage_descriptor.get("file") != DRAINAGE.name
+        or drainage.get("schema") != 2
+        or drainage.get("source_sha256") != EXPECTED_ARDACRAFT_DRAINAGE_SHA256
+        or drainage.get("source_sha256") != drainage_descriptor.get("source_sha256")
+        or drainage.get("field_sha256") != drainage_descriptor.get("field_sha256")
+        or drainage.get("resolution") != [2500, 2003]
+        or drainage.get("alpha_threshold") != 160
+        or drainage.get("geodesic_reach") != 24
+        or drainage.get("opening_radius") != 1
+        or drainage.get("terminal_prune_steps") != 8
+        or drainage.get("affluent_near_distance") != 4
+        or drainage.get("affluent_far_distance") != 20
+        or drainage.get("affluent_min_path") != 16
+        or drainage.get("affluent_near_distance")
+        != drainage_descriptor.get("affluent_near_distance")
+        or drainage.get("affluent_far_distance")
+        != drainage_descriptor.get("affluent_far_distance")
+        or drainage.get("affluent_min_path")
+        != drainage_descriptor.get("affluent_min_path")
+        or drainage.get("affluent_paths")
+        != drainage_descriptor.get("affluent_paths")
+        or not (50 <= drainage.get("affluent_paths", 0) <= 75)
+        or drainage.get("encoding") != "zlib_base85_u8"
+        or not (1_800 <= drainage.get("centreline_samples", 0) <= 2_300)
+        or not (160_000 <= drainage.get("selected_samples", 0) <= 180_000)
+    ):
+        raise ValueError("Ardacraft-derived drainage provenance or detail regressed")
+    try:
+        drainage_raw = zlib.decompress(
+            base64.b85decode(drainage["data"].encode("ascii"))
+        )
+    except (KeyError, ValueError, zlib.error) as exc:
+        raise ValueError("Ardacraft-derived drainage payload is invalid") from exc
+    if len(drainage_raw) != 2500 * 2003:
+        raise ValueError("Ardacraft-derived drainage payload has the wrong size")
+    drainage_field = np.frombuffer(drainage_raw, dtype=np.uint8).reshape((2003, 2500))
+    if np.any(drainage_field > 1):
+        raise ValueError("Ardacraft-derived drainage payload is not binary")
+    if hashlib.sha256(drainage_field.tobytes()).hexdigest() != drainage["field_sha256"]:
+        raise ValueError("Ardacraft-derived drainage field checksum changed")
+    feeder_y, feeder_x = np.where(drainage_field > 0)
+    feeder_x = 0.148481643 + feeder_x / 2499.0 * (0.774972679 - 0.148481643)
+    feeder_y = feeder_y / 2002.0
+    feeder_theatres = {}
+    for key, (bbox, minimum_samples) in SOURCE_FEEDER_THEATRES.items():
+        x0, y0, x1, y1 = bbox
+        samples = int(
+            (
+                (feeder_x >= x0)
+                & (feeder_x <= x1)
+                & (feeder_y >= y0)
+                & (feeder_y <= y1)
+            ).sum()
+        )
+        if samples < minimum_samples:
+            raise ValueError(f"{key} lost source-connected feeder density")
+        feeder_theatres[key] = {
+            "bbox": list(bbox),
+            "centreline_samples": samples,
+            "minimum_samples": minimum_samples,
+        }
     biome_descriptor = projection.get("source_biomes")
     if (
         not isinstance(biome_descriptor, dict)
@@ -788,11 +875,13 @@ def render_report() -> dict:
     if failures:
         raise ValueError("; ".join(failures))
     return {
-        "schema": 4,
+        "schema": 6,
         "projection": EXPECTED_PROJECTION,
         "projection_sha256": projection_sha256,
         "feature_counts": feature_counts,
         "drainage_theatres": drainage_theatres,
+        "source_feeder_theatres": feeder_theatres,
+        "source_feeder_samples": int(drainage_field.sum()),
         "anchor_count": len(entries),
         "landmark_count": len(landmarks),
         "manual_or_reconciled_landmarks": manual_landmarks,

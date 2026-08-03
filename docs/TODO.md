@@ -2,8 +2,9 @@
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
-   receives explicit owner acceptance. The current source-audited runtime tree loads,
-   but the nine-theatre visual gate remains red.
+   receives explicit owner acceptance. The current v98 source-audited runtime tree loads
+   and ticks cleanly, but the nine-theatre visual gate remains red pending direct owner
+   re-review.
 2. REOPENED M2 MOUNTAINS — current relief remains too broad, low, rounded, and plateaued.
    Retain source-pinned axes/peaks/saddles and separate impassability, but rebuild the
    cross-range profile for substantially taller, narrower, jagged crests with secondary
@@ -185,11 +186,10 @@
    cache, and complete 6,004-location regeneration are green. Keep this item open until
    fresh real-renderer Rhûn/Brown Lands/Harad views and the complete nine-theatre review
    accept the material read.
-6. REOPENED M2 RIVERS/FORESTS — the primary rivers remain too narrow and the network too
-   sparse for EU5 close zoom. Re-audit every visible watercourse against both owner-supplied
-   online maps; widen the Anduin, Baranduin, Greyflood, Isen, Celduin, Carnen, Poros,
-   Harnen, and other major trunks while importing or source-tracing a materially denser
-   hierarchy of tributaries and headwaters. Preserve natural downstream width growth,
+6. REOPENED M2 RIVERS/FORESTS — direct owner review rejected v93 because its primary
+   rivers remained too narrow and its visible network too sparse. v98 is the current
+   correction candidate: review its larger Anduin and source-connected affluent density
+   in the real renderer before changing any other course. Preserve natural downstream growth,
    irregular banks, confluences, clearances, and zero Earth transforms/decals. Retain the
    source-matching Harnen and Morgulduin routes; do not restore rejected straight lines.
    Then verify Fangorn, Old Forest, Lórien, and Ithilien canopy at close zoom.
@@ -631,3 +631,25 @@
 - The v93 validation/smoke gate passed and commit `13193e8` is pushed, but the subsequent
   owner review supersedes its visual conclusion. M2 remains red; gameplay content remains
   blocked.
+
+## Current v98 curated-affluent candidate
+
+- Retain the 102-course Arda Maps atlas and twelve-channel parser graph. v98 enlarges the
+  upper/lower Anduin native cores to 0.72/0.68 scale, strengthens ordinary reviewed river
+  visibility without flattening their hierarchy, and adds 61 unnamed physical affluents
+  selected from the hash-pinned Ardacraft drainage overlay.
+- Reject v95-v97 as visual candidates. Direct raster enlargement and broad
+  source-neighbourhood retention exposed square blocks, short right-angled stubs, and
+  comb-like networks. Those experiments never became commits.
+- v98 keeps only source graph paths that start within four source pixels of a reviewed
+  course, extend at least twenty pixels away, contain at least sixteen path samples, and
+  reconnect to the exact reviewed axis. Its 2,060 committed centreline samples are
+  simplified and curve-smoothed for both physical incision and native material rendering.
+- Evidence under `docs/screens/20260803_v98_curated_affluents/` proves a fresh HUD-observed
+  New Game, massive upper/lower Anduin, readable subordinate Baranduin/Greyflood/Isen/
+  Celduin and tributaries, 45 seconds at maximum speed with zero recovery, and the
+  unchanged 1,486-byte error log on fingerprint
+  `696cfc31bacb10bf238fa91becbff9e6678281d808d17bf99145fc56ea007f18`.
+- Static cartography, controls, height, self-contained terrain-cache, and river-raster
+  checks pass. M2 stays red until direct owner review accepts the visible result; do not
+  resume gameplay or lore-content production.

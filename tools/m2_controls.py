@@ -59,6 +59,7 @@ LOWLAND_SOUTH_SAMPLE = 10500.0
 LOWLAND_NORTH_SAMPLE = 13000.0
 WATER_FLOOR_SAMPLE = 420.0
 RIVER_INCISION_SAMPLE = 1450.0
+SOURCE_DRAINAGE_INCISION_STRENGTH = 64
 # Keep physical foothills broad while reserving the snow/rock mountain
 # topography template for isolated massif cores. The earlier 0.29 and 0.45
 # thresholds both left continuous pale ridge segments at regional zoom.
@@ -96,6 +97,9 @@ SOURCE_RELIEF_THEATRES = {
 }
 EXPECTED_ARDACRAFT_BIOME_SHA256 = (
     "2070d5577d768b2d418fd06e61d2fbafb5b55599340540fd9308ead213037997"
+)
+EXPECTED_ARDACRAFT_DRAINAGE_SHA256 = (
+    "d8ec6f22c0e3c87097145f2c3f3b831c778e4df8b705595d335e5c4d7be74871"
 )
 EXPECTED_SOURCE_BIOME_CLASSES = {
     "brown_lands": ["M6"],
@@ -197,6 +201,258 @@ def source_relief_field(projection: dict, size: tuple[int, int]) -> np.ndarray:
     return np.clip(result, 0.0, 1.0)
 
 
+def _source_drainage_data(projection: dict) -> tuple[np.ndarray, list[float]]:
+    """Validate and decode the committed source-connected drainage reduction."""
+
+    descriptor = projection.get("source_drainage")
+    if not isinstance(descriptor, dict):
+        raise ValueError("projection lacks the source-derived drainage descriptor")
+    path = CONTROL / str(descriptor.get("file", ""))
+    if path.parent != CONTROL or not path.is_file():
+        raise ValueError("source-derived drainage control is missing")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    for key in (
+        "source",
+        "source_sha256",
+        "field_sha256",
+        "bounds",
+        "resolution",
+        "alpha_threshold",
+        "geodesic_reach",
+        "opening_radius",
+        "terminal_prune_steps",
+        "affluent_near_distance",
+        "affluent_far_distance",
+        "affluent_min_path",
+        "affluent_paths",
+    ):
+        if payload.get(key) != descriptor.get(key):
+            raise ValueError(f"source-drainage descriptor mismatch: {key}")
+    if payload.get("schema") != 2 or payload.get("encoding") != "zlib_base85_u8":
+        raise ValueError("unsupported source-drainage numeric encoding")
+    width, height = (int(value) for value in payload["resolution"])
+    encoded = payload.get("data")
+    if width < 128 or height < 128 or not isinstance(encoded, str):
+        raise ValueError("source-drainage numeric field lacks production detail")
+    try:
+        raw = zlib.decompress(base64.b85decode(encoded.encode("ascii")))
+    except (ValueError, zlib.error) as exc:
+        raise ValueError("source-drainage compressed payload is invalid") from exc
+    if len(raw) != width * height:
+        raise ValueError("source-drainage compressed payload has the wrong size")
+    decoded = np.frombuffer(raw, dtype=np.uint8).reshape((height, width))
+    if np.any(decoded > 1):
+        raise ValueError("source-drainage numeric field is not binary")
+    if hashlib.sha256(decoded.tobytes()).hexdigest() != payload["field_sha256"]:
+        raise ValueError("source-drainage numeric field checksum changed")
+    bounds = [float(value) for value in payload["bounds"]]
+    if len(bounds) != 4 or bounds[1] != 0.0 or bounds[3] != 1.0:
+        raise ValueError("source-drainage field lost its equal-scale full-height bounds")
+    return decoded, bounds
+
+
+def source_drainage_field(
+    projection: dict,
+    size: tuple[int, int],
+    *,
+    resample: Image.Resampling = Image.Resampling.NEAREST,
+    threshold: int = 0,
+) -> np.ndarray:
+    """Decode the committed source-connected Ardacraft feeder centrelines."""
+
+    decoded, bounds = _source_drainage_data(projection)
+    left = round(bounds[0] * (size[0] - 1))
+    right = round(bounds[2] * (size[0] - 1))
+    if not (0 <= left < right < size[0]):
+        raise ValueError("source-drainage field lies outside the production canvas")
+    if not 0 <= threshold <= 254:
+        raise ValueError("source-drainage resize threshold is invalid")
+    mapped = Image.fromarray(decoded * 255, "L").resize(
+        (right - left + 1, size[1]), resample
+    )
+    result = np.zeros((size[1], size[0]), dtype=bool)
+    result[:, left : right + 1] = (
+        np.asarray(mapped, dtype=np.uint8) > threshold
+    )
+    return result
+
+
+def _corner_safe_drainage_neighbours(
+    point_value: tuple[int, int],
+    pixels: set[tuple[int, int]],
+) -> list[tuple[int, int]]:
+    """Return raster neighbours without diagonal shortcuts across stair steps."""
+
+    y, x = point_value
+    neighbours: list[tuple[int, int]] = []
+    for dy, dx in ((-1, 0), (0, 1), (1, 0), (0, -1)):
+        candidate = (y + dy, x + dx)
+        if candidate in pixels:
+            neighbours.append(candidate)
+    for dy, dx in ((-1, -1), (-1, 1), (1, 1), (1, -1)):
+        candidate = (y + dy, x + dx)
+        if candidate not in pixels:
+            continue
+        # A diagonal is a genuine connection only when the raster does not
+        # already provide either orthogonal bridge. This turns antialiased
+        # stair steps into one graph edge instead of a chain of tiny triangles.
+        if (y + dy, x) not in pixels and (y, x + dx) not in pixels:
+            neighbours.append(candidate)
+    return neighbours
+
+
+def _simplify_drainage_path(
+    path: list[tuple[float, float]],
+    tolerance: float = 0.85,
+) -> list[tuple[float, float]]:
+    """Remove source-pixel stair steps while retaining bends and endpoints."""
+
+    if len(path) <= 2:
+        return path
+    start = np.asarray(path[0], dtype=np.float64)
+    end = np.asarray(path[-1], dtype=np.float64)
+    points = np.asarray(path, dtype=np.float64)
+    segment = end - start
+    segment_length_sq = float(np.dot(segment, segment))
+    if segment_length_sq <= 0.0:
+        distances = np.linalg.norm(points[1:-1] - start, axis=1)
+    else:
+        progress = np.clip(
+            ((points[1:-1] - start) @ segment) / segment_length_sq,
+            0.0,
+            1.0,
+        )
+        closest = start + progress[:, None] * segment
+        distances = np.linalg.norm(points[1:-1] - closest, axis=1)
+    split_offset = int(np.argmax(distances))
+    maximum = float(distances[split_offset])
+    if maximum <= tolerance:
+        return [path[0], path[-1]]
+    split = split_offset + 1
+    return (
+        _simplify_drainage_path(path[: split + 1], tolerance)[:-1]
+        + _simplify_drainage_path(path[split:], tolerance)
+    )
+
+
+def _chaikin_drainage_path(
+    path: list[tuple[float, float]], rounds: int = 2
+) -> list[tuple[float, float]]:
+    """Round raster corners while pinning every source confluence exactly."""
+
+    result = path
+    if len(result) <= 2:
+        return result
+    for _ in range(rounds):
+        refined = [result[0]]
+        for start, end in zip(result, result[1:]):
+            refined.extend(
+                [
+                    (
+                        start[0] * 0.75 + end[0] * 0.25,
+                        start[1] * 0.75 + end[1] * 0.25,
+                    ),
+                    (
+                        start[0] * 0.25 + end[0] * 0.75,
+                        start[1] * 0.25 + end[1] * 0.75,
+                    ),
+                ]
+            )
+        refined.append(result[-1])
+        result = refined
+    return result
+
+
+def source_drainage_paths(
+    projection: dict,
+) -> tuple[tuple[tuple[float, float], ...], ...]:
+    """Reconstruct smooth normalized paths from the audited binary network."""
+
+    decoded, bounds = _source_drainage_data(projection)
+    source_height, source_width = decoded.shape
+    pixels = {
+        (int(y), int(x)) for y, x in np.argwhere(decoded > 0)
+    }
+    adjacency = {
+        pixel: _corner_safe_drainage_neighbours(pixel, pixels)
+        for pixel in pixels
+    }
+    nodes = {pixel for pixel, neighbours in adjacency.items() if len(neighbours) != 2}
+    visited: set[tuple[tuple[int, int], tuple[int, int]]] = set()
+    raw_paths: list[list[tuple[int, int]]] = []
+
+    def edge_key(
+        first: tuple[int, int], second: tuple[int, int]
+    ) -> tuple[tuple[int, int], tuple[int, int]]:
+        return (first, second) if first < second else (second, first)
+
+    def trace(start: tuple[int, int], neighbour: tuple[int, int]) -> list[tuple[int, int]]:
+        path = [start, neighbour]
+        visited.add(edge_key(start, neighbour))
+        previous, current = start, neighbour
+        while current not in nodes:
+            onward = [candidate for candidate in adjacency[current] if candidate != previous]
+            if not onward:
+                break
+            following = onward[0]
+            edge = edge_key(current, following)
+            if edge in visited:
+                break
+            visited.add(edge)
+            path.append(following)
+            previous, current = current, following
+        return path
+
+    for node in sorted(nodes):
+        for neighbour in adjacency[node]:
+            if edge_key(node, neighbour) not in visited:
+                raw_paths.append(trace(node, neighbour))
+    # Degree-two components are closed source loops and have no graph node.
+    # Preserve them as paths too, although the drainage reduction contains
+    # very few after lake removal and terminal pruning.
+    for pixel in sorted(pixels):
+        for neighbour in adjacency[pixel]:
+            if edge_key(pixel, neighbour) not in visited:
+                raw_paths.append(trace(pixel, neighbour))
+
+    normalized_paths: list[tuple[tuple[float, float], ...]] = []
+    source_span = bounds[2] - bounds[0]
+    for raw_path in raw_paths:
+        source_points = [(float(x), float(y)) for y, x in raw_path]
+        smoothed = _chaikin_drainage_path(
+            _simplify_drainage_path(source_points), rounds=2
+        )
+        normalized_paths.append(
+            tuple(
+                (
+                    bounds[0] + x / (source_width - 1) * source_span,
+                    y / (source_height - 1),
+                )
+                for x, y in smoothed
+            )
+        )
+    return tuple(normalized_paths)
+
+
+def draw_source_drainage_paths(
+    image: Image.Image,
+    projection: dict,
+    *,
+    fill: int,
+    width: int,
+) -> None:
+    """Draw source-derived feeder paths at any ENDÓRË raster resolution."""
+
+    if width < 1:
+        raise ValueError("source-drainage path width must be positive")
+    draw = ImageDraw.Draw(image)
+    for path in source_drainage_paths(projection):
+        if len(path) < 2:
+            continue
+        points = [point(value, image.size) for value in path]
+        draw.line(points, fill=fill, width=width, joint="curve")
+
+
 def soft_ceiling(values: np.ndarray, *, knee: float, ceiling: float) -> np.ndarray:
     """Compress extreme relief continuously instead of clipping flat summits."""
 
@@ -211,8 +467,8 @@ def soft_ceiling(values: np.ndarray, *, knee: float, ceiling: float) -> np.ndarr
 def validate_geometry_contract(projection: dict) -> None:
     """Reject a return to primitive proof-map lakes, forests, or coasts."""
 
-    if projection.get("schema") != 3:
-        raise ValueError("projection controls must use cartography schema 3")
+    if projection.get("schema") != 4:
+        raise ValueError("projection controls must use cartography schema 4")
     if len(projection["land_polygons"]["mainland"]) < 500:
         raise ValueError("mainland coastline lacks source-audited multi-scale detail")
     for key, coords in projection["sea_cutouts"].items():
@@ -227,6 +483,23 @@ def validate_geometry_contract(projection: dict) -> None:
         or descriptor.get("quantization_max") != 255
     ):
         raise ValueError("mountain atlas lacks the audited Ardacraft relief field")
+    drainage_descriptor = projection.get("source_drainage")
+    if (
+        not isinstance(drainage_descriptor, dict)
+        or drainage_descriptor.get("file") != "ardacraft_drainage.json"
+        or drainage_descriptor.get("source_sha256")
+        != EXPECTED_ARDACRAFT_DRAINAGE_SHA256
+        or drainage_descriptor.get("resolution") != [2500, 2003]
+        or drainage_descriptor.get("alpha_threshold") != 160
+        or drainage_descriptor.get("geodesic_reach") != 24
+        or drainage_descriptor.get("opening_radius") != 1
+        or drainage_descriptor.get("terminal_prune_steps") != 8
+        or drainage_descriptor.get("affluent_near_distance") != 4
+        or drainage_descriptor.get("affluent_far_distance") != 20
+        or drainage_descriptor.get("affluent_min_path") != 16
+        or not (50 <= drainage_descriptor.get("affluent_paths", 0) <= 75)
+    ):
+        raise ValueError("river atlas lacks the audited Ardacraft drainage reduction")
     biome_descriptor = projection.get("source_biomes")
     if (
         not isinstance(biome_descriptor, dict)
@@ -1405,6 +1678,15 @@ def river_mask(projection: dict, size: tuple[int, int]) -> Image.Image:
             width=width,
             joint="curve",
         )
+    # Reconstruct the source-pixel network as connected curved graph edges.
+    # Painting the raw binary raster here made its stair steps become physical
+    # right-angled trenches after the terrain cache enlarged the heightfield.
+    draw_source_drainage_paths(
+        image,
+        projection,
+        fill=SOURCE_DRAINAGE_INCISION_STRENGTH,
+        width=max(1, round(size[1] / 2048.0)),
+    )
     return image
 
 

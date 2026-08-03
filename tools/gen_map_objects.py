@@ -214,7 +214,8 @@ def placement_field(
     # valid tree instances from obscuring their terrain material at close zoom.
     pre_river_suitability = suitability.copy()
     major_pixels = rivers >= 192
-    minor_pixels = (rivers > 0) & (rivers < 192)
+    minor_pixels = (rivers >= 96) & (rivers < 192)
+    feeder_pixels = (rivers > 0) & (rivers < 96)
     major_corridor = np.asarray(
         Image.fromarray(major_pixels.astype(np.uint8) * 255, "L").filter(
             ImageFilter.MaxFilter(15)
@@ -227,7 +228,13 @@ def placement_field(
         ),
         dtype=np.uint8,
     ) > 0
-    river_corridor = major_corridor | minor_corridor
+    feeder_corridor = np.asarray(
+        Image.fromarray(feeder_pixels.astype(np.uint8) * 255, "L").filter(
+            ImageFilter.MaxFilter(3)
+        ),
+        dtype=np.uint8,
+    ) > 0
+    river_corridor = major_corridor | minor_corridor | feeder_corridor
     suitability[river_corridor] = 0.0
     # A seven-pixel blanket clearance consumed a disproportionate share of
     # narrow canonical forests. Preserve a smaller three-pixel bank corridor
@@ -249,7 +256,9 @@ def placement_field(
         ),
         dtype=np.uint8,
     ) > 0
-    dense_restore = dense_named & ~(narrow_major | narrow_minor)
+    dense_restore = dense_named & ~(
+        narrow_major | narrow_minor | feeder_pixels
+    )
     suitability[dense_restore] = pre_river_suitability[dense_restore]
     ithilien_restore = named_forest_mask("ithilien") & (rivers == 0)
     suitability[ithilien_restore] = pre_river_suitability[ithilien_restore]
@@ -264,7 +273,7 @@ def placement_field(
     # The previous generic 5.5% glade threshold left Mirkwood looking like a
     # loose park despite a high transform census.
     dense_interior = dense_named & core & (glade_values >= 4)
-    dense_interior &= ~(narrow_major | narrow_minor)
+    dense_interior &= ~(narrow_major | narrow_minor | feeder_pixels)
     suitability[dense_interior] = np.maximum(suitability[dense_interior], 0.88)
     ithilien_interior = ithilien_restore & core & (glade_values >= 14)
     suitability[ithilien_interior] = np.maximum(
