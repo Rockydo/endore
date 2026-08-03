@@ -1979,7 +1979,7 @@
   ruins. Full validation, live political review, and paired smoke are pending on
   fingerprint `c6cb12feabdde45c0a08c388f72ab4bdcf711fb04fddd3d8c682d21e78829cbd`.
 
-## 2026-08-03 - v105 genuine indexed river redesign (runtime gate pending)
+## 2026-08-03 - v105 genuine indexed river redesign
 
 - Direct owner close-zoom review rejects v103's hydrology presentation: much of its
   apparent width was blue channel-6 terrain beside a thin real spline. v103 remains a
@@ -2023,3 +2023,32 @@
   occurred beforehand from failed Escape-key evidence cleanup and are classified as
   harness noise. The v105 river mechanism is technically green; M2 remains red pending
   explicit owner acceptance of the overall map.
+
+## 2026-08-03 - v106 source-exact tributary expansion
+
+- Published the validated v104/v105 map batch to `origin/main` as commit `a9e90c2`.
+- Audited all 62 remaining dry Arda Maps controls by endpoint-to-trunk distance at native
+  scale. A first candidate promoted seventeen unlabelled branches/feeders with unambiguous
+  receiving trunks and rejected one upper-Anduin candidate after the raster collision
+  guard found two unrelated contacts. Deltas and braids remain deferred for correct
+  yellow-marker encoding.
+- The first candidate passed full validation in 535.6 seconds, its 458.7-second M2 world
+  gate, paired smoke in 202.1 seconds, fresh Observer entry, and 45 seconds of maximum-
+  speed playback with the normal 1,486-byte final log. Close comparison nevertheless
+  rejected source controls 35/37/38/39: four short near-parallel Eriador strokes read as
+  a diagrammatic comb at game scale even though their topology was valid.
+- The pruned candidate contains 12 source-to-water systems, 38 red junctions, and 50
+  genuine engine courses. Its 56,841 non-background source pixels produce an exact
+  909,456-pixel 4x material footprint with no painted width or dry-control contribution.
+- Rebuilt the complete material cache while reusing the verified height payload: 174,763
+  tiles, 44,857 unique material tiles, 23.5 MB material payload, 193.3 MB complete cache.
+  The 6,004-location model remains `2276dfd0...`; focused checks pass on game-visible
+  fingerprint `67b987a30f38e4613f867d4b931e283a5618b1a9546c42c1af72228dc2270ed4`.
+- The final pruned candidate passes full validation in 517.8 seconds, including the
+  415.9-second deterministic M2 world gate. Paired smoke passes in 234.5 seconds with
+  zero new or mod-unique lines, and the exact-fingerprint smoke assertion passes.
+- A fresh no-debug Observer on the final fingerprint reproduces the bound Greyflood
+  camera without the rejected four-stroke comb. The legitimate trunk/confluence remains,
+  no painted blue shoulder appears, and 45 seconds of maximum-speed playback completes
+  with zero recovery and the normal 1,486-byte final log. The 40-second evidence frame
+  shows TA 3018.1.13 at 16:00. M2 remains red pending owner acceptance of the overall map.

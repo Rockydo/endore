@@ -135309,8 +135309,8 @@
       "label": null,
       "width": 0.0014,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_branch",
       "incision_strength": 124,
       "material_scale": 0.74,
@@ -135361,7 +135361,8 @@
           0.152388
         ]
       ],
-      "source": "Arda Maps line_river 4 part 0"
+      "source": "Arda Maps line_river 4 part 0",
+      "joins": "upper_anduin"
     },
     {
       "key": "source_unnamed_05_00",
@@ -136068,8 +136069,8 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -136112,7 +136113,8 @@
           0.620965
         ]
       ],
-      "source": "Arda Maps line_river 12 part 0"
+      "source": "Arda Maps line_river 12 part 0",
+      "joins": "serni"
     },
     {
       "key": "source_erui_13_00",
@@ -136456,8 +136458,8 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -136496,7 +136498,8 @@
           0.266434
         ]
       ],
-      "source": "Arda Maps line_river 24 part 0"
+      "source": "Arda Maps line_river 24 part 0",
+      "joins": "gladden"
     },
     {
       "key": "source_unnamed_27_00",
@@ -136767,8 +136770,8 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -136799,7 +136802,8 @@
           0.228514
         ]
       ],
-      "source": "Arda Maps line_river 31 part 0"
+      "source": "Arda Maps line_river 31 part 0",
+      "joins": "baranduin"
     },
     {
       "key": "source_unnamed_32_00",
@@ -136925,8 +136929,8 @@
       "label": null,
       "width": 0.0014,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_branch",
       "incision_strength": 124,
       "material_scale": 0.74,
@@ -136981,7 +136985,8 @@
           0.152962
         ]
       ],
-      "source": "Arda Maps line_river 33 part 0"
+      "source": "Arda Maps line_river 33 part 0",
+      "joins": "source_lhun_84_02"
     },
     {
       "key": "source_unnamed_35_00",
@@ -137656,8 +137661,8 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -137704,15 +137709,16 @@
           0.622224
         ]
       ],
-      "source": "Arda Maps line_river 53 part 0"
+      "source": "Arda Maps line_river 53 part 0",
+      "joins": "ringlo"
     },
     {
       "key": "source_unnamed_55_00",
       "label": null,
       "width": 0.0014,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_branch",
       "incision_strength": 124,
       "material_scale": 0.74,
@@ -137747,15 +137753,16 @@
           0.631422
         ]
       ],
-      "source": "Arda Maps line_river 55 part 0"
+      "source": "Arda Maps line_river 55 part 0",
+      "joins": "gilrain"
     },
     {
       "key": "source_unnamed_56_00",
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -137774,7 +137781,8 @@
           0.696225
         ]
       ],
-      "source": "Arda Maps line_river 56 part 0"
+      "source": "Arda Maps line_river 56 part 0",
+      "joins": "serni"
     },
     {
       "key": "source_shirebourn_59_00",
@@ -138029,8 +138037,8 @@
       "label": null,
       "width": 0.0014,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_branch",
       "incision_strength": 124,
       "material_scale": 0.74,
@@ -138085,15 +138093,16 @@
           0.19406
         ]
       ],
-      "source": "Arda Maps line_river 62 part 0"
+      "source": "Arda Maps line_river 62 part 0",
+      "joins": "celduin"
     },
     {
       "key": "source_unnamed_65_00",
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -138120,15 +138129,16 @@
           0.539231
         ]
       ],
-      "source": "Arda Maps line_river 65 part 0"
+      "source": "Arda Maps line_river 65 part 0",
+      "joins": "snowbourn"
     },
     {
       "key": "source_unnamed_67_00",
       "label": null,
       "width": 0.0014,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_branch",
       "incision_strength": 124,
       "material_scale": 0.74,
@@ -138155,7 +138165,8 @@
           0.563106
         ]
       ],
-      "source": "Arda Maps line_river 67 part 0"
+      "source": "Arda Maps line_river 67 part 0",
+      "joins": "anduin"
     },
     {
       "key": "source_withywindle_68_00",
@@ -138594,8 +138605,8 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -138634,7 +138645,8 @@
           0.148272
         ]
       ],
-      "source": "Arda Maps line_river 73 part 0"
+      "source": "Arda Maps line_river 73 part 0",
+      "joins": "forest_river"
     },
     {
       "key": "source_mouthsofentwash_74_00",
@@ -139234,8 +139246,8 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -139258,7 +139270,8 @@
           0.104352
         ]
       ],
-      "source": "Arda Maps line_river 78 part 0"
+      "source": "Arda Maps line_river 78 part 0",
+      "joins": "greylin"
     },
     {
       "key": "source_sirannon_82_00",

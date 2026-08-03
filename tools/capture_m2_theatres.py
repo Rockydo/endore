@@ -104,6 +104,7 @@ DRAINAGE_VIEWS = (
     # tributaries rather than merely revisiting their established trunks.
     Theatre("33_sirith_confluence", "Minas Tirith", "Minas Tirith"),
     Theatre("34_shire_confluences", "Bucklebury", "Bucklebury"),
+    Theatre("35_forest_river_feeder", "Esgaroth", "Esgaroth"),
 )
 
 # Finder success proves only that a string exists. Bind every formerly raw
@@ -141,6 +142,7 @@ SOURCE_TARGETS = {
     "Field of Celebrant": (0.539194, 0.417196, "me_anduin_vale_region"),
     "Minas Tirith": (0.578266, 0.611138, "me_anorien_region"),
     "Bucklebury": (0.376801, 0.232535, "me_shire_breeland_region"),
+    "Esgaroth": (0.599756, 0.162677, "me_dale_region"),
     "Coldpoint Heights": (0.502345, 0.102487, "me_northern_wastes_region"),
     "Erebor": (0.599699, 0.137606, "me_dale_region"),
     "Lake Alderbank": (0.496887, 0.330666, "me_anduin_vale_region"),
@@ -172,6 +174,7 @@ RIVER_TARGETS = {
     "Field of Celebrant": "limlight",
     "Minas Tirith": "source_sirith_75_00",
     "Bucklebury": "source_stockbrook_61_00",
+    "Esgaroth": "source_unnamed_73_00",
 }
 MAX_RIVER_DISTANCE = 0.010
 

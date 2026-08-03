@@ -451,3 +451,10 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   maximum-speed Observer interval advanced from TA 3018.1.1 to 3018.1.15 without recovery
   or error-log growth. Two `pdxinput_context` lines preceding playback were caused by
   rejected automation Escape inputs and are not map diagnostics.
+- Build 24187685 also live-loads the pruned v106 graph with 12 source-rooted systems,
+  38 red junctions, and 50 genuine courses. Source-exact controls 35/37/38/39 are valid
+  topologically but render as a conspicuous four-stroke comb around Greyflood/Glanduin;
+  retaining their terrain incision while omitting them from indexed water removes the
+  artifact in a bound same-camera fresh-game comparison. The final fingerprint completes
+  45 seconds of maximum-speed Observer play with zero recovery and a normal 1,486-byte
+  log. Renderer-scale visual rejection can therefore be stricter than graph validity.

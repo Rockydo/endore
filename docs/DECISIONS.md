@@ -1820,3 +1820,19 @@ Terrain-cache generator v58 must derive channel 6 directly and exclusively from
 band is permitted. Accept the redesign only after a fresh game proves all red junctions
 parse, close views show no blue shoulders, Anduin uses the widest vanilla class, playback
 is stable, full validation passes, and paired smoke covers the exact fingerprint.
+
+## 2026-08-03 - Promote only topology-safe source tributaries
+
+Use the live-proven v105 red-junction grammar for thirteen additional unlabelled Arda
+Maps feeders whose receiving endpoint is source-exact or safely reconciled and whose
+headwater does not touch another channel. This raises the graph from 37 to 50 genuine
+engine courses and from 25 to 38 red junctions without changing any accepted river axis, name,
+nominal width, height incision, coast, location, or political boundary.
+
+Reject `source_unnamed_05_00` after native-raster generation finds two unrelated contacts.
+Reject source controls 35/37/38/39 from engine water after their first fresh live candidate
+renders as four short, near-parallel strokes around Greyflood/Glanduin. Preserve those
+controls as dry source-backed valley incision; do not cosmetically reroute them.
+Keep all braids and deltas out of this batch: they require yellow outgoing markers, not a
+red incoming endpoint. Rebuild channel 6 exclusively from the new indexed raster and
+require the normal full static, paired-smoke, and close live confluence gates.

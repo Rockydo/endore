@@ -550,3 +550,21 @@ about Middle-earth.
 - Arda Maps' Lhûn trunk ends inland after projection onto the accepted Ardacraft coast.
   Four short control points continue the same terminal bearing to the nearest Gulf of
   Lune water cell. This is an explicit projection reconciliation, not a new tributary.
+
+## v106 source-exact unnamed tributaries
+
+- Unlabelled Arda Maps linework is accepted as physical watercourse evidence, but not as
+  permission to invent a name. Thirteen such branches/feeders are promoted only where
+  one endpoint has an unambiguous receiving trunk and the opposite endpoint remains a
+  distinct headwater at native 16K raster scale.
+- `source_unnamed_05_00` is not promoted: the candidate touches two unrelated indexed
+  pixels near the upper Anduin. The collision guard is treated as evidence of ambiguous
+  source topology, not something to route around cosmetically.
+- Mouths of Entwash and Ethir Anduin linework remains dry valley control until the yellow
+  distributary grammar is implemented and live-proven. Encoding a delta branch as an
+  incoming red tributary would reverse its hydrological meaning.
+- `source_unnamed_35_00`, `source_unnamed_37_00`, `source_unnamed_38_00`, and
+  `source_unnamed_39_00` remain dry despite valid receiving endpoints. A same-camera live
+  comparison showed that their short, near-parallel source strokes read as an artificial
+  comb around Greyflood/Glanduin at EU5 scale. Source fidelity includes declining detail
+  that the renderer cannot present faithfully.

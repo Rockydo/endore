@@ -1,27 +1,20 @@
 # TODO
 
-## Immediate gate - v105 genuine rivers
+## Immediate gate - v106 source-exact tributaries
 
-- PRIORITY ZERO: owner live testing rejects v103's blue terrain shoulders. Do not expand
-  politics, terrain detail, factions, mechanics, or art until actual indexed rivers load
-  and look correct at close zoom.
-- Current static candidate replaces the isolated-channel model with vanilla source/red-
-  junction drainage trees: 12 source-to-water systems, 25 tributary junctions, and 37
-  genuine engine courses. Lower Anduin ordering and its missing upper/lower continuity
-  are corrected; Anduin reaches vanilla's widest class.
-- Terrain-cache v58 derives river material only from the exact indexed raster. No
-  terrain-only control, Ardacraft feeder, wet-bank multiplier, or nominal river width can
-  paint blue. Preserve dry source-backed valley incision for the 65 unreviewed courses.
-- STATIC GATE GREEN: full validation passes in 566.5s, including the complete 481.1s M2
-  world regeneration check, on exact game-visible fingerprint `3381fb36a8a87bd9d54...`.
-- RUNTIME GATE GREEN: paired smoke passed in 204.1s with zero new/mod-unique lines. A
-  fresh Observer captured both Anduin reaches and seven tributary/confluence theatres;
-  actual connected splines render with no separate blue terrain shoulders. Maximum-speed
-  playback advanced fourteen days in 45 seconds with zero recovery and no interval log
-  growth. Exact-fingerprint assertion passes on `3381fb36a8a87bd9d54...`.
-- NEXT: complete final validation after evidence-tool/doc changes, publish the coherent
-  v104/v105 batch, and keep M2 red for owner review. Any subsequent river change must be
-  tied to a specific source or same-camera live defect; never restore painted width.
+- v105 is validated, live-proven, and published as `a9e90c2`. Never restore painted river
+  width: channel 6 remains the exact indexed footprint only.
+- Current v106 candidate promotes thirteen additional source-exact unnamed feeders into
+  the proven red-junction graph: 12 systems, 38 junctions, 50 genuine engine courses.
+  One ambiguous upper-Anduin line and four live-rejected comb-like Eriador strokes remain
+  dry; deltas/braids remain blocked on correct yellow-distributary support.
+- Material/cache regeneration is complete: 56,841 indexed source pixels, exact 909,456-
+  pixel 4x footprint, 44,857 unique material tiles, unchanged 6,004-location model.
+- TECHNICAL GATE GREEN on exact fingerprint `67b987a3...`: full validation passes in
+  517.8 seconds (M2 world 415.9 seconds), paired smoke passes in 234.5 seconds with zero
+  new/mod-unique lines, and the exact-fingerprint assertion passes. A fresh bound
+  Greyflood close view proves the comb is gone; 45-second maximum-speed playback completes
+  with zero recovery and the normal 1,486-byte log. Commit and push this coherent batch.
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map

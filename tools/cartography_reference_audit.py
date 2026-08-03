@@ -34,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "094f31013dfa2601fadc6774df487db2fd68ee72c5ea61e02102ce7fa75c7def"
+    "88f99d09c42f61d7174a025798c064ac94514f758a79053695271c39f3da3e55"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -434,7 +434,7 @@ def render_report() -> dict:
     terrain_only_rivers = [
         item for item in projection["rivers"] if item.get("terrain_only")
     ]
-    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 62:
+    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 49:
         raise ValueError("source tributary coverage changed without cartographic review")
     named_supplementary_count = sum(
         bool(item.get("label")) for item in terrain_only_rivers
@@ -512,17 +512,30 @@ def render_report() -> dict:
     expected_engine_supplementary = {
         key: parent
         for key, parent in {
+            "source_unnamed_04_00": "upper_anduin",
             "source_enchantedriver_06_00": "forest_river",
+            "source_unnamed_12_00": "serni",
             "source_erui_13_00": "anduin",
             "source_fenmark_15_00": "entwash",
             "source_nimrodelriver_22_00": "celebrant",
+            "source_unnamed_24_00": "gladden",
+            "source_unnamed_31_00": "baranduin",
+            "source_unnamed_33_00": "source_lhun_84_02",
             "source_adorn_48_00": "isen",
             "source_ciril_51_00": "ringlo",
+            "source_unnamed_53_00": "ringlo",
+            "source_unnamed_55_00": "gilrain",
+            "source_unnamed_56_00": "serni",
             "source_shirebourn_59_00": "source_thistlebrook_60_00",
             "source_thistlebrook_60_00": "baranduin",
             "source_stockbrook_61_00": "baranduin",
+            "source_unnamed_62_00": "celduin",
+            "source_unnamed_65_00": "snowbourn",
+            "source_unnamed_67_00": "anduin",
             "source_withywindle_68_00": "baranduin",
+            "source_unnamed_73_00": "forest_river",
             "source_sirith_75_00": "anduin",
+            "source_unnamed_78_00": "greylin",
             "source_sirannon_82_00": "glanduin",
             "source_lhun_84_02": "lhun",
         }.items()
@@ -562,8 +575,8 @@ def render_report() -> dict:
     expected_hydrology_classes = {
         "named_branch": 1,
         "named_tributary": 12,
-        "unnamed_branch": 11,
-        "unnamed_feeder": 34,
+        "unnamed_branch": 6,
+        "unnamed_feeder": 26,
         "unnamed_trunk": 4,
     }
     actual_hydrology_classes = {

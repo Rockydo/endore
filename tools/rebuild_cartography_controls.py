@@ -104,17 +104,36 @@ DRAINAGE_AFFLUENT_MIN_PATH = 12
 # not decorative material paint: gen_rivers serializes each one as a red-ended
 # tributary in its parent's indexed drainage network.
 SUPPLEMENTARY_ENGINE_PARENTS: dict[str, str] = {
+    # Source-unlabelled feeders are still precise Arda Maps geometry. Promote
+    # only lines whose receiving endpoint is unambiguous and whose opposite
+    # endpoint remains a distinct headwater; braids and deltas stay dry until
+    # the yellow-distributary grammar is implemented.
+    "source_unnamed_04_00": "upper_anduin",
     "source_enchantedriver_06_00": "forest_river",
+    "source_unnamed_12_00": "serni",
     "source_erui_13_00": "anduin",
     "source_fenmark_15_00": "entwash",
     "source_nimrodelriver_22_00": "celebrant",
+    "source_unnamed_24_00": "gladden",
+    "source_unnamed_31_00": "baranduin",
+    "source_unnamed_33_00": "source_lhun_84_02",
+    # Arda Maps 35/37/38/39 are source-faithful but too short and parallel at
+    # EU5 scale; keep their valley incision dry instead of rendering a comb.
     "source_adorn_48_00": "isen",
     "source_ciril_51_00": "ringlo",
+    "source_unnamed_53_00": "ringlo",
+    "source_unnamed_55_00": "gilrain",
+    "source_unnamed_56_00": "serni",
     "source_shirebourn_59_00": "source_thistlebrook_60_00",
     "source_thistlebrook_60_00": "baranduin",
     "source_stockbrook_61_00": "baranduin",
+    "source_unnamed_62_00": "celduin",
+    "source_unnamed_65_00": "snowbourn",
+    "source_unnamed_67_00": "anduin",
     "source_withywindle_68_00": "baranduin",
+    "source_unnamed_73_00": "forest_river",
     "source_sirith_75_00": "anduin",
+    "source_unnamed_78_00": "greylin",
     "source_sirannon_82_00": "glanduin",
     "source_lhun_84_02": "lhun",
 }
