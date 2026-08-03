@@ -1685,3 +1685,26 @@
   remaining course-by-course source-edge review and change only a demonstrated local
   width, confluence, or coverage defect. M2 remains red pending the complete visual audit
   and explicit owner acceptance.
+
+## 2026-08-03 - v92 complete native-bank drainage review
+
+- Completed the remaining twelve source-bound regional/close pairs under
+  `docs/screens/20260803_v92_remaining_drainage/`: lower Anduin, Entwash, Lhûn,
+  Greyflood, Isen, Celduin, Carnen, Poros, Lefnui, Serni, Gladden, and Limlight. The
+  fresh New Game reached HUD-proven Observer on exact fingerprint
+  `0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d` and completed
+  45 seconds at maximum speed with zero recovery and the unchanged 1,486-byte error log.
+- The close physical views show the lower Anduin as the dominant massive trunk, broad
+  named rivers beneath it, and progressively narrower affluents. Greyflood has multiple
+  fine headwaters; Lhûn forms its source-backed three-way system; Celduin and Carnen keep
+  readable subordinate drainage; and the Gondor, Vale, and Rohan tributaries meet their
+  intended receiving waters.
+- Audited the only apparent discontinuity directly against projected controls. `lhun`
+  and `source_lhun_84_02` share endpoint `[0.316589, 0.114628]`, with a computed minimum
+  separation of exactly zero. The apparent gap is finder-marker/camera presentation, not
+  absent source geometry.
+- This completes live coverage of the 102-course Arda Maps drainage control on v53's
+  native-resolution banks. There is no source-backed basis for global widening or for
+  inventing additional decorative watercourses. Freeze the present hierarchy and change
+  only a specifically named course with a demonstrated source mismatch. M2 remains red
+  for explicit owner acceptance.

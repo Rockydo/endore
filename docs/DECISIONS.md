@@ -1577,3 +1577,23 @@ land location. Replace the Mordor interior close camera with the exact Orodruin 
 while Morannon remains the regional gate anchor. Every replacement stays bound to its
 committed location coordinate and strategic region. Reject v91 frames whose camera scale
 hid the feature under judgment; do not reinterpret them as a terrain regression.
+
+## 2026-08-03 - Freeze the source-complete river hierarchy after v92 review
+
+Treat the 102-course Arda Maps control as the complete current hydrology scope. The v90
+native-bank correction and v89c/v91/v92 close physical evidence show a massive lower and
+upper Anduin, substantial named trunks, narrower tributaries, and source-connected feeder
+systems. Retain the current relative widths rather than widening every watercourse in
+response to older pre-v52 impressions.
+
+Do not invent decorative rivers merely to increase visible density. Every future river
+change must identify the named or source-indexed course, bind the camera to that course,
+and demonstrate a path, width, bank, confluence, or visibility mismatch against the
+pinned Third Age source. Joined courses that cannot be safely represented in build
+24187685's twelve-channel parser remain incised physical drainage with still-water cores;
+this renderer distinction is not evidence that they are absent.
+
+The apparent gap at the upper Lhûn Y is not a geometry defect: `lhun` and
+`source_lhun_84_02` share the exact projected endpoint `[0.316589, 0.114628]`. Treat the
+finder marker and camera occlusion as presentation unless a source-bound close view proves
+otherwise.

@@ -604,3 +604,32 @@ lease deferrals behind Antiquitas, paired vanilla/ENDÓRË smoke passed in 202.7
 with zero new lines and exact-fingerprint assertion binds it to `9edf9d2d`. The complete
 gate remains red for remaining source-edge, regional river, small-water, and inconclusive
 unique-anchor review.
+
+## Current technical review state (v92)
+
+The exact current candidate is fingerprint
+`0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`. Generator v53
+keeps the complete source geometry and renders only the one-bit river core at the native
+65,536×32,768 virtual resolution, eliminating the former 8×8 stair-step banks without
+changing widths, incision, coast, relief, forests, ownership, or general materials.
+
+The v91 full atlas plus corrected v91b feature cameras provide current physical evidence
+for all nine theatres. Maximum-close views prove dense Mirkwood and Old Forest objects;
+unique Edhellond proves Belfalas land and drainage; exact Orodruin proves the compact
+cratered volcanic mountain. Misty Mountains retain strong 3D relief, and source-derived
+Forochel, Rhûn, and Harad materials remain distinct. Regional frames provide orientation;
+feature-specific close frames are binding because the renderer hides forest objects one
+detent before maximum close.
+
+The v89c, v90, v91, and v92 drainage sets now cover the complete 102-course Arda Maps
+control. Close views prove both Anduin reaches are massive and dominant, major trunks are
+substantial, affluents are narrower, and remaining source courses are present as physical
+drainage where the installed parser cannot safely promote them to independent graph
+channels. The upper-Lhûn trunk and branch share an exact projected endpoint; its apparent
+screen gap is marker/camera presentation. No global width or invented-river change is
+authorized without a specific source-visible defect.
+
+Repository-wide validation, paired smoke with zero new error-log lines, exact-fingerprint
+assertion, fresh HUD-proven Observer entry, and repeated 45-second maximum-speed playback
+are green on this tree. The compact review route is `docs/m2/M2_OWNER_REVIEW.md`. M2 stays
+blocking until explicit owner acceptance; no gameplay content may begin.

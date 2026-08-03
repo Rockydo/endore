@@ -569,8 +569,27 @@
   Edhellond land, and Mordor close evidence to exact Orodruin. Its focused fresh run
   completed in 345.4 seconds with clean playback and confirms the intended physical
   features.
-- NEXT: run the remaining source-bound drainage views on v53's native-bank cache and
-  compare each visible course, bank, and confluence against the committed 102-course
-  Arda Maps control. Preserve the current Anduin hierarchy unless a specific view proves
-  a local defect. Continue the unresolved nine-theatre source-edge/material review; M2
-  remains red pending explicit owner acceptance.
+- COMPLETED BY v92: the remaining source-bound drainage views ran on v53's native-bank
+  cache and were compared against the committed 102-course Arda Maps control. See the
+  current v92 checkpoint below.
+
+## Current v92 complete-drainage checkpoint
+
+- Preserve the complete 102-course source atlas, native-resolution banks, full-resolution
+  incision paths, twelve parser-safe engine channels, and current width hierarchy. Fresh
+  close evidence confirms the lower Anduin is massive and dominant while Entwash, Lhûn,
+  Greyflood, Isen, Celduin, Carnen, Poros, Lefnui, Serni, Gladden, and Limlight remain
+  readable at their intended subordinate scales.
+- Do not add uncited decorative channels or globally widen the system. All significant
+  remaining Arda Maps `line_river` parts are already present as physical drainage even
+  where the installed build cannot safely serialize them as independent engine rivers.
+  A future edit requires a named course, an exact source comparison, and a demonstrated
+  path, width, bank, confluence, or visibility defect.
+- Evidence under `docs/screens/20260803_v92_remaining_drainage/` is bound to exact
+  fingerprint `0ef39c3b6c40a8dcc2f224b204a542e38f6432982e2477ba41199ebafd84c69d`.
+  Fresh Observer playback ran 45 seconds at maximum speed with zero recovery and the
+  unchanged 1,486-byte error log. The apparent upper-Lhûn interruption is rejected as a
+  camera-marker artefact: its branch and trunk share an exact projected endpoint.
+- NEXT M2 GATE: use `docs/m2/M2_OWNER_REVIEW.md` for player-quality review. Record and
+  correct only concrete source-visible defects. M2 remains red pending explicit owner
+  acceptance; gameplay content remains blocked.
