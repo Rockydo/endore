@@ -38,7 +38,27 @@ Earth decal layers. The diagnostic material preview also has zero pixels in its 
 blue-river colour. `tools/gen_rivers.py --check` and `tools/gen_terrain_cache.py --check`
 both pass.
 
-Full repository validation and paired real-game smoke remain mandatory before publication.
+## Native raster parity audit
+
+The installed asset and ENDÓRË's authored asset are both indexed-palette (`P`) rasters at
+the exact retail resolution, 16384×8192. ENDÓRË copies the complete installed palette;
+the following non-background indices are therefore the same renderer vocabulary rather
+than painted colour values:
+
+| Index role | Vanilla pixels | ENDÓRË pixels |
+| --- | ---: | ---: |
+| source marker `0` | 693 | 16 |
+| incoming confluence `1` | 1,286 | 38 |
+| outgoing distributary `2` | 129 | 2 |
+| flow widths `4/5/11/15` | 741,652 | 61,376 |
+
+The different counts reflect the intentionally smaller, single-continent Arda extent;
+they do not alter the native format. ENDÓRË's 16 systems, 38 confluences, two
+distributaries, and dominant index-15 Langwell–Anduin trunk are all checked from the
+same retail marker contract. In particular, `rivers.png` contains graph instructions,
+not a blue bank-fill texture.
+
+The required full repository validation and paired real-game smoke are complete.
 M2 remains red: the false camera captures do not replace direct visual acceptance.
 
 ## Verification status

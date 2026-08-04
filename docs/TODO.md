@@ -4,8 +4,8 @@
 
 - v109 remains the source-pinned river-graph baseline. v129 supersedes v124's duplicate
   cache-bank treatment: the indexed engine river is the sole water surface and width
-  authority, with ordinary terrain beneath it. Its full validation is green; paired smoke
-  is still pending the shared lease. Never restore painted river width or a blue terrain
+  authority, with ordinary terrain beneath it. Its full validation, paired smoke, and
+  exact-fingerprint smoke assertion are green. Never restore painted river width or a blue terrain
   proxy, and do not accept the invalid northern political Finder frames as river evidence.
 - The fresh v110 Observer atlas on the exact v109 fingerprint completed all nine continental
   theatres, upper/lower Anduin, Celebrant, Entwash, Lothlórien, Gundabad, Erebor,
@@ -53,8 +53,8 @@
   river graph must be rebuilt and checked together; see
   `docs/m2/V129_INDEXED_RIVER_SURFACE_ISOLATION.md`.
 - v129 has passed full static validation, paired real-game smoke, and the exact fingerprint
-  smoke assertion. Publish this coherent native-river isolation batch; M2 remains red for
-  the wider owner-fidelity gate, not for a runtime failure.
+  smoke assertion, and is published as `914cb0f`. M2 remains red for the wider
+  owner-fidelity gate, not for a runtime failure.
 - v121 locks exact canon-clear sites within Fangorn,
   Lothlórien, Mirkwood, Mordor, Gondor, and Rohan without widening any frontier; see
   `docs/m2/V121_CANONICAL_SITE_CONTROL_AUDIT.md`.
