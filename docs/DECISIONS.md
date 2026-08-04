@@ -1,5 +1,15 @@
 # Decisions
 
+## 2026-08-04 - Bind the Fords of Isen to Rohan at the start date
+
+The Fords are a named Westfold strongpoint of Rohan in TA 3018; Saruman's 3019 attacks
+are not grounds to pre-assign them to Isengard. Replace the old negative-only Isengard
+exclusion with a positive Rohan witness. Lock Helm's Deep, Edoras, and Dunharrow in the
+same compact review because each is a named Rohirric anchor of the frontier theatre.
+These four witnesses do not infer a surveyed Rohan-Dunland border or authorize any
+ownership change beyond their exact existing locations. See
+`docs/m2/V122_ROHAN_DUNLAND_FRONTIER_AUDIT.md`.
+
 ## 2026-08-04 - Treat canon-clear named sites as exact control witnesses
 
 Lock a named site only where the ownership is explicit in the text or unambiguous from

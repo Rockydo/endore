@@ -23,10 +23,10 @@ dale,DAL,0.6017094,0.1489985,me_dale_region,1,0.0002200,yes,Dale and the upper C
 erebor,ERE,0.5997558,0.1377626,me_dale_region,1,0.0001934,yes,Lonely Mountain and its immediate source-centred approaches,accepted_forced_anchor
 dorwinion,DOR,0.6847375,0.3512457,me_rhun_region,9,0.0001593,yes,Dorwinion around the northwest Sea of Rhûn,accepted_forced_anchor
 isengard,ISE,0.4666667,0.4621397,me_rohan_region,1,0.0002430,yes,compact Nan Curunir vale north of the Fords of Isen,accepted_forced_anchor
-helms_deep,ROH,0.4754579,0.5139228,me_rohan_region,1,0.0524160,yes,"The Mark between Isen, Anduin, and White Mountains",accepted_forced_anchor
-edoras,ROH,0.4986569,0.5383488,me_rohan_region,1,0.0000408,yes,"The Mark between Isen, Anduin, and White Mountains",accepted_forced_anchor
+helms_deep,ROH,0.4754579,0.5139228,me_rohan_region,1,0.0524160,yes,Helm's Deep is the Rohirric fortress of the Westfold,accepted_required_frontier_owner
+edoras,ROH,0.4986569,0.5383488,me_rohan_region,1,0.0000408,yes,Edoras is the seat of the Kings of the Mark,accepted_required_frontier_owner
 aldberg,ROH,0.5081807,0.5476307,me_rohan_region,1,0.0212065,yes,"The Mark between Isen, Anduin, and White Mountains",accepted_forced_anchor
-dunharrow,ROH,0.4967033,0.5530044,me_rohan_region,1,0.0152070,yes,"The Mark between Isen, Anduin, and White Mountains",accepted_forced_anchor
+dunharrow,ROH,0.4967033,0.5530044,me_rohan_region,1,0.0152070,yes,Dunharrow is the Rohirric refuge beneath the White Mountains,accepted_required_frontier_owner
 minas_tirith,GON,0.5782662,0.6111383,me_anorien_region,1,0.0002519,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
 osgiliath,GON,0.5924298,0.6038105,me_ithilien_region,1,0.0294895,no,Gondor garrisons the ruined Anduin crossing before the June 3018 assault,accepted_required_frontier_owner
 minas_morgul,MOR,0.6073260,0.5955056,me_ithilien_region,1,0.0766744,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
@@ -1361,7 +1361,7 @@ me_land_1317,MOR,0.6417582,0.6624328,me_mordor_region,8,0.0890401,no,Mordor insi
 me_land_1318,UMB,0.5372405,0.8622374,me_umbar_region,9,0.0918556,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_1319,WILD,0.3225885,0.3434294,me_enedwaith_region,2,,no,deliberately unclaimed,wild_unclaimed
 me_land_1320,WILD,0.7308913,0.7063996,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_1321,ROH,0.4678877,0.4885198,me_rohan_region,1,0.0791573,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
+me_land_1321,ROH,0.4678877,0.4885198,me_rohan_region,1,0.0791573,no,the Fords of Isen are Rohan's Westfold strongpoint at TA 3018,accepted_required_frontier_owner
 me_land_1322,WILD,0.5391941,0.4171959,me_anduin_vale_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_1323,WILD,0.3648352,0.4206155,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
 me_land_1324,GON,0.5714286,0.7283830,me_lebennin_region,1,0.1178603,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope

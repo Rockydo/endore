@@ -48,6 +48,9 @@
 - v121 locks exact canon-clear sites within Fangorn,
   Lothlórien, Mirkwood, Mordor, Gondor, and Rohan without widening any frontier; see
   `docs/m2/V121_CANONICAL_SITE_CONTROL_AUDIT.md`.
+- v122 resolves the Fords of Isen from a negative-only safeguard to a source-anchored
+  Rohan control and locks the adjacent named Rohirric frontier anchors; see
+  `docs/m2/V122_ROHAN_DUNLAND_FRONTIER_AUDIT.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

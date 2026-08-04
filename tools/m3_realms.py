@@ -405,15 +405,28 @@ ROHAN_WHITE_MOUNTAIN_FRONTIER: tuple[tuple[float, float], ...] = (
 # ring-domain.  The positive owner may change with a later source-backed Rohan/Dunland
 # frontier revision, so the durable contract records only the canonically impossible
 # owner.
-FRONTIER_LANDMARK_EXCLUSIONS: dict[str, frozenset[str]] = {
-    "fords_of_isen": frozenset({"ISE"}),
-}
 # Named canonical sites provide more durable political witnesses than generated
 # location IDs. These rulings correct or lock exact source anchors whose
 # nearest-seat allocation could contradict their TA 3018 control, settled-land
 # boundary, or an explicit physical frontier. They never authorize a broad
 # cadastral claim beyond the one source-resolved location.
 FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
+    "fords_of_isen": (
+        "ROH",
+        "the Fords of Isen are Rohan's Westfold strongpoint at TA 3018",
+    ),
+    "helms_deep": (
+        "ROH",
+        "Helm's Deep is the Rohirric fortress of the Westfold",
+    ),
+    "edoras": (
+        "ROH",
+        "Edoras is the seat of the Kings of the Mark",
+    ),
+    "dunharrow": (
+        "ROH",
+        "Dunharrow is the Rohirric refuge beneath the White Mountains",
+    ),
     "wellinghall": (
         "FAN",
         "Wellinghall is Treebeard's inhabited Fangorn refuge",
@@ -2361,17 +2374,6 @@ def check() -> list[str]:
             "Rohan owns an ocean-adjacent land cell despite the White Mountains frontier: "
             f"{rohan_coast[:5]}"
         )
-    for ref, excluded_owners in FRONTIER_LANDMARK_EXCLUSIONS.items():
-        location_key = state.ref_to_location.get(ref)
-        if location_key is None:
-            failures.append(f"political frontier landmark {ref} is unresolved")
-            continue
-        actual_owner = state.ownership[location_key]
-        if actual_owner in excluded_owners:
-            failures.append(
-                f"political frontier landmark {ref} is incorrectly owned by "
-                f"{actual_owner}; excluded owners are {sorted(excluded_owners)}"
-            )
     for ref, (required_owner, rationale) in FRONTIER_LANDMARK_REQUIRED_OWNERS.items():
         location_key = state.ref_to_location.get(ref)
         if location_key is None:
