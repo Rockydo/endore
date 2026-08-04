@@ -2,6 +2,10 @@
 
 ## 2026-08-04
 
+- v112 closes the physical-evidence ambiguity around Erebor without touching the world.
+  A source-bound marker-offset maximum-close camera shows the compact steep Lonely
+  Mountain terrain north of Dale in a fresh real EU5 Observer session, followed by
+  clean 45-second playback and release of the shared EU5 lease.
 - Published v109 completes the currently topology-safe Ethir delta: 16 engine-river
   systems, 38 red confluences, two vanilla-style yellow outgoing markers, and 56 genuine
   source-to-water courses. Terrain channel 6 is now derived exclusively from indexed river

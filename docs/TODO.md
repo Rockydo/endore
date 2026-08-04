@@ -1,6 +1,6 @@
 # TODO
 
-## Immediate gate - v110 full physical atlas and political baseline
+## Immediate gate - v112 physical atlas proof and political baseline
 
 - v109 is validated, live-proven, published as `222e295`, and remains the river baseline.
   Never restore painted river width: terrain channel 6 remains the exact nearest-neighbour
@@ -11,10 +11,11 @@
   source-shaped coasts, dense canonical canopy, physical relief, engine rivers, and zero
   vanilla-Earth terrain leakage in one comparable runtime session. See
   `docs/m2/V110_FULL_PHYSICAL_ATLAS.md`.
-- Do not infer a missing Lonely Mountain from the camera frame: the exact direct Ardacraft
-  coordinate holds a 61,926-unit isolated peak, but the observer's Erebor settlement and
-  army overlays obscure that one-pixel summit in the current capture composition. Preserve
-  the source-pinned relief; improve evidence framing rather than widening the mountain.
+- v112 resolves the Lonely Mountain camera ambiguity without changing geography. A fresh
+  maximum-close, marker-offset Dale frame visibly shows the compact steep physical Erebor
+  cone north of Dale, while the exact Ardacraft coordinate remains a 61,926-unit isolated
+  peak. See `docs/m2/V112_EREBOR_RELIEF_EVIDENCE.md`; do not widen the mountain merely to
+  dominate a political camera.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

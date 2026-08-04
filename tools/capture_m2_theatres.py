@@ -78,6 +78,11 @@ FOCUSED_PHYSICAL_VIEWS = (
     # the intended northern junction without renaming game content.
     Theatre("28_gundabad", "Coldpoint Heights", "Coldpoint Heights", 4, 1),
     Theatre("29_erebor", "Erebor", "Erebor", 4, 1),
+    # The direct Erebor focus is intentionally retained above as the strict
+    # landmark contract. Dale frames the nearby isolated peak while placing
+    # its settlement marker elsewhere in the camera; an exact-name match is
+    # used deliberately because generated Dale-prefixed places also exist.
+    Theatre("39_erebor_relief", "Dale", "Dale", 4, 0),
     Theatre("30_mirrormere", "Lake Alderbank", "Lake Alderbank", 2, 0),
     Theatre("31_nindalf", "Nen Emyn adarath", "Nen Emyn adarath", 2, 0),
     Theatre("32_mount_gram", "Mount Gram", "Mount Gram", 4, 1),
@@ -154,6 +159,7 @@ SOURCE_TARGETS = {
     "Blackgash Cleft": (0.707448, 0.575476, "me_mordor_region"),
     "Coldpoint Heights": (0.502345, 0.102487, "me_northern_wastes_region"),
     "Erebor": (0.599699, 0.137606, "me_dale_region"),
+    "Dale": (0.601803, 0.148883, "me_dale_region"),
     "Lake Alderbank": (0.496887, 0.330666, "me_anduin_vale_region"),
     "Nen Emyn adarath": (0.580500, 0.511200, "me_brown_lands_region"),
     "Mount Gram": (0.449084, 0.141671, "me_north_arnor_region"),
@@ -255,14 +261,21 @@ def check_manifest() -> list[str]:
                 for row, name in localized_rows
                 if query.casefold() in name.casefold()
             ]
-            if len(matches) != 1:
+            # Native Finder selects an exact result before prefix matches.
+            # Treat that precise result as unambiguous for a canonical name
+            # such as Dale, but keep the stricter one-result rule for all
+            # prefix-only queries.
+            exact_matches = [
+                (row, name) for row, name in matches if name.casefold() == query.casefold()
+            ]
+            if len(matches) != 1 and len(exact_matches) != 1:
                 failures.append(
                     f"{theatre.slug} {role} query {query!r} resolves to "
                     f"{len(matches)} localized locations: "
                     f"{[name for _, name in matches[:5]]}"
                 )
             elif query in SOURCE_TARGETS:
-                row, name = matches[0]
+                row, name = exact_matches[0] if exact_matches else matches[0]
                 expected_x, expected_y, expected_region = SOURCE_TARGETS[query]
                 actual_x = float(row["normalized_x"])
                 actual_y = float(row["normalized_y"])

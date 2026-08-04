@@ -82,16 +82,15 @@ tuning.
   renderer evidence.
 
 - River conformance binds 102 non-duplicated Arda Maps controls: 26 reviewed
-  trunks/tributaries and 76 parser-safe physical-drainage controls. Twelve
-  complete source-to-water channels are independently serializable in EU5's
-  installed indexed raster; the remaining tributaries still own exact valley
-  incision and wet-bank material without invented unsupported junctions.
-  Lefnui and Serni are independent indexed channels. Sirith, the branched Lhûn
-  system, and the complete Ethir Anduin distributaries remain visible physical
-  drainage where build 24187685 cannot serialize their true receiving graph.
-  Validation rejects duplicated Harnen, Morgulduin, or lower-Anduin source
-  parts and binds the hierarchy, provenance, widths, incision, material
-  response, and basin-level coverage independently.
+  trunks/tributaries and 76 parser-safe physical-drainage controls. Sixteen
+  source-to-water systems now serialize as 56 genuine EU5 indexed courses with
+  38 incoming red confluences and two vanilla-style yellow outgoing
+  distributaries; their terrain-water footprint is derived exclusively from
+  the indexed raster rather than painted blue bands. The remaining tributaries
+  retain exact valley incision and wet-bank material without invented
+  parser-unsafe junctions. Validation rejects duplicated Harnen, Morgulduin,
+  or lower-Anduin source parts and binds hierarchy, provenance, widths,
+  incision, material response, and basin-level coverage independently.
 - Native terrain also carries 104 direct affluent paths reconstructed from the
   hash-pinned Ardacraft drainage layer. The reduction retains only paths beginning within
   four source pixels of one of the 102 reviewed courses, reaching at least sixteen pixels

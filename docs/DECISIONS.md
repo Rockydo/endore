@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-08-04 — Erebor evidence framing
+
+Preserve Erebor as the compact isolated source-pinned summit at its exact Ardacraft
+coordinate rather than enlarging it to compensate for a settlement/army overlay in a
+political camera. A fresh maximum-close physical frame focused on exact canonical Dale
+shows the actual cone north of its marker. The capture validator may accept one exact
+canonical Finder result amid prefix matches, but remains strict for prefix-only queries.
+This is an evidence-tooling correction, not an authorization to change relief controls.
+
 ## 2026-07-29 — M5 census slice and road-source contract
 
 Treat the authored nine-route ledger and its 302 adjacent land edges as source data, not
