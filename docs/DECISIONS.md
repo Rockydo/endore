@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-08-04 — Promote exact source points as names, not new states
+
+When a named point in the hash-pinned Arda Maps Third Age topology resolves to a unique,
+passable unreserved ENDÓRË land location, it may replace that generated location's
+generic regional name. This is a gazetteer/readability improvement only: it cannot move
+the mesh, alter a physical control, create a political claim, or imply a population.
+
+Assign `village` only where the source identifies a named settlement, preserve an
+attested abandoned site as `ruin`, and use `landmark` for geographic, military, mountain,
+or ceremonial sites. Therefore Framsburg remains empty in the starting census; the seven
+Gondor beacons, peaks, passes, and sites such as Cerin Amroth receive names without
+invented settlement weight or sovereignty.
+
 ## 2026-08-04 — Preserve source boundaries; do not invent political maps
 
 The direct 2026-08-04 upstream re-audit confirms that the local Arda Maps Third Age

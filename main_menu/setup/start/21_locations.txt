@@ -11,6 +11,7 @@ locations = {
 	# ruin: me_land_0923
 	# ruin: me_land_1022
 	# ruin: me_land_1259
+	# ruin: me_land_1264
 	# ruin: me_land_1351
 	# ruin: me_land_1525
 	# ruin: me_land_1856

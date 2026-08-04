@@ -56,7 +56,7 @@ tuning.
   feature counts. Any coordinate change to a coast, island, lake, mountain,
   summit, pass, woodland, river, or density envelope therefore requires an
   explicit cartographic review and audit-hash update.
-- That gate also requires provenance for all 62 secondary landmarks and exact
+- That gate also requires provenance for all 89 secondary landmarks and exact
   coordinate synchronization between every one of the 38 realm seats and its
   settlement/landmark capital control.
   It verifies the projection constants, complete anchor coverage, tolerances,

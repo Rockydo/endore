@@ -2,6 +2,17 @@
 
 ## 2026-08-04
 
+- v114 adds 27 source-pinned named map locations without changing a coast, terrain
+  control, river, claim, capital, or mesh cell. The expansion includes four Shire
+  settlements, the full Gondor beacon chain, the major Misty Mountains names, and
+  source-attested Rohan, Gondor, Mordor, and Wilderland sites. The M3 allocator and
+  downstream M5 census both regenerated cleanly: all 6,004 locations remain covered,
+  38 realms retain 3,030 assigned / 2,974 wild locations, and Framsburg is correctly
+  retained as an empty canonical ruin. Full validation and the paired real-game
+  vanilla/ENDÓRË smoke are green with zero new mod error-log lines.
+
+## 2026-08-04
+
 - v113 independently re-fetched and hash-compared the complete cached Arda Maps Third Age
   topology and the live ArdaCraft Heightmap, Drainage, Biome, and path controls. All five
   sources matched exactly; the physical source baseline is now explicitly re-confirmed

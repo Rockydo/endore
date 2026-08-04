@@ -1,4 +1,4 @@
-ref,name,x,y,rank,source,cartography_reference
+ref,name,x,y,rank,source,cartography_reference,reserve_generated_slot
 the_angle,The Angle,0.475000,0.270000,refuge,† ENDORE plan 8.1; seat of the Rangers inferred from their Angle settlement,Reconciled: Angle between Mitheithel and Bruinen
 blue_halls,Halls of Ered Luin,0.291610,0.177552,hold,† ENDORE plan 8.1; composite of surviving Blue Mountain dwarf-halls,ArdaCraft: Thorin's Hall proxy for surviving Ered Luin halls
 iron_hills,Iron Hills,0.674452,0.157541,hold,"The Hobbit, Ch. 17",Arda Maps: Iron Mountains / Iron Hills label
@@ -61,3 +61,30 @@ brandywine_bridge,Brandywine Bridge,0.380827,0.228088,landmark,"LOTR, Book I, Ch
 mountains_of_mirkwood,Mountains of Mirkwood,0.579943,0.196641,landmark,LOTR map,Arda Maps: Mountains of Mirkwood
 withered_heath,Withered Heath,0.584872,0.094944,ruin,"The Hobbit, Ch. 1; LOTR map",Arda Maps: Withered Heath
 grey_mountain_holds,Grey Mountain Ruins,0.519322,0.095153,ruin,"LOTR, Appendix A",Arda Maps: Grey Mountains
+bywater,Bywater,0.367543,0.231587,village,"LOTR, Book I, Ch. 1",Arda Maps point_city: Bywater,yes
+frogmorton,Frogmorton,0.373632,0.230540,village,"LOTR, Book I, Ch. 3",Arda Maps point_city: Frogmorton,yes
+stock,Stock,0.381119,0.232073,village,"LOTR, Book I, Ch. 3",Arda Maps point_city: Stock,yes
+haysend,Haysend,0.383199,0.240163,village,"LOTR, Book I, Ch. 5",Arda Maps point_city: Haysend,yes
+framsburg,Framsburg,0.518620,0.122100,ruin,"LOTR, Appendix A",Arda Maps point_city: Framsburg,yes
+eagles_eyrie,Eagles' Eyrie,0.521024,0.194180,landmark,"The Hobbit, Ch. 7",Arda Maps point_place: EaglesEyrie,yes
+beorns_hall,Beorn's Hall,0.535763,0.198478,landmark,"The Hobbit, Ch. 7",Arda Maps point_place: BeornsHall,yes
+redhorn_gate,Redhorn Gate,0.491913,0.321854,landmark,"LOTR, Book II, Ch. 3",Arda Maps point_place: RedhornGate,yes
+cerin_amroth,Cerin Amroth,0.511442,0.354444,landmark,"LOTR, Book II, Ch. 6",Arda Maps point_place: CerinAmroth,yes
+glittering_caves,Glittering Caves,0.463197,0.520115,landmark,"LOTR, Book III, Ch. 8",Arda Maps point_place: GlitteringCaves,yes
+tarlangs_neck,Tarlang's Neck,0.506842,0.583359,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_place: TarlangsNeck,yes
+amon_din,Amon Dîn,0.584673,0.596170,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_place: AmonDin,yes
+eilenach,Eilenach,0.578076,0.596307,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_place: Eilenach,yes
+nardol,Nardol,0.569346,0.594953,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_place: Nardol,yes
+erelas,Erelas,0.561452,0.590360,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_place: Erelas,yes
+min_rimmon,Min-Rimmon,0.552826,0.587162,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_place: MinRimmon,yes
+calenhad,Calenhad,0.544686,0.582881,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_place: Calenhad,yes
+amon_anwar,Amon Anwar,0.535152,0.576326,landmark,"LOTR, Appendix A",Arda Maps point_place: AmonAnwar,yes
+cirith_gorgor,Cirith Gorgor,0.602667,0.533643,landmark,"LOTR, Book IV, Ch. 3",Arda Maps point_place: CirithGorgor,yes
+morgai,Morgai,0.606534,0.568553,landmark,"LOTR, Book IV, Ch. 8",Arda Maps point_place: Morgai,yes
+caradhras,Caradhras,0.494549,0.312438,landmark,"LOTR, Book II, Ch. 3",Arda Maps point_mount: Caradhras,yes
+celebdil,Celebdil,0.490224,0.326800,landmark,"LOTR, Book II, Ch. 3",Arda Maps point_mount: Celebdil,yes
+fanuidhol,Fanuidhol,0.501807,0.315817,landmark,"LOTR, Book II, Ch. 3",Arda Maps point_mount: Fanuidhol,yes
+mindolluin,Mindolluin,0.585423,0.607818,landmark,"LOTR, Book V, Ch. 1",Arda Maps point_mount: Mindolluin,yes
+irensaga,Irensaga,0.502831,0.535253,landmark,"LOTR, Book V, Ch. 3",Arda Maps point_mount: Irensaga,yes
+dwimorberg,Dwimorberg,0.500845,0.547265,landmark,"LOTR, Book V, Ch. 2",Arda Maps point_mount: Dwimorberg,yes
+starkhorn,Starkhorn,0.497545,0.541502,landmark,"LOTR, Book V, Ch. 3",Arda Maps point_mount: Starkhorn,yes

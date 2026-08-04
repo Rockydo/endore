@@ -5,7 +5,7 @@
   "realm_count": 38,
   "owned_land": 3030,
   "wild_land": 2170,
-  "ruins": 21,
+  "ruins": 22,
   "minas_morgul_decision": "Minas Morgul is a Mordor fortress-location, not a separate country.",
   "physical_alignment": {
     "engine_water_level_sample": 5466,
@@ -587,5 +587,5 @@
     "DUN": 36,
     "ANG": 18
   },
-  "source_sha256": "1ab67b9c6e378de9e0c8ab4cb4367837812d220b7968d432ef4b644bac24128a"
+  "source_sha256": "72e504c0a2c9d3539f9ddae08a282f669c0a0a05dce59b5535d92090eed13d22"
 }

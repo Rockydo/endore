@@ -20,6 +20,10 @@
   Arda Maps Third Age topology plus the four ArdaCraft controls used by the map. Physical
   controls are frozen to those precise revisions. See
   `docs/m2/V113_SOURCE_PROVENANCE_REAUDIT.md`.
+- v114 expands the high-recognition gazetteer with 27 exact Arda Maps points, including
+  the Gondor beacon chain, key Rohan/Misty Mountains peaks, and named Shire/Wilderland
+  sites. It is a location-name readability batch only; territory and physical controls
+  remain frozen. See `docs/m2/V114_SOURCE_NAMED_LOCATION_EXPANSION.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

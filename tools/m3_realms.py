@@ -675,6 +675,7 @@ class Landmark:
     y: float
     rank: str
     source: str
+    reserve_generated_slot: bool
 
 
 @dataclass
@@ -824,6 +825,10 @@ def load_landmarks() -> tuple[Landmark, ...]:
             y=float(row["y"]),
             rank=row["rank"],
             source=row["source"],
+            reserve_generated_slot=(
+                (row.get("reserve_generated_slot") or "").strip().casefold()
+                in {"1", "true", "yes"}
+            ),
         )
         for row in rows
     )
@@ -1204,6 +1209,31 @@ def generated_compound(style: str, serial: int) -> str:
     return result
 
 
+def next_generated_name(
+    style: str,
+    kind: str,
+    counters: Counter[tuple[str, str]],
+    used: set[str],
+) -> str:
+    """Return and consume the next safe generic name in one style/kind stream."""
+    counter_key = (style, kind)
+    serial = counters[counter_key]
+    while True:
+        compound = generated_compound(style, serial)
+        if kind == "mountain":
+            name = f"Ered {compound}" if style == "sindarin" else f"{compound} Heights"
+        elif kind == "lake":
+            name = f"Nen {compound}" if style == "sindarin" else f"Lake {compound}"
+        elif kind == "sea":
+            name = f"Bay of {compound}" if serial % 3 == 0 else f"{compound} Reach"
+        else:
+            name = compound
+        serial += 1
+        if name not in used:
+            counters[counter_key] = serial
+            return name
+
+
 def all_location_names(
     model: WorldModel,
     ownership: dict[str, str],
@@ -1224,6 +1254,17 @@ def all_location_names(
             source = anchor.source
         elif location.key in landmark_by_location:
             landmark = landmark_by_location[location.key]
+            if landmark.reserve_generated_slot:
+                owner = ownership[location.key]
+                style = (
+                    by_tag[owner].style
+                    if owner != WILD
+                    else REGION_STYLE[location.region]
+                )
+                # A post-baseline canonical replacement occupies the generic slot it
+                # displaced. This keeps every unrelated generated name and every
+                # source-bound camera query stable when the gazetteer expands.
+                next_generated_name(style, location.kind, counters, used)
             name = landmark.name
             rank = landmark.rank
             source = landmark.source
@@ -1234,34 +1275,7 @@ def all_location_names(
                 if owner != WILD
                 else REGION_STYLE[location.region]
             )
-            counter_key = (style, location.kind)
-            serial = counters[counter_key]
-            while True:
-                compound = generated_compound(style, serial)
-                if location.kind == "mountain":
-                    name = (
-                        f"Ered {compound}"
-                        if style == "sindarin"
-                        else f"{compound} Heights"
-                    )
-                elif location.kind == "lake":
-                    name = (
-                        f"Nen {compound}"
-                        if style == "sindarin"
-                        else f"Lake {compound}"
-                    )
-                elif location.kind == "sea":
-                    name = (
-                        f"Bay of {compound}"
-                        if serial % 3 == 0
-                        else f"{compound} Reach"
-                    )
-                else:
-                    name = compound
-                serial += 1
-                if name not in used:
-                    break
-            counters[counter_key] = serial
+            name = next_generated_name(style, location.kind, counters, used)
             rank = "wilderness" if owner == WILD else "place"
             source = "† M3 regional lexicon"
         if name in used:
