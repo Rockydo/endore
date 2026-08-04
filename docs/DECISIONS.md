@@ -1905,3 +1905,15 @@ Do not enlarge Erebor from its close screenshot. The source coordinate is an exa
 61,926-unit isolated summit; its settlement/army overlay masks the pixel-level crown in
 that particular composition. Any future evidence camera must frame the source marker from
 an offset rather than altering a canon-pinned physical landmark to compensate for HUD.
+
+## 2026-08-04 - Bind Rohan to the White Mountains' northern side
+
+The oblique political camera makes Rohan's southern edge look close to the sea. Full
+location-adjacency inspection disproves a coast claim: Rohan has 192 land locations and
+zero direct sea adjacencies. Its southernmost cells remain north of the exact source-pinned
+White Mountains centreline, with Gondor/wild impassable cells separating the realms.
+
+Add a regression contract using the same seven source coordinates as the physical ridge:
+no Rohan land location may cross south of that interpolated axis, and none may acquire a
+direct sea adjacency. This preserves the current source-faithful ownership without making
+an unnecessary cosmetic reallocation.

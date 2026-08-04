@@ -384,6 +384,21 @@ POLITICAL_SILHOUETTE_CONTRACTS: dict[
     ),
 }
 
+# The source-pinned White Mountains centreline is a political as well as a physical
+# frontier: the Mark lies on its northern side, while the south-facing approaches belong
+# to Gondor or remain wild.  The political map hides impassable mountain cells at some
+# camera angles, so retain this direct coordinate contract rather than trusting a
+# misleading apparent Rohan coastline in a rendered political frame.
+ROHAN_WHITE_MOUNTAIN_FRONTIER: tuple[tuple[float, float], ...] = (
+    (0.426, 0.600),
+    (0.451, 0.582),
+    (0.475, 0.568),
+    (0.500, 0.566),
+    (0.526, 0.575),
+    (0.552, 0.592),
+    (0.578, 0.610),
+)
+
 # The Fords lie south of Orthanc at the Gap and cannot be swallowed by Saruman's compact
 # ring-domain.  The positive owner may change with a later source-backed Rohan/Dunland
 # frontier revision, so the durable contract records only the canonically impossible
@@ -2075,6 +2090,42 @@ def check() -> list[str]:
                 f"{tag} silhouette escapes reviewed physical bbox {bbox}: "
                 f"{outside[:5]} ({rationale})"
             )
+    rohan_owned = [
+        location
+        for location in state.model.locations
+        if location.kind == "land" and state.ownership[location.key] == "ROH"
+    ]
+    rohan_south_of_white_mountains: list[str] = []
+    for location in rohan_owned:
+        x, y = location.normalized
+        for (left_x, left_y), (right_x, right_y) in zip(
+            ROHAN_WHITE_MOUNTAIN_FRONTIER,
+            ROHAN_WHITE_MOUNTAIN_FRONTIER[1:],
+        ):
+            if left_x <= x <= right_x:
+                frontier_y = left_y + (right_y - left_y) * (
+                    (x - left_x) / (right_x - left_x)
+                )
+                if y >= frontier_y:
+                    rohan_south_of_white_mountains.append(location.key)
+                break
+    if rohan_south_of_white_mountains:
+        failures.append(
+            "Rohan crosses the source-pinned White Mountains into Gondor's side: "
+            f"{rohan_south_of_white_mountains[:5]}"
+        )
+    adjacency = location_adjacency(state.model)
+    kind_by_key = {location.key: location.kind for location in state.model.locations}
+    rohan_coast = [
+        location.key
+        for location in rohan_owned
+        if any(kind_by_key[neighbour] == "sea" for neighbour in adjacency[location.key])
+    ]
+    if rohan_coast:
+        failures.append(
+            "Rohan owns an ocean-adjacent land cell despite the White Mountains frontier: "
+            f"{rohan_coast[:5]}"
+        )
     for ref, excluded_owners in FRONTIER_LANDMARK_EXCLUSIONS.items():
         location_key = state.ref_to_location.get(ref)
         if location_key is None:

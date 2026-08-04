@@ -20,6 +20,9 @@
   Any ownership correction must preserve the accepted coast, relief, forests, and river
   controls and be documented as a source-specific judgement. M2 remains red pending the
   full physical/political fidelity gate; do not resume gameplay content.
+- The Rohan/White Mountains ambiguity is now frozen by a direct source-axis and
+  no-ocean-adjacency regression contract. Do not move Rohan south merely because an
+  oblique political frame hides the impassable separator.
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map
