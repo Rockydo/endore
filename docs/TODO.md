@@ -24,6 +24,10 @@
   the Gondor beacon chain, key Rohan/Misty Mountains peaks, and named Shire/Wilderland
   sites. It is a location-name readability batch only; territory and physical controls
   remain frozen. See `docs/m2/V114_SOURCE_NAMED_LOCATION_EXPANSION.md`.
+- v115 directly confirms that the player-facing ENDÓRË profile renders physical terrain,
+  materials, and vegetation at close zoom. The strategic political overview remains a
+  separate intentionally flat layer; this renderer proof does not replace the source-bound
+  v110 physical-feature gate. See `docs/m2/V115_RENDER_VISIBILITY_PROBE.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-08-04 — Distinguish strategic overlay from close physical rendering
+
+Treat a flat-looking far-zoom political overview as evidence only of the strategic map
+overlay, never as evidence that physical terrain has failed to load. The dedicated
+ENDÓRË visual profile enables 3D terrain and triplanar material projection; v115 confirms
+that close zoom renders physical ground, vegetation, and relief. Keep feature-level
+acceptance bound to source-targeted close cameras, not this generic renderer probe.
+
 ## 2026-08-04 — Promote exact source points as names, not new states
 
 When a named point in the hash-pinned Arda Maps Third Age topology resolves to a unique,

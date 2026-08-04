@@ -2,6 +2,11 @@
 
 ## 2026-08-04
 
+- v115 directly verifies the visual-profile renderer in a fresh real Observer session.
+  The far political overview is strategic and flat by design; a close zoom shows actual
+  terrain materials, vegetation objects, hills, and exposed rock. A subsequent 45-second
+  maximum-speed interval stayed stable with no new error-log bytes. This confirms the
+  configuration mechanism without claiming new source-feature acceptance.
 - v114 adds 27 source-pinned named map locations without changing a coast, terrain
   control, river, claim, capital, or mesh cell. The expansion includes four Shire
   settlements, the full Gondor beacon chain, the major Misty Mountains names, and
