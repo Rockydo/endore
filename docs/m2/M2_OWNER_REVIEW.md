@@ -1,108 +1,90 @@
-# M2 owner review — current physical map
+# M2 map review — current handoff
 
-Status: the v103 map payload awaits direct owner re-review. v99 is the complete physical
-atlas; v100 adds compact Erebor; v101 contracts Mordor to the shared mountain enclosure;
-v102 contracts Mount Gram to a remnant holding and restores its namesake summit; v103
-makes Anduin unmistakably dominant and expands only source-connected affluents. The
-previous v93 rejection keeps the gate red until the owner explicitly accepts the current
-result.
+Status: M2 remains the sole active content gate. The physical map loads, ticks, and has
+passed the complete deterministic and real-game checks; the remaining work is deliberate
+source-anchored fidelity iteration, not an unresolved load or vanilla-Earth problem. Do
+not begin gameplay, faction-mechanic, or art content until this review is explicitly
+closed.
 
-## Exact candidate
+## Current published baseline
 
-- Game-visible fingerprint:
-  `76fb6e7e104c9c82d33162ed17e690554e622ace6e335a104eaec94d6be1ff84`
-- Generator: v57 native-resolution river cores, enlarged Great River hierarchy, 102
-  reviewed Arda Maps courses, and 104 curated source-connected Ardacraft affluents, with
-  v94's compact Nan Curunir, v100's compact Erebor, and v101's source-enclosed Mordor
-  political corrections. v102 adds an 18-location Mount Gram remnant plus forced Carn Dûm
-  and one compact lore-attested, relief-only Mount Gram summit. Upper/lower Anduin cores
-  use `1.10/1.15` scale and wet banks use `1.35/1.50`; all other nominal source-course
-  widths and the twelve parser channels remain unchanged.
-- Runtime proof: v98 supplied eight source-bound river camera pairs; v99 independently
-  supplied the full map, all nine regional/close theatre pairs, four core hydrology pairs,
-  and focused close pairs for Lothlorien, Gundabad, Erebor, Mirrormere, and Nindalf.
-  v100 supplied a fresh regional/close Erebor pair; v101 supplied a fresh regional/close
-  Mordor pair after binding its politics to the shared mountain ring. All HUD-proven
-  Observer sessions completed 45-second maximum-speed playback with zero recovery and the
-  normal 1,486-byte log. v102 supplies a fresh same-camera Mount Gram pair and another
-  clean 45-second run on that exact candidate. v103 supplies eight final-fingerprint
-  regional/close hydrology pairs after the dependent 3,493,385-transform vegetation layer
-  was regenerated around the new water mask. Its 45-second maximum-speed playback had
-  zero recovery and the normal 1,486-byte log; full validation passed in 470.4 seconds and
-  paired smoke passed in 202.4 seconds with zero new mod error lines. The v102 paired-smoke
-  request had first deferred when
-  Antiquitas acquired the shared lease immediately after capture; the pending fingerprint
-  then ran when the slot cleared and passed in 201 seconds with zero new mod error lines.
+- Current commit: `2b6e9ea` (`test(map): lock Great River width hierarchy`).
+- Current game-visible tree fingerprint:
+  `d511971af16d7b24784ebdf99f9493d7e039f46795d6333b68fd066a1a5f568e`.
+- Game build: `24187685` (`1.3.11`, Pavia).
+- World: 6,004 locations; 38 playable realms; 3,029 assigned land locations and 2,975
+  deliberately wild locations.
+- River raster: 16 source-to-water systems, 38 incoming red confluences, two yellow
+  outgoing distributaries, 56 genuine engine courses, and zero graph cycles.
+- Water material: 61,432 indexed-river pixels projected by exact nearest-neighbour
+  sampling only. There is no independently painted blue shoulder or parallel proxy
+  channel.
 
-## Launch with physical terrain enabled
+The physical controls are hash-pinned to the owner-approved Arda Maps Third Age topology
+and ArdaCraft coordinate/relief/biome/drainage controls. The repository contains derived
+numeric controls, never downloaded reference artwork or map imagery. See
+[`CARTOGRAPHY_REFERENCE_LEDGER.md`](../world/CARTOGRAPHY_REFERENCE_LEDGER.md) and
+[`V113_SOURCE_PROVENANCE_REAUDIT.md`](V113_SOURCE_PROVENANCE_REAUDIT.md).
 
-Close EU5 first. From `G:\EUV mods\endore`, restore the player-quality visual profile:
+## What is proven
+
+| Area | Current evidence |
+| --- | --- |
+| Map identity | v110's fresh nine-theatre Observer atlas confirms fully custom Middle-earth terrain, coasts, vegetation, and decals at close zoom; no vanilla-Earth underlay. |
+| Terrain presentation | v115 proves the player-facing visual profile renders physical ground, relief, materials, and vegetation at close zoom. The far political view is intentionally a strategic overlay. |
+| Mountains | Source-pinned Misty, White, northern, and Mordor ranges render as relief; v112 adds a marker-offset proof that Erebor is a compact isolated Lonely Mountain. |
+| Forests | v110's Mirkwood/Lothlórien views confirm dense, distinct canopy. Lothlórien stays inside the Golden Wood/Naith source mask rather than crossing the Misty crest. |
+| Rivers | v105 replaced the rejected blue-width surrogate with the installed indexed-raster grammar. v109 adds the source-exact Ethir fork; v120 now fails validation if the continuous Langwell–Anduin trunk loses its dominant widest-class segment. |
+| Political map | v118 corrects five named frontier witnesses; v119 protects fourteen unclaimed, abandoned, or independent sites and makes Eagles' Eyrie empty of mortal population. Compact Lothlórien, Dunland, Erebor, Isengard, and source-enclosed Mordor contracts remain in force. |
+| Runtime | v119 full validation passed in 458.8 seconds. Paired vanilla/ENDÓRË smoke reached menu-ready with zero new mod-unique error-log lines on the current game-visible fingerprint. |
+
+The direct Finder typing route remains blocked by the native edit control and correctly
+fails closed; it must not be used to assert a source camera position. This does not affect
+the established camera evidence, smoke, or normal player map interaction. See
+[`BLOCKERS.md`](../../BLOCKERS.md).
+
+## Reproduce the player-facing physical view
+
+With EU5 closed, from `G:\EUV mods\endore`:
 
 ```powershell
 .\.venv\Scripts\python.exe tools\gamedriver.py profile visual
-```
-
-Then launch the current mod through the shared leased driver:
-
-```powershell
 .\.venv\Scripts\python.exe tools\gamedriver.py launch --mode mod --visual-map --no-debug-mode
 ```
 
-The smoke profile deliberately disables expensive terrain. A manual launch that inherits
-those keys can show the political map but no close 3D terrain; that is a configuration
-state, not map evidence. The profile command changes only player-facing visual keys and
-does not overwrite personal audio, display-mode, or UI choices.
+The smoke profile deliberately lowers terrain settings for fast automated load checks;
+the visual profile restores close 3D terrain and triplanar materials. The stored profile
+changes only ENDÓRË's player-facing visual keys and does not replace audio, display, or UI
+preferences.
 
 ## Evidence index
 
 | Evidence | Binding purpose |
 | --- | --- |
-| `docs/screens/20260803_v90_native_river_edges/` | Same-camera proof that native-resolution river banks remove 8×8 teeth while preserving widths. |
-| `docs/screens/20260803_v91_full_atlas/` | Complete nine-theatre orientation plus core hydrology coverage. Three misleading feature-camera conclusions are superseded by v91b. |
-| `docs/screens/20260803_v91b_camera_calibration/` | Maximum-close forests, Edhellond land, and exact Orodruin physical evidence. |
-| `docs/screens/20260803_v92_remaining_drainage/` | Remaining twelve source-bound drainage pairs and complete 102-course review. |
-| `docs/screens/20260803_v93_anduin_scale/` | Same-camera owner-calibrated upper/lower Anduin scale and clean 45-second playback. |
-| `docs/screens/20260803_v94b_gap_political/` | Final-fingerprint source-bound Fords regional/close pair proving compact Isengard, separate Dunland/Fangorn/Rohan, live terrain, and clean playback. |
-| `docs/screens/20260803_v98_curated_affluents/` | Current upper/lower Anduin and six other course pairs after rejecting blocky v95-v97 feeder mechanisms. |
-| `docs/screens/20260803_v99_full_atlas/` | Current-fingerprint full map, all nine theatre pairs, four core hydrology pairs, and focused Lothlorien/Gundabad/Erebor/Mirrormere/Nindalf physical pairs; clean 45-second playback. |
-| `docs/screens/20260803_v100_compact_erebor/` | Fresh regional/close proof that Erebor is a compact nine-cell holding around its unchanged isolated summit; clean 45-second playback. |
-| `docs/screens/20260803_v101_mordor_enclosure/` | Fresh regional/close proof that Mordor follows its mountain-enclosed basin with separate canonical western outposts; Orodruin retained; clean 45-second playback. |
-| `docs/screens/20260803_v102_mount_gram_final/` | Fresh same-camera proof of the compact Mount Gram remnant, separate Carn Dûm, and an isolated physical namesake summit; clean 45-second playback. |
-| `docs/screens/20260803_v103_hydrology_final/` | Final-fingerprint upper/lower Anduin plus six independent basin pairs after affluent expansion and vegetation-clearance regeneration; clean 45-second playback. |
+| [`V105_RIVER_GATE.md`](V105_RIVER_GATE.md) | First genuine indexed-river proof: connected engine courses, widest Anduin class, no painted proxy. |
+| [`V106_TRIBUTARY_GATE.md`](V106_TRIBUTARY_GATE.md) | Source-backed tributary and confluence expansion without decorative drainage. |
+| [`V109_NESTED_DISTRIBUTARY_GATE.md`](V109_NESTED_DISTRIBUTARY_GATE.md) | Current Ethir distributary grammar: two source-exact, acyclic outgoing branches. |
+| [`V110_FULL_PHYSICAL_ATLAS.md`](V110_FULL_PHYSICAL_ATLAS.md) | Complete fresh continent, hydrology, forest, relief, and playback review. |
+| [`V112_EREBOR_RELIEF_EVIDENCE.md`](V112_EREBOR_RELIEF_EVIDENCE.md) | Source-marker-offset Lonely Mountain close view. |
+| [`V113_SOURCE_PROVENANCE_REAUDIT.md`](V113_SOURCE_PROVENANCE_REAUDIT.md) | Exact upstream source-byte re-audit. |
+| [`V115_RENDER_VISIBILITY_PROBE.md`](V115_RENDER_VISIBILITY_PROBE.md) | Player visual-profile close-render proof. |
+| [`V118_POLITICAL_FRONTIER_WITNESSES.md`](V118_POLITICAL_FRONTIER_WITNESSES.md) | Exact settled-frontier ownership corrections. |
+| [`V119_UNCLAIMED_SITE_AUDIT.md`](V119_UNCLAIMED_SITE_AUDIT.md) | Exact wilderness/empty-site corrections. |
 
-Screenshots are reproducible, ignored working evidence rather than shipped mod payload.
-Regional frames establish position and political context; the corresponding close frames
-are binding for terrain, relief, forest objects, coast, and river presentation.
+Screenshots live under ignored `docs/screens/` directories as reproducible development
+evidence rather than shipped assets. Static acceptance never replaces a live test; each
+new game-visible map batch still requires `gmake validate`, `gmake smoke`, and an exact
+fingerprint smoke assertion before publication.
 
-## Review standard
+## Review standard and next work
 
-Compare the live close physical map against the pinned Third Age Arda Maps control and
-the equal-scale Ardacraft placement already recorded in the source ledger. Report a defect
-with a named landmark, coast, ridge, forest, realm boundary, or river and its approximate
-screen position. That gives the next iteration a falsifiable source comparison.
+Judge the close physical map against the hash-pinned Third Age Arda Maps control and
+equal-scale ArdaCraft placement, with Tolkien's text and map retaining canon precedence.
+A valid correction must identify a named landmark, coastline, ridge, forest boundary,
+river course, or TA 3018 ownership witness; it must not use a broad cosmetic rectangle or
+invent a state merely to tidy colours.
 
-The current technical review supports these statements, but not visual acceptance:
-
-- no vanilla Earth terrain remains beneath the political map;
-- the coast, ridges, passes, forests, climate materials, small water, and 102-course
-  drainage system come from the committed Middle-earth controls;
-- the 102 committed courses remain source-backed and connected; v103 makes Anduin visibly
-  dominant and adds only 104 directly source-connected, unnamed affluents after rejecting
-  three denser but artificial-looking mechanisms;
-- v99 close frames independently show dense Mirkwood and Lothlorien canopies, fully 3D
-  Misty/White/northern relief, isolated Erebor, exact small-water material at Mirrormere
-  and Nindalf; v103 final frames show the enlarged upper/lower Anduin hierarchy and clean
-  regenerated vegetation clearance on the current candidate;
-- all 38 realm assignments satisfy their source/anchor contracts with no unreviewed
-  political component; Isengard is a compact 13-location Nan Curunir claim and the Fords
-  resolve outside it; Erebor is a compact nine-location Lonely Mountain claim, while Dale
-  and the Iron Hills remain separate and unchanged; Mordor's 296-location main body shares
-  the accepted Ered Lithui/Ephel Dúath ring and retains only source-bound western outposts;
-  Mount Gram is a compact 17-location main holding plus exact one-location Carn Dûm, with
-  the summit changing relief but not passability topology.
-
-Review v103's rendered width and visible network density against both accepted map sources.
-Additional courses remain prohibited unless source-traced or lore-attested; no decorative
-drainage is permitted. Explicit owner acceptance is still required. Until then, M2 is red
-and gameplay, faction expansion, mechanics, bespoke art, and lore-content production
-remain prohibited.
+The next source review remains Dunland, Lothlórien, the Dale/Erebor theatre, Mordor, and
+the represented East. Preserve the accepted coastline, relief, forest, river, and
+location-topology controls. Where sources establish geography but not a cadastral claim,
+leave the land wild and record the judgement rather than painting a speculative border.
