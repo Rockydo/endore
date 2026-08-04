@@ -1,19 +1,25 @@
 # TODO
 
-## Immediate gate - v109 nested Ethir mouth
+## Immediate gate - v110 full physical atlas and political baseline
 
-- v108 is validated, live-proven, and published as `fcad75a`. Never restore painted river
-  width: channel 6 remains the exact indexed footprint only.
-- The candidate adds exact source part 5 as a nested yellow branch from the v108 Ethir arm.
-  Static graph: 16 systems, 38 red junctions, two yellow splits, 56 courses, cycle rank
-  zero, 61,432 indexed pixels, exact 982,912-pixel material footprint.
-- TECHNICAL LIVE GATES GREEN on fingerprint `57db5107...`: paired smoke passes in 202.4
-  seconds with zero new/mod-unique lines; exact-fingerprint assertion passes. Same-camera
-  close review shows a compact natural coastal Y-fork without parallel blue terrain;
-  45-second playback reaches TA 3018.1.13 19:00 with zero recovery and a normal log.
-- Final full validation passes in 537.4 seconds (M2 world 445.9 seconds). Commit and push
-  the coherent v109 batch. Keep the other same-Anduin-junction delta side dry; it would
-  create a degree-four node.
+- v109 is validated, live-proven, published as `222e295`, and remains the river baseline.
+  Never restore painted river width: terrain channel 6 remains the exact nearest-neighbour
+  footprint of indexed `rivers.png`, never an independently painted blue band.
+- The fresh v110 Observer atlas on the exact v109 fingerprint completed all nine continental
+  theatres, upper/lower Anduin, Celebrant, Entwash, Lothlórien, Gundabad, Erebor,
+  Mirrormere, Nindalf, and Mount Gram, then completed the 45-second playback. It proves
+  source-shaped coasts, dense canonical canopy, physical relief, engine rivers, and zero
+  vanilla-Earth terrain leakage in one comparable runtime session. See
+  `docs/m2/V110_FULL_PHYSICAL_ATLAS.md`.
+- Do not infer a missing Lonely Mountain from the camera frame: the exact direct Ardacraft
+  coordinate holds a 61,926-unit isolated peak, but the observer's Erebor settlement and
+  army overlays obscure that one-pixel summit in the current capture composition. Preserve
+  the source-pinned relief; improve evidence framing rather than widening the mountain.
+- Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
+  Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
+  Any ownership correction must preserve the accepted coast, relief, forests, and river
+  controls and be documented as a source-specific judgement. M2 remains red pending the
+  full physical/political fidelity gate; do not resume gameplay content.
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map

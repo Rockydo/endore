@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-08-04
+
+- Published v109 completes the currently topology-safe Ethir delta: 16 engine-river
+  systems, 38 red confluences, two vanilla-style yellow outgoing markers, and 56 genuine
+  source-to-water courses. Terrain channel 6 is now derived exclusively from indexed river
+  pixels, removing the rejected painted-blue shoulder mechanism.
+- A fresh v110 full physical atlas loaded the exact published fingerprint in real EU5,
+  captured all nine continental, four hydrology, and six focused physical theatres, and
+  completed its 45-second Observer playback before releasing the shared runtime lease.
+  The current physical map is source-shaped at close zoom: no vanilla-Earth terrain is
+  present; coasts, canopy, relief, water, and river junctions all come from ENDÓRË
+  controls. M2 remains explicitly open for fidelity review and political placement work.
+
 ## 2026-07-28
 
 - M0 complete locally: governing plans read; installed build 24187685 matches the

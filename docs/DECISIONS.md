@@ -1888,3 +1888,20 @@ Accept the nested split after paired smoke, an identical-camera v108/v109 close 
 and playback. The second mouth forms a compact coastal Y without blue terrain shoulders.
 Do not promote parts 10/8/7 from the Anduin junction: part 6 already occupies the only
 available outgoing edge there, and a second source-exact arm would create degree four.
+
+## 2026-08-04 - Use the v110 complete physical atlas as the M2 review baseline
+
+Capture all nine continental theatres, the four primary hydrology views, and the six
+focused physical views in one fresh Observer session on the published v109 fingerprint.
+The completed 45-second maximum-speed playback and normal log bind the review to one
+stable runtime, not a mix of stale screenshots.
+
+The atlas confirms that rivers are engine-indexed water rather than painted material:
+the upper/lower Anduin, Celebrant, Entwash, Old Forest confluences, and Ethir descendants
+all render with live water cores and source-connected junctions. It also confirms dense
+Mirkwood/Lothlórien canopy, 3D range relief, and custom ground/coasts at close zoom.
+
+Do not enlarge Erebor from its close screenshot. The source coordinate is an exact
+61,926-unit isolated summit; its settlement/army overlay masks the pixel-level crown in
+that particular composition. Any future evidence camera must frame the source marker from
+an offset rather than altering a canon-pinned physical landmark to compensate for HUD.
