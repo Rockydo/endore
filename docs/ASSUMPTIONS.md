@@ -111,6 +111,9 @@ about Middle-earth.
 
 ## Reopened M2 source-audited cartography
 
+- † EU5's native indexed graph supplies the only river water surface and width. ENDÓRË's
+  terrain cache deliberately retains ordinary underlying land rather than a separate
+  material-bank approximation; source lakes remain the distinct small-feature exception.
 - † The old statement that all physical coordinates were broad gameplay
   extrapolations is superseded. Large- and medium-scale positions now follow
   the equal-scale ArdaCraft grid and Arda Maps continuous linework under

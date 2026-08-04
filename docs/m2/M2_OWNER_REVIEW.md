@@ -8,17 +8,17 @@ closed.
 
 ## Current published baseline
 
-- Current published commit: `acf60e3` (`feat(map): expand frontier landmark control`).
+- Current published revision: v129 native river surface isolation.
 - Current game-visible tree fingerprint:
-  `3606db87877e7d37523b02989b6650db9549190a6ac7cf6c34e977de17bd0d33`.
+  `d021a02eea707cf6581f5fc0d730480f852c58720951400998a867941ac6e696`.
 - Game build: `24187685` (`1.3.11`, Pavia).
 - World: 6,004 locations; 38 playable realms; 3,027 assigned locations and 2,977
   deliberately wild locations.
 - River raster: 16 source-to-water systems, 38 incoming red confluences, two yellow
   outgoing distributaries, 56 genuine engine courses, and zero graph cycles.
-- River surface: v124 preserves the 61,432-pixel exact nearest-neighbour channel-6
-  footprint but resolves it as a vanilla-style dry bank. The native indexed renderer is
-  now the only water and width authority; no blue terrain proxy is permitted.
+- River surface: v129 removes the duplicate terrain-cache channel-6 footprint entirely.
+  The native indexed renderer is the only water and width authority; source terrain remains
+  beneath it and no blue terrain proxy is permitted.
 
 The physical controls are hash-pinned to the owner-approved Arda Maps Third Age topology
 and ArdaCraft coordinate/relief/biome/drainage controls. The repository contains derived
@@ -34,9 +34,9 @@ numeric controls, never downloaded reference artwork or map imagery. See
 | Terrain presentation | v115 proves the player-facing visual profile renders physical ground, relief, materials, and vegetation at close zoom. The far political view is intentionally a strategic overlay. |
 | Mountains | Source-pinned Misty, White, northern, and Mordor ranges render as relief; v112 adds a marker-offset proof that Erebor is a compact isolated Lonely Mountain. |
 | Forests | v110's Mirkwood/Lothlórien views confirm dense, distinct canopy. Lothlórien stays inside the Golden Wood/Naith source mask rather than crossing the Misty crest. |
-| Rivers | v105 replaced the rejected blue-width surrogate with the installed indexed-raster grammar. v109 adds the source-exact Ethir fork; v120 now fails validation if the continuous Langwell–Anduin trunk loses its dominant widest-class segment. |
+| Rivers | v129 makes the installed indexed-raster grammar exclusive: the cache has zero duplicate river-material pixels. v109 adds the source-exact Ethir fork; v120 now fails validation if the continuous Langwell–Anduin trunk loses its dominant widest-class segment. |
 | Political map | v127 makes 96 named-landmark ownership dispositions auditable and adds a permanent six-theatre frontier audit. It preserves compact Lothlórien, Dunland, Moria, Erebor, Dale, Esgaroth, Iron Hills, Isengard, and source-enclosed Mordor while retaining canonically uncertain land as wild. |
-| Runtime | v127 full validation passed in 460.0 seconds. Paired vanilla/ENDÓRË smoke reached menu-ready with zero new mod-unique error-log lines on the current game-visible fingerprint. |
+| Runtime | v129 full validation passed in 539.8 seconds. Paired vanilla/ENDÓRË smoke reached menu-ready with zero new mod-unique error-log lines on the current game-visible fingerprint. |
 
 The direct Finder typing route remains blocked by the native edit control and correctly
 fails closed; it must not be used to assert a source camera position. This does not affect
@@ -68,6 +68,7 @@ preferences.
 | [`V112_EREBOR_RELIEF_EVIDENCE.md`](V112_EREBOR_RELIEF_EVIDENCE.md) | Source-marker-offset Lonely Mountain close view. |
 | [`V113_SOURCE_PROVENANCE_REAUDIT.md`](V113_SOURCE_PROVENANCE_REAUDIT.md) | Exact upstream source-byte re-audit. |
 | [`V124_NATIVE_RIVER_SURFACE_FIX.md`](V124_NATIVE_RIVER_SURFACE_FIX.md) | Native water/width versus dry terrain-bank responsibility correction. |
+| [`V129_INDEXED_RIVER_SURFACE_ISOLATION.md`](V129_INDEXED_RIVER_SURFACE_ISOLATION.md) | v124 supersession: native indexed raster is the only river surface. |
 | [`V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md`](V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md) | Exact Black Gate/Morgai control and compact-Isengard ridge correction. |
 | [`V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md`](V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md) | Complete 89-landmark control ledger and five corrected exact political cells. |
 | [`V127_FRONTIER_GAZETTEER_AND_CONTROL.md`](V127_FRONTIER_GAZETTEER_AND_CONTROL.md) | Seven added exact source landmarks and 96-row control ledger. |

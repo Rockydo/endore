@@ -1,5 +1,15 @@
 # Decisions
 
+## 2026-08-04 - Let indexed rivers be the sole river surface
+
+Remove ENDÓRË's terrain-cache channel-6 copy of the native river graph. Although v124
+mapped that duplicate mask to a dry installed material, the cache samples it at a different
+virtual resolution and direct review still identified it as a painted blue/tiled shoulder
+beside a thin spline. `map_data/rivers.png` is now the exclusive water and width authority;
+normal source terrain remains below it, and source lakes keep their separate channel-4
+material treatment. Retain the installed palette and the Great River's index-15 contract.
+See `docs/m2/V129_INDEXED_RIVER_SURFACE_ISOLATION.md`.
+
 ## 2026-08-04 - Make the full political review fail closed without inventing borders
 
 Bind six source-led political review envelopes to the generated ownership model: the Gap

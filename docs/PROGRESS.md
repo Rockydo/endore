@@ -2,6 +2,18 @@
 
 ## 2026-08-04
 
+- v129 removes the remaining duplicate river-material layer after direct owner review
+  reported a blue tiled shoulder beside thin engine water. The terrain virtual-texture
+  cache no longer paints channel 6 at any resolution; `map_data/rivers.png` alone draws
+  every river and its native palette width. The rebuilt source contains zero channel-6
+  pixels, its diagnostic material preview contains zero former blue river pixels, and the
+  native graph still passes unchanged. The prior Anduin-labelled Finder captures are
+  explicitly rejected: they visibly show a northern political view, not the focused river.
+  Full validation passed in 539.8 seconds (M2 world gate 442.4 seconds). Paired smoke
+  passed in 232.3 seconds with zero mod-unique error-log lines on fingerprint
+  `d021a02eea707cf6581f5fc0d730480f852c58720951400998a867941ac6e696`; the exact smoke
+  assertion also passed. Published as the v129 native-river isolation revision. See
+  `docs/m2/V129_INDEXED_RIVER_SURFACE_ISOLATION.md`.
 - v128 turns the requested full political review into a checked, source-led six-theatre
   control ledger. The Gap of Rohan, Lothlórien/Moria, Dale/Lonely Mountain,
   Mordor/Ithilien, East/South, and the represented Far Harad fringe each have a bounded

@@ -38,7 +38,6 @@ from PIL import Image, ImageDraw, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from gen_rivers import RIVERS_OUT
 from m2_controls import (
     land_mask,
     natural_path,
@@ -60,12 +59,6 @@ SOURCE_W = 65_536
 SOURCE_H = 32_768
 MATERIAL_W = 8_192
 MATERIAL_H = 4_096
-# Binary river edges are visibly block-expanded when the 8K material source is
-# sampled onto EU5's 65K virtual surface. Keep the general material stack at
-# its release-safe resolution, but render the one-bit river core directly at
-# full virtual resolution.
-RUNTIME_RIVER_W = SOURCE_W
-RUNTIME_RIVER_H = SOURCE_H
 TILE_SIZE = 128
 BORDER_SIZE = 2
 STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
@@ -73,7 +66,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 59
+GENERATOR_VERSION = 60
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -104,7 +97,7 @@ GENERATOR_VERSION = 59
 # the native river renderer; the height payload may still be reused only when
 # its authored source hash is unchanged.
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59}
+    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60}
 )
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
@@ -990,45 +983,6 @@ def ridge_material_weight(
     )
 
 
-def river_material_image(
-    projection: dict,
-    *,
-    core: bool = False,
-    size: tuple[int, int] = (MATERIAL_W, MATERIAL_H),
-    mode: str = "L",
-) -> Image.Image:
-    del projection, core
-    if not RIVERS_OUT.is_file():
-        raise ValueError("indexed rivers.png must be generated before terrain cache")
-    with Image.open(RIVERS_OUT) as opened:
-        indexed = np.asarray(opened, dtype=np.uint8)
-    mask = (~np.isin(indexed, (254, 255))).astype(np.uint8) * 255
-    image = Image.fromarray(mask, "L").resize(size, Image.Resampling.NEAREST)
-    if mode == "1":
-        return image.convert("1")
-    if mode == "L":
-        return image
-    raise ValueError(f"unsupported river material mode {mode!r}")
-
-
-def river_material_mask(projection: dict, *, core: bool = False) -> np.ndarray:
-    return np.asarray(
-        river_material_image(projection, core=core),
-        dtype=np.uint8,
-    ) > 0
-
-
-@functools.lru_cache(maxsize=1)
-def runtime_river_core_source() -> Image.Image:
-    projection = json.loads(PROJECTION_CONTROL.read_text(encoding="utf-8"))
-    return river_material_image(
-        projection,
-        core=True,
-        size=(RUNTIME_RIVER_W, RUNTIME_RIVER_H),
-        mode="1",
-    )
-
-
 def render_material_source() -> np.ndarray:
     """Paint the native 16-channel mask from continuous Arda controls."""
     with Image.open(BIOME_CONTROL) as opened:
@@ -1360,22 +1314,13 @@ def render_material_source() -> np.ndarray:
     # channels 8/9 above are terrain variations in that custom palette, not
     # engine vegetation/climate transitions or per-location templates.
 
-    river_banks = river_material_mask(projection) & land
-    river_cores = river_material_mask(projection, core=True) & land
-    if np.any(river_cores & ~river_banks):
-        raise AssertionError("river water core extends outside its wet bank")
-    # Preserve vanilla's split of responsibility: its one-pixel indexed river
-    # graph owns visible water and width, while terrain channel 6 only marks
-    # the immediate dry bank. The bit follows the exact engine raster at
-    # runtime, so no independent blue water geometry can become a second
-    # river beside the spline.
-    material[river_cores] |= MATERIAL_RIVER
-    # River painting is intentionally later than the general terrain stack,
-    # but 115 high-resolution samples cross a lake-biome shore/core. Restore
-    # pond precedence so no dirt-river blend can puncture the still-water read.
-    material[material_pond] = MATERIAL_WETLAND_COAST
-    if not np.all(material[material_pond] == MATERIAL_WETLAND_COAST):
-        raise AssertionError("material pond core lost its final water precedence")
+    # A river is drawn only by map_data/rivers.png. Do not mirror even the
+    # exact indexed path into channel 6: this cache is sampled at a different
+    # virtual resolution and can present a painted shoulder beside a thin
+    # native spline. Ordinary terrain remains beneath engine water; the
+    # separately audited source-lake cores keep their channel-4 material.
+    if np.any((material & MATERIAL_RIVER) != 0):
+        raise AssertionError("terrain cache must not paint a duplicate river surface")
 
     if np.any(material[land] == 0):
         raise AssertionError("material paint leaves land without a variation channel")
@@ -1385,7 +1330,7 @@ def render_material_source() -> np.ndarray:
     # Climate coverage is a dry-surface invariant. Dedicated river and pond
     # surfaces deliberately supersede their underlying macro climate and must
     # not make a denser hydrology network look like climate loss.
-    dry_climate_surface = land & ~river_cores & ~material_pond
+    dry_climate_surface = land & ~material_pond
     climate_contracts = (
         (
             "tundra",
@@ -1532,33 +1477,6 @@ def transformed_material_tile(
         fillcolor=0,
     )
     material = np.asarray(tile, dtype=np.uint16).copy()
-    if mip <= 3:
-        river_source = runtime_river_core_source()
-        river_scale = (2**mip) * river_source.width / SOURCE_W
-        river_x_offset = (tile_x * TILE_SIZE - BORDER_SIZE) * river_scale
-        river_y_offset = (tile_y * TILE_SIZE - BORDER_SIZE) * river_scale
-        river_tile = river_source.transform(
-            (STORED_TILE_SIZE, STORED_TILE_SIZE),
-            Image.Transform.AFFINE,
-            (
-                river_scale,
-                0.0,
-                river_x_offset,
-                0.0,
-                river_scale,
-                river_y_offset,
-            ),
-            resample=Image.Resampling.NEAREST,
-            fillcolor=0,
-        )
-        runtime_river = np.asarray(river_tile, dtype=np.uint8) != 0
-        # Clearing the coarse 8x-expanded bit reveals the preserved underlying
-        # terrain. Exact still-water ponds retain final precedence. The rebuilt
-        # channel 6 is a dry vanilla-style bank, never a terrain-water proxy.
-        pond_support = material == MATERIAL_WETLAND_COAST
-        land_support = (material != 0) & ~pond_support
-        material &= np.uint16(0xFFFF ^ int(MATERIAL_RIVER))
-        material[runtime_river & land_support] = MATERIAL_RIVER
     # Vanilla's material cache, like its height cache, contains native virtual-
     # texture detail absent from the coarse 8192-wide source. Keep every
     # authored material logic, but let the physical cache relief select
@@ -1637,8 +1555,6 @@ def material_preview(values: np.ndarray) -> Image.Image:
         rgb[(reduced & bit) != 0] = color
     coast = (reduced & MATERIAL_COAST_TRANSITION) != 0
     rgb[coast] = (154, 142, 105)
-    rivers = (reduced & MATERIAL_RIVER) != 0
-    rgb[rivers] = (55, 104, 127)
     return Image.fromarray(rgb, "RGB")
 
 
@@ -1955,7 +1871,7 @@ def write() -> None:
         "tile_order": "fine_to_coarse_row_major_y_inverted",
         "height_quantum": HEIGHT_QUANTUM,
         "material_resolution": [MATERIAL_W, MATERIAL_H],
-        "runtime_river_resolution": [RUNTIME_RIVER_W, RUNTIME_RIVER_H],
+        "native_river_surface": "indexed_raster_only",
         "material_sources": material_sources,
         "mip_layout": [
             [mip, width, height]
@@ -2062,13 +1978,17 @@ def check(*, quiet: bool = False) -> list[str]:
         failures.append("terrain cache does not match the authored height source")
     if manifest.get("material_resolution") != [MATERIAL_W, MATERIAL_H]:
         failures.append("terrain cache has the wrong material source resolution")
-    if manifest.get("runtime_river_resolution") != [
-        RUNTIME_RIVER_W,
-        RUNTIME_RIVER_H,
-    ]:
-        failures.append("terrain cache has the wrong runtime river resolution")
+    if manifest.get("native_river_surface") != "indexed_raster_only":
+        failures.append("terrain cache does not isolate rivers to the indexed renderer")
     if manifest.get("material_sources") != material_source_hashes():
         failures.append("terrain cache does not match its Arda material sources")
+    try:
+        expected_material_source = render_material_source()
+    except (OSError, ValueError, AssertionError) as error:
+        failures.append(f"could not verify river-surface isolation: {error}")
+    else:
+        if np.any((expected_material_source & MATERIAL_RIVER) != 0):
+            failures.append("terrain source paints a duplicate river surface")
     if manifest.get("tile_count") != tile_count():
         failures.append("terrain cache manifest has the wrong tile count")
     if manifest.get("earth_decal_layers") != 0:
