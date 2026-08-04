@@ -73,7 +73,7 @@ STORED_TILE_SIZE = TILE_SIZE + BORDER_SIZE * 2
 # live-proven q512 cache—while avoiding the 700 MB q1 payload that pushes the
 # vanilla-count world past this machine's reliable 98%-load memory envelope.
 HEIGHT_QUANTUM = 64
-GENERATOR_VERSION = 58
+GENERATOR_VERSION = 59
 # v34-v35 change height payload semantics by adding and thresholding
 # native-cache sculpting. v37 replaces the broad high body with a lower body
 # plus native-cache summits; v38 de-duplicates Erebor at runtime-cache scale;
@@ -99,10 +99,12 @@ GENERATOR_VERSION = 58
 # enlarges the Great River's visible bank/core hierarchy and accepts the
 # conservative 104-path source-connected feeder reduction. v58 removes that
 # rejected material-width surrogate and derives channel 6 directly from the
-# true indexed engine graph; the height payload may still be reused only when
+# true indexed engine graph. v59 retains that exact footprint but makes it the
+# installed game's dry riverbank treatment, leaving water and width solely to
+# the native river renderer; the height payload may still be reused only when
 # its authored source hash is unchanged.
 HEIGHT_FORMAT_COMPATIBLE_VERSIONS = frozenset(
-    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58}
+    {42, 43, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59}
 )
 
 # Vanilla's 8192x4096 heightmap is only its coarse terrain source. Its shipped
@@ -1362,11 +1364,11 @@ def render_material_source() -> np.ndarray:
     river_cores = river_material_mask(projection, core=True) & land
     if np.any(river_cores & ~river_banks):
         raise AssertionError("river water core extends outside its wet bank")
-    # EU5's terrain-material renderer treats the river channel as dominant,
-    # not as a soft blend. Paint only the nested source-aligned water core;
-    # the wider authored incision already supplies valley and bank geometry.
-    # Preserve the dry material below channel 6. The runtime tile stage clears
-    # this coarse bit and replaces it with the full-resolution one-bit core.
+    # Preserve vanilla's split of responsibility: its one-pixel indexed river
+    # graph owns visible water and width, while terrain channel 6 only marks
+    # the immediate dry bank. The bit follows the exact engine raster at
+    # runtime, so no independent blue water geometry can become a second
+    # river beside the spline.
     material[river_cores] |= MATERIAL_RIVER
     # River painting is intentionally later than the general terrain stack,
     # but 115 high-resolution samples cross a lake-biome shore/core. Restore
@@ -1551,7 +1553,8 @@ def transformed_material_tile(
         )
         runtime_river = np.asarray(river_tile, dtype=np.uint8) != 0
         # Clearing the coarse 8x-expanded bit reveals the preserved underlying
-        # terrain. Exact still-water ponds retain final precedence.
+        # terrain. Exact still-water ponds retain final precedence. The rebuilt
+        # channel 6 is a dry vanilla-style bank, never a terrain-water proxy.
         pond_support = material == MATERIAL_WETLAND_COAST
         land_support = (material != 0) & ~pond_support
         material &= np.uint16(0xFFFF ^ int(MATERIAL_RIVER))

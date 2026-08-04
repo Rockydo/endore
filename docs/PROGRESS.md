@@ -2,6 +2,16 @@
 
 ## 2026-08-04
 
+- v124 fixes the owner-reported blue river-shoulder defect without altering a course,
+  coastline, relief control, forest, settlement, or political cell. The native indexed
+  graph remains the only water and width authority; its exact channel-6 footprint now
+  resolves to vanilla-style dry riverbank ground rather than custom still water. The
+  terrain cache is regenerated as v59. Full validation passed in 478.4 seconds (M2 world
+  406.5 seconds); paired smoke passed in 204.1 seconds on fingerprint
+  `9caa9cea5f4a086967b30d62f49c69a767afcff59e0a4beb3f191fc61a6877f7`, with zero new
+  mod-unique error-log lines. A fresh 45-second Observer playback is green, while its
+  broad political capture is explicitly rejected as feature-scale river evidence. See
+  `docs/m2/V124_NATIVE_RIVER_SURFACE_FIX.md`.
 - v123 makes all 39 active source-ledger settlements exact ownership regression
   witnesses, spanning Lindon, Eriador, the mountain holds, Wilderland, Rohan, Gondor,
   Mordor, and Umbar. It preserves the three explicit Arnor ruins as wild and moves no

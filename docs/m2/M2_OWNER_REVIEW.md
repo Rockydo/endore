@@ -16,9 +16,9 @@ closed.
   deliberately wild locations.
 - River raster: 16 source-to-water systems, 38 incoming red confluences, two yellow
   outgoing distributaries, 56 genuine engine courses, and zero graph cycles.
-- Water material: 61,432 indexed-river pixels projected by exact nearest-neighbour
-  sampling only. There is no independently painted blue shoulder or parallel proxy
-  channel.
+- River surface: v124 preserves the 61,432-pixel exact nearest-neighbour channel-6
+  footprint but resolves it as a vanilla-style dry bank. The native indexed renderer is
+  now the only water and width authority; no blue terrain proxy is permitted.
 
 The physical controls are hash-pinned to the owner-approved Arda Maps Third Age topology
 and ArdaCraft coordinate/relief/biome/drainage controls. The repository contains derived
@@ -67,6 +67,7 @@ preferences.
 | [`V110_FULL_PHYSICAL_ATLAS.md`](V110_FULL_PHYSICAL_ATLAS.md) | Complete fresh continent, hydrology, forest, relief, and playback review. |
 | [`V112_EREBOR_RELIEF_EVIDENCE.md`](V112_EREBOR_RELIEF_EVIDENCE.md) | Source-marker-offset Lonely Mountain close view. |
 | [`V113_SOURCE_PROVENANCE_REAUDIT.md`](V113_SOURCE_PROVENANCE_REAUDIT.md) | Exact upstream source-byte re-audit. |
+| [`V124_NATIVE_RIVER_SURFACE_FIX.md`](V124_NATIVE_RIVER_SURFACE_FIX.md) | Native water/width versus dry terrain-bank responsibility correction. |
 | [`V115_RENDER_VISIBILITY_PROBE.md`](V115_RENDER_VISIBILITY_PROBE.md) | Player visual-profile close-render proof. |
 | [`V118_POLITICAL_FRONTIER_WITNESSES.md`](V118_POLITICAL_FRONTIER_WITNESSES.md) | Exact settled-frontier ownership corrections. |
 | [`V119_UNCLAIMED_SITE_AUDIT.md`](V119_UNCLAIMED_SITE_AUDIT.md) | Exact wilderness/empty-site corrections. |

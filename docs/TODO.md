@@ -2,9 +2,13 @@
 
 ## Immediate gate - v112 physical atlas proof and political baseline
 
-- v109 is validated, live-proven, published as `222e295`, and remains the river baseline.
-  Never restore painted river width: terrain channel 6 remains the exact nearest-neighbour
-  footprint of indexed `rivers.png`, never an independently painted blue band.
+- v109 is validated, live-proven, published as `222e295`, and remains the river-graph
+  baseline. v124 corrects the remaining presentation fault: terrain channel 6 follows the
+  exact nearest-neighbour footprint of indexed `rivers.png` only as a vanilla-style dry
+  riverbank, while the indexed engine river is the sole water surface and sole width
+  authority. Full validation and paired smoke are green on v124; its first fresh playback
+  is green, but its broad political Finder frame is not accepted as close visual evidence.
+  Never restore painted river width or a blue terrain proxy.
 - The fresh v110 Observer atlas on the exact v109 fingerprint completed all nine continental
   theatres, upper/lower Anduin, Celebrant, Entwash, Lothlórien, Gundabad, Erebor,
   Mirrormere, Nindalf, and Mount Gram, then completed the 45-second playback. It proves

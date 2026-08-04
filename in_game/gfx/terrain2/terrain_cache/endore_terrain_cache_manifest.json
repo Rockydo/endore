@@ -1,6 +1,6 @@
 {
   "generator": "gen_terrain_cache.py",
-  "generator_version": 58,
+  "generator_version": 59,
   "source": "in_game/gfx/terrain2/heightmap.png",
   "source_sha256": "ebec3ed2ebef5c112bcafe738dab01922491f9a185278b47c709602af69f159b",
   "source_resolution": [
@@ -23,7 +23,7 @@
     "in_game/gfx/terrain2/heightmap.png": "ebec3ed2ebef5c112bcafe738dab01922491f9a185278b47c709602af69f159b",
     "docs/world/control/biomes.png": "c041b21d3569e1552e3a754f04dee0d045134a5f8e72a2fd8549d8f1a569e7d3",
     "docs/world/control/projection.json": "d6a82d0013f67fd6cb2f2568e8642f64ea6069f3f67bb2c0fb972fddd0d62d2e",
-    "in_game/gfx/terrain2/materials.txt": "5717d4bf7c02243e43e8cdb3e32bf035e74d1d981599e366874cf9c4f325562f"
+    "in_game/gfx/terrain2/materials.txt": "72ea28166411f205820c320a999d65f8006f6be90018763baf6328241105b523"
   },
   "mip_layout": [
     [
@@ -126,7 +126,7 @@
     },
     "checksum.json": {
       "bytes": 58,
-      "sha256": "99e31ba23646c07412285397fc59e640f9cbd5bf53b11d88f9bcf2ffb39d1624"
+      "sha256": "b3dab0886108d7347beac06612528fe9946f6af9e54ff4f02408161f8c69f17b"
     }
   }
 }

@@ -1,5 +1,25 @@
 # ENDÓRË Blockers
 
+## 2026-08-04 - repeated Finder transition false-negative in a single Observer session
+
+Status: two-strike evidence-route blocker; retain the existing fail-closed rule and move
+to deterministic work or a fresh one-target session.
+
+Two current-tree capture attempts measured the first Finder focus successfully, then
+rejected the second focus in the same Observer session with `camera_delta=0.000000`:
+`Khazad` after the Misty/Anduin regional capture and `Fords of Isen` after its regional
+capture. Both sessions otherwise entered live Observer and stopped cleanly. The alternate
+fresh single-target Dale route succeeds, proving this is a repeated Finder/session-state
+limitation rather than a map-load failure. Do not weaken the camera-motion criterion or
+accept the unmatched close frames. A later capture route must deliberately change camera
+state before its second focus and prove that transition; until then, use fresh one-target
+sessions only for targeted evidence.
+
+Follow-up rejection: a bounded same-target wheel-reframe experiment completed its process
+steps but its Fords-of-Isen frame remained a far political view, not the named physical
+theatre. It was removed immediately. Do not treat the driver's centre-delta metric alone
+as sufficient; a future route must also prove feature-scale visual framing.
+
 ## 2026-08-04 — Outer Mordor pass ownership
 
 Status: bounded M2 fidelity finding; no further pass-cell expansion is authorized.

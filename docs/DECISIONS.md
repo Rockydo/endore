@@ -1,5 +1,21 @@
 # Decisions
 
+## 2026-08-04 - Let the native river renderer own water, not terrain channel 6
+
+The owner's close-zoom report correctly identifies the residual failure: an exact
+indexed-raster footprint can still look like painted water when channel 6 resolves to the
+custom still-water material. The installed EU5 material registry labels channel 6 as
+`Rivers/Lakes`, but its ordinary land biomes resolve that channel to dry ground treatments
+such as `grass_scatter_dark_variation_01`; the separate one-pixel indexed `rivers.png`
+graph supplies the rendered water and its `NRivers` width class.
+
+Retain the graph, the source axes, the Great River's widest-class contract, and the subtle
+source-aligned height incision. Remap ENDÓRË channel 6 to that vanilla dry-bank material
+and enforce it in the material generator. Small source ponds continue to use the dedicated
+still-water channel 4; they are not rivers. This is a rendering responsibility fix, not a
+change to canon, coastlines, hydrology, or location ownership. See
+`docs/m2/V124_NATIVE_RIVER_SURFACE_FIX.md`.
+
 ## 2026-08-04 - Make every active named settlement a control witness
 
 Treat each non-ruined record in the source-controlled settlement ledger as evidence of

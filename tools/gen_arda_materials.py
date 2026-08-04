@@ -26,6 +26,7 @@ STILL_WATER_OUT = (
     / "endore"
     / "endore_still_water_diffuse.dds"
 )
+RIVERBANK_MATERIAL = "grass_scatter_dark_variation_01"
 VANILLA_POND_DIFFUSE_SHA256 = (
     "60ab4421f7466dd7f8d2c73eb7ab305fd37b76219a40c60c2360f81fcb4fa613"
 )
@@ -59,7 +60,7 @@ BIOME_BLOCK = r"""
 			base_rock_dark			# 3 mountain coast
 			endore_still_water		# 4 wetland coast / source ponds
 			sand_transition			# 5 coast transition
-			endore_still_water		# 6 source-pinned river surfaces
+			grass_scatter_dark_variation_01	# 6 native rivers/lakes (vanilla-style dry bank)
 			dirt_transition_02		# 7 water transition
 			sediment_dark_01			# 8 cold tundra
 			sediment_orange_01		# 9 dry steppe
@@ -189,6 +190,11 @@ def check() -> list[str]:
     block = actual[actual.index("name = endore_dynamic_land_biome") :]
     if block.split("}", 2)[0].count("# ") != 16:
         failures.append("dynamic land biome does not expose exactly 16 channels")
+    if (
+        f"\t\t\t{RIVERBANK_MATERIAL}\t# 6 native rivers/lakes "
+        "(vanilla-style dry bank)"
+    ) not in block.split("}", 2)[0]:
+        failures.append("channel 6 is not the vanilla-style dry riverbank material")
     if not CITY_OUT.is_file():
         failures.append("missing city material mapping for dynamic land biome")
     elif CITY_OUT.read_text(encoding="utf-8-sig").replace("\r\n", "\n") != CITY_MATERIALS:

@@ -4763,7 +4763,7 @@ biomes = {
 			base_rock_dark			# 3 mountain coast
 			endore_still_water		# 4 wetland coast / source ponds
 			sand_transition			# 5 coast transition
-			endore_still_water		# 6 source-pinned river surfaces
+			grass_scatter_dark_variation_01	# 6 native rivers/lakes (vanilla-style dry bank)
 			dirt_transition_02		# 7 water transition
 			sediment_dark_01			# 8 cold tundra
 			sediment_orange_01		# 9 dry steppe
