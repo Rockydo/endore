@@ -1,5 +1,22 @@
 # ENDÓRË Blockers
 
+## 2026-08-04 — v117 live Finder proof deferred behind Antiquitas
+
+Status: two-strike external coordination blocker; offline driver validation is green,
+but the fresh in-game proof is pending a natural free-slot checkpoint.
+
+ENDÓRË attempted to start its source-targeted Finder verification at 08:17 UTC after
+discovering that the old F11 route could report a no-op focus. Antiquitas correctly held
+the shared EU5 smoke lease. After ENDÓRË completed full offline validation, a second
+natural slot check found Antiquitas in its own mod session (PID 23252), still under the
+same cooperative lease. Neither ENDÓRË attempt launched, waited on, or interfered with
+the other repository.
+
+The corrected Finder route uses the installed clickable control and rejects an unchanged
+central map frame; its unit and full static validation are green. Do not poll or make a
+third immediate game launch. Continue the offline M2 political-fidelity audit and retry
+one fresh visual Observer proof only at the next coherent map checkpoint.
+
 ## 2026-07-28 — Direct centroid locators are rejected after custom-map geometry
 
 Status: resolved in M1.

@@ -2,6 +2,10 @@
 
 ## 2026-08-04
 
+- v117 corrects the evidence driver after direct inspection found its old F11 location
+  shortcut could silently do nothing in Observer mode. The driver now opens the installed
+  clickable Finder and rejects an unchanged central-map frame. Unit coverage and full
+  validation are green; real-game confirmation is pending the cooperative EU5 slot.
 - v115 directly verifies the visual-profile renderer in a fresh real Observer session.
   The far political overview is strategic and flat by design; a close zoom shows actual
   terrain materials, vegetation objects, hills, and exposed rock. A subsequent 45-second

@@ -28,6 +28,10 @@
   materials, and vegetation at close zoom. The strategic political overview remains a
   separate intentionally flat layer; this renderer proof does not replace the source-bound
   v110 physical-feature gate. See `docs/m2/V115_RENDER_VISIBILITY_PROBE.md`.
+- v117 replaces the old unproven Finder shortcut with the installed clickable Finder route
+  and a central-map camera-delta guard. Static validation is green; its first live proof
+  is deferred behind Antiquitas' EU5 lease and recorded in `BLOCKERS.md`. Do not reuse
+  the former F11 route or treat a textual success line as camera evidence.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

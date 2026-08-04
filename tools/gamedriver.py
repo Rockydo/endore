@@ -13,6 +13,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+import numpy as np
 import psutil
 
 TOOLS = Path(__file__).resolve().parent
@@ -1974,8 +1975,30 @@ def key(args: argparse.Namespace) -> int:
     return 0
 
 
+FINDER_TAB = (0.830, 0.140)
+FINDER_OPEN = (0.650, 0.390)
+FINDER_TEXT = (0.835, 0.290)
+MIN_FINDER_CAMERA_DELTA = 0.002
+
+
+def camera_delta_ratio(before, after) -> float:
+    """Measure map-camera change inside a UI-safe central crop."""
+    if before.size != after.size:
+        return 1.0
+    width, height = before.size
+    crop = (
+        round(width * 0.30),
+        round(height * 0.18),
+        round(width * 0.72),
+        round(height * 0.78),
+    )
+    left = np.asarray(before.convert("RGB").crop(crop), dtype=np.int16)
+    right = np.asarray(after.convert("RGB").crop(crop), dtype=np.int16)
+    return float(np.abs(left - right).mean() / 255.0)
+
+
 def focus_location(args: argparse.Namespace) -> int:
-    """Center the live non-debug camera through EU5's native location finder."""
+    """Center the live non-debug camera through EU5's clickable native Finder."""
     import pyautogui
 
     query = args.query.strip()
@@ -1989,9 +2012,24 @@ def focus_location(args: argparse.Namespace) -> int:
             file=sys.stderr,
         )
         return 1
-    activate_window()
-    # SDL scancode 68 is F11; Windows delivers it as scan code 0x57.
-    press_scan_code(0x57)
+    window = activate_window()
+    before = pyautogui.screenshot(
+        region=(window.left, window.top, window.width, window.height)
+    )
+    # The installed EU5 right-panel Finder exposes a reliable two-step clickable
+    # control. The advertised F11 shortcut does not reach the active Observer
+    # viewport on this host, so use the visible control rather than claiming a
+    # focus action that never moved the camera.
+    pyautogui.click(
+        window.left + round(window.width * FINDER_TAB[0]),
+        window.top + round(window.height * FINDER_TAB[1]),
+    )
+    time.sleep(args.open_settle)
+    window = activate_window()
+    pyautogui.click(
+        window.left + round(window.width * FINDER_OPEN[0]),
+        window.top + round(window.height * FINDER_OPEN[1]),
+    )
     time.sleep(args.open_settle)
     # Finder does not consistently transfer keyboard focus to its edit box
     # when another location panel owned focus.  An unfocused write silently
@@ -1999,8 +2037,8 @@ def focus_location(args: argparse.Namespace) -> int:
     # Click the stable search-box interior and replace any retained query.
     window = activate_window()
     pyautogui.click(
-        window.left + round(window.width * 0.86),
-        window.top + round(window.height * 0.22),
+        window.left + round(window.width * FINDER_TEXT[0]),
+        window.top + round(window.height * FINDER_TEXT[1]),
     )
     pyautogui.hotkey("ctrl", "a")
     pyautogui.press("backspace")
@@ -2020,7 +2058,22 @@ def focus_location(args: argparse.Namespace) -> int:
         duration=0.1,
     )
     time.sleep(1)
-    print(f"gamedriver: focused first location matching {query!r}")
+    window = activate_window()
+    after = pyautogui.screenshot(
+        region=(window.left, window.top, window.width, window.height)
+    )
+    delta = camera_delta_ratio(before, after)
+    if delta < MIN_FINDER_CAMERA_DELTA:
+        print(
+            "gamedriver: Finder did not prove a camera transition "
+            f"for {query!r} (delta={delta:.6f})",
+            file=sys.stderr,
+        )
+        return 2
+    print(
+        f"gamedriver: focused first location matching {query!r} "
+        f"(camera_delta={delta:.6f})"
+    )
     if args.capture:
         session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
         target = ROOT / "docs/screens" / session / f"{args.capture}.png"

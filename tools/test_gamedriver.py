@@ -14,6 +14,7 @@ TOOLS = Path(__file__).resolve().parent
 sys.path.insert(0, str(TOOLS))
 
 from gamedriver import (
+    camera_delta_ratio,
     load_game_panel_state,
     main_menu_new_game_button_state,
     mainmenu_game_transition_state,
@@ -102,6 +103,19 @@ def main() -> int:
         require(
             json.loads(settings.read_text(encoding="utf-8")) == original_settings,
             "smoke settings restoration must reproduce the exact player payload",
+        )
+
+        unchanged = Image.new("RGB", (1000, 600), (42, 80, 36))
+        require(
+            camera_delta_ratio(unchanged, unchanged.copy()) == 0.0,
+            "an unchanged Finder frame must never prove a camera transition",
+        )
+        moved = unchanged.copy()
+        moved_draw = ImageDraw.Draw(moved)
+        moved_draw.rectangle((350, 200, 650, 400), fill=(130, 90, 30))
+        require(
+            camera_delta_ratio(unchanged, moved) > 0.002,
+            "a material map-camera change must exceed the Finder delta floor",
         )
 
         debug = Path(directory) / "debug.log"

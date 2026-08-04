@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-08-04 — Prove Finder camera moves before accepting map evidence
+
+The installed UI exposes Finder through a clickable right-panel control. The previously
+used F11 route can return without opening it in the active Observer viewport, so a tool
+message alone is not evidence of focus. Use the clickable control and compare a
+UI-safe central-map crop before and after selection; reject the capture if its measured
+camera delta is below the committed threshold. The first live confirmation may wait for
+the shared EU5 lease, but no future source-bound capture may use the retired route.
+
 ## 2026-08-04 — Distinguish strategic overlay from close physical rendering
 
 Treat a flat-looking far-zoom political overview as evidence only of the strategic map
