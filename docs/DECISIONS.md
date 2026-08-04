@@ -1,5 +1,16 @@
 # Decisions
 
+## 2026-08-04 - Make the full political review fail closed without inventing borders
+
+Bind six source-led political review envelopes to the generated ownership model: the Gap
+of Rohan, Lothlórien/Moria, Dale/Lonely Mountain, Mordor/Ithilien, East/South, and the
+represented Far Harad fringe. Each envelope permits only reviewed owners, requires local
+polities that the TA 3018 map actually represents, and requires named landmark witnesses
+to remain within its documented source scope. These envelopes are validation-only: they
+cannot allocate a cell, expand a country, or convert uncertain wilderness into a tidy
+colour block. Claim polygons and exact landmark contracts remain the only allocation
+authority. See `docs/m2/V128_FRONTIER_THEATRE_AUDIT.md`.
+
 ## 2026-08-04 - Add source-pinned frontier names before redrawing a border
 
 Use exact ArdaCraft markers to improve the map's political readability where a named

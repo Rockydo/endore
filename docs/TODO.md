@@ -74,8 +74,12 @@
   Lothlórien, Rohan, Moria, and the upper Anduin; it corrects Hollin Ridge to wild
   Eregion. Full validation and paired smoke are green on
   `580fe4052808c55a15601f170154babfbbc9d866f2671ab021103705c94af9c6`.
-- Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
-  Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
+- v128 converts the complete political review into six checked source theatres: Gap of
+  Rohan; Lothlórien/Moria; Dale/Lonely Mountain; Mordor/Ithilien; East/South; and the
+  represented Far Harad fringe. It preserves broad wilderness and does not allocate cells
+  from a review rectangle. Future map work must pass its owner-containment, required-realm,
+  and named-witness checks; see `docs/m2/V128_FRONTIER_THEATRE_AUDIT.md`.
+- Next: reconcile only a source-specific political mismatch inside those audited theatres.
   Any ownership correction must preserve the accepted coast, relief, forests, and river
   controls and be documented as a source-specific judgement. M2 remains red pending the
   full physical/political fidelity gate; do not resume gameplay content.

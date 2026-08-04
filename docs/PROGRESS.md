@@ -2,6 +2,14 @@
 
 ## 2026-08-04
 
+- v128 turns the requested full political review into a checked, source-led six-theatre
+  control ledger. The Gap of Rohan, Lothlórien/Moria, Dale/Lonely Mountain,
+  Mordor/Ithilien, East/South, and the represented Far Harad fringe each have a bounded
+  review scope, explicit permitted/required owners, named source witnesses, and cited
+  basis. These scopes are validation envelopes, never broad claim polygons: 2,977
+  uncertain land cells remain deliberately wild. The complete world check passes with 38
+  realms, 3,027 assigned cells, and 2,977 wild cells in 154.5 seconds. See
+  `docs/m2/V128_FRONTIER_THEATRE_AUDIT.md`.
 - v127 expands the frontier gazetteer/control ledger from 89 to 96 exact source-pinned
   landmarks. Ford of Bruinen, Egladil, East Wall of Rohan, Old Ford, and Redhorn Pass
   gain correct player-facing locations; Hollin Ridge is corrected from a nearest-Ranger

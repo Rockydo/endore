@@ -27,6 +27,11 @@ about Middle-earth.
 
 ## M3 realms and gazetteer
 
+- † The six frontier-theatre rectangles are source-led review envelopes, not surveyed
+  borders or allocation inputs. They prevent unreviewed owner leakage and require named
+  local witnesses while retaining ambiguous frontier cells as wild. The represented East,
+  South, and Far Harad fringe remain especially sparse extrapolations bounded by their
+  documented source markers.
 - † The exact generated cells for the East Wall of Rohan and Old Ford sit on the
   Rohan/Beorning sides of source-traced river frontiers. Those point controls do not
   survey adjacent banks or convert the natural frontier into a broad polygon claim.

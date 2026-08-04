@@ -40,6 +40,7 @@ from worldgen import (
 REALMS_CSV = ROOT / "docs/world/realms.csv"
 LANDMARKS_CSV = ROOT / "docs/world/control/m3_landmarks.csv"
 LANDMARK_CONTROL_CSV = ROOT / "docs/world/control/m3_landmark_control.csv"
+FRONTIER_THEATRES_CSV = ROOT / "docs/world/control/m3_frontier_theatres.csv"
 NAME_LOCK_CSV = ROOT / "docs/world/control/m3_name_lock.csv"
 OWNERSHIP_CSV = DERIVED / "m3_ownership.csv"
 OWNERSHIP_AUDIT_CSV = DERIVED / "m3_ownership_audit.csv"
@@ -400,11 +401,47 @@ POLITICAL_SILHOUETTE_CONTRACTS: dict[
         (0.445, 0.480, 0.420, 0.480),
         "Isengard must remain a compact Nan Curunir holding, not a state-sized strip",
     ),
+    "DUN": (
+        30,
+        45,
+        (0.414, 0.456, 0.400, 0.508),
+        "Dunland must remain an irregular lowland west of the Isen, not a block across the Gap",
+    ),
+    "LOR": (
+        12,
+        18,
+        (0.498, 0.527, 0.326, 0.386),
+        "Lothlorien must remain within the Golden Wood/Naith east of the Misty crest",
+    ),
+    "MOA": (
+        20,
+        28,
+        (0.470, 0.503, 0.303, 0.368),
+        "Moria must remain a compact Misty Mountain hold and immediate approaches",
+    ),
     "ERE": (
         7,
         12,
         (0.585, 0.614, 0.118, 0.148),
         "Erebor must remain a compact Lonely Mountain holding, not an east-west strip",
+    ),
+    "DAL": (
+        18,
+        25,
+        (0.592, 0.636, 0.138, 0.218),
+        "Dale must remain the upper Celduin vale distinct from Erebor and Lake-town",
+    ),
+    "ESG": (
+        22,
+        30,
+        (0.589, 0.623, 0.159, 0.219),
+        "Esgaroth must remain the Long Lake shore league, not absorb Dale or Erebor",
+    ),
+    "IRO": (
+        40,
+        50,
+        (0.645, 0.707, 0.121, 0.190),
+        "Iron Hills must remain a separate eastern dwarf cluster, not an extension of Erebor",
     ),
     "MOR": (
         260,
@@ -951,6 +988,21 @@ class Landmark:
     reserve_generated_slot: bool
 
 
+@dataclass(frozen=True)
+class FrontierTheatre:
+    """A source-led political review envelope, never a cadastral claim."""
+
+    key: str
+    x_min: float
+    x_max: float
+    y_min: float
+    y_max: float
+    allowed_owners: frozenset[str]
+    required_owners: frozenset[str]
+    required_landmarks: frozenset[str]
+    source_basis: str
+
+
 @dataclass
 class RealmState:
     model: WorldModel
@@ -1105,6 +1157,74 @@ def load_landmarks() -> tuple[Landmark, ...]:
         )
         for row in rows
     )
+
+
+@lru_cache(maxsize=1)
+def frontier_theatres() -> tuple[FrontierTheatre, ...]:
+    """Load the six owner-requested source-review political theatres.
+
+    The boxes are audit scopes, not allocation inputs. Realm claims remain governed
+    by the narrower source zones and claim polygons; the audit prevents unrelated
+    realm leakage while preserving canonically uncertain wilderness.
+    """
+
+    with FRONTIER_THEATRES_CSV.open("r", encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    theatres: list[FrontierTheatre] = []
+    seen: set[str] = set()
+    for row in rows:
+        key = (row.get("theatre") or "").strip()
+        source_basis = (row.get("source_basis") or "").strip()
+        if not key or key in seen or not source_basis:
+            raise ValueError("frontier theatre row lacks a unique key or source basis")
+        seen.add(key)
+        try:
+            x_min = float(row["x_min"])
+            x_max = float(row["x_max"])
+            y_min = float(row["y_min"])
+            y_max = float(row["y_max"])
+        except (KeyError, TypeError, ValueError) as error:
+            raise ValueError(f"frontier theatre {key} has invalid bounds") from error
+        if not (0.0 <= x_min < x_max <= 1.0 and 0.0 <= y_min < y_max <= 1.0):
+            raise ValueError(f"frontier theatre {key} bounds are outside the map")
+
+        def split(field: str) -> frozenset[str]:
+            return frozenset(
+                value.strip()
+                for value in (row.get(field) or "").split("|")
+                if value.strip()
+            )
+
+        allowed_owners = split("allowed_owners")
+        required_owners = split("required_owners")
+        required_landmarks = split("required_landmarks")
+        if not allowed_owners or not required_owners or not required_landmarks:
+            raise ValueError(f"frontier theatre {key} lacks a required review column")
+        if not required_owners <= allowed_owners:
+            raise ValueError(f"frontier theatre {key} requires an owner outside its allowlist")
+        theatres.append(
+            FrontierTheatre(
+                key=key,
+                x_min=x_min,
+                x_max=x_max,
+                y_min=y_min,
+                y_max=y_max,
+                allowed_owners=allowed_owners,
+                required_owners=required_owners,
+                required_landmarks=required_landmarks,
+                source_basis=source_basis,
+            )
+        )
+    if {theatre.key for theatre in theatres} != {
+        "gap_of_rohan",
+        "lothlorien_moria",
+        "dale_and_lonely_mountain",
+        "mordor_ithilien_approaches",
+        "east_and_south",
+        "far_harad_fringe",
+    }:
+        raise ValueError("frontier theatre ledger no longer covers the complete M2 review")
+    return tuple(theatres)
 
 
 @lru_cache(maxsize=1)
@@ -2282,6 +2402,8 @@ def manifest(state: RealmState) -> str:
             + LANDMARKS_CSV.read_bytes()
             + b"\0"
             + LANDMARK_CONTROL_CSV.read_bytes()
+            + b"\0"
+            + FRONTIER_THEATRES_CSV.read_bytes()
         ).hexdigest(),
     }
     return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
@@ -2518,6 +2640,58 @@ def check() -> list[str]:
                 f"frontier claim exception {ref}->{required_owner} disagrees with "
                 f"required owner {contract[0]}: {source}"
             )
+    landmark_by_ref = {landmark.ref: landmark for landmark in load_landmarks()}
+    known_owners = set(tags) | {WILD}
+    for theatre in frontier_theatres():
+        unknown_owners = theatre.allowed_owners - known_owners
+        if unknown_owners:
+            failures.append(
+                f"frontier theatre {theatre.key} allows unknown owners: "
+                f"{sorted(unknown_owners)}"
+            )
+            continue
+        theatre_locations = [
+            location
+            for location in state.model.locations
+            if location.kind == "land"
+            and theatre.x_min <= location.normalized[0] <= theatre.x_max
+            and theatre.y_min <= location.normalized[1] <= theatre.y_max
+        ]
+        actual_owners = {
+            state.ownership[location.key] for location in theatre_locations
+        }
+        leaked_owners = actual_owners - theatre.allowed_owners
+        if leaked_owners:
+            failures.append(
+                f"frontier theatre {theatre.key} has unreviewed owner leakage "
+                f"{sorted(leaked_owners)} outside {sorted(theatre.allowed_owners)}"
+            )
+        missing_owners = theatre.required_owners - actual_owners
+        if missing_owners:
+            failures.append(
+                f"frontier theatre {theatre.key} lost required reviewed owners "
+                f"{sorted(missing_owners)}"
+            )
+        for ref in theatre.required_landmarks:
+            landmark = landmark_by_ref.get(ref)
+            contract = landmark_owner_contracts().get(ref)
+            if landmark is None or contract is None:
+                failures.append(
+                    f"frontier theatre {theatre.key} has unresolved landmark {ref}"
+                )
+                continue
+            if not (
+                theatre.x_min <= landmark.x <= theatre.x_max
+                and theatre.y_min <= landmark.y <= theatre.y_max
+            ):
+                failures.append(
+                    f"frontier theatre {theatre.key} landmark {ref} escapes its source review box"
+                )
+            if contract[0] not in theatre.allowed_owners:
+                failures.append(
+                    f"frontier theatre {theatre.key} landmark {ref} requires "
+                    f"{contract[0]}, outside its reviewed owner set"
+                )
     unreviewed_components = {
         tag: [
             row
