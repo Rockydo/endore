@@ -9,6 +9,7 @@ import hashlib
 import io
 import json
 import re
+import subprocess
 import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass
@@ -38,6 +39,7 @@ from worldgen import (
 
 REALMS_CSV = ROOT / "docs/world/realms.csv"
 LANDMARKS_CSV = ROOT / "docs/world/control/m3_landmarks.csv"
+NAME_LOCK_CSV = ROOT / "docs/world/control/m3_name_lock.csv"
 OWNERSHIP_CSV = DERIVED / "m3_ownership.csv"
 OWNERSHIP_AUDIT_CSV = DERIVED / "m3_ownership_audit.csv"
 OWNERSHIP_AUDIT_JSON = DERIVED / "m3_ownership_audit.json"
@@ -407,9 +409,30 @@ FRONTIER_LANDMARK_EXCLUSIONS: dict[str, frozenset[str]] = {
     "fords_of_isen": frozenset({"ISE"}),
 }
 # Named frontier sites provide more durable political witnesses than generated
-# location IDs.  These four rulings correct exact source anchors whose nearest-seat
-# allocation contradicts their TA 3018 control or an explicit physical frontier.
+# location IDs. These rulings correct exact source anchors whose nearest-seat
+# allocation contradicts their TA 3018 control, settled-land boundary, or an
+# explicit physical frontier.
 FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
+    "frogmorton": (
+        "SHI",
+        "Frogmorton is a named East Road village within the Shire",
+    ),
+    "stock": (
+        "SHI",
+        "Stock is the eastern Shire village on the road toward Buckland",
+    ),
+    "haysend": (
+        "SHI",
+        "Haysend is a Buckland settlement within the Shire's protection",
+    ),
+    "old_forest": (
+        WILD,
+        "the Old Forest lies beyond the settled Shire and is not compact Bree-land",
+    ),
+    "nardol": (
+        "GON",
+        "Nardol is one of the maintained warning beacons of Gondor",
+    ),
     "osgiliath": (
         "GON",
         "Gondor garrisons the ruined Anduin crossing before the June 3018 assault",
@@ -1234,6 +1257,46 @@ def next_generated_name(
             return name
 
 
+def load_name_lock(model: WorldModel) -> dict[str, str]:
+    """Read the frozen pre-frontier-review generic-name ledger."""
+    if not NAME_LOCK_CSV.is_file():
+        raise ValueError(f"missing M3 name lock {NAME_LOCK_CSV.relative_to(ROOT)}")
+    rows = list(csv.DictReader(NAME_LOCK_CSV.open(encoding="utf-8", newline="")))
+    locked = {row["location"]: row["name"] for row in rows}
+    keys = {location.key for location in model.locations}
+    if set(locked) != keys or len(locked) != len(rows):
+        raise ValueError("M3 name lock must cover every current location exactly once")
+    if len(set(locked.values())) != len(locked):
+        raise ValueError("M3 name lock contains duplicate names")
+    return locked
+
+
+def write_name_lock() -> None:
+    """Bootstrap an immutable name ledger from the committed pre-review gazetteer."""
+    if NAME_LOCK_CSV.exists():
+        raise ValueError(f"refusing to overwrite existing {NAME_LOCK_CSV.relative_to(ROOT)}")
+    relative = GAZETTEER_CSV.relative_to(ROOT).as_posix()
+    result = subprocess.run(
+        ["git", "show", f"HEAD:{relative}"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    rows = list(csv.DictReader(io.StringIO(result.stdout)))
+    expected_keys = {location.key for location in build_model().locations}
+    locked = {row["location"]: row["name"] for row in rows}
+    if set(locked) != expected_keys or len(locked) != len(rows):
+        raise ValueError("committed gazetteer cannot seed complete M3 name lock")
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(("location", "name"))
+    for row in rows:
+        writer.writerow((row["location"], row["name"]))
+    NAME_LOCK_CSV.write_text(output.getvalue(), encoding="utf-8")
+
+
 def all_location_names(
     model: WorldModel,
     ownership: dict[str, str],
@@ -1241,10 +1304,12 @@ def all_location_names(
     landmark_by_location: dict[str, Landmark],
 ) -> tuple[dict[str, str], dict[str, str], dict[str, str]]:
     anchor_by_name = {anchor.name: anchor for anchor in load_anchors()}
+    locked_names = load_name_lock(model)
     names: dict[str, str] = {}
     ranks: dict[str, str] = {}
     sources: dict[str, str] = {}
     used: set[str] = set()
+    reserved_names = set(locked_names.values())
     counters: Counter[tuple[str, str]] = Counter()
     for location in model.locations:
         if location.anchor:
@@ -1264,18 +1329,21 @@ def all_location_names(
                 # A post-baseline canonical replacement occupies the generic slot it
                 # displaced. This keeps every unrelated generated name and every
                 # source-bound camera query stable when the gazetteer expands.
-                next_generated_name(style, location.kind, counters, used)
+                next_generated_name(style, location.kind, counters, reserved_names | used)
             name = landmark.name
             rank = landmark.rank
             source = landmark.source
         else:
+            name = locked_names.get(location.key)
+            if name is None:
+                owner = ownership[location.key]
+                style = (
+                    by_tag[owner].style
+                    if owner != WILD
+                    else REGION_STYLE[location.region]
+                )
+                name = next_generated_name(style, location.kind, counters, reserved_names | used)
             owner = ownership[location.key]
-            style = (
-                by_tag[owner].style
-                if owner != WILD
-                else REGION_STYLE[location.region]
-            )
-            name = next_generated_name(style, location.kind, counters, used)
             rank = "wilderness" if owner == WILD else "place"
             source = "† M3 regional lexicon"
         if name in used:
@@ -2198,13 +2266,18 @@ def check() -> list[str]:
             target == realm.tag
             for target, _, _, _ in REVIEWED_COMPONENT_REPAIRS.values()
         )
+        frontier_allowance = sum(
+            target == realm.tag
+            for target, _ in FRONTIER_LANDMARK_REQUIRED_OWNERS.values()
+        )
         if (
             realm.max_locations
-            and count > realm.max_locations + reviewed_allowance
+            and count > realm.max_locations + reviewed_allowance + frontier_allowance
         ):
             failures.append(
                 f"{realm.tag} owns {count}, above allocator cap "
-                f"{realm.max_locations} plus {reviewed_allowance} reviewed repairs"
+                f"{realm.max_locations} plus {reviewed_allowance} reviewed repairs and "
+                f"{frontier_allowance} named-frontier witnesses"
             )
     if sum(value == "IRO" for value in state.ownership.values()) < 12:
         failures.append("Iron Hills lacks a viable source-side territorial cluster")
@@ -2344,10 +2417,18 @@ def check() -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    mode = parser.add_mutually_exclusive_group(required=True)
+    mode = parser.add_mutually_exclusive_group(required=False)
     mode.add_argument("--write", action="store_true")
     mode.add_argument("--check", action="store_true")
+    parser.add_argument("--write-name-lock", action="store_true")
     args = parser.parse_args()
+    if args.write_name_lock:
+        if args.write or args.check:
+            parser.error("--write-name-lock cannot be combined with --write/--check")
+        write_name_lock()
+        return 0
+    if not args.write and not args.check:
+        parser.error("one of --write, --check, or --write-name-lock is required")
     if args.write:
         write()
         return 0

@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3030,
-  "wild_locations": 2170,
+  "owned_locations": 3031,
+  "wild_locations": 2169,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -223,9 +223,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 23,
+      "locations": 21,
       "eligible_locations": 51,
-      "claim_fill_fraction": 0.45098,
+      "claim_fill_fraction": 0.411765,
       "forced_anchors": 1,
       "final_bbox": [
         0.3811966,
@@ -236,12 +236,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 23,
+        "largest_component": 21,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 23,
+            "size": 21,
             "forced_anchors": 1,
             "sample": [
               "me_bree",
@@ -476,29 +476,28 @@
       "source_zone": "druadan",
       "source_dilation_pixels": 8,
       "claim_polygon": null,
-      "locations": 3,
+      "locations": 2,
       "eligible_locations": 9,
-      "claim_fill_fraction": 0.333333,
+      "claim_fill_fraction": 0.222222,
       "forced_anchors": 1,
       "final_bbox": [
         0.5626374,
         0.571917,
         0.5828041,
-        0.5974597
+        0.5945286
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 3,
+        "largest_component": 2,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 3,
+            "size": 2,
             "forced_anchors": 1,
             "sample": [
               "me_land_0798",
-              "me_land_1269",
               "me_land_2658"
             ],
             "locations": [],
@@ -816,9 +815,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 413,
+      "locations": 414,
       "eligible_locations": 782,
-      "claim_fill_fraction": 0.528133,
+      "claim_fill_fraction": 0.529412,
       "forced_anchors": 9,
       "final_bbox": [
         0.354823,
@@ -829,12 +828,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 2,
-        "largest_component": 411,
-        "largest_component_fraction": 0.995157,
+        "largest_component": 412,
+        "largest_component_fraction": 0.995169,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 411,
+            "size": 412,
             "forced_anchors": 9,
             "sample": [
               "calembel",
@@ -2224,46 +2223,35 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 68,
+      "locations": 71,
       "eligible_locations": 110,
-      "claim_fill_fraction": 0.618182,
+      "claim_fill_fraction": 0.645455,
       "forced_anchors": 3,
       "final_bbox": [
         0.3203907,
-        0.376801,
+        0.3851038,
         0.2056668,
         0.2823644
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 2,
-        "largest_component": 67,
-        "largest_component_fraction": 0.985294,
+        "components": 1,
+        "largest_component": 71,
+        "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 67,
-            "forced_anchors": 2,
+            "size": 71,
+            "forced_anchors": 3,
             "sample": [
+              "bucklebury",
               "hobbiton",
+              "me_land_0181",
               "me_land_0407",
-              "me_land_0468",
-              "me_land_0487",
-              "me_land_0524"
+              "me_land_0468"
             ],
             "locations": [],
             "disposition": "primary_component"
-          },
-          {
-            "size": 1,
-            "forced_anchors": 1,
-            "sample": [
-              "bucklebury"
-            ],
-            "locations": [
-              "bucklebury"
-            ],
-            "disposition": "accepted_forced_anchor_barrier_split"
           }
         ]
       },
@@ -2477,12 +2465,12 @@
   "all_realm_connectivity": {
     "GON": {
       "components": 2,
-      "largest_component": 411,
-      "largest_component_fraction": 0.995157,
+      "largest_component": 412,
+      "largest_component_fraction": 0.995169,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 411,
+          "size": 412,
           "forced_anchors": 9,
           "sample": [
             "calembel",
@@ -2552,45 +2540,34 @@
       ]
     },
     "SHI": {
-      "components": 2,
-      "largest_component": 67,
-      "largest_component_fraction": 0.985294,
+      "components": 1,
+      "largest_component": 71,
+      "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 67,
-          "forced_anchors": 2,
+          "size": 71,
+          "forced_anchors": 3,
           "sample": [
+            "bucklebury",
             "hobbiton",
+            "me_land_0181",
             "me_land_0407",
-            "me_land_0468",
-            "me_land_0487",
-            "me_land_0524"
+            "me_land_0468"
           ],
           "locations": [],
           "disposition": "primary_component"
-        },
-        {
-          "size": 1,
-          "forced_anchors": 1,
-          "sample": [
-            "bucklebury"
-          ],
-          "locations": [
-            "bucklebury"
-          ],
-          "disposition": "accepted_forced_anchor_barrier_split"
         }
       ]
     },
     "BRE": {
       "components": 1,
-      "largest_component": 23,
+      "largest_component": 21,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 23,
+          "size": 21,
           "forced_anchors": 1,
           "sample": [
             "me_bree",
@@ -3006,16 +2983,15 @@
     },
     "DRU": {
       "components": 1,
-      "largest_component": 3,
+      "largest_component": 2,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 3,
+          "size": 2,
           "forced_anchors": 1,
           "sample": [
             "me_land_0798",
-            "me_land_1269",
             "me_land_2658"
           ],
           "locations": [],

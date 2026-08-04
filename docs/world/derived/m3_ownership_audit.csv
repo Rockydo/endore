@@ -221,7 +221,7 @@ me_land_0177,ROH,0.5501832,0.5192965,me_rohan_region,1,0.1047913,no,"The Mark be
 me_land_0178,UMB,0.4844933,0.9037616,me_umbar_region,9,0.0595640,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_0179,WILD,0.8305250,0.0835369,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
 me_land_0180,MOR,0.7076923,0.5979482,me_mordor_region,8,0.1296053,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
-me_land_0181,WILD,0.3731380,0.2256961,me_shire_breeland_region,1,,no,deliberately unclaimed,wild_buffer
+me_land_0181,SHI,0.3731380,0.2256961,me_shire_breeland_region,1,0.0539096,no,Frogmorton is a named East Road village within the Shire,accepted_required_frontier_owner
 me_land_0182,MOR,0.7113553,0.6389839,me_mordor_region,8,0.1496851,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_0183,WILD,0.5633700,0.1284807,me_grey_mountains_region,3,,no,deliberately unclaimed,wild_unclaimed
 me_land_0184,WILD,0.3946276,0.4655594,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
@@ -1102,7 +1102,7 @@ me_land_1058,GON,0.6039072,0.7366878,me_south_gondor_region,9,0.1355476,no,Gondo
 me_land_1059,WILD,0.6371184,0.2950660,me_mirkwood_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_1060,UMB,0.5536020,0.8812897,me_umbar_region,9,0.1033710,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_1061,WILD,0.5181929,0.2833415,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_buffer
-me_land_1062,BRE,0.3851038,0.2491451,me_shire_breeland_region,6,0.0390418,no,Bree-land's four-village crossroads,accepted_source_side_envelope
+me_land_1062,SHI,0.3851038,0.2491451,me_shire_breeland_region,6,0.0802470,no,Haysend is a Buckland settlement within the Shire's protection,accepted_required_frontier_owner
 me_land_1063,RH3,0.7819292,0.1235955,me_rhun_region,1,0.1078666,no,northeastern Rhûn confederation beyond the Iron Hills,accepted_frontier_polygon
 me_land_1064,DAM,0.4923077,0.6189546,me_belfalas_region,1,0.0542954,no,Dol Amroth and Belfalas peninsula,accepted_source_side_envelope
 me_land_1065,WILD,0.3853480,0.4797264,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
@@ -1309,7 +1309,7 @@ me_land_1265,RHU,0.7667888,0.2628236,me_rhun_region,9,0.0143420,no,western Rhûn
 me_land_1266,DAM,0.5118437,0.7147044,me_belfalas_region,1,0.0618181,no,Dol Amroth and Belfalas peninsula,accepted_source_side_envelope
 me_land_1267,GUN,0.4896215,0.0928188,me_angmar_region,5,0.0272218,no,Gundabad and the northern mountain junction,accepted_source_side_envelope
 me_land_1268,WILD,0.5792430,0.1157792,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
-me_land_1269,DRU,0.5687424,0.5974597,me_anorien_region,1,0.0118999,no,Arda Maps Drúadan Forest physical woodland polygon; Drúadan Forest and Stonewain approaches,accepted_source_zone_overlap
+me_land_1269,GON,0.5687424,0.5974597,me_anorien_region,1,0.0233840,no,Nardol is one of the maintained warning beacons of Gondor,accepted_required_frontier_owner
 me_land_1270,GON,0.5067155,0.5627748,me_belfalas_region,1,0.1509177,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_1271,MOR,0.6761905,0.6409380,me_mordor_region,8,0.0931554,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_1272,WILD,0.5694750,0.4479726,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -3538,7 +3538,7 @@ me_land_3494,WILD,0.3714286,0.1807523,me_north_arnor_region,1,,no,deliberately u
 me_land_3495,KHA,0.7606838,0.7845628,me_khand_region,9,0.0474317,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_3496,WILD,0.5272283,0.3742062,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_3497,GON,0.4688645,0.5842697,me_belfalas_region,1,0.2202714,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
-me_land_3498,WILD,0.3741148,0.2354665,me_shire_breeland_region,1,,no,deliberately unclaimed,wild_buffer
+me_land_3498,SHI,0.3741148,0.2354665,me_shire_breeland_region,1,0.0561012,no,Stock is the eastern Shire village on the road toward Buckland,accepted_required_frontier_owner
 me_land_3499,LOS,0.3179487,0.0503175,me_forochel_region,5,0.0502014,no,Lossoth settlements around the Icebay,accepted_source_side_envelope
 me_land_3500,GON,0.5665446,0.5686370,me_anorien_region,1,0.0485819,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_3501,HNE,0.6205128,0.8192477,me_near_harad_region,1,0.0449387,no,Harnendor between the Poros approaches and the Harnen,accepted_frontier_polygon
@@ -4430,7 +4430,7 @@ me_land_4386,WILD,0.7330891,0.4963361,me_rhun_region,9,,no,deliberately unclaime
 me_land_4387,WILD,0.6083028,0.0688813,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
 me_land_4388,RAN,0.4744811,0.2755252,me_north_arnor_region,1,0.0056218,yes,The Angle and immediate Ranger refuge,accepted_forced_anchor
 me_land_4389,WILD,0.6954823,0.0439668,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
-me_land_4390,BRE,0.3880342,0.2442599,me_shire_breeland_region,3,0.0316821,no,Bree-land's four-village crossroads,accepted_source_side_envelope
+me_land_4390,WILD,0.3880342,0.2442599,me_shire_breeland_region,3,,no,the Old Forest lies beyond the settled Shire and is not compact Bree-land,accepted_required_frontier_owner
 me_land_4391,WILD,0.5240537,0.3610161,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_4392,WILD,0.6078144,0.6375183,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
 me_land_4393,RH2,0.7958486,0.4005862,me_rhun_region,9,0.0512631,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon

@@ -1,5 +1,17 @@
 # ENDÓRË Blockers
 
+## 2026-08-04 — Outer Mordor pass ownership
+
+Status: bounded M2 fidelity finding; no further pass-cell expansion is authorized.
+
+Two explicit textual frontier candidates, Cirith Gorgor and Shelob's Lair, both resolve
+outside the hash-pinned Ered Lithui/Ephel Duath Mordor enclosure. The generator correctly
+rejected each proposed MOR assignment before any output was written. The neighbouring
+fortress/gate locations Narchost, Carchost, Cirith Ungol, and Durthang remain MOR. Do not
+widen the enclosure or add a special-case claim just to colour the exact pass cells; this
+would trade a source-tested mountain border for a cosmetic political fill. Record the
+outer passes as wild and continue the independent political audit.
+
 ## 2026-08-04 — v117 native Finder text automation
 
 Status: two-strike UI-automation blocker; fail-closed driver retained, direct source-targeted

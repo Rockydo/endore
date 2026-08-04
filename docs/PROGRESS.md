@@ -2,6 +2,18 @@
 
 ## 2026-08-04
 
+- v118's political frontier audit found and corrected five named TA 3018 ownership
+  mistakes: three Shire settlements, the Old Forest, and Nardol. The Black Gate and
+  Shelob's pass cells remain wild because they lie just outside the frozen Mordor
+  enclosure, while their adjacent gate/fortress cells remain Mordor-controlled. The
+  changes are exact anchor contracts with textual support, not a broad sovereignty redraw;
+  uncertain Ithilien and borderlands remain wild. The source table is
+  in `docs/m2/V118_POLITICAL_FRONTIER_WITNESSES.md`.
+- The same batch freezes `m3_name_lock.csv` from the last committed gazetteer, so a later
+  ownership correction cannot renumber or rename unrelated places. Full validation passes
+  with 38 realms / 3,031 assigned / 2,973 wild locations, and paired vanilla/ENDÓRË smoke
+  passes on fingerprint `4d178c64753968d8166cb05375e5b44e0a25aaf9eac913f53cc502be525cdab4`
+  with zero new mod-unique error-log lines.
 - v117's fresh no-debug Observer session confirms close 3D ground and vegetation render
   correctly and plays for 45 seconds. Its Finder route now uses the installed clickable
   controls, records a query readback, and fails closed on no motion. The native edit box

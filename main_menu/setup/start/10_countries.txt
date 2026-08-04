@@ -119,6 +119,7 @@ countries = {
 				me_land_1213
 				me_land_1217
 				me_land_1228
+				me_land_1269
 				me_land_1270
 				me_land_1280
 				me_land_1285
@@ -974,6 +975,7 @@ countries = {
 			own_control_core = {
 				bucklebury
 				hobbiton
+				me_land_0181
 				me_land_0407
 				me_land_0468
 				me_land_0487
@@ -987,6 +989,7 @@ countries = {
 				me_land_0966
 				me_land_0989
 				me_land_0998
+				me_land_1062
 				me_land_1073
 				me_land_1195
 				me_land_1253
@@ -1013,6 +1016,7 @@ countries = {
 				me_land_2992
 				me_land_3013
 				me_land_3335
+				me_land_3498
 				me_land_3524
 				me_land_3566
 				me_land_3597
@@ -1142,7 +1146,6 @@ countries = {
 				me_land_0635
 				me_land_0900
 				me_land_0933
-				me_land_1062
 				me_land_1111
 				me_land_1334
 				me_land_1400
@@ -1156,7 +1159,6 @@ countries = {
 				me_land_3828
 				me_land_3869
 				me_land_3887
-				me_land_4390
 				me_land_4714
 				me_land_4738
 				me_land_5010
@@ -3249,7 +3251,6 @@ countries = {
 		DRU = { # Drúadan Forest
 			own_control_core = {
 				me_land_0798
-				me_land_1269
 				me_land_2658
 			}
 			starting_technology_level = 3

@@ -43,6 +43,26 @@ map, so their blank spaces cannot authorize speculative political expansion. Pre
 wildland buffers unless a canonical strategic anchor or specific physical frontier supports
 an ownership correction.
 
+## 2026-08-04 — Correct political map by named frontier witnesses
+
+Use the source-pinned gazetteer to repair only exact TA 3018 control mistakes which have
+an explicit textual basis. The v118 review moves Frogmorton, Stock, Haysend, and Nardol
+to their evidenced owners, and removes Bree-land's spurious claim on the Old Forest.
+Cirith Gorgor and Shelob's Lair stay wild because their exact pass cells are outside the
+frozen Mordor enclosure, even though the surrounding gate/fortress cells are
+Mordor-controlled. This does not turn geographic maps into a speculative global
+sovereignty layer: empty Ithilien and other uncertain frontiers remain wild.
+See `docs/m2/V118_POLITICAL_FRONTIER_WITNESSES.md`.
+
+## 2026-08-04 — Freeze generic names across political corrections
+
+`docs/world/control/m3_name_lock.csv` records the complete last-committed gazetteer before
+the first named-frontier reassignment. Generic location names must read from that ledger;
+canonical anchors and newly named landmarks may still override their own entries. This
+prevents a five-cell ownership correction from shifting thousands of unrelated generated
+names and keeps source-bound camera evidence stable. The one-time bootstrap refuses to
+overwrite an existing lock.
+
 ## 2026-08-04 — Erebor evidence framing
 
 Preserve Erebor as the compact isolated source-pinned summit at its exact Ardacraft

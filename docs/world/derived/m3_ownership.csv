@@ -221,7 +221,7 @@ me_land_0177,land,me_rohan_region,ROH,owned
 me_land_0178,land,me_umbar_region,UMB,owned
 me_land_0179,land,me_northern_wastes_region,WILD,wild_forodwaith
 me_land_0180,land,me_mordor_region,MOR,owned
-me_land_0181,land,me_shire_breeland_region,WILD,wild_buffer
+me_land_0181,land,me_shire_breeland_region,SHI,owned
 me_land_0182,land,me_mordor_region,MOR,owned
 me_land_0183,land,me_grey_mountains_region,WILD,wild_unclaimed
 me_land_0184,land,me_enedwaith_region,WILD,wild_enedwaith
@@ -1102,7 +1102,7 @@ me_land_1058,land,me_south_gondor_region,GON,owned
 me_land_1059,land,me_mirkwood_region,WILD,wild_unclaimed
 me_land_1060,land,me_umbar_region,UMB,owned
 me_land_1061,land,me_anduin_vale_region,WILD,wild_buffer
-me_land_1062,land,me_shire_breeland_region,BRE,owned
+me_land_1062,land,me_shire_breeland_region,SHI,owned
 me_land_1063,land,me_rhun_region,RH3,owned
 me_land_1064,land,me_belfalas_region,DAM,owned
 me_land_1065,land,me_enedwaith_region,WILD,wild_enedwaith
@@ -1309,7 +1309,7 @@ me_land_1265,land,me_rhun_region,RHU,owned
 me_land_1266,land,me_belfalas_region,DAM,owned
 me_land_1267,land,me_angmar_region,GUN,owned
 me_land_1268,land,me_northern_wastes_region,WILD,wild_forodwaith
-me_land_1269,land,me_anorien_region,DRU,owned
+me_land_1269,land,me_anorien_region,GON,owned
 me_land_1270,land,me_belfalas_region,GON,owned
 me_land_1271,land,me_mordor_region,MOR,owned
 me_land_1272,land,me_brown_lands_region,WILD,wild_unclaimed
@@ -3538,7 +3538,7 @@ me_land_3494,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_3495,land,me_khand_region,KHA,owned
 me_land_3496,land,me_anduin_vale_region,WILD,wild_unclaimed
 me_land_3497,land,me_belfalas_region,GON,owned
-me_land_3498,land,me_shire_breeland_region,WILD,wild_buffer
+me_land_3498,land,me_shire_breeland_region,SHI,owned
 me_land_3499,land,me_forochel_region,LOS,owned
 me_land_3500,land,me_anorien_region,GON,owned
 me_land_3501,land,me_near_harad_region,HNE,owned
@@ -4430,7 +4430,7 @@ me_land_4386,land,me_rhun_region,WILD,wild_unclaimed
 me_land_4387,land,me_northern_wastes_region,WILD,wild_forodwaith
 me_land_4388,land,me_north_arnor_region,RAN,owned
 me_land_4389,land,me_northern_wastes_region,WILD,wild_forodwaith
-me_land_4390,land,me_shire_breeland_region,BRE,owned
+me_land_4390,land,me_shire_breeland_region,WILD,wild_reviewed_frontier: the Old Forest lies beyond the settled Shire and is not compact Bree-land
 me_land_4391,land,me_anduin_vale_region,WILD,wild_unclaimed
 me_land_4392,land,me_ithilien_region,WILD,wild_ithilien
 me_land_4393,land,me_rhun_region,RH2,owned

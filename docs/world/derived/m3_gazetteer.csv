@@ -221,7 +221,7 @@ me_land_0177,Framberg,land,me_rohan_region,ROH,place,† M3 regional lexicon
 me_land_0178,Farahir,land,me_umbar_region,UMB,place,† M3 regional lexicon
 me_land_0179,Whitecamp,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
 me_land_0180,Skaiburz,land,me_mordor_region,MOR,place,† M3 regional lexicon
-me_land_0181,Frogmorton,land,me_shire_breeland_region,WILD,village,"LOTR, Book I, Ch. 3"
+me_land_0181,Frogmorton,land,me_shire_breeland_region,SHI,village,"LOTR, Book I, Ch. 3"
 me_land_0182,Uglburz,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_0183,Dumabad,land,me_grey_mountains_region,WILD,wilderness,† M3 regional lexicon
 me_land_0184,Eastbourne,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
@@ -1102,7 +1102,7 @@ me_land_1058,Celon carandor,land,me_south_gondor_region,GON,place,† M3 regiona
 me_land_1059,Blackgate,land,me_mirkwood_region,WILD,wilderness,† M3 regional lexicon
 me_land_1060,Qasesh,land,me_umbar_region,UMB,place,† M3 regional lexicon
 me_land_1061,Bramblegate,land,me_anduin_vale_region,WILD,wilderness,† M3 regional lexicon
-me_land_1062,Haysend,land,me_shire_breeland_region,BRE,village,"LOTR, Book I, Ch. 5"
+me_land_1062,Haysend,land,me_shire_breeland_region,SHI,village,"LOTR, Book I, Ch. 5"
 me_land_1063,Gathach Camp,land,me_rhun_region,RH3,place,† M3 regional lexicon
 me_land_1064,Nim carandor,land,me_belfalas_region,DAM,place,† M3 regional lexicon
 me_land_1065,Cedargate,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
@@ -1309,7 +1309,7 @@ me_land_1265,Narad Camp,land,me_rhun_region,RHU,place,† M3 regional lexicon
 me_land_1266,Dol morndor,land,me_belfalas_region,DAM,place,† M3 regional lexicon
 me_land_1267,Mauhsnaga,land,me_angmar_region,GUN,place,† M3 regional lexicon
 me_land_1268,Coldshore,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
-me_land_1269,Nardol,land,me_anorien_region,DRU,landmark,"LOTR, Book V, Ch. 1"
+me_land_1269,Nardol,land,me_anorien_region,GON,landmark,"LOTR, Book V, Ch. 1"
 me_land_1270,Eithel morndor,land,me_belfalas_region,GON,place,† M3 regional lexicon
 me_land_1271,Muzgsnaga,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_1272,Emyn morndor,land,me_brown_lands_region,WILD,wilderness,† M3 regional lexicon
@@ -3538,7 +3538,7 @@ me_land_3494,Amon gondeth,land,me_north_arnor_region,WILD,wilderness,† M3 regi
 me_land_3495,Gharar Camp,land,me_khand_region,KHA,place,† M3 regional lexicon
 me_land_3496,Deephall End,land,me_anduin_vale_region,WILD,wilderness,† M3 regional lexicon
 me_land_3497,Dol gondeth,land,me_belfalas_region,GON,place,† M3 regional lexicon
-me_land_3498,Stock,land,me_shire_breeland_region,WILD,village,"LOTR, Book I, Ch. 3"
+me_land_3498,Stock,land,me_shire_breeland_region,SHI,village,"LOTR, Book I, Ch. 3"
 me_land_3499,Coldhaven Sound,land,me_forochel_region,LOS,place,† M3 regional lexicon
 me_land_3500,Eithel gondeth,land,me_anorien_region,GON,place,† M3 regional lexicon
 me_land_3501,Hadrasir Oasis,land,me_near_harad_region,HNE,place,† M3 regional lexicon
@@ -4430,7 +4430,7 @@ me_land_4386,Zorath Steppe,land,me_rhun_region,WILD,wilderness,† M3 regional l
 me_land_4387,Coldcamp Waste,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
 me_land_4388,The Angle,land,me_north_arnor_region,RAN,refuge,† ENDORE plan 8.1; seat of the Rangers inferred from their Angle settlement
 me_land_4389,Driftcamp Waste,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
-me_land_4390,The Old Forest,land,me_shire_breeland_region,BRE,landmark,"LOTR, Book I, Ch. 6"
+me_land_4390,The Old Forest,land,me_shire_breeland_region,WILD,landmark,"LOTR, Book I, Ch. 6"
 me_land_4391,Northwood End,land,me_anduin_vale_region,WILD,wilderness,† M3 regional lexicon
 me_land_4392,Taur gondion,land,me_ithilien_region,WILD,wilderness,† M3 regional lexicon
 me_land_4393,Balen Steppe,land,me_rhun_region,RH2,place,† M3 regional lexicon

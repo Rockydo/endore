@@ -33,6 +33,11 @@
   second bounded failure. It now fails closed and records a query readback rather than
   mislabelling an unrelated selection as a source target. See `BLOCKERS.md`; do not reuse
   F11 or treat a textual success line as camera evidence.
+- v118 completes the first source-anchored political slice: five narrow named-frontier
+  fixes (Shire villages, the Old Forest, and Nardol), stable gazetteer locking, full
+  validation, and paired smoke are green. It preserves every physical control and leaves
+  uncertain frontier belts (including both Mordor approach passes) wild; see
+  `docs/m2/V118_POLITICAL_FRONTIER_WITNESSES.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river
