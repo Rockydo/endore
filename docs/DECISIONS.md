@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-08-04 - Separate Mordor's guarded gateworks from a frozen lowland envelope
+
+Keep the source-derived Mordor enclosure as the ordinary political boundary, but do not
+let its passable-lowland reduction turn canonically occupied gate geography into a wild
+gap. `Cirith Gorgor` is the guarded Haunted Pass at the Black Gate (LOTR, Book IV,
+Chapter 3), and `Morgai` is the inner ridge within Mordor on Frodo and Sam's route
+(LOTR, Book IV, Chapter 8). Both become exact Mordor witnesses through a two-entry,
+source-cited exception table. It permits neither a new polygon nor a neighbouring claim.
+
+Conversely, Methedras is the mountain above Nan Curunir rather than an inhabited Isengard
+holding (LOTR, Book III, Chapter 9), so its exact landmark returns to wild mountain land.
+See `docs/m2/V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md`.
+
 ## 2026-08-04 - Let the native river renderer own water, not terrain channel 6
 
 The owner's close-zoom report correctly identifies the residual failure: an exact

@@ -27,6 +27,9 @@ about Middle-earth.
 
 ## M3 realms and gazetteer
 
+- † The passable-cell Mordor enclosure does not by itself cover every mountain-side
+  gatework. Cirith Gorgor and Morgai are two exact, text-cited Mordor cells retained as
+  operational exceptions; this does not survey or expand the surrounding frontier.
 - † Political borders are deterministic strategic extrapolations from the canon anchors,
   mountain barriers, river corridors, and the plan's realm roster. Sparse Forodwaith,
   Enedwaith, the Brown Lands, and emptied Ithilien retain deliberately wild land rather

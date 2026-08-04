@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3029,
-  "wild_locations": 2171,
+  "owned_locations": 3028,
+  "wild_locations": 2172,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -1246,32 +1246,32 @@
           0.44
         ]
       ],
-      "locations": 13,
+      "locations": 10,
       "eligible_locations": 14,
-      "claim_fill_fraction": 0.928571,
+      "claim_fill_fraction": 0.714286,
       "forced_anchors": 1,
       "final_bbox": [
         0.4512821,
-        0.4730159,
+        0.4700855,
         0.4303859,
         0.4758183
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 13,
+        "largest_component": 10,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 13,
+            "size": 10,
             "forced_anchors": 1,
             "sample": [
               "isengard",
-              "me_land_1070",
               "me_land_1149",
               "me_land_1533",
-              "me_land_1745"
+              "me_land_1745",
+              "me_land_1882"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1756,9 +1756,9 @@
           0.555
         ]
       ],
-      "locations": 296,
+      "locations": 298,
       "eligible_locations": 291,
-      "claim_fill_fraction": 1.017182,
+      "claim_fill_fraction": 1.024055,
       "forced_anchors": 9,
       "final_bbox": [
         0.6,
@@ -1768,13 +1768,13 @@
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 4,
-        "largest_component": 292,
-        "largest_component_fraction": 0.986486,
-        "detached_unforced_specks": 1,
+        "components": 5,
+        "largest_component": 293,
+        "largest_component_fraction": 0.983221,
+        "detached_unforced_specks": 2,
         "component_detail": [
           {
-            "size": 292,
+            "size": 293,
             "forced_anchors": 6,
             "sample": [
               "barad_dur",
@@ -1809,6 +1809,17 @@
               "me_land_0431"
             ],
             "disposition": "accepted_forced_anchor_barrier_split"
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_2931"
+            ],
+            "locations": [
+              "me_land_2931"
+            ],
+            "disposition": "Morgai inner-ridge operational witness divided from the Mordor basin by impassable mountain topology"
           },
           {
             "size": 1,
@@ -3077,13 +3088,13 @@
       ]
     },
     "MOR": {
-      "components": 4,
-      "largest_component": 292,
-      "largest_component_fraction": 0.986486,
-      "detached_unforced_specks": 1,
+      "components": 5,
+      "largest_component": 293,
+      "largest_component_fraction": 0.983221,
+      "detached_unforced_specks": 2,
       "component_detail": [
         {
-          "size": 292,
+          "size": 293,
           "forced_anchors": 6,
           "sample": [
             "barad_dur",
@@ -3123,6 +3134,17 @@
           "size": 1,
           "forced_anchors": 0,
           "sample": [
+            "me_land_2931"
+          ],
+          "locations": [
+            "me_land_2931"
+          ],
+          "disposition": "Morgai inner-ridge operational witness divided from the Mordor basin by impassable mountain topology"
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
             "me_land_4703"
           ],
           "locations": [
@@ -3155,19 +3177,19 @@
     },
     "ISE": {
       "components": 1,
-      "largest_component": 13,
+      "largest_component": 10,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 13,
+          "size": 10,
           "forced_anchors": 1,
           "sample": [
             "isengard",
-            "me_land_1070",
             "me_land_1149",
             "me_land_1533",
-            "me_land_1745"
+            "me_land_1745",
+            "me_land_1882"
           ],
           "locations": [],
           "disposition": "primary_component"

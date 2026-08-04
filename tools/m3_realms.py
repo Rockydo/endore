@@ -595,12 +595,12 @@ FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
         "Ithilien has been emptied since TA 2954 despite its Gondorian dynastic memory",
     ),
     "morgai": (
-        WILD,
-        "Morgai is a hostile outer ridge beyond settled control in the emptied Ithilien belt",
+        "MOR",
+        "Morgai is the inner ridge of the Mountains of Shadow within Sauron's Mordor",
     ),
     "cirith_gorgor": (
-        WILD,
-        "the exact Black Gate pass cell remains outside the frozen Mordor enclosure",
+        "MOR",
+        "Cirith Gorgor is the occupied Haunted Pass of the Black Gate between its Towers",
     ),
     "shelobs_lair": (
         WILD,
@@ -642,6 +642,26 @@ FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
         WILD,
         "the haunted downs are outside compact inhabited Bree-land",
     ),
+    "methedras": (
+        WILD,
+        "Methedras is the mountain above Nan Curunir, not a settled Isengard holding",
+    ),
+}
+
+# Two named operational landmarks sit just beyond the source-derived Mordor enclosure
+# because the political allocation intentionally follows passable lowland cells, whereas
+# these sites sit on the mountain-side gate geography. They are exact textual control
+# witnesses, not a polygon expansion: the exception is valid only for the specified
+# landmark and required owner and is audited below.
+FRONTIER_LANDMARK_CLAIM_EXCEPTIONS: dict[tuple[str, str], str] = {
+    (
+        "cirith_gorgor",
+        "MOR",
+    ): "LOTR, Book IV, Ch. 3: the Haunted Pass is the Black Gate's guarded approach",
+    (
+        "morgai",
+        "MOR",
+    ): "LOTR, Book IV, Ch. 8: the inner Morgai ridge lies in the land of Mordor",
 }
 # The climate-density reseed changed generated location IDs after the v77/v78
 # political review. Each repair therefore carries a narrow physical witness as
@@ -726,6 +746,18 @@ REVIEWED_COMPONENT_REPAIRS: dict[
         "me_rhun_region",
         (0.710, 0.730, 0.395, 0.415),
     ),
+    "me_land_1070": (
+        WILD,
+        "northern mountain-side spur beyond compact connected Nan Curunir",
+        "me_rohan_region",
+        (0.465, 0.480, 0.425, 0.440),
+    ),
+    "me_land_3843": (
+        WILD,
+        "northern mountain-side spur beyond compact connected Nan Curunir",
+        "me_rohan_region",
+        (0.465, 0.480, 0.440, 0.455),
+    ),
 }
 # Every surviving non-primary, non-forced political component has an explicit
 # physical explanation. The exact member sets intentionally make topology
@@ -738,6 +770,10 @@ REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
     ("MOR", frozenset({"me_land_4703"})): (
         "southeastern Nurn pocket divided from the main component by lake and "
         "impassable enclosure topology"
+    ),
+    ("MOR", frozenset({"me_land_2931"})): (
+        "Morgai inner-ridge operational witness divided from the Mordor basin by "
+        "impassable mountain topology"
     ),
     (
         "ROH",
@@ -1377,7 +1413,8 @@ def assign_ownership(
             )
         if tag != WILD:
             accepted, contract = claim_contract(location, by_tag[tag], source_zone_claims)
-            if not accepted:
+            exception = FRONTIER_LANDMARK_CLAIM_EXCEPTIONS.get((ref, tag))
+            if not accepted and exception is None:
                 raise ValueError(
                     f"frontier landmark {ref}->{tag} violates {contract}"
                 )
@@ -2411,6 +2448,17 @@ def check() -> list[str]:
             failures.append(
                 f"frontier landmark {ref} is owned by {actual_owner}, expected "
                 f"{required_owner}: {rationale}"
+            )
+    for (ref, required_owner), source in FRONTIER_LANDMARK_CLAIM_EXCEPTIONS.items():
+        contract = FRONTIER_LANDMARK_REQUIRED_OWNERS.get(ref)
+        if contract is None:
+            failures.append(
+                f"frontier claim exception {ref}->{required_owner} has no owner contract"
+            )
+        elif contract[0] != required_owner:
+            failures.append(
+                f"frontier claim exception {ref}->{required_owner} disagrees with "
+                f"required owner {contract[0]}: {source}"
             )
     unreviewed_components = {
         tag: [

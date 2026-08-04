@@ -2,6 +2,18 @@
 
 ## 2026-08-04
 
+- v125 completes a second bounded political-control review across Dunland, Lothlorien,
+  the Dale/Erebor theatre, Mordor, and the represented East. It changes three named
+  witnesses: Cirith Gorgor and Morgai become Mordor-controlled operational geography;
+  Methedras becomes wild mountain land rather than an Isengard cell. Two detached,
+  unnamed northern mountain-spur cells return with Methedras to preserve a compact
+  connected Nan Curunir. The two Mordor cells are narrow textual exceptions to the
+  passable-land enclosure and cannot widen it. See
+  `docs/m2/V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md`. Full validation passed in
+  477.5 seconds (M2 world 405.6 seconds); paired vanilla/ENDORE smoke passed in 201.7
+  seconds on fingerprint
+  `3606db87877e7d37523b02989b6650db9549190a6ac7cf6c34e977de17bd0d33`, with zero
+  mod-unique error-log lines. Published as `b8a44d0`.
 - v124 fixes the owner-reported blue river-shoulder defect without altering a course,
   coastline, relief control, forest, settlement, or political cell. The native indexed
   graph remains the only water and width authority; its exact channel-6 footprint now

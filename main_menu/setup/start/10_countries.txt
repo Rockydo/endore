@@ -3690,6 +3690,7 @@ countries = {
 				me_land_1011
 				me_land_1029
 				me_land_1036
+				me_land_1054
 				me_land_1079
 				me_land_1088
 				me_land_1100
@@ -3796,6 +3797,7 @@ countries = {
 				me_land_2899
 				me_land_2901
 				me_land_2911
+				me_land_2931
 				me_land_2932
 				me_land_2934
 				me_land_2935
@@ -4156,16 +4158,13 @@ countries = {
 		ISE = { # Isengard
 			own_control_core = {
 				isengard
-				me_land_1070
 				me_land_1149
 				me_land_1533
 				me_land_1745
 				me_land_1882
 				me_land_3139
-				me_land_3265
 				me_land_3445
 				me_land_3785
-				me_land_3843
 				me_land_4525
 				me_land_4780
 			}

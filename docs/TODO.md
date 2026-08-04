@@ -58,6 +58,13 @@
 - v123 promotes every active named settlement into a source-derived ownership contract,
   while preserving the explicit Arnor ruins as wild; see
   `docs/m2/V123_ACTIVE_SETTLEMENT_CONTROL_AUDIT.md`.
+- v125 completes the next bounded political-control review. Cirith Gorgor and Morgai
+  are exact Mordor operational witnesses; Methedras returns to wild mountain land above
+  compact Nan Curunir, with its two detached northern spur cells. This is a narrow
+  source-specific correction, not a border redraw. Full validation and paired smoke are
+  green on `3606db87877e7d37523b02989b6650db9549190a6ac7cf6c34e977de17bd0d33`, and is
+  published as `b8a44d0`; see
+  `docs/m2/V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river
