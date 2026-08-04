@@ -53,6 +53,14 @@ WIDEST_RIVERS = {
     "harnen",
     "lefnui",
 }
+# The Great River must be visually dominant in the *engine* raster, not by a
+# separately painted terrain band.  The current hash-pinned source path has
+# 8,511 parser pixels and 4,681 palette-index-15 pixels when its Langwell,
+# upper-Anduin, and lower-Anduin reaches are serialized as one trunk.  Keep a
+# deliberately tolerant floor so harmless source-point simplification remains
+# possible, while a return to a thin or late-widening Anduin is rejected.
+GREAT_RIVER_MIN_WIDEST_PIXELS = 4_500
+GREAT_RIVER_MIN_WIDEST_SHARE = 0.54
 
 # A Jomini river network has one green source and may contain any number of
 # red-ended tributary segments.  These source controls are stored as separate
@@ -586,10 +594,47 @@ def flow_palette_index(river: dict, progress: float) -> int:
     return 11
 
 
+def validate_great_river_width_contract(projection: dict) -> None:
+    """Require Anduin's native vanilla width class to dominate its full trunk."""
+    rivers = {item["key"]: item for item in projection["rivers"]}
+    required = {"anduin", *COMPOSITE_TRUNKS["anduin"]}
+    missing = required - set(rivers)
+    if missing:
+        raise ValueError(
+            "Great River width contract is missing reaches: "
+            + ", ".join(sorted(missing))
+        )
+    paths = {
+        key: parser_safe_path(rivers[key])
+        for key in required
+        if key in rivers
+    }
+    trunk = main_river_path("anduin", rivers, paths)
+    widest_pixels = sum(
+        flow_palette_index(
+            rivers["anduin"],
+            index / max(1, len(trunk) - 1),
+        )
+        == 15
+        for index in range(len(trunk))
+    )
+    widest_share = widest_pixels / len(trunk)
+    if (
+        widest_pixels < GREAT_RIVER_MIN_WIDEST_PIXELS
+        or widest_share < GREAT_RIVER_MIN_WIDEST_SHARE
+    ):
+        raise ValueError(
+            "Anduin no longer dominates the vanilla broadest river class: "
+            f"{widest_pixels}/{len(trunk)} index-15 pixels "
+            f"({widest_share:.1%})"
+        )
+
+
 def render() -> Image.Image:
     projection = json.loads(
         (CONTROL / "projection.json").read_text(encoding="utf-8")
     )
+    validate_great_river_width_contract(projection)
     with Image.open(CONTROL / "biomes.png") as control:
         biomes = np.asarray(
             control.resize((WORLD_W, WORLD_H), Image.Resampling.NEAREST),

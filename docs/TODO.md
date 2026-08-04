@@ -40,7 +40,11 @@
   `docs/m2/V118_POLITICAL_FRONTIER_WITNESSES.md`.
 - v119 contracts abandoned, independent, and emptied canonical sites to wilderness. It
   corrects the Eagles' Eyrie and Framsburg while protecting twelve already-correct sites;
-  see `docs/m2/V119_UNCLAIMED_SITE_AUDIT.md`.
+  it is published as `2707209` with full validation and paired smoke green; see
+  `docs/m2/V119_UNCLAIMED_SITE_AUDIT.md`.
+- v120 locks the Great River's native Jomini width hierarchy: the entire continuous
+  Langwell–Anduin trunk must retain a dominant palette-index-15 segment, and no terrain-only
+  water surrogate is admissible.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

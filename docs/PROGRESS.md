@@ -6,7 +6,15 @@
   Beorning ownership to wild and explicitly remains empty of mortal population; Framsburg
   is corrected from Gundabad to wild and remains an empty ruin. Twelve already-correct
   ruins, borderlands, independent highlands, and abandoned sites now have exact ownership
-  contracts. No coast, terrain, river, broad border, or fictional realm changed.
+  contracts. No coast, terrain, river, broad border, or fictional realm changed. Full
+  validation passed in 458.8 seconds and paired real-game smoke passed on fingerprint
+  `d511971af16d7b24784ebdf99f9493d7e039f46795d6333b68fd066a1a5f568e` with zero new
+  mod-unique error-log lines; published as `2707209`.
+- v120 converts the owner's river-width concern into a durable map gate. The continuous
+  Langwell–upper/lower-Anduin engine trunk has 4,681 broadest-class (palette index 15)
+  pixels across 8,511 parser pixels; validation now requires at least 4,500 and a 54%
+  widest-class share. This protects the actual indexed river from regressing into either a
+  thin spline or a terrain-painted width surrogate.
 - v118's political frontier audit found and corrected five named TA 3018 ownership
   mistakes: three Shire settlements, the Old Forest, and Nardol. The Black Gate and
   Shelob's pass cells remain wild because they lie just outside the frozen Mordor
