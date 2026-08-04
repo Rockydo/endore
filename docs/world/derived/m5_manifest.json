@@ -2,8 +2,9 @@
   "milestone": "M5",
   "authored_population_k": 9028.6,
   "technical_abi_population_k": 20.86,
-  "populated_locations": 5178,
+  "populated_locations": 5177,
   "empty_ruins": 22,
+  "empty_uninhabited_landmarks": 1,
   "realm_targets_k": {
     "ANG": 70.0,
     "BEO": 18.0,
@@ -46,14 +47,14 @@
     "WOO": 35.0
   },
   "population_types_k": {
-    "burghers": 859.895,
-    "clergy": 106.844,
-    "laborers": 1464.674,
-    "nobles": 261.683,
-    "peasants": 3740.653,
+    "burghers": 859.878,
+    "clergy": 106.838,
+    "laborers": 1464.652,
+    "nobles": 261.693,
+    "peasants": 3740.696,
     "slaves": 773.397,
-    "soldiers": 1347.165,
-    "tribesmen": 474.289
+    "soldiers": 1347.142,
+    "tribesmen": 474.304
   },
   "culture_population_k": {
     "me_arnor_dunedain": 8.0,

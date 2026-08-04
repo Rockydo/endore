@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3031,
-  "wild_locations": 2169,
+  "owned_locations": 3029,
+  "wild_locations": 2171,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -110,9 +110,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 66,
+      "locations": 65,
       "eligible_locations": 130,
-      "claim_fill_fraction": 0.507692,
+      "claim_fill_fraction": 0.5,
       "forced_anchors": 1,
       "final_bbox": [
         0.5057387,
@@ -123,12 +123,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 2,
-        "largest_component": 60,
-        "largest_component_fraction": 0.909091,
+        "largest_component": 59,
+        "largest_component_fraction": 0.907692,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 60,
+            "size": 59,
             "forced_anchors": 1,
             "sample": [
               "carrock",
@@ -873,9 +873,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 23,
+      "locations": 22,
       "eligible_locations": 35,
-      "claim_fill_fraction": 0.657143,
+      "claim_fill_fraction": 0.628571,
       "forced_anchors": 1,
       "final_bbox": [
         0.4708181,
@@ -886,12 +886,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 4,
-        "largest_component": 16,
-        "largest_component_fraction": 0.695652,
+        "largest_component": 15,
+        "largest_component_fraction": 0.681818,
         "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 16,
+            "size": 15,
             "forced_anchors": 0,
             "sample": [
               "me_land_0124",
@@ -2879,12 +2879,12 @@
     },
     "BEO": {
       "components": 2,
-      "largest_component": 60,
-      "largest_component_fraction": 0.909091,
+      "largest_component": 59,
+      "largest_component_fraction": 0.907692,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 60,
+          "size": 59,
           "forced_anchors": 1,
           "sample": [
             "carrock",
@@ -3197,12 +3197,12 @@
     },
     "GUN": {
       "components": 4,
-      "largest_component": 16,
-      "largest_component_fraction": 0.695652,
+      "largest_component": 15,
+      "largest_component_fraction": 0.681818,
       "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 16,
+          "size": 15,
           "forced_anchors": 0,
           "sample": [
             "me_land_0124",

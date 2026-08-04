@@ -38,6 +38,9 @@
   validation, and paired smoke are green. It preserves every physical control and leaves
   uncertain frontier belts (including both Mordor approach passes) wild; see
   `docs/m2/V118_POLITICAL_FRONTIER_WITNESSES.md`.
+- v119 contracts abandoned, independent, and emptied canonical sites to wilderness. It
+  corrects the Eagles' Eyrie and Framsburg while protecting twelve already-correct sites;
+  see `docs/m2/V119_UNCLAIMED_SITE_AUDIT.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

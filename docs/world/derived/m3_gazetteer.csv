@@ -1304,7 +1304,7 @@ me_land_1260,Amon morndor,land,me_anduin_vale_region,LOR,place,† M3 regional l
 me_land_1261,Winterpoint,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
 me_land_1262,Khurad Camp,land,me_rhun_region,RHU,place,† M3 regional lexicon
 me_land_1263,Lodad Camp,land,me_rhun_region,WILD,wilderness,† M3 regional lexicon
-me_land_1264,Framsburg,land,me_grey_mountains_region,GUN,ruin,"LOTR, Appendix A"
+me_land_1264,Framsburg,land,me_grey_mountains_region,WILD,ruin,"LOTR, Appendix A"
 me_land_1265,Narad Camp,land,me_rhun_region,RHU,place,† M3 regional lexicon
 me_land_1266,Dol morndor,land,me_belfalas_region,DAM,place,† M3 regional lexicon
 me_land_1267,Mauhsnaga,land,me_angmar_region,GUN,place,† M3 regional lexicon
@@ -4040,7 +4040,7 @@ me_land_3996,Kharun Oasis,land,me_umbar_region,UMB,place,† M3 regional lexicon
 me_land_3997,Driftshore Sound,land,me_forochel_region,LOS,place,† M3 regional lexicon
 me_land_3998,Taur annonion,land,me_anorien_region,GON,place,† M3 regional lexicon
 me_land_3999,Frostshore Sound,land,me_forochel_region,LOS,place,† M3 regional lexicon
-me_land_4000,Eagles' Eyrie,land,me_anduin_vale_region,BEO,landmark,"The Hobbit, Ch. 7"
+me_land_4000,Eagles' Eyrie,land,me_anduin_vale_region,WILD,landmark,"The Hobbit, Ch. 7"
 me_land_4001,Dushlug Cleft,land,me_mirkwood_region,DOL,place,† M3 regional lexicon
 me_land_4002,Bar annonion,land,me_lindon_region,LIN,place,† M3 regional lexicon
 me_land_4003,Khorek Camp,land,me_khand_region,KHA,place,† M3 regional lexicon

@@ -14,7 +14,7 @@ rivendell,Rivendell,me_north_arnor_region,RIV,refuge,0.156,me_noldor,me_valar_wo
 goblin_town,Goblin-town,me_anduin_vale_region,GOB,hold,8.497,me_misty_orc,me_melkorism,,wool,town,amdowa_culture
 gundabad,Gundabad,me_northern_wastes_region,GUN,hold,4.411,me_northern_orc,me_melkorism,,fur,town,funj_culture
 moria,Khazad-dûm,me_anduin_vale_region,MOA,hold,18.859,me_misty_orc,me_melkorism,me_northern_orc:7,gems,town,aimara_culture
-carrock,The Carrock,me_anduin_vale_region,BEO,village,0.879,me_beorning,me_northern_ways,,wool,town,
+carrock,The Carrock,me_anduin_vale_region,BEO,village,0.894,me_beorning,me_northern_ways,,wool,town,
 caras_galadhon,Caras Galadhon,me_anduin_vale_region,LOR,refuge,3.656,me_galadhrim,me_valar_worship,,livestock,town,ikoot_culture
 dol_guldur,Dol Guldur,me_mirkwood_region,DOL,fortress,9.171,me_mordor_orc,me_sauron_cult,,medicaments,town,ambundu
 thranduil_halls,Thranduil's Halls,me_dale_region,WOO,refuge,2.465,me_silvan,me_valar_worship,,wool,town,prussian
@@ -55,7 +55,7 @@ me_land_0011,Eithel adarath,me_anorien_region,GON,place,5.015,me_gondorian,me_va
 me_land_0012,Balach,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,wool,rural_settlement,
 me_land_0013,Emyn adarath,me_brown_lands_region,WILD,wilderness,0.007,me_woodman,me_northern_ways,,clay,rural_settlement,
 me_land_0014,Imlad adarath,me_belfalas_region,GON,place,5.015,me_gondorian,me_valar_worship,,clay,rural_settlement,fon
-me_land_0015,Bearbank,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_0015,Bearbank,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_0016,Ashbank,me_enedwaith_region,WILD,wilderness,0.013,me_dunlending,me_dunland_ways,,livestock,rural_settlement,
 me_land_0017,Burzbag,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_0018,Dushbag,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
@@ -191,7 +191,7 @@ me_land_0147,Zarabad,me_near_harad_region,HNE,place,1.989,me_near_haradrim,me_so
 me_land_0148,Nim annonath,me_belfalas_region,GON,place,3.461,me_gondorian,me_valar_worship,,wool,rural_settlement,kura_culture
 me_land_0149,Mauhburz,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_0150,Beaconbourne,me_mirkwood_region,WILD,wilderness,0.011,me_woodman,me_northern_ways,,clay,rural_settlement,
-me_land_0151,Beebank,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wild_game,rural_settlement,
+me_land_0151,Beebank,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wild_game,rural_settlement,
 me_land_0152,Northcamp,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fur,rural_settlement,
 me_land_0153,Muzgburz,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_0154,Nazgburz,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
@@ -250,7 +250,7 @@ me_land_0206,Nim belath,me_brown_lands_region,WILD,wilderness,0.009,me_woodman,m
 me_land_0207,Khazak,me_khand_region,KHA,place,2.173,me_variag,me_melkorism,,wool,rural_settlement,tamambo_culture
 me_land_0208,Kharahir,me_near_harad_region,UMB,place,1.313,me_umbarite,me_sauron_cult,,wool,rural_settlement,
 me_land_0209,Longbourne,me_anduin_vale_region,WILD,wilderness,0.013,me_woodman,me_northern_ways,,wool,rural_settlement,
-me_land_0210,Carrockbank,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wheat,rural_settlement,
+me_land_0210,Carrockbank,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wheat,rural_settlement,
 me_land_0211,Karmad,me_rhun_region,RH2,place,3.379,me_karmachi,me_melkorism,,wool,rural_settlement,manubara_culture
 me_land_0212,Khurad,me_rhun_region,RH2,place,3.379,me_karmachi,me_melkorism,,horses,rural_settlement,manta_culture
 me_land_0213,Lodad,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,wool,rural_settlement,
@@ -298,7 +298,7 @@ me_land_0254,Qasahir,me_near_harad_region,HNE,place,2.651,me_near_haradrim,me_so
 me_land_0255,Targak,me_khand_region,KHA,place,2.173,me_variag,me_melkorism,,horses,rural_settlement,talysh_culture
 me_land_0256,Zorad,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,livestock,rural_settlement,haya_culture
 me_land_0257,Balar,me_rhun_region,WILD,wilderness,0.011,me_balchoth,me_melkorism,,livestock,rural_settlement,
-me_land_0258,Goldenbank,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_0258,Goldenbank,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_0259,Beechbark,me_rohan_region,FAN,place,0.02,me_onodrim,me_eldest_ways,,clay,rural_settlement,
 me_land_0260,Harlond of Gondor,me_anorien_region,GON,port,30.066,me_gondorian,me_valar_worship,,livestock,town,adamawa_culture
 me_land_0261,Léodberg,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,wheat,rural_settlement,pomo_culture
@@ -351,7 +351,7 @@ me_land_0307,Celon caranath,me_belfalas_region,GON,place,3.461,me_gondorian,me_v
 me_land_0308,Nim caranath,me_brown_lands_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,wheat,rural_settlement,
 me_land_0309,Amon duinath,me_brown_lands_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,livestock,rural_settlement,
 me_land_0310,Burzfang,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
-me_land_0311,Honeybank,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_0311,Honeybank,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_0312,Esgarbank,me_brown_lands_region,DOR,place,1.558,me_dorwinrim,me_northern_ways,,horses,rural_settlement,
 me_land_0313,Lodar,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,wool,rural_settlement,mobile_culture
 me_land_0314,Narar,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,wool,rural_settlement,
@@ -381,7 +381,7 @@ me_land_0337,Balath,me_rhun_region,RH2,place,3.379,me_karmachi,me_melkorism,,whe
 me_land_0338,Ost duinath,me_lindon_region,LIN,place,0.129,me_sindar,me_valar_worship,,livestock,rural_settlement,
 me_land_0339,Palefell,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fish,rural_settlement,
 me_land_0340,Taur duinath,me_lebennin_region,GON,place,5.015,me_gondorian,me_valar_worship,,livestock,rural_settlement,estonian
-me_land_0341,Riverbank,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wild_game,rural_settlement,
+me_land_0341,Riverbank,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wild_game,rural_settlement,
 me_land_0342,Gorfang,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_0343,Khazabad,me_rhun_region,IRO,place,0.449,me_longbeard,me_mahal_cult,,livestock,rural_settlement,
 me_land_0344,Amon Lhaw,me_rohan_region,WILD,ruin,0,me_rohirric,me_northern_ways,,wheat,rural_settlement,
@@ -401,7 +401,7 @@ me_land_0357,Kharamar,me_umbar_region,UMB,place,1.313,me_umbarite,me_sauron_cult
 me_land_0358,Deepbridge,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
 me_land_0359,Fernbank,me_shire_breeland_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,fiber_crops,rural_settlement,
 me_land_0360,Lakebank,me_rhun_region,DOR,place,1.558,me_dorwinrim,me_northern_ways,,horses,rural_settlement,
-me_land_0361,Skinbank,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_0361,Skinbank,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_0362,Eastbridge,me_mirkwood_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,wool,rural_settlement,
 me_land_0363,Nim duinath,me_brown_lands_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,horses,rural_settlement,
 me_land_0364,Muzgfang,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
@@ -451,7 +451,7 @@ me_land_0407,Haybank,me_shire_breeland_region,SHI,place,2.571,me_shire_hobbit,me
 me_land_0408,Winterfell,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fur,rural_settlement,
 me_land_0409,Northbridge,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
 me_land_0410,Amon galenath,me_belfalas_region,DAM,place,2.341,me_dol_amrothian,me_valar_worship,,clay,rural_settlement,sama_culture
-me_land_0411,Valebank,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_0411,Valebank,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_0412,Umramar,me_near_harad_region,HNE,place,1.989,me_near_haradrim,me_southron_ways,,horses,rural_settlement,tremembe_culture
 me_land_0413,Dol galenath,me_ithilien_region,WILD,wilderness,0.014,me_gondorian,me_valar_worship,,livestock,rural_settlement,
 me_land_0414,Eithel galenath,me_north_arnor_region,RAN,place,0.168,me_arnor_dunedain,me_valar_worship,,wool,rural_settlement,
@@ -568,7 +568,7 @@ me_land_0524,Merrybank,me_shire_breeland_region,SHI,place,2.571,me_shire_hobbit,
 me_land_0525,Mossbank,me_shire_breeland_region,SHI,place,2.571,me_shire_hobbit,me_northern_ways,,fiber_crops,rural_settlement,nlakapamuk_culture
 me_land_0526,Snowfloe,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,wheat,rural_settlement,
 me_land_0527,Urukgash,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
-me_land_0528,Wildbank,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wild_game,rural_settlement,
+me_land_0528,Wildbank,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wild_game,rural_settlement,
 me_land_0529,Ost lothath,me_ithilien_region,WILD,wilderness,0.013,me_gondorian,me_valar_worship,,clay,rural_settlement,
 me_land_0530,Ashglob,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,ayoreo_culture
 me_land_0531,Azgglob,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
@@ -623,7 +623,7 @@ me_land_0579,Calen mornath,me_anduin_vale_region,LOR,place,1.69,me_galadhrim,me_
 me_land_0580,Skaiglob,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
 me_land_0581,Longbrook,me_mirkwood_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,wool,rural_settlement,
 me_land_0582,Sharen,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,wool,rural_settlement,
-me_land_0583,Woodbank,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wheat,rural_settlement,
+me_land_0583,Woodbank,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wheat,rural_settlement,
 me_land_0584,Nutbank,me_shire_breeland_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_0585,Celon mornath,me_south_gondor_region,GON,place,3.461,me_gondorian,me_valar_worship,,livestock,rural_settlement,kuku_yalanji_culture
 me_land_0586,Ulden,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,wool,rural_settlement,
@@ -649,7 +649,7 @@ me_land_0605,Mahrara,me_far_harad_region,WILD,wilderness,0.006,me_far_haradrim,m
 me_land_0606,Lakeby,me_rhun_region,DOR,place,2.076,me_dorwinrim,me_northern_ways,,clay,rural_settlement,tayrona_culture
 me_land_0607,Skarnan,me_khand_region,KHA,place,2.173,me_variag,me_melkorism,,wheat,rural_settlement,taizhou_wu_culture
 me_land_0608,Minas nenath,me_lindon_region,LIN,place,0.095,me_sindar,me_valar_worship,,clay,rural_settlement,
-me_land_0609,Bearden,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_0609,Bearden,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_0610,Balod,me_rhun_region,RH2,place,3.379,me_karmachi,me_melkorism,,horses,rural_settlement,mandinka
 me_land_0611,Starfloe,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,wheat,rural_settlement,
 me_land_0612,Targan,me_khand_region,KHA,place,0.657,me_variag,me_melkorism,,livestock,rural_settlement,
@@ -662,7 +662,7 @@ me_land_0618,Blackgrat,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_
 me_land_0619,Bar nenath,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,livestock,rural_settlement,
 me_land_0620,Burzgrat,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_0621,Gamilaglar,me_rhun_region,IRO,place,0.449,me_longbeard,me_mahal_cult,,clay,rural_settlement,
-me_land_0622,Beeden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_0622,Beeden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_0623,Dushgrat,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,awaete_culture
 me_land_0624,Southbrook,me_enedwaith_region,DUN,place,3.689,me_dunlending,me_dunland_ways,,clay,rural_settlement,igbo
 me_land_0625,Calen nenath,me_lebennin_region,GON,place,5.015,me_gondorian,me_valar_worship,,wool,rural_settlement,enenlhet_culture
@@ -677,7 +677,7 @@ me_land_0633,Eithel rathath,me_brown_lands_region,WILD,wilderness,0.009,me_woodm
 me_land_0634,Gorgrat,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
 me_land_0635,Stonebrook,me_shire_breeland_region,BRE,place,0.506,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_0636,Westbrook,me_anduin_vale_region,WILD,wilderness,0.013,me_woodman,me_northern_ways,,wool,rural_settlement,
-me_land_0637,Carrockden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_0637,Carrockden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_0638,Whitefloe,me_forochel_region,LOS,place,0.211,me_lossoth,me_lossoth_ways,,fur,rural_settlement,
 me_land_0639,Rushbank,me_shire_breeland_region,SHI,place,2.571,me_shire_hobbit,me_northern_ways,,wool,rural_settlement,nivkh_culture
 me_land_0640,Borod,me_rhun_region,WILD,wilderness,0.011,me_balchoth,me_melkorism,,wool,rural_settlement,
@@ -691,7 +691,7 @@ me_land_0647,Ashdown,me_mirkwood_region,WILD,wilderness,0.007,me_woodman,me_nort
 me_land_0648,Krimpgrat,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
 me_land_0649,Rakhara,me_far_harad_region,WILD,wilderness,0.006,me_far_haradrim,me_southron_ways,,wool,rural_settlement,
 me_land_0650,Thengelburna,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,wheat,rural_settlement,piipaash_culture
-me_land_0651,Goldenden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wheat,rural_settlement,
+me_land_0651,Goldenden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wheat,rural_settlement,
 me_land_0652,Minas rathath,me_lindon_region,LIN,place,0.129,me_sindar,me_valar_worship,,livestock,rural_settlement,
 me_land_0653,Barrowdown,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,livestock,rural_settlement,
 me_land_0654,Luggrat,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
@@ -732,7 +732,7 @@ me_land_0688,Minas sarnath,me_anorien_region,GON,place,5.015,me_gondorian,me_val
 me_land_0689,Ost sarnath,me_belfalas_region,GON,place,5.015,me_gondorian,me_valar_worship,,clay,rural_settlement,edo
 me_land_0690,Karmod,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,livestock,rural_settlement,
 me_land_0691,Bucklanddown,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
-me_land_0692,Honeyden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_0692,Honeyden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_0693,Taur sarnath,me_lebennin_region,GON,place,5.015,me_gondorian,me_valar_worship,,livestock,rural_settlement,eastphalian
 me_land_0694,Bar sarnath,me_lindon_region,LIN,place,0.095,me_sindar,me_valar_worship,,fish,rural_settlement,
 me_land_0695,Icehaven,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fur,rural_settlement,
@@ -759,7 +759,7 @@ me_land_0715,Deepdown,me_mirkwood_region,WDM,place,1.259,me_woodman,me_northern_
 me_land_0716,Rhovod,me_rhun_region,RH3,place,5.555,me_sagath,me_melkorism,,wheat,rural_settlement,beary
 me_land_0717,Azgkrak,me_anduin_vale_region,GOB,place,1.703,me_misty_orc,me_melkorism,,wheat,rural_settlement,upper_egyptian_culture
 me_land_0718,Darasir,me_far_harad_region,HRA,place,3.612,me_near_haradrim,me_southron_ways,,copper,rural_settlement,kado_culture
-me_land_0719,Oakden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_0719,Oakden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_0720,Eithel thoronath,me_dale_region,WOO,place,0.62,me_silvan,me_valar_worship,,wool,rural_settlement,
 me_land_0721,Sagod,me_rhun_region,RH3,place,5.555,me_sagath,me_melkorism,,wool,rural_settlement,beami_culture
 me_land_0722,Sharod,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,livestock,rural_settlement,haryanvi_culture
@@ -829,7 +829,7 @@ me_land_0785,Southdown,me_enedwaith_region,DUN,place,5.151,me_dunlending,me_dunl
 me_land_0786,Qasasir,me_far_harad_region,WILD,wilderness,0.006,me_far_haradrim,me_southron_ways,,wool,rural_settlement,
 me_land_0787,Nazgkrak,me_north_arnor_region,ANG,place,3.962,me_northern_orc,me_melkorism,,wool,rural_settlement,het_culture
 me_land_0788,Emyn adardor,me_brown_lands_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,horses,rural_settlement,
-me_land_0789,Riverden,me_mirkwood_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_0789,Riverden,me_mirkwood_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_0790,Stonedown,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,clay,rural_settlement,
 me_land_0791,Imlad adardor,me_brown_lands_region,WILD,wilderness,0.008,me_woodman,me_northern_ways,,fish,rural_settlement,
 me_land_0792,Uldor,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,wheat,rural_settlement,hani_culture
@@ -1295,7 +1295,7 @@ me_land_1251,Krimpsnaga,me_north_arnor_region,ANG,place,3.962,me_northern_orc,me
 me_land_1252,Qasir,me_near_harad_region,UMB,place,1.693,me_umbarite,me_sauron_cult,,livestock,rural_settlement,xianxi_culture
 me_land_1253,Mossbottom,me_shire_breeland_region,SHI,place,2.571,me_shire_hobbit,me_northern_ways,,wool,rural_settlement,nimadi
 me_land_1254,Rakhir,me_umbar_region,UMB,place,1.693,me_umbarite,me_sauron_cult,,wheat,rural_settlement,xhosa_culture
-me_land_1255,Skinden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wheat,rural_settlement,
+me_land_1255,Skinden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wheat,rural_settlement,
 me_land_1256,Celon lothdor,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_1257,Nim lothdor,me_north_arnor_region,WILD,wilderness,0.011,me_eriadoran,me_northern_ways,,wool,rural_settlement,
 me_land_1258,Karmad Camp,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,livestock,rural_settlement,
@@ -1304,7 +1304,7 @@ me_land_1260,Amon morndor,me_anduin_vale_region,LOR,place,1.69,me_galadhrim,me_v
 me_land_1261,Winterpoint,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fish,rural_settlement,
 me_land_1262,Khurad Camp,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,wheat,rural_settlement,mingrelian_culture
 me_land_1263,Lodad Camp,me_rhun_region,WILD,wilderness,0.009,me_balchoth,me_melkorism,,wheat,rural_settlement,
-me_land_1264,Framsburg,me_grey_mountains_region,GUN,ruin,0,me_northern_orc,me_melkorism,,wild_game,rural_settlement,
+me_land_1264,Framsburg,me_grey_mountains_region,WILD,ruin,0,me_northern_orc,me_melkorism,,wild_game,rural_settlement,
 me_land_1265,Narad Camp,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,wheat,rural_settlement,mingin_culture
 me_land_1266,Dol morndor,me_belfalas_region,DAM,place,2.341,me_dol_amrothian,me_valar_worship,,fish,rural_settlement,saigoku_culture
 me_land_1267,Mauhsnaga,me_angmar_region,GUN,place,0.674,me_northern_orc,me_melkorism,,fish,rural_settlement,
@@ -1344,7 +1344,7 @@ me_land_1300,Amon nendor,me_lindon_region,LIN,place,0.095,me_sindar,me_valar_wor
 me_land_1301,Uruksnaga,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_1302,Ashzagh,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_1303,Azgzagh,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
-me_land_1304,Stoneden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wheat,rural_settlement,
+me_land_1304,Stoneden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wheat,rural_settlement,
 me_land_1305,Dol nendor,me_lebennin_region,GON,place,5.015,me_gondorian,me_valar_worship,,livestock,rural_settlement,deori_culture
 me_land_1306,Longfell,me_rhun_region,DOR,place,2.076,me_dorwinrim,me_northern_ways,,horses,rural_settlement,tausug_culture
 me_land_1307,Eithel nendor,me_belfalas_region,DAM,place,2.341,me_dol_amrothian,me_valar_worship,,livestock,rural_settlement,sahtu_culture
@@ -1426,7 +1426,7 @@ me_land_1382,Ashheath,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me
 me_land_1383,Barrowheath,me_enedwaith_region,WILD,wilderness,0.013,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
 me_land_1384,Calen rathdor,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_1385,Qasun,me_near_harad_region,HNE,place,1.989,me_near_haradrim,me_southron_ways,,wheat,rural_settlement,toquegua_culture
-me_land_1386,Valeden,me_anduin_vale_region,BEO,place,0.163,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_1386,Valeden,me_anduin_vale_region,BEO,place,0.166,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_1387,Rakhun,me_near_harad_region,HNE,place,1.989,me_near_haradrim,me_southron_ways,,wool,rural_settlement,toogee_culture
 me_land_1388,Sealshore,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fish,rural_settlement,
 me_land_1389,Celon rathdor,me_lindon_region,LIN,place,0.095,me_sindar,me_valar_worship,,wool,rural_settlement,
@@ -1502,7 +1502,7 @@ me_land_1458,Taur thorondor,me_brown_lands_region,WILD,wilderness,0.013,me_woodm
 me_land_1459,Bar thorondor,me_lebennin_region,GON,place,5.015,me_gondorian,me_valar_worship,,wool,rural_settlement,danzhou_culture
 me_land_1460,Mauhbag Camp,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_1461,Gathath Camp,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,clay,rural_settlement,haen_culture
-me_land_1462,Wildden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_1462,Wildden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_1463,Calen thorondor,me_brown_lands_region,WILD,wilderness,0.013,me_woodman,me_northern_ways,,livestock,rural_settlement,
 me_land_1464,Karmath Camp,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,livestock,rural_settlement,mikmaq_culture
 me_land_1465,Celon thorondor,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
@@ -1523,7 +1523,7 @@ me_land_1479,Willowbark,me_anduin_vale_region,FAN,place,0.016,me_onodrim,me_elde
 me_land_1480,Eithel adardûr,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,clay,rural_settlement,
 me_land_1481,Emyn adardûr,me_north_arnor_region,WILD,wilderness,0.011,me_eriadoran,me_northern_ways,,livestock,rural_settlement,
 me_land_1482,Lodath Camp,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,wheat,rural_settlement,hadza_culture
-me_land_1483,Woodden,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_1483,Woodden,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_1484,Khorash,me_khand_region,WILD,wilderness,0.006,me_variag,me_melkorism,,wool,rural_settlement,
 me_land_1485,Applebrook,me_shire_breeland_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,fiber_crops,rural_settlement,
 me_land_1486,Hadrur,me_near_harad_region,WILD,wilderness,0.006,me_near_haradrim,me_southron_ways,,copper,rural_settlement,
@@ -1634,9 +1634,9 @@ me_land_1590,Bellford,me_rhun_region,DOR,place,1.558,me_dorwinrim,me_northern_wa
 me_land_1591,Ost annondûr,me_lebennin_region,GON,place,5.015,me_gondorian,me_valar_worship,,livestock,rural_settlement,dan_ke_culture
 me_land_1592,Grimfold,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,horses,rural_settlement,pamiri_culture
 me_land_1593,Taur annondûr,me_lebennin_region,GON,place,3.462,me_gondorian,me_valar_worship,,wool,rural_settlement,korean_culture
-me_land_1594,Bearford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_1594,Bearford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_1595,Bar annondûr,me_brown_lands_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,horses,rural_settlement,
-me_land_1596,Beeford,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_1596,Beeford,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_1597,Ashdûr Camp,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_1598,Azgdûr Camp,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,attu_culture
 me_land_1599,Khuren Camp,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,wheat,rural_settlement,meyah_culture
@@ -1649,7 +1649,7 @@ me_land_1605,Helmfold,me_rohan_region,ROH,place,1.886,me_rohirric,me_northern_wa
 me_land_1606,Loden Camp,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,livestock,rural_settlement,haaninin_culture
 me_land_1607,Zigilbizar,me_rhun_region,IRO,place,0.449,me_longbeard,me_mahal_cult,,livestock,rural_settlement,
 me_land_1608,Celon annondûr,me_lindon_region,LIN,place,0.095,me_sindar,me_valar_worship,,wool,rural_settlement,
-me_land_1609,Carrockford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_1609,Carrockford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_1610,Deepmere,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wool,rural_settlement,
 me_land_1611,Dimplebrook,me_shire_breeland_region,SHI,place,2.571,me_shire_hobbit,me_northern_ways,,wheat,rural_settlement,nias_culture
 me_land_1612,Snowwater,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fur,rural_settlement,
@@ -1747,7 +1747,7 @@ me_land_1703,Amon carandûr,me_lindon_region,LIN,place,0.095,me_sindar,me_valar_
 me_land_1704,Urukdûr Camp,me_angmar_region,WILD,wilderness,0.006,me_northern_orc,me_melkorism,,fish,rural_settlement,
 me_land_1705,Blackridge,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
 me_land_1706,Dol carandûr,me_brown_lands_region,WILD,wilderness,0.009,me_woodman,me_northern_ways,,wool,rural_settlement,
-me_land_1707,Goldenford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_1707,Goldenford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_1708,Ashfang Camp,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_1709,Azrahir Gate,me_umbar_region,UMB,place,1.693,me_umbarite,me_sauron_cult,,horses,rural_settlement,wumbu
 me_land_1710,Brambleridge,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
@@ -1843,7 +1843,7 @@ me_land_1799,Westridge,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,m
 me_land_1800,Blackgash Camp,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_1801,Balor Camp,me_rhun_region,RH2,place,3.379,me_karmachi,me_melkorism,,wool,rural_settlement,maiwa_papua_culture
 me_land_1802,Burzgash Camp,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
-me_land_1803,Honeyford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_1803,Honeyford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_1804,Eithel falasdûr,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_1805,Alderstead,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,livestock,rural_settlement,
 me_land_1806,Ashstead,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,clay,rural_settlement,
@@ -1977,7 +1977,7 @@ me_land_1933,Gorglob Camp,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_saur
 me_land_1934,Beaconwater,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wool,rural_settlement,
 me_land_1935,Lakeford,me_dale_region,WILD,wilderness,0.014,me_dalish,me_northern_ways,,livestock,rural_settlement,
 me_land_1936,Blackwater,me_enedwaith_region,WILD,wilderness,0.013,me_dunlending,me_dunland_ways,,clay,rural_settlement,
-me_land_1937,Riverford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_1937,Riverford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_1938,Bramblewater,me_enedwaith_region,DUN,place,3.689,me_dunlending,me_dunland_ways,,wool,rural_settlement,ibanag_culture
 me_land_1939,Bar gonddûr,me_ithilien_region,WILD,wilderness,0.014,me_gondorian,me_valar_worship,,wheat,rural_settlement,
 me_land_1940,Daramar Gate,me_far_harad_region,WILD,wilderness,0.006,me_far_haradrim,me_southron_ways,,livestock,rural_settlement,
@@ -2281,7 +2281,7 @@ me_land_2237,Celon thorondûr,me_belfalas_region,DAM,place,2.341,me_dol_amrothia
 me_land_2238,Nim thorondûr,me_north_arnor_region,WILD,wilderness,0.011,me_eriadoran,me_northern_ways,,wool,rural_settlement,
 me_land_2239,Dunland Moot,me_enedwaith_region,DUN,town,22.111,me_dunlending,me_dunland_ways,,wool,town,agob_culture
 me_land_2240,Arzor,me_khand_region,KHA,place,0.657,me_variag,me_melkorism,,salt,rural_settlement,
-me_land_2241,Skinford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_2241,Skinford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_2242,Amon adaren,me_lindon_region,LIN,place,0.095,me_sindar,me_valar_worship,,livestock,rural_settlement,
 me_land_2243,Snowfloe Reach,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,livestock,rural_settlement,
 me_land_2244,Halifirien,me_anorien_region,GON,landmark,5.015,me_gondorian,me_valar_worship,,wheat,rural_settlement,croatan_culture
@@ -2317,13 +2317,13 @@ me_land_2273,Amon Dîn,me_anorien_region,GON,landmark,3.554,me_gondorian,me_vala
 me_land_2274,Nargdûm,me_lindon_region,BLU,place,0.263,me_firebeard_broadbeam,me_mahal_cult,,fish,rural_settlement,
 me_land_2275,Dushlug Camp,me_angmar_region,GUN,place,0.674,me_northern_orc,me_melkorism,,wild_game,rural_settlement,
 me_land_2276,Ghashlug Camp,me_anduin_vale_region,DOL,place,3.39,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,kuy_culture
-me_land_2277,Valeford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_2277,Valeford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_2278,Greybank End,me_enedwaith_region,DUN,place,5.151,me_dunlending,me_dunland_ways,,clay,rural_settlement,berta_culture
 me_land_2279,Zarasir Gate,me_far_harad_region,HFA,place,15.342,me_far_haradrim,me_southron_ways,,wool,rural_settlement,akainaa_culture
 me_land_2280,Celon adaren,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_2281,Longbank End,me_enedwaith_region,DUN,place,3.689,me_dunlending,me_dunland_ways,,wool,rural_settlement,ibaloi_culture
 me_land_2282,Grimgar,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,clay,rural_settlement,ormur_culture
-me_land_2283,Wildford,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_2283,Wildford,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_2284,Khazân,me_khand_region,KHA,city,21.688,me_variag,me_melkorism,,wool,city,agojuda_culture
 me_land_2285,Nim adaren,me_belfalas_region,GON,place,3.462,me_gondorian,me_valar_worship,,clay,rural_settlement,kochini
 me_land_2286,Northbank End,me_anduin_vale_region,WILD,wilderness,0.013,me_woodman,me_northern_ways,,wheat,rural_settlement,
@@ -2350,7 +2350,7 @@ me_land_2306,Imlad aelen,me_ithilien_region,WILD,wilderness,0.013,me_gondorian,m
 me_land_2307,Coldhaven Reach,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,wheat,rural_settlement,
 me_land_2308,Mahrem Gate,me_near_harad_region,HNE,place,1.99,me_near_haradrim,me_southron_ways,,wheat,rural_settlement,tolaki_culture
 me_land_2309,Grishlug Camp,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
-me_land_2310,Woodford,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_2310,Woodford,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_2311,Sharad March,me_rhun_region,RH2,place,3.379,me_karmachi,me_melkorism,,livestock,rural_settlement,maewo_culture
 me_land_2312,Uldad March,me_rhun_region,WILD,wilderness,0.011,me_balchoth,me_melkorism,,clay,rural_settlement,
 me_land_2313,Drifthaven Reach,me_northern_wastes_region,WILD,wilderness,0.007,me_lossoth,me_lossoth_ways,,clay,rural_settlement,
@@ -2390,7 +2390,7 @@ me_land_2346,Frosthaven Reach,me_northern_wastes_region,WILD,wilderness,0.006,me
 me_land_2347,Muzglug Camp,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_2348,Umrem Gate,me_near_harad_region,HRA,place,3.613,me_near_haradrim,me_southron_ways,,livestock,rural_settlement,iyiniyu_culture
 me_land_2349,Léodgar,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,wool,rural_settlement,orang_laut_culture
-me_land_2350,Bearhall,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_2350,Bearhall,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_2351,Nim aelen,me_north_arnor_region,WILD,wilderness,0.011,me_eriadoran,me_northern_ways,,clay,rural_settlement,
 me_land_2352,Stonebank End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
 me_land_2353,Amon annonen,me_belfalas_region,GON,place,5.015,me_gondorian,me_valar_worship,,livestock,rural_settlement,coremas_culture
@@ -2453,11 +2453,11 @@ me_land_2409,Dol belen,me_north_arnor_region,WILD,wilderness,0.011,me_eriadoran,
 me_land_2410,Kandor,me_khand_region,WILD,wilderness,0.006,me_variag,me_melkorism,,livestock,rural_settlement,
 me_land_2411,Woldgar,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,clay,rural_settlement,opata_culture
 me_land_2412,Burzmauk Camp,me_mordor_region,WILD,wilderness,0.009,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
-me_land_2413,Beehall,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_2413,Beehall,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_2414,Mahresh Gate,me_umbar_region,UMB,place,1.693,me_umbarite,me_sauron_cult,,wool,rural_settlement,wetsuweten_culture
 me_land_2415,Bucklandbourne End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
 me_land_2416,Khazor,me_khand_region,KHA,place,0.657,me_variag,me_melkorism,,wool,rural_settlement,
-me_land_2417,Carrockhall,me_anduin_vale_region,BEO,place,0.163,me_beorning,me_northern_ways,,wild_game,rural_settlement,
+me_land_2417,Carrockhall,me_anduin_vale_region,BEO,place,0.166,me_beorning,me_northern_ways,,wild_game,rural_settlement,
 me_land_2418,Dushmauk Camp,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
 me_land_2419,Eithel belen,me_belfalas_region,DAM,place,2.341,me_dol_amrothian,me_valar_worship,,wool,rural_settlement,romansh
 me_land_2420,Emyn belen,me_north_arnor_region,RAN,place,0.168,me_arnor_dunedain,me_valar_worship,,wheat,rural_settlement,
@@ -2641,7 +2641,7 @@ me_land_2597,Lugnakh Camp,me_mordor_region,WILD,wilderness,0.01,me_mordor_orc,me
 me_land_2598,Mauhnakh Camp,me_mordor_region,MOR,place,5.099,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,boe_culture
 me_land_2599,Bucklandbridge End,me_enedwaith_region,WILD,wilderness,0.013,me_dunlending,me_dunland_ways,,wool,rural_settlement,
 me_land_2600,Wainen March,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,wool,rural_settlement,median
-me_land_2601,Goldenhall,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_2601,Goldenhall,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_2602,Muzgnakh Camp,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_2603,Nazgnakh Camp,me_anduin_vale_region,MOA,place,1.215,me_misty_orc,me_melkorism,,clay,rural_settlement,
 me_land_2604,Skainakh Camp,me_mordor_region,MOR,place,5.099,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,bodo_culture
@@ -2725,7 +2725,7 @@ me_land_2681,Rakhir Gate,me_near_harad_region,UMB,place,1.313,me_umbarite,me_sau
 me_land_2682,Celon galenen,me_lindon_region,LIN,place,0.051,me_sindar,me_valar_worship,,livestock,rural_settlement,
 me_land_2683,Sharod March,me_rhun_region,WILD,wilderness,0.01,me_balchoth,me_melkorism,,livestock,rural_settlement,
 me_land_2684,Sahrir Gate,me_far_harad_region,WILD,wilderness,0.006,me_far_haradrim,me_southron_ways,,salt,rural_settlement,
-me_land_2685,Honeyhall,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_2685,Honeyhall,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_2686,Khoruk,me_khand_region,KHA,place,0.657,me_variag,me_melkorism,,copper,rural_settlement,
 me_land_2687,Nim galenen,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_2688,Nutbury,me_shire_breeland_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
@@ -2740,7 +2740,7 @@ me_land_2696,Framham,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_way
 me_land_2697,Ruzuk,me_khand_region,WILD,wilderness,0.006,me_variag,me_melkorism,,wool,rural_settlement,
 me_land_2698,Barrowbrook End,me_enedwaith_region,WILD,wilderness,0.013,me_dunlending,me_dunland_ways,,livestock,rural_settlement,
 me_land_2699,Eithel gonden,me_north_arnor_region,RIV,place,0.043,me_noldor,me_valar_worship,,clay,rural_settlement,
-me_land_2700,Riverhall,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_2700,Riverhall,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_2701,Snowpoint Reach,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,wild_game,rural_settlement,
 me_land_2702,Emyn gonden,me_brown_lands_region,WILD,wilderness,0.01,me_woodman,me_northern_ways,,horses,rural_settlement,
 me_land_2703,Imlad gonden,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wool,rural_settlement,
@@ -2751,7 +2751,7 @@ me_land_2707,Beaconbrook End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlen
 me_land_2708,Nazgshak Camp,me_angmar_region,GUN,place,5.417,me_northern_orc,me_melkorism,,wool,rural_settlement,bengali
 me_land_2709,Umrir Gate,me_umbar_region,UMB,place,1.694,me_umbarite,me_sauron_cult,,wool,rural_settlement,wenrohronon_culture
 me_land_2710,Blackbrook End,me_mirkwood_region,WILD,wilderness,0.011,me_woodman,me_northern_ways,,livestock,rural_settlement,
-me_land_2711,Skinhall,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_2711,Skinhall,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_2712,Skaishak Camp,me_mordor_region,WILD,wilderness,0.01,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
 me_land_2713,Minas gonden,me_ithilien_region,WILD,wilderness,0.006,me_gondorian,me_valar_worship,,iron,rural_settlement,
 me_land_2714,Balor March,me_rhun_region,RH2,place,3.379,me_karmachi,me_melkorism,,wheat,rural_settlement,luvale
@@ -2920,13 +2920,13 @@ me_land_2876,Driftwater Reach,me_forochel_region,LOS,place,0.031,me_lossoth,me_l
 me_land_2877,Uruksnaga Camp,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
 me_land_2878,Ashzagh Camp,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
 me_land_2879,Zarun Gate,me_near_harad_region,HNE,place,2.651,me_near_haradrim,me_southron_ways,,livestock,rural_settlement,mum_culture
-me_land_2880,Valehall,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_2880,Valehall,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_2881,Azrur Gate,me_far_harad_region,WILD,wilderness,0.006,me_far_haradrim,me_southron_ways,,copper,rural_settlement,
 me_land_2882,Barazinbar,me_lindon_region,BLU,place,0.263,me_firebeard_broadbeam,me_mahal_cult,,wool,rural_settlement,
 me_land_2883,Daleholm,me_rhun_region,DOR,place,2.076,me_dorwinrim,me_northern_ways,,wheat,rural_settlement,tapajo_culture
 me_land_2884,Oakbole,me_rohan_region,FAN,place,0.016,me_onodrim,me_eldest_ways,,livestock,rural_settlement,
 me_land_2885,Azgzagh Camp,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
-me_land_2886,Wildhall,me_anduin_vale_region,BEO,place,0.163,me_beorning,me_northern_ways,,medicaments,rural_settlement,
+me_land_2886,Wildhall,me_anduin_vale_region,BEO,place,0.166,me_beorning,me_northern_ways,,medicaments,rural_settlement,
 me_land_2887,Sharun March,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,livestock,rural_settlement,mbay_culture
 me_land_2888,Uldun March,me_rhun_region,RH3,place,4.168,me_sagath,me_melkorism,,horses,rural_settlement,gbaya_culture
 me_land_2889,Frostwater Reach,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,clay,rural_settlement,
@@ -3013,7 +3013,7 @@ me_land_2969,Clovercombe,me_shire_breeland_region,WILD,wilderness,0.013,me_eriad
 me_land_2970,Driftbay Sound,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,wheat,rural_settlement,
 me_land_2971,Zarur Gate,me_near_harad_region,UMB,place,1.313,me_umbarite,me_sauron_cult,,wheat,rural_settlement,
 me_land_2972,Bar sarnen,me_brown_lands_region,WILD,wilderness,0.01,me_woodman,me_northern_ways,,livestock,rural_settlement,
-me_land_2973,Beorn's Hall,me_anduin_vale_region,BEO,landmark,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_2973,Beorn's Hall,me_anduin_vale_region,BEO,landmark,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_2974,Sagur March,me_rhun_region,RH2,place,3.38,me_karmachi,me_melkorism,,horses,rural_settlement,luchazi_culture
 me_land_2975,Dimplecombe,me_shire_breeland_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wool,rural_settlement,
 me_land_2976,Calen sarnen,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,livestock,rural_settlement,
@@ -3121,7 +3121,7 @@ me_land_3077,Umrabad Oasis,me_far_harad_region,HFA,place,5.969,me_far_haradrim,m
 me_land_3078,Bar adareth,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,clay,rural_settlement,
 me_land_3079,Gamilinbar,me_lindon_region,BLU,place,0.263,me_firebeard_broadbeam,me_mahal_cult,,wheat,rural_settlement,
 me_land_3080,Zarabad Oasis,me_near_harad_region,HNE,place,2.651,me_near_haradrim,me_southron_ways,,wheat,rural_settlement,muisca_culture
-me_land_3081,Bearholt,me_mirkwood_region,BEO,place,0.296,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_3081,Bearholt,me_mirkwood_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_3082,Calen adareth,me_ithilien_region,WILD,wilderness,0.014,me_gondorian,me_valar_worship,,wool,rural_settlement,
 me_land_3083,Celon adareth,me_belfalas_region,GON,place,3.462,me_gondorian,me_valar_worship,,clay,rural_settlement,kimaama_culture
 me_land_3084,Wainach Road,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,wheat,rural_settlement,gujarati
@@ -3155,7 +3155,7 @@ me_land_3111,Greyfield End,me_shire_breeland_region,BRE,place,0.507,me_eriadoran
 me_land_3112,Darahir Oasis,me_umbar_region,UMB,place,1.313,me_umbarite,me_sauron_cult,,wool,rural_settlement,
 me_land_3113,Ost aeleth,me_belfalas_region,GON,place,4.832,me_gondorian,me_valar_worship,,livestock,rural_settlement,french
 me_land_3114,Khurad Road,me_rhun_region,WILD,wilderness,0.01,me_balchoth,me_melkorism,,horses,rural_settlement,
-me_land_3115,Beeholt,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_3115,Beeholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_3116,Farahir Oasis,me_near_harad_region,HRA,place,3.613,me_near_haradrim,me_southron_ways,,copper,rural_settlement,ithanktunwanna_culture
 me_land_3117,Taur aeleth,me_brown_lands_region,WILD,wilderness,0.01,me_woodman,me_northern_ways,,horses,rural_settlement,
 me_land_3118,Lugbag Cleft,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
@@ -3187,7 +3187,7 @@ me_land_3143,Ashburz Cleft,me_mordor_region,WILD,wilderness,0.01,me_mordor_orc,m
 me_land_3144,Southfield End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,clay,rural_settlement,
 me_land_3145,Framholt,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,wheat,rural_settlement,oirat_culture
 me_land_3146,Stonefield End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wool,rural_settlement,
-me_land_3147,Carrockholt,me_anduin_vale_region,BEO,place,0.163,me_beorning,me_northern_ways,,medicaments,rural_settlement,
+me_land_3147,Carrockholt,me_anduin_vale_region,BEO,place,0.166,me_beorning,me_northern_ways,,medicaments,rural_settlement,
 me_land_3148,Azgburz Cleft,me_anduin_vale_region,DOL,place,2.544,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,nootka_culture
 me_land_3149,Gatholinbar,me_lindon_region,BLU,place,0.358,me_firebeard_broadbeam,me_mahal_cult,,livestock,rural_settlement,
 me_land_3150,Westfield End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,livestock,rural_settlement,
@@ -3218,7 +3218,7 @@ me_land_3174,Azramar Oasis,me_umbar_region,UMB,place,1.694,me_umbarite,me_sauron
 me_land_3175,Dushburz Cleft,me_angmar_region,WILD,wilderness,0.006,me_northern_orc,me_melkorism,,fish,rural_settlement,
 me_land_3176,Lakeholm,me_dale_region,DAL,place,1.674,me_dalish,me_northern_ways,,clay,rural_settlement,yemeni_culture
 me_land_3177,Varkak Camp,me_khand_region,KHA,place,2.173,me_variag,me_melkorism,,wool,rural_settlement,sougb_culture
-me_land_3178,Goldenholt,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_3178,Goldenholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_3179,Bahramar Oasis,me_near_harad_region,UMB,place,1.694,me_umbarite,me_sauron_cult,,horses,rural_settlement,warpe_culture
 me_land_3180,Alderford End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,clay,rural_settlement,
 me_land_3181,Ashford End,me_enedwaith_region,WILD,wilderness,0.013,me_dunlending,me_dunland_ways,,clay,rural_settlement,
@@ -3243,7 +3243,7 @@ me_land_3199,Kharamar Oasis,me_near_harad_region,HRA,place,3.613,me_near_haradri
 me_land_3200,Eithel beleth,me_belfalas_region,GON,place,3.462,me_gondorian,me_valar_worship,,clay,rural_settlement,kija_culture
 me_land_3201,Mahramar Oasis,me_near_harad_region,HNE,place,1.99,me_near_haradrim,me_southron_ways,,livestock,rural_settlement,tinputz_culture
 me_land_3202,Naramar Oasis,me_near_harad_region,UMB,place,1.694,me_umbarite,me_sauron_cult,,wool,rural_settlement,warnindilyakwa_culture
-me_land_3203,Honeyholt,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wheat,rural_settlement,
+me_land_3203,Honeyholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wheat,rural_settlement,
 me_land_3204,Balkan Camp,me_khand_region,KHA,place,2.173,me_variag,me_melkorism,,wool,rural_settlement,sotaeoo_culture
 me_land_3205,Grishburz Cleft,me_anduin_vale_region,MOA,place,2.238,me_misty_orc,me_melkorism,,wool,rural_settlement,serbian
 me_land_3206,Sharad Road,me_rhun_region,RH3,place,4.168,me_sagath,me_melkorism,,horses,rural_settlement,gayo_culture
@@ -3280,7 +3280,7 @@ me_land_3236,Bar beleth,me_anorien_region,GON,place,5.015,me_gondorian,me_valar_
 me_land_3237,Muzgburz Cleft,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_3238,Nazgburz Cleft,me_anduin_vale_region,GOB,place,1.703,me_misty_orc,me_melkorism,,wool,rural_settlement,unalachtigo_culture
 me_land_3239,Skaiburz Cleft,me_mirkwood_region,DOL,place,1.838,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,tula_culture
-me_land_3240,Oakholt,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_3240,Oakholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_3241,Greenford End,me_mirkwood_region,WILD,wilderness,0.011,me_woodman,me_northern_ways,,livestock,rural_settlement,
 me_land_3242,Calen beleth,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
 me_land_3243,Merrycombe,me_shire_breeland_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,wool,rural_settlement,
@@ -3293,7 +3293,7 @@ me_land_3249,Uglburz Cleft,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sau
 me_land_3250,Bahran Oasis,me_far_harad_region,HFA,place,15.342,me_far_haradrim,me_southron_ways,,wheat,rural_settlement,ajie_culture
 me_land_3251,Khazinbar,me_grey_mountains_region,WILD,wilderness,0.009,me_northern_orc,me_melkorism,,wild_game,rural_settlement,
 me_land_3252,Daran Oasis,me_far_harad_region,HRA,place,3.613,me_near_haradrim,me_southron_ways,,wool,rural_settlement,istroromanian
-me_land_3253,Riverholt,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_3253,Riverholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_3254,Dol borneth,me_lindon_region,LIN,place,0.129,me_sindar,me_valar_worship,,livestock,rural_settlement,
 me_land_3255,Driftfell Sound,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,wild_game,rural_settlement,
 me_land_3256,Dead Marshes,me_brown_lands_region,WILD,ruin,0,me_woodman,me_northern_ways,,wool,rural_settlement,
@@ -3426,9 +3426,9 @@ me_land_3382,Cedargate End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlendi
 me_land_3383,Gorfang Cleft,me_mordor_region,MOR,place,0.569,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
 me_land_3384,Kharara Oasis,me_near_harad_region,HNE,place,1.99,me_near_haradrim,me_southron_ways,,wheat,rural_settlement,timiscaming_culture
 me_land_3385,Varkan Camp,me_khand_region,KHA,place,2.173,me_variag,me_melkorism,,livestock,rural_settlement,soninke
-me_land_3386,Skinholt,me_anduin_vale_region,BEO,place,0.296,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_3386,Skinholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_3387,Zorar Road,me_rhun_region,RH2,place,3.38,me_karmachi,me_melkorism,,wool,rural_settlement,liv
-me_land_3388,Stoneholt,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_3388,Stoneholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_3389,Grishfang Cleft,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
 me_land_3390,Minas duineth,me_ithilien_region,WILD,wilderness,0.013,me_gondorian,me_valar_worship,,wheat,rural_settlement,
 me_land_3391,Ost duineth,me_brown_lands_region,WILD,wilderness,0.01,me_woodman,me_northern_ways,,horses,rural_settlement,
@@ -3479,7 +3479,7 @@ me_land_3435,Southgate End,me_enedwaith_region,WILD,wilderness,0.013,me_dunlendi
 me_land_3436,Karmath Road,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,clay,rural_settlement,guenoa_culture
 me_land_3437,Stonegate End,me_mirkwood_region,WILD,wilderness,0.01,me_woodman,me_northern_ways,,wheat,rural_settlement,
 me_land_3438,Khurath Road,me_rhun_region,RH3,place,5.556,me_sagath,me_melkorism,,wool,rural_settlement,baradha_culture
-me_land_3439,Valeholt,me_anduin_vale_region,BEO,place,0.163,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_3439,Valeholt,me_anduin_vale_region,BEO,place,0.166,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_3440,Nazgfang Cleft,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,aru_culture
 me_land_3441,Ost falaseth,me_mirkwood_region,WOO,place,0.31,me_silvan,me_valar_worship,,wool,rural_settlement,
 me_land_3442,Taur falaseth,me_north_arnor_region,WILD,wilderness,0.011,me_eriadoran,me_northern_ways,,wheat,rural_settlement,
@@ -3509,7 +3509,7 @@ me_land_3465,Starfloe Sound,me_forochel_region,LOS,place,0.211,me_lossoth,me_los
 me_land_3466,Ashhall End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,livestock,rural_settlement,
 me_land_3467,Barrowhall End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,livestock,rural_settlement,
 me_land_3468,Sagath Road,me_rhun_region,RH2,place,2.299,me_karmachi,me_melkorism,,wool,rural_settlement,sasak_culture
-me_land_3469,Wildholt,me_anduin_vale_region,BEO,place,0.163,me_beorning,me_northern_ways,,medicaments,rural_settlement,
+me_land_3469,Wildholt,me_anduin_vale_region,BEO,place,0.166,me_beorning,me_northern_ways,,medicaments,rural_settlement,
 me_land_3470,Bellmark,me_rhun_region,DOR,place,2.076,me_dorwinrim,me_northern_ways,,clay,rural_settlement,taontaenrat_culture
 me_land_3471,Imlad galeneth,me_mirkwood_region,WOO,place,0.553,me_silvan,me_valar_worship,,wool,rural_settlement,
 me_land_3472,Minas galeneth,me_lindon_region,LIN,place,0.129,me_sindar,me_valar_worship,,wheat,rural_settlement,
@@ -3575,7 +3575,7 @@ me_land_3531,Qasasir Oasis,me_near_harad_region,UMB,place,1.694,me_umbarite,me_s
 me_land_3532,Amon lotheth,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,livestock,rural_settlement,
 me_land_3533,Frosthaven Sound,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,wool,rural_settlement,
 me_land_3534,Kandar Camp,me_khand_region,WILD,wilderness,0.006,me_variag,me_melkorism,,wool,rural_settlement,
-me_land_3535,Woodholt,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_3535,Woodholt,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_3536,Dol lotheth,me_belfalas_region,GON,place,3.462,me_gondorian,me_valar_worship,,wheat,rural_settlement,khorasani_culture
 me_land_3537,Harnenhold,me_near_harad_region,HNE,city,19.851,me_near_haradrim,me_southron_ways,,wool,city,aikana_culture
 me_land_3538,Bregomere,me_rohan_region,ROH,place,2.512,me_rohirric,me_northern_ways,,wool,rural_settlement,nyurmgan_culture
@@ -3843,7 +3843,7 @@ me_land_3799,Longmark,me_rhun_region,DOR,place,2.076,me_dorwinrim,me_northern_wa
 me_land_3800,Zoror Road,me_rhun_region,WILD,wilderness,0.01,me_balchoth,me_melkorism,,wool,rural_settlement,
 me_land_3801,Ruzash Camp,me_khand_region,WILD,wilderness,0.006,me_variag,me_melkorism,,copper,rural_settlement,
 me_land_3802,Balun Road,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,livestock,rural_settlement,guanahatabey
-me_land_3803,Bearmead,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wild_game,rural_settlement,
+me_land_3803,Bearmead,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wild_game,rural_settlement,
 me_land_3804,Greymere End,me_enedwaith_region,WILD,wilderness,0.013,me_dunlending,me_dunland_ways,,wool,rural_settlement,
 me_land_3805,Mauhgrat Cleft,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,armenian_culture
 me_land_3806,Borun Road,me_rhun_region,RHU,place,4.159,me_balchoth,me_sauron_cult,,wheat,rural_settlement,guana_culture
@@ -3913,7 +3913,7 @@ me_land_3869,Alderridge End,me_shire_breeland_region,BRE,place,0.507,me_eriadora
 me_land_3870,Ashkrak Cleft,me_north_arnor_region,ANG,place,2.893,me_northern_orc,me_melkorism,,wheat,rural_settlement,mopan_culture
 me_land_3871,Azrir Oasis,me_near_harad_region,UMB,place,1.694,me_umbarite,me_sauron_cult,,fish,rural_settlement,wakaya_culture
 me_land_3872,Uldun Road,me_rhun_region,RH2,place,3.38,me_karmachi,me_melkorism,,wool,rural_settlement,lezgin_culture
-me_land_3873,Beemead,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_3873,Beemead,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_3874,Ferncroft,me_shire_breeland_region,SHI,place,2.572,me_shire_hobbit,me_northern_ways,,wheat,rural_settlement,ngaliwuru_culture
 me_land_3875,Imlad adarion,me_belfalas_region,GON,place,5.015,me_gondorian,me_valar_worship,,wheat,rural_settlement,cham_culture
 me_land_3876,Azgkrak Cleft,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,arawak_culture
@@ -4025,7 +4025,7 @@ me_land_3981,Minas annonion,me_lindon_region,LIN,place,0.096,me_sindar,me_valar_
 me_land_3982,Westridge End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,wheat,rural_settlement,
 me_land_3983,Farun Oasis,me_far_harad_region,WILD,wilderness,0.006,me_far_haradrim,me_southron_ways,,livestock,rural_settlement,
 me_land_3984,Rhovur Road,me_rhun_region,WILD,wilderness,0.01,me_balchoth,me_melkorism,,wool,rural_settlement,
-me_land_3985,Carrockmead,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_3985,Carrockmead,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_3986,Alderstead End,me_enedwaith_region,WILD,wilderness,0.008,me_dunlending,me_dunland_ways,,wild_game,rural_settlement,
 me_land_3987,Ost annonion,me_north_arnor_region,WILD,wilderness,0.013,me_eriadoran,me_northern_ways,,livestock,rural_settlement,
 me_land_3988,Blacklug Cleft,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,apyawa_culture
@@ -4040,7 +4040,7 @@ me_land_3996,Kharun Oasis,me_umbar_region,UMB,place,1.694,me_umbarite,me_sauron_
 me_land_3997,Driftshore Sound,me_forochel_region,LOS,place,0.031,me_lossoth,me_lossoth_ways,,fish,rural_settlement,
 me_land_3998,Taur annonion,me_anorien_region,GON,place,5.015,me_gondorian,me_valar_worship,,livestock,rural_settlement,chaima_culture
 me_land_3999,Frostshore Sound,me_forochel_region,LOS,place,0.031,me_lossoth,me_lossoth_ways,,fur,rural_settlement,
-me_land_4000,Eagles' Eyrie,me_anduin_vale_region,BEO,landmark,0.297,me_beorning,me_northern_ways,,wheat,rural_settlement,
+me_land_4000,Eagles' Eyrie,me_anduin_vale_region,WILD,landmark,0,me_woodman,me_northern_ways,,wheat,rural_settlement,
 me_land_4001,Dushlug Cleft,me_mirkwood_region,DOL,place,1.838,me_mordor_orc,me_sauron_cult,,medicaments,rural_settlement,tugochar_culture
 me_land_4002,Bar annonion,me_lindon_region,LIN,place,0.129,me_sindar,me_valar_worship,,wheat,rural_settlement,
 me_land_4003,Khorek Camp,me_khand_region,KHA,place,2.173,me_variag,me_melkorism,,livestock,rural_settlement,sindhi
@@ -4090,7 +4090,7 @@ me_land_4046,Emyn belion,me_lindon_region,LIN,place,0.096,me_sindar,me_valar_wor
 me_land_4047,Karmach Steppe,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauron_cult,,horses,rural_settlement,maung_culture
 me_land_4048,Khurach Steppe,me_rhun_region,WILD,wilderness,0.01,me_balchoth,me_melkorism,,wool,rural_settlement,
 me_land_4049,Sahrun Oasis,me_near_harad_region,HRA,place,3.613,me_near_haradrim,me_southron_ways,,wool,rural_settlement,inuinnait_culture
-me_land_4050,Honeymead,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wild_game,rural_settlement,
+me_land_4050,Honeymead,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wild_game,rural_settlement,
 me_land_4051,Snowshore Sound,me_northern_wastes_region,WILD,wilderness,0.011,me_lossoth,me_lossoth_ways,,livestock,rural_settlement,
 me_land_4052,Tazun Oasis,me_far_harad_region,HFA,place,3.575,me_far_haradrim,me_southron_ways,,salt,rural_settlement,kalaw_lagaw_ya_culture
 me_land_4053,Uruklug Cleft,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
@@ -4119,7 +4119,7 @@ me_land_4075,Sagach Steppe,me_rhun_region,RH2,place,3.38,me_karmachi,me_melkoris
 me_land_4076,Bar belion,me_lindon_region,LIN,place,0.096,me_sindar,me_valar_worship,,clay,rural_settlement,
 me_land_4077,Calen belion,me_north_arnor_region,RAN,place,0.168,me_arnor_dunedain,me_valar_worship,,clay,rural_settlement,
 me_land_4078,Deepstead End,me_enedwaith_region,WILD,wilderness,0.011,me_dunlending,me_dunland_ways,,medicaments,rural_settlement,
-me_land_4079,Oakmead,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,clay,rural_settlement,
+me_land_4079,Oakmead,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,clay,rural_settlement,
 me_land_4080,Zandek Camp,me_khand_region,KHA,place,0.657,me_variag,me_melkorism,,livestock,rural_settlement,
 me_land_4081,Déorseld,me_rohan_region,ROH,place,2.513,me_rohirric,me_northern_ways,,horses,rural_settlement,nutabe_culture
 me_land_4082,Zarun Oasis,me_near_harad_region,UMB,place,1.694,me_umbarite,me_sauron_cult,,wool,rural_settlement,wahpekhute_culture
@@ -4160,7 +4160,7 @@ me_land_4116,Firien Wood,me_anorien_region,GON,landmark,5.015,me_gondorian,me_va
 me_land_4117,Farur Oasis,me_umbar_region,UMB,place,0.398,me_umbarite,me_sauron_cult,,wheat,rural_settlement,
 me_land_4118,Hadrur Oasis,me_near_harad_region,WILD,wilderness,0.006,me_near_haradrim,me_southron_ways,,livestock,rural_settlement,
 me_land_4119,Stonestead End,me_mirkwood_region,WILD,wilderness,0.011,me_woodman,me_northern_ways,,wheat,rural_settlement,
-me_land_4120,Rivermead,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_4120,Rivermead,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_4121,Borad Steppe,me_rhun_region,WILD,wilderness,0.011,me_balchoth,me_melkorism,,wool,rural_settlement,
 me_land_4122,Lugmauk Cleft,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,
 me_land_4123,Mauhmauk Cleft,me_mordor_region,MOR,place,5.1,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,bidayuh_culture
@@ -4210,7 +4210,7 @@ me_land_4166,Azgnakh Cleft,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,
 me_land_4167,Blacknakh Cleft,me_mordor_region,WILD,wilderness,0.006,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_4168,Burznakh Cleft,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,iron,rural_settlement,
 me_land_4169,Framseld,me_rohan_region,ROH,place,1.352,me_rohirric,me_northern_ways,,wheat,rural_settlement,
-me_land_4170,Skinmead,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,livestock,rural_settlement,
+me_land_4170,Skinmead,me_anduin_vale_region,BEO,place,0.301,me_beorning,me_northern_ways,,livestock,rural_settlement,
 me_land_4171,Imlad caranion,me_south_gondor_region,GON,place,5.015,me_gondorian,me_valar_worship,,clay,rural_settlement,cebuano_culture
 me_land_4172,Sagad Steppe,me_rhun_region,WILD,wilderness,0.01,me_balchoth,me_melkorism,,livestock,rural_settlement,
 me_land_4173,Minas caranion,me_south_gondor_region,GON,place,3.763,me_gondorian,me_valar_worship,,wool,rural_settlement,hiraaca_culture
@@ -4368,7 +4368,7 @@ me_land_4324,Taur galenion,me_north_arnor_region,WILD,wilderness,0.013,me_eriado
 me_land_4325,Narath Steppe,me_rhun_region,RH2,place,3.38,me_karmachi,me_melkorism,,wool,rural_settlement,laoxiang_culture
 me_land_4326,Azrahir Wells,me_umbar_region,UMB,place,2.256,me_umbarite,me_sauron_cult,,clay,rural_settlement,saxon
 me_land_4327,Icebay Waste,me_northern_wastes_region,WILD,wilderness,0.006,me_lossoth,me_lossoth_ways,,fish,rural_settlement,
-me_land_4328,Stonemead,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_4328,Stonemead,me_anduin_vale_region,BEO,place,0.302,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_4329,Bahrahir Wells,me_umbar_region,UMB,place,1.694,me_umbarite,me_sauron_cult,,livestock,rural_settlement,votian
 me_land_4330,Ghashshak Cleft,me_mordor_region,WILD,wilderness,0.01,me_mordor_orc,me_sauron_cult,,stone,rural_settlement,
 me_land_4331,Gorshak Cleft,me_mordor_region,MOR,place,6.798,me_mordor_orc,me_sauron_cult,,livestock,rural_settlement,aondironon_culture
@@ -4463,7 +4463,7 @@ me_land_4419,Snowcamp Waste,me_northern_wastes_region,WILD,wilderness,0.011,me_l
 me_land_4420,Celon gondion,me_ithilien_region,WILD,wilderness,0.014,me_gondorian,me_valar_worship,,wheat,rural_settlement,
 me_land_4421,Drazor Camp,me_khand_region,KHA,place,2.174,me_variag,me_melkorism,,wheat,rural_settlement,sibe_culture
 me_land_4422,Naren Steppe,me_rhun_region,RH3,place,5.556,me_sagath,me_melkorism,,wheat,rural_settlement,bamu_culture
-me_land_4423,Valemead,me_mirkwood_region,BEO,place,0.163,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_4423,Valemead,me_mirkwood_region,BEO,place,0.166,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_4424,Kheledkibil,me_lindon_region,BLU,place,0.358,me_firebeard_broadbeam,me_mahal_cult,,wool,rural_settlement,
 me_land_4425,Celduinstead,me_rhun_region,DOR,place,1.559,me_dorwinrim,me_northern_ways,,wool,rural_settlement,yuri_culture
 me_land_4426,Rhoven Steppe,me_rhun_region,WILD,wilderness,0.01,me_balchoth,me_melkorism,,wheat,rural_settlement,
@@ -5046,7 +5046,7 @@ me_land_5002,Borar of Balach,me_rhun_region,RHU,place,3.121,me_balchoth,me_sauro
 me_land_5003,Gorfang Den,me_north_arnor_region,GOB,place,1.808,me_misty_orc,me_melkorism,,wheat,rural_settlement,turkish_culture
 me_land_5004,Gathar of Balach,me_rhun_region,WILD,wilderness,0.011,me_balchoth,me_melkorism,,wheat,rural_settlement,
 me_land_5005,Grishfang Den,me_mordor_region,MOR,place,1.137,me_mordor_orc,me_sauron_cult,,wheat,rural_settlement,
-me_land_5006,Wildmead,me_anduin_vale_region,BEO,place,0.297,me_beorning,me_northern_ways,,wool,rural_settlement,
+me_land_5006,Wildmead,me_anduin_vale_region,BEO,place,0.302,me_beorning,me_northern_ways,,wool,rural_settlement,
 me_land_5007,Eithel bornlad,me_lindon_region,LIN,place,0.096,me_sindar,me_valar_worship,,clay,rural_settlement,
 me_land_5008,Emyn bornlad,me_belfalas_region,GON,place,5.015,me_gondorian,me_valar_worship,,clay,rural_settlement,bungku_culture
 me_land_5009,Rakhesh Wells,me_near_harad_region,HRA,place,12.012,me_near_haradrim,me_southron_ways,,wool,rural_settlement,alan_culture

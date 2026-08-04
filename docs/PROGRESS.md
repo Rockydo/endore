@@ -2,6 +2,11 @@
 
 ## 2026-08-04
 
+- v119 completes a narrow unclaimed-site source audit. Eagles' Eyrie is corrected from
+  Beorning ownership to wild and explicitly remains empty of mortal population; Framsburg
+  is corrected from Gundabad to wild and remains an empty ruin. Twelve already-correct
+  ruins, borderlands, independent highlands, and abandoned sites now have exact ownership
+  contracts. No coast, terrain, river, broad border, or fictional realm changed.
 - v118's political frontier audit found and corrected five named TA 3018 ownership
   mistakes: three Shire settlements, the Old Forest, and Nardol. The Black Gate and
   Shelob's pass cells remain wild because they lie just outside the frozen Mordor

@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-08-04 — Keep the Eagles' Eyrie politically and demographically empty
+
+Treat the source-exact Eagles' Eyrie as an independent wild landmark at TA 3018, not a
+Beorning outpost. Its occupants are Eagles, so exclude it from the mortal M5 population
+allocator just as canonical ruins are excluded. Bind the rule to the `eagles_eyrie` M3
+reference, `landmark` rank, and `WILD` owner; a future political or gazetteer change must
+therefore fail validation rather than silently recreating a generic human hamlet.
+
 ## 2026-08-04 — Prove Finder camera moves before accepting map evidence
 
 The installed UI exposes Finder through a clickable right-panel control. The previously

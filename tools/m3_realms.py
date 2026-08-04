@@ -413,6 +413,62 @@ FRONTIER_LANDMARK_EXCLUSIONS: dict[str, frozenset[str]] = {
 # allocation contradicts their TA 3018 control, settled-land boundary, or an
 # explicit physical frontier.
 FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
+    "tharbad": (
+        WILD,
+        "ruined Tharbad has no TA 3018 sovereign administration",
+    ),
+    "ost_in_edhil": (
+        WILD,
+        "the long-ruined Eregion capital is not a surviving realm's holding",
+    ),
+    "lond_daer": (
+        WILD,
+        "Lond Daer is an abandoned Númenórean ruin",
+    ),
+    "sarn_ford": (
+        WILD,
+        "Sarn Ford is a watched crossing, not a settled Shire or Bree possession",
+    ),
+    "eagles_eyrie": (
+        WILD,
+        "the Eagles' Eyrie is independent highland territory, not a Beorning settlement",
+    ),
+    "framsburg": (
+        WILD,
+        "Framsburg is a deserted Eotheod ruin, not part of Gundabad's orc domain",
+    ),
+    "grey_mountain_holds": (
+        WILD,
+        "the abandoned Grey Mountain dwarf-holds have no TA 3018 ruler",
+    ),
+    "withered_heath": (
+        WILD,
+        "the dragon-haunted Withered Heath remains unclaimed wilderness",
+    ),
+    "dead_marshes": (
+        WILD,
+        "the Dead Marshes lie outside settled control after the War of the Last Alliance",
+    ),
+    "dagorlad": (
+        WILD,
+        "Dagorlad is a desolate borderland rather than a settled Mordor or Gondor province",
+    ),
+    "emyn_arnen": (
+        WILD,
+        "Ithilien has been emptied since TA 2954 despite its Gondorian dynastic memory",
+    ),
+    "morgai": (
+        WILD,
+        "Morgai is a hostile outer ridge beyond settled control in the emptied Ithilien belt",
+    ),
+    "cirith_gorgor": (
+        WILD,
+        "the exact Black Gate pass cell remains outside the frozen Mordor enclosure",
+    ),
+    "shelobs_lair": (
+        WILD,
+        "the exact Shelob pass cell remains outside the frozen Mordor enclosure",
+    ),
     "frogmorton": (
         "SHI",
         "Frogmorton is a named East Road village within the Shire",

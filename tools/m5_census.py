@@ -96,6 +96,12 @@ MAX_SETUP_POP_ENTRIES = 8
 # 750-person floor keeps every engine-required installed-culture shim
 # subordinate to a robust custom majority without inflating demographics.
 MIN_ABI_HOST_UNITS = 750
+# The Eagles' Eyrie is an independent eyrie occupied by Eagles, not a mortal
+# settlement.  A wilderness owner alone is insufficient because the generic M5
+# allocator deliberately gives every non-ruin land cell a small population.
+# Keep this tiny, source-specific exception explicit and fail closed below if
+# its M3 landmark/ownership contract ever drifts.
+UNINHABITED_CANONICAL_SITE_REFS = frozenset({"eagles_eyrie"})
 RAW_GOODS = frozenset(
     {
         "wheat",
@@ -297,12 +303,39 @@ def _resolve_location(ref: str) -> str:
     return key
 
 
+@lru_cache(maxsize=1)
+def _uninhabited_canonical_site_keys() -> frozenset[str]:
+    """Resolve source-anchored landmarks which intentionally start empty."""
+    state = build_state()
+    keys: set[str] = set()
+    for ref in UNINHABITED_CANONICAL_SITE_REFS:
+        key = state.ref_to_location.get(ref)
+        if key is None:
+            raise ValueError(f"unresolved uninhabited canonical-site reference {ref}")
+        location = state.model.by_key[key]
+        if (
+            location.kind != "land"
+            or state.rank[key] != "landmark"
+            or state.ownership[key] != WILD
+        ):
+            raise ValueError(
+                f"uninhabited canonical site {ref} is no longer a wild land landmark"
+            )
+        keys.add(key)
+    return frozenset(keys)
+
+
 def _nonruin_land() -> list[str]:
     state = build_state()
+    uninhabited = _uninhabited_canonical_site_keys()
     return [
         location.key
         for location in state.model.locations
-        if location.kind == "land" and state.rank[location.key] != "ruin"
+        if (
+            location.kind == "land"
+            and state.rank[location.key] != "ruin"
+            and location.key not in uninhabited
+        )
     ]
 
 
@@ -1108,6 +1141,7 @@ def _manifest(state: M5State) -> dict[str, object]:
             and political.rank[location.key] == "ruin"
             for location in political.model.locations
         ),
+        "empty_uninhabited_landmarks": len(_uninhabited_canonical_site_keys()),
         "realm_targets_k": {
             key: target.total_units / 1000
             for key, target in sorted(targets.items())
@@ -1296,6 +1330,11 @@ def check() -> list[str]:
     }
     if ruin_keys & set(state.locations):
         failures.append("one or more canonical ruins has a starting population")
+    uninhabited_keys = _uninhabited_canonical_site_keys()
+    if uninhabited_keys & set(state.locations):
+        failures.append(
+            "one or more uninhabited canonical landmarks has a starting population"
+        )
     land_keys = {
         location.key
         for location in political.model.locations
