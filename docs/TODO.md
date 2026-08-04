@@ -24,6 +24,8 @@ continues; no milestone after M2 may begin while the M2 gate is unchecked.
   time, against the owner-approved Arda Maps Third Age and ArdaCraft controls. Do not
   invent broad borders: uncertain cells remain wild; every changed owner needs a precise
   source, a canon rationale, an exact control/contract, and topology validation.
+  - [X] Restore the source-pinned Archet, Combe, and Staddle cells to contiguous
+    Bree-land; see `docs/m2/V131_BREELAND_FOUR_VILLAGES.md`.
 - [ ] Recheck every named location and realm position in the six enforced theatres:
   Gap of Rohan; Lothlórien/Moria; Dale/Lonely Mountain; Mordor/Ithilien; represented
   East/South; and the Far Harad fringe. Correct only source-proven defects, including

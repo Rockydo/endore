@@ -1938,7 +1938,7 @@ me_land_1894,land,me_lindon_region,LIN,owned
 me_land_1895,land,me_rhun_region,WILD,wild_unclaimed
 me_land_1896,land,me_mirkwood_region,WDM,owned
 me_land_1897,land,me_north_arnor_region,WILD,wild_unclaimed
-me_land_1898,land,me_north_arnor_region,WILD,wild_unclaimed
+me_land_1898,land,me_north_arnor_region,BRE,owned
 me_land_1899,land,me_far_harad_region,WILD,wild_unclaimed
 me_land_1900,land,me_mordor_region,WILD,wild_unclaimed
 me_land_1901,land,me_mirkwood_region,WILD,wild_unclaimed
@@ -2838,7 +2838,7 @@ me_land_2794,land,me_dale_region,ERE,owned
 me_land_2795,land,me_khand_region,KHA,owned
 me_land_2796,land,me_enedwaith_region,WILD,wild_buffer
 me_land_2797,land,me_mirkwood_region,WILD,wild_unclaimed
-me_land_2798,land,me_north_arnor_region,WILD,wild_unclaimed
+me_land_2798,land,me_north_arnor_region,BRE,owned
 me_land_2799,land,me_mordor_region,MOR,owned
 me_land_2800,land,me_mordor_region,WILD,wild_unclaimed
 me_land_2801,land,me_mordor_region,MOR,owned
@@ -4623,7 +4623,7 @@ me_land_4579,land,me_mordor_region,WILD,wild_unclaimed
 me_land_4580,land,me_mordor_region,MOR,owned
 me_land_4581,land,me_rhun_region,RHU,owned
 me_land_4582,land,me_brown_lands_region,WILD,wild_unclaimed
-me_land_4583,land,me_north_arnor_region,WILD,wild_unclaimed
+me_land_4583,land,me_north_arnor_region,BRE,owned
 me_land_4584,land,me_rohan_region,ROH,owned
 me_land_4585,land,me_brown_lands_region,WILD,wild_unclaimed
 me_land_4586,land,me_lebennin_region,GON,owned

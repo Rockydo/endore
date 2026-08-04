@@ -98,6 +98,14 @@ EXPECTED_SOURCE_POINT_LANDMARKS = {
     "white_towers": ("point_castletower", "WhiteTowers", (0.320639, 0.234862)),
     "last_bridge": ("point_bridge", "LastBridge", (0.458353, 0.224332)),
 }
+# The four villages of Bree-land are a single explicit canon cluster.  Bree itself
+# is an older settlement anchor; these eastern companions use Ardacraft's direct
+# equal-scale markers, which are the point-authority for place locations.
+EXPECTED_ARDACRAFT_BREELAND_LANDMARKS = {
+    "archet": ("Archet", (0.409637, 0.227916)),
+    "combe": ("Combe", (0.406637, 0.226521)),
+    "staddle": ("Staddle", (0.406370, 0.232311)),
+}
 SOURCE_DRAINAGE_THEATRES = {
     "northern_basins": {
         "bbox": (0.35, 0.00, 0.80, 0.32),
@@ -952,6 +960,24 @@ def render_report() -> dict:
             )
         if landmark.get("cartography_reference") != f"Arda Maps {layer}: {event_name}":
             failures.append(f"{ref} lost its exact Arda Maps point provenance")
+    missing_breeland = sorted(
+        set(EXPECTED_ARDACRAFT_BREELAND_LANDMARKS) - set(landmark_by_ref)
+    )
+    if missing_breeland:
+        failures.append(
+            "missing source-pinned Bree-land landmarks: " + ", ".join(missing_breeland)
+        )
+    for ref, (event_name, expected) in EXPECTED_ARDACRAFT_BREELAND_LANDMARKS.items():
+        landmark = landmark_by_ref.get(ref)
+        if landmark is None:
+            continue
+        actual = (float(landmark["x"]), float(landmark["y"]))
+        if actual != expected:
+            failures.append(
+                f"{ref} moved from exact Ardacraft marker:{event_name} control"
+            )
+        if landmark.get("cartography_reference") != f"Ardacraft: {event_name}":
+            failures.append(f"{ref} lost its exact Ardacraft marker provenance")
     manual_landmarks = 0
     for landmark in landmarks:
         reference = landmark.get("cartography_reference", "").strip()

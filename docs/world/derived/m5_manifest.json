@@ -47,18 +47,18 @@
     "WOO": 35.0
   },
   "population_types_k": {
-    "burghers": 859.89,
-    "clergy": 106.625,
-    "laborers": 1464.489,
-    "nobles": 261.849,
-    "peasants": 3740.738,
+    "burghers": 859.88,
+    "clergy": 106.628,
+    "laborers": 1464.481,
+    "nobles": 261.853,
+    "peasants": 3740.742,
     "slaves": 773.355,
-    "soldiers": 1347.34,
+    "soldiers": 1347.347,
     "tribesmen": 474.314
   },
   "culture_population_k": {
     "me_arnor_dunedain": 8.0,
-    "me_balchoth": 702.073,
+    "me_balchoth": 702.078,
     "me_beorning": 18.0,
     "me_black_numenorean": 25.0,
     "me_bree_hobbit": 7.0,
@@ -67,7 +67,7 @@
     "me_dorwinrim": 162.0,
     "me_druedain": 6.0,
     "me_dunlending": 164.186,
-    "me_eriadoran": 17.356,
+    "me_eriadoran": 17.323,
     "me_far_haradrim": 350.588,
     "me_firebeard_broadbeam": 13.0,
     "me_galadhrim": 25.0,
@@ -77,7 +77,7 @@
     "me_longbeard": 67.0,
     "me_lossoth": 10.461,
     "me_misty_orc": 108.0,
-    "me_mordor_orc": 1242.552,
+    "me_mordor_orc": 1242.565,
     "me_near_haradrim": 1040.189,
     "me_noldor": 3.8,
     "me_northern_orc": 187.405,
@@ -89,7 +89,7 @@
     "me_sindar": 15.011,
     "me_umbarite": 375.0,
     "me_variag": 300.433,
-    "me_woodman": 59.028
+    "me_woodman": 59.043
   },
   "faith_population_k": {
     "me_druedain_ways": 6.0,
@@ -97,9 +97,9 @@
     "me_eldest_ways": 0.5,
     "me_lossoth_ways": 10.461,
     "me_mahal_cult": 80.0,
-    "me_melkorism": 1647.911,
-    "me_northern_ways": 1106.5,
-    "me_sauron_cult": 2354.552,
+    "me_melkorism": 1647.916,
+    "me_northern_ways": 1106.482,
+    "me_sauron_cult": 2354.565,
     "me_southron_ways": 1390.777,
     "me_valar_worship": 2267.713
   },

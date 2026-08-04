@@ -1938,7 +1938,7 @@ me_land_1894,Nim galendûr,land,me_lindon_region,LIN,place,† M3 regional lexic
 me_land_1895,Zoror Camp,land,me_rhun_region,WILD,wilderness,† M3 regional lexicon
 me_land_1896,Northstead,land,me_mirkwood_region,WDM,place,† M3 regional lexicon
 me_land_1897,Amon gonddûr,land,me_north_arnor_region,WILD,wilderness,† M3 regional lexicon
-me_land_1898,Dol gonddûr,land,me_north_arnor_region,WILD,wilderness,† M3 regional lexicon
+me_land_1898,Archet,land,me_north_arnor_region,BRE,village,"LOTR, Book I, Ch. 9"
 me_land_1899,Azramar Gate,land,me_far_harad_region,WILD,wilderness,† M3 regional lexicon
 me_land_1900,Azgglob Camp,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
 me_land_1901,Oakstead,land,me_mirkwood_region,WILD,wilderness,† M3 regional lexicon
@@ -2838,7 +2838,7 @@ me_land_2794,Ravenhill,land,me_dale_region,ERE,landmark,"The Hobbit, Ch. 14"
 me_land_2795,Balkun,land,me_khand_region,KHA,place,† M3 regional lexicon
 me_land_2796,Stonebrook End,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_2797,Westbrook End,land,me_mirkwood_region,WILD,wilderness,† M3 regional lexicon
-me_land_2798,Eithel mornen,land,me_north_arnor_region,WILD,wilderness,† M3 regional lexicon
+me_land_2798,Staddle,land,me_north_arnor_region,BRE,village,"LOTR, Book I, Ch. 9"
 me_land_2799,Burzsnaga Camp,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_2800,Dushsnaga Camp,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
 me_land_2801,Ghashsnaga Camp,land,me_mordor_region,MOR,place,† M3 regional lexicon
@@ -4623,7 +4623,7 @@ me_land_4579,Lugzagh Cleft,land,me_mordor_region,WILD,wilderness,† M3 regional
 me_land_4580,Mauhzagh Cleft,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_4581,Zorod Steppe,land,me_rhun_region,RHU,place,† M3 regional lexicon
 me_land_4582,Celon nenion,land,me_brown_lands_region,WILD,wilderness,† M3 regional lexicon
-me_land_4583,Nim nenion,land,me_north_arnor_region,WILD,wilderness,† M3 regional lexicon
+me_land_4583,Combe,land,me_north_arnor_region,BRE,village,"LOTR, Book I, Ch. 9"
 me_land_4584,Woldseld,land,me_rohan_region,ROH,place,† M3 regional lexicon
 me_land_4585,Amon rathion,land,me_brown_lands_region,WILD,wilderness,† M3 regional lexicon
 me_land_4586,Dol rathion,land,me_lebennin_region,GON,place,† M3 regional lexicon

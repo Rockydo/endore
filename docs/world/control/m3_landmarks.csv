@@ -104,3 +104,6 @@ ravenhill,Ravenhill,0.602239,0.151826,landmark,"The Hobbit, Ch. 14",Arda Maps po
 ethring,Ethring,0.532735,0.628708,landmark,"LOTR, Book V, Ch. 9",Arda Maps point_ford: Ethring,yes
 white_towers,White Towers,0.320639,0.234862,landmark,"LOTR, Appendix A",Arda Maps point_castletower: WhiteTowers,yes
 last_bridge,Last Bridge,0.458353,0.224332,landmark,"The Hobbit, Ch. 2",Arda Maps point_bridge: LastBridge,yes
+archet,Archet,0.409637,0.227916,village,"LOTR, Book I, Ch. 9",Ardacraft: Archet,yes
+combe,Combe,0.406637,0.226521,village,"LOTR, Book I, Ch. 9",Ardacraft: Combe,yes
+staddle,Staddle,0.406370,0.232311,village,"LOTR, Book I, Ch. 9",Ardacraft: Staddle,yes

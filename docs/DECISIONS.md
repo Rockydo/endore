@@ -1,5 +1,13 @@
 # Decisions
 
+## 2026-08-04 - Restore the three eastern villages to Bree-land
+
+Archet, Combe, and Staddle are the three explicitly named companion villages of Bree in
+*The Lord of the Rings*, Book I, Chapter 9. Their direct Ardacraft markers fall just east
+of the existing settlement anchor and had resolved as wild North Arnor cells. Assign only
+those exact three cells to Bree-land and lock their marker provenance. The hierarchy region
+remains geographic; no arbitrary eastward political border is drawn.
+
 ## 2026-08-04 - Let indexed rivers be the sole river surface
 
 Remove ENDÓRË's terrain-cache channel-6 copy of the native river graph. Although v124

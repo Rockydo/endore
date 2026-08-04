@@ -1938,7 +1938,7 @@ me_land_1894,LIN,0.2459096,0.1744016,me_lindon_region,1,0.1366856,no,Lindon west
 me_land_1895,WILD,0.6993895,0.5075721,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_1896,WDM,0.5667888,0.2388862,me_mirkwood_region,3,0.0618598,no,Arda Maps Mirkwood polygon: western Woodmen settlements; Woodmen settlements in western Mirkwood; Woodmen clearings along western and central Mirkwood,accepted_source_zone_overlap
 me_land_1897,WILD,0.4058608,0.1744016,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_1898,WILD,0.4080586,0.2335125,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
+me_land_1898,BRE,0.4080586,0.2335125,me_north_arnor_region,1,0.0109483,no,bree-village: Archet is one of the four villages of Bree-land at TA 3018.,accepted_required_frontier_owner
 me_land_1899,WILD,0.8368742,0.9535906,me_far_harad_region,10,,no,deliberately unclaimed,wild_unclaimed
 me_land_1900,WILD,0.7369963,0.5749878,me_mordor_region,8,,no,deliberately unclaimed,wild_unclaimed
 me_land_1901,WILD,0.6461538,0.3150953,me_mirkwood_region,1,,no,deliberately unclaimed,wild_unclaimed
@@ -2838,7 +2838,7 @@ me_land_2794,ERE,0.6009768,0.1558378,me_dale_region,1,0.0184101,no,erebor-outwor
 me_land_2795,KHA,0.7474969,0.7747924,me_khand_region,9,0.0394795,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_2796,WILD,0.4349206,0.3126527,me_enedwaith_region,1,,no,deliberately unclaimed,wild_buffer
 me_land_2797,WILD,0.6427350,0.3688324,me_mirkwood_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_2798,WILD,0.4129426,0.2291158,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
+me_land_2798,BRE,0.4129426,0.2291158,me_north_arnor_region,1,0.0208080,no,bree-village: Staddle is one of the four villages of Bree-land at TA 3018.,accepted_required_frontier_owner
 me_land_2799,MOR,0.6964591,0.6419150,me_mordor_region,8,0.1251604,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_2800,WILD,0.7833944,0.7000489,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_2801,MOR,0.6954823,0.6599902,me_mordor_region,8,0.1343836,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
@@ -4623,7 +4623,7 @@ me_land_4579,WILD,0.7990232,0.5534929,me_mordor_region,9,,no,deliberately unclai
 me_land_4580,MOR,0.6971917,0.5476307,me_mordor_region,1,0.1093851,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_4581,RHU,0.6881563,0.2252076,me_rhun_region,1,0.1655543,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_4582,WILD,0.6271062,0.4059599,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_4583,WILD,0.4114774,0.2217880,me_north_arnor_region,6,,no,deliberately unclaimed,wild_unclaimed
+me_land_4583,BRE,0.4114774,0.2217880,me_north_arnor_region,6,0.0204088,no,bree-village: Combe is one of the four villages of Bree-land at TA 3018.,accepted_required_frontier_owner
 me_land_4584,ROH,0.5047619,0.4890083,me_rohan_region,1,0.0507892,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_4585,WILD,0.6356532,0.4982902,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_4586,GON,0.5689866,0.7435271,me_lebennin_region,9,0.1335000,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope

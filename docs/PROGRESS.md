@@ -2,6 +2,14 @@
 
 ## 2026-08-04
 
+- v131 corrects the source-pinned eastern Bree-land villages. Archet, Combe, and Staddle
+  were incorrectly named and owned as wild North Arnor cells despite *The Lord of the
+  Rings*, Book I, Chapter 9 explicitly naming them as Bree-land's companion villages.
+  Their direct Ardacraft controls now resolve to a contiguous 24-location Bree-land
+  component with zero claim violations; the geographic North Arnor hierarchy label is
+  retained without implying political ownership. Final validation passed in 504.5 seconds;
+  paired real-game smoke passed in 211.9 seconds with zero ENDÓRË-unique error-log lines.
+  See `docs/m2/V131_BREELAND_FOUR_VILLAGES.md`.
 - v130 adds nine exact Arda Maps landmarks where the active EU5 tessellation can represent
   them without inventing political geography: Trollshaws, Morgul Vale, Thrihyrne, Dol
   Baran, Ras Morthil, Ravenhill, Ethring, the White Towers, and the Last Bridge. Bombadil's
