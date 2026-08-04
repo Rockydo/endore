@@ -2,6 +2,14 @@
 
 ## 2026-08-04
 
+- v126 completes the full named-landmark control audit. All 89 authored landmarks now
+  have a source-reviewed exact owner or wilderness disposition in a single checked
+  ledger. It corrects the deserted-but-still-Gondorian Argonath, Amon Hen, and Amon Lhaw;
+  returns abandoned Edhellond to wild land; and binds Mindolluin to Gondor. Physical map
+  controls are untouched. Full validation passed in 456.6 seconds and paired real-game
+  smoke passed in 201.4 seconds with zero mod-unique error-log lines on fingerprint
+  `6fc487603862df1835ba14b30ada609da7c03204a1071640162d295aab424015`.
+  See `docs/m2/V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md`.
 - v125 completes a second bounded political-control review across Dunland, Lothlorien,
   the Dale/Erebor theatre, Mordor, and the represented East. It changes three named
   witnesses: Cirith Gorgor and Morgai become Mordor-controlled operational geography;
@@ -13,7 +21,7 @@
   477.5 seconds (M2 world 405.6 seconds); paired vanilla/ENDORE smoke passed in 201.7
   seconds on fingerprint
   `3606db87877e7d37523b02989b6650db9549190a6ac7cf6c34e977de17bd0d33`, with zero
-  mod-unique error-log lines. Published as `b8a44d0`.
+  mod-unique error-log lines. Published as `f81cb76`.
 - v124 fixes the owner-reported blue river-shoulder defect without altering a course,
   coastline, relief control, forest, settlement, or political cell. The native indexed
   graph remains the only water and width authority; its exact channel-6 footprint now

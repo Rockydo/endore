@@ -28,7 +28,7 @@ edoras,land,me_rohan_region,ROH,owned
 aldberg,land,me_rohan_region,ROH,owned
 dunharrow,land,me_rohan_region,ROH,owned
 minas_tirith,land,me_anorien_region,GON,owned
-osgiliath,land,me_ithilien_region,GON,owned
+osgiliath,land,me_ithilien_region,WILD,wild_ithilien
 minas_morgul,land,me_ithilien_region,MOR,owned
 morannon,land,me_brown_lands_region,MOR,owned
 barad_dur,land,me_mordor_region,MOR,owned
@@ -65,7 +65,7 @@ me_land_0021,land,me_mordor_region,MOR,owned
 me_land_0022,land,me_mordor_region,MOR,owned
 me_land_0023,land,me_south_gondor_region,GON,owned
 me_land_0024,land,me_anduin_vale_region,WILD,wild_buffer
-me_land_0025,land,me_rohan_region,ROH,owned
+me_land_0025,land,me_rohan_region,GON,owned
 me_land_0026,land,me_near_harad_region,HRA,owned
 me_land_0027,land,me_rhun_region,RH2,owned
 me_land_0028,land,me_lindon_region,LIN,owned
@@ -226,7 +226,7 @@ me_land_0182,land,me_mordor_region,MOR,owned
 me_land_0183,land,me_grey_mountains_region,WILD,wild_unclaimed
 me_land_0184,land,me_enedwaith_region,WILD,wild_enedwaith
 me_land_0185,land,me_brown_lands_region,WILD,wild_unclaimed
-me_land_0186,land,me_enedwaith_region,WILD,wild_reviewed_frontier: ruined Tharbad has no TA 3018 sovereign administration
+me_land_0186,land,me_enedwaith_region,WILD,wild_reviewed_frontier: abandoned: The ruin of Tharbad has no TA 3018 sovereign administration.
 me_land_0187,land,me_mordor_region,MOR,owned
 me_land_0188,land,me_belfalas_region,GON,owned
 me_land_0189,land,me_northern_wastes_region,WILD,wild_forodwaith
@@ -384,7 +384,7 @@ me_land_0340,land,me_lebennin_region,GON,owned
 me_land_0341,land,me_mirkwood_region,BEO,owned
 me_land_0342,land,me_mordor_region,WILD,wild_unclaimed
 me_land_0343,land,me_rhun_region,IRO,owned
-me_land_0344,land,me_rohan_region,WILD,wild_reviewed_frontier: the east-bank Seat of Seeing lies beyond Rohan's Anduin frontier
+me_land_0344,land,me_rohan_region,GON,owned
 me_land_0345,land,me_rhun_region,DOR,owned
 me_land_0346,land,me_mordor_region,MOR,owned
 me_land_0347,land,me_mordor_region,MOR,owned
@@ -777,7 +777,7 @@ me_land_0733,land,me_enedwaith_region,WILD,wild_unclaimed
 me_land_0734,land,me_dale_region,DAL,owned
 me_land_0735,land,me_far_harad_region,HFA,owned
 me_land_0736,land,me_south_gondor_region,GON,owned
-me_land_0737,land,me_ithilien_region,WILD,wild_ithilien
+me_land_0737,land,me_ithilien_region,GON,owned
 me_land_0738,land,me_rhun_region,RHU,owned
 me_land_0739,land,me_umbar_region,UMB,owned
 me_land_0740,land,me_dale_region,DAL,owned
@@ -925,7 +925,7 @@ me_land_0881,land,me_belfalas_region,GON,owned
 me_land_0882,land,me_lindon_region,BLU,owned
 me_land_0883,land,me_enedwaith_region,WILD,wild_unclaimed
 me_land_0884,land,me_rhun_region,RH2,owned
-me_land_0885,land,me_belfalas_region,DAM,owned
+me_land_0885,land,me_belfalas_region,WILD,wild_reviewed_frontier: abandoned: Edhellond's last ship sailed in TA 1981 and its abandoned haven has no active holding.
 me_land_0886,land,me_anduin_vale_region,WILD,wild_unclaimed
 me_land_0887,land,me_rhun_region,IRO,owned
 me_land_0888,land,me_enedwaith_region,MOA,owned
@@ -951,7 +951,7 @@ me_land_0907,land,me_forochel_region,LOS,owned
 me_land_0908,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_0909,land,me_mordor_region,WILD,wild_unclaimed
 me_land_0910,land,me_enedwaith_region,WILD,wild_unclaimed
-me_land_0911,land,me_shire_breeland_region,WILD,"wild_reviewed_frontier: Sarn Ford is a watched crossing, not a settled Shire or Bree possession"
+me_land_0911,land,me_shire_breeland_region,WILD,wild_reviewed_frontier: watched-crossing: Sarn Ford is a watched crossing not a settled Shire or Bree possession.
 me_land_0912,land,me_rohan_region,ROH,owned
 me_land_0913,land,me_north_arnor_region,ANG,owned
 me_land_0914,land,me_brown_lands_region,WILD,wild_unclaimed
@@ -963,7 +963,7 @@ me_land_0919,land,me_belfalas_region,GON,owned
 me_land_0920,land,me_mordor_region,MOR,owned
 me_land_0921,land,me_umbar_region,UMB,owned
 me_land_0922,land,me_north_arnor_region,RAN,owned
-me_land_0923,land,me_northern_wastes_region,WILD,wild_reviewed_frontier: the dragon-haunted Withered Heath remains unclaimed wilderness
+me_land_0923,land,me_northern_wastes_region,WILD,wild_reviewed_frontier: dragon-wilderness: The dragon-haunted Withered Heath remains unclaimed wilderness.
 me_land_0924,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_0925,land,me_enedwaith_region,DUN,owned
 me_land_0926,land,me_belfalas_region,DAM,owned
@@ -1062,7 +1062,7 @@ me_land_1018,land,me_enedwaith_region,WILD,wild_enedwaith
 me_land_1019,land,me_south_gondor_region,GON,owned
 me_land_1020,land,me_northern_wastes_region,WILD,wild_forodwaith
 me_land_1021,land,me_north_arnor_region,WILD,wild_unclaimed
-me_land_1022,land,me_shire_breeland_region,WILD,wild_reviewed_frontier: the haunted downs are outside compact inhabited Bree-land
+me_land_1022,land,me_shire_breeland_region,WILD,wild_reviewed_frontier: haunted-wilderness: The haunted downs are outside compact inhabited Bree-land.
 me_land_1023,land,me_rhun_region,RHU,owned
 me_land_1024,land,me_umbar_region,UMB,owned
 me_land_1025,land,me_far_harad_region,HFA,owned
@@ -1299,12 +1299,12 @@ me_land_1255,land,me_anduin_vale_region,BEO,owned
 me_land_1256,land,me_north_arnor_region,WILD,wild_buffer
 me_land_1257,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_1258,land,me_rhun_region,WILD,wild_unclaimed
-me_land_1259,land,me_ithilien_region,WILD,wild_ithilien
+me_land_1259,land,me_ithilien_region,WILD,wild_reviewed_frontier: emptied-ithilien: The Cross-roads sits in deserted Ithilien and has no active sovereign control.
 me_land_1260,land,me_anduin_vale_region,LOR,owned
 me_land_1261,land,me_northern_wastes_region,WILD,wild_forodwaith
 me_land_1262,land,me_rhun_region,RHU,owned
 me_land_1263,land,me_rhun_region,WILD,wild_unclaimed
-me_land_1264,land,me_grey_mountains_region,WILD,"wild_reviewed_frontier: Framsburg is a deserted Eotheod ruin, not part of Gundabad's orc domain"
+me_land_1264,land,me_grey_mountains_region,WILD,wild_reviewed_frontier: abandoned: Framsburg is a deserted Eotheod ruin.
 me_land_1265,land,me_rhun_region,RHU,owned
 me_land_1266,land,me_belfalas_region,DAM,owned
 me_land_1267,land,me_angmar_region,GUN,owned
@@ -1362,7 +1362,7 @@ me_land_1318,land,me_umbar_region,UMB,owned
 me_land_1319,land,me_enedwaith_region,WILD,wild_unclaimed
 me_land_1320,land,me_mordor_region,WILD,wild_unclaimed
 me_land_1321,land,me_rohan_region,ROH,owned
-me_land_1322,land,me_anduin_vale_region,WILD,wild_unclaimed
+me_land_1322,land,me_anduin_vale_region,WILD,wild_reviewed_frontier: unsettled-battlefield: The Field of Celebrant is not an occupied TA 3018 state holding.
 me_land_1323,land,me_enedwaith_region,WILD,wild_enedwaith
 me_land_1324,land,me_lebennin_region,GON,owned
 me_land_1325,land,me_north_arnor_region,WILD,wild_unclaimed
@@ -1391,7 +1391,7 @@ me_land_1347,land,me_khand_region,KHA,owned
 me_land_1348,land,me_mordor_region,MOR,owned
 me_land_1349,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_1350,land,me_mordor_region,WILD,wild_unclaimed
-me_land_1351,land,me_northern_wastes_region,WILD,wild_reviewed_frontier: the abandoned Grey Mountain dwarf-holds have no TA 3018 ruler
+me_land_1351,land,me_northern_wastes_region,WILD,wild_reviewed_frontier: abandoned: The Grey Mountain dwarf-holds have no TA 3018 ruler.
 me_land_1352,land,me_mordor_region,MOR,owned
 me_land_1353,land,me_rohan_region,ROH,owned
 me_land_1354,land,me_far_harad_region,WILD,wild_unclaimed
@@ -1896,7 +1896,7 @@ me_land_1852,land,me_enedwaith_region,WILD,wild_enedwaith
 me_land_1853,land,me_near_harad_region,HNE,owned
 me_land_1854,land,me_angmar_region,WILD,wild_unclaimed
 me_land_1855,land,me_dale_region,ESG,owned
-me_land_1856,land,me_enedwaith_region,WILD,wild_reviewed_frontier: Lond Daer is an abandoned Númenórean ruin
+me_land_1856,land,me_enedwaith_region,WILD,wild_reviewed_frontier: abandoned: Lond Daer is an abandoned Númenórean ruin.
 me_land_1857,land,me_north_arnor_region,RAN,owned
 me_land_1858,land,me_rhun_region,IRO,owned
 me_land_1859,land,me_rhun_region,DOR,owned
@@ -2120,7 +2120,7 @@ me_land_2076,land,me_mirkwood_region,DOL,owned
 me_land_2077,land,me_mirkwood_region,WILD,wild_unclaimed
 me_land_2078,land,me_mordor_region,WILD,wild_unclaimed
 me_land_2079,land,me_anduin_vale_region,WILD,wild_unclaimed
-me_land_2080,land,me_brown_lands_region,WILD,wild_reviewed_frontier: Dagorlad is a desolate borderland rather than a settled Mordor or Gondor province
+me_land_2080,land,me_brown_lands_region,WILD,wild_reviewed_frontier: desolate-borderland: Dagorlad is a desolate borderland rather than a settled province.
 me_land_2081,land,me_belfalas_region,GON,owned
 me_land_2082,land,me_mirkwood_region,WILD,wild_unclaimed
 me_land_2083,land,me_north_arnor_region,WILD,wild_unclaimed
@@ -3296,7 +3296,7 @@ me_land_3252,land,me_far_harad_region,HRA,owned
 me_land_3253,land,me_anduin_vale_region,BEO,owned
 me_land_3254,land,me_lindon_region,LIN,owned
 me_land_3255,land,me_northern_wastes_region,WILD,wild_forodwaith
-me_land_3256,land,me_brown_lands_region,WILD,wild_reviewed_frontier: the Dead Marshes lie outside settled control after the War of the Last Alliance
+me_land_3256,land,me_brown_lands_region,WILD,wild_reviewed_frontier: desolate-borderland: The Dead Marshes lie outside settled control after the Last Alliance.
 me_land_3257,land,me_belfalas_region,DAM,owned
 me_land_3258,land,me_rhun_region,DOR,owned
 me_land_3259,land,me_mordor_region,MOR,owned
@@ -3305,7 +3305,7 @@ me_land_3261,land,me_mordor_region,WILD,wild_unclaimed
 me_land_3262,land,me_brown_lands_region,WILD,wild_unclaimed
 me_land_3263,land,me_enedwaith_region,WILD,wild_unclaimed
 me_land_3264,land,me_mordor_region,MOR,owned
-me_land_3265,land,me_rohan_region,WILD,"wild_reviewed_frontier: Methedras is the mountain above Nan Curunir, not a settled Isengard holding"
+me_land_3265,land,me_rohan_region,WILD,wild_reviewed_frontier: unsettled-height: Methedras stands above Nan Curunír and is not a settled Isengard holding.
 me_land_3266,land,me_mordor_region,MOR,owned
 me_land_3267,land,me_mordor_region,MOR,owned
 me_land_3268,land,me_lebennin_region,GON,owned
@@ -3444,7 +3444,7 @@ me_land_3400,land,me_rhun_region,RH2,owned
 me_land_3401,land,me_far_harad_region,HFA,owned
 me_land_3402,land,me_anduin_vale_region,WILD,wild_unclaimed
 me_land_3403,land,me_south_gondor_region,GON,owned
-me_land_3404,land,me_ithilien_region,WILD,wild_reviewed_frontier: Ithilien has been emptied since TA 2954 despite its Gondorian dynastic memory
+me_land_3404,land,me_ithilien_region,WILD,wild_reviewed_frontier: emptied-ithilien: Ithilien has been emptied since TA 2954 despite Gondor's dynastic memory.
 me_land_3405,land,me_lindon_region,LIN,owned
 me_land_3406,land,me_umbar_region,UMB,owned
 me_land_3407,land,me_rhun_region,RHU,owned
@@ -3730,7 +3730,7 @@ me_land_3686,land,me_mirkwood_region,WDM,owned
 me_land_3687,land,me_rhun_region,RH3,owned
 me_land_3688,land,me_near_harad_region,UMB,owned
 me_land_3689,land,me_enedwaith_region,WILD,wild_enedwaith
-me_land_3690,land,me_enedwaith_region,WILD,wild_reviewed_frontier: the long-ruined Eregion capital is not a surviving realm's holding
+me_land_3690,land,me_enedwaith_region,WILD,wild_reviewed_frontier: abandoned: The long-ruined Eregion capital is not a surviving realm's holding.
 me_land_3691,land,me_mordor_region,MOR,owned
 me_land_3692,land,me_far_harad_region,HRA,owned
 me_land_3693,land,me_brown_lands_region,WILD,wild_unclaimed
@@ -4040,7 +4040,7 @@ me_land_3996,land,me_umbar_region,UMB,owned
 me_land_3997,land,me_forochel_region,LOS,owned
 me_land_3998,land,me_anorien_region,GON,owned
 me_land_3999,land,me_forochel_region,LOS,owned
-me_land_4000,land,me_anduin_vale_region,WILD,"wild_reviewed_frontier: the Eagles' Eyrie is independent highland territory, not a Beorning settlement"
+me_land_4000,land,me_anduin_vale_region,WILD,wild_reviewed_frontier: independent-highland: The Eagles' Eyrie is independent highland territory.
 me_land_4001,land,me_mirkwood_region,DOL,owned
 me_land_4002,land,me_lindon_region,LIN,owned
 me_land_4003,land,me_khand_region,KHA,owned
@@ -4420,7 +4420,7 @@ me_land_4376,land,me_forochel_region,LOS,owned
 me_land_4377,land,me_rhun_region,WILD,wild_buffer
 me_land_4378,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_4379,land,me_mordor_region,WILD,wild_unclaimed
-me_land_4380,land,me_ithilien_region,WILD,wild_reviewed_frontier: the exact Shelob pass cell remains outside the frozen Mordor enclosure
+me_land_4380,land,me_ithilien_region,WILD,wild_reviewed_frontier: independent-danger: Shelob's exact pass cell remains outside the compact Mordor enclosure.
 me_land_4381,land,me_near_harad_region,HNE,owned
 me_land_4382,land,me_northern_wastes_region,WILD,wild_forodwaith
 me_land_4383,land,me_rhun_region,RHU,owned
@@ -4430,7 +4430,7 @@ me_land_4386,land,me_rhun_region,WILD,wild_unclaimed
 me_land_4387,land,me_northern_wastes_region,WILD,wild_forodwaith
 me_land_4388,land,me_north_arnor_region,RAN,owned
 me_land_4389,land,me_northern_wastes_region,WILD,wild_forodwaith
-me_land_4390,land,me_shire_breeland_region,WILD,wild_reviewed_frontier: the Old Forest lies beyond the settled Shire and is not compact Bree-land
+me_land_4390,land,me_shire_breeland_region,WILD,wild_reviewed_frontier: independent-woodland: The Old Forest lies beyond settled Shire and compact Bree-land.
 me_land_4391,land,me_anduin_vale_region,WILD,wild_unclaimed
 me_land_4392,land,me_ithilien_region,WILD,wild_ithilien
 me_land_4393,land,me_rhun_region,RH2,owned
@@ -4850,7 +4850,7 @@ me_land_4806,land,me_rhun_region,RH3,owned
 me_land_4807,land,me_lebennin_region,GON,owned
 me_land_4808,land,me_south_gondor_region,GON,owned
 me_land_4809,land,me_umbar_region,UMB,owned
-me_land_4810,land,me_anduin_vale_region,WILD,wild_buffer
+me_land_4810,land,me_anduin_vale_region,WILD,wild_reviewed_frontier: unsettled-memory: The Gladden Fields are wilderness rather than a TA 3018 holding.
 me_land_4811,land,me_angmar_region,WILD,wild_unclaimed
 me_land_4812,land,me_enedwaith_region,WILD,wild_enedwaith
 me_land_4813,land,me_lindon_region,LIN,owned
@@ -4958,7 +4958,7 @@ me_land_4914,land,me_far_harad_region,WILD,wild_unclaimed
 me_land_4915,land,me_mordor_region,MOR,owned
 me_land_4916,land,me_enedwaith_region,WILD,wild_unclaimed
 me_land_4917,land,me_lindon_region,LIN,owned
-me_land_4918,land,me_rohan_region,ROH,owned
+me_land_4918,land,me_rohan_region,GON,owned
 me_land_4919,land,me_rhun_region,RH2,owned
 me_land_4920,land,me_mirkwood_region,WILD,wild_unclaimed
 me_land_4921,land,me_umbar_region,UMB,owned

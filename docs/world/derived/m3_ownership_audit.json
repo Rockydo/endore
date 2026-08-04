@@ -313,9 +313,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 71,
+      "locations": 70,
       "eligible_locations": 106,
-      "claim_fill_fraction": 0.669811,
+      "claim_fill_fraction": 0.660377,
       "forced_anchors": 1,
       "final_bbox": [
         0.4681319,
@@ -326,12 +326,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 71,
+        "largest_component": 70,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 71,
+            "size": 70,
             "forced_anchors": 1,
             "sample": [
               "dol_amroth",
@@ -815,22 +815,22 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 414,
+      "locations": 417,
       "eligible_locations": 782,
-      "claim_fill_fraction": 0.529412,
+      "claim_fill_fraction": 0.533248,
       "forced_anchors": 9,
       "final_bbox": [
         0.354823,
         0.6859585,
-        0.5603322,
+        0.5095261,
         0.7596483
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 2,
+        "components": 4,
         "largest_component": 412,
-        "largest_component_fraction": 0.995169,
-        "detached_unforced_specks": 1,
+        "largest_component_fraction": 0.98801,
+        "detached_unforced_specks": 3,
         "component_detail": [
           {
             "size": 412,
@@ -857,6 +857,30 @@
               "me_land_1280"
             ],
             "disposition": "Tolfalas island, separated from mainland Gondor by engine water"
+          },
+          {
+            "size": 2,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_0025",
+              "me_land_0344"
+            ],
+            "locations": [
+              "me_land_0025",
+              "me_land_0344"
+            ],
+            "disposition": "the paired Argonath/Amon Lhaw witness cells are split from Gondor's mainland by the Anduin and Emyn Muil impassable topology"
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_4918"
+            ],
+            "locations": [
+              "me_land_4918"
+            ],
+            "disposition": "the Amon Hen witness cell is isolated by Nen Hithoel and Emyn Muil impassable topology"
           }
         ]
       },
@@ -2189,9 +2213,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 192,
+      "locations": 190,
       "eligible_locations": 302,
-      "claim_fill_fraction": 0.635762,
+      "claim_fill_fraction": 0.629139,
       "forced_anchors": 4,
       "final_bbox": [
         0.4556777,
@@ -2202,12 +2226,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 192,
+        "largest_component": 190,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 192,
+            "size": 190,
             "forced_anchors": 4,
             "sample": [
               "aldberg",
@@ -2475,10 +2499,10 @@
   "uncontracted_realms": {},
   "all_realm_connectivity": {
     "GON": {
-      "components": 2,
+      "components": 4,
       "largest_component": 412,
-      "largest_component_fraction": 0.995169,
-      "detached_unforced_specks": 1,
+      "largest_component_fraction": 0.98801,
+      "detached_unforced_specks": 3,
       "component_detail": [
         {
           "size": 412,
@@ -2505,17 +2529,41 @@
             "me_land_1280"
           ],
           "disposition": "Tolfalas island, separated from mainland Gondor by engine water"
+        },
+        {
+          "size": 2,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_0025",
+            "me_land_0344"
+          ],
+          "locations": [
+            "me_land_0025",
+            "me_land_0344"
+          ],
+          "disposition": "the paired Argonath/Amon Lhaw witness cells are split from Gondor's mainland by the Anduin and Emyn Muil impassable topology"
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_4918"
+          ],
+          "locations": [
+            "me_land_4918"
+          ],
+          "disposition": "the Amon Hen witness cell is isolated by Nen Hithoel and Emyn Muil impassable topology"
         }
       ]
     },
     "DAM": {
       "components": 1,
-      "largest_component": 71,
+      "largest_component": 70,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 71,
+          "size": 70,
           "forced_anchors": 1,
           "sample": [
             "dol_amroth",
@@ -2531,12 +2579,12 @@
     },
     "ROH": {
       "components": 1,
-      "largest_component": 192,
+      "largest_component": 190,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 192,
+          "size": 190,
           "forced_anchors": 4,
           "sample": [
             "aldberg",

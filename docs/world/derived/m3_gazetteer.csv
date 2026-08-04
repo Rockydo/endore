@@ -28,7 +28,7 @@ edoras,Edoras,land,me_rohan_region,ROH,city,"LOTR, Book III, Ch. 6"
 aldberg,Aldburg,land,me_rohan_region,ROH,town,"LOTR, Appendix A"
 dunharrow,Dunharrow,land,me_rohan_region,ROH,fortress,"LOTR, Book V, Ch. 3"
 minas_tirith,Minas Tirith,land,me_anorien_region,GON,capital,"LOTR, Book V, Ch. 1"
-osgiliath,Osgiliath,land,me_ithilien_region,GON,ruin,"LOTR, Book V, Ch. 4"
+osgiliath,Osgiliath,land,me_ithilien_region,WILD,ruin,"LOTR, Book V, Ch. 4"
 minas_morgul,Minas Morgul,land,me_ithilien_region,MOR,fortress,"LOTR, Book IV, Ch. 8"
 morannon,The Morannon,land,me_brown_lands_region,MOR,fortress,"LOTR, Book IV, Ch. 3"
 barad_dur,Barad-dûr,land,me_mordor_region,MOR,capital,"LOTR, Book II, Ch. 2"
@@ -65,7 +65,7 @@ me_land_0021,Ghashbag,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_0022,Gorbag,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_0023,Ost adarath,land,me_south_gondor_region,GON,place,† M3 regional lexicon
 me_land_0024,Beaconbank,land,me_anduin_vale_region,WILD,wilderness,† M3 regional lexicon
-me_land_0025,The Argonath,land,me_rohan_region,ROH,ruin,"LOTR, Book II, Ch. 9"
+me_land_0025,The Argonath,land,me_rohan_region,GON,ruin,"LOTR, Book II, Ch. 9"
 me_land_0026,Azrabad,land,me_near_harad_region,HRA,place,† M3 regional lexicon
 me_land_0027,Borach,land,me_rhun_region,RH2,place,† M3 regional lexicon
 me_land_0028,Taur adarath,land,me_lindon_region,LIN,place,† M3 regional lexicon
@@ -384,7 +384,7 @@ me_land_0340,Taur duinath,land,me_lebennin_region,GON,place,† M3 regional lexi
 me_land_0341,Riverbank,land,me_mirkwood_region,BEO,place,† M3 regional lexicon
 me_land_0342,Gorfang,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
 me_land_0343,Khazabad,land,me_rhun_region,IRO,place,† M3 regional lexicon
-me_land_0344,Amon Lhaw,land,me_rohan_region,WILD,ruin,"LOTR, Book II, Ch. 9"
+me_land_0344,Amon Lhaw,land,me_rohan_region,GON,ruin,"LOTR, Book II, Ch. 9"
 me_land_0345,Kingbank,land,me_rhun_region,DOR,place,† M3 regional lexicon
 me_land_0346,Grishfang,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_0347,Krimpfang,land,me_mordor_region,MOR,place,† M3 regional lexicon
@@ -777,7 +777,7 @@ me_land_0733,Eastdown,land,me_enedwaith_region,WILD,wilderness,† M3 regional l
 me_land_0734,Ravenby,land,me_dale_region,DAL,place,† M3 regional lexicon
 me_land_0735,Farasir,land,me_far_harad_region,HFA,place,† M3 regional lexicon
 me_land_0736,Ost thoronath,land,me_south_gondor_region,GON,place,† M3 regional lexicon
-me_land_0737,Mindolluin,land,me_ithilien_region,WILD,landmark,"LOTR, Book V, Ch. 1"
+me_land_0737,Mindolluin,land,me_ithilien_region,GON,landmark,"LOTR, Book V, Ch. 1"
 me_land_0738,Wainod,land,me_rhun_region,RHU,place,† M3 regional lexicon
 me_land_0739,Hadrasir,land,me_umbar_region,UMB,place,† M3 regional lexicon
 me_land_0740,Redby,land,me_dale_region,DAL,place,† M3 regional lexicon
@@ -925,7 +925,7 @@ me_land_0881,Eithel annondor,land,me_belfalas_region,GON,place,† M3 regional l
 me_land_0882,Azanbizar,land,me_lindon_region,BLU,place,† M3 regional lexicon
 me_land_0883,Deepfield,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_0884,Zorun,land,me_rhun_region,RH2,place,† M3 regional lexicon
-me_land_0885,Edhellond,land,me_belfalas_region,DAM,ruin,"Unfinished Tales, The History of Galadriel and Celeborn"
+me_land_0885,Edhellond,land,me_belfalas_region,WILD,ruin,"Unfinished Tales, The History of Galadriel and Celeborn"
 me_land_0886,Eastfield,land,me_anduin_vale_region,WILD,wilderness,† M3 regional lexicon
 me_land_0887,Barazbizar,land,me_rhun_region,IRO,place,† M3 regional lexicon
 me_land_0888,Grishlug,land,me_enedwaith_region,MOA,place,† M3 regional lexicon
@@ -4958,7 +4958,7 @@ me_land_4914,Umrem Wells,land,me_far_harad_region,WILD,wilderness,† M3 regiona
 me_land_4915,Lugdûr Den,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_4916,Blackbrook Fold,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_4917,Amon bellad,land,me_lindon_region,LIN,place,† M3 regional lexicon
-me_land_4918,Amon Hen,land,me_rohan_region,ROH,ruin,"LOTR, Book II, Ch. 10"
+me_land_4918,Amon Hen,land,me_rohan_region,GON,ruin,"LOTR, Book II, Ch. 10"
 me_land_4919,Uldach of Balach,land,me_rhun_region,RH2,place,† M3 regional lexicon
 me_land_4920,Bramblebrook Fold,land,me_mirkwood_region,WILD,wilderness,† M3 regional lexicon
 me_land_4921,Zarem Wells,land,me_umbar_region,UMB,place,† M3 regional lexicon

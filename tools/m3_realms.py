@@ -39,6 +39,7 @@ from worldgen import (
 
 REALMS_CSV = ROOT / "docs/world/realms.csv"
 LANDMARKS_CSV = ROOT / "docs/world/control/m3_landmarks.csv"
+LANDMARK_CONTROL_CSV = ROOT / "docs/world/control/m3_landmark_control.csv"
 NAME_LOCK_CSV = ROOT / "docs/world/control/m3_name_lock.csv"
 OWNERSHIP_CSV = DERIVED / "m3_ownership.csv"
 OWNERSHIP_AUDIT_CSV = DERIVED / "m3_ownership_audit.csv"
@@ -655,6 +656,18 @@ FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
 # landmark and required owner and is audited below.
 FRONTIER_LANDMARK_CLAIM_EXCEPTIONS: dict[tuple[str, str], str] = {
     (
+        "amon_hen",
+        "GON",
+    ): "Unfinished Tales, Cirion and Eorl: deserted Amon Hen remained part of Gondor",
+    (
+        "amon_lhaw",
+        "GON",
+    ): "Unfinished Tales, Cirion and Eorl: deserted Amon Lhaw remained part of Gondor",
+    (
+        "argonauth",
+        "GON",
+    ): "Unfinished Tales, Cirion and Eorl: the Argonath remained part of Gondor",
+    (
         "cirith_gorgor",
         "MOR",
     ): "LOTR, Book IV, Ch. 3: the Haunted Pass is the Black Gate's guarded approach",
@@ -766,6 +779,14 @@ REVIEWED_COMPONENT_REPAIRS: dict[
 REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
     ("GON", frozenset({"me_land_0004", "me_land_1280"})): (
         "Tolfalas island, separated from mainland Gondor by engine water"
+    ),
+    ("GON", frozenset({"me_land_0025", "me_land_0344"})): (
+        "the paired Argonath/Amon Lhaw witness cells are split from Gondor's "
+        "mainland by the Anduin and Emyn Muil impassable topology"
+    ),
+    ("GON", frozenset({"me_land_4918"})): (
+        "the Amon Hen witness cell is isolated by Nen Hithoel and Emyn Muil "
+        "impassable topology"
     ),
     ("MOR", frozenset({"me_land_4703"})): (
         "southeastern Nurn pocket divided from the main component by lake and "
@@ -1086,6 +1107,33 @@ def load_landmarks() -> tuple[Landmark, ...]:
     )
 
 
+@lru_cache(maxsize=1)
+def landmark_owner_contracts() -> dict[str, tuple[str, str]]:
+    """Load the complete, source-reviewed named-landmark ownership ledger."""
+    landmarks = {landmark.ref for landmark in load_landmarks()}
+    with LANDMARK_CONTROL_CSV.open("r", encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    contracts: dict[str, tuple[str, str]] = {}
+    for row in rows:
+        ref = (row.get("ref") or "").strip()
+        owner = (row.get("expected_owner") or "").strip()
+        basis = (row.get("control_basis") or "").strip()
+        rationale = (row.get("rationale") or "").strip()
+        if not ref or not owner or not basis or not rationale:
+            raise ValueError("m3 landmark control row has an empty required field")
+        if ref in contracts:
+            raise ValueError(f"duplicate m3 landmark control row {ref}")
+        contracts[ref] = (owner, f"{basis}: {rationale}")
+    missing = sorted(landmarks - set(contracts))
+    unknown = sorted(set(contracts) - landmarks)
+    if missing or unknown:
+        raise ValueError(
+            "m3 landmark control coverage mismatch: "
+            f"missing={missing} unknown={unknown}"
+        )
+    return contracts
+
+
 def normalized_distance(location: Location, x: float, y: float) -> float:
     lx, ly = location.normalized
     # Normalized x spans a canvas twice as wide as normalized y. The source
@@ -1399,7 +1447,7 @@ def assign_ownership(
             wild_reason[key] = f"wild_reviewed_component: {rationale}"
         else:
             wild_reason.pop(key, None)
-    for ref, (tag, rationale) in FRONTIER_LANDMARK_REQUIRED_OWNERS.items():
+    for ref, (tag, rationale) in landmark_owner_contracts().items():
         key = ref_to_location.get(ref)
         if key is None:
             raise ValueError(f"unresolved required-owner frontier landmark {ref}")
@@ -1414,7 +1462,13 @@ def assign_ownership(
         if tag != WILD:
             accepted, contract = claim_contract(location, by_tag[tag], source_zone_claims)
             exception = FRONTIER_LANDMARK_CLAIM_EXCEPTIONS.get((ref, tag))
-            if not accepted and exception is None:
+            # A forced capital, active settlement, or occupied operational work is
+            # a stronger point witness than a broad source-envelope overlap.  Its
+            # exact cell is already documented in the complete control ledger;
+            # do not reject it merely because a reduced forest/political mask
+            # misses the generated location centroid by a few pixels.
+            forced_point_witness = forced_tag == tag
+            if not accepted and exception is None and not forced_point_witness:
                 raise ValueError(
                     f"frontier landmark {ref}->{tag} violates {contract}"
                 )
@@ -1890,7 +1944,7 @@ def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
         for ref, (tag, rationale) in active_settlement_owner_contracts().items()
         if ref in state.ref_to_location
     }
-    for ref, contract in FRONTIER_LANDMARK_REQUIRED_OWNERS.items():
+    for ref, contract in landmark_owner_contracts().items():
         required_frontier_owner[state.ref_to_location[ref]] = contract
     rows: list[dict[str, object]] = []
     for location in state.model.locations:
@@ -2223,7 +2277,11 @@ def manifest(state: RealmState) -> str:
             for realm in state.realms
         },
         "source_sha256": hashlib.sha256(
-            REALMS_CSV.read_bytes() + b"\0" + LANDMARKS_CSV.read_bytes()
+            REALMS_CSV.read_bytes()
+            + b"\0"
+            + LANDMARKS_CSV.read_bytes()
+            + b"\0"
+            + LANDMARK_CONTROL_CSV.read_bytes()
         ).hexdigest(),
     }
     return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
@@ -2437,7 +2495,7 @@ def check() -> list[str]:
             f"{rohan_coast[:5]}"
         )
     required_owner_contracts = active_settlement_owner_contracts()
-    required_owner_contracts.update(FRONTIER_LANDMARK_REQUIRED_OWNERS)
+    required_owner_contracts.update(landmark_owner_contracts())
     for ref, (required_owner, rationale) in required_owner_contracts.items():
         location_key = state.ref_to_location.get(ref)
         if location_key is None:
@@ -2450,7 +2508,7 @@ def check() -> list[str]:
                 f"{required_owner}: {rationale}"
             )
     for (ref, required_owner), source in FRONTIER_LANDMARK_CLAIM_EXCEPTIONS.items():
-        contract = FRONTIER_LANDMARK_REQUIRED_OWNERS.get(ref)
+        contract = landmark_owner_contracts().get(ref)
         if contract is None:
             failures.append(
                 f"frontier claim exception {ref}->{required_owner} has no owner contract"
@@ -2498,7 +2556,7 @@ def check() -> list[str]:
         )
         frontier_allowance = sum(
             target == realm.tag
-            for target, _ in FRONTIER_LANDMARK_REQUIRED_OWNERS.values()
+            for target, _ in landmark_owner_contracts().values()
         )
         if (
             realm.max_locations

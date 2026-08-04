@@ -27,6 +27,10 @@ about Middle-earth.
 
 ## M3 realms and gazetteer
 
+- † EU5 resolves the Argonath, Amon Hen, and Amon Lhaw as separate passable cells around
+  water and impassable Emyn Muil terrain. Tolkien explicitly retains the deserted sites
+  in Gondor, so their exact cells are assigned to Gondor without inferring a broader
+  claim; Edhellond is instead wild after its TA 1981 abandonment.
 - † The passable-cell Mordor enclosure does not by itself cover every mountain-side
   gatework. Cirith Gorgor and Morgai are two exact, text-cited Mordor cells retained as
   operational exceptions; this does not survey or expand the surrounding frontier.

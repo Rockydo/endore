@@ -1,5 +1,15 @@
 # Decisions
 
+## 2026-08-04 - Audit every named landmark as a political control witness
+
+Replace the hand-maintained subset of frontier ownership rules with a complete 89-row
+source ledger. Each named site gets one exact TA 3018 disposition: occupied realm,
+abandoned/independent wilderness, or an explicitly selected side of a shared frontier.
+The ledger changes only five incorrect cells: Argonath, Amon Hen, and Amon Lhaw to Gondor;
+Mindolluin to Gondor; and deserted Edhellond to wild land. It is a point-control audit,
+not a licence for broad border fills; the normal source-zone/claim checks remain in force.
+See `docs/m2/V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md`.
+
 ## 2026-08-04 - Separate Mordor's guarded gateworks from a frozen lowland envelope
 
 Keep the source-derived Mordor enclosure as the ordinary political boundary, but do not

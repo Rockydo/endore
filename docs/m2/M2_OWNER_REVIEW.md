@@ -8,7 +8,7 @@ closed.
 
 ## Current published baseline
 
-- Current commit: `b8a44d0` (`fix(map): audit named gate and ridge control`).
+- Current published commit: `f81cb76` (`fix(map): audit named gate and ridge control`).
 - Current game-visible tree fingerprint:
   `3606db87877e7d37523b02989b6650db9549190a6ac7cf6c34e977de17bd0d33`.
 - Game build: `24187685` (`1.3.11`, Pavia).
@@ -35,7 +35,7 @@ numeric controls, never downloaded reference artwork or map imagery. See
 | Mountains | Source-pinned Misty, White, northern, and Mordor ranges render as relief; v112 adds a marker-offset proof that Erebor is a compact isolated Lonely Mountain. |
 | Forests | v110's Mirkwood/Lothlórien views confirm dense, distinct canopy. Lothlórien stays inside the Golden Wood/Naith source mask rather than crossing the Misty crest. |
 | Rivers | v105 replaced the rejected blue-width surrogate with the installed indexed-raster grammar. v109 adds the source-exact Ethir fork; v120 now fails validation if the continuous Langwell–Anduin trunk loses its dominant widest-class segment. |
-| Political map | v125 adds two exact Mordor gate/ridge witnesses and releases Methedras plus two detached northern spur cells from Isengard; compact Lothlórien, Dunland, Erebor, Isengard, and source-enclosed Mordor contracts remain in force. |
+| Political map | v126 makes all 89 named-landmark ownership dispositions auditable; it corrects Gondor's Argonath/Amon Hen/Amon Lhaw/Mindolluin controls and releases abandoned Edhellond to wild land, while preserving compact Lothlórien, Dunland, Erebor, Isengard, and source-enclosed Mordor. |
 | Runtime | v125 full validation passed in 477.5 seconds. Paired vanilla/ENDÓRË smoke reached menu-ready with zero new mod-unique error-log lines on the current game-visible fingerprint. |
 
 The direct Finder typing route remains blocked by the native edit control and correctly
@@ -69,6 +69,7 @@ preferences.
 | [`V113_SOURCE_PROVENANCE_REAUDIT.md`](V113_SOURCE_PROVENANCE_REAUDIT.md) | Exact upstream source-byte re-audit. |
 | [`V124_NATIVE_RIVER_SURFACE_FIX.md`](V124_NATIVE_RIVER_SURFACE_FIX.md) | Native water/width versus dry terrain-bank responsibility correction. |
 | [`V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md`](V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md) | Exact Black Gate/Morgai control and compact-Isengard ridge correction. |
+| [`V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md`](V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md) | Complete 89-landmark control ledger and five corrected exact political cells. |
 | [`V115_RENDER_VISIBILITY_PROBE.md`](V115_RENDER_VISIBILITY_PROBE.md) | Player visual-profile close-render proof. |
 | [`V118_POLITICAL_FRONTIER_WITNESSES.md`](V118_POLITICAL_FRONTIER_WITNESSES.md) | Exact settled-frontier ownership corrections. |
 | [`V119_UNCLAIMED_SITE_AUDIT.md`](V119_UNCLAIMED_SITE_AUDIT.md) | Exact wilderness/empty-site corrections. |

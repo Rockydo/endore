@@ -20,17 +20,20 @@ steps but its Fords-of-Isen frame remained a far political view, not the named p
 theatre. It was removed immediately. Do not treat the driver's centre-delta metric alone
 as sufficient; a future route must also prove feature-scale visual framing.
 
+Third confirmation: a fresh one-target, one-focus Osgiliath route reported a nonzero
+camera delta yet saved a northern political view rather than the lower-Anduin theatre.
+This route is therefore also invalid as feature-scale evidence. Do not retry either
+Finder capture variant; use a materially different camera/readback mechanism.
+
 ## 2026-08-04 — Outer Mordor pass ownership
 
-Status: bounded M2 fidelity finding; no further pass-cell expansion is authorized.
+Status: resolved narrowly by v125; no further pass-cell expansion is authorized.
 
-Two explicit textual frontier candidates, Cirith Gorgor and Shelob's Lair, both resolve
-outside the hash-pinned Ered Lithui/Ephel Duath Mordor enclosure. The generator correctly
-rejected each proposed MOR assignment before any output was written. The neighbouring
-fortress/gate locations Narchost, Carchost, Cirith Ungol, and Durthang remain MOR. Do not
-widen the enclosure or add a special-case claim just to colour the exact pass cells; this
-would trade a source-tested mountain border for a cosmetic political fill. Record the
-outer passes as wild and continue the independent political audit.
+The passable-lowland enclosure excludes mountain-side gate geography. v125 adds only two
+text-cited operational exceptions: Cirith Gorgor (the guarded Haunted Pass) and Morgai
+(the inner Mordor ridge). Shelob's Lair remains wild, as do all neighbouring unreviewed
+pass cells. Do not widen the enclosure or add another special-case claim merely to colour
+a pass; that would trade a source-tested mountain border for cosmetic political fill.
 
 ## 2026-08-04 — v117 native Finder text automation
 

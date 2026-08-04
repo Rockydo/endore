@@ -1,0 +1,90 @@
+ref,expected_owner,control_basis,rationale
+the_angle,RAN,realm-seat,The Angle is the documented Ranger refuge used as the Northern Rangers realm seat.
+blue_halls,BLU,realm-seat,The surviving Ered Luin halls are the Blue Mountains dwarf realm seat.
+iron_hills,IRO,realm-seat,The Iron Hills hold is the Iron Hills realm seat after the War of Five Armies.
+woodmen_hall,WDM,realm-seat,The documented Woodmen settlement is the Woodmen realm seat.
+wellinghall,FAN,occupied-refuge,Wellinghall is Treebeard's inhabited Fangorn refuge.
+ghans_glade,DRU,realm-seat,Ghan's Glade is the documented Drúedain realm seat.
+forochel_camp,LOS,realm-seat,Forochel Camp is the documented Lossoth realm seat.
+rhosgobel,RHO,realm-seat,Rhosgobel is Radagast's occupied refuge and the realm seat.
+harnenhold,HNE,realm-seat,Harnenhold is the explicitly invented Near Harad realm seat.
+qarsad,HRA,realm-seat,Qarsad is the explicitly invented southern Harad realm seat.
+mumak_gate,HFA,realm-seat,Mûmak Gate is the explicitly invented Far Harad realm seat.
+khazan,KHA,realm-seat,Khazân is the explicitly invented Khand realm seat.
+burh_gath,RHU,realm-seat,Burh Gath is the explicitly invented Rhûn realm seat.
+wainhold,RH2,realm-seat,Wainhold is the explicitly invented Wainrider realm seat.
+eastern_march,RH3,realm-seat,Eastern March is the explicitly invented eastern Rhûn realm seat.
+dunland_moot,DUN,realm-seat,Dunland Moot is the documented Dunland realm seat.
+mount_gram,ANG,occupied-hold,Mount Gram is the Angmar remnant's occupied hold.
+tharbad,WILD,abandoned,The ruin of Tharbad has no TA 3018 sovereign administration.
+ost_in_edhil,WILD,abandoned,The long-ruined Eregion capital is not a surviving realm's holding.
+lond_daer,WILD,abandoned,Lond Daer is an abandoned Númenórean ruin.
+methedras,WILD,unsettled-height,Methedras stands above Nan Curunír and is not a settled Isengard holding.
+derndingle,FAN,occupied-refuge,Derndingle is an inhabited Fangorn refuge.
+celebrant,WILD,unsettled-battlefield,The Field of Celebrant is not an occupied TA 3018 state holding.
+rauros,ROH,boundary-west-bank,Rauros resolves to the Rohan side of the source-pinned Anduin frontier.
+amon_hen,GON,occupied-claim,Amon Hen remained within Gondor though the Emyn Muil was deserted.
+amon_lhaw,GON,occupied-claim,Amon Lhaw remained within Gondor though the Emyn Muil was deserted.
+argonauth,GON,occupied-claim,The Argonath remained a Gondorian northern landmark despite the deserted district.
+cair_andros,GON,occupied-fortress,Cair Andros is a Gondorian military work at the start date.
+henneth_annun,GON,occupied-refuge,Henneth Annûn is an occupied Gondorian ranger refuge at the start date.
+emyn_arnen,WILD,emptied-ithilien,Ithilien has been emptied since TA 2954 despite Gondor's dynastic memory.
+cross_roads,WILD,emptied-ithilien,The Cross-roads sits in deserted Ithilien and has no active sovereign control.
+cirith_ungol,MOR,occupied-fortress,Cirith Ungol is a Mordor garrison fortress.
+shelobs_lair,WILD,independent-danger,Shelob's exact pass cell remains outside the compact Mordor enclosure.
+durthang,MOR,occupied-fortress,Durthang is an occupied Mordor fortress above Udûn.
+narchost,MOR,occupied-fortress,Narchost is one of the occupied Towers of the Teeth.
+carchost,MOR,occupied-fortress,Carchost is one of the occupied Towers of the Teeth.
+udun,MOR,occupied-interior,Udûn is the occupied northern vale inside Mordor's mountain wall.
+gorgoroth,MOR,occupied-interior,The Plateau of Gorgoroth is central Mordor.
+nurn,MOR,occupied-interior,Nurn is Mordor's slave-worked southern basin at TA 3018.
+lithlad,MOR,occupied-interior,Lithlad is Mordor's eastern ash plain.
+dead_marshes,WILD,desolate-borderland,The Dead Marshes lie outside settled control after the Last Alliance.
+dagorlad,WILD,desolate-borderland,Dagorlad is a desolate borderland rather than a settled province.
+tolfalas,GON,occupied-claim,Tolfalas is the Gondorian island at the mouths of Anduin.
+edhellond,WILD,abandoned,Edhellond's last ship sailed in TA 1981 and its abandoned haven has no active holding.
+pinnath_gelin,GON,occupied-fief,Pinnath Gelin is a fief of Gondor in the southern White Mountains.
+lamedon,GON,occupied-fief,Lamedon answers Gondor's summons in the War of the Ring.
+lossarnach,GON,occupied-fief,Lossarnach is a named Gondorian fief below Minas Tirith.
+harlond_gondor,GON,occupied-port,Harlond of Gondor is a Gondorian river port.
+rammas_echor,GON,occupied-fortification,The Pelennor defensive wall remains a Gondorian military work.
+stonewain_valley,GON,occupied-route,Stonewain Valley is the ancient Gondorian route to Minas Tirith through Drúadan.
+paths_of_dead,ROH,rohan-approach,The Paths are reached from the Rohirric Dwimorberg approach.
+halifirien,GON,shared-frontier,This generated cell is the Gondor side of the shared Halifirien beacon frontier.
+fords_of_isen,ROH,occupied-strongpoint,The Fords of Isen are Rohan's Westfold strongpoint at TA 3018.
+firien_wood,GON,shared-frontier,This generated cell is the Gondor side of the Firien Wood frontier.
+gladden_fields,WILD,unsettled-memory,The Gladden Fields are wilderness rather than a TA 3018 holding.
+old_forest,WILD,independent-woodland,The Old Forest lies beyond settled Shire and compact Bree-land.
+barrow_downs,WILD,haunted-wilderness,The haunted downs are outside compact inhabited Bree-land.
+sarn_ford,WILD,watched-crossing,Sarn Ford is a watched crossing not a settled Shire or Bree possession.
+brandywine_bridge,BRE,frontier-crossing,Brandywine Bridge resolves to the Bree-land side of the Shire frontier.
+mountains_of_mirkwood,WOO,woodland-realm,The northern Mountains of Mirkwood stand in the Woodland Realm.
+withered_heath,WILD,dragon-wilderness,The dragon-haunted Withered Heath remains unclaimed wilderness.
+grey_mountain_holds,WILD,abandoned,The Grey Mountain dwarf-holds have no TA 3018 ruler.
+bywater,SHI,active-settlement,Bywater is an active Shire village.
+frogmorton,SHI,active-settlement,Frogmorton is an active East Road village within the Shire.
+stock,SHI,active-settlement,Stock is an active eastern Shire village.
+haysend,SHI,active-settlement,Haysend is an active Buckland settlement within the Shire's protection.
+framsburg,WILD,abandoned,Framsburg is a deserted Eotheod ruin.
+eagles_eyrie,WILD,independent-highland,The Eagles' Eyrie is independent highland territory.
+beorns_hall,BEO,active-settlement,Beorn's Hall is the Beornings' named upper-Anduin settlement.
+redhorn_gate,MOA,occupied-approach,The Redhorn Gate is Moria's immediate western approach.
+cerin_amroth,LOR,woodland-realm,Cerin Amroth lies within the Golden Wood of Lothlórien.
+glittering_caves,ROH,occupied-approach,The Glittering Caves open behind Rohan's Hornburg.
+tarlangs_neck,GON,occupied-route,Tarlang's Neck is the Gondorian route between Lamedon and the City.
+amon_din,GON,beacon,Amon Dîn is a maintained Gondorian warning beacon.
+eilenach,GON,beacon,Eilenach is a maintained Gondorian warning beacon.
+nardol,GON,beacon,Nardol is a maintained Gondorian warning beacon.
+erelas,GON,beacon,Erelas is a maintained Gondorian warning beacon.
+min_rimmon,GON,beacon,Min-Rimmon is a maintained Gondorian warning beacon.
+calenhad,GON,beacon,Calenhad is a maintained Gondorian warning beacon.
+amon_anwar,GON,shared-frontier,Amon Anwar is a shared beacon; this generated cell is its Gondor-side control.
+cirith_gorgor,MOR,occupied-gate,Cirith Gorgor is the occupied Haunted Pass of the Black Gate.
+morgai,MOR,occupied-ridge,Morgai is the inner ridge of the Mountains of Shadow within Mordor.
+caradhras,MOA,moria-mountain,Caradhras resolves to Moria's immediate mountain approach.
+celebdil,MOA,moria-mountain,Celebdil resolves to Moria's immediate mountain approach.
+fanuidhol,MOA,moria-mountain,Fanuidhol resolves to Moria's immediate mountain approach.
+mindolluin,GON,occupied-claim,Mindolluin rises directly behind Minas Tirith and belongs to Gondor.
+irensaga,ROH,rohan-mountain,Irensaga is a named Rohirric White Mountains summit.
+dwimorberg,ROH,rohan-mountain,Dwimorberg stands above Rohan's Paths of the Dead.
+starkhorn,ROH,rohan-mountain,Starkhorn is a named Rohirric White Mountains summit.

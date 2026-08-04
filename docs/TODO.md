@@ -63,8 +63,13 @@
   compact Nan Curunir, with its two detached northern spur cells. This is a narrow
   source-specific correction, not a border redraw. Full validation and paired smoke are
   green on `3606db87877e7d37523b02989b6650db9549190a6ac7cf6c34e977de17bd0d33`, and is
-  published as `b8a44d0`; see
+  published as `f81cb76`; see
   `docs/m2/V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md`.
+- v126 installs a complete 89-landmark control ledger and corrects the Argonath/Amon
+  Hen/Amon Lhaw, Mindolluin, and abandoned Edhellond exact cells. Full validation and
+  paired smoke are green on `6fc487603862df1835ba14b30ada609da7c03204a1071640162d295aab424015`;
+  continue the source-anchored review against the established atlas.
+  Do not use the rejected Finder capture route as visual proof.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

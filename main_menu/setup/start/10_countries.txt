@@ -13,6 +13,7 @@ countries = {
 				me_land_0014
 				me_land_0020
 				me_land_0023
+				me_land_0025
 				me_land_0040
 				me_land_0041
 				me_land_0042
@@ -43,6 +44,7 @@ countries = {
 				me_land_0317
 				me_land_0336
 				me_land_0340
+				me_land_0344
 				me_land_0374
 				me_land_0398
 				me_land_0425
@@ -78,6 +80,7 @@ countries = {
 				me_land_0696
 				me_land_0726
 				me_land_0736
+				me_land_0737
 				me_land_0765
 				me_land_0767
 				me_land_0776
@@ -396,6 +399,7 @@ countries = {
 				me_land_4884
 				me_land_4897
 				me_land_4901
+				me_land_4918
 				me_land_4974
 				me_land_4987
 				me_land_4993
@@ -416,7 +420,6 @@ countries = {
 				me_land_5114
 				me_land_5135
 				minas_tirith
-				osgiliath
 				pelargir
 				pelennor
 			}
@@ -525,7 +528,6 @@ countries = {
 				me_land_0630
 				me_land_0809
 				me_land_0862
-				me_land_0885
 				me_land_0926
 				me_land_0932
 				me_land_1013
@@ -689,7 +691,6 @@ countries = {
 				edoras
 				helms_deep
 				me_land_0010
-				me_land_0025
 				me_land_0058
 				me_land_0065
 				me_land_0077
@@ -866,7 +867,6 @@ countries = {
 				me_land_4747
 				me_land_4767
 				me_land_4793
-				me_land_4918
 				me_land_4946
 				me_land_4955
 				me_land_4960
