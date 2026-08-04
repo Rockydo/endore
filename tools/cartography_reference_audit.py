@@ -109,6 +109,7 @@ EXPECTED_ARDACRAFT_POINT_LANDMARKS = {
     "sarn_gebir": ("Sarn Gebir", (0.553997, 0.500500)),
     "falls_nimrodel": ("Falls of Nimrodel", (0.502610, 0.351896)),
     "cormallen": ("Cormallen", (0.592619, 0.580882)),
+    "warg_hill": ("Warg Hill", (0.479405, 0.318111)),
 }
 SOURCE_DRAINAGE_THEATRES = {
     "northern_basins": {

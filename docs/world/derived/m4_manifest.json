@@ -8,8 +8,8 @@
   "dialects": 33,
   "semantic_language_families": 8,
   "assigned_land_locations": 5200,
-  "owned_land_locations": 3030,
-  "wild_land_locations": 2170,
+  "owned_land_locations": 3023,
+  "wild_land_locations": 2177,
   "major_pool_targets": [
     60,
     40,
@@ -23,5 +23,5 @@
   "name_entries": 1105,
   "vanilla_religion_abi_files_gated": 29,
   "terminal_religion_date": "3200.1.2",
-  "source_sha256": "880fde858a86087bfce45baaa7dd2c758c298826312d54c73466a04d65fa9149"
+  "source_sha256": "63decbc241977aa9c00c0d18b9a3dfdf64255af8dbfb8be98f1e1677acf915f5"
 }

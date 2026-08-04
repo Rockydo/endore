@@ -1,15 +1,15 @@
 {
   "schema": 1,
   "milestone": "M3",
-  "model_sha256": "2276dfd0edc5d614224f05ee412f5e2617e1d0dfbd28a54917eb8830e15408d1",
+  "model_sha256": "c58292b9be36ba6a38288bdab4601709c17052efb84bc0c2743034a21d5ecb4d",
   "realm_count": 38,
-  "owned_land": 3030,
-  "wild_land": 2170,
+  "owned_land": 3023,
+  "wild_land": 2177,
   "ruins": 22,
   "minas_morgul_decision": "Minas Morgul is a Mordor fortress-location, not a separate country.",
   "physical_alignment": {
     "engine_water_level_sample": 5466,
-    "owned_control_pixels": 2089187,
+    "owned_control_pixels": 2086358,
     "wet_owned_control_pixels": 0,
     "maximum_capital_snap_distance": 0.021091,
     "capitals": {
@@ -553,7 +553,7 @@
     "ROH": 190,
     "SHI": 70,
     "BRE": 24,
-    "RAN": 44,
+    "RAN": 39,
     "RIV": 16,
     "LIN": 131,
     "BLU": 42,
@@ -573,7 +573,7 @@
     "MOR": 299,
     "DOL": 38,
     "ISE": 10,
-    "MOA": 24,
+    "MOA": 22,
     "GUN": 22,
     "GOB": 22,
     "UMB": 236,
@@ -587,5 +587,5 @@
     "DUN": 36,
     "ANG": 18
   },
-  "source_sha256": "dce283c35bbe46ad7cf3836d89d4898ff8c1b79845493775c2b88fcdbc9a7831"
+  "source_sha256": "8a39195530e4f6381eebc864c236345df42a40784d358745000a70b6ae0c26b0"
 }

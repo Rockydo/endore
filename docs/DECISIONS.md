@@ -1,5 +1,34 @@
 # Decisions
 
+## 2026-08-04 - Keep source-pinned Warg Hill outside the Moria claim
+
+ArdaCraft places Warg Hill in Eregion close to, but outside, Moria's West-gate; *The
+Lord of the Rings*, Book II, Chapter 4 makes it the Fellowship's exposed hilltop after
+leaving the gate area. The earlier nearest-seat allocator absorbed its exact generated
+cell (`me_land_2010`) into the compact Moria realm. That is not sufficient evidence of
+TA 3018 territorial administration beyond Moria itself.
+
+Bind the exact direct ArdaCraft point at `0.479405, 0.318111` as Warg Hill and mark its
+single resolved Eregion cell deliberate wilderness. Do not infer an Eregion realm, move
+the West-gate, alter Moria's hold, or redraw a broader boundary. Moria remains a single
+compact component; this correction removes the source-demonstrated exterior overreach.
+
+## 2026-08-04 - Restore Eregion as a source-bounded Eriador region
+
+The M2 hierarchy had no Eregion region, despite the project already carrying direct
+controls for Hollin Ridge, Ost-in-Edhil, Warg Hill, the Glanduin, the Sirannon, and the
+Doors of Durin. Its broad classifier therefore labelled the land inconsistently as North
+Arnor or Enedwaith. This is a map-fidelity defect, not a reason to create a surviving
+Eregion polity.
+
+Create a compact `me_eregion_region` in Eriador. Bind its south edge to the source Glanduin
+with one control-cell centroid tolerance; keep its eastern edge immediately west of Moria,
+and use conservative joins for Tolkien's described northern foothills and western extent.
+Moria remains eligible only for its existing immediate source-reviewed approach cells;
+Warg Hill, Hollin Ridge, and Ost-in-Edhil remain explicitly wild. The empty-region people
+fallback is Sindar/Valar worship solely for static map-mode consistency, never evidence of
+a living TA 3018 Elven state.
+
 ## 2026-08-04 - Add only source-resolvable regional orientation markers
 
 Lock Frecasburg, Sarn Gebir, the Falls of Nimrodel, and Cormallen to direct Ardacraft

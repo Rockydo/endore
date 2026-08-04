@@ -24,7 +24,7 @@ RHO,Rhosgobel,Rhosgobel,rhosgobel,0.568634,0.282489,me_anduin_vale_region|me_mir
 MOR,Mordor,Mordor,barad_dur,0.644052,0.573511,me_mordor_region|me_ithilien_region,orkish,72 22 22,ce_blackfoot_eye.dds,0,"LOTR, Book II, Ch. 2; ENDORE plan 8.1"
 DOL,Dol Guldur,Dol Guldur,dol_guldur,0.556113,0.351780,me_mirkwood_region|me_anduin_vale_region|me_brown_lands_region,orkish,64 40 54,ce_tower_wall.dds,65,"LOTR, Appendix B; ENDORE plan 8.1"
 ISE,Isengard,Isengarder,isengard,0.466546,0.462111,me_rohan_region|me_enedwaith_region,orkish,132 132 124,ce_hand_simple.dds,38,"LOTR, Book II, Ch. 2; ENDORE plan 8.1"
-MOA,Moria,Moria-orc,moria,0.490000,0.335500,me_anduin_vale_region|me_enedwaith_region,orkish,58 48 46,ce_mountain.dds,26,"LOTR, Book II, Ch. 4; ENDORE plan 8.1"
+MOA,Moria,Moria-orc,moria,0.490000,0.335500,me_anduin_vale_region|me_eregion_region,orkish,58 48 46,ce_mountain.dds,26,"LOTR, Book II, Ch. 4; ENDORE plan 8.1"
 GUN,Gundabad,Gundabad-orc,gundabad,0.502345,0.102487,me_grey_mountains_region|me_northern_wastes_region|me_angmar_region,orkish,78 48 34,ce_mountain.dds,75,"LOTR, Appendix A; ENDORE plan 8.1"
 GOB,Goblin-town,Goblin-town,goblin_town,0.509865,0.191597,me_north_arnor_region|me_anduin_vale_region|me_grey_mountains_region,orkish,82 58 36,ce_mountain.dds,32,"The Hobbit, Ch. 4; ENDORE plan 8.1"
 UMB,Umbar,Umbarite,umbar,0.509644,0.935662,me_umbar_region|me_near_harad_region,haradric,88 42 54,ce_boat_shield.dds,0,"LOTR, Appendix A; ENDORE plan 8.1"

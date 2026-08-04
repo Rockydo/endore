@@ -12,6 +12,7 @@ development = {
 	me_brown_lands_region = 6
 	me_dale_region = 8
 	me_enedwaith_region = 6
+	me_eregion_region = 8
 	me_far_harad_region = 4
 	me_forochel_region = 3
 	me_grey_mountains_region = 8

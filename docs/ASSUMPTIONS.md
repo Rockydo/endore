@@ -1,5 +1,15 @@
 # Assumptions
 
+## 2026-08-04 - Eregion's unmarked northern and western joins
+
+Tolkien identifies Eregion as north of the Glanduin, west of the Misty Mountains, with its
+northern boundary roughly 45 leagues south of Rivendell and between the foothills and the
+Angle; he does not provide a cadastral polygon. The M2 Eregion hierarchy therefore uses
+the exact source Glanduin, Hollin Ridge, Warg Hill, Sirannon, and Doors-of-Durin controls,
+then joins the unmarked northern and western sides conservatively. The polygon is a
+geographic UI envelope, not a sovereign claim, and must be revised if a stronger source
+control contradicts it.
+
 No lore assumptions were made in M1. The proof realm, installed location identities, and
 all Earth-named compatibility keys are temporary engineering scaffolds rather than claims
 about Middle-earth.

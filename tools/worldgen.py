@@ -244,6 +244,26 @@ MORDOR_REGION_POLYGON = (
     (0.620, 0.555),
 )
 
+# Eregion (Hollin) is a named Eriador land at the western feet of the Misty
+# Mountains, not an indistinct slice of either North Arnor or Enedwaith. Its
+# south edge follows the source-pinned Glanduin with a one-control-cell
+# centroid tolerance; the east ends immediately before the Doors of Durin,
+# and the north is constrained by the Hollin/Warg Hill controls south of
+# Rivendell. Tolkien gives these physical bounds rather than a cadastral ring,
+# so the short western and northern joins are deliberately conservative.
+EREGION_REGION_POLYGON = (
+    (0.423705, 0.339240),
+    (0.441996, 0.338246),
+    (0.455902, 0.346092),
+    (0.464048, 0.350987),
+    (0.482034, 0.356139),
+    (0.487000, 0.352000),
+    (0.487000, 0.303000),
+    (0.478000, 0.274000),
+    (0.452000, 0.270000),
+    (0.430000, 0.285000),
+)
+
 
 def point_in_polygon(
     x: float,
@@ -326,6 +346,12 @@ def spatial_group(x: float, y: float) -> tuple[str, str]:
         if y < 0.635:
             return "me_gondor", "me_anorien_region"
         return "me_gondor", "me_south_gondor_region"
+
+    # Eregion lies in Eriador, north of the source Glanduin and west of the
+    # Misty Mountains. Resolve it before the broad crest split so the western
+    # Doors of Durin approach does not get presented as the Vales of Anduin.
+    if point_in_polygon(x, y, EREGION_REGION_POLYGON):
+        return "me_eriador", "me_eregion_region"
 
     # Rhovanion is split around the Anduin and the source forest footprints.
     # The Misty crest bends west between Rivendell and the Angle, then turns

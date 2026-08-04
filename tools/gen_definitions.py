@@ -51,6 +51,7 @@ DISPLAY_NAMES = {
     "me_brown_lands_region": "Brown Lands",
     "me_lindon_region": "Lindon",
     "me_north_arnor_region": "North Arnor",
+    "me_eregion_region": "Eregion",
     "me_shire_breeland_region": "The Shire and Bree-land",
     "me_enedwaith_region": "Enedwaith",
 }

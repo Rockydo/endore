@@ -4,6 +4,7 @@ me_angmar_region,me_northern_orc,me_melkorism,"LOTR, Appendix A","Wild-location 
 me_northern_wastes_region,me_lossoth,me_lossoth_ways,"† ENDORE plan 6-7","Sparse northern fallback"
 me_lindon_region,me_sindar,me_valar_worship,"LOTR, Appendix B","Wild-location fallback"
 me_north_arnor_region,me_eriadoran,me_northern_ways,"LOTR, Book I; † ENDORE plan 6.1","Sparse remnant fallback"
+me_eregion_region,me_sindar,me_valar_worship,"LOTR, Book II; Appendix B","Empty former Elven land; historical fallback only"
 me_shire_breeland_region,me_eriadoran,me_northern_ways,"LOTR, Book I","Realm ownership overrides the Shire"
 me_enedwaith_region,me_dunlending,me_dunland_ways,"LOTR map; † ENDORE plan 6.1","Sparse hill-folk fallback"
 me_anduin_vale_region,me_woodman,me_northern_ways,"The Hobbit; Unfinished Tales","Wild-location fallback"

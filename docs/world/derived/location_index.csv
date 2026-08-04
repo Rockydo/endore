@@ -72,7 +72,7 @@
 70,me_land_0029,Land 0029,land,2800,1091,0.6837607,0.5329751,427,9,me_mordor_and_rhun,me_mordor_region,197ecf,no
 71,me_land_0030,Land 0030,land,1534,559,0.3746032,0.2730826,598,1,me_eriador,me_shire_breeland_region,b7b648,no
 72,me_land_0031,Land 0031,land,2762,1606,0.6744811,0.7845628,651,9,me_harad,me_near_harad_region,55edc1,no
-73,me_land_0032,Land 0032,land,1932,628,0.4717949,0.3067904,481,1,me_eriador,me_enedwaith_region,f4253a,no
+73,me_land_0032,Land 0032,land,1932,628,0.4717949,0.3067904,481,1,me_eriador,me_eregion_region,f4253a,no
 74,me_land_0033,Land 0033,land,2295,397,0.5604396,0.1939424,509,3,me_rhovanion,me_mirkwood_region,925cb3,no
 75,me_land_0034,Land 0034,land,2035,873,0.4969475,0.4264778,431,3,me_rhovanion,me_anduin_vale_region,30942c,no
 76,me_land_0035,Land 0035,land,2320,807,0.5665446,0.3942355,976,9,me_rhovanion,me_brown_lands_region,cecba5,no
@@ -303,7 +303,7 @@
 301,me_land_0260,Land 0260,land,2381,1268,0.5814408,0.6194431,396,1,me_gondor,me_anorien_region,dd8cfe,no
 302,me_land_0261,Land 0261,land,2015,1039,0.4920635,0.5075721,312,1,me_rhovanion,me_rohan_region,7bc477,no
 303,me_land_0262,Land 0262,land,3037,1679,0.7416361,0.8202247,1226,10,me_mordor_and_rhun,me_khand_region,19fbf0,no
-304,me_land_0263,Land 0263,land,1928,700,0.4708181,0.3419638,1148,1,me_eriador,me_enedwaith_region,b83369,no
+304,me_land_0263,Land 0263,land,1928,700,0.4708181,0.3419638,1148,1,me_eriador,me_eregion_region,b83369,no
 305,me_land_0264,Land 0264,land,2129,1916,0.5199023,0.9360039,686,9,me_harad,me_umbar_region,566ae2,no
 306,me_land_0265,Land 0265,land,2326,1441,0.5680098,0.7039570,314,1,me_gondor,me_lebennin_region,f4a25b,no
 307,me_land_0266,Land 0266,land,2700,1231,0.6593407,0.6013679,463,8,me_mordor_and_rhun,me_mordor_region,92d9d4,no
@@ -454,7 +454,7 @@
 452,me_land_0411,Land 0411,land,2217,562,0.5413919,0.2745481,436,1,me_rhovanion,me_anduin_vale_region,30455d,no
 453,me_land_0412,Land 0412,land,2603,1740,0.6356532,0.8500244,470,9,me_harad,me_near_harad_region,ce7cd6,no
 454,me_land_0413,Land 0413,land,2437,1215,0.5951160,0.5935515,676,1,me_gondor,me_ithilien_region,6cb44f,no
-455,me_land_0414,Land 0414,land,1926,605,0.4703297,0.2955545,579,1,me_eriador,me_north_arnor_region,0aebc8,no
+455,me_land_0414,Land 0414,land,1926,605,0.4703297,0.2955545,579,1,me_eriador,me_eregion_region,0aebc8,no
 456,me_land_0415,Land 0415,land,2287,1616,0.5584860,0.7894480,905,9,me_harad,me_near_harad_region,a92341,no
 457,me_land_0416,Land 0416,land,3265,219,0.7973138,0.1069858,1519,1,me_forodwaith,me_northern_wastes_region,475aba,no
 458,me_land_0417,Land 0417,land,2204,694,0.5382173,0.3390327,641,1,me_rhovanion,me_anduin_vale_region,e59233,no
@@ -587,7 +587,7 @@
 585,me_land_0544,Land 0544,land,2924,1094,0.7140415,0.5344406,857,1,me_mordor_and_rhun,me_mordor_region,014eb3,no
 586,me_land_0545,Land 0545,land,1538,392,0.3755800,0.1914998,691,1,me_eriador,me_north_arnor_region,9f862c,no
 587,me_land_0546,Land 0546,land,2444,1386,0.5968254,0.6770884,612,1,me_gondor,me_ithilien_region,3dbda5,no
-588,me_land_0547,Land 0547,land,1915,577,0.4676435,0.2818759,490,1,me_eriador,me_north_arnor_region,dbf51e,no
+588,me_land_0547,Land 0547,land,1915,577,0.4676435,0.2818759,490,1,me_eriador,me_eregion_region,dbf51e,no
 589,me_land_0548,Land 0548,land,2165,1325,0.5286935,0.6472887,556,1,me_gondor,me_lebennin_region,7a2c97,no
 590,me_land_0549,Land 0549,land,1428,323,0.3487179,0.1577919,482,1,me_eriador,me_north_arnor_region,186410,no
 591,me_land_0550,Land 0550,land,2050,889,0.5006105,0.4342941,617,3,me_rhovanion,me_rohan_region,b69b89,no
@@ -882,7 +882,7 @@
 880,me_land_0839,Land 0839,land,1145,554,0.2796093,0.2706400,515,1,me_eriador,me_lindon_region,f1729b,no
 881,me_land_0840,Land 0840,land,1089,116,0.2659341,0.0566683,544,5,me_forodwaith,me_forochel_region,8faa14,no
 882,me_land_0841,Land 0841,land,2295,1389,0.5604396,0.6785540,710,1,me_gondor,me_lebennin_region,2de18d,no
-883,me_land_0842,Land 0842,land,1838,600,0.4488400,0.2931119,754,1,me_eriador,me_north_arnor_region,cc1906,no
+883,me_land_0842,Land 0842,land,1838,600,0.4488400,0.2931119,754,1,me_eriador,me_eregion_region,cc1906,no
 884,me_land_0843,Land 0843,land,2734,987,0.6676435,0.4821690,700,9,me_mordor_and_rhun,me_rhun_region,6a507f,no
 885,me_land_0844,Land 0844,land,1932,2040,0.4717949,0.9965804,566,10,me_harad,me_umbar_region,0887f8,no
 886,me_land_0845,Land 0845,land,2668,1432,0.6515263,0.6995603,410,8,me_mordor_and_rhun,me_mordor_region,a6bf71,no
@@ -928,7 +928,7 @@
 926,me_land_0885,Land 0885,land,2055,1324,0.5018315,0.6468002,1071,1,me_gondor,me_belfalas_region,5f6a59,no
 927,me_land_0886,Land 0886,land,2223,815,0.5428571,0.3981436,366,1,me_rhovanion,me_anduin_vale_region,fda1d2,no
 928,me_land_0887,Land 0887,land,2675,300,0.6532357,0.1465559,759,1,me_mordor_and_rhun,me_rhun_region,9bd94b,no
-929,me_land_0888,Land 0888,land,1941,668,0.4739927,0.3263312,494,1,me_eriador,me_enedwaith_region,3a10c4,no
+929,me_land_0888,Land 0888,land,1941,668,0.4739927,0.3263312,494,1,me_eriador,me_eregion_region,3a10c4,no
 930,me_land_0889,Land 0889,land,3396,349,0.8293040,0.1704934,592,1,me_mordor_and_rhun,me_rhun_region,d8483d,no
 931,me_land_0890,Land 0890,land,3079,1077,0.7518926,0.5261358,865,9,me_mordor_and_rhun,me_mordor_region,767fb6,no
 932,me_land_0891,Land 0891,land,2035,1992,0.4969475,0.9731314,561,9,me_harad,me_umbar_region,14b72f,no
@@ -956,13 +956,13 @@
 954,me_land_0913,Land 0913,land,1883,325,0.4598291,0.1587689,698,1,me_eriador,me_north_arnor_region,ad7b95,no
 955,me_land_0914,Land 0914,land,2389,990,0.5833944,0.4836346,1860,1,me_rhovanion,me_brown_lands_region,4bb30e,no
 956,me_land_0915,Land 0915,land,3157,63,0.7709402,0.0307767,377,1,me_forodwaith,me_northern_wastes_region,e9ea87,no
-957,me_land_0916,Land 0916,land,1990,667,0.4859585,0.3258427,234,1,me_rhovanion,me_anduin_vale_region,882200,no
+957,me_land_0916,Land 0916,land,1990,667,0.4859585,0.3258427,234,1,me_eriador,me_eregion_region,882200,no
 958,me_land_0917,Land 0917,land,3189,553,0.7787546,0.2701514,948,9,me_mordor_and_rhun,me_rhun_region,265979,no
 959,me_land_0918,Land 0918,land,2391,1474,0.5838828,0.7200782,526,1,me_gondor,me_south_gondor_region,c490f2,no
 960,me_land_0919,Land 0919,land,1997,1224,0.4876679,0.5979482,502,1,me_gondor,me_belfalas_region,62c86b,no
 961,me_land_0920,Land 0920,land,2868,1239,0.7003663,0.6052760,368,8,me_mordor_and_rhun,me_mordor_region,00ffe4,no
 962,me_land_0921,Land 0921,land,2229,2045,0.5443223,0.9990230,1445,10,me_harad,me_umbar_region,9f375d,no
-963,me_land_0922,Land 0922,land,1964,606,0.4796093,0.2960430,772,1,me_eriador,me_north_arnor_region,3d6ed6,no
+963,me_land_0922,Land 0922,land,1964,606,0.4796093,0.2960430,772,1,me_eriador,me_eregion_region,3d6ed6,no
 964,me_land_0923,Land 0923,land,2371,211,0.5789988,0.1030777,1680,5,me_forodwaith,me_northern_wastes_region,dba64f,no
 965,me_land_0924,Land 0924,land,1440,363,0.3516484,0.1773327,435,1,me_eriador,me_north_arnor_region,79ddc8,no
 966,me_land_0925,Land 0925,land,1751,930,0.4275946,0.4543234,905,1,me_eriador,me_enedwaith_region,181541,no
@@ -1085,12 +1085,12 @@
 1083,me_land_1042,Land 1042,land,2032,425,0.4962149,0.2076209,876,1,me_eriador,me_north_arnor_region,676f8e,no
 1084,me_land_1043,Land 1043,land,2648,688,0.6466422,0.3361016,335,9,me_rhovanion,me_mirkwood_region,05a707,no
 1085,me_land_1044,Land 1044,land,2235,1529,0.5457875,0.7469468,999,9,me_gondor,me_lebennin_region,a3de80,no
-1086,me_land_1045,Land 1045,land,1805,632,0.4407814,0.3087445,465,1,me_eriador,me_enedwaith_region,4215f9,no
+1086,me_land_1045,Land 1045,land,1805,632,0.4407814,0.3087445,465,1,me_eriador,me_eregion_region,4215f9,no
 1087,me_land_1046,Land 1046,land,1678,512,0.4097680,0.2501221,438,1,me_eriador,me_north_arnor_region,e04d72,no
 1088,me_land_1047,Land 1047,land,1780,574,0.4346764,0.2804104,320,1,me_eriador,me_north_arnor_region,7e84eb,no
 1089,me_land_1048,Land 1048,land,3068,1266,0.7492063,0.6184660,1329,8,me_mordor_and_rhun,me_mordor_region,1cbc64,no
 1090,me_land_1049,Land 1049,land,2109,1092,0.5150183,0.5334636,350,1,me_rhovanion,me_rohan_region,baf3dd,no
-1091,me_land_1050,Land 1050,land,1836,686,0.4483516,0.3351246,654,1,me_eriador,me_enedwaith_region,592b56,no
+1091,me_land_1050,Land 1050,land,1836,686,0.4483516,0.3351246,654,1,me_eriador,me_eregion_region,592b56,no
 1092,me_land_1051,Land 1051,land,1916,392,0.4678877,0.1914998,644,1,me_eriador,me_north_arnor_region,f762cf,no
 1093,me_land_1052,Land 1052,land,1757,703,0.4290598,0.3434294,733,1,me_eriador,me_enedwaith_region,959a48,no
 1094,me_land_1053,Land 1053,land,2333,661,0.5697192,0.3229116,939,3,me_rhovanion,me_mirkwood_region,33d1c1,no
@@ -1172,7 +1172,7 @@
 1170,me_land_1129,Land 1129,land,1955,1005,0.4774115,0.4909624,315,1,me_rhovanion,me_rohan_region,2c49ad,no
 1171,me_land_1130,Land 1130,land,1634,1229,0.3990232,0.6003908,368,1,me_gondor,me_belfalas_region,ca8126,no
 1172,me_land_1131,Land 1131,land,2649,1206,0.6468864,0.5891549,283,8,me_mordor_and_rhun,me_mordor_region,68b89f,no
-1173,me_land_1132,Land 1132,land,1951,680,0.4764347,0.3321935,1078,1,me_eriador,me_enedwaith_region,06f018,no
+1173,me_land_1132,Land 1132,land,1951,680,0.4764347,0.3321935,1078,1,me_eriador,me_eregion_region,06f018,no
 1174,me_land_1133,Land 1133,land,1606,810,0.3921856,0.3957010,641,1,me_eriador,me_enedwaith_region,a52791,no
 1175,me_land_1134,Land 1134,land,1943,782,0.4744811,0.3820225,753,1,me_eriador,me_enedwaith_region,435f0a,no
 1176,me_land_1135,Land 1135,land,2334,422,0.5699634,0.2061553,1016,3,me_rhovanion,me_mirkwood_region,e19683,no
@@ -1181,7 +1181,7 @@
 1179,me_land_1138,Land 1138,land,2633,1243,0.6429792,0.6072301,536,8,me_mordor_and_rhun,me_mordor_region,bc3cee,no
 1180,me_land_1139,Land 1139,land,3174,590,0.7750916,0.2882267,1105,9,me_mordor_and_rhun,me_rhun_region,5a7467,no
 1181,me_land_1140,Land 1140,land,3210,1357,0.7838828,0.6629213,651,9,me_mordor_and_rhun,me_mordor_region,f8abe0,no
-1182,me_land_1141,Land 1141,land,1818,598,0.4439560,0.2921348,429,1,me_eriador,me_north_arnor_region,96e359,no
+1182,me_land_1141,Land 1141,land,1818,598,0.4439560,0.2921348,429,1,me_eriador,me_eregion_region,96e359,no
 1183,me_land_1142,Land 1142,land,1535,1191,0.3748474,0.5818271,775,1,me_gondor,me_belfalas_region,351ad2,no
 1184,me_land_1143,Land 1143,land,2956,585,0.7218559,0.2857841,720,9,me_mordor_and_rhun,me_rhun_region,d3524b,no
 1185,me_land_1144,Land 1144,land,2839,387,0.6932845,0.1890572,892,1,me_mordor_and_rhun,me_rhun_region,7189c4,no
@@ -1700,7 +1700,7 @@
 1698,me_land_1657,Land 1657,land,1788,720,0.4366300,0.3517342,811,1,me_eriador,me_enedwaith_region,bb222f,no
 1699,me_land_1658,Land 1658,land,3095,215,0.7557998,0.1050318,773,1,me_forodwaith,me_northern_wastes_region,5959a8,no
 1700,me_land_1659,Land 1659,land,1653,697,0.4036630,0.3404983,577,1,me_eriador,me_enedwaith_region,f79121,no
-1701,me_land_1660,Land 1660,land,1800,615,0.4395604,0.3004397,305,1,me_eriador,me_enedwaith_region,95c89a,no
+1701,me_land_1660,Land 1660,land,1800,615,0.4395604,0.3004397,305,1,me_eriador,me_eregion_region,95c89a,no
 1702,me_land_1661,Land 1661,land,2748,1378,0.6710623,0.6731803,348,8,me_mordor_and_rhun,me_mordor_region,340013,no
 1703,me_land_1662,Land 1662,land,2915,1125,0.7118437,0.5495848,650,9,me_mordor_and_rhun,me_mordor_region,d2378c,no
 1704,me_land_1663,Land 1663,land,2973,1334,0.7260073,0.6516854,325,8,me_mordor_and_rhun,me_mordor_region,706f05,no
@@ -1709,7 +1709,7 @@
 1707,me_land_1666,Land 1666,land,1547,1346,0.3777778,0.6575476,786,1,me_gondor,me_belfalas_region,4b1570,no
 1708,me_land_1667,Land 1667,land,1453,476,0.3548230,0.2325354,590,1,me_eriador,me_shire_breeland_region,e94ce9,no
 1709,me_land_1668,Land 1668,land,2271,1618,0.5545788,0.7904250,514,9,me_harad,me_near_harad_region,878462,no
-1710,me_land_1669,Land 1669,land,1776,670,0.4336996,0.3273083,669,6,me_eriador,me_enedwaith_region,25bbdb,no
+1710,me_land_1669,Land 1669,land,1776,670,0.4336996,0.3273083,669,6,me_eriador,me_eregion_region,25bbdb,no
 1711,me_land_1670,Land 1670,land,1437,543,0.3509158,0.2652662,377,1,me_eriador,me_shire_breeland_region,c3f354,no
 1712,me_land_1671,Land 1671,land,2310,399,0.5641026,0.1949194,327,3,me_rhovanion,me_mirkwood_region,622acd,no
 1713,me_land_1672,Land 1672,land,2110,1116,0.5152625,0.5451881,608,1,me_rhovanion,me_rohan_region,006246,no
@@ -1758,7 +1758,7 @@
 1756,me_land_1715,Land 1715,land,2782,1318,0.6793651,0.6438691,534,8,me_mordor_and_rhun,me_mordor_region,31eb12,no
 1757,me_land_1716,Land 1716,land,2598,1266,0.6344322,0.6184660,425,8,me_mordor_and_rhun,me_mordor_region,d0228b,no
 1758,me_land_1717,Land 1717,land,2131,877,0.5203907,0.4284319,660,9,me_rhovanion,me_anduin_vale_region,6e5a04,no
-1759,me_land_1718,Land 1718,land,1764,596,0.4307692,0.2911578,527,1,me_eriador,me_north_arnor_region,0c917d,no
+1759,me_land_1718,Land 1718,land,1764,596,0.4307692,0.2911578,527,1,me_eriador,me_eregion_region,0c917d,no
 1760,me_land_1719,Land 1719,land,2335,1645,0.5702076,0.8036150,810,9,me_harad,me_near_harad_region,aac8f6,no
 1761,me_land_1720,Land 1720,land,1455,885,0.3553114,0.4323400,1033,1,me_eriador,me_enedwaith_region,49006f,no
 1762,me_land_1721,Land 1721,land,2727,185,0.6659341,0.0903762,802,5,me_forodwaith,me_northern_wastes_region,e737e8,no
@@ -1791,7 +1791,7 @@
 1789,me_land_1748,Land 1748,land,3201,669,0.7816850,0.3268197,1071,9,me_mordor_and_rhun,me_rhun_region,354924,no
 1790,me_land_1749,Land 1749,land,1962,559,0.4791209,0.2730826,737,1,me_eriador,me_north_arnor_region,d3809d,no
 1791,me_land_1750,Land 1750,land,2176,1024,0.5313797,0.5002443,472,1,me_rhovanion,me_rohan_region,71b816,no
-1792,me_land_1751,Land 1751,land,1897,580,0.4632479,0.2833415,520,1,me_eriador,me_north_arnor_region,0fef8f,no
+1792,me_land_1751,Land 1751,land,1897,580,0.4632479,0.2833415,520,1,me_eriador,me_eregion_region,0fef8f,no
 1793,me_land_1752,Land 1752,land,2465,1046,0.6019536,0.5109917,782,1,me_rhovanion,me_brown_lands_region,ae2708,no
 1794,me_land_1753,Land 1753,land,1599,779,0.3904762,0.3805569,1361,1,me_eriador,me_enedwaith_region,4c5e81,no
 1795,me_land_1754,Land 1754,land,3274,777,0.7995116,0.3795799,489,9,me_mordor_and_rhun,me_rhun_region,ea95fa,no
@@ -1850,7 +1850,7 @@
 1848,me_land_1807,Land 1807,land,2327,1978,0.5682540,0.9662921,759,10,me_harad,me_far_harad_region,ac1207,no
 1849,me_land_1808,Land 1808,land,2826,158,0.6901099,0.0771861,893,5,me_forodwaith,me_northern_wastes_region,4a4980,no
 1850,me_land_1809,Land 1809,land,3251,1449,0.7938950,0.7078652,742,9,me_mordor_and_rhun,me_mordor_region,e880f9,no
-1851,me_land_1810,Land 1810,land,1861,657,0.4544567,0.3209575,885,1,me_eriador,me_enedwaith_region,86b872,no
+1851,me_land_1810,Land 1810,land,1861,657,0.4544567,0.3209575,885,1,me_eriador,me_eregion_region,86b872,no
 1852,me_land_1811,Land 1811,land,2865,1958,0.6996337,0.9565217,2541,10,me_harad,me_far_harad_region,24efeb,no
 1853,me_land_1812,Land 1812,land,2042,1389,0.4986569,0.6785540,286,1,me_gondor,me_belfalas_region,c32764,no
 1854,me_land_1813,Land 1813,land,2175,880,0.5311355,0.4298974,482,9,me_rhovanion,me_anduin_vale_region,615edd,no
@@ -1897,7 +1897,7 @@
 1895,me_land_1854,Land 1854,land,1750,151,0.4273504,0.0737665,2193,5,me_forodwaith,me_angmar_region,b8413e,no
 1896,me_land_1855,Land 1855,land,2551,383,0.6229548,0.1871031,1098,1,me_rhovanion,me_dale_region,5678b7,no
 1897,me_land_1856,Land 1856,land,1560,891,0.3809524,0.4352711,676,1,me_eriador,me_enedwaith_region,f4b030,no
-1898,me_land_1857,Land 1857,land,1936,577,0.4727717,0.2818759,473,1,me_eriador,me_north_arnor_region,92e7a9,no
+1898,me_land_1857,Land 1857,land,1936,577,0.4727717,0.2818759,473,1,me_eriador,me_eregion_region,92e7a9,no
 1899,me_land_1858,Land 1858,land,2773,259,0.6771673,0.1265266,1514,1,me_mordor_and_rhun,me_rhun_region,311f22,no
 1900,me_land_1859,Land 1859,land,2721,683,0.6644689,0.3336590,700,9,me_mordor_and_rhun,me_rhun_region,cf569b,no
 1901,me_land_1860,Land 1860,land,1945,1199,0.4749695,0.5857352,356,1,me_gondor,me_belfalas_region,6d8e14,no
@@ -1951,7 +1951,7 @@
 1949,me_land_1908,Land 1908,land,1590,457,0.3882784,0.2232535,836,1,me_eriador,me_shire_breeland_region,17f4c4,no
 1950,me_land_1909,Land 1909,land,1866,791,0.4556777,0.3864191,524,1,me_eriador,me_enedwaith_region,b62c3d,no
 1951,me_land_1910,Land 1910,land,1479,670,0.3611722,0.3273083,343,1,me_eriador,me_enedwaith_region,5463b6,no
-1952,me_land_1911,Land 1911,land,1785,618,0.4358974,0.3019052,347,1,me_eriador,me_enedwaith_region,f29b2f,no
+1952,me_land_1911,Land 1911,land,1785,618,0.4358974,0.3019052,347,1,me_eriador,me_eregion_region,f29b2f,no
 1953,me_land_1912,Land 1912,land,3295,1455,0.8046398,0.7107963,607,9,me_mordor_and_rhun,me_mordor_region,90d2a8,no
 1954,me_land_1913,Land 1913,land,1720,1163,0.4200244,0.5681485,568,1,me_gondor,me_belfalas_region,2f0a21,no
 1955,me_land_1914,Land 1914,land,2885,1110,0.7045177,0.5422570,662,1,me_mordor_and_rhun,me_mordor_region,cd419a,no
@@ -1970,7 +1970,7 @@
 1968,me_land_1927,Land 1927,land,3183,1969,0.7772894,0.9618955,981,10,me_harad,me_far_harad_region,d612bf,no
 1969,me_land_1928,Land 1928,land,2650,500,0.6471306,0.2442599,1825,1,me_mordor_and_rhun,me_rhun_region,744a38,no
 1970,me_land_1929,Land 1929,land,2440,161,0.5958486,0.0786517,1628,5,me_forodwaith,me_northern_wastes_region,1281b1,no
-1971,me_land_1930,Land 1930,land,1868,688,0.4561661,0.3361016,1098,1,me_eriador,me_enedwaith_region,b0b92a,no
+1971,me_land_1930,Land 1930,land,1868,688,0.4561661,0.3361016,1098,1,me_eriador,me_eregion_region,b0b92a,no
 1972,me_land_1931,Land 1931,land,2381,1507,0.5814408,0.7361993,740,9,me_gondor,me_south_gondor_region,4ef0a3,no
 1973,me_land_1932,Land 1932,land,2619,453,0.6395604,0.2212995,383,1,me_mordor_and_rhun,me_rhun_region,ed281c,no
 1974,me_land_1933,Land 1933,land,2840,1437,0.6935287,0.7020029,177,8,me_mordor_and_rhun,me_mordor_region,8b5f95,no
@@ -2050,7 +2050,7 @@
 2048,me_land_2007,Land 2007,land,2993,1823,0.7308913,0.8905716,1282,10,me_harad,me_near_harad_region,47688f,no
 2049,me_land_2008,Land 2008,land,1403,506,0.3426129,0.2471910,248,1,me_eriador,me_shire_breeland_region,e5a008,no
 2050,me_land_2009,Land 2009,land,2934,1208,0.7164835,0.5901319,654,8,me_mordor_and_rhun,me_mordor_region,83d781,no
-2051,me_land_2010,Land 2010,land,1957,647,0.4778999,0.3160723,678,1,me_eriador,me_enedwaith_region,220efa,no
+2051,me_land_2010,Land 2010,land,1957,647,0.4778999,0.3160723,678,1,me_eriador,me_eregion_region,220efa,no
 2052,me_land_2011,Land 2011,land,1718,560,0.4195360,0.2735711,477,1,me_eriador,me_north_arnor_region,c04673,no
 2053,me_land_2012,Land 2012,land,1062,418,0.2593407,0.2042013,195,1,me_eriador,me_lindon_region,5e7dec,no
 2054,me_land_2013,Land 2013,land,2692,1339,0.6573871,0.6541280,776,8,me_mordor_and_rhun,me_mordor_region,fcb565,no
@@ -2059,7 +2059,7 @@
 2057,me_land_2016,Land 2016,land,2104,1873,0.5137973,0.9149976,422,9,me_harad,me_umbar_region,d75bd0,no
 2058,me_land_2017,Land 2017,land,3111,1517,0.7597070,0.7410845,1027,9,me_mordor_and_rhun,me_khand_region,759349,no
 2059,me_land_2018,Land 2018,land,2146,617,0.5240537,0.3014167,522,1,me_rhovanion,me_anduin_vale_region,13cac2,no
-2060,me_land_2019,Land 2019,land,1880,601,0.4590965,0.2936004,667,1,me_eriador,me_north_arnor_region,b2023b,no
+2060,me_land_2019,Land 2019,land,1880,601,0.4590965,0.2936004,667,1,me_eriador,me_eregion_region,b2023b,no
 2061,me_land_2020,Land 2020,land,2136,1359,0.5216117,0.6638984,400,1,me_gondor,me_belfalas_region,5039b4,no
 2062,me_land_2021,Land 2021,land,2627,467,0.6415140,0.2281387,610,1,me_mordor_and_rhun,me_rhun_region,ee712d,no
 2063,me_land_2022,Land 2022,land,2548,1712,0.6222222,0.8363459,1182,9,me_harad,me_near_harad_region,8ca8a6,no
@@ -2259,7 +2259,7 @@
 2257,me_land_2216,Land 2216,land,2642,606,0.6451770,0.2960430,959,1,me_mordor_and_rhun,me_rhun_region,72b258,no
 2258,me_land_2217,Land 2217,land,1049,329,0.2561661,0.1607230,722,1,me_eriador,me_lindon_region,10e9d1,no
 2259,me_land_2218,Land 2218,land,2106,1221,0.5142857,0.5964827,719,1,me_gondor,me_belfalas_region,af214a,no
-2260,me_land_2219,Land 2219,land,1854,565,0.4527473,0.2760137,544,1,me_eriador,me_north_arnor_region,4d58c3,no
+2260,me_land_2219,Land 2219,land,1854,565,0.4527473,0.2760137,544,1,me_eriador,me_eregion_region,4d58c3,no
 2261,me_land_2220,Land 2220,land,1500,106,0.3663004,0.0517831,1322,5,me_forodwaith,me_forochel_region,eb903c,no
 2262,me_land_2221,Land 2221,land,1570,612,0.3833944,0.2989741,641,1,me_eriador,me_enedwaith_region,89c7b5,no
 2263,me_land_2222,Land 2222,land,1884,718,0.4600733,0.3507572,697,1,me_eriador,me_enedwaith_region,27ff2e,no
@@ -2300,7 +2300,7 @@
 2298,me_land_2257,Land 2257,land,2177,1247,0.5316239,0.6091842,773,1,me_gondor,me_anorien_region,c994b9,no
 2299,me_land_2258,Land 2258,land,3363,1898,0.8212454,0.9272106,3133,10,me_harad,me_far_harad_region,67cc32,no
 2300,me_land_2259,Land 2259,land,861,116,0.2102564,0.0566683,432,1,me_forodwaith,me_forochel_region,0603ab,no
-2301,me_land_2260,Land 2260,land,1811,683,0.4422466,0.3336590,677,6,me_eriador,me_enedwaith_region,a43b24,no
+2301,me_land_2260,Land 2260,land,1811,683,0.4422466,0.3336590,677,6,me_eriador,me_eregion_region,a43b24,no
 2302,me_land_2261,Land 2261,land,3256,899,0.7951160,0.4391793,381,9,me_mordor_and_rhun,me_rhun_region,42729d,no
 2303,me_land_2262,Land 2262,land,1670,1128,0.4078144,0.5510503,633,1,me_eriador,me_enedwaith_region,e0aa16,no
 2304,me_land_2263,Land 2263,land,3121,877,0.7621490,0.4284319,1406,9,me_mordor_and_rhun,me_rhun_region,7ee18f,no
@@ -2460,7 +2460,7 @@
 2458,me_land_2417,Land 2417,land,2226,330,0.5435897,0.1612115,377,3,me_rhovanion,me_anduin_vale_region,ac4059,no
 2459,me_land_2418,Land 2418,land,3014,1132,0.7360195,0.5530044,504,8,me_mordor_and_rhun,me_mordor_region,4a77d2,no
 2460,me_land_2419,Land 2419,land,2096,1403,0.5118437,0.6853933,353,1,me_gondor,me_belfalas_region,e8af4b,no
-2461,me_land_2420,Land 2420,land,1838,575,0.4488400,0.2808989,392,1,me_eriador,me_north_arnor_region,86e6c4,no
+2461,me_land_2420,Land 2420,land,1838,575,0.4488400,0.2808989,392,1,me_eriador,me_eregion_region,86e6c4,no
 2462,me_land_2421,Land 2421,land,2341,1592,0.5716728,0.7777235,796,9,me_harad,me_near_harad_region,251e3d,no
 2463,me_land_2422,Land 2422,land,3165,1350,0.7728938,0.6595017,611,9,me_mordor_and_rhun,me_mordor_region,c355b6,no
 2464,me_land_2423,Land 2423,land,2665,1187,0.6507937,0.5798730,394,8,me_mordor_and_rhun,me_mordor_region,618d2f,no
@@ -2489,7 +2489,7 @@
 2487,me_land_2446,Land 2446,land,3034,1158,0.7409035,0.5657059,586,8,me_mordor_and_rhun,me_mordor_region,98890e,no
 2488,me_land_2447,Land 2447,land,1910,1210,0.4664225,0.5911089,394,1,me_gondor,me_belfalas_region,36c087,no
 2489,me_land_2448,Land 2448,land,3080,102,0.7521368,0.0498290,539,1,me_forodwaith,me_northern_wastes_region,d4f800,no
-2490,me_land_2449,Land 2449,land,1789,587,0.4368742,0.2867611,431,1,me_eriador,me_north_arnor_region,732f79,no
+2490,me_land_2449,Land 2449,land,1789,587,0.4368742,0.2867611,431,1,me_eriador,me_eregion_region,732f79,no
 2491,me_land_2450,Land 2450,land,2513,1900,0.6136752,0.9281876,991,10,me_harad,me_far_harad_region,1166f2,no
 2492,me_land_2451,Land 2451,land,3177,1608,0.7758242,0.7855398,431,9,me_mordor_and_rhun,me_khand_region,af9e6b,no
 2493,me_land_2452,Land 2452,land,2528,1239,0.6173382,0.6052760,527,8,me_mordor_and_rhun,me_mordor_region,4dd5e4,no
@@ -2544,11 +2544,11 @@
 2542,me_land_2501,Land 2501,land,3320,981,0.8107448,0.4792379,1115,9,me_mordor_and_rhun,me_rhun_region,96740d,no
 2543,me_land_2502,Land 2502,land,2575,1363,0.6288156,0.6658525,459,8,me_mordor_and_rhun,me_mordor_region,34ab86,no
 2544,me_land_2503,Land 2503,land,3348,1756,0.8175824,0.8578407,1378,10,me_mordor_and_rhun,me_khand_region,d2e2ff,no
-2545,me_land_2504,Land 2504,land,1910,632,0.4664225,0.3087445,631,1,me_eriador,me_enedwaith_region,711a78,no
+2545,me_land_2504,Land 2504,land,1910,632,0.4664225,0.3087445,631,1,me_eriador,me_eregion_region,711a78,no
 2546,me_land_2505,Land 2505,land,3081,1535,0.7523810,0.7498779,606,9,me_mordor_and_rhun,me_khand_region,0f51f1,no
 2547,me_land_2506,Land 2506,land,2014,480,0.4918193,0.2344895,304,1,me_eriador,me_north_arnor_region,ad896a,no
 2548,me_land_2507,Land 2507,land,1936,481,0.4727717,0.2349780,482,2,me_eriador,me_north_arnor_region,4bc0e3,no
-2549,me_land_2508,Land 2508,land,1815,615,0.4432234,0.3004397,462,1,me_eriador,me_enedwaith_region,e9f85c,no
+2549,me_land_2508,Land 2508,land,1815,615,0.4432234,0.3004397,462,1,me_eriador,me_eregion_region,e9f85c,no
 2550,me_land_2509,Land 2509,land,2009,1111,0.4905983,0.5427455,213,1,me_rhovanion,me_rohan_region,882fd5,no
 2551,me_land_2510,Land 2510,land,1540,584,0.3760684,0.2852956,439,1,me_eriador,me_shire_breeland_region,26674e,no
 2552,me_land_2511,Land 2511,land,1041,381,0.2542125,0.1861260,1044,1,me_eriador,me_lindon_region,c49ec7,no
@@ -2559,7 +2559,7 @@
 2557,me_land_2516,Land 2516,land,2572,394,0.6280830,0.1924768,830,1,me_rhovanion,me_dale_region,dbb424,no
 2558,me_land_2517,Land 2517,land,3096,570,0.7560440,0.2784563,858,9,me_mordor_and_rhun,me_rhun_region,79eb9d,no
 2559,me_land_2518,Land 2518,land,2247,269,0.5487179,0.1314118,411,3,me_rhovanion,me_grey_mountains_region,182316,no
-2560,me_land_2519,Land 2519,land,1854,595,0.4527473,0.2906693,456,1,me_eriador,me_north_arnor_region,b65a8f,no
+2560,me_land_2519,Land 2519,land,1854,595,0.4527473,0.2906693,456,1,me_eriador,me_eregion_region,b65a8f,no
 2561,me_land_2520,Land 2520,land,2484,764,0.6065934,0.3732291,628,9,me_rhovanion,me_mirkwood_region,549208,no
 2562,me_land_2521,Land 2521,land,1445,783,0.3528694,0.3825110,1242,1,me_eriador,me_enedwaith_region,f2c981,no
 2563,me_land_2522,Land 2522,land,3374,143,0.8239316,0.0698583,1414,1,me_forodwaith,me_northern_wastes_region,9100fa,no
@@ -2611,7 +2611,7 @@
 2609,me_land_2568,Land 2568,land,2041,1001,0.4984127,0.4890083,552,1,me_rhovanion,me_rohan_region,9d3031,no
 2610,me_land_2569,Land 2569,land,2007,1086,0.4901099,0.5305325,332,1,me_rhovanion,me_rohan_region,3b67aa,no
 2611,me_land_2570,Land 2570,land,2424,983,0.5919414,0.4802149,785,1,me_rhovanion,me_brown_lands_region,d99f23,no
-2612,me_land_2571,Land 2571,land,1886,634,0.4605617,0.3097215,647,1,me_eriador,me_enedwaith_region,77d69c,no
+2612,me_land_2571,Land 2571,land,1886,634,0.4605617,0.3097215,647,1,me_eriador,me_eregion_region,77d69c,no
 2613,me_land_2572,Land 2572,land,1948,311,0.4757021,0.1519297,354,1,me_eriador,me_north_arnor_region,160e15,no
 2614,me_land_2573,Land 2573,land,3144,996,0.7677656,0.4865657,430,9,me_mordor_and_rhun,me_rhun_region,b4458e,no
 2615,me_land_2574,Land 2574,land,3117,259,0.7611722,0.1265266,899,1,me_mordor_and_rhun,me_rhun_region,527d07,no
@@ -2648,7 +2648,7 @@
 2646,me_land_2605,Land 2605,land,3008,887,0.7345543,0.4333170,712,9,me_mordor_and_rhun,me_rhun_region,7b34ae,no
 2647,me_land_2606,Land 2606,land,2172,917,0.5304029,0.4479726,463,9,me_rhovanion,me_rohan_region,196c27,no
 2648,me_land_2607,Land 2607,land,3014,1742,0.7360195,0.8510015,604,10,me_mordor_and_rhun,me_khand_region,b7a3a0,no
-2649,me_land_2608,Land 2608,land,1933,647,0.4720391,0.3160723,395,1,me_eriador,me_enedwaith_region,55db19,no
+2649,me_land_2608,Land 2608,land,1933,647,0.4720391,0.3160723,395,1,me_eriador,me_eregion_region,55db19,no
 2650,me_land_2609,Land 2609,land,2272,1322,0.5548230,0.6458232,634,1,me_gondor,me_lebennin_region,f41292,no
 2651,me_land_2610,Land 2610,land,3314,188,0.8092796,0.0918417,363,1,me_forodwaith,me_northern_wastes_region,924a0b,no
 2652,me_land_2611,Land 2611,land,2534,1327,0.6188034,0.6482658,564,1,me_gondor,me_ithilien_region,308184,no
@@ -2680,7 +2680,7 @@
 2678,me_land_2637,Land 2637,land,3402,1971,0.8307692,0.9628725,589,10,me_harad,me_far_harad_region,4223ce,no
 2679,me_land_2638,Land 2638,land,1806,950,0.4410256,0.4640938,334,1,me_eriador,me_enedwaith_region,e05b47,no
 2680,me_land_2639,Land 2639,land,3316,338,0.8097680,0.1651197,579,1,me_mordor_and_rhun,me_rhun_region,7e92c0,no
-2681,me_land_2640,Land 2640,land,1780,685,0.4346764,0.3346361,635,6,me_eriador,me_enedwaith_region,1cca39,no
+2681,me_land_2640,Land 2640,land,1780,685,0.4346764,0.3346361,635,6,me_eriador,me_eregion_region,1cca39,no
 2682,me_land_2641,Land 2641,land,1497,532,0.3655678,0.2598925,576,1,me_eriador,me_shire_breeland_region,bb01b2,no
 2683,me_land_2642,Land 2642,land,2013,830,0.4915751,0.4054714,344,1,me_rhovanion,me_anduin_vale_region,59392b,no
 2684,me_land_2643,Land 2643,land,2063,1412,0.5037851,0.6897899,467,1,me_gondor,me_belfalas_region,f770a4,no
@@ -2738,7 +2738,7 @@
 2736,me_land_2695,Land 2695,land,2136,778,0.5216117,0.3800684,432,1,me_rhovanion,me_anduin_vale_region,1ab538,no
 2737,me_land_2696,Land 2696,land,2104,990,0.5137973,0.4836346,458,1,me_rhovanion,me_rohan_region,b8ecb1,no
 2738,me_land_2697,Land 2697,land,3418,1744,0.8346764,0.8519785,2132,10,me_mordor_and_rhun,me_khand_region,57242a,no
-2739,me_land_2698,Land 2698,land,1793,647,0.4378510,0.3160723,498,1,me_eriador,me_enedwaith_region,f55ba3,no
+2739,me_land_2698,Land 2698,land,1793,647,0.4378510,0.3160723,498,1,me_eriador,me_eregion_region,f55ba3,no
 2740,me_land_2699,Land 2699,land,2014,492,0.4918193,0.2403517,454,1,me_eriador,me_north_arnor_region,93931c,no
 2741,me_land_2700,Land 2700,land,2097,542,0.5120879,0.2647777,441,1,me_rhovanion,me_anduin_vale_region,31ca95,no
 2742,me_land_2701,Land 2701,land,3014,38,0.7360195,0.0185638,1278,5,me_forodwaith,me_northern_wastes_region,d0020e,no
@@ -2836,7 +2836,7 @@
 2834,me_land_2793,Land 2793,land,3317,96,0.8100122,0.0468979,753,1,me_forodwaith,me_northern_wastes_region,abf18a,no
 2835,me_land_2794,Land 2794,land,2461,319,0.6009768,0.1558378,402,1,me_rhovanion,me_dale_region,4a2903,no
 2836,me_land_2795,Land 2795,land,3061,1586,0.7474969,0.7747924,281,9,me_mordor_and_rhun,me_khand_region,e8607c,no
-2837,me_land_2796,Land 2796,land,1781,640,0.4349206,0.3126527,378,1,me_eriador,me_enedwaith_region,8697f5,no
+2837,me_land_2796,Land 2796,land,1781,640,0.4349206,0.3126527,378,1,me_eriador,me_eregion_region,8697f5,no
 2838,me_land_2797,Land 2797,land,2632,755,0.6427350,0.3688324,949,1,me_rhovanion,me_mirkwood_region,24cf6e,no
 2839,me_land_2798,Land 2798,land,1691,469,0.4129426,0.2291158,330,1,me_eriador,me_north_arnor_region,c306e7,no
 2840,me_land_2799,Land 2799,land,2852,1314,0.6964591,0.6419150,503,8,me_mordor_and_rhun,me_mordor_region,613e60,no
@@ -2849,7 +2849,7 @@
 2847,me_land_2806,Land 2806,land,2954,625,0.7213675,0.3053249,657,9,me_mordor_and_rhun,me_rhun_region,b4c2af,no
 2848,me_land_2807,Land 2807,land,2224,1403,0.5431013,0.6853933,637,1,me_gondor,me_lebennin_region,52fa28,no
 2849,me_land_2808,Land 2808,land,1399,553,0.3416361,0.2701514,328,1,me_eriador,me_shire_breeland_region,f131a1,no
-2850,me_land_2809,Land 2809,land,1804,600,0.4405372,0.2931119,285,1,me_eriador,me_north_arnor_region,8f691a,no
+2850,me_land_2809,Land 2809,land,1804,600,0.4405372,0.2931119,285,1,me_eriador,me_eregion_region,8f691a,no
 2851,me_land_2810,Land 2810,land,2793,1285,0.6820513,0.6277479,529,8,me_mordor_and_rhun,me_mordor_region,2da093,no
 2852,me_land_2811,Land 2811,land,3425,820,0.8363858,0.4005862,622,9,me_mordor_and_rhun,me_rhun_region,cbd80c,no
 2853,me_land_2812,Land 2812,land,1321,579,0.3225885,0.2828530,543,1,me_eriador,me_shire_breeland_region,6a0f85,no
@@ -3003,7 +3003,7 @@
 3001,me_land_2960,Land 2960,land,1218,165,0.2974359,0.0806058,2936,5,me_forodwaith,me_forochel_region,e22179,no
 3002,me_land_2961,Land 2961,land,3191,712,0.7792430,0.3478261,572,9,me_mordor_and_rhun,me_rhun_region,8058f2,no
 3003,me_land_2962,Land 2962,land,2576,1400,0.6290598,0.6839277,657,8,me_mordor_and_rhun,me_mordor_region,1e906b,no
-3004,me_land_2963,Land 2963,land,1929,593,0.4710623,0.2896922,360,1,me_eriador,me_north_arnor_region,bcc7e4,no
+3004,me_land_2963,Land 2963,land,1929,593,0.4710623,0.2896922,360,1,me_eriador,me_eregion_region,bcc7e4,no
 3005,me_land_2964,Land 2964,land,2167,784,0.5291819,0.3829995,792,1,me_rhovanion,me_anduin_vale_region,5aff5d,no
 3006,me_land_2965,Land 2965,land,2325,1499,0.5677656,0.7322912,760,9,me_gondor,me_lebennin_region,f936d6,no
 3007,me_land_2966,Land 2966,land,2456,1198,0.5997558,0.5852467,615,1,me_gondor,me_ithilien_region,976e4f,no
@@ -3137,7 +3137,7 @@
 3135,me_land_3094,Land 3094,land,2096,1047,0.5118437,0.5114802,388,1,me_rhovanion,me_rohan_region,b32acf,no
 3136,me_land_3095,Land 3095,land,2655,159,0.6483516,0.0776746,2429,5,me_forodwaith,me_northern_wastes_region,516248,no
 3137,me_land_3096,Land 3096,land,2340,677,0.5714286,0.3307279,896,3,me_rhovanion,me_mirkwood_region,ef99c1,no
-3138,me_land_3097,Land 3097,land,1944,614,0.4747253,0.2999511,533,1,me_eriador,me_north_arnor_region,8dd13a,no
+3138,me_land_3097,Land 3097,land,1944,614,0.4747253,0.2999511,533,1,me_eriador,me_eregion_region,8dd13a,no
 3139,me_land_3098,Land 3098,land,2564,1603,0.6261294,0.7830972,842,9,me_harad,me_near_harad_region,2c08b3,no
 3140,me_land_3099,Land 3099,land,2927,1624,0.7147741,0.7933561,541,9,me_mordor_and_rhun,me_khand_region,ca402c,no
 3141,me_land_3100,Land 3100,land,1924,278,0.4698413,0.1358085,878,1,me_eriador,me_north_arnor_region,6877a5,no
@@ -3439,7 +3439,7 @@
 3437,me_land_3396,Land 3396,land,2861,1145,0.6986569,0.5593552,590,1,me_mordor_and_rhun,me_mordor_region,589b8d,no
 3438,me_land_3397,Land 3397,land,3166,1748,0.7731380,0.8539326,586,10,me_mordor_and_rhun,me_khand_region,f6d306,no
 3439,me_land_3398,Land 3398,land,2917,1702,0.7123321,0.8314607,1342,10,me_mordor_and_rhun,me_khand_region,950a7f,no
-3440,me_land_3399,Land 3399,land,1919,680,0.4686203,0.3321935,1003,1,me_eriador,me_enedwaith_region,3341f8,no
+3440,me_land_3399,Land 3399,land,1919,680,0.4686203,0.3321935,1003,1,me_eriador,me_eregion_region,3341f8,no
 3441,me_land_3400,Land 3400,land,3162,705,0.7721612,0.3444064,587,2,me_mordor_and_rhun,me_rhun_region,d17971,no
 3442,me_land_3401,Land 3401,land,2515,1941,0.6141636,0.9482169,616,10,me_harad,me_far_harad_region,6fb0ea,no
 3443,me_land_3402,Land 3402,land,2076,671,0.5069597,0.3277968,222,1,me_rhovanion,me_anduin_vale_region,0de863,no
@@ -3461,7 +3461,7 @@
 3459,me_land_3418,Land 3418,land,3030,1595,0.7399267,0.7791891,1002,9,me_mordor_and_rhun,me_khand_region,f15ff3,no
 3460,me_land_3419,Land 3419,land,2865,1182,0.6996337,0.5774304,1032,9,me_mordor_and_rhun,me_mordor_region,8f976c,no
 3461,me_land_3420,Land 3420,land,1719,463,0.4197802,0.2261847,728,1,me_eriador,me_north_arnor_region,2dcee5,no
-3462,me_land_3421,Land 3421,land,1860,582,0.4542125,0.2843185,444,1,me_eriador,me_north_arnor_region,cc065e,no
+3462,me_land_3421,Land 3421,land,1860,582,0.4542125,0.2843185,444,1,me_eriador,me_eregion_region,cc065e,no
 3463,me_land_3422,Land 3422,land,2392,1754,0.5841270,0.8568637,978,9,me_harad,me_near_harad_region,6a3dd7,no
 3464,me_land_3423,Land 3423,land,3129,177,0.7641026,0.0864680,969,1,me_forodwaith,me_northern_wastes_region,087550,no
 3465,me_land_3424,Land 3424,land,3008,5,0.7345543,0.0024426,736,5,me_forodwaith,me_northern_wastes_region,a6acc9,no
@@ -3495,7 +3495,7 @@
 3493,me_land_3452,Land 3452,land,3182,1769,0.7770452,0.8641915,486,10,me_mordor_and_rhun,me_khand_region,f4be05,no
 3494,me_land_3453,Land 3453,land,3024,576,0.7384615,0.2813874,1303,1,me_mordor_and_rhun,me_rhun_region,92f57e,no
 3495,me_land_3454,Land 3454,land,1406,709,0.3433455,0.3463605,722,1,me_eriador,me_enedwaith_region,312cf7,no
-3496,me_land_3455,Land 3455,land,1873,641,0.4573871,0.3131412,884,1,me_eriador,me_enedwaith_region,cf6470,no
+3496,me_land_3455,Land 3455,land,1873,641,0.4573871,0.3131412,884,1,me_eriador,me_eregion_region,cf6470,no
 3497,me_land_3456,Land 3456,land,2222,1271,0.5426129,0.6209086,649,1,me_gondor,me_anorien_region,6d9be9,no
 3498,me_land_3457,Land 3457,land,1085,610,0.2649573,0.2979971,984,1,me_eriador,me_lindon_region,0bd362,no
 3499,me_land_3458,Land 3458,land,2211,1285,0.5399267,0.6277479,293,1,me_gondor,me_anorien_region,aa0adb,no
@@ -3532,7 +3532,7 @@
 3530,me_land_3489,Land 3489,land,2253,34,0.5501832,0.0166097,635,5,me_forodwaith,me_northern_wastes_region,d2c282,no
 3531,me_land_3490,Land 3490,land,1657,291,0.4046398,0.1421593,599,1,me_eriador,me_north_arnor_region,70f9fb,no
 3532,me_land_3491,Land 3491,land,2073,2009,0.5062271,0.9814362,709,9,me_harad,me_umbar_region,0f3174,no
-3533,me_land_3492,Land 3492,land,1825,573,0.4456654,0.2799218,737,1,me_eriador,me_north_arnor_region,ad68ed,no
+3533,me_land_3492,Land 3492,land,1825,573,0.4456654,0.2799218,737,1,me_eriador,me_eregion_region,ad68ed,no
 3534,me_land_3493,Land 3493,land,2897,1178,0.7074481,0.5754763,610,8,me_mordor_and_rhun,me_mordor_region,4ba066,no
 3535,me_land_3494,Land 3494,land,1521,370,0.3714286,0.1807523,385,1,me_eriador,me_north_arnor_region,e9d7df,no
 3536,me_land_3495,Land 3495,land,3115,1606,0.7606838,0.7845628,588,9,me_mordor_and_rhun,me_khand_region,880f58,no
@@ -3610,7 +3610,7 @@
 3608,me_land_3567,Land 3567,land,2404,1070,0.5870574,0.5227162,1002,1,me_rhovanion,me_brown_lands_region,07a960,no
 3609,me_land_3568,Land 3568,land,1521,1033,0.3714286,0.5046409,889,1,me_eriador,me_enedwaith_region,a5e0d9,no
 3610,me_land_3569,Land 3569,land,2817,420,0.6879121,0.2051783,707,1,me_mordor_and_rhun,me_rhun_region,441852,no
-3611,me_land_3570,Land 3570,land,1839,669,0.4490842,0.3268197,452,1,me_eriador,me_enedwaith_region,e24fcb,no
+3611,me_land_3570,Land 3570,land,1839,669,0.4490842,0.3268197,452,1,me_eriador,me_eregion_region,e24fcb,no
 3612,me_land_3571,Land 3571,land,2900,1677,0.7081807,0.8192477,1149,10,me_mordor_and_rhun,me_khand_region,808744,no
 3613,me_land_3572,Land 3572,land,1554,560,0.3794872,0.2735711,546,1,me_eriador,me_shire_breeland_region,1ebebd,no
 3614,me_land_3573,Land 3573,land,1208,89,0.2949939,0.0434783,1405,5,me_forodwaith,me_forochel_region,bcf636,no
@@ -3730,7 +3730,7 @@
 3728,me_land_3687,Land 3687,land,3381,271,0.8256410,0.1323889,435,1,me_mordor_and_rhun,me_rhun_region,31aa18,no
 3729,me_land_3688,Land 3688,land,2208,1682,0.5391941,0.8216903,630,9,me_harad,me_near_harad_region,cfe191,no
 3730,me_land_3689,Land 3689,land,1477,932,0.3606838,0.4553004,581,1,me_eriador,me_enedwaith_region,6e190a,no
-3731,me_land_3690,Land 3690,land,1898,712,0.4634921,0.3478261,627,1,me_eriador,me_enedwaith_region,0c5083,no
+3731,me_land_3690,Land 3690,land,1898,712,0.4634921,0.3478261,627,1,me_eriador,me_eregion_region,0c5083,no
 3732,me_land_3691,Land 3691,land,2667,1046,0.6512821,0.5109917,390,9,me_mordor_and_rhun,me_mordor_region,aa87fc,no
 3733,me_land_3692,Land 3692,land,2822,1889,0.6891331,0.9228139,1115,10,me_harad,me_far_harad_region,48bf75,no
 3734,me_land_3693,Land 3693,land,2693,980,0.6576313,0.4787494,370,9,me_rhovanion,me_brown_lands_region,e6f6ee,no
@@ -3930,7 +3930,7 @@
 3928,me_land_3887,Land 3887,land,1612,440,0.3936508,0.2149487,431,1,me_eriador,me_shire_breeland_region,cd00a0,no
 3929,me_land_3888,Land 3888,land,3385,1123,0.8266178,0.5486077,545,9,me_mordor_and_rhun,me_mordor_region,6b3819,no
 3930,me_land_3889,Land 3889,land,2861,1338,0.6986569,0.6536395,458,8,me_mordor_and_rhun,me_mordor_region,096f92,no
-3931,me_land_3890,Land 3890,land,1748,681,0.4268620,0.3326820,555,6,me_eriador,me_enedwaith_region,a7a70b,no
+3931,me_land_3890,Land 3890,land,1748,681,0.4268620,0.3326820,555,6,me_eriador,me_eregion_region,a7a70b,no
 3932,me_land_3891,Land 3891,land,2264,146,0.5528694,0.0713239,2082,5,me_forodwaith,me_northern_wastes_region,45de84,no
 3933,me_land_3892,Land 3892,land,2168,686,0.5294261,0.3351246,507,1,me_rhovanion,me_anduin_vale_region,e415fd,no
 3934,me_land_3893,Land 3893,land,1363,514,0.3328449,0.2510992,381,1,me_eriador,me_shire_breeland_region,824d76,no
@@ -4082,7 +4082,7 @@
 4080,me_land_4039,Land 4039,land,1971,1010,0.4813187,0.4934050,391,1,me_rhovanion,me_rohan_region,bdf078,no
 4081,me_land_4040,Land 4040,land,1946,80,0.4752137,0.0390816,1850,5,me_forodwaith,me_angmar_region,5c27f1,no
 4082,me_land_4041,Land 4041,land,3113,1214,0.7601954,0.5930630,579,9,me_mordor_and_rhun,me_mordor_region,fa5f6a,no
-4083,me_land_4042,Land 4042,land,1932,561,0.4717949,0.2740596,425,1,me_eriador,me_north_arnor_region,9896e3,no
+4083,me_land_4042,Land 4042,land,1932,561,0.4717949,0.2740596,425,1,me_eriador,me_eregion_region,9896e3,no
 4084,me_land_4043,Land 4043,land,2026,778,0.4947497,0.3800684,529,1,me_rhovanion,me_anduin_vale_region,36ce5c,no
 4085,me_land_4044,Land 4044,land,3046,1507,0.7438339,0.7361993,912,9,me_mordor_and_rhun,me_khand_region,d505d5,no
 4086,me_land_4045,Land 4045,land,2518,1025,0.6148962,0.5007328,783,9,me_rhovanion,me_brown_lands_region,733d4e,no
@@ -4272,7 +4272,7 @@
 4270,me_land_4229,Land 4229,land,1996,1285,0.4874237,0.6277479,608,1,me_gondor,me_belfalas_region,2b1c46,no
 4271,me_land_4230,Land 4230,land,1682,1181,0.4107448,0.5769419,259,1,me_gondor,me_belfalas_region,c953bf,no
 4272,me_land_4231,Land 4231,land,2583,606,0.6307692,0.2960430,565,9,me_rhovanion,me_mirkwood_region,678b38,no
-4273,me_land_4232,Land 4232,land,1889,612,0.4612943,0.2989741,592,1,me_eriador,me_north_arnor_region,05c2b1,no
+4273,me_land_4232,Land 4232,land,1889,612,0.4612943,0.2989741,592,1,me_eriador,me_eregion_region,05c2b1,no
 4274,me_land_4233,Land 4233,land,3020,1241,0.7374847,0.6062531,567,8,me_mordor_and_rhun,me_mordor_region,a3fa2a,no
 4275,me_land_4234,Land 4234,land,3174,944,0.7750916,0.4611627,813,9,me_mordor_and_rhun,me_rhun_region,4231a3,no
 4276,me_land_4235,Land 4235,land,2955,1424,0.7216117,0.6956522,573,8,me_mordor_and_rhun,me_mordor_region,e0691c,no
@@ -4359,7 +4359,7 @@
 4357,me_land_4316,Land 4316,land,1591,1181,0.3885226,0.5769419,386,1,me_gondor,me_belfalas_region,eff665,no
 4358,me_land_4317,Land 4317,land,3065,95,0.7484737,0.0464094,759,1,me_forodwaith,me_northern_wastes_region,8e2dde,no
 4359,me_land_4318,Land 4318,land,2753,505,0.6722833,0.2467025,935,1,me_mordor_and_rhun,me_rhun_region,2c6557,no
-4360,me_land_4319,Land 4319,land,1799,673,0.4393162,0.3287738,481,6,me_eriador,me_enedwaith_region,ca9cd0,no
+4360,me_land_4319,Land 4319,land,1799,673,0.4393162,0.3287738,481,6,me_eriador,me_eregion_region,ca9cd0,no
 4361,me_land_4320,Land 4320,land,1704,412,0.4161172,0.2012702,641,1,me_eriador,me_north_arnor_region,68d449,no
 4362,me_land_4321,Land 4321,land,3062,545,0.7477411,0.2662433,451,9,me_mordor_and_rhun,me_rhun_region,070bc2,no
 4363,me_land_4322,Land 4322,land,1525,64,0.3724054,0.0312653,2357,5,me_forodwaith,me_forochel_region,a5433b,no
@@ -4372,7 +4372,7 @@
 4370,me_land_4329,Land 4329,land,2163,1778,0.5282051,0.8685882,391,9,me_harad,me_umbar_region,f8c78a,no
 4371,me_land_4330,Land 4330,land,3383,1249,0.8261294,0.6101612,423,9,me_mordor_and_rhun,me_mordor_region,96ff03,no
 4372,me_land_4331,Land 4331,land,2584,1300,0.6310134,0.6350757,315,1,me_mordor_and_rhun,me_mordor_region,35367c,no
-4373,me_land_4332,Land 4332,land,1824,667,0.4454212,0.3258427,470,1,me_eriador,me_enedwaith_region,d36df5,no
+4373,me_land_4332,Land 4332,land,1824,667,0.4454212,0.3258427,470,1,me_eriador,me_eregion_region,d36df5,no
 4374,me_land_4333,Land 4333,land,2558,764,0.6246642,0.3732291,467,9,me_rhovanion,me_mirkwood_region,71a56e,no
 4375,me_land_4334,Land 4334,land,1456,394,0.3555556,0.1924768,563,1,me_eriador,me_north_arnor_region,0fdce7,no
 4376,me_land_4335,Land 4335,land,1611,934,0.3934066,0.4562775,969,1,me_eriador,me_enedwaith_region,ae1460,no
@@ -4428,7 +4428,7 @@
 4426,me_land_4385,Land 4385,land,3158,192,0.7711844,0.0937958,355,1,me_forodwaith,me_northern_wastes_region,94ea02,no
 4427,me_land_4386,Land 4386,land,3002,1016,0.7330891,0.4963361,1295,9,me_mordor_and_rhun,me_rhun_region,33217b,no
 4428,me_land_4387,Land 4387,land,2491,141,0.6083028,0.0688813,1299,5,me_forodwaith,me_northern_wastes_region,d158f4,no
-4429,me_land_4388,Land 4388,land,1943,564,0.4744811,0.2755252,414,1,me_eriador,me_north_arnor_region,6f906d,no
+4429,me_land_4388,Land 4388,land,1943,564,0.4744811,0.2755252,414,1,me_eriador,me_eregion_region,6f906d,no
 4430,me_land_4389,Land 4389,land,2848,90,0.6954823,0.0439668,2060,5,me_forodwaith,me_northern_wastes_region,0dc7e6,no
 4431,me_land_4390,Land 4390,land,1589,500,0.3880342,0.2442599,700,3,me_eriador,me_shire_breeland_region,abff5f,no
 4432,me_land_4391,Land 4391,land,2146,739,0.5240537,0.3610161,782,1,me_rhovanion,me_anduin_vale_region,4a36d8,no
@@ -4493,7 +4493,7 @@
 4491,me_land_4450,Land 4450,land,3108,55,0.7589744,0.0268686,675,1,me_forodwaith,me_northern_wastes_region,5f3734,no
 4492,me_land_4451,Land 4451,land,3087,74,0.7538462,0.0361505,1011,1,me_forodwaith,me_northern_wastes_region,fd6ead,no
 4493,me_land_4452,Land 4452,land,3133,932,0.7650794,0.4553004,768,9,me_mordor_and_rhun,me_rhun_region,9ba626,no
-4494,me_land_4453,Land 4453,land,1920,655,0.4688645,0.3199805,590,1,me_eriador,me_enedwaith_region,39dd9f,no
+4494,me_land_4453,Land 4453,land,1920,655,0.4688645,0.3199805,590,1,me_eriador,me_eregion_region,39dd9f,no
 4495,me_land_4454,Land 4454,land,2680,927,0.6544567,0.4528578,813,9,me_rhovanion,me_brown_lands_region,d81518,no
 4496,me_land_4455,Land 4455,land,2477,1193,0.6048840,0.5828041,553,1,me_gondor,me_ithilien_region,764c91,no
 4497,me_land_4456,Land 4456,land,3106,304,0.7584860,0.1485100,1166,1,me_mordor_and_rhun,me_rhun_region,14840a,no
@@ -4503,7 +4503,7 @@
 4501,me_land_4460,Land 4460,land,2964,1261,0.7238095,0.6160234,623,8,me_mordor_and_rhun,me_mordor_region,8d61ee,no
 4502,me_land_4461,Land 4461,land,1845,913,0.4505495,0.4460186,631,1,me_eriador,me_enedwaith_region,2b9967,no
 4503,me_land_4462,Land 4462,land,1034,518,0.2525031,0.2530532,319,1,me_eriador,me_lindon_region,c9d0e0,no
-4504,me_land_4463,Land 4463,land,1979,637,0.4832723,0.3111871,398,1,me_eriador,me_enedwaith_region,680859,no
+4504,me_land_4463,Land 4463,land,1979,637,0.4832723,0.3111871,398,1,me_eriador,me_eregion_region,680859,no
 4505,me_land_4464,Land 4464,land,1786,1028,0.4361416,0.5021983,421,1,me_eriador,me_enedwaith_region,063fd2,no
 4506,me_land_4465,Land 4465,land,1921,419,0.4691087,0.2046898,738,1,me_eriador,me_north_arnor_region,a4774b,no
 4507,me_land_4466,Land 4466,land,3356,1257,0.8195360,0.6140694,777,9,me_mordor_and_rhun,me_mordor_region,42aec4,no
@@ -4545,7 +4545,7 @@
 4543,me_land_4502,Land 4502,land,3165,1246,0.7728938,0.6086957,727,9,me_mordor_and_rhun,me_mordor_region,827bc8,no
 4544,me_land_4503,Land 4503,land,3318,1302,0.8102564,0.6360528,419,9,me_mordor_and_rhun,me_mordor_region,20b341,no
 4545,me_land_4504,Land 4504,land,2174,1773,0.5308913,0.8661456,340,9,me_harad,me_umbar_region,beeaba,no
-4546,me_land_4505,Land 4505,land,1828,643,0.4463980,0.3141182,914,1,me_eriador,me_enedwaith_region,5d2233,no
+4546,me_land_4505,Land 4505,land,1828,643,0.4463980,0.3141182,914,1,me_eriador,me_eregion_region,5d2233,no
 4547,me_land_4506,Land 4506,land,2199,1942,0.5369963,0.9487054,537,9,me_harad,me_umbar_region,fb59ac,no
 4548,me_land_4507,Land 4507,land,3234,1807,0.7897436,0.8827553,1421,10,me_harad,me_near_harad_region,999125,no
 4549,me_land_4508,Land 4508,land,3272,1194,0.7990232,0.5832926,780,9,me_mordor_and_rhun,me_mordor_region,37c89e,no
@@ -4608,7 +4608,7 @@
 4606,me_land_4565,Land 4565,land,2490,489,0.6080586,0.2388862,1278,1,me_rhovanion,me_mirkwood_region,72228f,no
 4607,me_land_4566,Land 4566,land,3091,58,0.7548230,0.0283341,552,1,me_forodwaith,me_northern_wastes_region,105a08,no
 4608,me_land_4567,Land 4567,land,2017,1393,0.4925519,0.6805081,479,9,me_gondor,me_belfalas_region,ae9181,no
-4609,me_land_4568,Land 4568,land,1774,619,0.4332112,0.3023937,367,1,me_eriador,me_enedwaith_region,4cc8fa,no
+4609,me_land_4568,Land 4568,land,1774,619,0.4332112,0.3023937,367,1,me_eriador,me_eregion_region,4cc8fa,no
 4610,me_land_4569,Land 4569,land,1974,1252,0.4820513,0.6116268,438,1,me_gondor,me_belfalas_region,eb0073,no
 4611,me_land_4570,Land 4570,land,3415,993,0.8339438,0.4851001,191,9,me_mordor_and_rhun,me_rhun_region,8937ec,no
 4612,me_land_4571,Land 4571,land,2368,664,0.5782662,0.3243771,1846,3,me_rhovanion,me_mirkwood_region,276f65,no
@@ -4692,12 +4692,12 @@
 4690,me_land_4649,Land 4649,land,1988,4,0.4854701,0.0019541,2814,5,me_forodwaith,me_angmar_region,5c5643,no
 4691,me_land_4650,Land 4650,land,1581,994,0.3860806,0.4855887,633,1,me_eriador,me_enedwaith_region,fa8dbc,no
 4692,me_land_4651,Land 4651,land,3133,1215,0.7650794,0.5935515,398,9,me_mordor_and_rhun,me_mordor_region,98c535,no
-4693,me_land_4652,Land 4652,land,1976,667,0.4825397,0.3258427,513,1,me_eriador,me_enedwaith_region,36fcae,no
+4693,me_land_4652,Land 4652,land,1976,667,0.4825397,0.3258427,513,1,me_eriador,me_eregion_region,36fcae,no
 4694,me_land_4653,Land 4653,land,1717,732,0.4192918,0.3575965,471,1,me_eriador,me_enedwaith_region,d53427,no
 4695,me_land_4654,Land 4654,land,1632,669,0.3985348,0.3268197,392,1,me_eriador,me_enedwaith_region,736ba0,no
 4696,me_land_4655,Land 4655,land,2786,1514,0.6803419,0.7396190,332,1,me_gondor,me_south_gondor_region,11a319,no
 4697,me_land_4656,Land 4656,land,1591,284,0.3885226,0.1387396,690,1,me_eriador,me_north_arnor_region,afda92,no
-4698,me_land_4657,Land 4657,land,1767,636,0.4315018,0.3106986,275,1,me_eriador,me_enedwaith_region,4e120b,no
+4698,me_land_4657,Land 4657,land,1767,636,0.4315018,0.3106986,275,1,me_eriador,me_eregion_region,4e120b,no
 4699,me_land_4658,Land 4658,land,2411,311,0.5887668,0.1519297,301,3,me_rhovanion,me_dale_region,ec4984,no
 4700,me_land_4659,Land 4659,land,1338,522,0.3267399,0.2550073,628,1,me_eriador,me_shire_breeland_region,8a80fd,no
 4701,me_land_4660,Land 4660,land,3076,1463,0.7511600,0.7147044,542,9,me_mordor_and_rhun,me_mordor_region,28b876,no
@@ -4766,7 +4766,7 @@
 4764,me_land_4723,Land 4723,land,2985,38,0.7289377,0.0185638,857,5,me_forodwaith,me_northern_wastes_region,185f3d,no
 4765,me_land_4724,Land 4724,land,2975,524,0.7264957,0.2559844,1153,1,me_mordor_and_rhun,me_rhun_region,b696b6,no
 4766,me_land_4725,Land 4725,land,2599,1365,0.6346764,0.6668295,286,8,me_mordor_and_rhun,me_mordor_region,54ce2f,no
-4767,me_land_4726,Land 4726,land,1888,568,0.4610501,0.2774792,373,1,me_eriador,me_north_arnor_region,f305a8,no
+4767,me_land_4726,Land 4726,land,1888,568,0.4610501,0.2774792,373,1,me_eriador,me_eregion_region,f305a8,no
 4768,me_land_4727,Land 4727,land,2720,876,0.6642247,0.4279433,840,9,me_mordor_and_rhun,me_rhun_region,913d21,no
 4769,me_land_4728,Land 4728,land,2547,522,0.6219780,0.2550073,635,9,me_rhovanion,me_mirkwood_region,2f749a,no
 4770,me_land_4729,Land 4729,land,3130,1159,0.7643468,0.5661944,818,9,me_mordor_and_rhun,me_mordor_region,cdac13,no
@@ -4921,7 +4921,7 @@
 4919,me_land_4878,Land 4878,land,1889,1259,0.4612943,0.6150464,639,1,me_gondor,me_belfalas_region,822cf9,no
 4920,me_land_4879,Land 4879,land,1106,340,0.2700855,0.1660967,594,2,me_eriador,me_lindon_region,206472,no
 4921,me_land_4880,Land 4880,land,2108,832,0.5147741,0.4064485,541,1,me_rhovanion,me_anduin_vale_region,be9beb,no
-4922,me_land_4881,Land 4881,land,1914,716,0.4673993,0.3497802,825,1,me_eriador,me_enedwaith_region,5cd364,no
+4922,me_land_4881,Land 4881,land,1914,716,0.4673993,0.3497802,825,1,me_eriador,me_eregion_region,5cd364,no
 4923,me_land_4882,Land 4882,land,3119,1908,0.7616606,0.9320957,2019,10,me_harad,me_far_harad_region,fb0add,no
 4924,me_land_4883,Land 4883,land,1602,1154,0.3912088,0.5637518,959,1,me_gondor,me_belfalas_region,994256,no
 4925,me_land_4884,Land 4884,land,2543,1524,0.6210012,0.7445042,880,9,me_gondor,me_south_gondor_region,3779cf,no
@@ -5024,7 +5024,7 @@
 5022,me_land_4981,Land 4981,land,3313,807,0.8090354,0.3942355,981,9,me_mordor_and_rhun,me_rhun_region,c8b621,no
 5023,me_land_4982,Land 4982,land,2963,1211,0.7235653,0.5915975,479,8,me_mordor_and_rhun,me_mordor_region,66ed9a,no
 5024,me_land_4983,Land 4983,land,3273,496,0.7992674,0.2423058,1045,9,me_mordor_and_rhun,me_rhun_region,052513,no
-5025,me_land_4984,Land 4984,land,1978,622,0.4830281,0.3038593,534,1,me_eriador,me_enedwaith_region,a35c8c,no
+5025,me_land_4984,Land 4984,land,1978,622,0.4830281,0.3038593,534,1,me_eriador,me_eregion_region,a35c8c,no
 5026,me_land_4985,Land 4985,land,1573,1056,0.3841270,0.5158769,693,1,me_eriador,me_enedwaith_region,419405,no
 5027,me_land_4986,Land 4986,land,3095,1777,0.7557998,0.8680997,1021,10,me_mordor_and_rhun,me_khand_region,dfcb7e,no
 5028,me_land_4987,Land 4987,land,2269,1334,0.5540904,0.6516854,294,1,me_gondor,me_lebennin_region,7e02f7,no
@@ -5129,7 +5129,7 @@
 5127,me_land_5086,Land 5086,land,3124,427,0.7628816,0.2085979,1059,9,me_mordor_and_rhun,me_rhun_region,ad76c2,no
 5128,me_land_5087,Land 5087,land,2729,1053,0.6664225,0.5144113,386,9,me_mordor_and_rhun,me_mordor_region,4bae3b,no
 5129,me_land_5088,Land 5088,land,1386,554,0.3384615,0.2706400,388,1,me_eriador,me_shire_breeland_region,e9e5b4,no
-5130,me_land_5089,Land 5089,land,1993,680,0.4866911,0.3321935,467,1,me_rhovanion,me_anduin_vale_region,881d2d,no
+5130,me_land_5089,Land 5089,land,1993,680,0.4866911,0.3321935,467,1,me_eriador,me_eregion_region,881d2d,no
 5131,me_land_5090,Land 5090,land,2137,1253,0.5218559,0.6121153,470,1,me_gondor,me_belfalas_region,2654a6,no
 5132,me_land_5091,Land 5091,land,1728,820,0.4219780,0.4005862,397,1,me_eriador,me_enedwaith_region,c48c1f,no
 5133,me_land_5092,Land 5092,land,1613,664,0.3938950,0.3243771,380,1,me_eriador,me_enedwaith_region,62c398,no
@@ -5143,7 +5143,7 @@
 5141,me_land_5100,Land 5100,land,3411,293,0.8329670,0.1431363,646,1,me_mordor_and_rhun,me_rhun_region,547f60,no
 5142,me_land_5101,Land 5101,land,1476,1399,0.3604396,0.6834392,331,1,me_gondor,me_belfalas_region,f2b6d9,no
 5143,me_land_5102,Land 5102,land,1917,471,0.4681319,0.2300928,405,2,me_eriador,me_north_arnor_region,90ee52,no
-5144,me_land_5103,Land 5103,land,1756,640,0.4288156,0.3126527,412,1,me_eriador,me_enedwaith_region,2f25cb,no
+5144,me_land_5103,Land 5103,land,1756,640,0.4288156,0.3126527,412,1,me_eriador,me_eregion_region,2f25cb,no
 5145,me_land_5104,Land 5104,land,1493,314,0.3645910,0.1533952,306,1,me_eriador,me_north_arnor_region,cd5d44,no
 5146,me_land_5105,Land 5105,land,1606,1333,0.3921856,0.6511969,414,1,me_gondor,me_belfalas_region,6b94bd,no
 5147,me_land_5106,Land 5106,land,2961,904,0.7230769,0.4416219,489,9,me_mordor_and_rhun,me_rhun_region,09cc36,no
@@ -5228,13 +5228,13 @@
 5226,me_mountain_0027,Mountain 0027,mountain,1998,651,0.4879121,0.3180264,187,4,me_rhovanion,me_anduin_vale_region,dcea8d,no
 5227,me_mountain_0028,Mountain 0028,mountain,2046,659,0.4996337,0.3219345,49,4,me_rhovanion,me_anduin_vale_region,7b2206,no
 5228,me_mountain_0029,Mountain 0029,mountain,2036,667,0.4971917,0.3258427,43,4,me_rhovanion,me_anduin_vale_region,19597f,no
-5229,me_mountain_0030,Mountain 0030,mountain,1986,675,0.4849817,0.3297509,145,4,me_eriador,me_enedwaith_region,b790f8,no
+5229,me_mountain_0030,Mountain 0030,mountain,1986,675,0.4849817,0.3297509,145,4,me_eriador,me_eregion_region,b790f8,no
 5230,me_mountain_0031,Mountain 0031,mountain,2037,678,0.4974359,0.3312164,57,4,me_rhovanion,me_anduin_vale_region,55c871,no
-5231,me_mountain_0032,Mountain 0032,mountain,1970,687,0.4810745,0.3356131,20,4,me_eriador,me_enedwaith_region,f3ffea,no
+5231,me_mountain_0032,Mountain 0032,mountain,1970,687,0.4810745,0.3356131,20,4,me_eriador,me_eregion_region,f3ffea,no
 5232,me_mountain_0033,Mountain 0033,mountain,1998,692,0.4879121,0.3380557,72,4,me_rhovanion,me_anduin_vale_region,923763,no
 5233,me_mountain_0034,Mountain 0034,mountain,2049,695,0.5003663,0.3395213,35,4,me_rhovanion,me_anduin_vale_region,306edc,no
 5234,me_mountain_0035,Mountain 0035,mountain,2025,717,0.4945055,0.3502687,212,4,me_rhovanion,me_anduin_vale_region,cea655,no
-5235,me_mountain_0036,Mountain 0036,mountain,1961,726,0.4788767,0.3546654,105,4,me_eriador,me_enedwaith_region,6cddce,no
+5235,me_mountain_0036,Mountain 0036,mountain,1961,726,0.4788767,0.3546654,105,4,me_eriador,me_eregion_region,6cddce,no
 5236,me_mountain_0037,Mountain 0037,mountain,1984,791,0.4844933,0.3864191,10,4,me_eriador,me_enedwaith_region,0b1547,no
 5237,me_mountain_0038,Mountain 0038,mountain,1997,816,0.4876679,0.3986321,19,4,me_rhovanion,me_anduin_vale_region,a94cc0,no
 5238,me_mountain_0039,Mountain 0039,mountain,1905,818,0.4652015,0.3996092,218,4,me_eriador,me_enedwaith_region,478439,no
@@ -5489,7 +5489,7 @@
 5487,me_mountain_0288,Mountain 0288,mountain,1233,89,0.3010989,0.0434783,217,4,me_forodwaith,me_forochel_region,2b78ea,no
 5488,me_mountain_0289,Mountain 0289,mountain,2210,220,0.5396825,0.1074744,222,5,me_forodwaith,me_northern_wastes_region,c9b063,no
 5489,me_mountain_0290,Mountain 0290,mountain,1221,90,0.2981685,0.0439668,220,4,me_forodwaith,me_forochel_region,67e7dc,no
-5490,me_mountain_0291,Mountain 0291,mountain,1966,714,0.4800977,0.3488031,95,4,me_eriador,me_enedwaith_region,061f55,no
+5490,me_mountain_0291,Mountain 0291,mountain,1966,714,0.4800977,0.3488031,95,4,me_eriador,me_eregion_region,061f55,no
 5491,me_mountain_0292,Mountain 0292,mountain,1206,255,0.2945055,0.1245725,246,4,me_eriador,me_lindon_region,a456ce,no
 5492,me_mountain_0293,Mountain 0293,mountain,1227,621,0.2996337,0.3033708,304,4,me_eriador,me_lindon_region,428e47,no
 5493,me_mountain_0294,Mountain 0294,mountain,2106,357,0.5142857,0.1744016,160,4,me_rhovanion,me_anduin_vale_region,e0c5c0,no
@@ -5543,7 +5543,7 @@
 5541,me_mountain_0342,Mountain 0342,mountain,2051,323,0.5008547,0.1577919,195,4,me_rhovanion,me_anduin_vale_region,8b2c70,no
 5542,me_mountain_0343,Mountain 0343,mountain,1711,1172,0.4178266,0.5725452,57,4,me_gondor,me_belfalas_region,2963e9,no
 5543,me_mountain_0344,Mountain 0344,mountain,1845,117,0.4505495,0.0571568,89,4,me_forodwaith,me_angmar_region,c79b62,no
-5544,me_mountain_0345,Mountain 0345,mountain,1950,717,0.4761905,0.3502687,77,4,me_eriador,me_enedwaith_region,65d2db,no
+5544,me_mountain_0345,Mountain 0345,mountain,1950,717,0.4761905,0.3502687,77,4,me_eriador,me_eregion_region,65d2db,no
 5545,me_mountain_0346,Mountain 0346,mountain,1232,565,0.3008547,0.2760137,178,4,me_eriador,me_lindon_region,040a54,no
 5546,me_mountain_0347,Mountain 0347,mountain,1833,1144,0.4476190,0.5588666,221,4,me_eriador,me_enedwaith_region,a241cd,no
 5547,me_mountain_0348,Mountain 0348,mountain,1879,108,0.4588523,0.0527601,213,4,me_forodwaith,me_angmar_region,407946,no
@@ -5575,9 +5575,9 @@
 5573,me_mountain_0374,Mountain 0374,mountain,1928,106,0.4708181,0.0517831,237,4,me_forodwaith,me_angmar_region,521b90,no
 5574,me_mountain_0375,Mountain 0375,mountain,2023,222,0.4940171,0.1084514,400,4,me_forodwaith,me_northern_wastes_region,f05309,no
 5575,me_mountain_0376,Mountain 0376,mountain,1164,273,0.2842491,0.1333659,131,4,me_eriador,me_lindon_region,8e8a82,no
-5576,me_mountain_0377,Mountain 0377,mountain,1980,711,0.4835165,0.3473376,150,4,me_eriador,me_enedwaith_region,2cc1fb,no
+5576,me_mountain_0377,Mountain 0377,mountain,1980,711,0.4835165,0.3473376,150,4,me_eriador,me_eregion_region,2cc1fb,no
 5577,me_mountain_0378,Mountain 0378,mountain,1991,146,0.4862027,0.0713239,159,4,me_forodwaith,me_angmar_region,caf974,no
-5578,me_mountain_0379,Mountain 0379,mountain,1987,628,0.4852259,0.3067904,127,4,me_rhovanion,me_anduin_vale_region,6930ed,no
+5578,me_mountain_0379,Mountain 0379,mountain,1987,628,0.4852259,0.3067904,127,4,me_eriador,me_eregion_region,6930ed,no
 5579,me_mountain_0380,Mountain 0380,mountain,2356,211,0.5753358,0.1030777,185,4,me_forodwaith,me_northern_wastes_region,076866,no
 5580,me_mountain_0381,Mountain 0381,mountain,2046,409,0.4996337,0.1998046,181,4,me_eriador,me_north_arnor_region,a59fdf,no
 5581,me_mountain_0382,Mountain 0382,mountain,2326,1248,0.5680098,0.6096727,123,4,me_gondor,me_anorien_region,43d758,no
@@ -5805,7 +5805,7 @@
 5803,me_lake_0004,Lake 0004,lake,1528,467,0.3731380,0.2281387,26,7,me_eriador,me_shire_breeland_region,1629bf,no
 5804,me_lake_0005,Lake 0005,lake,2952,661,0.7208791,0.3229116,226,7,me_mordor_and_rhun,me_rhun_region,b46138,no
 5805,me_lake_0006,Lake 0006,lake,2033,674,0.4964591,0.3292623,19,7,me_rhovanion,me_anduin_vale_region,5298b1,no
-5806,me_lake_0007,Lake 0007,lake,1987,685,0.4852259,0.3346361,10,7,me_rhovanion,me_anduin_vale_region,f0d02a,no
+5806,me_lake_0007,Lake 0007,lake,1987,685,0.4852259,0.3346361,10,7,me_eriador,me_eregion_region,f0d02a,no
 5807,me_lake_0008,Lake 0008,lake,2387,1040,0.5829060,0.5080606,12,7,me_rhovanion,me_brown_lands_region,8f07a3,no
 5808,me_lake_0009,Lake 0009,lake,2264,1041,0.5528694,0.5085491,138,7,me_rhovanion,me_rohan_region,2d3f1c,no
 5809,me_lake_0010,Lake 0010,lake,2361,1044,0.5765568,0.5100147,17,7,me_rhovanion,me_brown_lands_region,cb7695,no

@@ -24,6 +24,10 @@ No milestone after M2 may start while the M2 gate remains unchecked.
   controls. Address one demonstrated mismatch at a time; each ownership change requires a
   precise source, canon rationale, exact control/contract, and topology proof. Keep
   uncertain land deliberately wild; never invent broad borders.
+  - [X] Complete the source-backed Eregion/Moria batch: restore Eregion as its own
+    geographic region north of the Glanduin and west of Moria, correct Warg Hill from an
+    inferred Moria extension to deliberate wilderness, then verify the complete generated
+    hierarchy, topology, and runtime once.
 - [ ] Audit all named locations and realm placement in the enforced theatres: Gap of
   Rohan; Lothlorien/Moria; Dale/Lonely Mountain; Mordor/Ithilien; represented East/South;
   and the Far Harad fringe. Correct only source-proven errors, including compact

@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3030,
-  "wild_locations": 2170,
+  "owned_locations": 3023,
+  "wild_locations": 2177,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -1707,9 +1707,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 24,
+      "locations": 22,
       "eligible_locations": 27,
-      "claim_fill_fraction": 0.888889,
+      "claim_fill_fraction": 0.814815,
       "forced_anchors": 1,
       "final_bbox": [
         0.4708181,
@@ -1720,19 +1720,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 24,
+        "largest_component": 22,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 24,
+            "size": 22,
             "forced_anchors": 1,
             "sample": [
+              "me_land_0032",
               "me_land_0263",
               "me_land_0352",
               "me_land_0888",
-              "me_land_0916",
-              "me_land_1132"
+              "me_land_0916"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1894,29 +1894,29 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 44,
+      "locations": 39,
       "eligible_locations": 103,
-      "claim_fill_fraction": 0.427184,
+      "claim_fill_fraction": 0.378641,
       "forced_anchors": 1,
       "final_bbox": [
-        0.44884,
+        0.4324786,
         0.4942613,
         0.2374206,
-        0.3199805
+        0.2931119
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 44,
+        "largest_component": 39,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 44,
+            "size": 39,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0032",
               "me_land_0062",
+              "me_land_0286",
               "me_land_0290",
               "me_land_0371",
               "me_land_0391"
@@ -2665,16 +2665,16 @@
     },
     "RAN": {
       "components": 1,
-      "largest_component": 44,
+      "largest_component": 39,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 44,
+          "size": 39,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0032",
             "me_land_0062",
+            "me_land_0286",
             "me_land_0290",
             "me_land_0371",
             "me_land_0391"
@@ -3280,19 +3280,19 @@
     },
     "MOA": {
       "components": 1,
-      "largest_component": 24,
+      "largest_component": 22,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 24,
+          "size": 22,
           "forced_anchors": 1,
           "sample": [
+            "me_land_0032",
             "me_land_0263",
             "me_land_0352",
             "me_land_0888",
-            "me_land_0916",
-            "me_land_1132"
+            "me_land_0916"
           ],
           "locations": [],
           "disposition": "primary_component"

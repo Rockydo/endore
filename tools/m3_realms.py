@@ -469,6 +469,17 @@ ROHAN_WHITE_MOUNTAIN_FRONTIER: tuple[tuple[float, float], ...] = (
     (0.578, 0.610),
 )
 
+# Geographic hierarchy witnesses for the source-bounded former Elven land.
+# They are not political owners: all three are deliberately wild at TA 3018.
+# The Redhorn Gate remains the contrasting Moria-side approach witness.
+EREGION_REGION_WITNESSES = frozenset({
+    "hollin_ridge",
+    "ost_in_edhil",
+    "warg_hill",
+})
+EREGION_REGION = "me_eregion_region"
+MORIA_SIDE_REGION_WITNESSES = frozenset({"redhorn_gate"})
+
 # The Fords lie south of Orthanc at the Gap and cannot be swallowed by Saruman's compact
 # ring-domain.  The positive owner may change with a later source-backed Rohan/Dunland
 # frontier revision, so the durable contract records only the canonically impossible
@@ -1133,6 +1144,7 @@ REGION_STYLE = {
     "me_brown_lands_region": "sindarin",
     "me_lindon_region": "sindarin",
     "me_north_arnor_region": "sindarin",
+    "me_eregion_region": "sindarin",
     "me_shire_breeland_region": "hobbit",
     "me_enedwaith_region": "westron",
 }
@@ -2649,6 +2661,28 @@ def check() -> list[str]:
             failures.append(
                 f"frontier landmark {ref} is owned by {actual_owner}, expected "
                 f"{required_owner}: {rationale}"
+            )
+    for ref in EREGION_REGION_WITNESSES:
+        location_key = state.ref_to_location.get(ref)
+        if location_key is None:
+            failures.append(f"Eregion hierarchy witness {ref} is unresolved")
+            continue
+        region = state.model.by_key[location_key].region
+        if region != EREGION_REGION:
+            failures.append(
+                f"Eregion hierarchy witness {ref} is in {region}, expected "
+                f"{EREGION_REGION}"
+            )
+    for ref in MORIA_SIDE_REGION_WITNESSES:
+        location_key = state.ref_to_location.get(ref)
+        if location_key is None:
+            failures.append(f"Moria-side hierarchy witness {ref} is unresolved")
+            continue
+        region = state.model.by_key[location_key].region
+        if region != "me_anduin_vale_region":
+            failures.append(
+                f"Moria-side hierarchy witness {ref} is in {region}, expected "
+                "me_anduin_vale_region"
             )
     for (ref, required_owner), source in FRONTIER_LANDMARK_CLAIM_EXCEPTIONS.items():
         contract = landmark_owner_contracts().get(ref)

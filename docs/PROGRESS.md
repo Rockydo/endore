@@ -2,6 +2,16 @@
 
 ## 2026-08-04
 
+- v133 restores Eregion (Hollin) as a conservative, source-bounded geographic region:
+  north of the Glanduin, west of Moria, with the eastern Doors of Durin approach
+  remaining on the Vales of Anduin side. Warg Hill is corrected from an inferred Moria
+  extension to deliberate wild Eregion; no anachronistic Eregion polity is invented.
+  Moria is now a 22-location single component, while the 38-realm world has 3,023
+  assigned and 2,981 deliberate wilderness locations. Full validation passed in 566.7
+  seconds (M2 world 471.3 seconds); paired live smoke passed in 203.4 seconds with zero
+  new mod-specific error lines, asserted on fingerprint
+  `43e55f5fbf240daf2bc040d318b641332eccaac639fa5e9131bd3ac3e13e88df`. See
+  `docs/m2/V133_WARG_HILL_EREGION_BOUNDARY.md`.
 - v132 adds four source-resolvable orientation witnesses without inventing political
   geography: Frecasburg and Sarn Gebir in Rohan, the Falls of Nimrodel in Lothlorien, and
   deliberately wild Cormallen in depopulated Ithilien. The direct ArdaCraft controls
