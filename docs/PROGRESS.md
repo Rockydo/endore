@@ -2083,3 +2083,32 @@
   or painted blue shoulder. Maximum-speed playback completes 45 seconds with zero recovery
   and the normal 1,486-byte log; the 40-second frame shows TA 3018.1.13 at 17:00. M2
   remains red pending owner acceptance of the overall map.
+
+## 2026-08-04 - v108 first source-exact distributary candidate
+
+- Audited the installed build's yellow index-2 vocabulary and graph structure. All 693
+  vanilla components are acyclic; 128 of 129 yellow markers sit one edge from a
+  degree-three split. Added matching generator contracts for a degree-two yellow branch
+  marker and zero cycle rank.
+- Rejected Arda Maps `line_river` 71 part 0 as a cyclic braid that touches Anduin at both
+  ends. Combined the exact points of parts 6 and 4 through their shared source junction to
+  form one acyclic Anduin-to-sea Ethir arm, without an invented connector.
+- The static candidate contains 16 source-to-water systems, 38 red junctions, one yellow
+  outgoing branch, and 55 genuine engine courses. Its 61,344 indexed pixels produce an
+  exact 981,504-pixel 4x material footprint; the promoted arm no longer contributes a
+  terrain-only blue proxy.
+- Rebuilt the complete map and material cache in 708.2 seconds. The cache contains
+  174,763 tiles, 45,053 unique material tiles, a 23.6 MB material payload, and zero Earth
+  decal layers. Full validation passes in 494.4 seconds, including the 415.8-second M2
+  world gate, on candidate fingerprint `f4193469621a29e6028b02f984f3b17d86f74329560c368921269d8f5ce9123a`.
+- Antiquitas initially owned the shared EU5 slot, so no ENDÓRË process disturbed it;
+  offline validation and source review continued under the cross-repository lease. Once
+  free, paired smoke passed in 203.8 seconds with zero new/mod-unique lines and the exact-
+  fingerprint assertion passed.
+- A fresh no-debug Observer entered the exact tree and captured the source/course-bound
+  Ost galenen pair under `docs/screens/20260804_v108_ethir/`. The maximum-close frame shows
+  the exact Y-shaped river split and sea-going arm as continuous engine splines over normal
+  terrain, without a broad or parallel blue material band. Maximum-speed playback reached
+  TA 3018.1.13 16:00 in 45 seconds with zero recovery and a normal 1,486-byte final log.
+  The v108 river mechanism is technically green; M2 remains red pending owner acceptance
+  of the overall map.

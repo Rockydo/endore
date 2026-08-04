@@ -8,7 +8,7 @@
     "world_span": 43007.0,
     "canvas_aspect": 2.0
   },
-  "projection_sha256": "9895b05a6a2c41d5ea541073436d79f0ccb4e7c99bdacb27e763709f2a6d3e9c",
+  "projection_sha256": "591a76700de1352533591d4c4750a56f58f3a215103c63d44ac44178d9ebb3e8",
   "feature_counts": {
     "mainland_vertices": 1251,
     "offshore_islands": 9,
@@ -28,7 +28,7 @@
     "source_climate_zones": 4,
     "source_climate_components": 86,
     "source_climate_vertices": 7592,
-    "river_control_vertices": 1735
+    "river_control_vertices": 1736
   },
   "drainage_theatres": {
     "northern_basins": {
@@ -81,8 +81,8 @@
         0.75
       ],
       "controls": 47,
-      "points": 574,
-      "length": 1.423007,
+      "points": 575,
+      "length": 1.431274,
       "minimum_controls": 46,
       "minimum_points": 565,
       "minimum_length": 1.42

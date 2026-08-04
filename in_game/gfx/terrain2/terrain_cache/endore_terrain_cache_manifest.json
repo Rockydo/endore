@@ -22,7 +22,7 @@
   "material_sources": {
     "in_game/gfx/terrain2/heightmap.png": "ebec3ed2ebef5c112bcafe738dab01922491f9a185278b47c709602af69f159b",
     "docs/world/control/biomes.png": "c041b21d3569e1552e3a754f04dee0d045134a5f8e72a2fd8549d8f1a569e7d3",
-    "docs/world/control/projection.json": "9895b05a6a2c41d5ea541073436d79f0ccb4e7c99bdacb27e763709f2a6d3e9c",
+    "docs/world/control/projection.json": "591a76700de1352533591d4c4750a56f58f3a215103c63d44ac44178d9ebb3e8",
     "in_game/gfx/terrain2/materials.txt": "5717d4bf7c02243e43e8cdb3e32bf035e74d1d981599e366874cf9c4f325562f"
   },
   "mip_layout": [
@@ -79,13 +79,13 @@
   ],
   "tile_count": 174763,
   "height_unique_tiles": 25246,
-  "material_unique_tiles": 45049,
+  "material_unique_tiles": 45053,
   "material_nonzero_fraction": 0.46650564670562744,
   "earth_decal_layers": 0,
   "material_preview": {
     "path": "docs/world/derived/terrain_material_preview.png",
-    "bytes": 48414,
-    "sha256": "0ec261dba912ecef9aa63e0176bedbb6a6ca04cdeca9bfed2c09ad859a769f6f"
+    "bytes": 48416,
+    "sha256": "84d75837e89be1ff7adc888b124fd5f309113e251bbb7e73f62c9e2b37f05992"
   },
   "outputs": {
     "heightmap.bin": {
@@ -113,12 +113,12 @@
       "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
     },
     "materials.bin": {
-      "bytes": 23604996,
-      "sha256": "4d92b44d68eb934a0e105509430fd11e9b80f17af19986ca310c91839e5ba1d3"
+      "bytes": 23607582,
+      "sha256": "cf733f5abf6b11f311c8b9d9c96c23111c5734da18a2f0ebeae78f046cc37ca7"
     },
     "materials.info": {
-      "bytes": 5189056,
-      "sha256": "086790b8966141da75ac31e89f8d832e8b97299e933a670bcdd769abf1d99510"
+      "bytes": 5189064,
+      "sha256": "d89727fdf512e2b122cfb9543da6f3e2661897b95583680933f010be82da9284"
     },
     "quadtree_nodes.bin": {
       "bytes": 67108880,
@@ -126,7 +126,7 @@
     },
     "checksum.json": {
       "bytes": 58,
-      "sha256": "5b84f68d6531b708c8f91bfdbfb89bb67eb0a6594b64b5b982e713b4f263d996"
+      "sha256": "1dd7764e23a785e3fdae439c1c407d659aeb3460b9cd07cc25ccaa496de8f208"
     }
   }
 }

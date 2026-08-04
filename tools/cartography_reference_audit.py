@@ -34,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "9895b05a6a2c41d5ea541073436d79f0ccb4e7c99bdacb27e763709f2a6d3e9c"
+    "591a76700de1352533591d4c4750a56f58f3a215103c63d44ac44178d9ebb3e8"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -434,7 +434,7 @@ def render_report() -> dict:
     terrain_only_rivers = [
         item for item in projection["rivers"] if item.get("terrain_only")
     ]
-    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 45:
+    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 44:
         raise ValueError("source tributary coverage changed without cartographic review")
     named_supplementary_count = sum(
         bool(item.get("label")) for item in terrain_only_rivers
@@ -459,7 +459,9 @@ def render_report() -> dict:
     independent_engine_rivers = [
         item
         for item in projection["rivers"]
-        if not item.get("terrain_only") and not item.get("joins")
+        if not item.get("terrain_only")
+        and not item.get("joins")
+        and not item.get("splits")
     ]
     if len(independent_engine_rivers) != 17:
         raise ValueError("parser-safe independent river coverage changed")
@@ -542,10 +544,13 @@ def render_report() -> dict:
             "source_unnamed_09_00": None,
             "source_unnamed_10_00": None,
             "source_unnamed_11_00": None,
+            "source_unnamed_71_04": "split:anduin",
         }.items()
     }
     actual_engine_supplementary = {
-        item["key"]: item.get("joins")
+        item["key"]: (
+            f"split:{item['splits']}" if item.get("splits") else item.get("joins")
+        )
         for item in projection["rivers"]
         if item["key"].startswith("source_") and not item.get("terrain_only")
     }
@@ -580,7 +585,7 @@ def render_report() -> dict:
         "named_branch": 1,
         "named_tributary": 12,
         "unnamed_branch": 5,
-        "unnamed_feeder": 26,
+        "unnamed_feeder": 25,
         "unnamed_trunk": 1,
     }
     actual_hydrology_classes = {

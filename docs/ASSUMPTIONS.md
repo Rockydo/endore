@@ -581,3 +581,13 @@ about Middle-earth.
 - Source controls 27/29 do terminate in source-backed minor Eriador ponds, but their first
   live candidate is rejected: at close zoom the ponds read as tiny rectangular material
   blocks and the two rivers exaggerate that defect. Their valley incision remains dry.
+
+## v108 Ethir distributary
+
+- Arda Maps `line_river` 71 parts 6 and 4 describe one physical southern arm of the Ethir
+  Anduin: their endpoints share the same internal delta junction, part 6 meets the Anduin,
+  and part 4 reaches the sea. Combining those exact points changes storage topology only;
+  it does not invent a course, mouth, name, or settlement.
+- The remaining Ethir and Mouths of Entwash source lines stay as dry physical drainage.
+  Their presence in the source does not justify an engine-water braid, cyclic component,
+  or cosmetic connection that vanilla's installed raster does not demonstrate.

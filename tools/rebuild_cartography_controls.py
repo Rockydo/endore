@@ -149,6 +149,14 @@ SUPPLEMENTARY_ENGINE_ROOTS = {
     "source_unnamed_11_00",
 }
 
+# Outgoing branches use vanilla's yellow marker immediately after the split.
+# Start with the one Ethir arm whose source path directly connects the Anduin
+# trunk to engine water; the remaining delta graph stays dry until each nested
+# split is represented without loops or cosmetic connectors.
+SUPPLEMENTARY_ENGINE_SPLITS = {
+    "source_unnamed_71_04": "anduin",
+}
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -1207,7 +1215,25 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
                 item["engine_raster"] = True
                 item["terrain_only"] = False
                 item["engine_root"] = True
+            elif key in SUPPLEMENTARY_ENGINE_SPLITS:
+                item["engine_raster"] = True
+                item["terrain_only"] = False
+                item["splits"] = SUPPLEMENTARY_ENGINE_SPLITS[key]
             controls.append(item)
+
+    # Arda parts 6 and 4 form one acyclic southern Ethir arm: part 6 runs from
+    # its internal junction to Anduin, while part 4 runs from sea to that same
+    # junction.  Preserve every source point and combine them parent-to-water;
+    # part 6 remains as its dry audit control, so no source evidence is lost.
+    controls_by_key = {item["key"]: item for item in controls}
+    ethir_inner = controls_by_key["source_unnamed_71_06"]
+    ethir_mouth = controls_by_key["source_unnamed_71_04"]
+    inner_points = list(reversed(ethir_inner["points"]))
+    mouth_points = list(reversed(ethir_mouth["points"]))
+    if math.dist(inner_points[-1], mouth_points[0]) > 0.0005:
+        raise ValueError("Ethir parts 6 and 4 lost their shared source junction")
+    ethir_mouth["points"] = inner_points + mouth_points[1:]
+    ethir_mouth["source"] = "Arda Maps line_river 71 parts 6+4"
     return controls
 
 

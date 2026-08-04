@@ -1,21 +1,24 @@
 # TODO
 
-## Immediate gate - v107 independent source-to-lake rivers
+## Immediate gate - v108 first source-exact distributary
 
-- v106 is validated, live-proven, and published as `d7a99bd`. Never restore painted river
+- v107 is validated, live-proven, and published as `c28b445`. Never restore painted river
   width: channel 6 remains the exact indexed footprint only.
-- The first six-root candidate loaded and played cleanly, but live review rejected its two
-  Eriador courses because their tiny receiving ponds render as rectangular blue blocks.
-  The pruned candidate keeps four independent Núrnen networks: 16 systems, 38 junctions,
-  and 54 genuine courses.
-- Material/cache regeneration is complete: 61,126 indexed source pixels, exact 978,016-
-  pixel 4x footprint, 45,049 unique material tiles, unchanged 6,004-location model.
-- TECHNICAL GATE GREEN on exact fingerprint `907a10ed...`: full validation passes in
-  514.5 seconds (M2 world 438.9 seconds), paired smoke passes in 201.6 seconds with zero
-  new/mod-unique lines, and the exact-fingerprint assertion passes. Source-bound close
-  views at Krimpzagh Camp and Blackgash Cleft show natural continuous courses; 45-second
-  maximum-speed playback completes with zero recovery and the normal 1,486-byte log.
-  Commit and push the coherent v107 batch.
+- The candidate adds one exact southern Ethir arm using vanilla's yellow outgoing-branch
+  grammar. The Anduin component remains an acyclic tree; the former part-0 braid is
+  rejected because it reconnects to the trunk.
+- Static regeneration and full validation are green: 16 systems, 38 red junctions, one
+  yellow distributary, 55 genuine courses, 61,344 indexed source pixels, an exact 981,504-
+  pixel material footprint, and 45,053 unique material tiles. Candidate fingerprint:
+  `f4193469621a29e6028b02f984f3b17d86f74329560c368921269d8f5ce9123a`.
+- TECHNICAL GATE GREEN: paired smoke passes in 203.8 seconds with zero new/mod-unique
+  lines; exact-fingerprint assertion passes. The fresh source/course-bound Ost galenen
+  close frame shows a continuous Y-shaped engine split and sea-going arm without parallel
+  blue terrain; 45-second maximum-speed playback reaches TA 3018.1.13 16:00 with zero
+  recovery and the normal 1,486-byte log. Commit and push the coherent v108 batch.
+- NEXT RIVER BATCH: test the second exact sea mouth (`line_river` 71 part 5) as a nested
+  yellow branch from the now-proven part-6/part-4 arm. Keep the source's other same-junction
+  delta side dry because promoting it would create degree four at the Anduin split.
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map

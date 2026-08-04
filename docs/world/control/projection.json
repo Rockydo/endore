@@ -138385,31 +138385,36 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
       "material_growth": 0.2,
       "points": [
         [
-          0.541633,
-          0.725361
+          0.549727,
+          0.71399
         ],
         [
-          0.542614,
-          0.72396
+          0.545572,
+          0.721136
         ],
         [
           0.544835,
           0.722072
         ],
         [
-          0.545572,
-          0.721136
+          0.542614,
+          0.72396
+        ],
+        [
+          0.541633,
+          0.725361
         ]
       ],
-      "source": "Arda Maps line_river 71 part 4"
+      "source": "Arda Maps line_river 71 parts 6+4",
+      "splits": "anduin"
     },
     {
       "key": "source_unnamed_71_05",

@@ -1854,3 +1854,24 @@ The first candidate also promoted Eriador source controls 27/29. Reject both aft
 Hobbiton close view shows their receiving ponds as conspicuous rectangular water blocks.
 Preserve their source-backed dry valleys; do not accept a valid graph whose receiving
 surface visibly fails the map-quality bar.
+
+## 2026-08-04 - Encode the first Ethir arm as a vanilla outgoing branch
+
+Implement distributaries as acyclic river-tree branches with a yellow index-2 marker on
+the first outgoing pixel beside the degree-three split. Reject the tempting Arda Maps
+part-0 braid because it touches the Anduin twice and would create a cycle, a structure not
+present in any of the 693 installed vanilla river components.
+
+Use the exact composite of `line_river` 71 parts 6 and 4 for the first southern Ethir
+arm: part 6 connects Anduin to the source's internal delta junction and part 4 continues
+from that junction to engine water. Preserve part 6 as an independent dry source audit
+control, but remove part 4 from terrain-only water presentation. Do not promote the other
+Ethir or Mouths of Entwash arms until each can be serialized as a source-exact acyclic
+tree without invented connectors.
+
+Require zero graph cycles, exactly one green source per connected system, a degree-two
+yellow marker adjacent to exactly one degree-three split, a real engine-water mouth, an
+exact raster-derived material footprint, full validation, paired smoke, a bound Ethir
+close view, and fresh Observer playback before accepting the mechanism. The v108 evidence
+passes every gate; accept the mechanism and this first arm. Treat the second exact mouth
+at the internal part-6 junction as the next bounded candidate, not as part of this proof.

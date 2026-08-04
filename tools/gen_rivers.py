@@ -493,8 +493,14 @@ def validate_network_raster(result: np.ndarray) -> None:
         (int(x), int(y)): int(result[y, x])
         for y, x in zip(*np.where(~np.isin(result, (254, 255))), strict=True)
     }
+    degrees = {
+        current: sum(
+            neighbour in river_pixels for neighbour in orthogonal_neighbours(current)
+        )
+        for current in river_pixels
+    }
     for current, value in river_pixels.items():
-        degree = sum(neighbour in river_pixels for neighbour in orthogonal_neighbours(current))
+        degree = degrees[current]
         maximum = 3 if value in {1, 2, 4, 5, 11, 15} else 2
         if degree > maximum:
             raise ValueError(f"river pixel {current} index {value} has degree {degree}")
@@ -502,6 +508,18 @@ def validate_network_raster(result: np.ndarray) -> None:
             raise ValueError(f"river source {current} has degree {degree}, expected 1")
         if value == 1 and degree != 2:
             raise ValueError(f"river confluence {current} has degree {degree}, expected 2")
+        if value == 2 and degree != 2:
+            raise ValueError(f"river distributary {current} has degree {degree}, expected 2")
+        if value == 2:
+            adjacent_splits = sum(
+                degrees.get(neighbour) == 3
+                for neighbour in orthogonal_neighbours(current)
+            )
+            if adjacent_splits != 1:
+                raise ValueError(
+                    f"river marker {current} index {value} has "
+                    f"{adjacent_splits} adjacent degree-three nodes, expected 1"
+                )
 
     unseen = set(river_pixels)
     while unseen:
@@ -519,6 +537,12 @@ def validate_network_raster(result: np.ndarray) -> None:
         if sources != 1:
             raise ValueError(
                 f"river component at {seed} has {sources} green sources, expected 1"
+            )
+        edge_count = sum(degrees[pixel] for pixel in component) // 2
+        if edge_count != len(component) - 1:
+            raise ValueError(
+                f"river component at {seed} has cycle rank "
+                f"{edge_count - len(component) + 1}, expected 0"
             )
         if not any(
             0 <= neighbour_y < WORLD_H
@@ -603,7 +627,10 @@ def render() -> Image.Image:
     roots = [
         key
         for key, river in rivers.items()
-        if key in paths and not river.get("joins") and key not in COMPOSITE_MEMBERS
+        if key in paths
+        and not river.get("joins")
+        and not river.get("splits")
+        and key not in COMPOSITE_MEMBERS
     ]
     for key in roots:
         main_path = main_river_path(key, rivers, paths)
@@ -672,6 +699,57 @@ def render() -> Image.Image:
         if not progressed:
             unresolved = ", ".join(sorted(pending))
             raise ValueError(f"river parent cycle or missing engine parent: {unresolved}")
+
+    # Vanilla outgoing branches place yellow on the first branch pixel beside
+    # the degree-three split.  Reuse the proven source-to-parent router in the
+    # source direction, then reverse and mouth-clip the result for downstream
+    # drawing.  No additional source marker is created.
+    for key in sorted(
+        key for key, river in rivers.items() if key in paths and river.get("splits")
+    ):
+        river = rivers[key]
+        parent_key = PARENT_ALIASES.get(river["splits"], river["splits"])
+        parent_path = drawn_paths.get(parent_key)
+        if parent_path is None:
+            raise ValueError(f"river distributary {key} has missing parent {parent_key}")
+        parent = set(parent_path)
+        source_to_parent = list(paths[key])
+        first_water = endpoint_reaches_water(source_to_parent[0], water)
+        last_water = endpoint_reaches_water(source_to_parent[-1], water)
+        if first_water != last_water:
+            if last_water:
+                source_to_parent.reverse()
+        else:
+            first_distance = min(
+                abs(source_to_parent[0][0] - x) + abs(source_to_parent[0][1] - y)
+                for x, y in parent
+            )
+            last_distance = min(
+                abs(source_to_parent[-1][0] - x) + abs(source_to_parent[-1][1] - y)
+                for x, y in parent
+            )
+            if first_distance < last_distance:
+                source_to_parent.reverse()
+        # A mapped delta arm may share its terminal water continuation with
+        # the main mouth.  Water pixels are invisible river geometry and would
+        # make the arm touch its parent at both ends.  Trim only that leading
+        # water run; the first retained land pixel remains orthogonally against
+        # the exact source water and is validated by clip_main_to_mouth below.
+        while (
+            len(source_to_parent) > 2
+            and bool(water[source_to_parent[0][1], source_to_parent[0][0]])
+        ):
+            source_to_parent.pop(0)
+        branch = route_to_parent(key, source_to_parent, parent, occupied)
+        branch.reverse()
+        branch = clip_main_to_mouth(key, branch, water)
+        for index, (x, y) in enumerate(branch):
+            progress = index / max(1, len(branch) - 1)
+            result[y, x] = flow_palette_index(river, progress)
+            occupied.add((x, y))
+        split_x, split_y = branch[0]
+        result[split_y, split_x] = 2
+        drawn_paths[key] = branch
 
     validate_network_raster(result)
     output = Image.fromarray(result, "P")

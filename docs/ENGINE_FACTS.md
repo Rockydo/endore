@@ -471,3 +471,15 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   from a degree-three confluence. Yellow is therefore an outgoing branch marker adjacent
   to the split, not the split pixel itself; a future Ethir/Entwash implementation must
   serialize that exact grammar rather than substituting a red incoming endpoint.
+- Every installed build-24187685 river component is acyclic: 693 components have cycle
+  rank zero. A delta arm must therefore be represented as an outgoing tree branch from a
+  trunk, not as a braid that reconnects to the same trunk. The ENDÓRË raster validator now
+  enforces the same zero-cycle invariant for every generated component.
+- The v108 static candidate proves one source-exact outgoing branch using palette index 2.
+  Arda Maps `line_river` 71 parts 6 and 4 form an acyclic Anduin-to-sea arm through their
+  shared source junction; the first branch pixel beside the degree-three Anduin split is
+  yellow. The complete raster has 16 green sources, 38 red confluences, one yellow
+  distributary, 55 genuine courses, and 61,344 indexed pixels. Build 24187685 live-loads
+  that graph: a bound maximum-close Ost galenen view shows a continuous Y-shaped engine
+  spline reaching the sea with no parallel material band. The exact fingerprint completes
+  45 seconds of maximum-speed Observer play with zero recovery and a normal 1,486-byte log.
