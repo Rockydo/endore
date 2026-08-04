@@ -154,7 +154,7 @@ me_land_0110,land,me_mirkwood_region,WILD,wild_unclaimed
 me_land_0111,land,me_ithilien_region,WILD,wild_ithilien
 me_land_0112,land,me_mordor_region,MOR,owned
 me_land_0113,land,me_brown_lands_region,WILD,wild_unclaimed
-me_land_0114,land,me_ithilien_region,WILD,wild_ithilien
+me_land_0114,land,me_ithilien_region,WILD,wild_reviewed_frontier: empty-ithilien: Cormallen lies in Ithilien
 me_land_0115,land,me_enedwaith_region,WILD,wild_unclaimed
 me_land_0116,land,me_enedwaith_region,WILD,wild_unclaimed
 me_land_0117,land,me_forochel_region,LOS,owned

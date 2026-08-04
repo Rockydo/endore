@@ -2,6 +2,17 @@
 
 ## 2026-08-04
 
+- v132 adds four source-resolvable orientation witnesses without inventing political
+  geography: Frecasburg and Sarn Gebir in Rohan, the Falls of Nimrodel in Lothlorien, and
+  deliberately wild Cormallen in depopulated Ithilien. The direct ArdaCraft controls
+  resolve to nearby cells already on their canon-correct political side, preserving 38
+  realms with 3,030 assigned and 2,974 deliberate wild locations. The source audit now
+  protects all seven direct Ardacraft point controls, including Bree-land. Final full
+  validation passed in 541.8 seconds (M2 world 457.1 seconds); paired real-game smoke
+  passed in 204.1 seconds with zero new
+  ENDORE-unique error-log lines, asserted on fingerprint
+  `ff2e0a0876bacdd473ed97af874f9b60e90b23a1f73f3652eabaddd400a5e6da`. See
+  `docs/m2/V132_SOURCE_MARKER_ORIENTATION.md`.
 - v131 corrects the source-pinned eastern Bree-land villages. Archet, Combe, and Staddle
   were incorrectly named and owned as wild North Arnor cells despite *The Lord of the
   Rings*, Book I, Chapter 9 explicitly naming them as Bree-land's companion villages.

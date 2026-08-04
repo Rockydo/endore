@@ -53,6 +53,7 @@ development = {
 	linhir = 4
 	me_bree = 4
 	me_land_0260 = 4
+	me_land_0426 = 4
 	me_land_0431 = 4
 	me_land_0679 = 4
 	me_land_0686 = 3

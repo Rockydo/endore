@@ -25,6 +25,7 @@ locations = {
 	linhir = { rank = town town_setup = me_m5_town }
 	me_bree = { rank = town town_setup = me_m5_town }
 	me_land_0260 = { rank = town town_setup = me_m5_town_port }
+	me_land_0426 = { rank = town town_setup = me_m5_fortress }
 	me_land_0431 = { rank = town town_setup = me_m5_fortress }
 	me_land_0679 = { rank = town town_setup = me_m5_fortress }
 	me_land_0686 = { rank = town town_setup = me_m5_refuge }

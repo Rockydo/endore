@@ -154,7 +154,7 @@ me_land_0110,WILD,0.5938950,0.3067904,me_mirkwood_region,1,,no,deliberately uncl
 me_land_0111,WILD,0.6053724,0.6624328,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
 me_land_0112,MOR,0.6312576,0.5329751,me_mordor_region,9,0.0479369,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_0113,WILD,0.6439560,0.4948705,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_0114,WILD,0.5926740,0.5872008,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
+me_land_0114,WILD,0.5926740,0.5872008,me_ithilien_region,1,,no,empty-ithilien: Cormallen lies in Ithilien,accepted_required_frontier_owner
 me_land_0115,WILD,0.3792430,0.3234001,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0116,WILD,0.3870574,0.3238886,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0117,LOS,0.2102564,0.0644846,me_forochel_region,1,0.2632490,no,Lossoth settlements around the Icebay,accepted_source_side_envelope
@@ -466,7 +466,7 @@ me_land_0422,WILD,0.8400488,0.5227162,me_mordor_region,9,,no,deliberately unclai
 me_land_0423,UMB,0.4859585,0.9579873,me_umbar_region,10,0.0523682,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_0424,LOR,0.5260073,0.3361016,me_anduin_vale_region,1,0.0240986,no,Arda Maps Golden Wood / Naith physical polygon; Naith between Misty foothills and Anduin; Lothlórien's Naith east of the Misty crest and west of Anduin,accepted_source_zone_overlap
 me_land_0425,GON,0.5340659,0.6336102,me_lebennin_region,1,0.0909829,no,gondor-crossing: Ethring is a named Gondorian crossing on the approaches to Pelargir.,accepted_required_frontier_owner
-me_land_0426,ROH,0.4615385,0.5407914,me_rohan_region,1,0.0742786,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
+me_land_0426,ROH,0.4615385,0.5407914,me_rohan_region,1,0.0742786,no,rohan-fastness: Frecasburg is a named Rohirric stronghold in the Mark's western theatre.,accepted_required_frontier_owner
 me_land_0427,WILD,0.5587302,0.1367855,me_grey_mountains_region,3,,no,deliberately unclaimed,wild_unclaimed
 me_land_0428,WILD,0.5091575,0.3981436,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0429,WILD,0.7216117,0.7059111,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -1041,7 +1041,7 @@ me_land_0997,WILD,0.4774115,0.2340010,me_north_arnor_region,1,,no,deliberately u
 me_land_0998,SHI,0.3357753,0.2638007,me_shire_breeland_region,1,0.0404424,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
 me_land_0999,WILD,0.6126984,0.6673180,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
 me_land_1000,KHA,0.7196581,0.7708842,me_khand_region,9,0.0781073,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
-me_land_1001,ROH,0.5536020,0.4987787,me_rohan_region,1,0.1167834,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
+me_land_1001,ROH,0.5536020,0.4987787,me_rohan_region,1,0.1167834,no,rohan-rapid: Sarn Gebir lies on the Rohirric bank of the upper Anduin approach.,accepted_required_frontier_owner
 me_land_1002,WILD,0.4351648,0.5554470,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1003,RH3,0.8322344,0.1612115,me_rhun_region,1,0.0458614,no,northeastern Rhûn confederation beyond the Iron Hills,accepted_frontier_polygon
 me_land_1004,BLU,0.3015873,0.1866146,me_lindon_region,1,0.0219161,no,Surviving Ered Luin halls,accepted_source_side_envelope
@@ -1608,7 +1608,7 @@ me_land_1564,WILD,0.7201465,0.5891549,me_mordor_region,8,,no,deliberately unclai
 me_land_1565,ROH,0.5409035,0.5329751,me_rohan_region,1,0.0846612,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_1566,WILD,0.4515263,0.5471422,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1567,WILD,0.7658120,0.6814851,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_1568,LOR,0.5037851,0.3531998,me_anduin_vale_region,3,0.0313258,no,Arda Maps Golden Wood / Naith physical polygon; Naith between Misty foothills and Anduin; Lothlórien's Naith east of the Misty crest and west of Anduin,accepted_source_zone_overlap
+me_land_1568,LOR,0.5037851,0.3531998,me_anduin_vale_region,3,0.0313258,no,lorien-waterfall: The Falls of Nimrodel are a named feature within LothlÃ³rien.,accepted_required_frontier_owner
 me_land_1569,HFA,0.5782662,0.9574988,me_far_harad_region,10,0.0136975,no,represented northern fringe of Far Harad,accepted_frontier_polygon
 me_land_1570,WILD,0.3943834,0.3873962,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
 me_land_1571,GUN,0.5140415,0.1304348,me_grey_mountains_region,1,0.0364460,no,Gundabad and the northern mountain junction,accepted_source_side_envelope

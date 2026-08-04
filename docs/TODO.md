@@ -1,75 +1,73 @@
-# ENDÓRË backlog
+# ENDORE backlog
 
-This is the live, authoritative backlog—not a changelog. `docs/PROGRESS.md` records
-completed work and `docs/m2/` holds technical evidence. An unchecked task means work
-continues; no milestone after M2 may begin while the M2 gate is unchecked.
+This is the authoritative forward backlog, not a changelog. Every bullet uses `[ ]` or
+`[X]`. Work always starts with the first unblocked unchecked task. Completed evidence
+belongs in `docs/PROGRESS.md` and `docs/m*/`; do not turn this file into a revision log.
+No milestone after M2 may start while the M2 gate remains unchecked.
 
-## Operating rules — apply to every unchecked task
+## Always in force
 
-- [ ] Read `docs/ENDORE_MASTER_PLAN.md`, `AGENTS.md`, the ANTIQVITAS reference plan, and
-  `docs/ENGINE_FACTS.md` at every session start; follow their precedence rules.
-- [ ] Keep all work on `G:\`; never edit the installed game. Before each game-visible
-  commit, pass `gmake validate`, acquire the shared EU5 lease without contention, pass
-  `gmake smoke`, assert the exact fingerprint, commit a coherent batch, and push it.
-- [ ] Keep this file, `PROGRESS.md`, `ASSUMPTIONS.md`, `DECISIONS.md`, and `BLOCKERS.md`
-  current. Record every canon judgement and source limitation; move completed history out
-  of this backlog.
+- [ ] At each session start, read the master plan, both `AGENTS.md` files, the ANTIQVITAS
+  master plan, and `docs/ENGINE_FACTS.md`; then read this file and take the first
+  unblocked task.
+- [ ] Keep `TODO.md`, `PROGRESS.md`, `DECISIONS.md`, `ASSUMPTIONS.md`, and `BLOCKERS.md`
+  current. Record canon judgements and source limitations when they are made.
+- [ ] Before every commit, pass `gmake validate`. For every game-visible commit, acquire
+  the shared EU5 lease without waiting, pass `gmake smoke`, assert the exact fingerprint,
+  commit one coherent green batch, and push it. A busy lease defers only that runtime gate.
 
-## Current priority: M2 — the Map v1 gate
+## M2 - Map v1 (current hard gate)
 
-- [X] Prepare the v130 source-pinned landmark/topology batch: the final 541.0-second
-  validation and retained green smoke assertion cover the complete generated dependency
-  chain. Evidence: `docs/m2/V130_SOURCE_PINNED_LANDMARK_TOPOLOGY.md`.
-- [ ] Continue the source-led political fidelity audit, one demonstrable mismatch at a
-  time, against the owner-approved Arda Maps Third Age and ArdaCraft controls. Do not
-  invent broad borders: uncertain cells remain wild; every changed owner needs a precise
-  source, a canon rationale, an exact control/contract, and topology validation.
-  - [X] Restore the source-pinned Archet, Combe, and Staddle cells to contiguous
-    Bree-land; see `docs/m2/V131_BREELAND_FOUR_VILLAGES.md`.
-- [ ] Recheck every named location and realm position in the six enforced theatres:
-  Gap of Rohan; Lothlórien/Moria; Dale/Lonely Mountain; Mordor/Ithilien; represented
-  East/South; and the Far Harad fringe. Correct only source-proven defects, including
-  compact sub-realms where TA 3018 control warrants one.
-- [ ] Preserve and improve the physical map only for a specific source-proven defect:
-  natural coastlines and inland waters; jagged mountain axes and isolated Erebor; dense
-  source-shaped forests (including birch Lothlórien and Mirkwood); complete lore-backed
-  drainage; and close-zoom terrain/material/vegetation visibility. No vanilla-Earth
-  terrain, decorative painted rivers, or generic placeholder geography is acceptable.
-- [ ] Maintain the native-river contract: `map_data/rivers.png` is the only water-width
-  authority; never paint blue terrain shoulders beside thin splines. Extend engine rivers
-  only with the installed vanilla raster grammar, an exact source course, and live proof;
-  retain non-engine drainage as dry source-shaped valleys rather than misrepresenting it.
-- [ ] Perform the M2 milestone verification only after the source audits above are clean:
-  actual-game map-screen screenshots and one in-game test covering the recognizable full
-  Middle-earth extent, close terrain, forests, mountains, major rivers, and political
-  placement. M2 stays unchecked until that evidence and the owner-fidelity gate are green.
+- [X] Publish the v132 source-marker orientation batch with its green paired real-game
+  smoke assertion and final validation. Evidence: `docs/m2/V132_SOURCE_MARKER_ORIENTATION.md`.
+- [ ] Continue the political fidelity audit from direct Arda Maps Third Age and ArdaCraft
+  controls. Address one demonstrated mismatch at a time; each ownership change requires a
+  precise source, canon rationale, exact control/contract, and topology proof. Keep
+  uncertain land deliberately wild; never invent broad borders.
+- [ ] Audit all named locations and realm placement in the enforced theatres: Gap of
+  Rohan; Lothlorien/Moria; Dale/Lonely Mountain; Mordor/Ithilien; represented East/South;
+  and the Far Harad fringe. Correct only source-proven errors, including compact
+  sub-realms where TA 3018 control actually warrants them.
+- [ ] Correct physical geography only when a specific source-backed defect is identified:
+  coasts and inland waters; jagged range axes and isolated Erebor; dense shaped forests
+  including birch Lothlorien and Mirkwood; native rivers and tributaries; and close-zoom
+  terrain, material, vegetation, and relief visibility. No vanilla-Earth residue,
+  placeholder geography, or decorative painted water is acceptable.
+- [ ] Preserve the native-river contract: `in_game/map_data/rivers.png` is the sole water
+  and width authority. Add an engine river only with the installed vanilla raster grammar,
+  a source-exact course, and live proof. Never simulate river width with blue terrain;
+  retain unsupported drainage as dry source-shaped valleys.
+- [ ] Run the M2 acceptance gate only after the audits above are clean: actual-game
+  screenshots and an in-game test must prove recognizable full Middle-earth extent,
+  close terrain, forest density, mountains, major rivers, and political placement. Keep
+  M2 unchecked until the owner-fidelity review and all required evidence are green.
 
-## Completed foundations
+## Completed gates
 
-- [X] M0 minimum bootstrap: repository, remote, ported ANTIQVITAS toolchain, isolated
-  user directory, shared EU5 lease, vanilla baseline, and empty-mod smoke.
-- [X] M1 Proof of Arda: a custom Middle-earth-shaped world loads in actual EU5 at
-  TA 3018.1.1, with the map no longer relying on vanilla Earth.
+- [X] M0 minimum bootstrap: repository, GitHub remote, ported ANTIQVITAS toolchain,
+  isolated user data, shared EU5 lease, vanilla baseline, and empty-mod smoke.
+- [X] M1 Proof of Arda: a custom Middle-earth-shaped world loads in EU5 at TA 3018.1.1
+  without reliance on vanilla Earth.
 
-## Blocked until M2 is accepted
+## Locked until M2 is accepted
 
-- [ ] M3 realms: finalize the playable realm roster, ownership, named locations, ruins,
-  and first-pass heraldry only after M2 is green.
-- [ ] M4 peoples and faiths: finalize cultures, languages, names, faiths, and templates
-  only after M2 is green.
-- [ ] M5 census: finalize populations, markets, roads, ranks, buildings, and armies; run
-  the required five-year economy soak only after M2 is green.
-- [ ] M6 power and people: governments, laws, estates, diplomacy, international bodies,
+- [ ] M3 Realms: finalize the playable realm roster, ownership, named locations, ruins,
+  and first-pass heraldry; prove every location is assigned or deliberately wild.
+- [ ] M4 Peoples and faiths: cultures, languages, name pools, faiths, templates, and
+  complete localization.
+- [ ] M5 Census: populations, markets, roads, ranks, buildings, armies, and the required
+  five-year economy soak.
+- [ ] M6 Power and people: governments, laws, estates, diplomacy, international bodies,
   characters, and traits.
-- [ ] M7 military: setting-appropriate forces, forts, navies, balance, and a verified
+- [ ] M7 Military: setting-appropriate units, forts, navies, balance, and a verified
   gunpowder-free ten-year soak.
-- [ ] M8 knowledge: Middle-earth ages, advances, and institution replacements.
-- [ ] M9 economy finish: goods, production, markets, buildings, prices, and a 25-year
+- [ ] M8 Knowledge: Middle-earth ages, advances, and institution replacements.
+- [ ] M9 Economy finish: goods, production, markets, buildings, prices, and a 25-year
   no-collapse soak.
-- [ ] M10 narrative: War of the Ring situation, Ring quest, Saruman arc, set pieces,
-  missions, flavor, and in-game tests.
-- [ ] M11 art and language: bespoke 2D art generated four-up with exact vanilla EU5 asset
-  references and Peter Jackson trilogy art-direction references; terminology, localization,
-  palette review, and zero placeholders/forbidden terms. Do not add audio.
-- [ ] M12 hardening and release: performance, canon-plausibility runs, soak to TA 3200,
-  issue triage, v0.1.0 tag, GitHub release, and the full definition of done.
+- [ ] M10 Narrative: War of the Ring, Ring quest, Saruman arc, set pieces, missions,
+  flavor, and in-game tests.
+- [ ] M11 Art and language: bespoke 2D art generated four-up using exact vanilla EU5
+  asset references and Peter Jackson trilogy art-direction references; terminology,
+  localization, palette review, and zero placeholders. Do not add audio.
+- [ ] M12 Hardening and release: performance, canon-plausibility runs, soak to TA 3200,
+  issue triage, v0.1.0 tag, GitHub release, and the complete definition of done.

@@ -154,7 +154,7 @@ me_land_0110,Oakbank,land,me_mirkwood_region,WILD,wilderness,† M3 regional lex
 me_land_0111,Dol annonath,land,me_ithilien_region,WILD,wilderness,† M3 regional lexicon
 me_land_0112,Dushburz,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_0113,Eithel annonath,land,me_brown_lands_region,WILD,wilderness,† M3 regional lexicon
-me_land_0114,Emyn annonath,land,me_ithilien_region,WILD,wilderness,† M3 regional lexicon
+me_land_0114,Cormallen,land,me_ithilien_region,WILD,landmark,"LOTR, Book VI, Ch. 5"
 me_land_0115,Southbank,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_0116,Stonebank,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_0117,Driftcamp,land,me_forochel_region,LOS,place,† M3 regional lexicon
@@ -466,7 +466,7 @@ me_land_0422,Burzgash,land,me_mordor_region,WILD,wilderness,† M3 regional lexi
 me_land_0423,Azran,land,me_umbar_region,UMB,place,† M3 regional lexicon
 me_land_0424,Minas galenath,land,me_anduin_vale_region,LOR,place,† M3 regional lexicon
 me_land_0425,Ethring,land,me_lebennin_region,GON,landmark,"LOTR, Book V, Ch. 9"
-me_land_0426,Eorlburna,land,me_rohan_region,ROH,place,† M3 regional lexicon
+me_land_0426,Frecasburg,land,me_rohan_region,ROH,fortress,"Unfinished Tales, Cirion and Eorl"
 me_land_0427,Sharabad,land,me_grey_mountains_region,WILD,wilderness,† M3 regional lexicon
 me_land_0428,Oakbridge,land,me_anduin_vale_region,WILD,wilderness,† M3 regional lexicon
 me_land_0429,Dushgash,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
@@ -1041,7 +1041,7 @@ me_land_0997,Ost borndor,land,me_north_arnor_region,WILD,wilderness,† M3 regio
 me_land_0998,Fernbottom,land,me_shire_breeland_region,SHI,place,† M3 regional lexicon
 me_land_0999,Taur borndor,land,me_ithilien_region,WILD,wilderness,† M3 regional lexicon
 me_land_1000,Skarnar,land,me_khand_region,KHA,place,† M3 regional lexicon
-me_land_1001,Beorfeld,land,me_rohan_region,ROH,place,† M3 regional lexicon
+me_land_1001,Sarn Gebir,land,me_rohan_region,ROH,landmark,"LOTR, Book II, Ch. 9"
 me_land_1002,Greyford,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_1003,Sagur,land,me_rhun_region,RH3,place,† M3 regional lexicon
 me_land_1004,Dumbizar,land,me_lindon_region,BLU,place,† M3 regional lexicon
@@ -1608,7 +1608,7 @@ me_land_1564,Grishburz Camp,land,me_mordor_region,WILD,wilderness,† M3 regiona
 me_land_1565,Folcfold,land,me_rohan_region,ROH,place,† M3 regional lexicon
 me_land_1566,Bramblemere,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_1567,Krimpburz Camp,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
-me_land_1568,Amon annondûr,land,me_anduin_vale_region,LOR,place,† M3 regional lexicon
+me_land_1568,Falls of Nimrodel,land,me_anduin_vale_region,LOR,landmark,"LOTR, Book II, Ch. 6"
 me_land_1569,Farabad Gate,land,me_far_harad_region,HFA,place,† M3 regional lexicon
 me_land_1570,Bucklandmere,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_1571,Lugburz Camp,land,me_grey_mountains_region,GUN,place,† M3 regional lexicon

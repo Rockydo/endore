@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-08-04 - Add only source-resolvable regional orientation markers
+
+Lock Frecasburg, Sarn Gebir, the Falls of Nimrodel, and Cormallen to direct Ardacraft
+markers after confirming that each has a nearby unreserved generated land cell already on
+its correct TA 3018 political side. Keep Parth Galen and Dimrill Dale as aliases: their
+first available cells are more than 0.011 normalized units away after existing canonical
+landmarks reserve the immediate geography. This improves readable precision without
+displacing an established feature or fabricating a border.
+
 ## 2026-08-04 - Restore the three eastern villages to Bree-land
 
 Archet, Combe, and Staddle are the three explicitly named companion villages of Bree in
