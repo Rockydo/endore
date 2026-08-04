@@ -1,46 +1,46 @@
 location,realm,normalized_x,normalized_y,region,biome_id,distance_to_capital,forced,contract,verdict
-mithlond,LIN,0.3091575,0.2261847,me_lindon_region,1,0.0000010,yes,Lindon west of the Blue Mountains,accepted_forced_anchor
-forlond,LIN,0.2656899,0.2203224,me_lindon_region,1,0.0871337,yes,Lindon west of the Blue Mountains,accepted_forced_anchor
-harlond_lindon,LIN,0.2830281,0.2686859,me_lindon_region,1,0.0673603,yes,Lindon west of the Blue Mountains,accepted_forced_anchor
+mithlond,LIN,0.3091575,0.2261847,me_lindon_region,1,0.0000010,yes,Grey Havens is an active city of Lindon at TA 3018,accepted_required_frontier_owner
+forlond,LIN,0.2656899,0.2203224,me_lindon_region,1,0.0871337,yes,Forlond is an active town of Lindon at TA 3018,accepted_required_frontier_owner
+harlond_lindon,LIN,0.2830281,0.2686859,me_lindon_region,1,0.0673603,yes,Harlond is an active town of Lindon at TA 3018,accepted_required_frontier_owner
 annuminas,WILD,0.3599512,0.1787982,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 fornost,WILD,0.3929182,0.1758671,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-carn_dum,ANG,0.4488400,0.0635076,me_angmar_region,5,0.0815097,yes,compact Mount Gram remnant with Carn Dum retained only as a forced fastness,accepted_forced_anchor
-hobbiton,SHI,0.3592186,0.2217880,me_shire_breeland_region,1,0.0269933,yes,Shire bounds west of the Brandywine,accepted_forced_anchor
-michel_delving,SHI,0.3462759,0.2291158,me_shire_breeland_region,1,0.0001070,yes,Shire bounds west of the Brandywine,accepted_forced_anchor
-bucklebury,SHI,0.3768010,0.2325354,me_shire_breeland_region,1,0.0612132,yes,Shire bounds west of the Brandywine,accepted_forced_anchor
-me_bree,BRE,0.4026862,0.2320469,me_shire_breeland_region,1,0.0001146,yes,Bree-land's four-village crossroads,accepted_forced_anchor
+carn_dum,ANG,0.4488400,0.0635076,me_angmar_region,5,0.0815097,yes,Carn Dûm is an active fortress of Angmar at TA 3018,accepted_required_frontier_owner
+hobbiton,SHI,0.3592186,0.2217880,me_shire_breeland_region,1,0.0269933,yes,Hobbiton is an active village of Shire at TA 3018,accepted_required_frontier_owner
+michel_delving,SHI,0.3462759,0.2291158,me_shire_breeland_region,1,0.0001070,yes,Michel Delving is an active town of Shire at TA 3018,accepted_required_frontier_owner
+bucklebury,SHI,0.3768010,0.2325354,me_shire_breeland_region,1,0.0612132,yes,Bucklebury is an active village of Shire at TA 3018,accepted_required_frontier_owner
+me_bree,BRE,0.4026862,0.2320469,me_shire_breeland_region,1,0.0001146,yes,Bree is an active town of Bree-land at TA 3018,accepted_required_frontier_owner
 amon_sul,WILD,0.4271062,0.2271617,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-rivendell,RIV,0.4935287,0.2227650,me_north_arnor_region,1,0.0001270,yes,Imladris hidden valley and immediate refuge,accepted_forced_anchor
-goblin_town,GOB,0.5098901,0.1914998,me_anduin_vale_region,1,0.0001094,yes,Goblin-town and High Pass under the Misty Mountains,accepted_forced_anchor
-gundabad,GUN,0.5023199,0.1025892,me_northern_wastes_region,4,0.0001138,yes,Gundabad and the northern mountain junction,accepted_forced_anchor
-moria,MOA,0.4901099,0.3356131,me_anduin_vale_region,1,0.0002472,yes,Moria and immediate Dimrill/Sirannon approaches,accepted_forced_anchor
-carrock,BEO,0.5316239,0.1924768,me_anduin_vale_region,1,0.0002279,yes,Beorning crossings and upper Anduin vales,accepted_forced_anchor
-caras_galadhon,LOR,0.5194139,0.3561309,me_anduin_vale_region,3,0.0001190,yes,Arda Maps Golden Wood / Naith physical polygon; Naith between Misty foothills and Anduin; Lothlórien's Naith east of the Misty crest and west of Anduin,accepted_forced_anchor
-dol_guldur,DOL,0.5560440,0.3517342,me_mirkwood_region,3,0.0001455,yes,Arda Maps Mirkwood polygon: southern Dol Guldur shadow; Dol Guldur's southern Mirkwood shadow; Dol Guldur's southern Mirkwood shadow,accepted_forced_anchor
-thranduil_halls,WOO,0.5821734,0.1582804,me_dale_region,3,0.0003083,yes,Arda Maps Mirkwood polygon: northern/eastern Woodland Realm; Thranduil's northern and eastern Mirkwood; Woodland Realm in northern and northeastern Mirkwood,accepted_forced_anchor
-esgaroth,ESG,0.5997558,0.1626771,me_dale_region,1,0.0002500,yes,Lake-town and Long Lake shore,accepted_forced_anchor
-dale,DAL,0.6017094,0.1489985,me_dale_region,1,0.0002200,yes,Dale and the upper Celduin plain,accepted_forced_anchor
-erebor,ERE,0.5997558,0.1377626,me_dale_region,1,0.0001934,yes,Lonely Mountain and its immediate source-centred approaches,accepted_forced_anchor
-dorwinion,DOR,0.6847375,0.3512457,me_rhun_region,9,0.0001593,yes,Dorwinion around the northwest Sea of Rhûn,accepted_forced_anchor
-isengard,ISE,0.4666667,0.4621397,me_rohan_region,1,0.0002430,yes,compact Nan Curunir vale north of the Fords of Isen,accepted_forced_anchor
+rivendell,RIV,0.4935287,0.2227650,me_north_arnor_region,1,0.0001270,yes,Rivendell is an active refuge of Imladris at TA 3018,accepted_required_frontier_owner
+goblin_town,GOB,0.5098901,0.1914998,me_anduin_vale_region,1,0.0001094,yes,Goblin-town is an active hold of Misty Mountains at TA 3018,accepted_required_frontier_owner
+gundabad,GUN,0.5023199,0.1025892,me_northern_wastes_region,4,0.0001138,yes,Gundabad is an active hold of Gundabad at TA 3018,accepted_required_frontier_owner
+moria,MOA,0.4901099,0.3356131,me_anduin_vale_region,1,0.0002472,yes,Khazad-dûm is an active hold of Moria at TA 3018,accepted_required_frontier_owner
+carrock,BEO,0.5316239,0.1924768,me_anduin_vale_region,1,0.0002279,yes,The Carrock is an active village of Beornings at TA 3018,accepted_required_frontier_owner
+caras_galadhon,LOR,0.5194139,0.3561309,me_anduin_vale_region,3,0.0001190,yes,Caras Galadhon is an active refuge of Lothlórien at TA 3018,accepted_required_frontier_owner
+dol_guldur,DOL,0.5560440,0.3517342,me_mirkwood_region,3,0.0001455,yes,Dol Guldur is an active fortress of Dol Guldur at TA 3018,accepted_required_frontier_owner
+thranduil_halls,WOO,0.5821734,0.1582804,me_dale_region,3,0.0003083,yes,Thranduil's Halls is an active refuge of Woodland Realm at TA 3018,accepted_required_frontier_owner
+esgaroth,ESG,0.5997558,0.1626771,me_dale_region,1,0.0002500,yes,Esgaroth is an active town of Lake-town at TA 3018,accepted_required_frontier_owner
+dale,DAL,0.6017094,0.1489985,me_dale_region,1,0.0002200,yes,Dale is an active city of Dale at TA 3018,accepted_required_frontier_owner
+erebor,ERE,0.5997558,0.1377626,me_dale_region,1,0.0001934,yes,Erebor is an active hold of Erebor at TA 3018,accepted_required_frontier_owner
+dorwinion,DOR,0.6847375,0.3512457,me_rhun_region,9,0.0001593,yes,Dorwinion is an active town of Dorwinion at TA 3018,accepted_required_frontier_owner
+isengard,ISE,0.4666667,0.4621397,me_rohan_region,1,0.0002430,yes,Isengard is an active fortress of Isengard at TA 3018,accepted_required_frontier_owner
 helms_deep,ROH,0.4754579,0.5139228,me_rohan_region,1,0.0524160,yes,Helm's Deep is the Rohirric fortress of the Westfold,accepted_required_frontier_owner
 edoras,ROH,0.4986569,0.5383488,me_rohan_region,1,0.0000408,yes,Edoras is the seat of the Kings of the Mark,accepted_required_frontier_owner
-aldberg,ROH,0.5081807,0.5476307,me_rohan_region,1,0.0212065,yes,"The Mark between Isen, Anduin, and White Mountains",accepted_forced_anchor
+aldberg,ROH,0.5081807,0.5476307,me_rohan_region,1,0.0212065,yes,Aldburg is an active town of Rohan at TA 3018,accepted_required_frontier_owner
 dunharrow,ROH,0.4967033,0.5530044,me_rohan_region,1,0.0152070,yes,Dunharrow is the Rohirric refuge beneath the White Mountains,accepted_required_frontier_owner
-minas_tirith,GON,0.5782662,0.6111383,me_anorien_region,1,0.0002519,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
+minas_tirith,GON,0.5782662,0.6111383,me_anorien_region,1,0.0002519,yes,Minas Tirith is an active capital of Gondor at TA 3018,accepted_required_frontier_owner
 osgiliath,GON,0.5924298,0.6038105,me_ithilien_region,1,0.0294895,no,Gondor garrisons the ruined Anduin crossing before the June 3018 assault,accepted_required_frontier_owner
-minas_morgul,MOR,0.6073260,0.5955056,me_ithilien_region,1,0.0766744,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
-morannon,MOR,0.6097680,0.5295554,me_brown_lands_region,1,0.0814473,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
-barad_dur,MOR,0.6439560,0.5735222,me_mordor_region,1,0.0001922,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
-mount_doom,MOR,0.6285714,0.5769419,me_mordor_region,8,0.0311507,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
-nurn_fields,MOR,0.6380952,0.6692721,me_mordor_region,8,0.0964993,yes,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_forced_anchor
-pelargir,GON,0.5719170,0.6858818,me_lebennin_region,1,0.0756263,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
-dol_amroth,DAM,0.4891331,0.6726917,me_belfalas_region,1,0.0001962,yes,Dol Amroth and Belfalas peninsula,accepted_forced_anchor
-linhir,GON,0.5333333,0.6814851,me_lebennin_region,1,0.1138732,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
-calembel,GON,0.5196581,0.6174890,me_belfalas_region,1,0.1171835,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
-erech,GON,0.4998779,0.5686370,me_belfalas_region,1,0.1622872,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
-umbar,UMB,0.5096459,0.9355154,me_umbar_region,9,0.0001467,yes,Umbar coast and corsair hinterland,accepted_forced_anchor
-pelennor,GON,0.5819292,0.6101612,me_anorien_region,1,0.0076075,yes,Gondor fiefs from Anfalas to the Anduin,accepted_forced_anchor
+minas_morgul,MOR,0.6073260,0.5955056,me_ithilien_region,1,0.0766744,yes,Minas Morgul is an active fortress of Mordor at TA 3018,accepted_required_frontier_owner
+morannon,MOR,0.6097680,0.5295554,me_brown_lands_region,1,0.0814473,yes,The Morannon is an active fortress of Mordor at TA 3018,accepted_required_frontier_owner
+barad_dur,MOR,0.6439560,0.5735222,me_mordor_region,1,0.0001922,yes,Barad-dûr is an active capital of Mordor at TA 3018,accepted_required_frontier_owner
+mount_doom,MOR,0.6285714,0.5769419,me_mordor_region,8,0.0311507,yes,Orodruin is an active landmark of Mordor at TA 3018,accepted_required_frontier_owner
+nurn_fields,MOR,0.6380952,0.6692721,me_mordor_region,8,0.0964993,yes,Fields of Nurn is an active town of Mordor at TA 3018,accepted_required_frontier_owner
+pelargir,GON,0.5719170,0.6858818,me_lebennin_region,1,0.0756263,yes,Pelargir is an active city of Gondor at TA 3018,accepted_required_frontier_owner
+dol_amroth,DAM,0.4891331,0.6726917,me_belfalas_region,1,0.0001962,yes,Dol Amroth is an active city of Gondor at TA 3018,accepted_required_frontier_owner
+linhir,GON,0.5333333,0.6814851,me_lebennin_region,1,0.1138732,yes,Linhir is an active town of Gondor at TA 3018,accepted_required_frontier_owner
+calembel,GON,0.5196581,0.6174890,me_belfalas_region,1,0.1171835,yes,Calembel is an active town of Gondor at TA 3018,accepted_required_frontier_owner
+erech,GON,0.4998779,0.5686370,me_belfalas_region,1,0.1622872,yes,Erech is an active town of Gondor at TA 3018,accepted_required_frontier_owner
+umbar,UMB,0.5096459,0.9355154,me_umbar_region,9,0.0001467,yes,Umbar is an active city of Umbar at TA 3018,accepted_required_frontier_owner
+pelennor,GON,0.5819292,0.6101612,me_anorien_region,1,0.0076075,yes,Pelennor is an active landmark of Gondor at TA 3018,accepted_required_frontier_owner
 me_land_0001,LOS,0.2112332,0.0332193,me_forochel_region,1,0.2632754,no,Lossoth settlements around the Icebay,accepted_source_side_envelope
 me_land_0002,LOS,0.2334554,0.0635076,me_forochel_region,1,0.2168579,no,Lossoth settlements around the Icebay,accepted_source_side_envelope
 me_land_0003,WILD,0.1445665,0.1744016,me_lindon_region,1,,no,deliberately unclaimed,wild_reviewed_component: unattested remote island beyond Lindon's coast

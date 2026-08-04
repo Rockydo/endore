@@ -44,6 +44,33 @@ OWNERSHIP_CSV = DERIVED / "m3_ownership.csv"
 OWNERSHIP_AUDIT_CSV = DERIVED / "m3_ownership_audit.csv"
 OWNERSHIP_AUDIT_JSON = DERIVED / "m3_ownership_audit.json"
 GAZETTEER_CSV = DERIVED / "m3_gazetteer.csv"
+
+# `settlements.csv` is the source-controlled roster of named places.  These mappings
+# convert its realm hints into the TA 3018 political tags used by M3; historical ruins
+# deliberately remain outside this active-settlement contract.
+SETTLEMENT_HINT_OWNER: dict[str, str] = {
+    "Lindon": "LIN",
+    "Angmar": "ANG",
+    "Shire": "SHI",
+    "Bree-land": "BRE",
+    "Imladris": "RIV",
+    "Misty Mountains": "GOB",
+    "Gundabad": "GUN",
+    "Moria": "MOA",
+    "Beornings": "BEO",
+    "Lothlórien": "LOR",
+    "Dol Guldur": "DOL",
+    "Woodland Realm": "WOO",
+    "Lake-town": "ESG",
+    "Dale": "DAL",
+    "Erebor": "ERE",
+    "Dorwinion": "DOR",
+    "Isengard": "ISE",
+    "Rohan": "ROH",
+    "Gondor": "GON",
+    "Mordor": "MOR",
+    "Umbar": "UMB",
+}
 MANIFEST_JSON = DERIVED / "m3_manifest.json"
 POLITICAL_QA_OUT = DERIVED / "m3_political_control.png"
 PORTS_OUT = ROOT / "in_game/map_data/ports.csv"
@@ -1189,35 +1216,12 @@ def forced_ownership(
     }
     if len(forced_owner) != len(realms):
         raise ValueError("two M3 realms resolve to the same capital location")
-    hint_owner = {
-        "Lindon": "LIN",
-        "Angmar": "ANG",
-        "Shire": "SHI",
-        "Bree-land": "BRE",
-        "Imladris": "RIV",
-        "Misty Mountains": "GOB",
-        "Gundabad": "GUN",
-        "Moria": "MOA",
-        "Beornings": "BEO",
-        "Lothlórien": "LOR",
-        "Dol Guldur": "DOL",
-        "Woodland Realm": "WOO",
-        "Lake-town": "ESG",
-        "Dale": "DAL",
-        "Erebor": "ERE",
-        "Dorwinion": "DOR",
-        "Isengard": "ISE",
-        "Rohan": "ROH",
-        "Gondor": "GON",
-        "Mordor": "MOR",
-        "Umbar": "UMB",
-    }
     anchor_rank = {anchor.key: anchor.rank for anchor in load_anchors()}
     anchor_hint = {anchor.key: anchor.realm_hint for anchor in load_anchors()}
     for ref, location_key in ref_to_location.items():
         if ref not in anchor_hint or anchor_rank[ref] == "ruin":
             continue
-        tag = hint_owner.get(anchor_hint[ref])
+        tag = SETTLEMENT_HINT_OWNER.get(anchor_hint[ref])
         if ref == "dol_amroth":
             tag = "DAM"
         if tag:
@@ -1243,6 +1247,24 @@ def forced_ownership(
             raise ValueError(f"unresolved operational landmark {ref}")
         forced_owner[location_key] = tag
     return forced_owner
+
+
+def active_settlement_owner_contracts() -> dict[str, tuple[str, str]]:
+    """Return ownership witnesses for every non-ruined authored settlement."""
+    contracts: dict[str, tuple[str, str]] = {}
+    for anchor in load_anchors():
+        if anchor.rank == "ruin":
+            continue
+        tag = SETTLEMENT_HINT_OWNER.get(anchor.realm_hint)
+        if anchor.key == "dol_amroth":
+            tag = "DAM"
+        if tag is None:
+            continue
+        contracts[anchor.key] = (
+            tag,
+            f"{anchor.name} is an active {anchor.rank} of {anchor.realm_hint} at TA 3018",
+        )
+    return contracts
 
 
 def assign_ownership(
@@ -1828,8 +1850,11 @@ def ownership_audit_rows(state: RealmState) -> list[dict[str, object]]:
     forced = forced_ownership(state.realms, state.ref_to_location)
     required_frontier_owner = {
         state.ref_to_location[ref]: (tag, rationale)
-        for ref, (tag, rationale) in FRONTIER_LANDMARK_REQUIRED_OWNERS.items()
+        for ref, (tag, rationale) in active_settlement_owner_contracts().items()
+        if ref in state.ref_to_location
     }
+    for ref, contract in FRONTIER_LANDMARK_REQUIRED_OWNERS.items():
+        required_frontier_owner[state.ref_to_location[ref]] = contract
     rows: list[dict[str, object]] = []
     for location in state.model.locations:
         if location.kind != "land":
@@ -2374,7 +2399,9 @@ def check() -> list[str]:
             "Rohan owns an ocean-adjacent land cell despite the White Mountains frontier: "
             f"{rohan_coast[:5]}"
         )
-    for ref, (required_owner, rationale) in FRONTIER_LANDMARK_REQUIRED_OWNERS.items():
+    required_owner_contracts = active_settlement_owner_contracts()
+    required_owner_contracts.update(FRONTIER_LANDMARK_REQUIRED_OWNERS)
+    for ref, (required_owner, rationale) in required_owner_contracts.items():
         location_key = state.ref_to_location.get(ref)
         if location_key is None:
             failures.append(f"required-owner frontier landmark {ref} is unresolved")

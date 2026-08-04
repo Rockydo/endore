@@ -51,6 +51,9 @@
 - v122 resolves the Fords of Isen from a negative-only safeguard to a source-anchored
   Rohan control and locks the adjacent named Rohirric frontier anchors; see
   `docs/m2/V122_ROHAN_DUNLAND_FRONTIER_AUDIT.md`.
+- v123 promotes every active named settlement into a source-derived ownership contract,
+  while preserving the explicit Arnor ruins as wild; see
+  `docs/m2/V123_ACTIVE_SETTLEMENT_CONTROL_AUDIT.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

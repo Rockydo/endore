@@ -2,6 +2,14 @@
 
 ## 2026-08-04
 
+- v123 makes all 39 active source-ledger settlements exact ownership regression
+  witnesses, spanning Lindon, Eriador, the mountain holds, Wilderland, Rohan, Gondor,
+  Mordor, and Umbar. It preserves the three explicit Arnor ruins as wild and moves no
+  current location or boundary. See `docs/m2/V123_ACTIVE_SETTLEMENT_CONTROL_AUDIT.md`.
+  Full validation passed in 450.3 seconds (including the 378.6-second M2 world gate),
+  and paired real-game smoke passed in 203.7 seconds on unchanged fingerprint
+  `d511971af16d7b24784ebdf99f9493d7e039f46795d6333b68fd066a1a5f568e`, with zero new
+  mod-unique error-log lines.
 - v122 completes the Rohan-Dunland frontier review. The Fords of Isen change from a
   negative-only Isengard exclusion to an explicit Rohan control, with Helm's Deep,
   Edoras, and Dunharrow as matching named witnesses. All four locations were already

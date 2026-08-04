@@ -1,5 +1,15 @@
 # Decisions
 
+## 2026-08-04 - Make every active named settlement a control witness
+
+Treat each non-ruined record in the source-controlled settlement ledger as evidence of
+its stated TA 3018 realm. The M3 check now derives its required tag from the ledger's
+realm hint and reports it in the ownership audit; Dol Amroth retains its separately
+authored starting realm. Exclude Annúminas, Fornost, and Amon Sûl because the ledger
+explicitly classifies them as ruins and their wild status is intentional. This protects
+named sites without turning nearby unlabelled land into a political claim. See
+`docs/m2/V123_ACTIVE_SETTLEMENT_CONTROL_AUDIT.md`.
+
 ## 2026-08-04 - Bind the Fords of Isen to Rohan at the start date
 
 The Fords are a named Westfold strongpoint of Rohan in TA 3018; Saruman's 3019 attacks
