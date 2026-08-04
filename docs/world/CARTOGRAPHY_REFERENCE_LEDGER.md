@@ -8,8 +8,8 @@ the following two owner-approved cartographic references:
 
 | Reference | Accessed | Binding use |
 |---|---:|---|
-| [Arda Maps — Third Age](http://arda-maps.org/ages/third) | 2026-07-31 | Coastline, islands, lakes, drainage, mountain and woodland envelopes, roads, and an independent landmark cross-check. |
-| [ArdaCraft — interactive Middle-earth map](https://www.ardacraft.me/map/middle-earth-interactive-map) | 2026-08-01 | Equal-scale world grid, precise canon landmark anchors, detailed regional boundaries, biome footprints, close-scale placement checks, and the Heightmap V2 crest/branch interpretation. |
+| [Arda Maps — Third Age](http://arda-maps.org/ages/third) | 2026-08-04 | Coastline, islands, lakes, drainage, mountain and woodland envelopes, roads, and an independent landmark cross-check. The upstream open-source topology was hash-rechecked exactly; see `docs/m2/V113_SOURCE_PROVENANCE_REAUDIT.md`. |
+| [ArdaCraft — interactive Middle-earth map](https://www.ardacraft.me/map/middle-earth-interactive-map) | 2026-08-04 | Equal-scale world grid, precise canon landmark anchors, detailed regional boundaries, biome footprints, close-scale placement checks, and the Heightmap V2 crest/branch interpretation. Each consumed CDN control was hash-rechecked exactly; see `docs/m2/V113_SOURCE_PROVENANCE_REAUDIT.md`. |
 
 Tolkien's published text and map evidence retains the canon precedence stated
 in `docs/ENDORE_MASTER_PLAN.md`. Arda Maps and ArdaCraft are precise

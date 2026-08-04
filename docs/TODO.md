@@ -16,6 +16,10 @@
   cone north of Dale, while the exact Ardacraft coordinate remains a 61,926-unit isolated
   peak. See `docs/m2/V112_EREBOR_RELIEF_EVIDENCE.md`; do not widen the mountain merely to
   dominate a political camera.
+- v113 re-fetched the owner-approved upstream data and proves an exact byte match for the
+  Arda Maps Third Age topology plus the four ArdaCraft controls used by the map. Physical
+  controls are frozen to those precise revisions. See
+  `docs/m2/V113_SOURCE_PROVENANCE_REAUDIT.md`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

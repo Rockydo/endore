@@ -2,6 +2,10 @@
 
 ## 2026-08-04
 
+- v113 independently re-fetched and hash-compared the complete cached Arda Maps Third Age
+  topology and the live ArdaCraft Heightmap, Drainage, Biome, and path controls. All five
+  sources matched exactly; the physical source baseline is now explicitly re-confirmed
+  before further political-fidelity work.
 - v112 closes the physical-evidence ambiguity around Erebor without touching the world.
   A source-bound marker-offset maximum-close camera shows the compact steep Lonely
   Mountain terrain north of Dale in a fresh real EU5 Observer session, followed by

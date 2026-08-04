@@ -1,5 +1,15 @@
 # Decisions
 
+## 2026-08-04 — Preserve source boundaries; do not invent political maps
+
+The direct 2026-08-04 upstream re-audit confirms that the local Arda Maps Third Age
+topology and every consumed ArdaCraft V2/V3 control are exact byte matches. Treat this
+as a freeze on physical controls unless a future source revision is deliberately adopted
+and re-audited. These geographic sources do not supply a comprehensive TA 3018 sovereignty
+map, so their blank spaces cannot authorize speculative political expansion. Preserve
+wildland buffers unless a canonical strategic anchor or specific physical frontier supports
+an ownership correction.
+
 ## 2026-08-04 — Erebor evidence framing
 
 Preserve Erebor as the compact isolated source-pinned summit at its exact Ardacraft
