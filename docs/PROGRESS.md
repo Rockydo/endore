@@ -2052,3 +2052,34 @@
   no painted blue shoulder appears, and 45 seconds of maximum-speed playback completes
   with zero recovery and the normal 1,486-byte final log. The 40-second evidence frame
   shows TA 3018.1.13 at 16:00. M2 remains red pending owner acceptance of the overall map.
+
+## 2026-08-03 - v107 independent source-to-lake networks
+
+- Audited all remaining long dry controls against the 16K water raster. A first candidate
+  promoted four complete source courses entering the Sea of Núrnen and two entering
+  source-backed minor Eriador lakes. They are independent one-source systems, not invented
+  tributaries.
+- Added an explicit engine-root contract and deterministic orientation toward the unique
+  water endpoint. One Núrnen mouth proved the accepted adjacent-land case; the generator
+  now binds that existing vanilla mouth rule rather than moving its source geometry.
+- That first candidate passed full validation in 530.5 seconds (M2 world 446.6 seconds),
+  paired smoke in 202.1 seconds, fresh Observer entry, and 45 seconds maximum-speed
+  playback with zero recovery and the normal 1,486-byte log. Its Hobbiton close frame
+  nevertheless rejected the two Eriador roots because their tiny receiving ponds render
+  as conspicuous rectangular blue blocks.
+- The pruned candidate keeps only the four Núrnen roots: 16 source-to-water systems,
+  38 red junctions, and 54 genuine courses. Its 61,126 indexed pixels produce an exact
+  978,016-pixel 4x material footprint. The rebuilt cache has 174,763 tiles, 45,049 unique
+  material tiles, 23.6 MB material payload, and 193.4 MB total payload; no terrain-only
+  control paints water.
+- All focused source, graph, cache, camera, location, and flatmap checks pass. The 6,004-
+  location model remains `2276dfd0...`; the final game-visible fingerprint is
+  `907a10edae306e185633a51570af39a844c09e3c10c2f6c614924919910c15e0`.
+- The pruned candidate passes full validation in 514.5 seconds, including the 438.9-second
+  deterministic M2 world gate. Paired smoke passes in 201.6 seconds with zero new or
+  mod-unique lines, and the exact-fingerprint smoke assertion passes.
+- Fresh no-debug Observer pairs at Krimpzagh Camp and Blackgash Cleft show continuous,
+  naturally meandering Núrnen courses across the source terrain, with no detached stroke
+  or painted blue shoulder. Maximum-speed playback completes 45 seconds with zero recovery
+  and the normal 1,486-byte log; the 40-second frame shows TA 3018.1.13 at 17:00. M2
+  remains red pending owner acceptance of the overall map.

@@ -135154,8 +135154,8 @@
       "label": null,
       "width": 0.00155,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_trunk",
       "incision_strength": 138,
       "material_scale": 0.82,
@@ -135302,7 +135302,8 @@
           0.706056
         ]
       ],
-      "source": "Arda Maps line_river 2 part 0"
+      "source": "Arda Maps line_river 2 part 0",
+      "engine_root": true
     },
     {
       "key": "source_unnamed_04_00",
@@ -135532,8 +135533,8 @@
       "label": null,
       "width": 0.00155,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_trunk",
       "incision_strength": 138,
       "material_scale": 0.82,
@@ -135688,15 +135689,16 @@
           0.607331
         ]
       ],
-      "source": "Arda Maps line_river 9 part 0"
+      "source": "Arda Maps line_river 9 part 0",
+      "engine_root": true
     },
     {
       "key": "source_unnamed_10_00",
       "label": null,
       "width": 0.00155,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_trunk",
       "incision_strength": 138,
       "material_scale": 0.82,
@@ -135995,15 +135997,16 @@
           0.5628
         ]
       ],
-      "source": "Arda Maps line_river 10 part 0"
+      "source": "Arda Maps line_river 10 part 0",
+      "engine_root": true
     },
     {
       "key": "source_unnamed_11_00",
       "label": null,
       "width": 0.0014,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_branch",
       "incision_strength": 124,
       "material_scale": 0.74,
@@ -136062,7 +136065,8 @@
           0.702846
         ]
       ],
-      "source": "Arda Maps line_river 11 part 0"
+      "source": "Arda Maps line_river 11 part 0",
+      "engine_root": true
     },
     {
       "key": "source_unnamed_12_00",

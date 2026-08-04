@@ -568,3 +568,16 @@ about Middle-earth.
   comparison showed that their short, near-parallel source strokes read as an artificial
   comb around Greyflood/Glanduin at EU5 scale. Source fidelity includes declining detail
   that the renderer cannot present faithfully.
+
+## v107 independent source-to-lake rivers
+
+- An unlabelled Arda Maps course may be engine water without receiving an invented name
+  when it forms a complete headwater-to-water path. Four substantial source controls
+  terminate in the Sea of Núrnen; each is represented as its own green-source network
+  rather than as a tributary.
+- A source endpoint either inside engine water or on the final orthogonally adjacent land
+  cell is a valid mouth. This is the same raster contract used by established coastal
+  rivers and does not authorize extending, rerouting, or joining an ambiguous course.
+- Source controls 27/29 do terminate in source-backed minor Eriador ponds, but their first
+  live candidate is rejected: at close zoom the ponds read as tiny rectangular material
+  blocks and the two rivers exaggerate that defect. Their valley incision remains dry.

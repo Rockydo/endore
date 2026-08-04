@@ -34,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "88f99d09c42f61d7174a025798c064ac94514f758a79053695271c39f3da3e55"
+    "9895b05a6a2c41d5ea541073436d79f0ccb4e7c99bdacb27e763709f2a6d3e9c"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -434,7 +434,7 @@ def render_report() -> dict:
     terrain_only_rivers = [
         item for item in projection["rivers"] if item.get("terrain_only")
     ]
-    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 49:
+    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 45:
         raise ValueError("source tributary coverage changed without cartographic review")
     named_supplementary_count = sum(
         bool(item.get("label")) for item in terrain_only_rivers
@@ -461,7 +461,7 @@ def render_report() -> dict:
         for item in projection["rivers"]
         if not item.get("terrain_only") and not item.get("joins")
     ]
-    if len(independent_engine_rivers) != 13:
+    if len(independent_engine_rivers) != 17:
         raise ValueError("parser-safe independent river coverage changed")
     drainage_theatres = {}
     for key, contract in SOURCE_DRAINAGE_THEATRES.items():
@@ -538,6 +538,10 @@ def render_report() -> dict:
             "source_unnamed_78_00": "greylin",
             "source_sirannon_82_00": "glanduin",
             "source_lhun_84_02": "lhun",
+            "source_unnamed_02_00": None,
+            "source_unnamed_09_00": None,
+            "source_unnamed_10_00": None,
+            "source_unnamed_11_00": None,
         }.items()
     }
     actual_engine_supplementary = {
@@ -575,9 +579,9 @@ def render_report() -> dict:
     expected_hydrology_classes = {
         "named_branch": 1,
         "named_tributary": 12,
-        "unnamed_branch": 6,
+        "unnamed_branch": 5,
         "unnamed_feeder": 26,
-        "unnamed_trunk": 4,
+        "unnamed_trunk": 1,
     }
     actual_hydrology_classes = {
         key: sum(item.get("hydrology_class") == key for item in terrain_only_rivers)

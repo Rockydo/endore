@@ -458,3 +458,16 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   artifact in a bound same-camera fresh-game comparison. The final fingerprint completes
   45 seconds of maximum-speed Observer play with zero recovery and a normal 1,486-byte
   log. Renderer-scale visual rejection can therefore be stricter than graph validity.
+- Build 24187685 live-loads independent supplementary roots when their source path has
+  exactly one endpoint inside or orthogonally adjacent to engine water. The pruned v107
+  graph contains 16 source-rooted systems, 38 red junctions, and 54 genuine courses.
+  Bound close views show two substantial Núrnen roots as continuous natural rivers; the
+  same candidate completes 45 seconds of maximum-speed play with zero recovery and a
+  normal 1,486-byte log. A graph-valid six-root precursor was rejected because two tiny
+  Eriador receiving ponds rendered as rectangular blocks.
+- All 129 yellow index-2 pixels in installed build 24187685 have graph degree two. Of
+  those, 128 lie exactly one river edge from a degree-three split; the remaining marker
+  is ten edges from the nearest split. All 1,286 red index-1 pixels lie exactly one edge
+  from a degree-three confluence. Yellow is therefore an outgoing branch marker adjacent
+  to the split, not the split pixel itself; a future Ethir/Entwash implementation must
+  serialize that exact grammar rather than substituting a red incoming endpoint.

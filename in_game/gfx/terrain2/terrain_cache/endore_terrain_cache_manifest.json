@@ -22,7 +22,7 @@
   "material_sources": {
     "in_game/gfx/terrain2/heightmap.png": "ebec3ed2ebef5c112bcafe738dab01922491f9a185278b47c709602af69f159b",
     "docs/world/control/biomes.png": "c041b21d3569e1552e3a754f04dee0d045134a5f8e72a2fd8549d8f1a569e7d3",
-    "docs/world/control/projection.json": "88f99d09c42f61d7174a025798c064ac94514f758a79053695271c39f3da3e55",
+    "docs/world/control/projection.json": "9895b05a6a2c41d5ea541073436d79f0ccb4e7c99bdacb27e763709f2a6d3e9c",
     "in_game/gfx/terrain2/materials.txt": "5717d4bf7c02243e43e8cdb3e32bf035e74d1d981599e366874cf9c4f325562f"
   },
   "mip_layout": [
@@ -79,13 +79,13 @@
   ],
   "tile_count": 174763,
   "height_unique_tiles": 25246,
-  "material_unique_tiles": 44857,
+  "material_unique_tiles": 45049,
   "material_nonzero_fraction": 0.46650564670562744,
   "earth_decal_layers": 0,
   "material_preview": {
     "path": "docs/world/derived/terrain_material_preview.png",
-    "bytes": 48327,
-    "sha256": "21c6f58d5a9208a135086b71f93bf7cfa3206a2fec1090ff3a46468b942d63b1"
+    "bytes": 48414,
+    "sha256": "0ec261dba912ecef9aa63e0176bedbb6a6ca04cdeca9bfed2c09ad859a769f6f"
   },
   "outputs": {
     "heightmap.bin": {
@@ -113,12 +113,12 @@
       "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
     },
     "materials.bin": {
-      "bytes": 23528297,
-      "sha256": "c0c806cc75d12b569e27ebe03fd6886e8d5c0e2bdc27775e2c0cd73bf69e72e1"
+      "bytes": 23604996,
+      "sha256": "4d92b44d68eb934a0e105509430fd11e9b80f17af19986ca310c91839e5ba1d3"
     },
     "materials.info": {
-      "bytes": 5188688,
-      "sha256": "4b4200ce9298ee260e066431f6130d2553c068edcfe77eb3caf12bd736aac409"
+      "bytes": 5189056,
+      "sha256": "086790b8966141da75ac31e89f8d832e8b97299e933a670bcdd769abf1d99510"
     },
     "quadtree_nodes.bin": {
       "bytes": 67108880,
@@ -126,7 +126,7 @@
     },
     "checksum.json": {
       "bytes": 58,
-      "sha256": "fdbfe2b9dd1deb9e7be0ab745c6942529a20a84b511d9de67c4164d2308d7a76"
+      "sha256": "5b84f68d6531b708c8f91bfdbfb89bb67eb0a6594b64b5b982e713b4f263d996"
     }
   }
 }

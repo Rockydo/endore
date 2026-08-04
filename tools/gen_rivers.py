@@ -254,6 +254,20 @@ def orthogonal_neighbours(point_: tuple[int, int]) -> tuple[tuple[int, int], ...
     return ((x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1))
 
 
+def endpoint_reaches_water(point_: tuple[int, int], water: np.ndarray) -> bool:
+    """Return whether a root endpoint is water or its final land mouth cell."""
+
+    x, y = point_
+    if bool(water[y, x]):
+        return True
+    return any(
+        0 <= neighbour_y < WORLD_H
+        and 0 <= neighbour_x < WORLD_W
+        and bool(water[neighbour_y, neighbour_x])
+        for neighbour_x, neighbour_y in orthogonal_neighbours(point_)
+    )
+
+
 def merge_trunk_paths(
     key: str,
     segments: list[list[tuple[int, int]]],
@@ -592,11 +606,17 @@ def render() -> Image.Image:
         if key in paths and not river.get("joins") and key not in COMPOSITE_MEMBERS
     ]
     for key in roots:
-        main_path = clip_main_to_mouth(
-            key,
-            main_river_path(key, rivers, paths),
-            water,
-        )
+        main_path = main_river_path(key, rivers, paths)
+        if rivers[key].get("engine_root"):
+            start_water = endpoint_reaches_water(main_path[0], water)
+            end_water = endpoint_reaches_water(main_path[-1], water)
+            if start_water == end_water:
+                raise ValueError(
+                    f"supplementary root {key} must have exactly one water endpoint"
+                )
+            if start_water:
+                main_path.reverse()
+        main_path = clip_main_to_mouth(key, main_path, water)
         if any(
             pixel in occupied
             or any(neighbour in occupied for neighbour in orthogonal_neighbours(pixel))

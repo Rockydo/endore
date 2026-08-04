@@ -138,6 +138,17 @@ SUPPLEMENTARY_ENGINE_PARENTS: dict[str, str] = {
     "source_lhun_84_02": "lhun",
 }
 
+# Complete source-backed courses whose mouths already terminate in a real
+# engine-water lake.  These are independent one-source networks, not red-ended
+# tributaries of another river.  Keep this contract separate from the parent
+# map so the generated indexed grammar cannot silently reverse their meaning.
+SUPPLEMENTARY_ENGINE_ROOTS = {
+    "source_unnamed_02_00",
+    "source_unnamed_09_00",
+    "source_unnamed_10_00",
+    "source_unnamed_11_00",
+}
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -1192,6 +1203,10 @@ def supplementary_river_controls(topology: Topology) -> list[dict]:
                 item["engine_raster"] = True
                 item["terrain_only"] = False
                 item["joins"] = parent
+            elif key in SUPPLEMENTARY_ENGINE_ROOTS:
+                item["engine_raster"] = True
+                item["terrain_only"] = False
+                item["engine_root"] = True
             controls.append(item)
     return controls
 

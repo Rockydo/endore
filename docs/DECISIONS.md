@@ -1836,3 +1836,21 @@ controls as dry source-backed valley incision; do not cosmetically reroute them.
 Keep all braids and deltas out of this batch: they require yellow outgoing markers, not a
 red incoming endpoint. Rebuild channel 6 exclusively from the new indexed raster and
 require the normal full static, paired-smoke, and close live confluence gates.
+
+## 2026-08-03 - Promote complete source-to-lake networks as independent roots
+
+Promote source controls 02/09/10/11, which terminate in the Sea of Núrnen. Encode each as
+an independent green-source network with no red parent marker. Orient source storage
+toward the unique water endpoint while preserving every authored point; accept both an
+endpoint inside water and a final land cell orthogonally touching water as the vanilla
+mouth contract.
+
+Do not invent names, receiving rivers, or cosmetic mouth extensions for these courses.
+Keep the separate parent and root allowlists audit-bound so later source promotion cannot
+silently change hydrological meaning. Require source-bound Núrnen live views, paired smoke,
+maximum-speed playback, and full deterministic validation.
+
+The first candidate also promoted Eriador source controls 27/29. Reject both after a fresh
+Hobbiton close view shows their receiving ponds as conspicuous rectangular water blocks.
+Preserve their source-backed dry valleys; do not accept a valid graph whose receiving
+surface visibly fails the map-quality bar.
