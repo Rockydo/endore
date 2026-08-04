@@ -209,7 +209,7 @@ me_land_0165,Zorach,land,me_rhun_region,WILD,wilderness,† M3 regional lexicon
 me_land_0166,Bucklandbourne,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_0167,Azrahir,land,me_near_harad_region,HNE,place,† M3 regional lexicon
 me_land_0168,Eithel belath,land,me_north_arnor_region,WILD,wilderness,† M3 regional lexicon
-me_land_0169,Emyn belath,land,me_north_arnor_region,RIV,place,† M3 regional lexicon
+me_land_0169,Ford of Bruinen,land,me_north_arnor_region,RIV,landmark,"LOTR, Book I, Ch. 12"
 me_land_0170,Cedarbourne,land,me_anduin_vale_region,WILD,wilderness,† M3 regional lexicon
 me_land_0171,Starcamp,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
 me_land_0172,Deepbourne,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
@@ -217,7 +217,7 @@ me_land_0173,Bahrahir,land,me_far_harad_region,HRA,place,† M3 regional lexicon
 me_land_0174,Imlad belath,land,me_brown_lands_region,WILD,wilderness,† M3 regional lexicon
 me_land_0175,Darahir,land,me_near_harad_region,HNE,place,† M3 regional lexicon
 me_land_0176,Balad,land,me_rhun_region,RH2,place,† M3 regional lexicon
-me_land_0177,Framberg,land,me_rohan_region,ROH,place,† M3 regional lexicon
+me_land_0177,East Wall of Rohan,land,me_rohan_region,ROH,landmark,"Unfinished Tales, Cirion and Eorl"
 me_land_0178,Farahir,land,me_umbar_region,UMB,place,† M3 regional lexicon
 me_land_0179,Whitecamp,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
 me_land_0180,Skaiburz,land,me_mordor_region,MOR,place,† M3 regional lexicon
@@ -732,7 +732,7 @@ me_land_0688,Minas sarnath,land,me_anorien_region,GON,place,† M3 regional lexi
 me_land_0689,Ost sarnath,land,me_belfalas_region,GON,place,† M3 regional lexicon
 me_land_0690,Karmod,land,me_rhun_region,WILD,wilderness,† M3 regional lexicon
 me_land_0691,Bucklanddown,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
-me_land_0692,Honeyden,land,me_anduin_vale_region,BEO,place,† M3 regional lexicon
+me_land_0692,Old Ford,land,me_anduin_vale_region,BEO,landmark,"LOTR, Book I, Ch. 2"
 me_land_0693,Taur sarnath,land,me_lebennin_region,GON,place,† M3 regional lexicon
 me_land_0694,Bar sarnath,land,me_lindon_region,LIN,place,† M3 regional lexicon
 me_land_0695,Icehaven,land,me_northern_wastes_region,WILD,wilderness,† M3 regional lexicon
@@ -1818,7 +1818,7 @@ me_land_1774,Kharahir Gate,land,me_near_harad_region,UMB,place,† M3 regional l
 me_land_1775,Nazgfang Camp,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
 me_land_1776,Ceorlford,land,me_rohan_region,ROH,place,† M3 regional lexicon
 me_land_1777,Ost duindûr,land,me_ithilien_region,WILD,wilderness,† M3 regional lexicon
-me_land_1778,Taur duindûr,land,me_anduin_vale_region,LOR,place,† M3 regional lexicon
+me_land_1778,Egladil,land,me_anduin_vale_region,LOR,landmark,"LOTR, Book II, Ch. 6"
 me_land_1779,Skaifang Camp,land,me_mordor_region,MOR,place,† M3 regional lexicon
 me_land_1780,Bar duindûr,land,me_north_arnor_region,WILD,wilderness,† M3 regional lexicon
 me_land_1781,Uglfang Camp,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
@@ -1897,7 +1897,7 @@ me_land_1853,Tazahir Gate,land,me_near_harad_region,HNE,place,† M3 regional le
 me_land_1854,Mauhgash Camp,land,me_angmar_region,WILD,wilderness,† M3 regional lexicon
 me_land_1855,Daleford,land,me_dale_region,ESG,place,† M3 regional lexicon
 me_land_1856,Lond Daer,land,me_enedwaith_region,WILD,ruin,"Unfinished Tales, The History of Galadriel and Celeborn"
-me_land_1857,Dol galendûr,land,me_north_arnor_region,RAN,place,† M3 regional lexicon
+me_land_1857,Hollin Ridge,land,me_north_arnor_region,WILD,landmark,"LOTR, Book II, Ch. 3"
 me_land_1858,Gamildûm,land,me_rhun_region,IRO,place,† M3 regional lexicon
 me_land_1859,Esgarford,land,me_rhun_region,DOR,place,† M3 regional lexicon
 me_land_1860,Eithel galendûr,land,me_belfalas_region,GON,place,† M3 regional lexicon
@@ -3643,7 +3643,7 @@ me_land_3599,Minas morneth,land,me_north_arnor_region,WILD,wilderness,† M3 reg
 me_land_3600,Sagen Road,land,me_rhun_region,RH2,place,† M3 regional lexicon
 me_land_3601,Sharen Road,land,me_rhun_region,RHU,place,† M3 regional lexicon
 me_land_3602,Ost morneth,land,me_anduin_vale_region,LOR,place,† M3 regional lexicon
-me_land_3603,Taur morneth,land,me_north_arnor_region,WILD,wilderness,† M3 regional lexicon
+me_land_3603,Lone-lands,land,me_north_arnor_region,WILD,landmark,"LOTR, Book I, Ch. 11"
 me_land_3604,Skaigash Cleft,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
 me_land_3605,Darem Oasis,land,me_near_harad_region,UMB,place,† M3 regional lexicon
 me_land_3606,Targar Camp,land,me_khand_region,WILD,wilderness,† M3 regional lexicon
@@ -4550,7 +4550,7 @@ me_land_4506,Azran Wells,land,me_umbar_region,UMB,place,† M3 regional lexicon
 me_land_4507,Bahran Wells,land,me_near_harad_region,WILD,wilderness,† M3 regional lexicon
 me_land_4508,Nazgsnaga Cleft,land,me_mordor_region,WILD,wilderness,† M3 regional lexicon
 me_land_4509,Kingstead,land,me_rhun_region,DOR,place,† M3 regional lexicon
-me_land_4510,Skaisnaga Cleft,land,me_anduin_vale_region,MOA,place,† M3 regional lexicon
+me_land_4510,Redhorn Pass,land,me_anduin_vale_region,MOA,landmark,"LOTR, Book II, Ch. 3"
 me_land_4511,Eastbank Fold,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon
 me_land_4512,Taur mornion,land,me_lindon_region,LIN,place,† M3 regional lexicon
 me_land_4513,Greenbank Fold,land,me_enedwaith_region,WILD,wilderness,† M3 regional lexicon

@@ -558,9 +558,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0033 = {
 		define_pop = { type = nobles size = 0.055 culture = me_silvan religion = me_valar_worship }
@@ -746,9 +746,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0063 = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_mordor_orc religion = me_sauron_cult }
@@ -2280,9 +2280,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0291 = {
 		define_pop = { type = tribesmen size = 0.008 culture = me_dunlending religion = me_dunland_ways }
@@ -2780,10 +2780,10 @@ locations = {
 	me_land_0371 = {
 		define_pop = { type = nobles size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.004 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = burghers size = 0.003 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = burghers size = 0.004 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.006 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.042 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.042 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.043 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.043 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = tribesmen size = 0.018 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0372 = {
@@ -2923,9 +2923,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0392 = {
 		define_pop = { type = nobles size = 0.055 culture = me_silvan religion = me_valar_worship }
@@ -3075,9 +3075,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0415 = {
 		define_pop = { type = nobles size = 0.053 culture = me_umbarite religion = me_sauron_cult }
@@ -3116,9 +3116,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0422 = {
 		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
@@ -3952,9 +3952,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0548 = {
 		define_pop = { type = nobles size = 0.125 culture = me_gondorian religion = me_valar_worship }
@@ -6379,7 +6379,7 @@ locations = {
 		define_pop = { type = laborers size = 0.004 culture = me_eriadoran religion = me_northern_ways }
 		define_pop = { type = soldiers size = 0.004 culture = me_eriadoran religion = me_northern_ways }
 		define_pop = { type = peasants size = 0.005 culture = me_eriadoran religion = me_northern_ways }
-		define_pop = { type = tribesmen size = 0.036 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.035 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_0912 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -6469,9 +6469,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_0924 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
@@ -9977,9 +9977,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_1470 = {
 		define_pop = { type = nobles size = 0.011 culture = me_mordor_orc religion = me_sauron_cult }
@@ -10718,7 +10718,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = saanich_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1582 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1583 = {
 		define_pop = { type = nobles size = 0.222 culture = me_sagath religion = me_melkorism }
@@ -10761,7 +10761,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = karankawa_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1587 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1588 = {
 		define_pop = { type = nobles size = 0.055 culture = me_silvan religion = me_valar_worship }
@@ -10825,7 +10825,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.036 culture = me_beorning religion = me_northern_ways }
 	}
 	me_land_1595 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1596 = {
 		define_pop = { type = nobles size = 0.004 culture = me_beorning religion = me_northern_ways }
@@ -11088,7 +11088,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_1630 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1631 = {
 		define_pop = { type = nobles size = 0.059 culture = me_dol_amrothian religion = me_valar_worship }
@@ -11261,7 +11261,7 @@ locations = {
 		define_pop = { type = slaves size = 0.056 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1654 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1655 = {
 		define_pop = { type = nobles size = 0.125 culture = me_balchoth religion = me_sauron_cult }
@@ -11450,7 +11450,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_1681 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1682 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -11475,7 +11475,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_1685 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1686 = {
 		define_pop = { type = tribesmen size = 0.03 culture = me_lossoth religion = me_lossoth_ways }
@@ -11528,10 +11528,10 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = meyah_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1694 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1695 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1696 = {
 		define_pop = { type = nobles size = 0.086 culture = me_gondorian religion = me_valar_worship }
@@ -11587,7 +11587,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_1706 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1707 = {
 		define_pop = { type = nobles size = 0.006 culture = me_beorning religion = me_northern_ways }
@@ -11683,7 +11683,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_1722 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1723 = {
 		define_pop = { type = nobles size = 0.068 culture = me_umbarite religion = me_sauron_cult }
@@ -11706,7 +11706,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = malay_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1725 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1726 = {
 		define_pop = { type = nobles size = 0.135 culture = me_karmachi religion = me_melkorism }
@@ -11737,7 +11737,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_1731 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1732 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
@@ -11882,9 +11882,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_1750 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -11900,9 +11900,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_1752 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -11940,7 +11940,7 @@ locations = {
 		define_pop = { type = peasants size = 0.045 culture = me_longbeard religion = me_mahal_cult }
 	}
 	me_land_1758 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1759 = {
 		define_pop = { type = nobles size = 0.222 culture = me_sagath religion = me_melkorism }
@@ -11979,7 +11979,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = daju_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1765 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1766 = {
 		define_pop = { type = nobles size = 0.059 culture = me_dol_amrothian religion = me_valar_worship }
@@ -12053,7 +12053,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = ukaragma_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1775 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1776 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -12090,7 +12090,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_1781 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1782 = {
 		define_pop = { type = nobles size = 0.031 culture = me_silvan religion = me_valar_worship }
@@ -12101,10 +12101,10 @@ locations = {
 		define_pop = { type = peasants size = 0.093 culture = me_silvan religion = me_valar_worship }
 	}
 	me_land_1783 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1784 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1785 = {
 		define_pop = { type = nobles size = 0.065 culture = me_gondorian religion = me_valar_worship }
@@ -12116,7 +12116,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = nama_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1786 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_near_haradrim religion = me_southron_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_near_haradrim religion = me_southron_ways }
 	}
 	me_land_1787 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -12147,7 +12147,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = purepecha_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1792 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1793 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_lossoth religion = me_lossoth_ways }
@@ -12198,7 +12198,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_1800 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1801 = {
 		define_pop = { type = nobles size = 0.135 culture = me_karmachi religion = me_melkorism }
@@ -12211,7 +12211,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = makassarese_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1802 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1803 = {
 		define_pop = { type = nobles size = 0.006 culture = me_beorning religion = me_northern_ways }
@@ -12245,7 +12245,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_1809 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1810 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_dunlending religion = me_dunland_ways }
@@ -12354,7 +12354,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = hadhrami_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1826 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1827 = {
 		define_pop = { type = nobles size = 0.013 culture = me_shire_hobbit religion = me_northern_ways }
@@ -12387,7 +12387,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = paipai_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1831 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1832 = {
 		define_pop = { type = nobles size = 0.041 culture = me_rohirric religion = me_northern_ways }
@@ -12485,7 +12485,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1846 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1847 = {
 		define_pop = { type = nobles size = 0.166 culture = me_balchoth religion = me_sauron_cult }
@@ -12556,13 +12556,12 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = yshyr_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1857 = {
-		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = nobles size = 0.001 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = burghers size = 0.001 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = laborers size = 0.004 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = soldiers size = 0.004 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = peasants size = 0.005 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.035 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_1858 = {
 		define_pop = { type = nobles size = 0.036 culture = me_longbeard religion = me_mahal_cult }
@@ -12623,13 +12622,13 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = amkoe_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1866 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1867 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_1868 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1869 = {
 		define_pop = { type = nobles size = 0.087 culture = me_variag religion = me_melkorism }
@@ -12676,7 +12675,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = konkani religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1875 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1876 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
@@ -12732,10 +12731,10 @@ locations = {
 		define_pop = { type = slaves size = 0.057 culture = me_isengard_uruk religion = me_sauron_cult }
 	}
 	me_land_1883 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1884 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1885 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_lossoth religion = me_lossoth_ways }
@@ -12781,13 +12780,13 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = gyele_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1890 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1891 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_1892 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1893 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
@@ -12838,7 +12837,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = makah_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1903 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1904 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -12889,7 +12888,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_1912 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1913 = {
 		define_pop = { type = nobles size = 0.086 culture = me_gondorian religion = me_valar_worship }
@@ -12985,7 +12984,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_1924 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_1925 = {
 		define_pop = { type = nobles size = 0.011 culture = me_mordor_orc religion = me_sauron_cult }
@@ -13187,7 +13186,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_1957 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1958 = {
 		define_pop = { type = nobles size = 0.125 culture = me_balchoth religion = me_sauron_cult }
@@ -13220,7 +13219,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = gxana_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1961 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1962 = {
 		define_pop = { type = tribesmen size = 0.03 culture = me_lossoth religion = me_lossoth_ways }
@@ -13299,7 +13298,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_1972 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1973 = {
 		define_pop = { type = nobles size = 0.125 culture = me_gondorian religion = me_valar_worship }
@@ -13380,10 +13379,10 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = jingpo_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_1982 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1983 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1984 = {
 		define_pop = { type = clergy size = 0.034 culture = me_mordor_orc religion = me_sauron_cult }
@@ -13402,16 +13401,16 @@ locations = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1987 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1988 = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_1989 = {
 		define_pop = { type = nobles size = 0.068 culture = me_umbarite religion = me_sauron_cult }
@@ -13473,7 +13472,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_1997 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_1998 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -13490,7 +13489,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_far_haradrim religion = me_southron_ways }
 	}
 	me_land_2001 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2002 = {
 		define_pop = { type = nobles size = 0.166 culture = me_balchoth religion = me_sauron_cult }
@@ -13612,9 +13611,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2020 = {
 		define_pop = { type = nobles size = 0.059 culture = me_dol_amrothian religion = me_valar_worship }
@@ -13669,7 +13668,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_2029 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2030 = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_far_haradrim religion = me_southron_ways }
@@ -13767,7 +13766,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = worimi_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2044 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2045 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
@@ -13776,10 +13775,10 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_2047 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2048 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2049 = {
 		define_pop = { type = nobles size = 0.086 culture = me_gondorian religion = me_valar_worship }
@@ -13844,7 +13843,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_2056 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2057 = {
 		define_pop = { type = nobles size = 0.116 culture = me_variag religion = me_melkorism }
@@ -13917,7 +13916,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = cusabo_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2065 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2066 = {
 		define_pop = { type = nobles size = 0.011 culture = me_mordor_orc religion = me_sauron_cult }
@@ -14012,10 +14011,10 @@ locations = {
 		define_pop = { type = slaves size = 0.051 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2077 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2078 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2079 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -14030,7 +14029,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = kolyms_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2082 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2083 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
@@ -14168,7 +14167,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.148 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_2103 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2104 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
@@ -14342,7 +14341,7 @@ locations = {
 		define_pop = { type = slaves size = 0.066 culture = me_variag religion = me_melkorism }
 	}
 	me_land_2130 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2131 = {
 		define_pop = { type = nobles size = 0.125 culture = me_balchoth religion = me_sauron_cult }
@@ -14567,10 +14566,10 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = javanese_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2161 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2162 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2163 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -14601,7 +14600,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = otali_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2168 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2169 = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_mordor_orc religion = me_sauron_cult }
@@ -14610,7 +14609,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.014 culture = me_gondorian religion = me_valar_worship }
 	}
 	me_land_2171 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2172 = {
 		define_pop = { type = tribesmen size = 0.008 culture = me_dunlending religion = me_dunland_ways }
@@ -14761,7 +14760,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_2193 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2194 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -14929,9 +14928,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2220 = {
 		define_pop = { type = tribesmen size = 0.03 culture = me_lossoth religion = me_lossoth_ways }
@@ -14989,7 +14988,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.03 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_2230 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2231 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_northern_orc religion = me_melkorism }
@@ -14998,7 +14997,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_2233 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2234 = {
 		define_pop = { type = nobles size = 0.08 culture = me_near_haradrim religion = me_southron_ways }
@@ -15084,7 +15083,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = cueva_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2245 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2246 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -15110,7 +15109,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_2250 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2251 = {
 		define_pop = { type = nobles size = 0.145 culture = me_near_haradrim religion = me_southron_ways }
@@ -15265,7 +15264,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_2271 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2272 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_woodman religion = me_northern_ways }
@@ -15429,7 +15428,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = wirangu_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2291 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2292 = {
 		define_pop = { type = nobles size = 0.029 culture = me_firebeard_broadbeam religion = me_mahal_cult }
@@ -15495,7 +15494,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = uitoto_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2300 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2301 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_balchoth religion = me_melkorism }
@@ -15713,7 +15712,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = kofan_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2330 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2331 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -15761,7 +15760,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = magar_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2337 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2338 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -15810,7 +15809,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = melanau_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2343 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2344 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_balchoth religion = me_melkorism }
@@ -15829,7 +15828,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_2347 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2348 = {
 		define_pop = { type = nobles size = 0.145 culture = me_near_haradrim religion = me_southron_ways }
@@ -15918,7 +15917,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = kapampangan_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2360 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2361 = {
 		define_pop = { type = nobles size = 0.027 culture = me_umbarite religion = me_sauron_cult }
@@ -15938,12 +15937,12 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2364 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_near_haradrim religion = me_southron_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_near_haradrim religion = me_southron_ways }
 	}
 	me_land_2365 = {
 		define_pop = { type = nobles size = 0.031 culture = me_dorwinrim religion = me_northern_ways }
@@ -16005,7 +16004,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = gurung_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2372 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2373 = {
 		define_pop = { type = nobles size = 0.075 culture = me_rohirric religion = me_northern_ways }
@@ -16051,7 +16050,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = tavastian religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2381 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2382 = {
 		define_pop = { type = nobles size = 0.042 culture = me_dorwinrim religion = me_northern_ways }
@@ -16242,7 +16241,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
 	}
 	me_land_2408 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2409 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_eriadoran religion = me_northern_ways }
@@ -16260,7 +16259,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = orang_rimba_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2412 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2413 = {
 		define_pop = { type = nobles size = 0.006 culture = me_beorning religion = me_northern_ways }
@@ -16320,9 +16319,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2421 = {
 		define_pop = { type = nobles size = 0.08 culture = me_near_haradrim religion = me_southron_ways }
@@ -16335,7 +16334,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = tojolabal_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2422 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
+		define_pop = { type = tribesmen size = 0.009 culture = me_mordor_orc religion = me_sauron_cult }
 	}
 	me_land_2423 = {
 		define_pop = { type = nobles size = 0.011 culture = me_mordor_orc religion = me_sauron_cult }
@@ -16378,10 +16377,10 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = madurese_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2427 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2428 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2429 = {
 		define_pop = { type = nobles size = 0.068 culture = me_umbarite religion = me_sauron_cult }
@@ -16564,7 +16563,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = semnani_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2454 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2455 = {
 		define_pop = { type = clergy size = 0.018 culture = me_mordor_orc religion = me_sauron_cult }
@@ -16698,7 +16697,7 @@ locations = {
 		define_pop = { type = peasants size = 0.045 culture = me_longbeard religion = me_mahal_cult }
 	}
 	me_land_2473 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2474 = {
 		define_pop = { type = nobles size = 0.068 culture = me_umbarite religion = me_sauron_cult }
@@ -16739,7 +16738,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = romblomanon_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2478 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2479 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_lossoth religion = me_lossoth_ways }
@@ -16791,7 +16790,7 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = jabirrjabirr_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_2486 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.009 culture = me_woodman religion = me_northern_ways }
 	}
 	me_land_2487 = {
 		define_pop = { type = nobles size = 0.011 culture = me_mordor_orc religion = me_sauron_cult }
@@ -16819,7 +16818,7 @@ locations = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_2493 = {
-		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
+		define_pop = { type = tribesmen size = 0.009 culture = me_balchoth religion = me_melkorism }
 	}
 	me_land_2494 = {
 		define_pop = { type = nobles size = 0.087 culture = me_variag religion = me_melkorism }
@@ -16893,9 +16892,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2505 = {
 		define_pop = { type = nobles size = 0.087 culture = me_variag religion = me_melkorism }
@@ -16975,9 +16974,9 @@ locations = {
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2520 = {
 		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
@@ -17170,10 +17169,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2551 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
@@ -17307,10 +17306,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2572 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
@@ -18640,10 +18639,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2790 = {
 		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
@@ -18652,10 +18651,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2792 = {
 		define_pop = { type = nobles size = 0.026 culture = me_variag religion = me_melkorism }
@@ -18725,10 +18724,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2803 = {
 		define_pop = { type = nobles size = 0.125 culture = me_gondorian religion = me_valar_worship }
@@ -19793,10 +19792,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_2964 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -20142,10 +20141,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_3018 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
@@ -20461,10 +20460,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_3070 = {
 		define_pop = { type = nobles size = 0.01 culture = me_sindar religion = me_valar_worship }
@@ -20652,10 +20651,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_3098 = {
 		define_pop = { type = nobles size = 0.08 culture = me_near_haradrim religion = me_southron_ways }
@@ -22008,10 +22007,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_3300 = {
 		define_pop = { type = nobles size = 0.086 culture = me_gondorian religion = me_valar_worship }
@@ -22868,10 +22867,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_3422 = {
 		define_pop = { type = nobles size = 0.053 culture = me_umbarite religion = me_sauron_cult }
@@ -24052,7 +24051,12 @@ locations = {
 		define_pop = { type = peasants size = 0.01 culture = yaur_culture religion = me_valar_worship } # installed culture ABI
 	}
 	me_land_3603 = {
-		define_pop = { type = tribesmen size = 0.013 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = nobles size = 0.001 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = burghers size = 0.001 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = laborers size = 0.004 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = soldiers size = 0.004 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = peasants size = 0.005 culture = me_eriadoran religion = me_northern_ways }
+		define_pop = { type = tribesmen size = 0.035 culture = me_eriadoran religion = me_northern_ways }
 	}
 	me_land_3604 = {
 		define_pop = { type = tribesmen size = 0.01 culture = me_mordor_orc religion = me_sauron_cult }
@@ -25491,10 +25495,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_3822 = {
 		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
@@ -26967,10 +26971,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4043 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -27118,10 +27122,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4065 = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_northern_orc religion = me_melkorism }
@@ -27211,10 +27215,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4078 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_dunlending religion = me_dunland_ways }
@@ -28222,10 +28226,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4233 = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_mordor_orc religion = me_sauron_cult }
@@ -28566,10 +28570,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4291 = {
 		define_pop = { type = nobles size = 0.087 culture = me_variag religion = me_melkorism }
@@ -28632,10 +28636,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4300 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_lossoth religion = me_lossoth_ways }
@@ -29152,13 +29156,13 @@ locations = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_lossoth religion = me_lossoth_ways }
 	}
 	me_land_4388 = {
-		define_pop = { type = nobles size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = nobles size = 0.027 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.02 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.02 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = laborers size = 0.033 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.23 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.229 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.098 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.235 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.235 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.101 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4389 = {
 		define_pop = { type = tribesmen size = 0.006 culture = me_lossoth religion = me_lossoth_ways }
@@ -29552,10 +29556,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4454 = {
 		define_pop = { type = tribesmen size = 0.01 culture = me_woodman religion = me_northern_ways }
@@ -31373,10 +31377,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4727 = {
 		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
@@ -32300,10 +32304,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4865 = {
 		define_pop = { type = tribesmen size = 0.013 culture = me_woodman religion = me_northern_ways }
@@ -32712,10 +32716,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_4926 = {
 		define_pop = { type = tribesmen size = 0.01 culture = me_balchoth religion = me_melkorism }
@@ -33932,10 +33936,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_5112 = {
 		define_pop = { type = nobles size = 0.013 culture = me_shire_hobbit religion = me_northern_ways }
@@ -34204,10 +34208,10 @@ locations = {
 		define_pop = { type = nobles size = 0.007 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = clergy size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
 		define_pop = { type = burghers size = 0.005 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = laborers size = 0.008 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = soldiers size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = peasants size = 0.059 culture = me_arnor_dunedain religion = me_valar_worship }
-		define_pop = { type = tribesmen size = 0.025 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = laborers size = 0.009 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = soldiers size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = peasants size = 0.06 culture = me_arnor_dunedain religion = me_valar_worship }
+		define_pop = { type = tribesmen size = 0.026 culture = me_arnor_dunedain religion = me_valar_worship }
 	}
 	me_land_5149 = {
 		define_pop = { type = tribesmen size = 0.011 culture = me_balchoth religion = me_melkorism }

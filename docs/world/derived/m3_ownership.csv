@@ -1897,7 +1897,7 @@ me_land_1853,land,me_near_harad_region,HNE,owned
 me_land_1854,land,me_angmar_region,WILD,wild_unclaimed
 me_land_1855,land,me_dale_region,ESG,owned
 me_land_1856,land,me_enedwaith_region,WILD,wild_reviewed_frontier: abandoned: Lond Daer is an abandoned Númenórean ruin.
-me_land_1857,land,me_north_arnor_region,RAN,owned
+me_land_1857,land,me_north_arnor_region,WILD,wild_reviewed_frontier: abandoned-eregion: Hollin is the abandoned Eregion wilderness rather than a Ranger-held settlement.
 me_land_1858,land,me_rhun_region,IRO,owned
 me_land_1859,land,me_rhun_region,DOR,owned
 me_land_1860,land,me_belfalas_region,GON,owned
@@ -3643,7 +3643,7 @@ me_land_3599,land,me_north_arnor_region,WILD,wild_unclaimed
 me_land_3600,land,me_rhun_region,RH2,owned
 me_land_3601,land,me_rhun_region,RHU,owned
 me_land_3602,land,me_anduin_vale_region,LOR,owned
-me_land_3603,land,me_north_arnor_region,WILD,wild_unclaimed
+me_land_3603,land,me_north_arnor_region,WILD,wild_reviewed_frontier: unsettled-eriador: The Lone-lands are unsettled Eriador and not a compact Ranger realm holding.
 me_land_3604,land,me_mordor_region,WILD,wild_unclaimed
 me_land_3605,land,me_near_harad_region,UMB,owned
 me_land_3606,land,me_khand_region,WILD,wild_unclaimed

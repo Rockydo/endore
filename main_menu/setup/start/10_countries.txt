@@ -1271,7 +1271,6 @@ countries = {
 				me_land_1469
 				me_land_1749
 				me_land_1751
-				me_land_1857
 				me_land_1988
 				me_land_2019
 				me_land_2219

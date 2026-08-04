@@ -209,7 +209,7 @@ me_land_0165,WILD,0.6849817,0.4328285,me_rhun_region,9,,no,deliberately unclaime
 me_land_0166,WILD,0.3826618,0.3370787,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0167,HNE,0.6463980,0.8128969,me_near_harad_region,9,0.0246967,no,Harnendor between the Poros approaches and the Harnen,accepted_frontier_polygon
 me_land_0168,WILD,0.3785104,0.1494871,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_0169,RIV,0.4888889,0.2310699,me_north_arnor_region,1,0.0125402,no,Imladris hidden valley and immediate refuge,accepted_source_side_envelope
+me_land_0169,RIV,0.4888889,0.2310699,me_north_arnor_region,1,0.0125402,no,protected-crossing: The Ford of Bruinen is the protected Imladris crossing on the road to Rivendell.,accepted_required_frontier_owner
 me_land_0170,WILD,0.5389499,0.3937469,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0171,WILD,0.5672772,0.0210064,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
 me_land_0172,WILD,0.4481074,0.5505618,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
@@ -217,7 +217,7 @@ me_land_0173,HRA,0.6942613,0.9213483,me_far_harad_region,10,0.0641922,no,"Qarsad
 me_land_0174,WILD,0.6222222,0.4030288,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0175,HNE,0.6527473,0.8133854,me_near_harad_region,9,0.0342501,no,Harnendor between the Poros approaches and the Harnen,accepted_frontier_polygon
 me_land_0176,RH2,0.7846154,0.4044944,me_rhun_region,9,0.0625810,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon
-me_land_0177,ROH,0.5501832,0.5192965,me_rohan_region,1,0.1047913,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
+me_land_0177,ROH,0.5501832,0.5192965,me_rohan_region,1,0.1047913,no,frontier-wall: The East Wall is the Rohirric side of Rohan's Anduin and Emyn Muil frontier.,accepted_required_frontier_owner
 me_land_0178,UMB,0.4844933,0.9037616,me_umbar_region,9,0.0595640,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_0179,WILD,0.8305250,0.0835369,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
 me_land_0180,MOR,0.7076923,0.5979482,me_mordor_region,8,0.1296053,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
@@ -732,7 +732,7 @@ me_land_0688,GON,0.5286935,0.5935515,me_anorien_region,1,0.1005274,no,Gondor fie
 me_land_0689,GON,0.5025641,0.5740107,me_belfalas_region,1,0.1557369,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_0690,WILD,0.6642247,0.4904739,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0691,WILD,0.4158730,0.4826575,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
-me_land_0692,BEO,0.5321123,0.2100635,me_anduin_vale_region,1,0.0176703,no,Beorning crossings and upper Anduin vales,accepted_source_side_envelope
+me_land_0692,BEO,0.5321123,0.2100635,me_anduin_vale_region,1,0.0176703,no,beorning-crossing: The Old Ford resolves to the Beorning-held upper Anduin crossings.,accepted_required_frontier_owner
 me_land_0693,GON,0.5387057,0.6472887,me_lebennin_region,1,0.0867442,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_0694,LIN,0.2275946,0.1416707,me_lindon_region,1,0.1837199,no,Lindon west of the Blue Mountains,accepted_source_side_envelope
 me_land_0695,WILD,0.6940171,0.1123596,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
@@ -1818,7 +1818,7 @@ me_land_1774,UMB,0.5682540,0.8373229,me_near_harad_region,1,0.1530068,no,Umbar c
 me_land_1775,WILD,0.8175824,0.5857352,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_1776,ROH,0.5433455,0.5417684,me_rohan_region,1,0.0894441,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_1777,WILD,0.6053724,0.6487543,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
-me_land_1778,LOR,0.5206349,0.3668784,me_anduin_vale_region,1,0.0109512,no,Arda Maps Golden Wood / Naith physical polygon; Naith between Misty foothills and Anduin; Lothlórien's Naith east of the Misty crest and west of Anduin,accepted_source_zone_overlap
+me_land_1778,LOR,0.5206349,0.3668784,me_anduin_vale_region,1,0.0109512,no,woodland-realm: Egladil is the Golden Wood of Lothlórien.,accepted_required_frontier_owner
 me_land_1779,MOR,0.6271062,0.6331216,me_mordor_region,1,0.0685716,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_1780,WILD,0.4344322,0.1636541,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1781,WILD,0.7858364,0.6746458,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -1897,7 +1897,7 @@ me_land_1853,HNE,0.6080586,0.8075232,me_near_harad_region,1,0.0632315,no,Harnend
 me_land_1854,WILD,0.4273504,0.0737665,me_angmar_region,5,,no,deliberately unclaimed,wild_unclaimed
 me_land_1855,ESG,0.6229548,0.1871031,me_dale_region,1,0.0521869,no,Lake-town and Long Lake shore,accepted_source_side_envelope
 me_land_1856,WILD,0.3809524,0.4352711,me_enedwaith_region,1,,no,abandoned: Lond Daer is an abandoned Númenórean ruin.,accepted_required_frontier_owner
-me_land_1857,RAN,0.4727717,0.2818759,me_north_arnor_region,1,0.0126846,no,The Angle and immediate Ranger refuge,accepted_source_side_envelope
+me_land_1857,WILD,0.4727717,0.2818759,me_north_arnor_region,1,,no,abandoned-eregion: Hollin is the abandoned Eregion wilderness rather than a Ranger-held settlement.,accepted_required_frontier_owner
 me_land_1858,IRO,0.6771673,0.1265266,me_rhun_region,1,0.0314862,no,Iron Hills source label and adjacent holds,accepted_source_side_envelope
 me_land_1859,DOR,0.6644689,0.3336590,me_rhun_region,9,0.0440377,no,Dorwinion around the northwest Sea of Rhûn,accepted_source_side_envelope
 me_land_1860,GON,0.4749695,0.5857352,me_belfalas_region,1,0.2079738,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
@@ -3643,7 +3643,7 @@ me_land_3599,WILD,0.3980464,0.2017587,me_north_arnor_region,1,,no,deliberately u
 me_land_3600,RH2,0.8007326,0.3111871,me_rhun_region,9,0.0388405,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon
 me_land_3601,RHU,0.7457875,0.1548608,me_rhun_region,1,0.1067541,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_3602,LOR,0.5145299,0.3727406,me_anduin_vale_region,1,0.0191519,no,Arda Maps Golden Wood / Naith physical polygon; Naith between Misty foothills and Anduin; Lothlórien's Naith east of the Misty crest and west of Anduin,accepted_source_zone_overlap
-me_land_3603,WILD,0.4402930,0.2291158,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
+me_land_3603,WILD,0.4402930,0.2291158,me_north_arnor_region,1,,no,unsettled-eriador: The Lone-lands are unsettled Eriador and not a compact Ranger realm holding.,accepted_required_frontier_owner
 me_land_3604,WILD,0.8148962,0.6389839,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_3605,UMB,0.5873016,0.8510015,me_near_harad_region,9,0.1768904,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_3606,WILD,0.6962149,0.8417196,me_khand_region,10,,no,deliberately unclaimed,wild_unclaimed
@@ -4550,7 +4550,7 @@ me_land_4506,UMB,0.5369963,0.9487054,me_umbar_region,9,0.0562382,no,Umbar coast 
 me_land_4507,WILD,0.7897436,0.8827553,me_near_harad_region,10,,no,deliberately unclaimed,wild_unclaimed
 me_land_4508,WILD,0.7990232,0.5832926,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_4509,DOR,0.6989011,0.3087445,me_rhun_region,1,0.0511557,no,Dorwinion around the northwest Sea of Rhûn,accepted_source_side_envelope
-me_land_4510,MOA,0.4964591,0.3199805,me_anduin_vale_region,1,0.0201925,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_4510,MOA,0.4964591,0.3199805,me_anduin_vale_region,1,0.0201925,no,moria-approach: The Redhorn Pass resolves to Moria's immediate mountain approach.,accepted_required_frontier_owner
 me_land_4511,WILD,0.4251526,0.3888617,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_4512,LIN,0.2659341,0.3111871,me_lindon_region,1,0.1212377,no,Lindon west of the Blue Mountains,accepted_source_side_envelope
 me_land_4513,WILD,0.4822955,0.3991207,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed

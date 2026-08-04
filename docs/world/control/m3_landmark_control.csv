@@ -88,3 +88,10 @@ mindolluin,GON,occupied-claim,Mindolluin rises directly behind Minas Tirith and 
 irensaga,ROH,rohan-mountain,Irensaga is a named Rohirric White Mountains summit.
 dwimorberg,ROH,rohan-mountain,Dwimorberg stands above Rohan's Paths of the Dead.
 starkhorn,ROH,rohan-mountain,Starkhorn is a named Rohirric White Mountains summit.
+ford_bruinen,RIV,protected-crossing,The Ford of Bruinen is the protected Imladris crossing on the road to Rivendell.
+hollin_ridge,WILD,abandoned-eregion,Hollin is the abandoned Eregion wilderness rather than a Ranger-held settlement.
+lone_lands,WILD,unsettled-eriador,The Lone-lands are unsettled Eriador and not a compact Ranger realm holding.
+redhorn_pass,MOA,moria-approach,The Redhorn Pass resolves to Moria's immediate mountain approach.
+egladil,LOR,woodland-realm,Egladil is the Golden Wood of Lothlórien.
+east_wall_rohan,ROH,frontier-wall,The East Wall is the Rohirric side of Rohan's Anduin and Emyn Muil frontier.
+old_ford,BEO,beorning-crossing,The Old Ford resolves to the Beorning-held upper Anduin crossings.

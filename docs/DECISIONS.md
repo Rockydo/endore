@@ -1,5 +1,14 @@
 # Decisions
 
+## 2026-08-04 - Add source-pinned frontier names before redrawing a border
+
+Use exact ArdaCraft markers to improve the map's political readability where a named
+crossing, ridge, or frontier gives a stronger control signal than an invented smooth
+border. The seven v127 records name and lock their exact cells only; Hollin Ridge is
+corrected to wild abandoned Eregion, while the other six confirm already plausible
+controls. Do not extrapolate either side of the East Wall, Old Ford, Redhorn Pass, or Ford
+of Bruinen from its individual point. See `docs/m2/V127_FRONTIER_GAZETTEER_AND_CONTROL.md`.
+
 ## 2026-08-04 - Audit every named landmark as a political control witness
 
 Replace the hand-maintained subset of frontier ownership rules with a complete 89-row

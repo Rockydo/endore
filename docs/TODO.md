@@ -70,6 +70,10 @@
   paired smoke are green on `6fc487603862df1835ba14b30ada609da7c03204a1071640162d295aab424015`;
   continue the source-anchored review against the established atlas.
   Do not use the rejected Finder capture route as visual proof.
+- v127 expands that ledger to 96 source-pinned map landmarks around the Bruinen, Eregion,
+  Lothlórien, Rohan, Moria, and the upper Anduin; it corrects Hollin Ridge to wild
+  Eregion. Full validation and paired smoke are green on
+  `580fe4052808c55a15601f170154babfbbc9d866f2671ab021103705c94af9c6`.
 - Next: complete the source-anchored political review (starting with Dunland, Lothlórien,
   Erebor/Dale, Mordor, and the eastern realms) against the established physical atlas.
   Any ownership correction must preserve the accepted coast, relief, forests, and river

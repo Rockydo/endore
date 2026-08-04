@@ -2,6 +2,13 @@
 
 ## 2026-08-04
 
+- v127 expands the frontier gazetteer/control ledger from 89 to 96 exact source-pinned
+  landmarks. Ford of Bruinen, Egladil, East Wall of Rohan, Old Ford, and Redhorn Pass
+  gain correct player-facing locations; Hollin Ridge is corrected from a nearest-Ranger
+  allocation to abandoned wild Eregion, and the Lone-lands are locked wild. Full
+  validation passed in 460.0 seconds and paired real-game smoke passed in 204.9 seconds
+  on fingerprint `580fe4052808c55a15601f170154babfbbc9d866f2671ab021103705c94af9c6`.
+  See `docs/m2/V127_FRONTIER_GAZETTEER_AND_CONTROL.md`.
 - v126 completes the full named-landmark control audit. All 89 authored landmarks now
   have a source-reviewed exact owner or wilderness disposition in a single checked
   ledger. It corrects the deserted-but-still-Gondorian Argonath, Amon Hen, and Amon Lhaw;

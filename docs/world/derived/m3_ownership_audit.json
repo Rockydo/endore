@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3028,
-  "wild_locations": 2172,
+  "owned_locations": 3027,
+  "wild_locations": 2173,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -1871,9 +1871,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 45,
+      "locations": 44,
       "eligible_locations": 103,
-      "claim_fill_fraction": 0.436893,
+      "claim_fill_fraction": 0.427184,
       "forced_anchors": 1,
       "final_bbox": [
         0.44884,
@@ -1884,12 +1884,12 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 45,
+        "largest_component": 44,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 45,
+            "size": 44,
             "forced_anchors": 1,
             "sample": [
               "me_land_0032",
@@ -2642,12 +2642,12 @@
     },
     "RAN": {
       "components": 1,
-      "largest_component": 45,
+      "largest_component": 44,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 45,
+          "size": 44,
           "forced_anchors": 1,
           "sample": [
             "me_land_0032",

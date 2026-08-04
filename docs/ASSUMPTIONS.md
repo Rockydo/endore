@@ -27,6 +27,9 @@ about Middle-earth.
 
 ## M3 realms and gazetteer
 
+- † The exact generated cells for the East Wall of Rohan and Old Ford sit on the
+  Rohan/Beorning sides of source-traced river frontiers. Those point controls do not
+  survey adjacent banks or convert the natural frontier into a broad polygon claim.
 - † EU5 resolves the Argonath, Amon Hen, and Amon Lhaw as separate passable cells around
   water and impassable Emyn Muil terrain. Tolkien explicitly retains the deserted sites
   in Gondor, so their exact cells are assigned to Gondor without inferring a broader
