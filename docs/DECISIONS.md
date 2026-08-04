@@ -1,5 +1,16 @@
 # Decisions
 
+## 2026-08-04 - Treat canon-clear named sites as exact control witnesses
+
+Lock a named site only where the ownership is explicit in the text or unambiguous from
+the named realm context, and only after the normal allocator already resolves it to that
+same owner. The v121 witnesses cover Wellinghall and Beorn's Hall; Cerin Amroth and the
+northern Mountains of Mirkwood; the interior of Mordor; Gondor's southern fiefs and
+beacon chain; and Rohan's named White Mountains sites. They are site-level regression
+controls, not a cadastral survey: no surrounding location, frontier, settlement, or
+population is inferred from one witness. Each continues to require its accepted source
+zone, polygon, or side-envelope proof. See `docs/m2/V121_CANONICAL_SITE_CONTROL_AUDIT.md`.
+
 ## 2026-08-04 — Keep the Eagles' Eyrie politically and demographically empty
 
 Treat the source-exact Eagles' Eyrie as an independent wild landmark at TA 3018, not a

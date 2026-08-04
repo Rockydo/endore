@@ -2,6 +2,16 @@
 
 ## 2026-08-04
 
+- v121 turns 24 already-correct, canon-clear sites into exact ownership regression
+  witnesses across Fangorn, the Beornings, Lothlorien, Mirkwood, Mordor, Gondor, and
+  Rohan. It deliberately moves no location: the regenerated audit records the named
+  textual basis for every locked control while all terrain, rivers, coastlines, realm
+  counts, and population assignments remain unchanged. The complete source ledger is
+  `docs/m2/V121_CANONICAL_SITE_CONTROL_AUDIT.md`. Full validation passed in 449.5
+  seconds (including the 377.7-second M2 world gate); the paired real-game smoke passed
+  in 201.7 seconds on unchanged fingerprint
+  `d511971af16d7b24784ebdf99f9493d7e039f46795d6333b68fd066a1a5f568e`, with zero new
+  mod-unique error-log lines.
 - v119 completes a narrow unclaimed-site source audit. Eagles' Eyrie is corrected from
   Beorning ownership to wild and explicitly remains empty of mortal population; Framsburg
   is corrected from Gundabad to wild and remains an empty ruin. Twelve already-correct

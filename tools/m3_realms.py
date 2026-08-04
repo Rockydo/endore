@@ -408,11 +408,108 @@ ROHAN_WHITE_MOUNTAIN_FRONTIER: tuple[tuple[float, float], ...] = (
 FRONTIER_LANDMARK_EXCLUSIONS: dict[str, frozenset[str]] = {
     "fords_of_isen": frozenset({"ISE"}),
 }
-# Named frontier sites provide more durable political witnesses than generated
-# location IDs. These rulings correct exact source anchors whose nearest-seat
-# allocation contradicts their TA 3018 control, settled-land boundary, or an
-# explicit physical frontier.
+# Named canonical sites provide more durable political witnesses than generated
+# location IDs. These rulings correct or lock exact source anchors whose
+# nearest-seat allocation could contradict their TA 3018 control, settled-land
+# boundary, or an explicit physical frontier. They never authorize a broad
+# cadastral claim beyond the one source-resolved location.
 FRONTIER_LANDMARK_REQUIRED_OWNERS: dict[str, tuple[str, str]] = {
+    "wellinghall": (
+        "FAN",
+        "Wellinghall is Treebeard's inhabited Fangorn refuge",
+    ),
+    "beorns_hall": (
+        "BEO",
+        "Beorn's Hall is the Beornings' named upper-Anduin settlement",
+    ),
+    "cerin_amroth": (
+        "LOR",
+        "Cerin Amroth lies within the Golden Wood of Lothlorien",
+    ),
+    "mountains_of_mirkwood": (
+        "WOO",
+        "the named northern Mountains of Mirkwood stand in the Woodland Realm",
+    ),
+    "udun": (
+        "MOR",
+        "Udun is the occupied northern vale inside Mordor's mountain wall",
+    ),
+    "gorgoroth": (
+        "MOR",
+        "the Plateau of Gorgoroth is the central land of Mordor",
+    ),
+    "nurn": (
+        "MOR",
+        "Nurn is Mordor's slave-worked southern basin at TA 3018",
+    ),
+    "lithlad": (
+        "MOR",
+        "Lithlad is Mordor's eastern ash plain",
+    ),
+    "tolfalas": (
+        "GON",
+        "Tolfalas is the Gondorian island at the mouths of Anduin",
+    ),
+    "pinnath_gelin": (
+        "GON",
+        "Pinnath Gelin is a fief of Gondor in the southern White Mountains",
+    ),
+    "lamedon": (
+        "GON",
+        "Lamedon answers Gondor's summons in the War of the Ring",
+    ),
+    "lossarnach": (
+        "GON",
+        "Lossarnach is a named Gondorian fief below Minas Tirith",
+    ),
+    "tarlangs_neck": (
+        "GON",
+        "Tarlang's Neck is the Gondorian route between Lamedon and the City",
+    ),
+    "amon_din": (
+        "GON",
+        "Amon Din is a maintained Gondorian warning beacon",
+    ),
+    "eilenach": (
+        "GON",
+        "Eilenach is a maintained Gondorian warning beacon",
+    ),
+    "erelas": (
+        "GON",
+        "Erelas is a maintained Gondorian warning beacon",
+    ),
+    "min_rimmon": (
+        "GON",
+        "Min-Rimmon is a maintained Gondorian warning beacon",
+    ),
+    "calenhad": (
+        "GON",
+        "Calenhad is a maintained Gondorian warning beacon",
+    ),
+    "amon_anwar": (
+        "GON",
+        "Amon Anwar remains Gondor's ancestral beacon and border hill",
+    ),
+    "glittering_caves": (
+        "ROH",
+        "the Glittering Caves open behind the Rohirric fortress of Helm's Deep",
+    ),
+    "paths_of_dead": (
+        "ROH",
+        "the Paths of the Dead are reached from Rohan's Dwimorberg approach",
+    ),
+    "irensaga": (
+        "ROH",
+        "Irensaga is a named Rohirric White Mountains summit",
+    ),
+    "dwimorberg": (
+        "ROH",
+        "Dwimorberg stands above the Rohirric Paths of the Dead",
+    ),
+    "starkhorn": (
+        "ROH",
+        "Starkhorn is a named Rohirric White Mountains summit",
+    ),
     "tharbad": (
         WILD,
         "ruined Tharbad has no TA 3018 sovereign administration",
