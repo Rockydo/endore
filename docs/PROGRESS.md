@@ -2,10 +2,12 @@
 
 ## 2026-08-04
 
-- v117 corrects the evidence driver after direct inspection found its old F11 location
-  shortcut could silently do nothing in Observer mode. The driver now opens the installed
-  clickable Finder and rejects an unchanged central-map frame. Unit coverage and full
-  validation are green; real-game confirmation is pending the cooperative EU5 slot.
+- v117's fresh no-debug Observer session confirms close 3D ground and vegetation render
+  correctly and plays for 45 seconds. Its Finder route now uses the installed clickable
+  controls, records a query readback, and fails closed on no motion. The native edit box
+  nevertheless rejected both synthesized typing and clipboard paste, so it correctly
+  refused to claim Bramlestead was Cerin Amroth. This bounded UI blocker is logged in
+  `BLOCKERS.md`; source-specific future captures require a materially different route.
 - v115 directly verifies the visual-profile renderer in a fresh real Observer session.
   The far political overview is strategic and flat by design; a close zoom shows actual
   terrain materials, vegetation objects, hills, and exposed rock. A subsequent 45-second

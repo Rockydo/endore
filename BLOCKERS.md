@@ -1,21 +1,26 @@
 # ENDÓRË Blockers
 
-## 2026-08-04 — v117 live Finder proof deferred behind Antiquitas
+## 2026-08-04 — v117 native Finder text automation
 
-Status: two-strike external coordination blocker; offline driver validation is green,
-but the fresh in-game proof is pending a natural free-slot checkpoint.
+Status: two-strike UI-automation blocker; fail-closed driver retained, direct source-targeted
+camera capture deferred.
 
-ENDÓRË attempted to start its source-targeted Finder verification at 08:17 UTC after
-discovering that the old F11 route could report a no-op focus. Antiquitas correctly held
-the shared EU5 smoke lease. After ENDÓRË completed full offline validation, a second
-natural slot check found Antiquitas in its own mod session (PID 23252), still under the
-same cooperative lease. Neither ENDÓRË attempt launched, waited on, or interfered with
-the other repository.
+The external Antiquitas lease was released naturally and ENDÓRË then ran one fresh
+no-debug Observer session (PID 28184). The close map visibly rendered terrain materials,
+tree objects, relief, and normal gameplay playback for 45 seconds. Direct inspection of
+the installed Finder established its true clickable menu and lateral-view geometry. The
+first route had clicked the map beneath `Open Finder`; it was corrected. The second route
+opened the genuine Finder, targeted its visible search box, and used the same clipboard
+paste method as the proven console driver. Its captured readback still showed the `Search...`
+placeholder and no result list; the game did not accept automated text. The route therefore
+returned failure on its 0.000341 camera delta rather than claiming that the retained
+Bramblestead selection was Cerin Amroth.
 
-The corrected Finder route uses the installed clickable control and rejects an unchanged
-central map frame; its unit and full static validation are green. Do not poll or make a
-third immediate game launch. Continue the offline M2 political-fidelity audit and retry
-one fresh visual Observer proof only at the next coherent map checkpoint.
+Do not run a third immediate Finder-input variant. `focus-location` keeps the corrected
+click geometry, result-click route, query readback capture, and unchanged-frame rejection
+so any future material UI discovery can use it without false positives. Continue M2 with
+the existing source-bound atlas/static controls and use only manually inspected generic
+close-render frames until a materially different native input route is found.
 
 ## 2026-07-28 — Direct centroid locators are rejected after custom-map geometry
 

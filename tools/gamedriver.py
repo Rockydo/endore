@@ -1976,8 +1976,18 @@ def key(args: argparse.Namespace) -> int:
 
 
 FINDER_TAB = (0.830, 0.140)
-FINDER_OPEN = (0.650, 0.390)
-FINDER_TEXT = (0.835, 0.290)
+# The Finder shortcut menu's explicit `Open Finder` button (not the map below
+# it) is centered around x=1280, y=322 in the fixed 1920x1080 viewport.
+FINDER_OPEN = (0.667, 0.298)
+# Finder's editable search box is in the header of the opened lateral view.
+# The former y=.290 point is in the empty results area: text was therefore sent
+# to the map rather than the field, and Enter could act on an unrelated selection.
+# Coordinates are normalized against the verified 1920x1080 EU5 viewport.
+FINDER_TEXT = (0.870, 0.222)
+# The first result button begins immediately under the search header.  Clicking
+# it is more robust than synthesizing Return through the input stack and
+# executes FindLocationItem.OnClick directly.
+FINDER_FIRST_RESULT = (0.870, 0.280)
 MIN_FINDER_CAMERA_DELTA = 0.002
 
 
@@ -2000,6 +2010,7 @@ def camera_delta_ratio(before, after) -> float:
 def focus_location(args: argparse.Namespace) -> int:
     """Center the live non-debug camera through EU5's clickable native Finder."""
     import pyautogui
+    import pyperclip
 
     query = args.query.strip()
     if not query:
@@ -2042,12 +2053,27 @@ def focus_location(args: argparse.Namespace) -> int:
     )
     pyautogui.hotkey("ctrl", "a")
     pyautogui.press("backspace")
-    pyautogui.write(query, interval=0.04)
+    # The Finder consumes direct key synthesis inconsistently under this
+    # machine's French keyboard layout.  The same native Ctrl+V path used by
+    # the proven console driver provides exact ASCII text without layout drift.
+    pyperclip.copy(query)
+    pyautogui.hotkey("ctrl", "v")
     time.sleep(args.search_settle)
-    press_scan_code(0x1C)
+    # Keep an inspectable readback of the native Finder query whenever the
+    # caller asked for evidence.  A camera-delta alone cannot establish that
+    # the requested text reached the edit box.
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        query_target = ROOT / "docs/screens" / session / f"{args.capture}_finder_query.png"
+        save_window_capture(query_target)
+    window = activate_window()
+    pyautogui.click(
+        window.left + round(window.width * FINDER_FIRST_RESULT[0]),
+        window.top + round(window.height * FINDER_FIRST_RESULT[1]),
+    )
     time.sleep(args.settle)
-    # Enter centers the first result but intentionally leaves Finder open.
-    # Its focused edit box owns Escape as FindLocationView.OnClose.
+    # The selected result centers the camera and intentionally leaves Finder
+    # open. Its focused edit box owns Escape as FindLocationView.OnClose.
     press_scan_code(0x01)
     time.sleep(1)
     # Keep hover popups out of the evidence frame after the camera transition.

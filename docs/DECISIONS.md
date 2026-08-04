@@ -4,10 +4,13 @@
 
 The installed UI exposes Finder through a clickable right-panel control. The previously
 used F11 route can return without opening it in the active Observer viewport, so a tool
-message alone is not evidence of focus. Use the clickable control and compare a
-UI-safe central-map crop before and after selection; reject the capture if its measured
-camera delta is below the committed threshold. The first live confirmation may wait for
-the shared EU5 lease, but no future source-bound capture may use the retired route.
+message alone is not evidence of focus. The real Finder menu and lateral view have now
+been measured, but its edit box rejected both direct typing and clipboard paste in a
+fresh Observer session. Keep the corrected click geometry and query readback capture,
+then compare a UI-safe central-map crop before and after selection; reject the capture if
+the query is absent or its measured camera delta is below the committed threshold. Do not
+make source-location claims from this navigation path until a materially different input
+route is proven.
 
 ## 2026-08-04 — Distinguish strategic overlay from close physical rendering
 
