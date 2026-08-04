@@ -80,6 +80,24 @@ EXPECTED_FOREST_KEYS = {
     "lindon_woods",
     "lossarnach_woods",
 }
+# These are deliberately map-scale point features omitted from the earlier
+# landmark ledger. Their coordinates are the exact Arda Maps -> ENDÓRË
+# transformation used by the control builder; all are far enough from an
+# existing named settlement to resolve to an honest distinct EU5 location.
+# Nearby source points such as Bag End or Brandy Hall remain aliases of their
+# already exact Hobbiton/Buckland locations rather than being displaced into a
+# neighbouring cell merely to increase a count.
+EXPECTED_SOURCE_POINT_LANDMARKS = {
+    "trollshaws": ("point_place", "TomBertWilliam", (0.462368, 0.227164)),
+    "morgul_vale": ("point_place", "MorgulVale", (0.599871, 0.596929)),
+    "thrihyrne": ("point_mount", "Thrihyrne", (0.468165, 0.507581)),
+    "dol_baran": ("point_mount", "DolBaran", (0.466451, 0.487359)),
+    "ras_morthil": ("point_mount", "RasMorthil", (0.370767, 0.664296)),
+    "ravenhill": ("point_mount", "Ravenhill", (0.602239, 0.151826)),
+    "ethring": ("point_ford", "Ethring", (0.532735, 0.628708)),
+    "white_towers": ("point_castletower", "WhiteTowers", (0.320639, 0.234862)),
+    "last_bridge": ("point_bridge", "LastBridge", (0.458353, 0.224332)),
+}
 SOURCE_DRAINAGE_THEATRES = {
     "northern_basins": {
         "bbox": (0.35, 0.00, 0.80, 0.32),
@@ -915,6 +933,25 @@ def render_report() -> dict:
         row["key"]: (float(row["x"]), float(row["y"]))
         for row in settlements
     }
+    landmark_by_ref = {landmark["ref"]: landmark for landmark in landmarks}
+    missing_source_points = sorted(
+        set(EXPECTED_SOURCE_POINT_LANDMARKS) - set(landmark_by_ref)
+    )
+    if missing_source_points:
+        failures.append(
+            "missing source-pinned map landmarks: " + ", ".join(missing_source_points)
+        )
+    for ref, (layer, event_name, expected) in EXPECTED_SOURCE_POINT_LANDMARKS.items():
+        landmark = landmark_by_ref.get(ref)
+        if landmark is None:
+            continue
+        actual = (float(landmark["x"]), float(landmark["y"]))
+        if actual != expected:
+            failures.append(
+                f"{ref} moved from exact Arda Maps {layer}:{event_name} control"
+            )
+        if landmark.get("cartography_reference") != f"Arda Maps {layer}: {event_name}":
+            failures.append(f"{ref} lost its exact Arda Maps point provenance")
     manual_landmarks = 0
     for landmark in landmarks:
         reference = landmark.get("cartography_reference", "").strip()
@@ -941,7 +978,7 @@ def render_report() -> dict:
     if failures:
         raise ValueError("; ".join(failures))
     return {
-        "schema": 6,
+        "schema": 7,
         "projection": EXPECTED_PROJECTION,
         "projection_sha256": projection_sha256,
         "feature_counts": feature_counts,

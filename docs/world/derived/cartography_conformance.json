@@ -1,5 +1,5 @@
 {
-  "schema": 6,
+  "schema": 7,
   "projection": {
     "source": "ardacraft_equal_scale_grid",
     "x_center": 10651.5,
@@ -132,7 +132,7 @@
   },
   "source_feeder_samples": 3091,
   "anchor_count": 42,
-  "landmark_count": 96,
+  "landmark_count": 105,
   "manual_or_reconciled_landmarks": 12,
   "synchronized_realm_seats": 38,
   "maximum_deviation": 0.00209318,

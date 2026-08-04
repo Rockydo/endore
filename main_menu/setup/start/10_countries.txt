@@ -1040,7 +1040,6 @@ countries = {
 				me_land_5080
 				me_land_5088
 				me_land_5094
-				me_land_5112
 				me_land_5125
 				me_land_5132
 				michel_delving
@@ -2158,7 +2157,9 @@ countries = {
 				me_land_0707
 				me_land_0870
 				me_land_0906
+				me_land_2794
 				me_land_3067
+				me_land_3742
 				me_land_3746
 			}
 			starting_technology_level = 3
@@ -2415,9 +2416,7 @@ countries = {
 				me_land_2401
 				me_land_2516
 				me_land_2580
-				me_land_2794
 				me_land_3176
-				me_land_3742
 				me_land_4250
 			}
 			starting_technology_level = 3
@@ -3652,6 +3651,7 @@ countries = {
 				me_land_0369
 				me_land_0370
 				me_land_0381
+				me_land_0413
 				me_land_0431
 				me_land_0464
 				me_land_0494

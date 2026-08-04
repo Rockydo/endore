@@ -10,6 +10,21 @@ normal source terrain remains below it, and source lakes keep their separate cha
 material treatment. Retain the installed palette and the Great River's index-15 contract.
 See `docs/m2/V129_INDEXED_RIVER_SURFACE_ISOLATION.md`.
 
+## 2026-08-04 - Add only map-scale source points as new named locations
+
+Use the exact Arda Maps point transformation to add nine missing, well-separated named
+landmarks. The new rows improve practical map orientation in Eriador, Rohan, Gondor,
+Mordor, and the Lonely Mountain theatre while leaving all physical geometry and broad
+political claims untouched. Closely packed source points remain aliases of their existing
+exact EU5 locations instead of being forced into a misleading neighbouring cell. The
+cartography audit freezes every new coordinate and source point type.
+
+Bombadil's House remains an exact source reference but not a separate generated cell: the
+local tessellation resolves it into the Brandywine frontier and a discrete ownership cell
+would create a false Breeland fragment. Ravenhill and its immediately adjacent southern
+spur are instead bounded by the source-pinned compact Erebor contour; this preserves the
+Lonely Mountain holding and prevents a false one-cell Dale enclave.
+
 ## 2026-08-04 - Make the full political review fail closed without inventing borders
 
 Bind six source-led political review envelopes to the generated ownership model: the Gap

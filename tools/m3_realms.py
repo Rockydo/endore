@@ -240,7 +240,10 @@ CLAIM_POLYGONS: dict[str, tuple[tuple[tuple[float, float], ...], str]] = {
             (0.6140, 0.128),
             (0.6140, 0.138),
             (0.6070, 0.146),
-            (0.5980, 0.148),
+            (0.6070, 0.152),
+            (0.6010, 0.158),
+            (0.5920, 0.157),
+            (0.5880, 0.151),
             (0.5890, 0.143),
             (0.5850, 0.133),
             (0.5890, 0.123),
@@ -422,7 +425,7 @@ POLITICAL_SILHOUETTE_CONTRACTS: dict[
     "ERE": (
         7,
         12,
-        (0.585, 0.614, 0.118, 0.148),
+        (0.585, 0.614, 0.118, 0.160),
         "Erebor must remain a compact Lonely Mountain holding, not an east-west strip",
     ),
     "DAL": (
@@ -712,6 +715,14 @@ FRONTIER_LANDMARK_CLAIM_EXCEPTIONS: dict[tuple[str, str], str] = {
         "morgai",
         "MOR",
     ): "LOTR, Book IV, Ch. 8: the inner Morgai ridge lies in the land of Mordor",
+    (
+        "morgul_vale",
+        "MOR",
+    ): "LOTR, Book IV, Ch. 8: Minas Morgul's guarded vale is a Mordor-held approach",
+    (
+        "ravenhill",
+        "ERE",
+    ): "The Hobbit, Ch. 14: Ravenhill is an Erebor outwork, not a Dale border expansion",
 }
 # The climate-density reseed changed generated location IDs after the v77/v78
 # political review. Each repair therefore carries a narrow physical witness as
@@ -808,6 +819,12 @@ REVIEWED_COMPONENT_REPAIRS: dict[
         "me_rohan_region",
         (0.465, 0.480, 0.440, 0.455),
     ),
+    "me_land_3742": (
+        "ERE",
+        "Ravenhill's immediate southern spur, part of the compact Lonely Mountain holding",
+        "me_dale_region",
+        (0.590, 0.605, 0.145, 0.160),
+    ),
 }
 # Every surviving non-primary, non-forced political component has an explicit
 # physical explanation. The exact member sets intentionally make topology
@@ -832,6 +849,10 @@ REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
     ("MOR", frozenset({"me_land_2931"})): (
         "Morgai inner-ridge operational witness divided from the Mordor basin by "
         "impassable mountain topology"
+    ),
+    ("MOR", frozenset({"me_land_0413"})): (
+        "Morgul Vale occupied witness divided from the Mordor basin by the Ephel "
+        "Duath impassable enclosure"
     ),
     (
         "ROH",

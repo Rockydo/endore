@@ -2,6 +2,18 @@
 
 ## 2026-08-04
 
+- v130 adds nine exact Arda Maps landmarks where the active EU5 tessellation can represent
+  them without inventing political geography: Trollshaws, Morgul Vale, Thrihyrne, Dol
+  Baran, Ras Morthil, Ravenhill, Ethring, the White Towers, and the Last Bridge. Bombadil's
+  House is deliberately retained as an orientation/source reference rather than a false
+  Breeland frontier island; Ravenhill receives only its immediate compact Lonely Mountain
+  spur, and the exact Morgul Vale witness is documented as physically split by the Ephel
+  Duath. The complete ownership model remains 38 realms, 3,027 assigned locations, and
+  2,977 intentional wilderness cells. Final validation passed in 541.0 seconds; paired
+  real-game smoke passed in 202.2 seconds with zero ENDÓRË-unique error-log lines, and
+  the exact smoke assertion passed on fingerprint
+  `53c79256d565726bd643d77d2b95bd2e027f0dc4f10476ec7f24d8d5f5361bdd`. See
+  `docs/m2/V130_SOURCE_PINNED_LANDMARK_TOPOLOGY.md`.
 - v129 removes the remaining duplicate river-material layer after direct owner review
   reported a blue tiled shoulder beside thin engine water. The terrain virtual-texture
   cache no longer paints channel 6 at any resolution; `map_data/rivers.png` alone draws

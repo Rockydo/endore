@@ -613,3 +613,15 @@ about Middle-earth.
   Representing it as a nested outgoing branch preserves every source endpoint and vanilla's
   tree grammar; it does not imply that the source's incompatible same-Anduin-junction arm
   may also be promoted.
+
+## v130 source-pinned map-scale landmarks
+
+- † EU5's local tessellation cannot honestly turn every closely packed source point into a
+  separate location. Bag End, Brandy Hall, Bombadil's House, and the smallest Shire
+  hamlets remain aliases of their exact nearby named locations; nine separated source
+  points receive their own named locations. Bombadil's House resolves into the same
+  small frontier neighbourhood as Brandywine Bridge: promoting it would create either a
+  false Breeland island or a false Breeland claim over an independent refuge. Its source
+  point is consequently retained as a terrain/orientation reference, not an ownership cell.
+  New landmark dispositions are point controls only and do not draw a cadastral border
+  around an otherwise unsettled area.
