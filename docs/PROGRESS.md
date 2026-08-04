@@ -2112,3 +2112,25 @@
   TA 3018.1.13 16:00 in 45 seconds with zero recovery and a normal 1,486-byte final log.
   The v108 river mechanism is technically green; M2 remains red pending owner acceptance
   of the overall map.
+
+## 2026-08-04 - v109 nested Ethir mouth
+
+- Promoted exact Arda Maps `line_river` 71 part 5 as a nested outgoing branch from the
+  v108 part-6/part-4 arm. The static raster contains 16 systems, 38 red junctions, two
+  yellow distributaries, 56 genuine courses, and 61,432 indexed pixels; its exact 4x
+  material footprint is 982,912 pixels.
+- The Anduin component has one source, 19,353 pixels, 19,352 edges, and cycle rank zero.
+  Both yellow pixels have degree two and each is adjacent to exactly one degree-three
+  split. The incompatible other delta side remains dry because it would create degree four
+  at the already occupied Anduin junction.
+- Rebuilt the coherent map/cache tree in 683.9 seconds. The cache retains 174,763 tiles,
+  45,053 unique material tiles, a 23.6 MB material payload, and zero Earth decals; the
+  6,004-location model remains `2276dfd0...`. Candidate fingerprint is
+  `57db5107df395adb1b1a1bf4b0d0f52c8b223392e1ad2f957cc58609763eea21`.
+- Paired smoke passes in 202.4 seconds with zero new/mod-unique lines, and the exact-
+  fingerprint assertion passes. The identical Ost galenen camera under
+  `docs/screens/20260804_v109_nested_ethir/` shows a compact natural coastal Y-fork with no
+  parallel blue material. Playback reaches TA 3018.1.13 19:00 in 45 seconds with zero
+  recovery and a normal 1,486-byte log.
+- Final full validation passes in 537.4 seconds, including the 445.9-second deterministic
+  M2 world gate and `pdxlint`.

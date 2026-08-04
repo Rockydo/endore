@@ -591,3 +591,7 @@ about Middle-earth.
 - The remaining Ethir and Mouths of Entwash source lines stay as dry physical drainage.
   Their presence in the source does not justify an engine-water braid, cyclic component,
   or cosmetic connection that vanilla's installed raster does not demonstrate.
+- Arda Maps part 5 is a second sea mouth from the same internal junction as parts 6 and 4.
+  Representing it as a nested outgoing branch preserves every source endpoint and vanilla's
+  tree grammar; it does not imply that the source's incompatible same-Anduin-junction arm
+  may also be promoted.

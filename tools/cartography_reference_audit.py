@@ -34,7 +34,7 @@ EXPECTED_PROJECTION = {
     "canvas_aspect": 2.0,
 }
 EXPECTED_PROJECTION_SHA256 = (
-    "591a76700de1352533591d4c4750a56f58f3a215103c63d44ac44178d9ebb3e8"
+    "d6a82d0013f67fd6cb2f2568e8642f64ea6069f3f67bb2c0fb972fddd0d62d2e"
 )
 EXPECTED_RELIEF_FILE_SHA256 = (
     "666ab17a55a268b801a51dcebeede662ee3f4e840bf497fe61c6300b170505c1"
@@ -434,7 +434,7 @@ def render_report() -> dict:
     terrain_only_rivers = [
         item for item in projection["rivers"] if item.get("terrain_only")
     ]
-    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 44:
+    if len(projection["rivers"]) != 102 or len(terrain_only_rivers) != 43:
         raise ValueError("source tributary coverage changed without cartographic review")
     named_supplementary_count = sum(
         bool(item.get("label")) for item in terrain_only_rivers
@@ -545,6 +545,7 @@ def render_report() -> dict:
             "source_unnamed_10_00": None,
             "source_unnamed_11_00": None,
             "source_unnamed_71_04": "split:anduin",
+            "source_unnamed_71_05": "split:source_unnamed_71_04",
         }.items()
     }
     actual_engine_supplementary = {
@@ -585,7 +586,7 @@ def render_report() -> dict:
         "named_branch": 1,
         "named_tributary": 12,
         "unnamed_branch": 5,
-        "unnamed_feeder": 25,
+        "unnamed_feeder": 24,
         "unnamed_trunk": 1,
     }
     actual_hydrology_classes = {

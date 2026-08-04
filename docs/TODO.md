@@ -1,24 +1,19 @@
 # TODO
 
-## Immediate gate - v108 first source-exact distributary
+## Immediate gate - v109 nested Ethir mouth
 
-- v107 is validated, live-proven, and published as `c28b445`. Never restore painted river
+- v108 is validated, live-proven, and published as `fcad75a`. Never restore painted river
   width: channel 6 remains the exact indexed footprint only.
-- The candidate adds one exact southern Ethir arm using vanilla's yellow outgoing-branch
-  grammar. The Anduin component remains an acyclic tree; the former part-0 braid is
-  rejected because it reconnects to the trunk.
-- Static regeneration and full validation are green: 16 systems, 38 red junctions, one
-  yellow distributary, 55 genuine courses, 61,344 indexed source pixels, an exact 981,504-
-  pixel material footprint, and 45,053 unique material tiles. Candidate fingerprint:
-  `f4193469621a29e6028b02f984f3b17d86f74329560c368921269d8f5ce9123a`.
-- TECHNICAL GATE GREEN: paired smoke passes in 203.8 seconds with zero new/mod-unique
-  lines; exact-fingerprint assertion passes. The fresh source/course-bound Ost galenen
-  close frame shows a continuous Y-shaped engine split and sea-going arm without parallel
-  blue terrain; 45-second maximum-speed playback reaches TA 3018.1.13 16:00 with zero
-  recovery and the normal 1,486-byte log. Commit and push the coherent v108 batch.
-- NEXT RIVER BATCH: test the second exact sea mouth (`line_river` 71 part 5) as a nested
-  yellow branch from the now-proven part-6/part-4 arm. Keep the source's other same-junction
-  delta side dry because promoting it would create degree four at the Anduin split.
+- The candidate adds exact source part 5 as a nested yellow branch from the v108 Ethir arm.
+  Static graph: 16 systems, 38 red junctions, two yellow splits, 56 courses, cycle rank
+  zero, 61,432 indexed pixels, exact 982,912-pixel material footprint.
+- TECHNICAL LIVE GATES GREEN on fingerprint `57db5107...`: paired smoke passes in 202.4
+  seconds with zero new/mod-unique lines; exact-fingerprint assertion passes. Same-camera
+  close review shows a compact natural coastal Y-fork without parallel blue terrain;
+  45-second playback reaches TA 3018.1.13 19:00 with zero recovery and a normal log.
+- Final full validation passes in 537.4 seconds (M2 world 445.9 seconds). Commit and push
+  the coherent v109 batch. Keep the other same-Anduin-junction delta side dry; it would
+  create a degree-four node.
 
 1. REOPENED M2 remains the sole content priority. Follow
    `docs/m2/VISUAL_REOPEN_GATE.md`; do not resume gameplay work until the physical map

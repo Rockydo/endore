@@ -22,7 +22,7 @@
   "material_sources": {
     "in_game/gfx/terrain2/heightmap.png": "ebec3ed2ebef5c112bcafe738dab01922491f9a185278b47c709602af69f159b",
     "docs/world/control/biomes.png": "c041b21d3569e1552e3a754f04dee0d045134a5f8e72a2fd8549d8f1a569e7d3",
-    "docs/world/control/projection.json": "591a76700de1352533591d4c4750a56f58f3a215103c63d44ac44178d9ebb3e8",
+    "docs/world/control/projection.json": "d6a82d0013f67fd6cb2f2568e8642f64ea6069f3f67bb2c0fb972fddd0d62d2e",
     "in_game/gfx/terrain2/materials.txt": "5717d4bf7c02243e43e8cdb3e32bf035e74d1d981599e366874cf9c4f325562f"
   },
   "mip_layout": [
@@ -113,12 +113,12 @@
       "sha256": "069825b0b209ac0326ca9dc82aaac43a7158043942385a62d7564e00ac6f8a5e"
     },
     "materials.bin": {
-      "bytes": 23607582,
-      "sha256": "cf733f5abf6b11f311c8b9d9c96c23111c5734da18a2f0ebeae78f046cc37ca7"
+      "bytes": 23608235,
+      "sha256": "ada790370c095dd05a9eca87d0b85fb4e27c135784b849b358d43b29ed2e18ab"
     },
     "materials.info": {
-      "bytes": 5189064,
-      "sha256": "d89727fdf512e2b122cfb9543da6f3e2661897b95583680933f010be82da9284"
+      "bytes": 5189066,
+      "sha256": "455335e8177169bd8bfba96160bec4b2c7fa3a72762828979eebc8593f5441a1"
     },
     "quadtree_nodes.bin": {
       "bytes": 67108880,
@@ -126,7 +126,7 @@
     },
     "checksum.json": {
       "bytes": 58,
-      "sha256": "1dd7764e23a785e3fdae439c1c407d659aeb3460b9cd07cc25ccaa496de8f208"
+      "sha256": "99e31ba23646c07412285397fc59e640f9cbd5bf53b11d88f9bcf2ffb39d1624"
     }
   }
 }

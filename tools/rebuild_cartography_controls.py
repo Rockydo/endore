@@ -155,6 +155,7 @@ SUPPLEMENTARY_ENGINE_ROOTS = {
 # split is represented without loops or cosmetic connectors.
 SUPPLEMENTARY_ENGINE_SPLITS = {
     "source_unnamed_71_04": "anduin",
+    "source_unnamed_71_05": "source_unnamed_71_04",
 }
 
 

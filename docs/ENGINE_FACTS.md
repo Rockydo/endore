@@ -483,3 +483,8 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   that graph: a bound maximum-close Ost galenen view shows a continuous Y-shaped engine
   spline reaching the sea with no parallel material band. The exact fingerprint completes
   45 seconds of maximum-speed Observer play with zero recovery and a normal 1,486-byte log.
+- Build 24187685 also accepts a yellow outgoing branch whose parent is itself a yellow-
+  marked distributary path. The v109 Anduin component contains one green source, two
+  yellow splits, 19,353 pixels, 19,352 edges, and cycle rank zero. A like-for-like Ost
+  galenen close frame shows the second exact Ethir mouth as a compact natural fork rather
+  than a comb or doubled stroke; 45-second maximum-speed playback is stable.

@@ -138421,8 +138421,8 @@
       "label": null,
       "width": 0.00125,
       "wander": 0.0,
-      "engine_raster": false,
-      "terrain_only": true,
+      "engine_raster": true,
+      "terrain_only": false,
       "hydrology_class": "unnamed_feeder",
       "incision_strength": 108,
       "material_scale": 0.68,
@@ -138445,7 +138445,8 @@
           0.721136
         ]
       ],
-      "source": "Arda Maps line_river 71 part 5"
+      "source": "Arda Maps line_river 71 part 5",
+      "splits": "source_unnamed_71_04"
     },
     {
       "key": "source_unnamed_71_06",

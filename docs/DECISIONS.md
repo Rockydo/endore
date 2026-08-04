@@ -1875,3 +1875,16 @@ exact raster-derived material footprint, full validation, paired smoke, a bound 
 close view, and fresh Observer playback before accepting the mechanism. The v108 evidence
 passes every gate; accept the mechanism and this first arm. Treat the second exact mouth
 at the internal part-6 junction as the next bounded candidate, not as part of this proof.
+
+## 2026-08-04 - Add the second Ethir mouth as a nested split
+
+Promote Arda Maps `line_river` 71 part 5 as a yellow outgoing branch from the proven
+part-6/part-4 composite. It shares the source's exact internal junction and reaches engine
+water independently, so no connector, name, or altered coast is required. Keep part 4 as
+the continuation and part 5 as the marked branch; the resulting component remains an
+acyclic degree-three tree.
+
+Accept the nested split after paired smoke, an identical-camera v108/v109 close comparison,
+and playback. The second mouth forms a compact coastal Y without blue terrain shoulders.
+Do not promote parts 10/8/7 from the Anduin junction: part 6 already occupies the only
+available outgoing edge there, and a second source-exact arm would create degree four.
