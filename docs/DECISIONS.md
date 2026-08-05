@@ -2219,3 +2219,19 @@ that namespace. Short country tags such as `ANG` and `ISE` collide with installe
 whereas the prefix preserves the same realm tags, colours, and vanilla emblem references
 without sharing installed identifiers. Require a fresh deep-load log to prove that the
 earlier `NCoatOfArms::SCoatOfArmsSpriteWrapper` diagnostic is gone before accepting M2.
+
+## 2026-08-06 - Use native Terrain binding and calibrated physical depth for M2 evidence
+
+Retire `mapmode terrain` from the evidence runner: it is accepted by the debug console as
+text but is not the retail GUI data-model action and did not alter the strategic overlay.
+The installed input profile defines Ctrl+Q as the first pinned Terrain-slot binding, so the
+runner restores that exact scan-code route and captures its result. Set the isolated visual
+profile's installed `Map.flatmap_mode` to `never`; this is required to prevent the paper
+flatmap fallback from masking a valid custom 3D world.
+
+Treat the generated-key camera transform as a source-exact orientation baseline, not proof
+of maximum-close detail. The exact Old Forest live calibration proves sixteen wheel-in
+detents reach dense physical canopy. Atlas close frames use that depth, with the existing
+zero/one per-theatre value retained only as a documented context backoff. Do not change
+terrain assets or accept M2 from this calibration alone; the complete non-debug atlas and
+deep log remain required.

@@ -1,5 +1,18 @@
 # Progress
 
+## 2026-08-06
+
+- The fresh M2 visual-profile calibration identifies the remaining flat-looking map issue
+  as the installed flat-map fallback, not vanilla geography or a failed terrain cache.
+  `Map.flatmap_mode = "never"` now persists in ENDÓRË's isolated user profile and the
+  native Ctrl+Q Terrain-slot binding replaces the ineffective `mapmode terrain` console
+  attempt. A fresh exact-key Old Forest probe visibly shows custom 3D relief at regional
+  scale and, after sixteen calibrated wheel-in detents, dense physical Old Forest canopy
+  with the engine's own `me_land_4390` readback. The same session starts and stops cleanly;
+  this proves the renderer and source camera but is not yet the non-debug full M2 atlas or
+  deep-log acceptance. Evidence: `docs/screens/20260806_m2_flatmap_never_probe/` and
+  `docs/screens/20260806_m2_max_close_calibration/`.
+
 ## 2026-08-05
 
 - The exact-key camera calibration is now proven in a live debug-mode Observer rather than

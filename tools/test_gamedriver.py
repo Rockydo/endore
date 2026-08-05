@@ -24,9 +24,11 @@ from gamedriver import (
     observer_pause_banner,
     observer_start_button_state,
     observer_toggle_ready,
+    set_fixed_bindings,
     set_player_visual_settings,
     transition_completion_signal,
 )
+from capture_m2_theatres import MAX_CLOSE_ZOOM_IN, close_zoom_steps
 from smoketest import restore_settings, runtime_link_needs_repair, settings_snapshot
 
 
@@ -40,6 +42,11 @@ def write(path: Path, *lines: str) -> None:
 
 
 def main() -> int:
+    require(
+        close_zoom_steps(0) == MAX_CLOSE_ZOOM_IN
+        and close_zoom_steps(1) == MAX_CLOSE_ZOOM_IN - 1,
+        "M2 close frames must use the live-proven physical zoom depth, not the source-transform baseline",
+    )
     require(
         exact_location_camera_command("me_land_4390")
         == "Camera.SetTransform 6356 0 6192 1800 72 0",
@@ -103,6 +110,10 @@ def main() -> int:
             "the player visual profile must enable terrain material projection",
         )
         require(
+            visual_settings["Map"]["flatmap_mode"] == "never",
+            "the player visual profile must keep the 3D terrain visible at every zoom",
+        )
+        require(
             visual_settings["Audio"] == original_settings["Audio"],
             "the player visual profile must preserve personal audio settings",
         )
@@ -114,6 +125,16 @@ def main() -> int:
         require(
             json.loads(settings.read_text(encoding="utf-8")) == original_settings,
             "smoke settings restoration must reproduce the exact player payload",
+        )
+
+        set_fixed_bindings(settings.parent)
+        bindings = (settings.parent / "user_bindings" / "user.bindings").read_text(
+            encoding="utf-8"
+        )
+        require(
+            'input_action="mapmode_slot_1"\n\tscancode=16\n\tmodifier=ctrl'
+            in bindings,
+            "terrain evidence must retain retail Ctrl+Q first-slot binding",
         )
 
         unchanged = Image.new("RGB", (1000, 600), (42, 80, 36))

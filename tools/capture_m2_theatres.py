@@ -22,6 +22,12 @@ EX_TEMPFAIL = 75
 RUNTIME_LOG_DIR = Path(r"G:\endore_user_data\logs")
 ERROR_LOG = RUNTIME_LOG_DIR / "error.log"
 ERROR_TIMESTAMP = re.compile(r"^\[\d\d:\d\d:\d\d\]")
+# ``Camera.SetTransform``'s audited 1800-distance source centre is a reliable
+# coordinate anchor but *not* the retail maximum-close camera. Sixteen physical
+# wheel detents from it were live-proven to reach dense, individual Old Forest
+# canopy. The per-theatre close value remains a one-detent backoff only where a
+# feature needs slightly more context.
+MAX_CLOSE_ZOOM_IN = 16
 
 # The retail automatic ``common/tests`` scheduler is currently unavailable in
 # this installed build (see BLOCKERS.md).  The live debug console's
@@ -65,8 +71,9 @@ class Theatre:
     slug: str
     regional_query: str
     close_query: str
-    # Finder focus establishes a stable maximum-close 3D camera. These are
-    # zoom-out detents from that camera, not absolute zoom-ins from full map.
+    # Regional views zoom out from the generated-key source transform. Close
+    # views zoom into its live-proven maximum, with this value as a context
+    # backoff (0 is maximum close; 1 is one detent wider).
     regional_zoom: int = 6
     close_zoom: int = 1
 
@@ -430,11 +437,42 @@ def check_manifest() -> list[str]:
 def reset_and_capture(query: str, zoom: int, name: str, session: str) -> int:
     commands = (
         ("goto-location", location_key_for_query(query), "--settle", "4"),
-        # Exact-key console focus establishes both the correct centre and a
-        # maximum-close 3D camera. Apply a bounded zoom-out from that known
-        # state: a larger value gives the regional frame and a smaller value
-        # the close frame.
+        # The exact-key source transform establishes a reliable strategic
+        # centre. Apply bounded zoom-out only for the orientation frame.
         ("scroll", str(-zoom), "--settle", "4"),
+        (
+            "move",
+            "0.95",
+            "0.10",
+            "--settle",
+            "3",
+            "--capture",
+            name,
+            "--session",
+            session,
+        ),
+    )
+    for command in commands:
+        result = driver(*command)
+        if result:
+            return result
+    return 0
+
+
+def close_zoom_steps(backoff: int) -> int:
+    """Return physical zoom-in detents for a feature close frame."""
+    if not 0 <= backoff < MAX_CLOSE_ZOOM_IN:
+        raise ValueError(f"invalid close-camera backoff {backoff}")
+    return MAX_CLOSE_ZOOM_IN - backoff
+
+
+def reset_and_capture_close(
+    query: str, backoff: int, name: str, session: str
+) -> int:
+    """Focus a second audited source key and reach its physical close scale."""
+    commands = (
+        ("goto-location", location_key_for_query(query), "--settle", "4"),
+        ("scroll", str(close_zoom_steps(backoff)), "--duration", "3", "--settle", "5"),
         (
             "move",
             "0.95",
@@ -461,7 +499,7 @@ def capture_theatre(theatre: Theatre, session: str) -> int:
     frames.  A console ``goto`` is required to prove the first source-bound
     centre, but issuing it again after only a zoom change has no camera delta
     and must remain a failure in ``gamedriver``.  Reuse that proven centre and
-    restore the close zoom instead; distinct regional/close locations still
+    restore the physical close zoom instead; distinct regional/close locations still
     receive two independently measured console transitions.
     """
     result = reset_and_capture(
@@ -476,7 +514,7 @@ def capture_theatre(theatre: Theatre, session: str) -> int:
     if location_key_for_query(theatre.regional_query) == location_key_for_query(
         theatre.close_query
     ):
-        zoom_in = theatre.regional_zoom - theatre.close_zoom
+        zoom_in = theatre.regional_zoom + close_zoom_steps(theatre.close_zoom)
         if zoom_in:
             result = driver("scroll", str(zoom_in), "--settle", "4")
             if result:
@@ -493,7 +531,7 @@ def capture_theatre(theatre: Theatre, session: str) -> int:
             session,
         )
 
-    return reset_and_capture(
+    return reset_and_capture_close(
         theatre.close_query,
         theatre.close_zoom,
         f"{theatre.slug}_close",
@@ -517,15 +555,23 @@ def capture(
     if result:
         return result
     try:
-        if debug_mode:
-            # ``--visual-map`` configures the renderer quality but deliberately
-            # preserves the player's last strategic map mode.  M2's binding
-            # close evidence must show the physical terrain, not the political
-            # overlay; the debug-only calibration session can request the
-            # installed terrain map mode through the now-acknowledged console.
-            result = driver("console", "mapmode terrain", "--paste", "--settle", "3")
-            if result:
-                return result
+        # ``--visual-map`` disables the installed flatmap fallback but
+        # deliberately preserves the player's last strategic map mode. M2
+        # close evidence must show the native physical Terrain map, so invoke the retail
+        # Ctrl+Q first-slot binding.  This is the actual GUI route documented
+        # in default.profile and the tutorial; ``mapmode terrain`` is not a
+        # retail console command and must never be used as visual proof.
+        result = driver(
+            "terrain-map",
+            "--settle",
+            "3",
+            "--capture",
+            "00_terrain_mode",
+            "--session",
+            session,
+        )
+        if result:
+            return result
         if not hydrology_only and not drainage_only and not target_slugs:
             # Bind the full-map silhouette gate to the same fresh renderer
             # state as the theatre pairs. Center first because a console goto

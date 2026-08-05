@@ -182,6 +182,11 @@ def set_fixed_settings(user_dir: Path, *, visual_map: bool = False) -> None:
                 "render_scale": 1.0,
             }
         )
+        # The native Terrain map mode still falls back to the paper flatmap at
+        # the user's configured threshold.  M2 must test the actual 3D world,
+        # so use the installed player setting that the working ANTIQVITAS
+        # profile retains: never substitute the flat map during evidence.
+        value.setdefault("Map", {}).update({"flatmap_mode": "never"})
     value.setdefault("Terrain", {}).update(
         {
             "3d_terrain_disable": not visual_map,
@@ -218,6 +223,7 @@ def set_player_visual_settings(user_dir: Path) -> None:
             "render_scale": 1.0,
         }
     )
+    value.setdefault("Map", {}).update({"flatmap_mode": "never"})
     value.setdefault("Terrain", {}).update(
         {
             "3d_terrain_disable": False,
@@ -254,7 +260,13 @@ def profile(args: argparse.Namespace) -> int:
 
 
 def set_fixed_bindings(user_dir: Path) -> None:
-    """Install deterministic map/camera keys for autonomous terrain inspection."""
+    """Install deterministic map/camera keys for autonomous terrain inspection.
+
+    The retail profile binds the first map-mode slot to Ctrl+Q and pins the
+    native ``terrain`` map mode there.  Do not replace it with an arbitrary
+    key: that shortcut is the installed, player-visible return-to-terrain
+    contract and is layout-independent when sent by scan code below.
+    """
     path = user_dir / "user_bindings" / "user.bindings"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(
@@ -277,7 +289,8 @@ binding={
 
 binding={
 \tinput_action="mapmode_slot_1"
-\tscancode=69
+\tscancode=16
+\tmodifier=ctrl
 }
 
 binding={
@@ -1992,6 +2005,39 @@ def console(args: argparse.Namespace) -> int:
     return 0
 
 
+def terrain_map(args: argparse.Namespace) -> int:
+    """Activate the native default Terrain map mode via its installed binding.
+
+    ``mapmode terrain`` is not a console command in retail EU5; it is a GUI
+    data-model action.  The first pinned slot is Terrain by default, and the
+    shipped input profile exposes that exact route as Ctrl+Q.  Send physical
+    scan code 0x10 while holding Ctrl so a French AZERTY desktop cannot turn
+    the intended game shortcut into a different logical key.
+    """
+    import pyautogui
+
+    window = focus_game()
+    ctrl_down = 0x0000
+    ctrl_up = 0x0002
+    ctypes.windll.user32.keybd_event(0x11, 0, ctrl_down, 0)  # VK_CONTROL
+    try:
+        press_scan_code(0x10)  # Q-position scan code used by default.profile
+    finally:
+        ctypes.windll.user32.keybd_event(0x11, 0, ctrl_up, 0)
+    time.sleep(args.settle)
+    print("terrain map requested through installed Ctrl+Q slot binding")
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        image = pyautogui.screenshot(
+            region=(window.left, window.top, window.width, window.height)
+        )
+        image.save(target)
+        print(target)
+    return 0
+
+
 def exact_location_camera_command(location: str) -> str:
     """Return the installed camera command for one generated location key.
 
@@ -2546,6 +2592,11 @@ def build_parser() -> argparse.ArgumentParser:
     hotkey_parser.add_argument("--capture", help="capture this name after the hotkey")
     hotkey_parser.add_argument("--session")
     hotkey_parser.set_defaults(func=hotkey)
+    terrain_map_parser = sub.add_parser("terrain-map")
+    terrain_map_parser.add_argument("--settle", type=float, default=2)
+    terrain_map_parser.add_argument("--capture", help="capture after selecting Terrain")
+    terrain_map_parser.add_argument("--session")
+    terrain_map_parser.set_defaults(func=terrain_map)
     console_parser = sub.add_parser("console")
     console_parser.add_argument("command")
     console_parser.add_argument("--settle", type=float, default=2)

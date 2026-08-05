@@ -488,3 +488,12 @@ Europa Universalis V 1.3.1.1 (Pavia), checksum 7917; metadata uses comparator `1
   yellow splits, 19,353 pixels, 19,352 edges, and cycle rank zero. A like-for-like Ost
   galenen close frame shows the second exact Ethir mouth as a compact natural fork rather
   than a comb or doubled stroke; 45-second maximum-speed playback is stable.
+- Build 24187685 retains a player-selected `Map.flatmap_mode = "never"` across launch and
+  then renders ENDÓRË's own 3D relief, material ground, water, and map objects beneath the
+  native Terrain map mode. Leaving the setting at the game default can show the strategic
+  paper layer instead, even after a valid `Terrain.3d_terrain_disable = false` profile.
+- The exact generated-key `Camera.SetTransform` source centre at distance 1800 is an
+  orientation baseline, not a maximum-close camera. From that transform, sixteen physical
+  wheel-in detents visibly resolve the exact Old Forest (`me_land_4390`) as dense individual
+  canopy. M2 close evidence must use this calibrated depth (or a documented one-detent
+  contextual backoff), while regional screenshots preserve broader orientation.
