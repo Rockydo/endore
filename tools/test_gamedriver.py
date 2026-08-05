@@ -28,7 +28,7 @@ from gamedriver import (
     set_player_visual_settings,
     transition_completion_signal,
 )
-from capture_m2_theatres import MAX_CLOSE_ZOOM_IN, close_zoom_steps
+from capture_m2_theatres import REVIEW_CLOSE_ZOOM_IN, close_zoom_steps
 from smoketest import restore_settings, runtime_link_needs_repair, settings_snapshot
 
 
@@ -43,9 +43,9 @@ def write(path: Path, *lines: str) -> None:
 
 def main() -> int:
     require(
-        close_zoom_steps(0) == MAX_CLOSE_ZOOM_IN
-        and close_zoom_steps(1) == MAX_CLOSE_ZOOM_IN - 1,
-        "M2 close frames must use the live-proven physical zoom depth, not the source-transform baseline",
+        close_zoom_steps(0) == REVIEW_CLOSE_ZOOM_IN
+        and close_zoom_steps(1) == REVIEW_CLOSE_ZOOM_IN - 1,
+        "M2 close frames must use the calibrated physical review depth, not the source-transform baseline",
     )
     require(
         exact_location_camera_command("me_land_4390")

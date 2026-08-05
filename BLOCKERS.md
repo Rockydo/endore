@@ -648,3 +648,18 @@ mesh or bespoke referenced art, not another transform-count adjustment. Evidence
 `docs/screens/20260802_v77c_riparian_groves/`,
 `docs/screens/20260802_v77d_zero_palms/`, and
 `docs/screens/20260802_v77e_no_generic_green/`.
+
+## 2026-08-06 - Interactive source sites reject automated retrieval
+
+Status: two-source-access limitation; use the committed hash-pinned source controls and
+continue the M2 audit without waiting.
+
+The direct automated retrieval of `arda-maps.org/ages/third` returned HTTP 502 and
+`ardacraft.me/map/middle-earth-interactive-map` returned HTTP 403. Neither result changes
+the source basis already committed in this repository: the ArdaCraft height, drainage,
+biome, and path assets are hash-pinned in `docs/m2/V113_SOURCE_PROVENANCE_REAUDIT.md` and
+their derived controls are enforced by `tools/cartography_reference_audit.py`.
+
+Do not retry those interactive pages as an unattended loop. Use the retained verified
+source assets for static work; resume direct visual verification only when the shared EU5
+lease becomes available.

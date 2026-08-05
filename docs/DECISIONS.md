@@ -2231,7 +2231,21 @@ flatmap fallback from masking a valid custom 3D world.
 
 Treat the generated-key camera transform as a source-exact orientation baseline, not proof
 of maximum-close detail. The exact Old Forest live calibration proves sixteen wheel-in
-detents reach dense physical canopy. Atlas close frames use that depth, with the existing
-zero/one per-theatre value retained only as a documented context backoff. Do not change
-terrain assets or accept M2 from this calibration alone; the complete non-debug atlas and
-deep log remain required.
+detents reach dense physical canopy. Atlas close frames initially used that depth, with the
+existing zero/one per-theatre value retained only as a documented context backoff. Do not
+change terrain assets or accept M2 from this calibration alone; the complete non-debug
+atlas and deep log remain required.
+
+## 2026-08-06 - Separate maximum-detail proof from atlas review framing
+
+The live maximum-close Old Forest capture establishes an important renderer fact, but it
+is not a sound general atlas camera: at sixteen wheel-in detents it crops Erebor and river
+courses so tightly that their physical form and source context become harder to judge.
+The exact-key context probes show that eight detents retain actual canopy, relief, ground
+material, and native water while making an isolated summit and its surroundings legible.
+
+Use eight detents as the capture runner's binding close-review baseline; retain sixteen
+only for explicit maximum-detail probes. A theatre's existing zero/one close value stays a
+one-detent contextual backoff from the eight-detent review scale. This is an evidence
+calibration decision, not a claim that physical geography is complete or an authorization
+to green M2.

@@ -25,9 +25,13 @@ ERROR_TIMESTAMP = re.compile(r"^\[\d\d:\d\d:\d\d\]")
 # ``Camera.SetTransform``'s audited 1800-distance source centre is a reliable
 # coordinate anchor but *not* the retail maximum-close camera. Sixteen physical
 # wheel detents from it were live-proven to reach dense, individual Old Forest
-# canopy. The per-theatre close value remains a one-detent backoff only where a
-# feature needs slightly more context.
-MAX_CLOSE_ZOOM_IN = 16
+# canopy. That extreme is retained as a renderer capability probe, not the
+# atlas framing: it crops isolated mountains and river courses so tightly that
+# it can misrepresent their form. Eight detents instead keeps the physical
+# trees, relief and native water visible with enough terrain around them for a
+# meaningful cartographic review. The per-theatre close value is a bounded
+# contextual backoff from that review depth.
+REVIEW_CLOSE_ZOOM_IN = 8
 
 # The retail automatic ``common/tests`` scheduler is currently unavailable in
 # this installed build (see BLOCKERS.md).  The live debug console's
@@ -72,8 +76,8 @@ class Theatre:
     regional_query: str
     close_query: str
     # Regional views zoom out from the generated-key source transform. Close
-    # views zoom into its live-proven maximum, with this value as a context
-    # backoff (0 is maximum close; 1 is one detent wider).
+    # views use the calibrated review depth, with this value as a context
+    # backoff (0 is review close; 1 is one detent wider).
     regional_zoom: int = 6
     close_zoom: int = 1
 
@@ -82,7 +86,7 @@ class Theatre:
 # detent before the finder's maximum-close camera in build 24187685, while
 # relief and material remain readable there. Regional frames deliberately
 # retain map orientation; close frames are the binding 3D evidence. Keep the
-# hydrology defaults above for river pairs, but bind forests to maximum close.
+# hydrology defaults above for river pairs, but bind forests to review close.
 # Queries deliberately resolve to one generated display name.
 THEATRES = (
     Theatre("01_shire_old_forest", "The Old Forest", "The Old Forest", 2, 0),
@@ -113,9 +117,9 @@ HYDROLOGY_VIEWS = (
 # mechanisms can fall between their camera centres. Keep them in the same
 # fresh renderer session so canopy density, isolated summits, and terrain-
 # native small water are never accepted from stale or incomparable captures.
-# Forest and sub-location-water close frames use finder maximum-close because
-# both object density and tiny irregular water outlines disappear rapidly one
-# detent farther out in build 24187685.
+# Forest and sub-location-water close frames use the same review-close
+# baseline so their density and irregular outlines stay visible without
+# sacrificing the surrounding geographic context.
 FOCUSED_PHYSICAL_VIEWS = (
     Theatre("27_lothlorien_canopy", "Caras Galadhon", "Caras Galadhon", 2, 0),
     # The literal settlement name also matches a generated "Gundabad
@@ -461,9 +465,9 @@ def reset_and_capture(query: str, zoom: int, name: str, session: str) -> int:
 
 def close_zoom_steps(backoff: int) -> int:
     """Return physical zoom-in detents for a feature close frame."""
-    if not 0 <= backoff < MAX_CLOSE_ZOOM_IN:
+    if not 0 <= backoff < REVIEW_CLOSE_ZOOM_IN:
         raise ValueError(f"invalid close-camera backoff {backoff}")
-    return MAX_CLOSE_ZOOM_IN - backoff
+    return REVIEW_CLOSE_ZOOM_IN - backoff
 
 
 def reset_and_capture_close(

@@ -2,6 +2,23 @@
 
 ## 2026-08-06
 
+- The complete fresh physical atlas now covers all nine continental theatres, four primary
+  Great River views, and seven focused landform/canopy views in one 45-second debug
+  Observer session. It enters play, uses the native Ctrl+Q Terrain slot, holds the normal
+  1,486-byte log through maximum-speed playback, and records the M2 runtime marker. The
+  same candidate separately completes the required fresh **non-debug** 45-second deep-load
+  run with zero unexpected diagnostics: no coat-of-arms collision and no Finder data-model
+  line. The latter closes that narrow runtime sub-gate, not M2 itself. Evidence:
+  `docs/screens/20260806_m2_physical_atlas_v1/` and
+  `docs/screens/20260806_m2_nondebug_deep_log_v1/`.
+- The atlas capture recipe now uses a calibrated eight-detent close-review depth rather
+  than treating the sixteen-detent renderer capability probe as a presentation camera.
+  Exact Old Forest and Erebor context frames at that depth retain dense individual canopy
+  and Erebor's isolated form while preserving enough surrounding terrain to assess their
+  source placement. The sixteen-detent Old Forest frame remains the separate proof that
+  the renderer resolves individual physical vegetation. This corrects evidence framing;
+  it does not waive the still-open source-backed geography, native-river, or M2 owner
+  acceptance work. Evidence: `docs/screens/20260806_m2_context_close_calibration/`.
 - The fresh M2 visual-profile calibration identifies the remaining flat-looking map issue
   as the installed flat-map fallback, not vanilla geography or a failed terrain cache.
   `Map.flatmap_mode = "never"` now persists in ENDÓRË's isolated user profile and the

@@ -39,7 +39,7 @@ No milestone after M2 may start while the M2 gate remains unchecked.
     settlements into pinned land cells so local source positions do not displace generic or
     neighbouring canonical locations. Keep Buckland's political treatment unchanged until
     the M3 realm roster is unlocked. Evidence: `docs/m2/V136_BUCKLAND_ANCHOR_DENSITY.md`.
-  - [X] Complete the geographic-witness anchor batch: pin the Slag-hills, Haudh in Gwanûr,
+  - [X] Complete the geographic-witness anchor batch: pin the Slag-hills, Haudh in Gwanur,
     and Forsaken Inn to their separate exact source cells without converting physical
     landmarks into settlements or moving surviving locations. Evidence:
     `docs/m2/V137_GEOGRAPHIC_WITNESS_ANCHORS.md`.
@@ -66,8 +66,10 @@ No milestone after M2 may start while the M2 gate remains unchecked.
     with a measured camera transition; do not reopen or weaken the blocked Finder route.
     Evidence: `docs/screens/20260805_m2_exact_key_probe_v5/` and the matching
     `console_history.txt` transforms/engine marker.
-  - [ ] Prove the fresh deep-load log has no ENDÃ“RÃ‹ coat-of-arms or Finder data-model
-    diagnostics after the collision-free `me_coa_*` realm-arm and exact-key camera batch.
+  - [X] Prove the fresh deep-load log has no coat-of-arms or Finder data-model diagnostics
+    after the collision-free `me_coa_*` realm-arm and exact-key camera batch. Evidence:
+    `docs/screens/20260806_m2_nondebug_deep_log_v1/` (fresh non-debug 45-second Observer;
+    only installed DX12/store/audio diagnostics remain).
 
 ## Completed gates
 
