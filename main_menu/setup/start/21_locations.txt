@@ -4,6 +4,8 @@ locations = {
 	# ruin: amon_sul
 	# ruin: annuminas
 	# ruin: fornost
+	# ruin: forsaken_inn
+	# ruin: haudh_in_gwanur
 	# ruin: me_land_0025
 	# ruin: me_land_0186
 	# ruin: me_land_0344

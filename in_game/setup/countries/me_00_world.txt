@@ -176,7 +176,7 @@ ISE = { # Isengard; LOTR, Book II, Ch. 2; ENDORE plan 8.1
 	religion_definition = me_sauron_cult
 }
 
-MOA = { # Moria; LOTR, Book II, Ch. 4; ENDORE plan 8.1
+MOA = { # Moria; LOTR, Book II, Ch. 4; Tolkien Gateway: Eregion / West-gate geography; ENDORE plan 8.1
 	color = rgb { 58 48 46 }
 	color2 = rgb { 197 207 209 }
 	culture_definition = me_misty_orc

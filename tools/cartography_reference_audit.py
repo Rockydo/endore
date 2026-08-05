@@ -18,6 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CONTROL = ROOT / "docs/world/control"
 TARGETS = CONTROL / "cartography_targets.csv"
 SETTLEMENTS = CONTROL / "settlements.csv"
+LOCALITY_ANCHORS = CONTROL / "locality_anchors.csv"
+GEOGRAPHIC_ANCHORS = CONTROL / "geographic_anchors.csv"
 LANDMARKS = CONTROL / "m3_landmarks.csv"
 REALMS = ROOT / "docs/world/realms.csv"
 PROJECTION = CONTROL / "projection.json"
@@ -88,6 +90,7 @@ EXPECTED_FOREST_KEYS = {
 # already exact Hobbiton/Buckland locations rather than being displaced into a
 # neighbouring cell merely to increase a count.
 EXPECTED_SOURCE_POINT_LANDMARKS = {
+    "goblin_gate": ("point_place", "GoblinGate", (0.516664, 0.193963)),
     "trollshaws": ("point_place", "TomBertWilliam", (0.462368, 0.227164)),
     "morgul_vale": ("point_place", "MorgulVale", (0.599871, 0.596929)),
     "thrihyrne": ("point_mount", "Thrihyrne", (0.468165, 0.507581)),
@@ -102,6 +105,10 @@ EXPECTED_SOURCE_POINT_LANDMARKS = {
 # the point-authority for place locations. Bree itself is an older settlement
 # anchor; its three companions form one explicit canon cluster.
 EXPECTED_ARDACRAFT_POINT_LANDMARKS = {
+    "longbottom": ("Longbottom", (0.360470, 0.247099)),
+    "tuckborough": ("Tuckborough", (0.357517, 0.231985)),
+    "three_farthing_stone": ("Three-Farthing Stone", (0.363644, 0.228288)),
+    "underharrow": ("Underharrow", (0.494170, 0.546911)),
     "archet": ("Archet", (0.409637, 0.227916)),
     "combe": ("Combe", (0.406637, 0.226521)),
     "staddle": ("Staddle", (0.406370, 0.232311)),
@@ -110,6 +117,16 @@ EXPECTED_ARDACRAFT_POINT_LANDMARKS = {
     "falls_nimrodel": ("Falls of Nimrodel", (0.502610, 0.351896)),
     "cormallen": ("Cormallen", (0.592619, 0.580882)),
     "warg_hill": ("Warg Hill", (0.479405, 0.318111)),
+}
+EXPECTED_LOCALITY_ANCHORS = {
+    "newbury": ("Newbury", (0.382847, 0.230655), 1908),
+    "standelf": ("Standelf", (0.383171, 0.237555), 3335),
+    "deephallow": ("Deephallow", (0.382851, 0.242472), 2753),
+}
+EXPECTED_GEOGRAPHIC_ANCHORS = {
+    "slag_hills": ("Slag-hills", "SlagHills", (0.602143, 0.531198), 432),
+    "haudh_in_gwanur": ("Haudh in Gwanûr", "HaudhInGwanur", (0.595579, 0.705673), 2915),
+    "forsaken_inn": ("The Forsaken Inn", "The Forsaken Inn", (0.412567, 0.232195), 878),
 }
 SOURCE_DRAINAGE_THEATRES = {
     "northern_basins": {
@@ -153,6 +170,8 @@ def rows(path: Path) -> list[dict[str, str]]:
 def render_report() -> dict:
     targets = rows(TARGETS)
     settlements = rows(SETTLEMENTS)
+    locality_anchors = rows(LOCALITY_ANCHORS)
+    geographic_anchors = rows(GEOGRAPHIC_ANCHORS)
     landmarks = rows(LANDMARKS)
     realms = rows(REALMS)
     if not targets:
@@ -360,6 +379,33 @@ def render_report() -> dict:
                 f"cartographic feature coverage regressed: {key} "
                 f"{feature_counts[key]} < {minimum}"
             )
+    locality_by_key = {row["key"]: row for row in locality_anchors}
+    if set(locality_by_key) != set(EXPECTED_LOCALITY_ANCHORS):
+        raise ValueError("locality-anchor coverage changed without cartographic review")
+    for key, (event_name, expected, slot) in EXPECTED_LOCALITY_ANCHORS.items():
+        row = locality_by_key[key]
+        if (float(row["x"]), float(row["y"])) != expected:
+            raise ValueError(f"{key} moved from exact Arda Maps point_city:{event_name} control")
+        if row.get("cartography_reference") != f"Arda Maps point_city: {event_name}":
+            raise ValueError(f"{key} lost its exact Arda Maps point provenance")
+        if int(row["reserved_generated_slot"]) != slot:
+            raise ValueError(f"{key} changed its reviewed generated land slot")
+    geographic_by_key = {row["key"]: row for row in geographic_anchors}
+    if set(geographic_by_key) != set(EXPECTED_GEOGRAPHIC_ANCHORS):
+        raise ValueError("geographic-anchor coverage changed without cartographic review")
+    for key, (name, event_name, expected, slot) in EXPECTED_GEOGRAPHIC_ANCHORS.items():
+        row = geographic_by_key[key]
+        if row["name"] != name or (float(row["x"]), float(row["y"])) != expected:
+            raise ValueError(f"{key} moved from exact Arda Maps point_place:{event_name} control")
+        expected_reference = (
+            f"Arda Maps point_place: {event_name}"
+            if key != "forsaken_inn"
+            else f"Ardacraft: {event_name}"
+        )
+        if row.get("cartography_reference") != expected_reference:
+            raise ValueError(f"{key} lost its exact point provenance")
+        if int(row["reserved_generated_slot"]) != slot:
+            raise ValueError(f"{key} changed its reviewed generated land slot")
     if len(forest_zones) != 15 or forest_components != 57:
         raise ValueError(
             "Arda Maps forest coverage changed without cartographic review: "

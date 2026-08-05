@@ -24,6 +24,8 @@ CONTROL = ROOT / "docs/world/control"
 DERIVED = ROOT / "docs/world/derived"
 MAP_OUT = ROOT / "in_game/map_data"
 TERRAIN_OUT = ROOT / "in_game/gfx/terrain2"
+LOCALITY_ANCHORS = CONTROL / "locality_anchors.csv"
+GEOGRAPHIC_ANCHORS = CONTROL / "geographic_anchors.csv"
 
 CONTROL_W, CONTROL_H = 4096, 2048
 WORLD_W, WORLD_H = 16384, 8192
@@ -81,6 +83,7 @@ class Anchor:
     language: str
     realm_hint: str
     source: str
+    active: bool = True
 
 
 @dataclass(frozen=True)
@@ -150,10 +153,21 @@ def effective_template_biomes(
     return effective
 
 
-def load_anchors() -> list[Anchor]:
-    path = CONTROL / "settlements.csv"
+def load_anchor_rows(
+    path: Path,
+    *,
+    locality: bool = False,
+    active: bool = True,
+) -> list[Anchor]:
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
+    expected = {
+        "key", "name", "x", "y", "rank", "language", "realm_hint", "source",
+    }
+    if locality:
+        expected |= {"cartography_reference", "reserved_generated_slot"}
+    if not rows or set(rows[0]) != expected:
+        raise ValueError(f"{path.name} header does not match its anchor contract")
     return [
         Anchor(
             key=row["key"],
@@ -164,9 +178,37 @@ def load_anchors() -> list[Anchor]:
             language=row["language"],
             realm_hint=row["realm_hint"],
             source=row["source"],
+            active=active,
         )
         for row in rows
     ]
+
+
+def load_base_anchors() -> list[Anchor]:
+    return load_anchor_rows(CONTROL / "settlements.csv")
+
+
+def load_locality_anchors() -> list[Anchor]:
+    return load_anchor_rows(LOCALITY_ANCHORS, locality=True)
+
+
+def load_geographic_anchors() -> list[Anchor]:
+    """Load exact named physical places without treating them as settlements."""
+
+    return load_anchor_rows(GEOGRAPHIC_ANCHORS, locality=True, active=False)
+
+
+def load_anchors() -> list[Anchor]:
+    anchors = (
+        load_base_anchors()
+        + load_locality_anchors()
+        + load_geographic_anchors()
+    )
+    if len({anchor.key for anchor in anchors}) != len(anchors):
+        raise ValueError("duplicate combined anchor key")
+    if len({anchor.name for anchor in anchors}) != len(anchors):
+        raise ValueError("duplicate combined anchor name")
+    return anchors
 
 
 def control_array(name: str) -> np.ndarray:
@@ -178,7 +220,12 @@ def control_array(name: str) -> np.ndarray:
 
 def source_sha256() -> str:
     digest = hashlib.sha256()
-    for name in ("projection.json", "settlements.csv"):
+    for name in (
+        "projection.json",
+        "settlements.csv",
+        "locality_anchors.csv",
+        "geographic_anchors.csv",
+    ):
         digest.update((CONTROL / name).read_bytes())
         digest.update(b"\0")
     return digest.hexdigest()
@@ -249,19 +296,27 @@ MORDOR_REGION_POLYGON = (
 # south edge follows the source-pinned Glanduin with a one-control-cell
 # centroid tolerance; the east ends immediately before the Doors of Durin,
 # and the north is constrained by the Hollin/Warg Hill controls south of
-# Rivendell. Tolkien gives these physical bounds rather than a cadastral ring,
-# so the short western and northern joins are deliberately conservative.
+# Rivendell. The Angle is a distinct North Arnor Ranger refuge north of this
+# low ridge, not part of Eregion. Tolkien gives these physical bounds rather
+# than a cadastral ring, so the short western and northern joins are
+# deliberately conservative.
 EREGION_REGION_POLYGON = (
     (0.423705, 0.339240),
     (0.441996, 0.338246),
     (0.455902, 0.346092),
     (0.464048, 0.350987),
     (0.482034, 0.356139),
-    (0.487000, 0.352000),
-    (0.487000, 0.303000),
-    (0.478000, 0.274000),
-    (0.452000, 0.270000),
-    (0.430000, 0.285000),
+    # The western cliff/crest curves just east of Warg Hill but west of
+    # Celebdil's passable EU5 seat.  Keep Eregion's exposed Gate-stream
+    # country west of that wall and resolve the named Moria peak east of it.
+    (0.484000, 0.352000),
+    (0.484000, 0.330000),
+    (0.482000, 0.321000),
+    (0.480000, 0.315000),
+    (0.480000, 0.303000),
+    (0.478000, 0.278000),
+    (0.452000, 0.276000),
+    (0.430000, 0.288000),
 )
 
 
@@ -730,8 +785,10 @@ def grow_labels(
 def build_model() -> WorldModel:
     biomes = control_array("biomes.png").astype(np.uint8)
     density = control_array("density.png").astype(np.uint8)
-    anchors = load_anchors()
-    kind_map, pinned = kind_masks(biomes, anchors)
+    base_anchors = load_base_anchors()
+    locality_anchors = load_locality_anchors()
+    geographic_anchors = load_geographic_anchors()
+    kind_map, pinned = kind_masks(biomes, base_anchors)
     rng = np.random.default_rng(SEED)
 
     masks = {
@@ -741,7 +798,7 @@ def build_model() -> WorldModel:
     seeds_by_kind: dict[str, list[tuple[int, int]]] = {}
     land_pins = cover_components(
         masks["land"],
-        [pinned[anchor.key] for anchor in anchors],
+        [pinned[anchor.key] for anchor in base_anchors],
     )
     seeds_by_kind["land"] = choose_seeds(
         masks["land"],
@@ -751,6 +808,29 @@ def build_model() -> WorldModel:
         land_pins,
         radius=10,
     )
+    base_land_pin_count = len(dict.fromkeys(pinned[anchor.key] for anchor in base_anchors))
+    precise_by_seed_index: dict[int, Anchor] = {}
+    for path, anchors in (
+        (LOCALITY_ANCHORS, locality_anchors),
+        (GEOGRAPHIC_ANCHORS, geographic_anchors),
+    ):
+        with path.open("r", encoding="utf-8-sig", newline="") as handle:
+            precise_rows = list(csv.DictReader(handle))
+        for locality, row in zip(anchors, precise_rows, strict=True):
+            slot = int(row["reserved_generated_slot"])
+            if not 1 <= slot <= TARGETS["land"] - base_land_pin_count:
+                raise ValueError(f"{locality.key} has invalid reserved generated land slot")
+            seed_index = base_land_pin_count + slot - 1
+            x = round(locality.x * (CONTROL_W - 1))
+            y = round(locality.y * (CONTROL_H - 1))
+            if kind_map[y, x] != KIND_CODE["land"]:
+                raise ValueError(f"precise anchor {locality.key} is not on passable land")
+            if (y, x) in seeds_by_kind["land"]:
+                raise ValueError(f"precise anchor {locality.key} collides with an existing land seed")
+            if seed_index in precise_by_seed_index:
+                raise ValueError(f"duplicate reserved generated land slot {slot}")
+            seeds_by_kind["land"][seed_index] = (y, x)
+            precise_by_seed_index[seed_index] = locality
     seeds_by_kind["mountain"] = choose_seeds(
         masks["mountain"],
         TARGETS["mountain"],
@@ -786,17 +866,25 @@ def build_model() -> WorldModel:
 
     anchor_by_cell = {
         pinned[anchor.key]: anchor
-        for anchor in anchors
+        for anchor in base_anchors
     }
+    anchor_by_cell.update(
+        {seeds_by_kind["land"][index]: anchor for index, anchor in precise_by_seed_index.items()}
+    )
     generated_numbers = Counter()
     colors = location_colors(running)
     vanilla_names = installed_named_registry()[1]
     locations: list[Location] = []
     for kind in KIND_ORDER:
-        for y, x in seeds_by_kind[kind]:
+        for local_index, (y, x) in enumerate(seeds_by_kind[kind]):
             index = len(locations)
             anchor = anchor_by_cell.get((y, x)) if kind == "land" else None
             if anchor:
+                if kind == "land" and local_index in precise_by_seed_index:
+                    # A precise locality or physical place replaces a pre-existing generic
+                    # slot. Consume that ordinal so every later generic location key stays
+                    # stable.
+                    generated_numbers[kind] += 1
                 key = (
                     f"me_{anchor.key}"
                     if anchor.key in vanilla_names

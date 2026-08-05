@@ -2,8 +2,8 @@
   "schema": 4,
   "milestone": "M3 political assignment audit",
   "audited_land_locations": 5200,
-  "owned_locations": 3023,
-  "wild_locations": 2177,
+  "owned_locations": 3020,
+  "wild_locations": 2180,
   "contract_violations": 0,
   "contracted_realms": {
     "ANG": {
@@ -223,9 +223,9 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 24,
-      "eligible_locations": 51,
-      "claim_fill_fraction": 0.470588,
+      "locations": 23,
+      "eligible_locations": 52,
+      "claim_fill_fraction": 0.442308,
       "forced_anchors": 1,
       "final_bbox": [
         0.3811966,
@@ -235,23 +235,34 @@
       ],
       "contract_violations": 0,
       "connectivity": {
-        "components": 1,
-        "largest_component": 24,
-        "largest_component_fraction": 1.0,
-        "detached_unforced_specks": 0,
+        "components": 2,
+        "largest_component": 22,
+        "largest_component_fraction": 0.956522,
+        "detached_unforced_specks": 1,
         "component_detail": [
           {
-            "size": 24,
+            "size": 22,
             "forced_anchors": 1,
             "sample": [
               "me_bree",
+              "me_land_0359",
               "me_land_0591",
               "me_land_0635",
-              "me_land_0900",
-              "me_land_0933"
+              "me_land_0900"
             ],
             "locations": [],
             "disposition": "primary_component"
+          },
+          {
+            "size": 1,
+            "forced_anchors": 0,
+            "sample": [
+              "me_land_1334"
+            ],
+            "locations": [
+              "me_land_1334"
+            ],
+            "disposition": "Brandywine Bridge is a source-pinned Bree-land-side crossing split from the four-village core by the exact Buckland locality tessellation"
           }
         ]
       },
@@ -782,7 +793,7 @@
       "locations": 22,
       "eligible_locations": 32,
       "claim_fill_fraction": 0.6875,
-      "forced_anchors": 1,
+      "forced_anchors": 2,
       "final_bbox": [
         0.4905983,
         0.5181929,
@@ -798,7 +809,7 @@
         "component_detail": [
           {
             "size": 22,
-            "forced_anchors": 1,
+            "forced_anchors": 2,
             "sample": [
               "goblin_town",
               "me_land_0128",
@@ -850,9 +861,9 @@
             "sample": [
               "calembel",
               "erech",
+              "haudh_in_gwanur",
               "linhir",
-              "me_land_0011",
-              "me_land_0014"
+              "me_land_0011"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1697,9 +1708,9 @@
       "pre_contract_outside": null
     },
     "MOA": {
-      "rationale": "Moria and immediate Dimrill/Sirannon approaches",
+      "rationale": "Moria's Anduin-side mountain interior and immediate eastern approach",
       "claim_bounds": [
-        0.47,
+        0.485,
         0.505,
         0.3,
         0.37
@@ -1707,32 +1718,32 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 22,
-      "eligible_locations": 27,
-      "claim_fill_fraction": 0.814815,
+      "locations": 14,
+      "eligible_locations": 16,
+      "claim_fill_fraction": 0.875,
       "forced_anchors": 1,
       "final_bbox": [
-        0.4708181,
+        0.4859585,
         0.5025641,
-        0.3038593,
+        0.3097215,
         0.3678554
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 22,
+        "largest_component": 14,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 22,
+            "size": 14,
             "forced_anchors": 1,
             "sample": [
-              "me_land_0032",
-              "me_land_0263",
               "me_land_0352",
-              "me_land_0888",
-              "me_land_0916"
+              "me_land_0916",
+              "me_land_1248",
+              "me_land_2603",
+              "me_land_2656"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -1894,25 +1905,25 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 39,
+      "locations": 44,
       "eligible_locations": 103,
-      "claim_fill_fraction": 0.378641,
+      "claim_fill_fraction": 0.427184,
       "forced_anchors": 1,
       "final_bbox": [
         0.4324786,
         0.4942613,
         0.2374206,
-        0.2931119
+        0.3111871
       ],
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 39,
+        "largest_component": 44,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 39,
+            "size": 44,
             "forced_anchors": 1,
             "sample": [
               "me_land_0062",
@@ -2239,7 +2250,7 @@
       "locations": 190,
       "eligible_locations": 302,
       "claim_fill_fraction": 0.629139,
-      "forced_anchors": 4,
+      "forced_anchors": 5,
       "final_bbox": [
         0.4556777,
         0.5643468,
@@ -2255,7 +2266,7 @@
         "component_detail": [
           {
             "size": 190,
-            "forced_anchors": 4,
+            "forced_anchors": 5,
             "sample": [
               "aldberg",
               "dunharrow",
@@ -2281,10 +2292,10 @@
       "source_zone": null,
       "source_dilation_pixels": null,
       "claim_polygon": null,
-      "locations": 70,
+      "locations": 71,
       "eligible_locations": 110,
-      "claim_fill_fraction": 0.636364,
-      "forced_anchors": 3,
+      "claim_fill_fraction": 0.645455,
+      "forced_anchors": 8,
       "final_bbox": [
         0.3206349,
         0.3851038,
@@ -2294,19 +2305,19 @@
       "contract_violations": 0,
       "connectivity": {
         "components": 1,
-        "largest_component": 70,
+        "largest_component": 71,
         "largest_component_fraction": 1.0,
         "detached_unforced_specks": 0,
         "component_detail": [
           {
-            "size": 70,
-            "forced_anchors": 3,
+            "size": 71,
+            "forced_anchors": 8,
             "sample": [
               "bucklebury",
+              "deephallow",
               "hobbiton",
               "me_land_0181",
-              "me_land_0407",
-              "me_land_0468"
+              "me_land_0407"
             ],
             "locations": [],
             "disposition": "primary_component"
@@ -2533,9 +2544,9 @@
           "sample": [
             "calembel",
             "erech",
+            "haudh_in_gwanur",
             "linhir",
-            "me_land_0011",
-            "me_land_0014"
+            "me_land_0011"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2608,7 +2619,7 @@
       "component_detail": [
         {
           "size": 190,
-          "forced_anchors": 4,
+          "forced_anchors": 5,
           "sample": [
             "aldberg",
             "dunharrow",
@@ -2623,19 +2634,19 @@
     },
     "SHI": {
       "components": 1,
-      "largest_component": 70,
+      "largest_component": 71,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 70,
-          "forced_anchors": 3,
+          "size": 71,
+          "forced_anchors": 8,
           "sample": [
             "bucklebury",
+            "deephallow",
             "hobbiton",
             "me_land_0181",
-            "me_land_0407",
-            "me_land_0468"
+            "me_land_0407"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -2643,34 +2654,45 @@
       ]
     },
     "BRE": {
-      "components": 1,
-      "largest_component": 24,
-      "largest_component_fraction": 1.0,
-      "detached_unforced_specks": 0,
+      "components": 2,
+      "largest_component": 22,
+      "largest_component_fraction": 0.956522,
+      "detached_unforced_specks": 1,
       "component_detail": [
         {
-          "size": 24,
+          "size": 22,
           "forced_anchors": 1,
           "sample": [
             "me_bree",
+            "me_land_0359",
             "me_land_0591",
             "me_land_0635",
-            "me_land_0900",
-            "me_land_0933"
+            "me_land_0900"
           ],
           "locations": [],
           "disposition": "primary_component"
+        },
+        {
+          "size": 1,
+          "forced_anchors": 0,
+          "sample": [
+            "me_land_1334"
+          ],
+          "locations": [
+            "me_land_1334"
+          ],
+          "disposition": "Brandywine Bridge is a source-pinned Bree-land-side crossing split from the four-village core by the exact Buckland locality tessellation"
         }
       ]
     },
     "RAN": {
       "components": 1,
-      "largest_component": 39,
+      "largest_component": 44,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 39,
+          "size": 44,
           "forced_anchors": 1,
           "sample": [
             "me_land_0062",
@@ -3280,19 +3302,19 @@
     },
     "MOA": {
       "components": 1,
-      "largest_component": 22,
+      "largest_component": 14,
       "largest_component_fraction": 1.0,
       "detached_unforced_specks": 0,
       "component_detail": [
         {
-          "size": 22,
+          "size": 14,
           "forced_anchors": 1,
           "sample": [
-            "me_land_0032",
-            "me_land_0263",
             "me_land_0352",
-            "me_land_0888",
-            "me_land_0916"
+            "me_land_0916",
+            "me_land_1248",
+            "me_land_2603",
+            "me_land_2656"
           ],
           "locations": [],
           "disposition": "primary_component"
@@ -3369,7 +3391,7 @@
       "component_detail": [
         {
           "size": 22,
-          "forced_anchors": 1,
+          "forced_anchors": 2,
           "sample": [
             "goblin_town",
             "me_land_0128",

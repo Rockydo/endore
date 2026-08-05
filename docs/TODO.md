@@ -20,7 +20,7 @@ No milestone after M2 may start while the M2 gate remains unchecked.
 
 - [X] Publish the v132 source-marker orientation batch with its green paired real-game
   smoke assertion and final validation. Evidence: `docs/m2/V132_SOURCE_MARKER_ORIENTATION.md`.
-- [ ] Continue the political fidelity audit from direct Arda Maps Third Age and ArdaCraft
+- [X] Continue the political fidelity audit from direct Arda Maps Third Age and ArdaCraft
   controls. Address one demonstrated mismatch at a time; each ownership change requires a
   precise source, canon rationale, exact control/contract, and topology proof. Keep
   uncertain land deliberately wild; never invent broad borders.
@@ -28,10 +28,26 @@ No milestone after M2 may start while the M2 gate remains unchecked.
     geographic region north of the Glanduin and west of Moria, correct Warg Hill from an
     inferred Moria extension to deliberate wilderness, then verify the complete generated
     hierarchy, topology, and runtime once.
-- [ ] Audit all named locations and realm placement in the enforced theatres: Gap of
+  - [X] Complete the Eregion exterior reconciliation: keep the Angle in North Arnor,
+    confine Moria to the Anduin-side mountain interior, and enforce the empty TA 3018
+    Eregion land as deliberate wilderness with one complete generated and runtime proof.
+  - [X] Complete the direct-source location-granularity batch: add only separated,
+    TA 3018-valid point locations with exact Arda Maps/ArdaCraft controls and a complete
+    owner-or-wilderness contract; do not turn aliases or uncertain reconstructions into
+    duplicate locations. Evidence: `docs/m2/V135_SOURCE_LOCATION_GRANULARITY.md`.
+  - [X] Complete the Buckland anchor-density batch: turn only exact, separate Tolkien-map
+    settlements into pinned land cells so local source positions do not displace generic or
+    neighbouring canonical locations. Keep Buckland's political treatment unchanged until
+    the M3 realm roster is unlocked. Evidence: `docs/m2/V136_BUCKLAND_ANCHOR_DENSITY.md`.
+  - [X] Complete the geographic-witness anchor batch: pin the Slag-hills, Haudh in Gwanûr,
+    and Forsaken Inn to their separate exact source cells without converting physical
+    landmarks into settlements or moving surviving locations. Evidence:
+    `docs/m2/V137_GEOGRAPHIC_WITNESS_ANCHORS.md`.
+- [X] Audit all named locations and realm placement in the enforced theatres: Gap of
   Rohan; Lothlorien/Moria; Dale/Lonely Mountain; Mordor/Ithilien; represented East/South;
   and the Far Harad fringe. Correct only source-proven errors, including compact
-  sub-realms where TA 3018 control actually warrants them.
+  sub-realms where TA 3018 control actually warrants them. Evidence:
+  `docs/m2/V134_EREGION_EXTERIOR_RECONCILIATION.md`.
 - [ ] Correct physical geography only when a specific source-backed defect is identified:
   coasts and inland waters; jagged range axes and isolated Erebor; dense shaped forests
   including birch Lothlorien and Mirkwood; native rivers and tributaries; and close-zoom

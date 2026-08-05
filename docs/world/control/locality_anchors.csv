@@ -1,0 +1,4 @@
+key,name,x,y,rank,language,realm_hint,source,cartography_reference,reserved_generated_slot
+newbury,Newbury,0.382847,0.230655,town,Hobbitish,Shire,"LOTR, Book I map",Arda Maps point_city: Newbury,1908
+standelf,Standelf,0.383171,0.237555,village,Hobbitish,Shire,"LOTR, Book I map",Arda Maps point_city: Standelf,3335
+deephallow,Deephallow,0.382851,0.242472,village,Hobbitish,Shire,"LOTR, Book I map",Arda Maps point_city: Deephallow,2753

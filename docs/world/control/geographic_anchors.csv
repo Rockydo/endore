@@ -1,0 +1,4 @@
+key,name,x,y,rank,language,realm_hint,source,cartography_reference,reserved_generated_slot
+slag_hills,Slag-hills,0.602143,0.531198,landmark,Black Speech,Wilderness,"LOTR, Book IV, Ch. 3",Arda Maps point_place: SlagHills,432
+haudh_in_gwanur,Haudh in Gwanûr,0.595579,0.705673,ruin,Sindarin,Gondor,"LOTR, Appendix A",Arda Maps point_place: HaudhInGwanur,2915
+forsaken_inn,The Forsaken Inn,0.412567,0.232195,ruin,Westron,Wilderness,"LOTR, Book I, Ch. 11",Ardacraft: The Forsaken Inn,878

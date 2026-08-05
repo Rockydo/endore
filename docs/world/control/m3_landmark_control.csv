@@ -1,4 +1,7 @@
 ref,expected_owner,control_basis,rationale
+slag_hills,WILD,mordor-exterior,The Orc-made Slag-hills stand outside the Black Gate in the desolate exterior approach rather than establishing a broad Mordor claim beyond its wall.
+haudh_in_gwanur,GON,gondor-memorial,Haudh in Gwanûr is the old Gondorian memorial on the Poros within South Gondor rather than a separate settlement or polity.
+forsaken_inn,WILD,abandoned-inn,The Forsaken Inn is a named ruin one day east of Bree on the Great East Road and has no TA 3018 sovereign administration.
 the_angle,RAN,realm-seat,The Angle is the documented Ranger refuge used as the Northern Rangers realm seat.
 blue_halls,BLU,realm-seat,The surviving Ered Luin halls are the Blue Mountains dwarf realm seat.
 iron_hills,IRO,realm-seat,The Iron Hills hold is the Iron Hills realm seat after the War of Five Armies.
@@ -112,3 +115,8 @@ sarn_gebir,ROH,rohan-rapid,Sarn Gebir lies on the Rohirric bank of the upper And
 falls_nimrodel,LOR,lorien-waterfall,The Falls of Nimrodel are a named feature within LothlÃ³rien.
 cormallen,WILD,empty-ithilien,Cormallen lies in Ithilien, deliberately left unsettled at TA 3018.
 warg_hill,WILD,unsettled-eregion,Warg Hill lies in Eregion outside Moria's West-gate; its direct source placement does not support an inferred Moria territorial extension.
+longbottom,SHI,shire-village,Longbottom is an inhabited Southfarthing village inside the Shire at TA 3018.
+tuckborough,SHI,shire-town,Tuckborough is the Took settlement and seat of the Shire's Thain at TA 3018.
+three_farthing_stone,SHI,shire-marker,The Three-Farthing Stone marks an internal Shire meeting point rather than an external frontier.
+underharrow,ROH,rohan-hamlet,Underharrow is an inhabited Rohirric hamlet in Harrowdale at TA 3018.
+goblin_gate,GOB,occupied-passage,Goblin-gate is the guarded eastern exit of Goblin-town and remains an Orc-held passage at TA 3018.

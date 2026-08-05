@@ -72,7 +72,7 @@ me_land_0028,LIN,0.2710623,0.3185149,me_lindon_region,1,0.1197078,no,Lindon west
 me_land_0029,MOR,0.6837607,0.5329751,me_mordor_region,9,0.0891643,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_0030,WILD,0.3746032,0.2730826,me_shire_breeland_region,1,,no,deliberately unclaimed,wild_buffer
 me_land_0031,HNE,0.6744811,0.7845628,me_near_harad_region,9,0.0717651,no,Harnendor between the Poros approaches and the Harnen,accepted_frontier_polygon
-me_land_0032,MOA,0.4717949,0.3067904,me_eregion_region,1,0.0463675,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_0032,WILD,0.4717949,0.3067904,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0033,WOO,0.5604396,0.1939424,me_mirkwood_region,3,0.0565328,no,Arda Maps Mirkwood polygon: northern/eastern Woodland Realm; Thranduil's northern and eastern Mirkwood; Woodland Realm in northern and northeastern Mirkwood,accepted_source_zone_overlap
 me_land_0034,FAN,0.4969475,0.4264778,me_anduin_vale_region,3,0.0363294,no,Arda Maps Fangorn physical woodland polygon; Fangorn source forest and Entwash headwaters,accepted_source_zone_overlap
 me_land_0035,WILD,0.5665446,0.3942355,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -303,7 +303,7 @@ me_land_0259,FAN,0.4813187,0.4748412,me_rohan_region,1,0.0213878,no,Arda Maps Fa
 me_land_0260,GON,0.5814408,0.6194431,me_anorien_region,1,0.0104508,yes,occupied-port: Harlond of Gondor is a Gondorian river port.,accepted_required_frontier_owner
 me_land_0261,ROH,0.4920635,0.5075721,me_rohan_region,1,0.0334454,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_0262,KHA,0.7416361,0.8202247,me_khand_region,10,0.0861671,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
-me_land_0263,MOA,0.4708181,0.3419638,me_eregion_region,1,0.0389046,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_0263,WILD,0.4708181,0.3419638,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0264,UMB,0.5199023,0.9360039,me_umbar_region,9,0.0205195,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_0265,GON,0.5680098,0.7039570,me_lebennin_region,1,0.0948621,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_0266,MOR,0.6593407,0.6013679,me_mordor_region,8,0.0413640,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
@@ -392,14 +392,14 @@ me_land_0348,WILD,0.7128205,0.4655594,me_rhun_region,9,,no,deliberately unclaime
 me_land_0349,RIV,0.4974359,0.2183683,me_north_arnor_region,1,0.0089025,no,Imladris hidden valley and immediate refuge,accepted_source_side_envelope
 me_land_0350,WOO,0.5660562,0.2188569,me_mirkwood_region,3,0.0689006,no,Arda Maps Mirkwood polygon: northern/eastern Woodland Realm; Thranduil's northern and eastern Mirkwood; Woodland Realm in northern and northeastern Mirkwood,accepted_source_zone_overlap
 me_land_0351,WILD,0.4300366,0.2129946,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_0352,MOA,0.4888889,0.3575965,me_anduin_vale_region,1,0.0222079,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_0352,MOA,0.4888889,0.3575965,me_anduin_vale_region,1,0.0222079,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_0353,WILD,0.7604396,0.8935027,me_near_harad_region,10,,no,deliberately unclaimed,wild_unclaimed
 me_land_0354,WILD,0.4652015,0.1108940,me_angmar_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0355,WILD,0.7719170,0.5139228,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0356,WILD,0.4085470,0.3170493,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0357,UMB,0.4695971,0.9877870,me_umbar_region,9,0.0955617,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_0358,WILD,0.4803419,0.3922814,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_0359,WILD,0.3912088,0.2696629,me_shire_breeland_region,1,,no,deliberately unclaimed,wild_buffer
+me_land_0359,BRE,0.3912088,0.2696629,me_shire_breeland_region,1,0.0440696,no,Bree-land's four-village crossroads,accepted_source_side_envelope
 me_land_0360,DOR,0.6610501,0.4176844,me_rhun_region,9,0.0815160,no,Dorwinion around the northwest Sea of Rhûn,accepted_source_side_envelope
 me_land_0361,BEO,0.5133089,0.2491451,me_anduin_vale_region,1,0.0673911,no,Beorning crossings and upper Anduin vales,accepted_source_side_envelope
 me_land_0362,WILD,0.6153846,0.3082560,me_mirkwood_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -472,7 +472,7 @@ me_land_0428,WILD,0.5091575,0.3981436,me_anduin_vale_region,1,,no,deliberately u
 me_land_0429,WILD,0.7216117,0.7059111,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0430,WILD,0.3282051,0.3649243,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
 me_land_0431,MOR,0.6000000,0.5515388,me_brown_lands_region,1,0.0908025,yes,occupied-fortress: Durthang is an occupied Mordor fortress above Udûn.,accepted_required_frontier_owner
-me_land_0432,WILD,0.5985348,0.5236932,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
+slag_hills,WILD,0.6021978,0.5310210,me_brown_lands_region,1,,no,mordor-exterior: The Orc-made Slag-hills stand outside the Black Gate in the desolate exterior approach rather than establishing a broad Mordor claim beyond its wall.,accepted_required_frontier_owner
 me_land_0433,KHA,0.8100122,0.7620909,me_khand_region,9,0.1121887,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_0434,KHA,0.7782662,0.7469468,me_khand_region,9,0.0469520,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_0435,HRA,0.6586081,0.8656571,me_near_harad_region,10,0.0330703,no,"Qarsad's inland Near Harad sphere, separated from Harnendor and Khand",accepted_frontier_polygon
@@ -489,7 +489,7 @@ me_land_0445,WILD,0.3247863,0.1919883,me_north_arnor_region,1,,no,deliberately u
 me_land_0446,RHU,0.7523810,0.2388862,me_rhun_region,9,0.0369492,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_0447,WILD,0.8085470,0.5139228,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0448,WILD,0.4148962,0.2076209,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_0449,GOB,0.5181929,0.1914998,me_anduin_vale_region,1,0.0166561,no,Goblin-town and High Pass under the Misty Mountains,accepted_source_side_envelope
+me_land_0449,GOB,0.5181929,0.1914998,me_anduin_vale_region,1,0.0166561,yes,occupied-passage: Goblin-gate is the guarded eastern exit of Goblin-town and remains an Orc-held passage at TA 3018.,accepted_required_frontier_owner
 me_land_0450,WILD,0.8202686,0.8935027,me_near_harad_region,10,,no,deliberately unclaimed,wild_unclaimed
 me_land_0451,HNE,0.5946276,0.7860283,me_near_harad_region,9,0.0887792,no,Harnendor between the Poros approaches and the Harnen,accepted_frontier_polygon
 me_land_0452,WILD,0.8263736,0.0449438,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
@@ -907,7 +907,7 @@ me_land_0863,KHA,0.7599512,0.7288715,me_khand_region,9,0.0135035,no,"Khand east 
 me_land_0864,WILD,0.3987790,0.4948705,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
 me_land_0865,WILD,0.4293040,0.2725940,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0866,WILD,0.7106227,0.4860772,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_0867,SHI,0.3582418,0.2501221,me_shire_breeland_region,1,0.0318451,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
+me_land_0867,SHI,0.3582418,0.2501221,me_shire_breeland_region,1,0.0318451,yes,shire-village: Longbottom is an inhabited Southfarthing village inside the Shire at TA 3018.,accepted_required_frontier_owner
 me_land_0868,RH2,0.8315018,0.4274548,me_rhun_region,9,0.0998434,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon
 me_land_0869,LOR,0.5064713,0.3404983,me_anduin_vale_region,1,0.0302196,no,Arda Maps Golden Wood / Naith physical polygon; Naith between Misty foothills and Anduin; Lothlórien's Naith east of the Misty crest and west of Anduin,accepted_source_zone_overlap
 me_land_0870,ERE,0.6012210,0.1231070,me_dale_region,1,0.0148151,no,Lonely Mountain and its immediate source-centred approaches,accepted_frontier_polygon
@@ -918,7 +918,7 @@ me_land_0874,WILD,0.5057387,0.3341475,me_anduin_vale_region,1,,no,deliberately u
 me_land_0875,MOR,0.7091575,0.6199316,me_mordor_region,8,0.1382381,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_0876,RH2,0.7802198,0.3673669,me_rhun_region,9,0.0432046,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon
 me_land_0877,WILD,0.7460317,0.4474841,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_0878,WILD,0.4129426,0.2364436,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
+forsaken_inn,WILD,0.4124542,0.2320469,me_north_arnor_region,1,,no,abandoned-inn: The Forsaken Inn is a named ruin one day east of Bree on the Great East Road and has no TA 3018 sovereign administration.,accepted_required_frontier_owner
 me_land_0879,WILD,0.8102564,0.5451881,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0880,WILD,0.6398046,0.5080606,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0881,GON,0.5118437,0.6072301,me_belfalas_region,1,0.1327109,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
@@ -928,7 +928,7 @@ me_land_0884,RH2,0.8043956,0.3448950,me_rhun_region,9,0.0101660,no,southeastern 
 me_land_0885,WILD,0.5018315,0.6468002,me_belfalas_region,1,,no,abandoned: Edhellond's last ship sailed in TA 1981 and its abandoned haven has no active holding.,accepted_required_frontier_owner
 me_land_0886,WILD,0.5428571,0.3981436,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0887,IRO,0.6532357,0.1465559,me_rhun_region,1,0.0438316,no,Iron Hills source label and adjacent holds,accepted_source_side_envelope
-me_land_0888,MOA,0.4739927,0.3263312,me_eregion_region,1,0.0333017,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_0888,WILD,0.4739927,0.3263312,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0889,RH3,0.8293040,0.1704934,me_rhun_region,1,0.0348841,no,northeastern Rhûn confederation beyond the Iron Hills,accepted_frontier_polygon
 me_land_0890,WILD,0.7518926,0.5261358,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_0891,UMB,0.4969475,0.9731314,me_umbar_region,9,0.0452632,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
@@ -956,13 +956,13 @@ me_land_0912,ROH,0.5311355,0.5398144,me_rohan_region,1,0.0649745,no,"The Mark be
 me_land_0913,ANG,0.4598291,0.1587689,me_north_arnor_region,1,0.0273732,no,compact Mount Gram remnant with Carn Dum retained only as a forced fastness,accepted_frontier_polygon
 me_land_0914,WILD,0.5833944,0.4836346,me_brown_lands_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0915,WILD,0.7709402,0.0307767,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
-me_land_0916,MOA,0.4859585,0.3258427,me_eregion_region,1,0.0125936,no,moria-mountain: Celebdil resolves to Moria's immediate mountain approach.,accepted_required_frontier_owner
+me_land_0916,MOA,0.4859585,0.3258427,me_anduin_vale_region,1,0.0125936,no,moria-mountain: Celebdil resolves to Moria's immediate mountain approach.,accepted_required_frontier_owner
 me_land_0917,RHU,0.7787546,0.2701514,me_rhun_region,9,0.0266955,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_0918,GON,0.5838828,0.7200782,me_south_gondor_region,1,0.1093810,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_0919,GON,0.4876679,0.5979482,me_belfalas_region,1,0.1814917,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_0920,MOR,0.7003663,0.6052760,me_mordor_region,8,0.1170223,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_0921,UMB,0.5443223,0.9990230,me_umbar_region,10,0.0939413,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
-me_land_0922,WILD,0.4796093,0.2960430,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
+me_land_0922,RAN,0.4796093,0.2960430,me_north_arnor_region,1,0.0276264,no,The Angle and immediate Ranger refuge,accepted_source_side_envelope
 me_land_0923,WILD,0.5789988,0.1030777,me_northern_wastes_region,5,,no,dragon-wilderness: The dragon-haunted Withered Heath remains unclaimed wilderness.,accepted_required_frontier_owner
 me_land_0924,WILD,0.3516484,0.1773327,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_0925,DUN,0.4275946,0.4543234,me_enedwaith_region,1,0.0142466,no,"Dunland lowlands west of Isen and the Gap, south of Glanduin",accepted_frontier_polygon
@@ -1172,7 +1172,7 @@ me_land_1128,ROH,0.5506716,0.4645823,me_rohan_region,9,0.1275050,no,"The Mark be
 me_land_1129,ROH,0.4774115,0.4909624,me_rohan_region,1,0.0636168,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_1130,GON,0.3990232,0.6003908,me_belfalas_region,1,0.3584555,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_1131,MOR,0.6468864,0.5891549,me_mordor_region,8,0.0166393,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
-me_land_1132,MOA,0.4764347,0.3321935,me_eregion_region,1,0.0273314,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_1132,WILD,0.4764347,0.3321935,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1133,WILD,0.3921856,0.3957010,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
 me_land_1134,WILD,0.4744811,0.3820225,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1135,WOO,0.5699634,0.2061553,me_mirkwood_region,3,0.0540228,no,Arda Maps Mirkwood polygon: northern/eastern Woodland Realm; Thranduil's northern and eastern Mirkwood; Woodland Realm in northern and northeastern Mirkwood,accepted_source_zone_overlap
@@ -1288,7 +1288,7 @@ me_land_1244,HNE,0.5968254,0.8089888,me_near_harad_region,9,0.0855298,no,Harnend
 me_land_1245,WILD,0.3936508,0.3131412,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1246,DAM,0.5211233,0.6511969,me_belfalas_region,1,0.0676342,no,Dol Amroth and Belfalas peninsula,accepted_source_side_envelope
 me_land_1247,DOL,0.5894994,0.3624817,me_mirkwood_region,1,0.0676249,no,Arda Maps Mirkwood polygon: southern Dol Guldur shadow; Dol Guldur's southern Mirkwood shadow; Dol Guldur's southern Mirkwood shadow,accepted_source_zone_overlap
-me_land_1248,MOA,0.4908425,0.3102101,me_anduin_vale_region,1,0.0253460,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_1248,MOA,0.4908425,0.3102101,me_anduin_vale_region,1,0.0253460,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_1249,ROH,0.4735043,0.5031754,me_rohan_region,1,0.0613591,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_1250,KHA,0.8017094,0.7523205,me_khand_region,9,0.0940904,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_1251,ANG,0.4380952,0.1612115,me_north_arnor_region,1,0.0255975,no,compact Mount Gram remnant with Carn Dum retained only as a forced fastness,accepted_frontier_polygon
@@ -1707,7 +1707,7 @@ me_land_1663,WILD,0.7260073,0.6516854,me_mordor_region,8,,no,deliberately unclai
 me_land_1664,MOR,0.7106227,0.5407914,me_mordor_region,1,0.1371029,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_1665,RHU,0.7159951,0.2276502,me_rhun_region,9,0.1102979,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_1666,GON,0.3777778,0.6575476,me_belfalas_region,1,0.4034404,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
-me_land_1667,SHI,0.3548230,0.2325354,me_shire_breeland_region,1,0.0174879,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
+me_land_1667,SHI,0.3548230,0.2325354,me_shire_breeland_region,1,0.0174879,yes,shire-town: Tuckborough is the Took settlement and seat of the Shire's Thain at TA 3018.,accepted_required_frontier_owner
 me_land_1668,UMB,0.5545788,0.7904250,me_near_harad_region,9,0.1707932,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_1669,WILD,0.4336996,0.3273083,me_eregion_region,6,,no,deliberately unclaimed,wild_unclaimed
 me_land_1670,SHI,0.3509158,0.2652662,me_shire_breeland_region,1,0.0372637,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
@@ -1948,7 +1948,7 @@ me_land_1904,WILD,0.5384615,0.3336590,me_anduin_vale_region,1,,no,deliberately u
 me_land_1905,ROH,0.5379731,0.5031754,me_rohan_region,1,0.0861240,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_1906,GON,0.4354090,0.5935515,me_belfalas_region,1,0.2860688,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_1907,KHA,0.7946276,0.8070347,me_khand_region,10,0.1045543,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
-me_land_1908,BRE,0.3882784,0.2232535,me_shire_breeland_region,1,0.0300172,no,Bree-land's four-village crossroads,accepted_source_side_envelope
+newbury,SHI,0.3829060,0.2305813,me_shire_breeland_region,1,0.0733451,yes,Newbury is an active town of Shire at TA 3018,accepted_required_frontier_owner
 me_land_1909,WILD,0.4556777,0.3864191,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1910,WILD,0.3611722,0.3273083,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_1911,WILD,0.4358974,0.3019052,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
@@ -2259,7 +2259,7 @@ me_land_2215,WILD,0.7792430,0.1011236,me_northern_wastes_region,1,,no,deliberate
 me_land_2216,WILD,0.6451770,0.2960430,me_rhun_region,1,,no,deliberately unclaimed,wild_buffer
 me_land_2217,LIN,0.2561661,0.1607230,me_lindon_region,1,0.1245707,no,Lindon west of the Blue Mountains,accepted_source_side_envelope
 me_land_2218,GON,0.5142857,0.5964827,me_belfalas_region,1,0.1286205,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
-me_land_2219,WILD,0.4527473,0.2760137,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
+me_land_2219,RAN,0.4527473,0.2760137,me_north_arnor_region,1,0.0449099,no,The Angle and immediate Ranger refuge,accepted_source_side_envelope
 me_land_2220,LOS,0.3663004,0.0517831,me_forochel_region,5,0.0507201,no,Lossoth settlements around the Icebay,accepted_source_side_envelope
 me_land_2221,WILD,0.3833944,0.2989741,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_2222,WILD,0.4600733,0.3507572,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
@@ -2322,7 +2322,7 @@ me_land_2278,DUN,0.4429792,0.4880313,me_enedwaith_region,1,0.0314951,no,"Dunland
 me_land_2279,HFA,0.5626374,0.9399121,me_far_harad_region,9,0.0472017,no,represented northern fringe of Far Harad,accepted_frontier_polygon
 me_land_2280,WILD,0.4544567,0.2252076,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_2281,DUN,0.4532357,0.4284319,me_enedwaith_region,1,0.0567594,no,"Dunland lowlands west of Isen and the Gap, south of Glanduin",accepted_frontier_polygon
-me_land_2282,ROH,0.4915751,0.5490962,me_rohan_region,1,0.0178045,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
+me_land_2282,ROH,0.4915751,0.5490962,me_rohan_region,1,0.0178045,yes,rohan-hamlet: Underharrow is an inhabited Rohirric hamlet in Harrowdale at TA 3018.,accepted_required_frontier_owner
 me_land_2283,BEO,0.5369963,0.1748901,me_anduin_vale_region,1,0.0206906,no,Beorning crossings and upper Anduin vales,accepted_source_side_envelope
 me_land_2284,KHA,0.7557998,0.7327797,me_khand_region,9,0.0057808,yes,realm-seat: Khazân is the explicitly invented Khand realm seat.,accepted_required_frontier_owner
 me_land_2285,GON,0.3985348,0.6585247,me_belfalas_region,1,0.3623574,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
@@ -2643,12 +2643,12 @@ me_land_2599,WILD,0.3489621,0.3023937,me_enedwaith_region,1,,no,deliberately unc
 me_land_2600,RHU,0.7956044,0.2379091,me_rhun_region,9,0.0526168,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_2601,BEO,0.5221001,0.2691744,me_anduin_vale_region,1,0.0790153,no,Beorning crossings and upper Anduin vales,accepted_source_side_envelope
 me_land_2602,MOR,0.6532357,0.5974597,me_mordor_region,8,0.0301811,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
-me_land_2603,MOA,0.5020757,0.3468490,me_anduin_vale_region,3,0.0266850,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_2603,MOA,0.5020757,0.3468490,me_anduin_vale_region,3,0.0266850,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_2604,MOR,0.6747253,0.5188080,me_mordor_region,9,0.0821938,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_2605,RH2,0.7345543,0.4333170,me_rhun_region,9,0.1551589,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon
 me_land_2606,ROH,0.5304029,0.4479726,me_rohan_region,9,0.1104160,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_2607,WILD,0.7360195,0.8510015,me_khand_region,10,,no,deliberately unclaimed,wild_unclaimed
-me_land_2608,MOA,0.4720391,0.3160723,me_eregion_region,1,0.0408389,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_2608,WILD,0.4720391,0.3160723,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_2609,GON,0.5548230,0.6458232,me_lebennin_region,1,0.0580697,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_2610,WILD,0.8092796,0.0918417,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
 me_land_2611,WILD,0.6188034,0.6482658,me_ithilien_region,1,,no,deliberately unclaimed,wild_ithilien
@@ -2696,7 +2696,7 @@ me_land_2652,WILD,0.4207570,0.5427455,me_enedwaith_region,1,,no,deliberately unc
 me_land_2653,WILD,0.6478632,0.0381045,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
 me_land_2654,GON,0.5504274,0.7132389,me_lebennin_region,1,0.1160626,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_2655,MOR,0.6632479,0.5832926,me_mordor_region,8,0.0396182,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
-me_land_2656,MOA,0.4991453,0.3585735,me_anduin_vale_region,1,0.0294437,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_2656,MOA,0.4991453,0.3585735,me_anduin_vale_region,1,0.0294437,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_2657,UMB,0.5455433,0.9433317,me_umbar_region,9,0.0722072,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_2658,DRU,0.5719170,0.5828041,me_anorien_region,1,0.0167294,no,Arda Maps Drúadan Forest physical woodland polygon; Drúadan Forest and Stonewain approaches,accepted_source_zone_overlap
 me_land_2659,LOS,0.3660562,0.0659502,me_forochel_region,5,0.0483548,no,Lossoth settlements around the Icebay,accepted_source_side_envelope
@@ -2793,7 +2793,7 @@ me_land_2749,LOS,0.2710623,0.0454323,me_forochel_region,5,0.1430447,no,Lossoth s
 me_land_2750,UMB,0.5242979,0.8617489,me_umbar_region,9,0.0795116,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_2751,KHA,0.7789988,0.7889595,me_khand_region,9,0.0694476,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_2752,ROH,0.5260073,0.5554470,me_rohan_region,1,0.0573228,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
-me_land_2753,BRE,0.3897436,0.2589155,me_shire_breeland_region,1,0.0372869,no,Bree-land's four-village crossroads,accepted_source_side_envelope
+deephallow,SHI,0.3829060,0.2423058,me_shire_breeland_region,1,0.0744948,yes,Deephallow is an active village of Shire at TA 3018,accepted_required_frontier_owner
 me_land_2754,WILD,0.3938950,0.2975085,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_2755,LOS,0.3665446,0.0268686,me_forochel_region,5,0.0626324,no,Lossoth settlements around the Icebay,accepted_source_side_envelope
 me_land_2756,RHU,0.7091575,0.2501221,me_rhun_region,1,0.1216850,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
@@ -2955,7 +2955,7 @@ me_land_2911,MOR,0.6793651,0.5178310,me_mordor_region,9,0.0899351,no,Mordor insi
 me_land_2912,WILD,0.7450549,0.4689790,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_2913,WILD,0.7670330,0.0307767,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
 me_land_2914,DAM,0.4742369,0.6345872,me_belfalas_region,1,0.0484529,no,Dol Amroth and Belfalas peninsula,accepted_source_side_envelope
-me_land_2915,GON,0.5965812,0.7020029,me_south_gondor_region,1,0.0978976,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
+haudh_in_gwanur,GON,0.5956044,0.7059111,me_south_gondor_region,1,0.1008371,no,gondor-memorial: Haudh in Gwanûr is the old Gondorian memorial on the Poros within South Gondor rather than a separate settlement or polity.,accepted_required_frontier_owner
 me_land_2916,WILD,0.8021978,0.0434783,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
 me_land_2917,HFA,0.6190476,0.9789936,me_far_harad_region,10,0.0721987,no,represented northern fringe of Far Harad,accepted_frontier_polygon
 me_land_2918,RH2,0.8085470,0.3551539,me_rhun_region,9,0.0178541,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon
@@ -3198,7 +3198,7 @@ me_land_3154,ROH,0.5396825,0.5495848,me_rohan_region,1,0.0828224,no,"The Mark be
 me_land_3155,UMB,0.5296703,0.8490474,me_near_harad_region,9,0.0954270,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_3156,GON,0.4529915,0.5725452,me_belfalas_region,1,0.2533344,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_3157,WILD,0.6202686,0.5114802,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_3158,MOA,0.4879121,0.3150953,me_anduin_vale_region,1,0.0208276,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_3158,MOA,0.4879121,0.3150953,me_anduin_vale_region,1,0.0208276,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_3159,HRA,0.6490842,0.8539326,me_near_harad_region,10,0.0542648,no,"Qarsad's inland Near Harad sphere, separated from Harnendor and Khand",accepted_frontier_polygon
 me_land_3160,ROH,0.5623932,0.5227162,me_rohan_region,1,0.1284223,no,boundary-west-bank: Rauros resolves to the Rohan side of the source-pinned Anduin frontier.,accepted_required_frontier_owner
 me_land_3161,WILD,0.7880342,0.5759648,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -3245,7 +3245,7 @@ me_land_3201,HNE,0.6827839,0.8021495,me_near_harad_region,9,0.0882759,no,Harnend
 me_land_3202,UMB,0.5594628,0.8558867,me_near_harad_region,9,0.1276391,no,Umbar coast and corsair hinterland,accepted_source_side_envelope
 me_land_3203,BEO,0.5340659,0.2623351,me_anduin_vale_region,1,0.0700875,no,Beorning crossings and upper Anduin vales,accepted_source_side_envelope
 me_land_3204,KHA,0.8324786,0.7816317,me_khand_region,9,0.1605212,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
-me_land_3205,MOA,0.4993895,0.3512457,me_anduin_vale_region,1,0.0245067,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_3205,MOA,0.4993895,0.3512457,me_anduin_vale_region,1,0.0245067,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_3206,RH3,0.7921856,0.2100635,me_rhun_region,9,0.0565318,no,northeastern Rhûn confederation beyond the Iron Hills,accepted_frontier_polygon
 me_land_3207,MOR,0.7025641,0.5359062,me_mordor_region,1,0.1229178,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_3208,WILD,0.4095238,0.3370787,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
@@ -3375,7 +3375,7 @@ me_land_3331,MOR,0.6412698,0.5862237,me_mordor_region,8,0.0138772,no,Mordor insi
 me_land_3332,WILD,0.6092796,0.0381045,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
 me_land_3333,WILD,0.6351648,0.3463605,me_mirkwood_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_3334,HRA,0.6686203,0.8207132,me_near_harad_region,9,0.0509116,no,"Qarsad's inland Near Harad sphere, separated from Harnendor and Khand",accepted_frontier_polygon
-me_land_3335,SHI,0.3706960,0.2383977,me_shire_breeland_region,2,0.0497701,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
+standelf,SHI,0.3831502,0.2374206,me_shire_breeland_region,1,0.0742772,yes,Standelf is an active village of Shire at TA 3018,accepted_required_frontier_owner
 me_land_3336,GON,0.4742369,0.6013679,me_belfalas_region,1,0.2080992,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_3337,DAM,0.4967033,0.6722032,me_belfalas_region,1,0.0152431,no,Dol Amroth and Belfalas peninsula,accepted_source_side_envelope
 me_land_3338,WILD,0.8261294,0.6624328,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -3793,7 +3793,7 @@ me_land_3749,WILD,0.5489621,0.4240352,me_anduin_vale_region,9,,no,deliberately u
 me_land_3750,MOR,0.6608059,0.6096727,me_mordor_region,1,0.0492994,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_3751,KHA,0.7054945,0.7591597,me_khand_region,9,0.1015110,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_3752,WILD,0.3543346,0.4035173,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
-me_land_3753,MOA,0.4945055,0.3678554,me_anduin_vale_region,1,0.0335867,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_3753,MOA,0.4945055,0.3678554,me_anduin_vale_region,1,0.0335867,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_3754,WILD,0.5284493,0.3004397,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_3755,WILD,0.7540904,0.0097704,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
 me_land_3756,HRA,0.6678877,0.9394235,me_far_harad_region,10,0.0708659,no,"Qarsad's inland Near Harad sphere, separated from Harnendor and Khand",accepted_frontier_polygon
@@ -3967,7 +3967,7 @@ me_land_3923,HRA,0.6974359,0.9115779,me_far_harad_region,10,0.0611735,no,"Qarsad
 me_land_3924,MOR,0.6168498,0.5207621,me_mordor_region,9,0.0757778,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_3925,WILD,0.3636142,0.1240840,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_3926,GON,0.5826618,0.6785540,me_south_gondor_region,1,0.0678558,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
-me_land_3927,SHI,0.3550672,0.2799218,me_shire_breeland_region,1,0.0537111,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
+me_land_3927,WILD,0.3550672,0.2799218,me_shire_breeland_region,1,,no,deliberately unclaimed,wild_buffer
 me_land_3928,DOR,0.6803419,0.4084025,me_rhun_region,9,0.0578156,no,Dorwinion around the northwest Sea of Rhûn,accepted_source_side_envelope
 me_land_3929,WILD,0.6344322,0.0107474,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
 me_land_3930,MOR,0.6354090,0.7142159,me_mordor_region,8,0.1417628,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
@@ -4082,7 +4082,7 @@ me_land_4038,WDM,0.5594628,0.2760137,me_mirkwood_region,3,0.0245172,no,Arda Maps
 me_land_4039,ROH,0.4813187,0.4934050,me_rohan_region,1,0.0567340,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_4040,WILD,0.4752137,0.0390816,me_angmar_region,5,,no,deliberately unclaimed,wild_unclaimed
 me_land_4041,WILD,0.7601954,0.5930630,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_4042,WILD,0.4717949,0.2740596,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
+me_land_4042,RAN,0.4717949,0.2740596,me_north_arnor_region,1,0.0075876,no,The Angle and immediate Ranger refuge,accepted_source_side_envelope
 me_land_4043,WILD,0.4947497,0.3800684,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_4044,KHA,0.7438339,0.7361993,me_khand_region,9,0.0228011,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_4045,WILD,0.6148962,0.5007328,me_brown_lands_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -4428,7 +4428,7 @@ me_land_4384,HFA,0.5687424,0.9242794,me_far_harad_region,10,0.0447325,no,represe
 me_land_4385,WILD,0.7711844,0.0937958,me_northern_wastes_region,1,,no,deliberately unclaimed,wild_forodwaith
 me_land_4386,WILD,0.7330891,0.4963361,me_rhun_region,9,,no,deliberately unclaimed,wild_unclaimed
 me_land_4387,WILD,0.6083028,0.0688813,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
-me_land_4388,RAN,0.4744811,0.2755252,me_eregion_region,1,0.0056218,yes,realm-seat: The Angle is the documented Ranger refuge used as the Northern Rangers realm seat.,accepted_required_frontier_owner
+me_land_4388,RAN,0.4744811,0.2755252,me_north_arnor_region,1,0.0056218,yes,realm-seat: The Angle is the documented Ranger refuge used as the Northern Rangers realm seat.,accepted_required_frontier_owner
 me_land_4389,WILD,0.6954823,0.0439668,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith
 me_land_4390,WILD,0.3880342,0.2442599,me_shire_breeland_region,3,,no,independent-woodland: The Old Forest lies beyond settled Shire and compact Bree-land.,accepted_required_frontier_owner
 me_land_4391,WILD,0.5240537,0.3610161,me_anduin_vale_region,1,,no,deliberately unclaimed,wild_unclaimed
@@ -4503,7 +4503,7 @@ me_land_4459,WOO,0.5643468,0.2007816,me_mirkwood_region,3,0.0557768,no,Arda Maps
 me_land_4460,WILD,0.7238095,0.6160234,me_mordor_region,8,,no,deliberately unclaimed,wild_unclaimed
 me_land_4461,DUN,0.4505495,0.4460186,me_enedwaith_region,1,0.0422817,no,"Dunland lowlands west of Isen and the Gap, south of Glanduin",accepted_frontier_polygon
 me_land_4462,LIN,0.2525031,0.2530532,me_lindon_region,1,0.1164519,no,Lindon west of the Blue Mountains,accepted_source_side_envelope
-me_land_4463,MOA,0.4832723,0.3111871,me_eregion_region,1,0.0277879,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_4463,RAN,0.4832723,0.3111871,me_enedwaith_region,1,0.0443858,no,The Angle and immediate Ranger refuge,accepted_source_side_envelope
 me_land_4464,DUN,0.4361416,0.5021983,me_enedwaith_region,1,0.0374478,no,"Dunland lowlands west of Isen and the Gap, south of Glanduin",accepted_frontier_polygon
 me_land_4465,WILD,0.4691087,0.2046898,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_4466,WILD,0.8195360,0.6140694,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
@@ -4692,7 +4692,7 @@ me_land_4648,LIN,0.2810745,0.2550073,me_lindon_region,1,0.0631305,no,Lindon west
 me_land_4649,WILD,0.4854701,0.0019541,me_angmar_region,5,,no,deliberately unclaimed,wild_unclaimed
 me_land_4650,WILD,0.3860806,0.4855887,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
 me_land_4651,WILD,0.7650794,0.5935515,me_mordor_region,9,,no,deliberately unclaimed,wild_unclaimed
-me_land_4652,MOA,0.4825397,0.3258427,me_eregion_region,1,0.0177733,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_4652,WILD,0.4825397,0.3258427,me_eregion_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_4653,WILD,0.4192918,0.3575965,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_4654,WILD,0.3985348,0.3268197,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_4655,GON,0.6803419,0.7396190,me_south_gondor_region,1,0.2412981,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
@@ -5024,7 +5024,7 @@ me_land_4980,WILD,0.7269841,0.5403029,me_mordor_region,1,,no,deliberately unclai
 me_land_4981,RH2,0.8090354,0.3942355,me_rhun_region,9,0.0477842,no,southeastern Rhûn wain-kingdom beyond the Sea of Rhûn,accepted_frontier_polygon
 me_land_4982,WILD,0.7235653,0.5915975,me_mordor_region,8,,no,deliberately unclaimed,wild_unclaimed
 me_land_4983,RHU,0.7992674,0.2423058,me_rhun_region,9,0.0590383,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
-me_land_4984,MOA,0.4830281,0.3038593,me_eregion_region,1,0.0345769,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_4984,RAN,0.4830281,0.3038593,me_enedwaith_region,1,0.0374734,no,The Angle and immediate Ranger refuge,accepted_source_side_envelope
 me_land_4985,WILD,0.3841270,0.5158769,me_enedwaith_region,1,,no,deliberately unclaimed,wild_enedwaith
 me_land_4986,WILD,0.7557998,0.8680997,me_khand_region,10,,no,deliberately unclaimed,wild_unclaimed
 me_land_4987,GON,0.5540904,0.6516854,me_lebennin_region,1,0.0628509,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
@@ -5129,7 +5129,7 @@ me_land_5085,WILD,0.5528694,0.1358085,me_grey_mountains_region,3,,no,deliberatel
 me_land_5086,RHU,0.7628816,0.2085979,me_rhun_region,9,0.0437815,no,western Rhûn polity north and east of Dorwinion,accepted_frontier_polygon
 me_land_5087,MOR,0.6664225,0.5144113,me_mordor_region,9,0.0741250,no,Mordor inside the source-reviewed Ered Lithui and Ephel Duath enclosure,accepted_frontier_polygon
 me_land_5088,SHI,0.3384615,0.2706400,me_shire_breeland_region,1,0.0442685,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
-me_land_5089,MOA,0.4866911,0.3321935,me_eregion_region,1,0.0073979,no,Moria and immediate Dimrill/Sirannon approaches,accepted_source_side_envelope
+me_land_5089,MOA,0.4866911,0.3321935,me_anduin_vale_region,1,0.0073979,no,Moria's Anduin-side mountain interior and immediate eastern approach,accepted_source_side_envelope
 me_land_5090,GON,0.5218559,0.6121153,me_belfalas_region,1,0.1126271,no,Gondor fiefs from Anfalas to the Anduin,accepted_source_side_envelope
 me_land_5091,WILD,0.4219780,0.4005862,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_5092,WILD,0.3938950,0.3243771,me_enedwaith_region,1,,no,deliberately unclaimed,wild_unclaimed
@@ -5165,7 +5165,7 @@ me_land_5121,MOR,0.6459096,0.6101612,me_mordor_region,8,0.0368380,no,Mordor insi
 me_land_5122,WILD,0.6522589,0.1934538,me_rhun_region,1,,no,deliberately unclaimed,wild_unclaimed
 me_land_5123,ROH,0.5242979,0.5148999,me_rohan_region,1,0.0563717,no,"The Mark between Isen, Anduin, and White Mountains",accepted_source_side_envelope
 me_land_5124,WILD,0.4783883,0.1787982,me_north_arnor_region,1,,no,deliberately unclaimed,wild_unclaimed
-me_land_5125,SHI,0.3611722,0.2271617,me_shire_breeland_region,1,0.0299335,no,Shire bounds west of the Brandywine,accepted_source_side_envelope
+me_land_5125,SHI,0.3611722,0.2271617,me_shire_breeland_region,1,0.0299335,no,shire-marker: The Three-Farthing Stone marks an internal Shire meeting point rather than an external frontier.,accepted_required_frontier_owner
 me_land_5126,KHA,0.7428571,0.7523205,me_khand_region,9,0.0282925,no,"Khand east and southeast of Mordor, excluding Far Harad",accepted_frontier_polygon
 me_land_5127,LIN,0.2500611,0.1362970,me_lindon_region,1,0.1484912,no,Lindon west of the Blue Mountains,accepted_source_side_envelope
 me_land_5128,WILD,0.4991453,0.0166097,me_northern_wastes_region,5,,no,deliberately unclaimed,wild_forodwaith

@@ -1,5 +1,15 @@
 # Assumptions
 
+## 2026-08-05 - Exact physical landmarks do not imply settlements
+
+The Slag-hills, Haudh in Gwanûr, and the Forsaken Inn are separate source-mapped places, but
+none is evidence for a living town or a new political border. Their exact cells use the
+slot-preserving geographic-anchor mechanism: the Slag-hills and the abandoned inn remain
+wilderness, while the ancient Poros memorial stays in Gondor. These are one-cell named
+witnesses, not surveyed territory. The Doors of Durin remain a source-pinned impassable
+gate/relief control: their exact source pixel is mountain terrain and must not be falsified
+as a passable political cell.
+
 ## 2026-08-04 - Eregion's unmarked northern and western joins
 
 Tolkien identifies Eregion as north of the Glanduin, west of the Misty Mountains, with its
@@ -9,6 +19,14 @@ the exact source Glanduin, Hollin Ridge, Warg Hill, Sirannon, and Doors-of-Durin
 then joins the unmarked northern and western sides conservatively. The polygon is a
 geographic UI envelope, not a sovereign claim, and must be revised if a stronger source
 control contradicts it.
+
+## 2026-08-05 - Eregion low-ridge join at the Angle
+
+Tolkien gives Eregion a northern low ridge roughly forty-five leagues south of Rivendell,
+but not a surveyed line. The equal-scale UI join is therefore placed between the direct
+Angle seat (`0.475000, 0.270000`) and Hollin Ridge (`0.476614, 0.284861`), with a one-cell
+tolerance. This only classifies map hierarchy: the Angle remains a documented Ranger
+refuge, while Eregion remains unoccupied former Elven country at TA 3018.
 
 No lore assumptions were made in M1. The proof realm, installed location identities, and
 all Earth-named compatibility keys are temporary engineering scaffolds rather than claims
@@ -635,3 +653,29 @@ about Middle-earth.
   point is consequently retained as a terrain/orientation reference, not an ownership cell.
   New landmark dispositions are point controls only and do not draw a cadastral border
   around an otherwise unsettled area.
+
+## v135 direct-source location granularity
+
+- A source point becomes a separate EU5 location only when it is distinct from an existing
+  anchor at the current tessellation, resolves to a nearby unreserved land cell, and has a
+  clear TA 3018 disposition. Longbottom, Tuckborough, the Three-Farthing Stone,
+  Underharrow, and Goblin-gate meet all three tests.
+- Weathertop is retained as the exact existing Amon Sûl anchor rather than receiving a
+  duplicate translation-name cell. Bag End and Brandy Hall remain intentional nearby
+  aliases for the same reason. Belegost and Mount Dolmed are not promoted: their Third Age
+  reconstruction is materially less certain than the five accepted direct points, and map
+  detail must not convert historical inference into a false active location.
+
+## v136 Buckland anchor density
+
+- Newbury, Standelf, and Deephallow are separate settlements on Tolkien's Shire map and
+  receive exact Arda Maps point controls as pinned M2 land seeds. This is necessary because
+  the existing unpinned mesh would otherwise resolve each name to a materially displaced
+  generic or neighbouring named cell.
+- Buckland's special political status is acknowledged but does not authorize a new realm in
+  M2: its new location anchors remain inside the existing Shire ownership scope until the
+  plan-permitted M3 realm-roster review can make a separate, fully evidenced polity decision.
+- The existing exact Brandywine Bridge cell stays Bree-land-side. The new source-exact
+  Buckland anchors expose it as a one-cell topological split from Bree's core; that physical
+  crossing component is explicitly audited rather than reassigned merely to make the
+  political colour contiguous.

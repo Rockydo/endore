@@ -35,8 +35,8 @@ numeric controls, never downloaded reference artwork or map imagery. See
 | Mountains | Source-pinned Misty, White, northern, and Mordor ranges render as relief; v112 adds a marker-offset proof that Erebor is a compact isolated Lonely Mountain. |
 | Forests | v110's Mirkwood/Lothlórien views confirm dense, distinct canopy. Lothlórien stays inside the Golden Wood/Naith source mask rather than crossing the Misty crest. |
 | Rivers | v129 makes the installed indexed-raster grammar exclusive: the cache has zero duplicate river-material pixels. v109 adds the source-exact Ethir fork; v120 now fails validation if the continuous Langwell–Anduin trunk loses its dominant widest-class segment. |
-| Political map | v127 makes 96 named-landmark ownership dispositions auditable and adds a permanent six-theatre frontier audit. It preserves compact Lothlórien, Dunland, Moria, Erebor, Dale, Esgaroth, Iron Hills, Isengard, and source-enclosed Mordor while retaining canonically uncertain land as wild. |
-| Runtime | v129 full validation passed in 539.8 seconds. Paired vanilla/ENDÓRË smoke reached menu-ready with zero new mod-unique error-log lines on the current game-visible fingerprint. |
+| Political map | The v137 candidate retains v134's source-proven Eregion/Moria exterior correction and v135's 118 exact landmark-control contracts, then adds three source-exact Buckland localities and three exact inactive geographic witnesses without moving surviving location IDs. The only resulting detached crossing is the explicitly reviewed Bree-side Brandywine Bridge cell; canonically uncertain land remains wild. |
+| Runtime | v137 rebuilt the complete world in 495.3 seconds and passed full static validation in 542.3 seconds. Its paired vanilla/ENDÓRË smoke passed with zero mod-specific new error lines, a fixed source tree, and an exact assertion on fingerprint `975d5651a0e013f40e5b8975aa6cfa8d4aac8a7e46296bc7f9f48c425e7d4b3c`. |
 
 The direct Finder typing route remains blocked by the native edit control and correctly
 fails closed; it must not be used to assert a source camera position. This does not affect
@@ -69,6 +69,11 @@ preferences.
 | [`V113_SOURCE_PROVENANCE_REAUDIT.md`](V113_SOURCE_PROVENANCE_REAUDIT.md) | Exact upstream source-byte re-audit. |
 | [`V124_NATIVE_RIVER_SURFACE_FIX.md`](V124_NATIVE_RIVER_SURFACE_FIX.md) | Native water/width versus dry terrain-bank responsibility correction. |
 | [`V129_INDEXED_RIVER_SURFACE_ISOLATION.md`](V129_INDEXED_RIVER_SURFACE_ISOLATION.md) | v124 supersession: native indexed raster is the only river surface. |
+| [`V133_WARG_HILL_EREGION_BOUNDARY.md`](V133_WARG_HILL_EREGION_BOUNDARY.md) | Restores empty geographic Eregion and removes the unsupported Warg Hill/Moria overlap. |
+| [`V134_EREGION_EXTERIOR_RECONCILIATION.md`](V134_EREGION_EXTERIOR_RECONCILIATION.md) | Current source-complete candidate: Angle, empty Eregion, and Anduin-side Moria reconciliation; publication awaits runtime smoke. |
+| [`V135_SOURCE_LOCATION_GRANULARITY.md`](V135_SOURCE_LOCATION_GRANULARITY.md) | Five separated direct-source TA 3018 locations; complete validation green, publication awaits the shared runtime gate. |
+| [`V136_BUCKLAND_ANCHOR_DENSITY.md`](V136_BUCKLAND_ANCHOR_DENSITY.md) | Three exact Tolkien-map Buckland settlements use slot-preserving anchors; complete validation green, publication awaits the shared runtime gate. |
+| [`V137_GEOGRAPHIC_WITNESS_ANCHORS.md`](V137_GEOGRAPHIC_WITNESS_ANCHORS.md) | Slot-preserving exact controls for the Slag-hills, Haudh in Gwanûr, and Forsaken Inn; the impassable Doors of Durin source pixel is deliberately retained as terrain rather than falsified as a political cell. |
 | [`V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md`](V125_NAMED_GATE_AND_RIDGE_CONTROL_AUDIT.md) | Exact Black Gate/Morgai control and compact-Isengard ridge correction. |
 | [`V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md`](V126_COMPLETE_LANDMARK_CONTROL_AUDIT.md) | Complete 89-landmark control ledger and five corrected exact political cells. |
 | [`V127_FRONTIER_GAZETTEER_AND_CONTROL.md`](V127_FRONTIER_GAZETTEER_AND_CONTROL.md) | Seven added exact source landmarks and 96-row control ledger. |
@@ -90,9 +95,9 @@ A valid correction must identify a named landmark, coastline, ridge, forest boun
 river course, or TA 3018 ownership witness; it must not use a broad cosmetic rectangle or
 invent a state merely to tidy colours.
 
-The named control ledger now covers the immediate frontier evidence. The next source
-review remains exact-border reconciliation within Dunland, Lothlórien/Moria,
-Dale/Erebor, Mordor/Ithilien, and the represented East and South. Preserve the accepted
-coastline, relief, forest, river, and location-topology controls. Where sources establish
-geography but not a cadastral claim, leave the land wild and record the judgement rather
-than painting a speculative border.
+The named-theatre review is complete: all six enforced theatres have exact source-witness
+contracts, and v134 resolves the demonstrated Eregion/Moria mismatch. The next source
+review is restricted to physical geography: exact coastline, ridge, forest, river, and
+close-zoom material defects. Preserve accepted controls. Where sources establish geography
+but not a cadastral claim, leave the land wild and record the judgement rather than
+painting a speculative border.

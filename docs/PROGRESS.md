@@ -1,5 +1,23 @@
 # Progress
 
+## 2026-08-05
+
+- v134-v137 publish the current source-fidelity map batch. v134 confines Moria to the
+  Anduin-side mountain interior, preserves the Angle in North Arnor, and makes empty
+  Eregion deliberate wilderness. v135 adds five separated direct-source locations with
+  complete owner/wilderness contracts; v136 adds exact Buckland settlement anchors without
+  disturbing the existing mesh; v137 generalizes that safe mechanism for the Slag-hills,
+  Haudh in Gwanûr, and the Forsaken Inn. The exact Doors of Durin source pixel is correctly
+  retained as impassable terrain rather than misrepresented as a passable political cell.
+  Full regeneration passed in 495.3 seconds, full validation passed in 542.3 seconds, and
+  paired vanilla/ENDÓRË smoke passed with zero mod-specific new error lines and an exact
+  assertion on fingerprint
+  `975d5651a0e013f40e5b8975aa6cfa8d4aac8a7e46296bc7f9f48c425e7d4b3c`.
+  See `docs/m2/V134_EREGION_EXTERIOR_RECONCILIATION.md`,
+  `docs/m2/V135_SOURCE_LOCATION_GRANULARITY.md`,
+  `docs/m2/V136_BUCKLAND_ANCHOR_DENSITY.md`, and
+  `docs/m2/V137_GEOGRAPHIC_WITNESS_ANCHORS.md`.
+
 ## 2026-08-04
 
 - v133 restores Eregion (Hollin) as a conservative, source-bounded geographic region:

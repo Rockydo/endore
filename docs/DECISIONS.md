@@ -1,5 +1,36 @@
 # Decisions
 
+## 2026-08-05 - Pin physical source places without turning them into settlements
+
+The prior landmark resolver preserves source controls but can legitimately choose the
+nearest generated cell, which is too imprecise for a small named feature when no seed falls
+at the direct source point. Generalize the existing Buckland slot-preserving mechanism into
+an inactive geographic-anchor layer. It replaces only a reviewed generic slot at the exact
+Arda Maps point, keeps every surviving location key and seed fixed, and feeds the complete
+named-place owner ledger without granting an active-settlement claim.
+
+Apply the mechanism to the Slag-hills, Haudh in Gwanûr, and the Forsaken Inn: three separated
+source witnesses at the Morannon approach, southern Gondor, and east of Bree. The Doors of
+Durin remains a source-pinned impassable gate/relief control because its exact pixel is
+mountain terrain; do not falsify it as a passable political cell. Do not use this mechanism
+for aliases or uncertain points, and do not use a named marker to redraw a broad political
+boundary.
+
+## 2026-08-05 - Keep Eregion empty and the Angle north of its documented low ridge
+
+The first Eregion hierarchy batch correctly separated the former Elven land from broad
+Enedwaith, but its conservative northern join still admitted the exact Ranger seat at the
+Angle, and its Moria eligibility retained ten generated land cells west of the mountain
+cliffs. That contradicts the source relationship rather than merely making a rough border:
+Eregion's northern boundary is a low ridge south of Rivendell, while the Angle is a distinct
+North Arnor refuge; Eregion's eastern boundary is the western cliff of Moria's West-gate.
+
+Tighten only the northern UI join between the Angle and Hollin, preserving the direct Hollin
+Ridge witness. Make all land classified as Eregion deliberate wilderness at TA 3018, and
+limit Moria to the Anduin-side mountain interior. The Doors, Gate-stream, and exterior
+Eregion road are access geography, not evidence that the orc-hold administers Eregion.
+No new polity, terrain, river, forest, coast, or location is created by this ruling.
+
 ## 2026-08-04 - Keep source-pinned Warg Hill outside the Moria claim
 
 ArdaCraft places Warg Hill in Eregion close to, but outside, Moria's West-gate; *The

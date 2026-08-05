@@ -34,6 +34,7 @@ from worldgen import (
     WorldModel,
     build_model,
     load_anchors,
+    load_geographic_anchors,
     model_manifest,
 )
 
@@ -109,7 +110,7 @@ CLAIM_BOUNDS: dict[str, tuple[float, float, float, float, str]] = {
     "BLU": (0.260, 0.320, 0.120, 0.230, "Surviving Ered Luin halls"),
     "LOR": (0.498, 0.550, 0.330, 0.395, "Naith between Misty foothills and Anduin"),
     "DUN": (0.395, 0.470, 0.400, 0.515, "Dunland west of Isen and the Gap"),
-    "MOA": (0.470, 0.505, 0.300, 0.370, "Moria and immediate Dimrill/Sirannon approaches"),
+    "MOA": (0.485, 0.505, 0.300, 0.370, "Moria's Anduin-side mountain interior and immediate eastern approach"),
     "GOB": (0.490, 0.522, 0.150, 0.235, "Goblin-town and High Pass under the Misty Mountains"),
     "GUN": (0.470, 0.545, 0.065, 0.150, "Gundabad and the northern mountain junction"),
     "IRO": (0.645, 0.710, 0.120, 0.190, "Iron Hills source label and adjacent holds"),
@@ -417,10 +418,10 @@ POLITICAL_SILHOUETTE_CONTRACTS: dict[
         "Lothlorien must remain within the Golden Wood/Naith east of the Misty crest",
     ),
     "MOA": (
-        20,
-        28,
-        (0.470, 0.503, 0.303, 0.368),
-        "Moria must remain a compact Misty Mountain hold and immediate approaches",
+        10,
+        14,
+        (0.485, 0.503, 0.303, 0.368),
+        "Moria must remain inside its Anduin-side Misty Mountain interior, not claim Eregion",
     ),
     "ERE": (
         7,
@@ -479,6 +480,8 @@ EREGION_REGION_WITNESSES = frozenset({
 })
 EREGION_REGION = "me_eregion_region"
 MORIA_SIDE_REGION_WITNESSES = frozenset({"redhorn_gate"})
+ANGLE_REGION_WITNESS = "the_angle"
+ANGLE_REGION = "me_north_arnor_region"
 
 # The Fords lie south of Orthanc at the Gap and cannot be swallowed by Saruman's compact
 # ring-domain.  The positive owner may change with a later source-backed Rohan/Dunland
@@ -842,6 +845,10 @@ REVIEWED_COMPONENT_REPAIRS: dict[
 # changes fail validation and return to review rather than silently inheriting
 # an obsolete exception.
 REVIEWED_DISCONNECTED_COMPONENTS: dict[tuple[str, frozenset[str]], str] = {
+    ("BRE", frozenset({"me_land_1334"})): (
+        "Brandywine Bridge is a source-pinned Bree-land-side crossing split from the "
+        "four-village core by the exact Buckland locality tessellation"
+    ),
     ("GON", frozenset({"me_land_0004", "me_land_1280"})): (
         "Tolfalas island, separated from mainland Gondor by engine water"
     ),
@@ -1264,6 +1271,7 @@ def frontier_theatres() -> tuple[FrontierTheatre, ...]:
 def landmark_owner_contracts() -> dict[str, tuple[str, str]]:
     """Load the complete, source-reviewed named-landmark ownership ledger."""
     landmarks = {landmark.ref for landmark in load_landmarks()}
+    landmarks |= {anchor.key for anchor in load_geographic_anchors()}
     with LANDMARK_CONTROL_CSV.open("r", encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
     contracts: dict[str, tuple[str, str]] = {}
@@ -1455,8 +1463,13 @@ def forced_ownership(
         raise ValueError("two M3 realms resolve to the same capital location")
     anchor_rank = {anchor.key: anchor.rank for anchor in load_anchors()}
     anchor_hint = {anchor.key: anchor.realm_hint for anchor in load_anchors()}
+    anchor_active = {anchor.key: anchor.active for anchor in load_anchors()}
     for ref, location_key in ref_to_location.items():
-        if ref not in anchor_hint or anchor_rank[ref] == "ruin":
+        if (
+            ref not in anchor_hint
+            or not anchor_active[ref]
+            or anchor_rank[ref] == "ruin"
+        ):
             continue
         tag = SETTLEMENT_HINT_OWNER.get(anchor_hint[ref])
         if ref == "dol_amroth":
@@ -1469,6 +1482,10 @@ def forced_ownership(
     # refuges are canonically occupied on TA 3018.1.1.  Pin them before the
     # wilderness mask so their generated town setup always has a valid owner.
     operational_landmark_owners = {
+        "longbottom": "SHI",
+        "tuckborough": "SHI",
+        "underharrow": "ROH",
+        "goblin_gate": "GOB",
         "derndingle": "FAN",
         "cair_andros": "GON",
         "henneth_annun": "GON",
@@ -1490,7 +1507,7 @@ def active_settlement_owner_contracts() -> dict[str, tuple[str, str]]:
     """Return ownership witnesses for every non-ruined authored settlement."""
     contracts: dict[str, tuple[str, str]] = {}
     for anchor in load_anchors():
-        if anchor.rank == "ruin":
+        if not anchor.active or anchor.rank == "ruin":
             continue
         tag = SETTLEMENT_HINT_OWNER.get(anchor.realm_hint)
         if anchor.key == "dol_amroth":
@@ -2436,6 +2453,8 @@ def manifest(state: RealmState) -> str:
             + b"\0"
             + LANDMARK_CONTROL_CSV.read_bytes()
             + b"\0"
+            + (CONTROL / "geographic_anchors.csv").read_bytes()
+            + b"\0"
             + FRONTIER_THEATRES_CSV.read_bytes()
         ).hexdigest(),
     }
@@ -2577,6 +2596,10 @@ def check() -> list[str]:
         tag: connectivity[tag]["component_detail"]
         for tag in CONTIGUOUS_CLAIM_REALMS
         if connectivity[tag]["components"] != 1
+        and any(
+            component["disposition"] == "unreviewed"
+            for component in connectivity[tag]["component_detail"][1:]
+        )
     }
     if fragmented_compact_realms:
         failures.append(
@@ -2684,6 +2707,26 @@ def check() -> list[str]:
                 f"Moria-side hierarchy witness {ref} is in {region}, expected "
                 "me_anduin_vale_region"
             )
+    angle_location_key = state.ref_to_location.get(ANGLE_REGION_WITNESS)
+    if angle_location_key is None:
+        failures.append("Angle hierarchy witness is unresolved")
+    elif state.model.by_key[angle_location_key].region != ANGLE_REGION:
+        failures.append(
+            "Angle hierarchy witness is in "
+            f"{state.model.by_key[angle_location_key].region}, expected {ANGLE_REGION}"
+        )
+    occupied_eregion = [
+        location.key
+        for location in state.model.locations
+        if location.kind == "land"
+        and location.region == EREGION_REGION
+        and state.ownership[location.key] != WILD
+    ]
+    if occupied_eregion:
+        failures.append(
+            "TA 3018 Eregion has unsupported non-wilderness ownership: "
+            f"{occupied_eregion[:5]}"
+        )
     for (ref, required_owner), source in FRONTIER_LANDMARK_CLAIM_EXCEPTIONS.items():
         contract = landmark_owner_contracts().get(ref)
         if contract is None:

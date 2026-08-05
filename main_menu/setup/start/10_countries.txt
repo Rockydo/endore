@@ -7,6 +7,7 @@ countries = {
 			own_control_core = {
 				calembel
 				erech
+				haudh_in_gwanur
 				linhir
 				me_land_0004
 				me_land_0011
@@ -256,7 +257,6 @@ countries = {
 				me_land_2873
 				me_land_2894
 				me_land_2909
-				me_land_2915
 				me_land_2937
 				me_land_2952
 				me_land_2965
@@ -977,6 +977,7 @@ countries = {
 		SHI = { # The Shire
 			own_control_core = {
 				bucklebury
+				deephallow
 				hobbiton
 				me_land_0181
 				me_land_0407
@@ -1018,7 +1019,6 @@ countries = {
 				me_land_2839
 				me_land_2992
 				me_land_3013
-				me_land_3335
 				me_land_3498
 				me_land_3524
 				me_land_3566
@@ -1027,7 +1027,6 @@ countries = {
 				me_land_3874
 				me_land_3893
 				me_land_3903
-				me_land_3927
 				me_land_3975
 				me_land_4057
 				me_land_4354
@@ -1046,6 +1045,8 @@ countries = {
 				me_land_5125
 				me_land_5132
 				michel_delving
+				newbury
+				standelf
 			}
 			starting_technology_level = 3
 
@@ -1145,6 +1146,7 @@ countries = {
 		BRE = { # Bree-land
 			own_control_core = {
 				me_bree
+				me_land_0359
 				me_land_0591
 				me_land_0635
 				me_land_0900
@@ -1153,10 +1155,8 @@ countries = {
 				me_land_1334
 				me_land_1400
 				me_land_1898
-				me_land_1908
 				me_land_2563
 				me_land_2732
-				me_land_2753
 				me_land_2798
 				me_land_3111
 				me_land_3392
@@ -1273,6 +1273,7 @@ countries = {
 				me_land_0391
 				me_land_0421
 				me_land_0813
+				me_land_0922
 				me_land_1047
 				me_land_1256
 				me_land_1469
@@ -1281,6 +1282,7 @@ countries = {
 				me_land_1988
 				me_land_2037
 				me_land_2210
+				me_land_2219
 				me_land_2363
 				me_land_2550
 				me_land_2703
@@ -1296,13 +1298,16 @@ countries = {
 				me_land_3639
 				me_land_3821
 				me_land_3948
+				me_land_4042
 				me_land_4064
 				me_land_4077
 				me_land_4290
 				me_land_4299
 				me_land_4388
+				me_land_4463
 				me_land_4864
 				me_land_4925
+				me_land_4984
 				me_land_5111
 				me_land_5148
 			}
@@ -4286,15 +4291,10 @@ countries = {
 
 		MOA = { # Moria
 			own_control_core = {
-				me_land_0032
-				me_land_0263
 				me_land_0352
-				me_land_0888
 				me_land_0916
-				me_land_1132
 				me_land_1248
 				me_land_2603
-				me_land_2608
 				me_land_2656
 				me_land_2680
 				me_land_3158
@@ -4302,10 +4302,7 @@ countries = {
 				me_land_3670
 				me_land_3753
 				me_land_3765
-				me_land_4463
 				me_land_4510
-				me_land_4652
-				me_land_4984
 				me_land_5089
 				moria
 			}

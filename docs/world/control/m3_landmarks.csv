@@ -112,3 +112,8 @@ sarn_gebir,Sarn Gebir,0.553997,0.500500,landmark,"LOTR, Book II, Ch. 9",Ardacraf
 falls_nimrodel,Falls of Nimrodel,0.502610,0.351896,landmark,"LOTR, Book II, Ch. 6",Ardacraft: Falls of Nimrodel,yes
 cormallen,Cormallen,0.592619,0.580882,landmark,"LOTR, Book VI, Ch. 5",Ardacraft: Cormallen,yes
 warg_hill,Warg Hill,0.479405,0.318111,landmark,"LOTR, Book II, Ch. 4",Ardacraft: Warg Hill,yes
+longbottom,Longbottom,0.360470,0.247099,village,"LOTR, Book I, Ch. 1",Ardacraft: Longbottom,yes
+tuckborough,Tuckborough,0.357517,0.231985,town,"LOTR, Book I, Ch. 1",Ardacraft: Tuckborough,yes
+three_farthing_stone,Three-Farthing Stone,0.363644,0.228288,landmark,"LOTR, Book I, Ch. 1",Ardacraft: Three-Farthing Stone,yes
+underharrow,Underharrow,0.494170,0.546911,village,"LOTR, Book V, Ch. 3",Ardacraft: Underharrow,yes
+goblin_gate,Goblin-gate,0.516664,0.193963,landmark,"The Hobbit, Ch. 6",Arda Maps point_place: GoblinGate,yes

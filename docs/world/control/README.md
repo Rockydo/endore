@@ -19,6 +19,10 @@ books; no published map image or film frame was traced or copied.
 - `projection.json`: coastline, bays, lakes, ridges, passes, biome and density zones,
   and river centerlines.
 - `settlements.csv`: canon anchor names, ranks, language/realm hints, and sources.
+- `locality_anchors.csv`: exact, source-pinned local settlement anchors that replace a
+  reviewed generic land slot without renumbering the existing world mesh.
+- `geographic_anchors.csv`: exact, source-pinned physical places using the same
+  slot-preserving mechanism, without implying an inhabited settlement or broad claim.
 - `coastline.png`: binary land mask.
 - `elevation.png`: authored 16-bit elevation control.
 - `biomes.png`: numeric biome zones listed in `control_manifest.json`.

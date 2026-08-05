@@ -35,6 +35,7 @@ locations = {
 	me_land_1316 = { rank = city town_setup = me_m5_city }
 	me_land_1548 = { rank = town town_setup = me_m5_fortress }
 	me_land_1647 = { rank = town town_setup = me_m5_fortress }
+	me_land_1667 = { rank = town town_setup = me_m5_town }
 	me_land_1848 = { rank = town town_setup = me_m5_fortress }
 	me_land_2126 = { rank = town town_setup = me_m5_shadow_hold }
 	me_land_2239 = { rank = town town_setup = me_m5_town }
@@ -56,6 +57,7 @@ locations = {
 	mithlond = { rank = city town_setup = me_m5_city_port }
 	morannon = { rank = town town_setup = me_m5_shadow_fortress }
 	moria = { rank = town town_setup = me_m5_shadow_hold }
+	newbury = { rank = town town_setup = me_m5_town }
 	nurn_fields = { rank = town town_setup = me_m5_town }
 	pelargir = { rank = city town_setup = me_m5_city_port }
 	rivendell = { rank = town town_setup = me_m5_refuge }

@@ -21,6 +21,9 @@ me_eriador = {
 			me_enedwaith_area_11_20 = {
 				me_enedwaith_area_11_20_province_01 = { me_land_1289 me_land_3912 me_land_4247 }
 			}
+			me_enedwaith_area_11_24 = {
+				me_enedwaith_area_11_24_province_01 = { me_land_4984 }
+			}
 			me_enedwaith_area_12_15 = {
 				me_enedwaith_area_12_15_province_01 = { me_land_4144 me_mountain_0286 }
 			}
@@ -41,6 +44,9 @@ me_eriador = {
 			}
 			me_enedwaith_area_12_21 = {
 				me_enedwaith_area_12_21_province_01 = { me_land_1337 me_land_3657 me_land_2189 me_land_1383 }
+			}
+			me_enedwaith_area_12_24 = {
+				me_enedwaith_area_12_24_province_01 = { me_land_4463 me_mountain_0030 }
 			}
 			me_enedwaith_area_13_15 = {
 				me_enedwaith_area_13_15_province_01 = { me_land_4078 }
@@ -241,11 +247,8 @@ me_eriador = {
 			}
 		}
 		me_eregion_region = {
-			me_eregion_area_10_22 = {
-				me_eregion_area_10_22_province_01 = { me_land_2219 }
-			}
 			me_eregion_area_10_23 = {
-				me_eregion_area_10_23_province_01 = { me_land_4042 me_land_4388 me_land_4726 }
+				me_eregion_area_10_23_province_01 = { me_land_4726 }
 			}
 			me_eregion_area_11_21 = {
 				me_eregion_area_11_21_province_01 = { me_land_2449 me_land_1718 me_land_1660 me_land_1911 me_land_4568 }
@@ -254,10 +257,7 @@ me_eriador = {
 				me_eregion_area_11_22_province_01 = { me_land_3492 me_land_2420 me_land_3421 me_land_2519 me_land_1141 me_land_2809 me_land_0842 me_land_2019 me_land_2508 }
 			}
 			me_eregion_area_11_23 = {
-				me_eregion_area_11_23_province_01 = { me_land_0547 me_land_1857 me_land_1751 me_land_2963 me_land_0414 me_land_0922 me_land_4232 me_land_3097 }
-			}
-			me_eregion_area_11_24 = {
-				me_eregion_area_11_24_province_01 = { me_land_4984 }
+				me_eregion_area_11_23_province_01 = { me_land_0547 me_land_1857 me_land_1751 me_land_2963 me_land_0414 me_land_4232 me_land_3097 }
 			}
 			me_eregion_area_12_21 = {
 				me_eregion_area_12_21_province_01 = { me_land_4657 me_land_5103 me_land_2796 me_land_2698 me_land_1669 me_land_4319 }
@@ -269,7 +269,7 @@ me_eriador = {
 				me_eregion_area_12_23_province_01 = { me_land_0032 me_land_2504 me_land_2571 me_land_2608 me_land_2010 me_land_4453 me_land_0888 }
 			}
 			me_eregion_area_12_24 = {
-				me_eregion_area_12_24_province_01 = { me_mountain_0379 me_land_4463 me_land_4652 me_land_0916 me_mountain_0030 }
+				me_eregion_area_12_24_province_01 = { me_land_4652 }
 			}
 			me_eregion_area_13_21 = {
 				me_eregion_area_13_21_province_01 = { me_land_3890 me_land_2640 }
@@ -281,7 +281,7 @@ me_eriador = {
 				me_eregion_area_13_23_province_01 = { me_land_3399 me_land_1132 me_land_0263 me_land_3690 me_mountain_0291 me_land_4881 me_mountain_0345 me_mountain_0036 }
 			}
 			me_eregion_area_13_24 = {
-				me_eregion_area_13_24_province_01 = { me_land_5089 me_lake_0007 me_mountain_0032 me_mountain_0377 }
+				me_eregion_area_13_24_province_01 = { me_mountain_0032 me_mountain_0377 }
 			}
 		}
 		me_lindon_region = {
@@ -653,7 +653,7 @@ me_eriador = {
 				me_north_arnor_area_08_24_province_01 = { me_land_4259 me_land_3542 me_land_1042 me_land_2542 me_land_0626 me_land_0349 me_land_2942 rivendell }
 			}
 			me_north_arnor_area_09_20 = {
-				me_north_arnor_area_09_20_province_01 = { me_land_2798 me_land_1898 me_land_0878 me_land_4828 me_land_0541 me_land_2554 me_land_1046 }
+				me_north_arnor_area_09_20_province_01 = { me_land_2798 forsaken_inn me_land_1898 me_land_4828 me_land_0541 me_land_2554 me_land_1046 }
 			}
 			me_north_arnor_area_09_21 = {
 				me_north_arnor_area_09_21_province_01 = { me_land_3603 me_land_3223 me_land_1480 me_land_0286 me_land_2703 me_land_4022 }
@@ -674,10 +674,10 @@ me_eriador = {
 				me_north_arnor_area_10_21_province_01 = { me_land_1629 me_land_2210 me_land_3639 me_land_4773 me_land_1817 me_land_0865 me_land_2559 me_land_4523 me_land_2037 }
 			}
 			me_north_arnor_area_10_22 = {
-				me_north_arnor_area_10_22_province_01 = { me_land_3078 me_land_0813 me_land_1469 me_land_2833 me_land_0290 me_land_3069 }
+				me_north_arnor_area_10_22_province_01 = { me_land_3078 me_land_0813 me_land_1469 me_land_2833 me_land_0290 me_land_3069 me_land_2219 }
 			}
 			me_north_arnor_area_10_23 = {
-				me_north_arnor_area_10_23_province_01 = { me_land_0421 me_land_3821 me_land_5111 me_land_0391 me_land_4077 me_land_1749 }
+				me_north_arnor_area_10_23_province_01 = { me_land_0421 me_land_3821 me_land_5111 me_land_0391 me_land_4077 me_land_1749 me_land_4042 me_land_4388 }
 			}
 			me_north_arnor_area_10_24 = {
 				me_north_arnor_area_10_24_province_01 = { me_land_2789 me_mountain_0253 me_land_4064 me_land_4290 me_land_4864 me_mountain_0316 me_land_4925 }
@@ -687,6 +687,9 @@ me_eriador = {
 			}
 			me_north_arnor_area_11_21 = {
 				me_north_arnor_area_11_21_province_01 = { me_land_1047 me_land_2459 me_land_3585 me_land_2046 }
+			}
+			me_north_arnor_area_11_23 = {
+				me_north_arnor_area_11_23_province_01 = { me_land_0922 }
 			}
 			me_north_arnor_area_11_24 = {
 				me_north_arnor_area_11_24_province_01 = { me_mountain_0022 me_mountain_0584 me_land_0062 me_mountain_0400 me_mountain_0385 me_mountain_0133 me_mountain_0491 me_land_5148 me_mountain_0246 }
@@ -709,7 +712,7 @@ me_eriador = {
 				me_shire_breeland_area_08_18_province_01 = { me_land_4367 me_land_4626 me_land_4877 me_land_1475 me_lake_0003 me_land_0524 me_land_0181 me_land_1865 me_land_5125 me_lake_0004 }
 			}
 			me_shire_breeland_area_08_19 = {
-				me_shire_breeland_area_08_19_province_01 = { me_land_2563 me_land_0635 me_land_3887 me_land_2747 me_land_4714 me_land_1908 me_land_4738 me_land_1334 }
+				me_shire_breeland_area_08_19_province_01 = { me_land_2563 me_land_0635 me_land_3887 me_land_2747 me_land_4714 me_land_4738 me_land_1334 }
 			}
 			me_shire_breeland_area_08_20 = {
 				me_shire_breeland_area_08_20_province_01 = { me_land_1400 me_land_3869 }
@@ -726,10 +729,10 @@ me_eriador = {
 				me_shire_breeland_area_09_17_province_02 = { me_land_5047 }
 			}
 			me_shire_breeland_area_09_18 = {
-				me_shire_breeland_area_09_18_province_01 = { bucklebury me_land_3498 me_land_3335 me_land_1827 me_land_3550 }
+				me_shire_breeland_area_09_18_province_01 = { bucklebury me_land_3498 me_land_1827 me_land_3550 }
 			}
 			me_shire_breeland_area_09_19 = {
-				me_shire_breeland_area_09_19_province_01 = { me_land_0933 me_land_1022 me_land_4390 me_land_5010 me_land_3392 me_land_1062 }
+				me_shire_breeland_area_09_19_province_01 = { newbury me_land_0933 me_land_1022 standelf deephallow me_land_4390 me_land_5010 me_land_3392 me_land_1062 }
 			}
 			me_shire_breeland_area_09_20 = {
 				me_shire_breeland_area_09_20_province_01 = { me_bree me_land_3828 me_land_0900 me_land_3111 }
@@ -747,7 +750,7 @@ me_eriador = {
 				me_shire_breeland_area_10_18_province_01 = { me_land_2992 me_land_3762 me_land_2641 me_land_2785 me_land_0811 me_land_0030 me_land_3572 me_land_3243 }
 			}
 			me_shire_breeland_area_10_19 = {
-				me_shire_breeland_area_10_19_province_01 = { me_land_2753 me_land_1346 me_land_0359 me_land_0137 me_land_0750 me_land_1893 me_land_0911 }
+				me_shire_breeland_area_10_19_province_01 = { me_land_1346 me_land_0359 me_land_0137 me_land_0750 me_land_1893 me_land_0911 }
 			}
 			me_shire_breeland_area_10_20 = {
 				me_shire_breeland_area_10_20_province_01 = { me_land_1111 me_land_2732 me_land_3473 me_land_0591 }
@@ -1335,8 +1338,8 @@ me_rhovanion = {
 				me_anduin_vale_area_11_26_province_02 = { me_land_2018 }
 			}
 			me_anduin_vale_area_12_24 = {
-				me_anduin_vale_area_12_24_province_01 = { me_mountain_0263 me_land_3765 me_land_1248 me_mountain_0564 me_mountain_0477 me_land_3158 me_mountain_0027 me_land_4510 me_mountain_0028 me_mountain_0595 }
-				me_anduin_vale_area_12_24_province_02 = { me_mountain_0029 me_lake_0006 }
+				me_anduin_vale_area_12_24_province_01 = { me_mountain_0263 me_mountain_0379 me_land_3765 me_land_1248 me_mountain_0564 me_mountain_0477 me_land_3158 me_mountain_0027 me_land_4510 me_mountain_0028 }
+				me_anduin_vale_area_12_24_province_02 = { me_mountain_0595 me_land_0916 me_mountain_0029 me_lake_0006 }
 			}
 			me_anduin_vale_area_12_25 = {
 				me_anduin_vale_area_12_25_province_01 = { me_mountain_0026 me_land_3433 me_land_2680 me_mountain_0128 me_land_4309 me_land_0194 me_land_0644 me_mountain_0561 me_land_0947 me_mountain_0451 }
@@ -1349,7 +1352,7 @@ me_rhovanion = {
 				me_anduin_vale_area_12_27_province_01 = { me_land_4607 me_land_4286 me_land_4368 }
 			}
 			me_anduin_vale_area_13_24 = {
-				me_anduin_vale_area_13_24_province_01 = { me_land_3670 me_mountain_0031 moria me_mountain_0033 me_mountain_0034 me_mountain_0279 me_mountain_0035 me_land_3205 }
+				me_anduin_vale_area_13_24_province_01 = { me_land_3670 me_mountain_0031 me_land_5089 me_lake_0007 moria me_mountain_0033 me_mountain_0034 me_mountain_0279 me_mountain_0035 me_land_3205 }
 			}
 			me_anduin_vale_area_13_25 = {
 				me_anduin_vale_area_13_25_province_01 = { me_land_1622 me_land_0874 me_land_0869 me_land_3549 me_land_2603 me_land_4067 me_land_1568 }
@@ -1488,10 +1491,10 @@ me_rhovanion = {
 				me_brown_lands_area_20_28_province_01 = { me_lake_0010 me_lake_0011 me_land_0902 me_land_0328 }
 			}
 			me_brown_lands_area_20_29 = {
-				me_brown_lands_area_20_29_province_01 = { me_lake_0008 me_lake_0012 me_land_2454 me_land_3567 me_land_2080 me_land_0432 me_land_3562 me_land_2702 }
+				me_brown_lands_area_20_29_province_01 = { me_lake_0008 me_lake_0012 me_land_2454 me_land_3567 me_land_2080 me_land_3562 me_land_2702 }
 			}
 			me_brown_lands_area_20_30 = {
-				me_brown_lands_area_20_30_province_01 = { me_land_1752 me_land_3157 me_land_3902 me_land_1277 morannon }
+				me_brown_lands_area_20_30_province_01 = { me_land_1752 me_land_3157 me_land_3902 me_land_1277 morannon slag_hills }
 			}
 			me_brown_lands_area_20_31 = {
 				me_brown_lands_area_20_31_province_01 = { me_land_0880 }
@@ -2239,7 +2242,7 @@ me_gondor = {
 				me_south_gondor_area_27_28_province_01 = { me_land_0616 me_land_0459 me_land_2340 me_land_4901 }
 			}
 			me_south_gondor_area_27_29 = {
-				me_south_gondor_area_27_29_province_01 = { me_land_4183 me_land_2621 me_land_2915 me_land_2115 }
+				me_south_gondor_area_27_29_province_01 = { me_land_4183 me_land_2621 me_land_2115 haudh_in_gwanur }
 			}
 			me_south_gondor_area_27_30 = {
 				me_south_gondor_area_27_30_province_01 = { me_land_4173 me_land_3403 me_land_1169 me_mountain_0095 me_mountain_0096 }

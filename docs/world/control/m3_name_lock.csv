@@ -472,7 +472,7 @@ me_land_0428,Oakbridge
 me_land_0429,Dushgash
 me_land_0430,Southbridge
 me_land_0431,Durthang
-me_land_0432,Taur galenath
+slag_hills,Slag-hills
 me_land_0433,Arzan
 me_land_0434,Balkan
 me_land_0435,Bahran
@@ -918,7 +918,7 @@ me_land_0874,Cedarfield
 me_land_0875,Ghashlug
 me_land_0876,Uldun
 me_land_0877,Wainun
-me_land_0878,Amon annondor
+forsaken_inn,The Forsaken Inn
 me_land_0879,Gorlug
 me_land_0880,Dol annondor
 me_land_0881,Eithel annondor
@@ -1948,7 +1948,7 @@ me_land_1904,Southstead
 me_land_1905,Heruford
 me_land_1906,Emyn gonddûr
 me_land_1907,Skarnek
-me_land_1908,Stonestead
+newbury,Newbury
 me_land_1909,Weststead
 me_land_1910,Alderwater
 me_land_1911,Ashwater
@@ -2793,7 +2793,7 @@ me_land_2749,Driftshore Reach
 me_land_2750,Kharun Gate
 me_land_2751,Varkuk
 me_land_2752,Heruham
-me_land_2753,Greybrook End
+deephallow,Deephallow
 me_land_2754,Longbrook End
 me_land_2755,Frostshore Reach
 me_land_2756,Khuror March
@@ -2955,7 +2955,7 @@ me_land_2911,Ghashzagh Camp
 me_land_2912,Karmur March
 me_land_2913,Northwater Reach
 me_land_2914,Eithel rathen
-me_land_2915,Emyn rathen
+haudh_in_gwanur,Haudh in Gwanûr
 me_land_2916,Palewater Reach
 me_land_2917,Kharur Gate
 me_land_2918,Khurur March
@@ -3375,7 +3375,7 @@ me_land_3331,Ugldûr Cleft
 me_land_3332,Starfell Sound
 me_land_3333,Ashgate End
 me_land_3334,Umran Oasis
-me_land_3335,Mosscombe
+standelf,Standelf
 me_land_3336,Minas caraneth
 me_land_3337,Ost caraneth
 me_land_3338,Urukdûr Cleft
