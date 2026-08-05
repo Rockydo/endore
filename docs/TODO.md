@@ -61,6 +61,13 @@ No milestone after M2 may start while the M2 gate remains unchecked.
   screenshots and an in-game test must prove recognizable full Middle-earth extent,
   close terrain, forest density, mountains, major rivers, and political placement. Keep
   M2 unchecked until the owner-fidelity review and all required evidence are green.
+  - [X] Prove the materially different exact-key console camera route in a fresh Observer
+    session. It must center the source-bound Old Forest and a second separated theatre
+    with a measured camera transition; do not reopen or weaken the blocked Finder route.
+    Evidence: `docs/screens/20260805_m2_exact_key_probe_v5/` and the matching
+    `console_history.txt` transforms/engine marker.
+  - [ ] Prove the fresh deep-load log has no ENDÃ“RÃ‹ coat-of-arms or Finder data-model
+    diagnostics after the collision-free `me_coa_*` realm-arm and exact-key camera batch.
 
 ## Completed gates
 

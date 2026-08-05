@@ -2,6 +2,23 @@
 
 ## 2026-08-05
 
+- The exact-key camera calibration is now proven in a live debug-mode Observer rather than
+  by Finder or an unverified console paste. The driver maps a generated key to its audited
+  control coordinate, uses the engine's `Camera.SetTransform` ABI, requires a visibly open
+  console, and retains measured visual-transition failure rules. The initial calibration
+  caught and corrected EU5's vertically inverted camera Y axis. v5 visibly centers the
+  Old Forest beside the Shire and the separate Lórien/Moria theatre, advances 15 seconds
+  of Observer play, and records `me_m2_map_runtime_pass_20260805_m2_exact_key_probe_v5` in
+  the engine log. This is navigation calibration only: physical terrain-map screenshots,
+  a non-debug deep-load log, and M2 acceptance remain open. See
+  `docs/screens/20260805_m2_exact_key_probe_v5/` and `BLOCKERS.md` for the subsequent
+  host-memory startup crashes.
+- M2 runtime-hardening is prepared but not yet accepted. The blocked Finder route is
+  replaced by a fail-closed exact internal-location console route that measures the same
+  real camera delta without touching the native Finder list. Realm arm keys are now
+  namespaced as `me_coa_*`, preventing collisions with installed country-arm keys while
+  retaining the selected vanilla emblem assets. Full validation passed in 522.4 seconds;
+  fresh deep-game evidence remains required before this candidate is published.
 - v134-v137 publish the current source-fidelity map batch. v134 confines Moria to the
   Anduin-side mountain interior, preserves the Angle in North Arnor, and makes empty
   Eregion deliberate wilderness. v135 adds five separated direct-source locations with

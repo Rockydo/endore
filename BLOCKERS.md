@@ -1,5 +1,44 @@
 # ENDÓRË Blockers
 
+## 2026-08-05 - repeated fresh debug-calibration startup crash under host memory pressure
+
+Status: two-strike host-runtime blocker; do not rerun the same debug calibration until
+the machine has materially more memory headroom.
+
+The corrected exact-key camera calibration completed once (`..._v5`): it visibly placed
+the Old Forest beside the Shire and the independent Anduin/Lórien theatre, advanced an
+Observer interval, and logged its engine-side marker. Two immediately subsequent fresh
+`--debug-mode --visual-map` starts (`..._v6`, `..._v7`) exited before Observer entry and
+before the new terrain-map-mode command could run. Their crash reports are
+`G:\endore_user_data\crashes\Europa Universalis V20260805_194931` and
+`...\Europa Universalis V20260805_195225`. Both report the same DX12/NGX stack; the
+first had only 2,366 MB physical and 20 MB virtual memory available, and the second
+2,936 MB physical and 411 MB virtual. The map tree and generated runtime were unchanged.
+
+Do not call this a map regression or weaken the source-bound camera contract. Defer the
+terrain-mode calibration until a fresh launch has substantially safer RAM and swap
+headroom, then run the unchanged `01_shire_old_forest,03_misty_anduin` targeted debug
+calibration before the full M2 atlas. Non-debug smoke and deep-log acceptance remain
+separate mandatory gates.
+
+## 2026-08-05 - shared EU5 runtime continuously owned by Antiquitas
+
+Status: external runtime contention; ENDÓRË M2 deep acceptance is deferred, not failed.
+
+The prepared M2 acceptance run entered a fresh ENDÓRË Observer and failed closed only when
+the obsolete Finder route could not prove its first theatre transition. The subsequent
+materially different exact-key console route, collision-free `me_coa_*` realm-arm batch,
+fresh deep-log audit, generated outputs, and full static world validation are ready. Two
+nonwaiting subsequent ENDÓRË launch attempts correctly deferred through `eu5_slot.py`
+because Antiquitas owned the single real-game slot.
+
+The owner record is live rather than stale: `eu5.exe` PID 29064, acquired at
+`2026-08-05T02:26:21Z`, continues consuming CPU with roughly 7.7 GB working set. Do not
+kill, steal, or poll this process. The pending ENDÓRË gate remains recorded under
+`G:\endore_runtime\state\pending_eu5_gate.json`; on the next atomic free handoff, run the
+targeted `01_shire_old_forest,03_misty_anduin` exact-key Observer proof, then the complete
+M2 atlas. No other M2 content change is authorized without its source-backed visual result.
+
 ## 2026-08-04 - repeated Finder transition false-negative in a single Observer session
 
 Status: two-strike evidence-route blocker; retain the existing fail-closed rule and move

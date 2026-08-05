@@ -15,6 +15,7 @@ sys.path.insert(0, str(TOOLS))
 
 from gamedriver import (
     camera_delta_ratio,
+    exact_location_camera_command,
     load_game_panel_state,
     main_menu_new_game_button_state,
     mainmenu_game_transition_state,
@@ -39,6 +40,16 @@ def write(path: Path, *lines: str) -> None:
 
 
 def main() -> int:
+    require(
+        exact_location_camera_command("me_land_4390")
+        == "Camera.SetTransform 6356 0 6192 1800 72 0",
+        "Old Forest camera binding must retain the generated X scale and inverted Y axis",
+    )
+    require(
+        exact_location_camera_command("caras_galadhon")
+        == "Camera.SetTransform 8508 0 5276 1800 72 0",
+        "Caras Galadhon camera binding must retain the source-bound control transform",
+    )
     require(
         runtime_link_needs_repair(
             {

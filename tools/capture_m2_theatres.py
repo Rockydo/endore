@@ -19,6 +19,45 @@ INDEX = ROOT / "docs" / "world" / "derived" / "location_index.csv"
 LOCALIZATION = ROOT / "in_game" / "localization" / "english" / "m2_map_l_english.yml"
 PROJECTION = ROOT / "docs" / "world" / "control" / "projection.json"
 EX_TEMPFAIL = 75
+RUNTIME_LOG_DIR = Path(r"G:\endore_user_data\logs")
+ERROR_LOG = RUNTIME_LOG_DIR / "error.log"
+ERROR_TIMESTAMP = re.compile(r"^\[\d\d:\d\d:\d\d\]")
+
+# The retail automatic ``common/tests`` scheduler is currently unavailable in
+# this installed build (see BLOCKERS.md).  The live debug console's
+# ``test_log`` effect is the engine-proven fallback used by M1: it writes a
+# parseable runtime assertion only after the complete fresh Observer audit has
+# entered play, captured all requested theatres, and survived bounded
+# playback.  Keep the assertion at the end of this one session so it cannot
+# be mistaken for an assertion from a menu-only or stale-map launch.
+RUNTIME_TEST_COMMAND = (
+    "effect test_log = {{ name = me_m2_map_test text = {marker} }}"
+)
+
+# These exact normalised lines are established machine/store diagnostics from
+# the current installed build.  The deep map gate is intentionally stricter
+# than menu smoke: it rejects every other line after a fresh Observer entry,
+# including a COA parse fault or a GUI data-model error from evidence tooling.
+DEEP_LOG_ALLOWED = tuple(
+    re.compile(pattern)
+    for pattern in (
+        r"\[gfx_dx12_master_context\.cpp:1344\]: D3D error: "
+        r"_Device->CheckFeatureSupport\( D3D12_FEATURE_D3D12_OPTIONS8, "
+        r"&D3D12Options8, sizeof\( D3D12Options8 \) \) returned: "
+        r"The parameter is incorrect\.",
+        r"\[pdx_assert\.cpp:214\]: Important assertion failed: "
+        r"C:/mnt/gsg/caesar/caesar/cw/clausewitz/pdx_gfx2/DX12/"
+        r"gfx_dx12_master_context\.cpp:1344 \(_Device->CheckFeatureSupport\( "
+        r"D3D12_FEATURE_D3D12_OPTIONS8, &D3D12Options8, "
+        r"sizeof\( D3D12Options8 \) \) returned:",
+        r"The parameter is incorrect\.",
+        r"\)",
+        r"\[dlc_reloadable\.cpp:1582\]: Could not find item in store backend\. "
+        r"Item: (?:3865300|3699010)",
+        r"\[pdx_arena_allocator\.cpp:213\]: Arena AudioArena size is too small\. "
+        r"Please increase\.",
+    )
+)
 
 
 @dataclass(frozen=True)
@@ -207,10 +246,72 @@ def localization_names() -> dict[str, str]:
     return result
 
 
+def location_key_for_query(query: str) -> str:
+    """Resolve an audited display query to one exact generated location key.
+
+    The normal player-facing label remains the static source contract.  The
+    runtime camera uses the corresponding internal key through the console so
+    evidence never depends on the host's unstable Finder text widget.
+    """
+    with INDEX.open(encoding="utf-8-sig", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    localized_by_key = localization_names()
+    matches = [
+        row
+        for row in rows
+        if query.casefold()
+        in localized_by_key.get(row["key"], row["display_name"]).casefold()
+    ]
+    exact = [
+        row
+        for row in matches
+        if localized_by_key.get(row["key"], row["display_name"]).casefold()
+        == query.casefold()
+    ]
+    if len(exact) == 1:
+        return exact[0]["key"]
+    if len(matches) == 1:
+        return matches[0]["key"]
+    raise ValueError(
+        f"location query {query!r} is not uniquely bound to one generated key"
+    )
+
+
 def driver(*args: str) -> int:
     command = [sys.executable, str(DRIVER), *args]
     print("+", " ".join(command), flush=True)
     return subprocess.run(command, cwd=ROOT, check=False).returncode
+
+
+def runtime_test_marker(session: str) -> str:
+    """Return an engine-safe per-session marker for the live log assertion."""
+    normalized = re.sub(r"[^a-z0-9_]+", "_", session.casefold()).strip("_")
+    return f"me_m2_map_runtime_pass_{normalized or 'acceptance'}"
+
+
+def runtime_test_log_lines(marker: str) -> list[str]:
+    """Collect the exact fresh test-log lines written by the active EU5 process."""
+    lines: list[str] = []
+    for path in sorted(RUNTIME_LOG_DIR.glob("*.log")):
+        try:
+            for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+                if marker in line:
+                    lines.append(f"{path.name}: {line}")
+        except OSError:
+            continue
+    return lines
+
+
+def deep_log_unexpected_lines() -> list[str]:
+    """Return fresh-game diagnostics not established as machine-only noise."""
+    if not ERROR_LOG.is_file():
+        return ["error.log is absent after fresh Observer entry"]
+    result: list[str] = []
+    for raw in ERROR_LOG.read_text(encoding="utf-8-sig", errors="replace").splitlines():
+        line = ERROR_TIMESTAMP.sub("", raw).strip().replace("\\", "/")
+        if line and not any(pattern.fullmatch(line) for pattern in DEEP_LOG_ALLOWED):
+            result.append(line)
+    return sorted(set(result))
 
 
 def point_segment_distance(
@@ -328,10 +429,11 @@ def check_manifest() -> list[str]:
 
 def reset_and_capture(query: str, zoom: int, name: str, session: str) -> int:
     commands = (
-        ("focus-location", query, "--settle", "4"),
-        # Finder focus establishes both the correct centre and a maximum-close
-        # 3D camera. Apply a bounded zoom-out from that known state: a larger
-        # value gives the regional frame and a smaller value the close frame.
+        ("goto-location", location_key_for_query(query), "--settle", "4"),
+        # Exact-key console focus establishes both the correct centre and a
+        # maximum-close 3D camera. Apply a bounded zoom-out from that known
+        # state: a larger value gives the regional frame and a smaller value
+        # the close frame.
         ("scroll", str(-zoom), "--settle", "4"),
         (
             "move",
@@ -352,6 +454,53 @@ def reset_and_capture(query: str, zoom: int, name: str, session: str) -> int:
     return 0
 
 
+def capture_theatre(theatre: Theatre, session: str) -> int:
+    """Capture a regional/close pair without falsely re-focusing one key.
+
+    Several binding views intentionally use one canonical location for both
+    frames.  A console ``goto`` is required to prove the first source-bound
+    centre, but issuing it again after only a zoom change has no camera delta
+    and must remain a failure in ``gamedriver``.  Reuse that proven centre and
+    restore the close zoom instead; distinct regional/close locations still
+    receive two independently measured console transitions.
+    """
+    result = reset_and_capture(
+        theatre.regional_query,
+        theatre.regional_zoom,
+        f"{theatre.slug}_regional",
+        session,
+    )
+    if result:
+        return result
+
+    if location_key_for_query(theatre.regional_query) == location_key_for_query(
+        theatre.close_query
+    ):
+        zoom_in = theatre.regional_zoom - theatre.close_zoom
+        if zoom_in:
+            result = driver("scroll", str(zoom_in), "--settle", "4")
+            if result:
+                return result
+        return driver(
+            "move",
+            "0.95",
+            "0.10",
+            "--settle",
+            "3",
+            "--capture",
+            f"{theatre.slug}_close",
+            "--session",
+            session,
+        )
+
+    return reset_and_capture(
+        theatre.close_query,
+        theatre.close_zoom,
+        f"{theatre.slug}_close",
+        session,
+    )
+
+
 def capture(
     session: str,
     playback: float,
@@ -359,18 +508,36 @@ def capture(
     hydrology_only: bool,
     drainage_only: bool,
     target_slugs: tuple[str, ...],
+    debug_mode: bool,
 ) -> int:
-    result = driver("new-observer", "--visual-map", "--session", session)
+    launch_args = ["new-observer", "--visual-map", "--session", session]
+    if debug_mode:
+        launch_args.append("--debug-mode")
+    result = driver(*launch_args)
     if result:
         return result
     try:
+        if debug_mode:
+            # ``--visual-map`` configures the renderer quality but deliberately
+            # preserves the player's last strategic map mode.  M2's binding
+            # close evidence must show the physical terrain, not the political
+            # overlay; the debug-only calibration session can request the
+            # installed terrain map mode through the now-acknowledged console.
+            result = driver("console", "mapmode terrain", "--paste", "--settle", "3")
+            if result:
+                return result
         if not hydrology_only and not drainage_only and not target_slugs:
             # Bind the full-map silhouette gate to the same fresh renderer
-            # state as the theatre pairs. Focus first because the location
-            # finder can retain or restore a close camera; the hard zoom-out
-            # must be the final camera operation before capture.
+            # state as the theatre pairs. Center first because a console goto
+            # establishes a maximum-close camera; the hard zoom-out must be
+            # the final camera operation before capture.
             for command in (
-                ("focus-location", "Caras Galadhon", "--settle", "4"),
+                (
+                    "goto-location",
+                    location_key_for_query("Caras Galadhon"),
+                    "--settle",
+                    "4",
+                ),
                 ("scroll", "-32", "--settle", "4"),
                 (
                     "move",
@@ -403,20 +570,7 @@ def capture(
         else:
             targets = THEATRES + HYDROLOGY_VIEWS + FOCUSED_PHYSICAL_VIEWS
         for theatre in targets:
-            result = reset_and_capture(
-                theatre.regional_query,
-                theatre.regional_zoom,
-                f"{theatre.slug}_regional",
-                session,
-            )
-            if result:
-                return result
-            result = reset_and_capture(
-                theatre.close_query,
-                theatre.close_zoom,
-                f"{theatre.slug}_close",
-                session,
-            )
+            result = capture_theatre(theatre, session)
             if result:
                 return result
         if playback > 0:
@@ -434,6 +588,53 @@ def capture(
             )
             if result:
                 return result
+        # This is deliberately an engine-side effect, not a synthetic file
+        # marker.  The acceptance report must retain the resulting
+        # [TEST_NAME] line from the active user-dir log beside the captures.
+        marker = runtime_test_marker(session)
+        result = driver(
+            "console",
+            RUNTIME_TEST_COMMAND.format(marker=marker),
+            "--paste",
+            "--settle",
+            "3",
+        )
+        if result:
+            return result
+        result = driver(
+            "screenshot",
+            "99_runtime_test",
+            "--session",
+            session,
+        )
+        if result:
+            return result
+        log_lines = runtime_test_log_lines(marker)
+        if not log_lines:
+            print(
+                "capture_m2_theatres: FAIL live engine did not record "
+                f"runtime marker {marker!r}",
+                file=sys.stderr,
+            )
+            return EX_TEMPFAIL
+        for line in log_lines:
+            print(f"capture_m2_theatres: runtime-test {line}")
+        if not debug_mode:
+            unexpected_log_lines = deep_log_unexpected_lines()
+            if unexpected_log_lines:
+                print(
+                    "capture_m2_theatres: FAIL unexpected fresh deep-game error.log lines",
+                    file=sys.stderr,
+                )
+                for line in unexpected_log_lines:
+                    print(f"  {line}", file=sys.stderr)
+                return EX_TEMPFAIL
+            print("capture_m2_theatres: PASS fresh deep-game error.log")
+        else:
+            print(
+                "capture_m2_theatres: PASS debug navigation calibration; "
+                "non-debug deep-log acceptance remains required"
+            )
         return 0
     finally:
         driver("stop")
@@ -444,6 +645,14 @@ def main() -> int:
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--session", default="m2_nine_theatre_audit")
     parser.add_argument("--playback", type=float, default=45)
+    parser.add_argument(
+        "--debug-mode",
+        action="store_true",
+        help=(
+            "use -debug_mode only for a selective exact-key camera calibration; "
+            "it is not non-debug M2 acceptance evidence"
+        ),
+    )
     focus = parser.add_mutually_exclusive_group()
     focus.add_argument("--hydrology-only", action="store_true")
     focus.add_argument("--drainage-only", action="store_true")
@@ -482,12 +691,15 @@ def main() -> int:
             parser.error(f"unknown target slugs: {', '.join(unknown_slugs)}")
         if len(target_slugs) != len(set(target_slugs)):
             parser.error("--targets repeats a slug")
+    if args.debug_mode and not target_slugs:
+        parser.error("--debug-mode requires a selective --targets calibration run")
     return capture(
         args.session,
         args.playback,
         hydrology_only=args.hydrology_only,
         drainage_only=args.drainage_only,
         target_slugs=target_slugs,
+        debug_mode=args.debug_mode,
     )
 
 

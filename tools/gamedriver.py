@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import ctypes
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -33,6 +35,7 @@ from runtime_state import directory as runtime_state_directory
 
 ROOT = Path(__file__).resolve().parents[1]
 STATE = runtime_state_directory(ROOT) / "gamedriver_session.json"
+LOCATION_INDEX = ROOT / "docs/world/derived/location_index.csv"
 # The installed build explicitly recognizes this display mode in its own UI
 # layout scripts.  960x540 was rejected as an enum value and silently fell
 # back to the 2560x1440 desktop mode before observer playback.
@@ -1921,6 +1924,26 @@ def press_scan_code(scan_code: int) -> None:
     ctypes.windll.user32.keybd_event(0, scan_code, scan_flag | key_up, 0)
 
 
+def debug_console_visible(image) -> bool:
+    """Detect the fixed console prompt/toolbox gold treatment in live EU5."""
+    rgb = image.convert("RGB")
+    width, height = rgb.size
+    gold = 0
+    for y_fraction in (0.683, 0.710, 0.719, 0.754, 0.777, 0.785):
+        for x_fraction in (0.03, 0.05, 0.155, 0.28):
+            red, green, blue = rgb.getpixel(
+                (round(width * x_fraction), round(height * y_fraction))
+            )
+            if (
+                red >= 90
+                and green >= 60
+                and red >= green * 1.08
+                and green >= blue * 1.18
+            ):
+                gold += 1
+    return gold >= 8
+
+
 def console(args: argparse.Namespace) -> int:
     import pyautogui
 
@@ -1938,6 +1961,16 @@ def console(args: argparse.Namespace) -> int:
     else:
         press_scan_code(0x29)
         time.sleep(1)
+    console_frame = pyautogui.screenshot(
+        region=(window.left, window.top, window.width, window.height)
+    )
+    if not debug_console_visible(console_frame):
+        print(
+            "gamedriver: debug console is not visibly open; "
+            "launch the bounded navigation probe with --debug-mode",
+            file=sys.stderr,
+        )
+        return 2
     if args.paste:
         import pyperclip
 
@@ -1956,6 +1989,100 @@ def console(args: argparse.Namespace) -> int:
         press_scan_code(0x29)
         time.sleep(0.5)
     print(f"console command sent: {args.command}")
+    return 0
+
+
+def exact_location_camera_command(location: str) -> str:
+    """Return the installed camera command for one generated location key.
+
+    The renderer camera uses four world units for each generated 4096x2048
+    control pixel, but its world Y origin is at the *bottom* of that control
+    frame.  The first live calibration deliberately caught the inverse-axis
+    failure: Old Forest ``(1589,500)`` placed the camera in southern Gondor
+    when serialized as ``6356,2000``.  It must instead use
+    ``6356,(2048-500)*4``.  Binding a key through the generated index makes
+    this route source-coordinate exact without relying on the console's
+    unreliable ``goto <key>`` lookup.
+    """
+    try:
+        with LOCATION_INDEX.open(encoding="utf-8-sig", newline="") as handle:
+            rows = [row for row in csv.DictReader(handle) if row["key"] == location]
+    except (OSError, KeyError) as exc:
+        raise ValueError(f"cannot read generated location index: {exc}") from exc
+    if len(rows) != 1:
+        raise ValueError(
+            f"generated location key {location!r} resolves to {len(rows)} index rows"
+        )
+    try:
+        control_x = int(rows[0]["control_x"])
+        control_y = int(rows[0]["control_y"])
+    except (KeyError, ValueError) as exc:
+        raise ValueError(f"invalid control coordinates for {location!r}: {exc}") from exc
+    world_y = (2048 - control_y) * 4
+    return f"Camera.SetTransform {control_x * 4} 0 {world_y} 1800 72 0"
+
+
+def goto_location(args: argparse.Namespace) -> int:
+    """Center on an exact generated key through the proven console camera ABI.
+
+    Finder and the engine's textual ``goto`` command can both accept input yet
+    leave the camera on an unrelated result.  The generated key instead maps
+    to its audited control coordinate and invokes the installed
+    ``Camera.SetTransform`` ABI.  A measured screen change remains mandatory,
+    so a typed but ignored command cannot label a screenshot.
+    """
+    import pyautogui
+
+    location = args.location.strip()
+    if not location or not re.fullmatch(r"[A-Za-z0-9_]+", location):
+        print("gamedriver: invalid internal location key", file=sys.stderr)
+        return 1
+    try:
+        camera_command = exact_location_camera_command(location)
+    except ValueError as exc:
+        print(f"gamedriver: {exc}", file=sys.stderr)
+        return 1
+    window = activate_window()
+    before = pyautogui.screenshot(
+        region=(window.left, window.top, window.width, window.height)
+    )
+    result = console(
+        argparse.Namespace(
+            command=camera_command,
+            settle=args.settle,
+            already_open=False,
+            leave_open=False,
+            paste=True,
+        )
+    )
+    if result:
+        return result
+    window = activate_window()
+    pyautogui.moveTo(
+        window.left + round(window.width * 0.98),
+        window.top + round(window.height * 0.04),
+        duration=0.1,
+    )
+    time.sleep(1)
+    after = pyautogui.screenshot(
+        region=(window.left, window.top, window.width, window.height)
+    )
+    delta = camera_delta_ratio(before, after)
+    if delta < MIN_FINDER_CAMERA_DELTA:
+        print(
+            "gamedriver: goto did not prove a camera transition "
+            f"for {location!r} (delta={delta:.6f})",
+            file=sys.stderr,
+        )
+        return 2
+    print(
+        f"gamedriver: centered internal location {location!r} "
+        f"(camera_delta={delta:.6f})"
+    )
+    if args.capture:
+        session = args.session or datetime.now().strftime("%Y%m%d_%H%M%S")
+        target = ROOT / "docs/screens" / session / f"{args.capture}.png"
+        save_window_capture(target)
     return 0
 
 
@@ -2443,6 +2570,15 @@ def build_parser() -> argparse.ArgumentParser:
     focus_parser.add_argument("--capture", help="capture after centering")
     focus_parser.add_argument("--session")
     focus_parser.set_defaults(func=focus_location)
+    goto_parser = sub.add_parser("goto-location")
+    goto_parser.add_argument(
+        "location",
+        help="exact generated internal location key, e.g. me_land_4390",
+    )
+    goto_parser.add_argument("--settle", type=float, default=4)
+    goto_parser.add_argument("--capture", help="capture after centering")
+    goto_parser.add_argument("--session")
+    goto_parser.set_defaults(func=goto_location)
     observer_parser = sub.add_parser("observer")
     observer_parser.add_argument(
         "--seconds", type=float, default=45, help="bounded playback interval"

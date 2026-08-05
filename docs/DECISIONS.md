@@ -1,5 +1,19 @@
 # Decisions
 
+## 2026-08-05 - Bind M2 camera evidence to generated control coordinates
+
+The native Finder is a repeated fail-closed route, while console text without `-debug_mode`
+can appear to succeed without opening a console at all. Use only a bounded debug navigation
+calibration for source-bound cameras: require visible console chrome, resolve the generated
+internal key in `docs/world/derived/location_index.csv`, then emit the installed
+`Camera.SetTransform` ABI. The renderer uses four world units per control pixel and inverts
+the 2048-pixel control Y axis; the first visual calibration caught that inversion before
+any M2 evidence was accepted.
+
+This route proves where a screenshot is centered, not that debug rendering substitutes for
+release acceptance. Keep the M2 non-debug deep-log/smoke gates separate, retain the
+measured-transition check, and do not re-enable Finder as a fallback.
+
 ## 2026-08-05 - Pin physical source places without turning them into settlements
 
 The prior landmark resolver preserves source controls but can legitimately choose the
@@ -2189,3 +2203,19 @@ Add a regression contract using the same seven source coordinates as the physica
 no Rohan land location may cross south of that interpolated axis, and none may acquire a
 direct sea adjacency. This preserves the current source-faithful ownership without making
 an unnecessary cosmetic reallocation.
+
+## 2026-08-05 - Make M2 camera evidence key-bound and realm arms collision-free
+
+The native Finder's automated text/result route has twice failed closed after a strategic
+zoom and can emit repeated `pdx_gui_data_model` diagnostics. Replace it for evidence only
+with a debug-console generated-key-bound `Camera.SetTransform` route. Resolve the
+player-facing source-bound label to exactly one generated key and audited control
+coordinate first, require a measured camera delta after the command, and retain the
+existing static coordinate/region/river contracts. This is a materially different engine
+route, not a relaxed Finder retry; ordinary player Finder behaviour is not changed.
+
+Prefix generated realm coat-of-arms keys with `me_coa_` and point every generated flag at
+that namespace. Short country tags such as `ANG` and `ISE` collide with installed arm keys,
+whereas the prefix preserves the same realm tags, colours, and vanilla emblem references
+without sharing installed identifiers. Require a fresh deep-load log to prove that the
+earlier `NCoatOfArms::SCoatOfArmsSpriteWrapper` diagnostic is gone before accepting M2.
